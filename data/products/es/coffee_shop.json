@@ -177,7 +177,7 @@
     },
     {
       "name": "Te negro",
-      "category": "tes_infusiones",
+      "category": "tes_e_infusiones",
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "te_negro",
@@ -185,7 +185,7 @@
     },
     {
       "name": "Te verde",
-      "category": "tes_infusiones",
+      "category": "tes_e_infusiones",
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "te_verde",
@@ -193,7 +193,7 @@
     },
     {
       "name": "Te rojo",
-      "category": "tes_infusiones",
+      "category": "tes_e_infusiones",
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "te_rojo",
@@ -201,7 +201,7 @@
     },
     {
       "name": "Manzanilla",
-      "category": "tes_infusiones",
+      "category": "tes_e_infusiones",
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "manzanilla",
@@ -209,7 +209,7 @@
     },
     {
       "name": "Poleo menta",
-      "category": "tes_infusiones",
+      "category": "tes_e_infusiones",
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "poleo_menta",
@@ -217,7 +217,7 @@
     },
     {
       "name": "Cafe helado",
-      "category": "frios",
+      "category": "bebidas_frias",
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "cafe_helado",
@@ -225,7 +225,7 @@
     },
     {
       "name": "Frappuccino",
-      "category": "frios",
+      "category": "bebidas_frias",
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "frappuccino",
@@ -233,7 +233,7 @@
     },
     {
       "name": "Smoothie de fresa",
-      "category": "frios",
+      "category": "bebidas_frias",
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "smoothie_fresa",
@@ -241,7 +241,7 @@
     },
     {
       "name": "Smoothie de mango",
-      "category": "frios",
+      "category": "bebidas_frias",
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "smoothie_mango",
@@ -249,7 +249,7 @@
     },
     {
       "name": "Limonada natural",
-      "category": "frios",
+      "category": "bebidas_frias",
       "price": 3.0,
       "tax_class_hint": "reduced",
       "code": "limonada",
@@ -257,7 +257,7 @@
     },
     {
       "name": "Croissant",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "croissant",
@@ -265,7 +265,7 @@
     },
     {
       "name": "Croissant de chocolate",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "croissant_chocolate",
@@ -273,7 +273,7 @@
     },
     {
       "name": "Muffin de chocolate",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 2.8,
       "tax_class_hint": "reduced",
       "code": "muffin_chocolate",
@@ -281,7 +281,7 @@
     },
     {
       "name": "Muffin de arandanos",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 2.8,
       "tax_class_hint": "reduced",
       "code": "muffin_arandanos",
@@ -289,7 +289,7 @@
     },
     {
       "name": "Tarta de zanahoria",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "tarta_zanahoria",
@@ -297,7 +297,7 @@
     },
     {
       "name": "Cookie",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "cookie",
@@ -305,7 +305,7 @@
     },
     {
       "name": "Brownie",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 3.0,
       "tax_class_hint": "reduced",
       "code": "brownie",
@@ -313,7 +313,7 @@
     },
     {
       "name": "Cheesecake",
-      "category": "bolleria",
+      "category": "bolleria_y_dulces",
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "cheesecake",
@@ -321,7 +321,7 @@
     },
     {
       "name": "Tostada con tomate",
-      "category": "sandwiches",
+      "category": "sandwiches_y_tostas",
       "price": 2.8,
       "tax_class_hint": "reduced",
       "code": "tostada_tomate",
@@ -329,7 +329,7 @@
     },
     {
       "name": "Tostada de aguacate",
-      "category": "sandwiches",
+      "category": "sandwiches_y_tostas",
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "tostada_aguacate",
@@ -337,7 +337,7 @@
     },
     {
       "name": "Sandwich mixto",
-      "category": "sandwiches",
+      "category": "sandwiches_y_tostas",
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "sandwich_mixto",
@@ -345,7 +345,7 @@
     },
     {
       "name": "Sandwich vegetal",
-      "category": "sandwiches",
+      "category": "sandwiches_y_tostas",
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "sandwich_vegetal",
@@ -353,7 +353,7 @@
     },
     {
       "name": "Bagel de salmon",
-      "category": "sandwiches",
+      "category": "sandwiches_y_tostas",
       "price": 5.5,
       "tax_class_hint": "reduced",
       "code": "bagel_salmon",
