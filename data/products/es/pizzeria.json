@@ -5,7 +5,6 @@
   "currency": "EUR",
   "categories": [
     {
-      "slug": "pizzas",
       "name": "Pizzas",
       "icon": "pizza-outline",
       "tax_class_hint": "reduced",
@@ -13,7 +12,6 @@
       "code": "pizzas"
     },
     {
-      "slug": "entrantes",
       "name": "Entrantes",
       "icon": "restaurant-outline",
       "tax_class_hint": "reduced",
@@ -21,7 +19,6 @@
       "code": "entrantes"
     },
     {
-      "slug": "ensaladas",
       "name": "Ensaladas",
       "icon": "leaf-outline",
       "tax_class_hint": "reduced",
@@ -29,7 +26,6 @@
       "code": "ensaladas"
     },
     {
-      "slug": "pastas",
       "name": "Pastas",
       "icon": "restaurant-outline",
       "tax_class_hint": "reduced",
@@ -37,7 +33,6 @@
       "code": "pastas"
     },
     {
-      "slug": "postres",
       "name": "Postres",
       "icon": "ice-cream-outline",
       "tax_class_hint": "reduced",
@@ -45,7 +40,6 @@
       "code": "postres"
     },
     {
-      "slug": "refrescos",
       "name": "Refrescos",
       "icon": "water-outline",
       "tax_class_hint": "reduced",
@@ -53,7 +47,6 @@
       "code": "refrescos"
     },
     {
-      "slug": "cervezas",
       "name": "Cervezas",
       "icon": "beer-outline",
       "tax_class_hint": "standard",
@@ -61,7 +54,6 @@
       "code": "cervezas"
     },
     {
-      "slug": "vinos",
       "name": "Vinos",
       "icon": "wine-outline",
       "tax_class_hint": "standard",

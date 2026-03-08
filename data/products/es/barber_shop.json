@@ -5,37 +5,29 @@
   "currency": "EUR",
   "categories": [
     {
-      "id": "cortes",
       "name": "Cortes",
       "icon": "cut-outline",
-      "type": "standard",
       "order": 1,
       "tax_class_hint": "standard",
       "code": "cortes"
     },
     {
-      "id": "barba",
       "name": "Barba",
       "icon": "man-outline",
-      "type": "standard",
       "order": 2,
       "tax_class_hint": "standard",
       "code": "barba"
     },
     {
-      "id": "tratamientos",
       "name": "Tratamientos",
       "icon": "flask-outline",
-      "type": "standard",
       "order": 3,
       "tax_class_hint": "standard",
       "code": "tratamientos"
     },
     {
-      "id": "productos",
       "name": "Productos",
       "icon": "bag-outline",
-      "type": "standard",
       "order": 4,
       "tax_class_hint": "standard",
       "code": "productos"

@@ -5,7 +5,6 @@
   "currency": "EUR",
   "categories": [
     {
-      "slug": "cafes",
       "name": "Cafes",
       "icon": "cafe-outline",
       "tax_class_hint": "reduced",
@@ -13,7 +12,6 @@
       "code": "cafes"
     },
     {
-      "slug": "especialidades",
       "name": "Especialidades",
       "icon": "cafe-outline",
       "tax_class_hint": "reduced",
@@ -21,7 +19,6 @@
       "code": "especialidades"
     },
     {
-      "slug": "tes_infusiones",
       "name": "Tes e infusiones",
       "icon": "leaf-outline",
       "tax_class_hint": "reduced",
@@ -29,7 +26,6 @@
       "code": "tes_e_infusiones"
     },
     {
-      "slug": "frios",
       "name": "Bebidas frias",
       "icon": "snow-outline",
       "tax_class_hint": "reduced",
@@ -37,7 +33,6 @@
       "code": "bebidas_frias"
     },
     {
-      "slug": "bolleria",
       "name": "Bolleria y dulces",
       "icon": "nutrition-outline",
       "tax_class_hint": "reduced",
@@ -45,7 +40,6 @@
       "code": "bolleria_y_dulces"
     },
     {
-      "slug": "sandwiches",
       "name": "Sandwiches y tostas",
       "icon": "fast-food-outline",
       "tax_class_hint": "reduced",
@@ -53,7 +47,6 @@
       "code": "sandwiches_y_tostas"
     },
     {
-      "slug": "refrescos",
       "name": "Refrescos",
       "icon": "water-outline",
       "tax_class_hint": "reduced",
