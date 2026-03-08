@@ -9,56 +9,64 @@
       "name": "Pizzas",
       "icon": "pizza-outline",
       "tax_class_hint": "reduced",
-      "order": 1
+      "order": 1,
+      "code": "pizzas"
     },
     {
       "slug": "entrantes",
       "name": "Entrantes",
       "icon": "restaurant-outline",
       "tax_class_hint": "reduced",
-      "order": 2
+      "order": 2,
+      "code": "entrantes"
     },
     {
       "slug": "ensaladas",
       "name": "Ensaladas",
       "icon": "leaf-outline",
       "tax_class_hint": "reduced",
-      "order": 3
+      "order": 3,
+      "code": "ensaladas"
     },
     {
       "slug": "pastas",
       "name": "Pastas",
       "icon": "restaurant-outline",
       "tax_class_hint": "reduced",
-      "order": 4
+      "order": 4,
+      "code": "pastas"
     },
     {
       "slug": "postres",
       "name": "Postres",
       "icon": "ice-cream-outline",
       "tax_class_hint": "reduced",
-      "order": 5
+      "order": 5,
+      "code": "postres"
     },
     {
       "slug": "refrescos",
       "name": "Refrescos",
       "icon": "water-outline",
       "tax_class_hint": "reduced",
-      "order": 6
+      "order": 6,
+      "code": "refrescos"
     },
     {
       "slug": "cervezas",
       "name": "Cervezas",
       "icon": "beer-outline",
       "tax_class_hint": "standard",
-      "order": 7
+      "order": 7,
+      "code": "cervezas"
     },
     {
       "slug": "vinos",
       "name": "Vinos",
       "icon": "wine-outline",
       "tax_class_hint": "standard",
-      "order": 8
+      "order": 8,
+      "code": "vinos"
     }
   ],
   "products": [

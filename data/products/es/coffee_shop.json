@@ -9,49 +9,56 @@
       "name": "Cafes",
       "icon": "cafe-outline",
       "tax_class_hint": "reduced",
-      "order": 1
+      "order": 1,
+      "code": "cafes"
     },
     {
       "slug": "especialidades",
       "name": "Especialidades",
       "icon": "cafe-outline",
       "tax_class_hint": "reduced",
-      "order": 2
+      "order": 2,
+      "code": "especialidades"
     },
     {
       "slug": "tes_infusiones",
       "name": "Tes e infusiones",
       "icon": "leaf-outline",
       "tax_class_hint": "reduced",
-      "order": 3
+      "order": 3,
+      "code": "tes_e_infusiones"
     },
     {
       "slug": "frios",
       "name": "Bebidas frias",
       "icon": "snow-outline",
       "tax_class_hint": "reduced",
-      "order": 4
+      "order": 4,
+      "code": "bebidas_frias"
     },
     {
       "slug": "bolleria",
       "name": "Bolleria y dulces",
       "icon": "nutrition-outline",
       "tax_class_hint": "reduced",
-      "order": 5
+      "order": 5,
+      "code": "bolleria_y_dulces"
     },
     {
       "slug": "sandwiches",
       "name": "Sandwiches y tostas",
       "icon": "fast-food-outline",
       "tax_class_hint": "reduced",
-      "order": 6
+      "order": 6,
+      "code": "sandwiches_y_tostas"
     },
     {
       "slug": "refrescos",
       "name": "Refrescos",
       "icon": "water-outline",
       "tax_class_hint": "reduced",
-      "order": 7
+      "order": 7,
+      "code": "refrescos"
     }
   ],
   "products": [
@@ -213,7 +220,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "poleo_menta",
-      "image": "hospitality/poleo_menta.jpg"
+      "image": "hospitality/poleo_menta.png"
     },
     {
       "name": "Cafe helado",

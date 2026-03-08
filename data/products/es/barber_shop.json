@@ -10,7 +10,8 @@
       "icon": "cut-outline",
       "type": "standard",
       "order": 1,
-      "tax_class_hint": "standard"
+      "tax_class_hint": "standard",
+      "code": "cortes"
     },
     {
       "id": "barba",
@@ -18,7 +19,8 @@
       "icon": "man-outline",
       "type": "standard",
       "order": 2,
-      "tax_class_hint": "standard"
+      "tax_class_hint": "standard",
+      "code": "barba"
     },
     {
       "id": "tratamientos",
@@ -26,7 +28,8 @@
       "icon": "flask-outline",
       "type": "standard",
       "order": 3,
-      "tax_class_hint": "standard"
+      "tax_class_hint": "standard",
+      "code": "tratamientos"
     },
     {
       "id": "productos",
@@ -34,7 +37,8 @@
       "icon": "bag-outline",
       "type": "standard",
       "order": 4,
-      "tax_class_hint": "standard"
+      "tax_class_hint": "standard",
+      "code": "productos"
     }
   ],
   "products": [
