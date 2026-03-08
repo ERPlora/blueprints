@@ -21,7 +21,9 @@
     "PRY": "na",
     "BI": "recommended"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "waitlist"
+  ],
   "sector_features": [
     "Appointments",
     "Client formulas",

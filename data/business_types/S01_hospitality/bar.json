@@ -23,7 +23,8 @@
   },
   "extra_modules": [
     "tables",
-    "orders"
+    "orders",
+    "delivery"
   ],
   "sector_features": [
     "Basic tables",

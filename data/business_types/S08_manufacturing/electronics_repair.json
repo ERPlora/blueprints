@@ -21,7 +21,9 @@
     "PRY": "essential",
     "BI": "recommended"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "repair_shop"
+  ],
   "sector_features": [
     "Device records",
     "Diagnostics",

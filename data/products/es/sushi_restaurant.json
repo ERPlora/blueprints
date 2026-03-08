@@ -124,7 +124,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 8.5,
-      "image": "hospitality/california_roll.jpg"
+      "image": "hospitality/california_roll.png"
     },
     {
       "code": "dragon_roll",
@@ -132,7 +132,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 11.0,
-      "image": "hospitality/dragon_roll.jpg"
+      "image": "hospitality/dragon_roll.png"
     },
     {
       "code": "tempura_roll",
@@ -196,7 +196,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 4.5,
-      "image": "hospitality/edamame.jpg"
+      "image": "hospitality/edamame.png"
     },
     {
       "code": "gyozas",
@@ -204,7 +204,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 6.5,
-      "image": "hospitality/gyozas.jpg"
+      "image": "hospitality/gyozas.png"
     },
     {
       "code": "tempura_verduras",
@@ -236,7 +236,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 5.0,
-      "image": "hospitality/ensalada_wakame.jpg"
+      "image": "hospitality/ensalada_wakame.png"
     },
     {
       "code": "spring_rolls",
@@ -276,7 +276,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 9.5,
-      "image": "hospitality/arroz_wok.jpg"
+      "image": "hospitality/arroz_wok.png"
     },
     {
       "code": "pollo_teriyaki",
@@ -324,7 +324,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/agua_mineral.jpg"
+      "image": "hospitality/agua_mineral.png"
     },
     {
       "code": "coca_cola",
@@ -332,7 +332,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/coca_cola.jpg"
+      "image": "hospitality/coca_cola.png"
     },
     {
       "code": "te_verde_japones",
@@ -371,7 +371,7 @@
       "category": "sake_cerveza",
       "tax_class_hint": "standard",
       "price": 4.0,
-      "image": "hospitality/cerveza_japonesa.jpg"
+      "image": "hospitality/cerveza_japonesa.png"
     },
     {
       "code": "cerveza_cana",
@@ -379,7 +379,7 @@
       "category": "sake_cerveza",
       "tax_class_hint": "standard",
       "price": 2.5,
-      "image": "hospitality/cerveza_cana.jpg"
+      "image": "hospitality/cerveza_cana.png"
     }
   ]
 }

@@ -4,182 +4,110 @@
     {
       "code": "hospitality",
       "name": "Hospitality & Restaurants",
-      "description": "Bars, restaurants, cafes, hotels, catering, nightclubs",
+      "description": "Bars, restaurants, cafes, bakeries, food trucks",
       "icon": "restaurant-outline",
       "color": "#ff6b35",
       "order": 1,
-      "type_count": 16
+      "type_count": 13
     },
     {
       "code": "retail",
       "name": "Retail & Commerce",
-      "description": "Clothing, supermarkets, specialty shops, wholesale",
+      "description": "Clothing, specialty shops, food shops, health stores",
       "icon": "storefront-outline",
       "color": "#3880ff",
       "order": 2,
-      "type_count": 31
-    },
-    {
-      "code": "pharmacy",
-      "name": "Pharmacy & Health",
-      "description": "Pharmacies, health stores, orthopedics",
-      "icon": "medkit-outline",
-      "color": "#ff3b30",
-      "order": 3,
-      "type_count": 5
+      "type_count": 23
     },
     {
       "code": "personal_services",
       "name": "Personal Services & Wellness",
-      "description": "Hair salons, clinics, gyms, beauty centers, therapy",
+      "description": "Hair salons, beauty centers, gyms, therapy, grooming",
       "icon": "heart-outline",
       "color": "#ff2d55",
-      "order": 4,
-      "type_count": 18
+      "order": 3,
+      "type_count": 14
     },
     {
       "code": "professional_services",
       "name": "Professional Services",
-      "description": "Consulting, law firms, real estate, agencies",
+      "description": "Consulting, law firms, agencies, maintenance",
       "icon": "business-outline",
       "color": "#5856d6",
-      "order": 5,
-      "type_count": 17
+      "order": 4,
+      "type_count": 9
     },
     {
       "code": "education",
       "name": "Education & Training",
-      "description": "Academies, driving schools, nurseries, language schools",
+      "description": "Academies, driving schools, language & music schools",
       "icon": "school-outline",
       "color": "#007aff",
-      "order": 6,
-      "type_count": 7
+      "order": 5,
+      "type_count": 5
     },
     {
       "code": "construction",
       "name": "Construction & Installations",
-      "description": "Builders, renovators, installers, solar energy",
+      "description": "Builders, renovators, installers, carpenters",
       "icon": "hammer-outline",
       "color": "#ff9500",
-      "order": 7,
-      "type_count": 7
-    },
-    {
-      "code": "manufacturing",
-      "name": "Manufacturing & Industry",
-      "description": "Factories, workshops, wineries, food processing",
-      "icon": "construct-outline",
-      "color": "#8e8e93",
-      "order": 8,
-      "type_count": 12
-    },
-    {
-      "code": "transport",
-      "name": "Transport & Logistics",
-      "description": "Couriers, vehicle rental, moving, 3PL, parking",
-      "icon": "bus-outline",
-      "color": "#34c759",
-      "order": 9,
+      "order": 6,
       "type_count": 5
     },
     {
+      "code": "manufacturing",
+      "name": "Repair & Manufacturing",
+      "description": "Auto repair, electronics repair, printing",
+      "icon": "construct-outline",
+      "color": "#8e8e93",
+      "order": 7,
+      "type_count": 3
+    },
+    {
       "code": "agriculture",
-      "name": "Agriculture & Primary Sector",
-      "description": "Farms, cooperatives, nurseries, livestock, beekeeping",
+      "name": "Agriculture & Garden",
+      "description": "Garden centers, nurseries",
       "icon": "leaf-outline",
       "color": "#2dd36f",
-      "order": 10,
-      "type_count": 6
+      "order": 8,
+      "type_count": 1
     },
     {
       "code": "entertainment",
       "name": "Leisure & Entertainment",
-      "description": "Escape rooms, arcades, sports clubs, cinemas, theme parks",
+      "description": "Escape rooms, sports clubs, event venues",
       "icon": "game-controller-outline",
       "color": "#ff6b35",
-      "order": 11,
-      "type_count": 9
-    },
-    {
-      "code": "nonprofit",
-      "name": "NGO & Non-profit",
-      "description": "NGOs, associations, property management, professional colleges",
-      "icon": "hand-left-outline",
-      "color": "#af52de",
-      "order": 12,
-      "type_count": 5
-    },
-    {
-      "code": "technology",
-      "name": "Technology & Digital",
-      "description": "Software development, MSP, web agencies, hosting, telecoms",
-      "icon": "code-slash-outline",
-      "color": "#007aff",
-      "order": 13,
-      "type_count": 5
-    },
-    {
-      "code": "travel",
-      "name": "Travel & Tourism",
-      "description": "Travel agencies, tour operators, tourist guides",
-      "icon": "airplane-outline",
-      "color": "#5ac8fa",
-      "order": 14,
+      "order": 9,
       "type_count": 3
     },
     {
-      "code": "financial",
-      "name": "Financial Services",
-      "description": "Currency exchange, pawnshops, debt collection, insurance brokers",
-      "icon": "wallet-outline",
-      "color": "#2dd36f",
-      "order": 15,
-      "type_count": 4
-    },
-    {
       "code": "media",
-      "name": "Media / Production / Creative",
-      "description": "Photography, video production, recording studios, publishing, art galleries",
+      "name": "Media & Creative",
+      "description": "Photography studios",
       "icon": "videocam-outline",
       "color": "#ff2d55",
-      "order": 16,
-      "type_count": 6
+      "order": 10,
+      "type_count": 1
     },
     {
       "code": "rental",
       "name": "Rental",
-      "description": "Machinery, event equipment, storage, boats, bikes, costumes",
+      "description": "Bike and scooter rental",
       "icon": "key-outline",
       "color": "#ff9500",
-      "order": 17,
-      "type_count": 6
-    },
-    {
-      "code": "maritime",
-      "name": "Maritime & Nautical",
-      "description": "Marinas, fishing companies, nautical workshops",
-      "icon": "boat-outline",
-      "color": "#5ac8fa",
-      "order": 18,
-      "type_count": 3
-    },
-    {
-      "code": "funeral",
-      "name": "Funeral Services",
-      "description": "Funeral homes, cemeteries, mortuaries",
-      "icon": "flower-outline",
-      "color": "#8e8e93",
-      "order": 19,
-      "type_count": 3
+      "order": 11,
+      "type_count": 1
     },
     {
       "code": "coworking",
       "name": "Spaces & Coworking",
-      "description": "Coworking spaces, business centers, shared studios",
+      "description": "Coworking spaces",
       "icon": "desktop-outline",
       "color": "#5856d6",
-      "order": 20,
-      "type_count": 3
+      "order": 12,
+      "type_count": 1
     }
   ]
 }

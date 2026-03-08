@@ -103,7 +103,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.3,
-      "image": "hospitality/cafe_solo.jpg"
+      "image": "hospitality/cafe_solo.png"
     },
     {
       "code": "cafe_cortado",
@@ -111,7 +111,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.4,
-      "image": "hospitality/cafe_cortado.jpg"
+      "image": "hospitality/cafe_cortado.png"
     },
     {
       "code": "cafe_con_leche",
@@ -119,7 +119,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.6,
-      "image": "hospitality/cafe_con_leche.jpg"
+      "image": "hospitality/cafe_con_leche.png"
     },
     {
       "code": "capuchino",
@@ -127,7 +127,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/capuchino.jpg"
+      "image": "hospitality/capuchino.png"
     },
     {
       "code": "descafeinado",
@@ -135,7 +135,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.4,
-      "image": "hospitality/descafeinado.jpg"
+      "image": "hospitality/descafeinado.png"
     },
     {
       "code": "carajillo",
@@ -143,7 +143,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/carajillo.jpg"
+      "image": "hospitality/carajillo.png"
     },
     {
       "code": "coca_cola",
@@ -151,7 +151,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/coca_cola.jpg"
+      "image": "hospitality/coca_cola.png"
     },
     {
       "code": "coca_cola_zero",
@@ -159,7 +159,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/coca_cola_zero.jpg"
+      "image": "hospitality/coca_cola_zero.png"
     },
     {
       "code": "fanta_naranja",
@@ -167,7 +167,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/fanta_naranja.jpg"
+      "image": "hospitality/fanta_naranja.png"
     },
     {
       "code": "fanta_limon",
@@ -175,7 +175,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/fanta_limon.jpg"
+      "image": "hospitality/fanta_limon.png"
     },
     {
       "code": "sprite",
@@ -191,7 +191,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/aquarius.jpg"
+      "image": "hospitality/aquarius.png"
     },
     {
       "code": "tonica",
@@ -207,7 +207,7 @@
       "category": "aguas",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/agua_mineral.jpg"
+      "image": "hospitality/agua_mineral.png"
     },
     {
       "code": "agua_con_gas",
@@ -215,7 +215,7 @@
       "category": "aguas",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/agua_con_gas.jpg"
+      "image": "hospitality/agua_con_gas.png"
     },
     {
       "code": "zumo_naranja",
@@ -279,7 +279,7 @@
       "category": "cervezas",
       "tax_class_hint": "standard",
       "price": 1.8,
-      "image": "hospitality/cerveza_cana.jpg"
+      "image": "hospitality/cerveza_cana.png"
     },
     {
       "code": "cerveza_jarra",
@@ -287,7 +287,7 @@
       "category": "cervezas",
       "tax_class_hint": "standard",
       "price": 3.5,
-      "image": "hospitality/cerveza_jarra.jpg"
+      "image": "hospitality/cerveza_jarra.png"
     },
     {
       "code": "cerveza_botella",
@@ -295,7 +295,7 @@
       "category": "cervezas",
       "tax_class_hint": "standard",
       "price": 2.5,
-      "image": "hospitality/cerveza_botella.jpg"
+      "image": "hospitality/cerveza_botella.png"
     },
     {
       "code": "cerveza_sin",
@@ -303,7 +303,7 @@
       "category": "cervezas",
       "tax_class_hint": "reduced",
       "price": 2.2,
-      "image": "hospitality/cerveza_sin.jpg"
+      "image": "hospitality/cerveza_sin.png"
     },
     {
       "code": "clara",
@@ -311,7 +311,7 @@
       "category": "cervezas",
       "tax_class_hint": "standard",
       "price": 2.0,
-      "image": "hospitality/clara.jpg"
+      "image": "hospitality/clara.png"
     },
     {
       "code": "vino_tinto_copa",
@@ -367,7 +367,7 @@
       "category": "cocktails",
       "tax_class_hint": "standard",
       "price": 8.0,
-      "image": "hospitality/gin_tonic.jpg"
+      "image": "hospitality/gin_tonic.png"
     },
     {
       "code": "ron_cola",
@@ -399,7 +399,7 @@
       "category": "vinos_copa",
       "tax_class_hint": "standard",
       "price": 4.5,
-      "image": "hospitality/copa_rioja_crianza.jpg"
+      "image": "hospitality/copa_rioja_crianza.png"
     },
     {
       "code": "copa_ribera_duero",
@@ -407,7 +407,7 @@
       "category": "vinos_copa",
       "tax_class_hint": "standard",
       "price": 5.0,
-      "image": "hospitality/copa_ribera_duero.jpg"
+      "image": "hospitality/copa_ribera_duero.png"
     },
     {
       "code": "copa_albarino",
@@ -415,7 +415,7 @@
       "category": "vinos_copa",
       "tax_class_hint": "standard",
       "price": 4.5,
-      "image": "hospitality/copa_albarino.jpg"
+      "image": "hospitality/copa_albarino.png"
     },
     {
       "code": "copa_verdejo",
@@ -423,7 +423,7 @@
       "category": "vinos_copa",
       "tax_class_hint": "standard",
       "price": 4.0,
-      "image": "hospitality/copa_verdejo.jpg"
+      "image": "hospitality/copa_verdejo.png"
     },
     {
       "code": "copa_cava",
@@ -431,7 +431,7 @@
       "category": "vinos_copa",
       "tax_class_hint": "standard",
       "price": 4.5,
-      "image": "hospitality/copa_cava.jpg"
+      "image": "hospitality/copa_cava.png"
     },
     {
       "code": "botella_rioja_crianza",
@@ -439,7 +439,7 @@
       "category": "vinos_botella",
       "tax_class_hint": "standard",
       "price": 18.0,
-      "image": "hospitality/botella_rioja_crianza.jpg"
+      "image": "hospitality/botella_rioja_crianza.png"
     },
     {
       "code": "botella_ribera_duero",
@@ -447,7 +447,7 @@
       "category": "vinos_botella",
       "tax_class_hint": "standard",
       "price": 22.0,
-      "image": "hospitality/botella_ribera_duero.jpg"
+      "image": "hospitality/botella_ribera_duero.png"
     },
     {
       "code": "botella_albarino",
@@ -455,7 +455,7 @@
       "category": "vinos_botella",
       "tax_class_hint": "standard",
       "price": 16.0,
-      "image": "hospitality/botella_albarino.jpg"
+      "image": "hospitality/botella_albarino.png"
     },
     {
       "code": "tabla_quesos",

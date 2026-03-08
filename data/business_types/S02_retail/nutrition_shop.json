@@ -1,0 +1,40 @@
+{
+  "code": "nutrition_shop",
+  "sector": "retail",
+  "name": "Dietetics / Sports Nutrition",
+  "description": "Dietetics with customer goal profiles, expiry, loyalty, subscription",
+  "icon": "barbell-outline",
+  "color": "#43a047",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Customer profiles",
+    "Expiry",
+    "Subscription"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/nutrition_shop.json"
+}

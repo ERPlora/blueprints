@@ -21,7 +21,9 @@
     "PRY": "essential",
     "BI": "essential"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "timesheets"
+  ],
   "sector_features": [
     "Fiscal calendar",
     "Multi-company",

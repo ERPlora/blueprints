@@ -86,7 +86,7 @@
       "category": "durum",
       "tax_class_hint": "reduced",
       "price": 6.0,
-      "image": "hospitality/durum_ternera.jpg"
+      "image": "hospitality/durum_ternera.png"
     },
     {
       "code": "durum_pollo",
@@ -94,7 +94,7 @@
       "category": "durum",
       "tax_class_hint": "reduced",
       "price": 6.0,
-      "image": "hospitality/durum_pollo.jpg"
+      "image": "hospitality/durum_pollo.png"
     },
     {
       "code": "durum_mixto",
@@ -102,7 +102,7 @@
       "category": "durum",
       "tax_class_hint": "reduced",
       "price": 6.5,
-      "image": "hospitality/durum_mixto.jpg"
+      "image": "hospitality/durum_mixto.png"
     },
     {
       "code": "plato_kebab",
@@ -158,7 +158,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "hospitality/ensalada_turca.jpg"
+      "image": "hospitality/ensalada_turca.png"
     },
     {
       "code": "pan_pita",
@@ -197,7 +197,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 1.5,
-      "image": "hospitality/agua_mineral.jpg"
+      "image": "hospitality/agua_mineral.png"
     },
     {
       "code": "coca_cola",
@@ -205,7 +205,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/coca_cola.jpg"
+      "image": "hospitality/coca_cola.png"
     },
     {
       "code": "fanta_naranja",
@@ -213,7 +213,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/fanta_naranja.jpg"
+      "image": "hospitality/fanta_naranja.png"
     },
     {
       "code": "ayran",
@@ -221,7 +221,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/ayran.jpg"
+      "image": "hospitality/ayran.png"
     },
     {
       "code": "te_turco",

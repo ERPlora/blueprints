@@ -22,7 +22,8 @@
     "BI": "recommended"
   },
   "extra_modules": [
-    "orders"
+    "orders",
+    "delivery"
   ],
   "sector_features": [
     "Specialty coffee menu",

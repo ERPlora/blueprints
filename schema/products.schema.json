@@ -88,7 +88,7 @@
         "is_weighable": { "type": "boolean" },
         "image": {
           "type": "string",
-          "description": "Filename in data/assets/products/"
+          "description": "Relative path within data/assets/products/ (e.g. hospitality/cafe_solo.jpg)"
         }
       }
     }

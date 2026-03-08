@@ -1,0 +1,274 @@
+{
+  "version": "1.0.0",
+  "description": "Country-specific compliance modules. Auto-activated based on HubConfig.country_code during setup Step 1 (Region).",
+  "countries": {
+    "ES": {
+      "name": "España",
+      "required_modules": ["verifactu", "tax", "gdpr"],
+      "recommended_modules": ["sii", "facturae", "facturae_b2b"],
+      "tax_preset": "es_standard",
+      "requirements": [
+        {
+          "module": "verifactu",
+          "name": "VeriFactu",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas no sujetas a SII",
+          "status": "upcoming",
+          "effective_date": "2027-01-01",
+          "legal_reference": "Real Decreto 1007/2023 (Ley Antifraude)"
+        },
+        {
+          "module": "sii",
+          "name": "SII",
+          "category": "tax_reporting",
+          "mandatory": false,
+          "scope": "Empresas con facturacion > 6M EUR, grupos de IVA, inscritos en REDEME",
+          "status": "enforced",
+          "effective_date": "2017-07-01",
+          "legal_reference": "Real Decreto 596/2016"
+        },
+        {
+          "module": null,
+          "name": "TicketBAI",
+          "category": "pos_fiscal",
+          "mandatory": true,
+          "scope": "Todas las empresas en Pais Vasco",
+          "region": "Pais Vasco (Alava, Gipuzkoa, Bizkaia)",
+          "status": "enforced",
+          "effective_date": "2022-12-01",
+          "legal_reference": "Norma Foral (varia por provincia)"
+        },
+        {
+          "module": "facturae_b2b",
+          "name": "Factura-e B2B",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las transacciones B2B",
+          "status": "planned",
+          "effective_date": "2027-06-01",
+          "legal_reference": "Ley 18/2022 (Crea y Crece)"
+        },
+        {
+          "module": "gdpr",
+          "name": "RGPD / LOPDGDD",
+          "category": "data_protection",
+          "mandatory": true,
+          "scope": "Todas las empresas que tratan datos personales",
+          "status": "enforced",
+          "effective_date": "2018-05-25",
+          "legal_reference": "Reglamento (UE) 2016/679 + Ley Organica 3/2018"
+        }
+      ]
+    },
+    "PT": {
+      "name": "Portugal",
+      "required_modules": ["tax", "gdpr"],
+      "recommended_modules": [],
+      "tax_preset": "pt_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "SAF-T PT",
+          "category": "tax_reporting",
+          "mandatory": true,
+          "scope": "Todas las empresas con NIF portugues",
+          "status": "enforced",
+          "legal_reference": "Decreto-Ley 28/2019"
+        },
+        {
+          "module": null,
+          "name": "ATCUD",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas con NIF portugues",
+          "status": "enforced",
+          "effective_date": "2023-01-01",
+          "legal_reference": "Decreto-Ley 28/2019, Portaria 195/2020"
+        }
+      ]
+    },
+    "FR": {
+      "name": "France",
+      "required_modules": ["tax", "gdpr"],
+      "recommended_modules": [],
+      "tax_preset": "fr_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "NF525 TPV",
+          "category": "pos_fiscal",
+          "mandatory": true,
+          "scope": "Todas las empresas que usan software TPV",
+          "status": "upcoming",
+          "effective_date": "2026-08-31",
+          "legal_reference": "Art. 286 CGI (Loi Anti-Fraude)"
+        },
+        {
+          "module": null,
+          "name": "Facture-X B2B",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las transacciones B2B domesticas",
+          "status": "upcoming",
+          "effective_date": "2026-09-01",
+          "legal_reference": "Loi de Finances 2024, Art. 91"
+        }
+      ]
+    },
+    "IT": {
+      "name": "Italia",
+      "required_modules": ["tax", "gdpr"],
+      "recommended_modules": [],
+      "tax_preset": "it_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "FatturaPA / SDI",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas con NIF italiano",
+          "status": "enforced",
+          "effective_date": "2019-01-01",
+          "legal_reference": "Decreto Legislativo 127/2015"
+        },
+        {
+          "module": null,
+          "name": "Corrispettivi",
+          "category": "pos_fiscal",
+          "mandatory": true,
+          "scope": "Todos los negocios minoristas/B2C",
+          "status": "enforced",
+          "effective_date": "2020-01-01",
+          "legal_reference": "DM 7 diciembre 2016"
+        }
+      ]
+    },
+    "DE": {
+      "name": "Deutschland",
+      "required_modules": ["tax", "gdpr"],
+      "recommended_modules": [],
+      "tax_preset": "de_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "TSE KassenSichV",
+          "category": "pos_fiscal",
+          "mandatory": true,
+          "scope": "Todas las empresas con cajas registradoras electronicas",
+          "status": "enforced",
+          "effective_date": "2020-01-01",
+          "legal_reference": "KassenSichV (Kassensicherungsverordnung)"
+        },
+        {
+          "module": null,
+          "name": "XRechnung",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las transacciones B2B (>800K EUR desde 2027, todos desde 2028)",
+          "status": "upcoming",
+          "effective_date": "2027-01-01",
+          "legal_reference": "Wachstumschancengesetz 2024"
+        }
+      ]
+    },
+    "MX": {
+      "name": "Mexico",
+      "required_modules": ["tax"],
+      "recommended_modules": [],
+      "tax_preset": "mx_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "CFDI 4.0",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas con RFC",
+          "status": "enforced",
+          "effective_date": "2022-01-01",
+          "legal_reference": "CFF Art. 29, 29-A; Resolucion Miscelanea Fiscal"
+        },
+        {
+          "module": null,
+          "name": "Complemento de Pago 2.0",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Pagos diferidos o parciales",
+          "status": "enforced",
+          "legal_reference": "Regla 2.7.1.32 RMF"
+        }
+      ]
+    },
+    "CO": {
+      "name": "Colombia",
+      "required_modules": ["tax"],
+      "recommended_modules": [],
+      "tax_preset": "co_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "Facturacion Electronica DIAN",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas obligadas a facturar",
+          "status": "enforced",
+          "effective_date": "2020-11-01",
+          "legal_reference": "Resolucion DIAN 000042/2020"
+        },
+        {
+          "module": null,
+          "name": "Documento Soporte",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Compras a no obligados a facturar",
+          "status": "enforced",
+          "effective_date": "2022-08-01",
+          "legal_reference": "Resolucion DIAN 000167/2021"
+        }
+      ]
+    },
+    "AR": {
+      "name": "Argentina",
+      "required_modules": ["tax"],
+      "recommended_modules": [],
+      "tax_preset": "ar_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "Factura Electronica AFIP",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas",
+          "status": "enforced",
+          "legal_reference": "RG AFIP 4291/2018"
+        },
+        {
+          "module": null,
+          "name": "Controlador Fiscal",
+          "category": "pos_fiscal",
+          "mandatory": true,
+          "scope": "Comercio minorista B2C",
+          "status": "enforced",
+          "legal_reference": "RG AFIP 3561"
+        }
+      ]
+    },
+    "CL": {
+      "name": "Chile",
+      "required_modules": ["tax"],
+      "recommended_modules": [],
+      "tax_preset": "cl_standard",
+      "requirements": [
+        {
+          "module": null,
+          "name": "DTE (Documento Tributario Electronico)",
+          "category": "invoicing",
+          "mandatory": true,
+          "scope": "Todas las empresas",
+          "status": "enforced",
+          "legal_reference": "Ley 20.727"
+        }
+      ]
+    }
+  }
+}

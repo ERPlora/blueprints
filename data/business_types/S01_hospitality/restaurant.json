@@ -25,7 +25,8 @@
     "tables",
     "kitchen",
     "orders",
-    "reservations"
+    "reservations",
+    "delivery"
   ],
   "sector_features": [
     "Table plan / floors",

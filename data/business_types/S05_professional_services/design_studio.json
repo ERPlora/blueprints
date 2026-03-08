@@ -21,7 +21,9 @@
     "PRY": "essential",
     "BI": "recommended"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "timesheets"
+  ],
   "sector_features": [
     "Phased projects",
     "Document management"

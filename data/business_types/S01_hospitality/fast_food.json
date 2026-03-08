@@ -23,7 +23,8 @@
   },
   "extra_modules": [
     "kitchen",
-    "orders"
+    "orders",
+    "delivery"
   ],
   "sector_features": [
     "Self-order kiosk",

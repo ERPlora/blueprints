@@ -25,7 +25,8 @@
     "kitchen",
     "tables",
     "orders",
-    "reservations"
+    "reservations",
+    "delivery"
   ],
   "sector_features": [
     "Sushi bar counter",

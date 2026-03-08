@@ -24,7 +24,9 @@
     "PRY": "na",
     "BI": "recommended"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "delivery"
+  ],
   "sector_features": [
     "Multi-zone bar + dining"
   ],
