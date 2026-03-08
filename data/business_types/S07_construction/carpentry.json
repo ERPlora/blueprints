@@ -1,0 +1,40 @@
+{
+  "code": "carpentry",
+  "sector": "construction",
+  "name": "Carpentry / Cabinet Making",
+  "description": "Carpentry with custom quotes, BOM/cutting, production, delivery+installation",
+  "icon": "construct-outline",
+  "color": "#5d4037",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Custom quotes",
+    "BOM/cutting",
+    "Production"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/carpentry.json"
+}

@@ -1,0 +1,40 @@
+{
+  "code": "event_venue",
+  "sector": "entertainment",
+  "name": "Event Venue",
+  "description": "Event venue with availability, quotes, suppliers, deposits/partial payments",
+  "icon": "sparkles-outline",
+  "color": "#c62828",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Availability calendar",
+    "Event quotes",
+    "Suppliers"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/event_venue.json"
+}

@@ -1,0 +1,40 @@
+{
+  "code": "textile_workshop",
+  "sector": "manufacturing",
+  "name": "Textile Workshop",
+  "description": "Textile workshop with patterns, size/color production, fabrics, quality",
+  "icon": "shirt-outline",
+  "color": "#ad1457",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Patterns",
+    "Size/color production",
+    "Fabrics"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/textile_workshop.json"
+}

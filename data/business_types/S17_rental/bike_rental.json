@@ -1,0 +1,40 @@
+{
+  "code": "bike_rental",
+  "sector": "rental",
+  "name": "Bike / Scooter Rental",
+  "description": "Bike rental with GPS fleet, hourly/daily, subscriptions, maintenance, stations",
+  "icon": "bicycle-outline",
+  "color": "#2e7d32",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "GPS fleet",
+    "Hourly/daily rental",
+    "Subscriptions"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/bike_rental.json"
+}

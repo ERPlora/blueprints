@@ -1,0 +1,40 @@
+{
+  "code": "spa",
+  "sector": "personal_services",
+  "name": "Spa / Massage",
+  "description": "Spa with circuits, online booking, combined packages",
+  "icon": "water-outline",
+  "color": "#0097a7",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Circuits",
+    "Online booking",
+    "Combined packages"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/spa.json"
+}

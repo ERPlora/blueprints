@@ -1,0 +1,41 @@
+{
+  "code": "winery",
+  "sector": "manufacturing",
+  "name": "Winery / Vineyard",
+  "description": "Winery with vineyard-to-bottle traceability, harvest, fermentation, DO, wine tourism",
+  "icon": "wine-outline",
+  "color": "#880e4f",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "essential",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Vineyard-to-bottle",
+    "Harvest",
+    "DO",
+    "Wine tourism"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/winery.json"
+}

@@ -1,0 +1,41 @@
+{
+  "code": "laundry",
+  "sector": "personal_services",
+  "name": "Laundry / Dry Cleaner",
+  "description": "Laundry with garment labeling, order status, home delivery, subscriptions",
+  "icon": "shirt-outline",
+  "color": "#42a5f5",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Garment labeling",
+    "Order status",
+    "Home delivery",
+    "Subscriptions"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/laundry.json"
+}

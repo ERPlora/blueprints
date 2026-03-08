@@ -1,0 +1,40 @@
+{
+  "code": "podiatry",
+  "sector": "personal_services",
+  "name": "Podiatry",
+  "description": "Podiatry with patient history, custom insoles, appointments",
+  "icon": "footsteps-outline",
+  "color": "#5c6bc0",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Patient history",
+    "Custom insoles",
+    "Appointments"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/podiatry.json"
+}

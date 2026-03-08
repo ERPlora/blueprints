@@ -1,0 +1,147 @@
+{
+  "version": "1.0.0",
+  "models": [
+    {
+      "code": "franchise_franchisee",
+      "name": "Franchise (Franchisee)",
+      "description": "Reporting to franchisor, brand standards, royalties/fees, centralized purchasing, mandatory training",
+      "icon": "business-outline",
+      "order": 1,
+      "extra_modules": [],
+      "extra_features": [
+        "franchise_reporting",
+        "centralized_purchasing",
+        "brand_standards",
+        "kpi_compliance"
+      ]
+    },
+    {
+      "code": "franchise_franchisor",
+      "name": "Franchise (Franchisor)",
+      "description": "Franchisee network management, fee collection, auditing, centralized training, expansion planning",
+      "icon": "git-network-outline",
+      "order": 2,
+      "extra_modules": [],
+      "extra_features": [
+        "franchise_network",
+        "fee_collection",
+        "franchise_audit",
+        "centralized_training",
+        "expansion"
+      ]
+    },
+    {
+      "code": "multi_store",
+      "name": "Multi-store / Chain",
+      "description": "Multi-warehouse, inter-store transfers, consolidated reporting, centralized pricing, multi-center payroll",
+      "icon": "copy-outline",
+      "order": 3,
+      "extra_modules": [],
+      "extra_features": [
+        "multi_warehouse",
+        "stock_transfers",
+        "consolidated_reporting",
+        "centralized_pricing"
+      ]
+    },
+    {
+      "code": "marketplace_platform",
+      "name": "Marketplace / Platform",
+      "description": "Multi-vendor, sales commissions, vendor onboarding, disputes, split payments, vendor dashboard",
+      "icon": "grid-outline",
+      "order": 4,
+      "extra_modules": [],
+      "extra_features": [
+        "multi_vendor",
+        "sales_commissions",
+        "vendor_onboarding",
+        "split_payments"
+      ]
+    },
+    {
+      "code": "subscription_model",
+      "name": "Subscription Model",
+      "description": "Recurring billing, plans/tiers, churn/retention, metrics (MRR, LTV, CAC), upgrade/downgrade, trials",
+      "icon": "sync-outline",
+      "order": 5,
+      "extra_modules": [
+        "subscriptions"
+      ],
+      "extra_features": [
+        "recurring_billing",
+        "subscription_plans",
+        "churn_metrics"
+      ]
+    },
+    {
+      "code": "street_vendor",
+      "name": "Street Vendor / Markets",
+      "description": "Multi-location temporary, mobile POS/offline, location changes, portable stock, municipal licenses",
+      "icon": "location-outline",
+      "order": 6,
+      "extra_modules": [],
+      "extra_features": [
+        "mobile_pos",
+        "offline_priority",
+        "portable_stock",
+        "location_tracking"
+      ]
+    },
+    {
+      "code": "vending_machines",
+      "name": "Vending Machines",
+      "description": "Per-machine inventory, restocking routes, telemetry/alerts, unattended payment, per-machine reporting",
+      "icon": "tv-outline",
+      "order": 7,
+      "extra_modules": [],
+      "extra_features": [
+        "machine_inventory",
+        "restocking_routes",
+        "telemetry",
+        "unattended_payment"
+      ]
+    },
+    {
+      "code": "dealer_distributor",
+      "name": "Dealer / Official Distributor",
+      "description": "Brand-imposed catalog, sales targets, factory warranties, factory orders, incentives/rappels",
+      "icon": "ribbon-outline",
+      "order": 8,
+      "extra_modules": [],
+      "extra_features": [
+        "brand_catalog",
+        "sales_targets",
+        "factory_warranties",
+        "incentive_rappels"
+      ]
+    },
+    {
+      "code": "worker_cooperative",
+      "name": "Worker Cooperative",
+      "description": "Worker-members, profit sharing, assemblies/voting, cooperative accounting, share capital",
+      "icon": "people-circle-outline",
+      "order": 9,
+      "extra_modules": [],
+      "extra_features": [
+        "profit_sharing",
+        "assemblies",
+        "cooperative_accounting",
+        "share_capital"
+      ]
+    },
+    {
+      "code": "seasonal_popup",
+      "name": "Seasonal / Pop-up",
+      "description": "Quick open/close, temporary inventory, temporary staff, temporary licenses, season profitability",
+      "icon": "calendar-outline",
+      "order": 10,
+      "extra_modules": [],
+      "extra_features": [
+        "quick_setup",
+        "temporary_inventory",
+        "temporary_staff",
+        "season_profitability"
+      ]
+    }
+  ]
+}

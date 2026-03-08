@@ -1,0 +1,55 @@
+{
+  "code": "hotel",
+  "sector": "hospitality",
+  "name": "Hotel / Accommodation",
+  "description": "Hotel or accommodation with reservations and booking, channel manager, check-in/check-out, housekeeping, room service and yield management",
+  "icon": "bed-outline",
+  "color": "#007aff",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": [
+    "reservations",
+    "property_mgmt"
+  ],
+  "sector_features": [
+    "Reservations / booking",
+    "Channel manager",
+    "Check-in/check-out",
+    "Housekeeping",
+    "Room service",
+    "Yield management"
+  ],
+  "roles": [
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": [
+        "reservations.*",
+        "customers.*",
+        "invoicing.*"
+      ]
+    },
+    {
+      "id": "housekeeper",
+      "name": "Housekeeper",
+      "permissions": [
+        "property_mgmt.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/hotel.json"
+}

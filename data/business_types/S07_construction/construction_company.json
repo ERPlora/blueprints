@@ -1,0 +1,41 @@
+{
+  "code": "construction_company",
+  "sector": "construction",
+  "name": "Construction Company",
+  "description": "Construction with work budgets, certifications, subcontractors, materials, OHS",
+  "icon": "business-outline",
+  "color": "#795548",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "essential",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Work budgets",
+    "Certifications",
+    "Subcontractors",
+    "OHS"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/construction_company.json"
+}

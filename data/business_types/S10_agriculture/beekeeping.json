@@ -1,0 +1,40 @@
+{
+  "code": "beekeeping",
+  "sector": "agriculture",
+  "name": "Beekeeping",
+  "description": "Beekeeping with apiaries, seasonal production, traceability, bottling, direct sales",
+  "icon": "bug-outline",
+  "color": "#f9a825",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Apiaries",
+    "Seasonal production",
+    "Direct sales+B2B"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/beekeeping.json"
+}

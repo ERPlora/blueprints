@@ -1,0 +1,40 @@
+{
+  "code": "jewelry",
+  "sector": "retail",
+  "name": "Jewelry / Watch Store",
+  "description": "Jewelry with serial/certificate, repair workshop, engravings, appraisals",
+  "icon": "diamond-outline",
+  "color": "#ffd700",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "recommended",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "recommended",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Serial/certificate",
+    "Engravings",
+    "Appraisals"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/jewelry.json"
+}

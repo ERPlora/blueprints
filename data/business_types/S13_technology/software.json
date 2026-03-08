@@ -1,0 +1,40 @@
+{
+  "code": "software",
+  "sector": "technology",
+  "name": "Software Development",
+  "description": "Software company with agile projects, timesheets, hourly billing, SaaS contracts",
+  "icon": "code-slash-outline",
+  "color": "#263238",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Agile projects",
+    "Timesheets",
+    "SaaS contracts"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/software.json"
+}

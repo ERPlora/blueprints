@@ -1,0 +1,40 @@
+{
+  "code": "event_equipment_rental",
+  "sector": "rental",
+  "name": "Event Equipment Rental",
+  "description": "Event equipment rental with reservations, setup/teardown, inventory condition",
+  "icon": "megaphone-outline",
+  "color": "#d32f2f",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Event reservations",
+    "Setup/teardown",
+    "Inventory condition"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/event_equipment_rental.json"
+}

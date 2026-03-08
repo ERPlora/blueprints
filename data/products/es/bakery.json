@@ -1,0 +1,360 @@
+{
+  "version": "1.0.0",
+  "business_type": "bakery",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cafes",
+      "name": "Cafes",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "aguas",
+      "name": "Aguas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "zumos",
+      "name": "Zumos",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "infusiones",
+      "name": "Infusiones y Te",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "panes",
+      "name": "Panes",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 1
+    },
+    {
+      "code": "bolleria",
+      "name": "Bolleria",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "tartas",
+      "name": "Tartas y Pasteles",
+      "icon": "ice-cream-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "bocadillos",
+      "name": "Bocadillos",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "galletas",
+      "name": "Galletas",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    }
+  ],
+  "products": [
+    {
+      "code": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.3
+    },
+    {
+      "code": "cafe_cortado",
+      "name": "Cafe cortado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4
+    },
+    {
+      "code": "cafe_con_leche",
+      "name": "Cafe con leche",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.6
+    },
+    {
+      "code": "capuchino",
+      "name": "Capuchino",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "descafeinado",
+      "name": "Descafeinado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4
+    },
+    {
+      "code": "carajillo",
+      "name": "Carajillo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "coca_cola_zero",
+      "name": "Coca-Cola Zero",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "fanta_limon",
+      "name": "Fanta limon",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "sprite",
+      "name": "Sprite",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "aquarius",
+      "name": "Aquarius",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "tonica",
+      "name": "Tonica",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "agua_con_gas",
+      "name": "Agua con gas",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "zumo_naranja",
+      "name": "Zumo de naranja",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 3.0
+    },
+    {
+      "code": "zumo_tomate",
+      "name": "Zumo de tomate",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8
+    },
+    {
+      "code": "zumo_pina",
+      "name": "Zumo de pina",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8
+    },
+    {
+      "code": "te_negro",
+      "name": "Te negro",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "te_verde",
+      "name": "Te verde",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "manzanilla",
+      "name": "Manzanilla",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "poleo_menta",
+      "name": "Poleo menta",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "barra_pan",
+      "name": "Barra de pan",
+      "category": "panes",
+      "tax_class_hint": "super_reduced",
+      "price": 1.0
+    },
+    {
+      "code": "hogaza",
+      "name": "Hogaza",
+      "category": "panes",
+      "tax_class_hint": "super_reduced",
+      "price": 2.5
+    },
+    {
+      "code": "chapata",
+      "name": "Chapata",
+      "category": "panes",
+      "tax_class_hint": "super_reduced",
+      "price": 1.8
+    },
+    {
+      "code": "pan_integral",
+      "name": "Pan integral",
+      "category": "panes",
+      "tax_class_hint": "super_reduced",
+      "price": 2.2
+    },
+    {
+      "code": "pan_centeno",
+      "name": "Pan de centeno",
+      "category": "panes",
+      "tax_class_hint": "super_reduced",
+      "price": 2.8
+    },
+    {
+      "code": "pan_semillas",
+      "name": "Pan de semillas",
+      "category": "panes",
+      "tax_class_hint": "super_reduced",
+      "price": 3.0
+    },
+    {
+      "code": "croissant",
+      "name": "Croissant",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.5
+    },
+    {
+      "code": "napolitana_chocolate",
+      "name": "Napolitana de chocolate",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "ensaimada",
+      "name": "Ensaimada",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "palmera_chocolate",
+      "name": "Palmera de chocolate",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "magdalena",
+      "name": "Magdalena",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.2
+    },
+    {
+      "code": "tarta_manzana",
+      "name": "Tarta de manzana",
+      "category": "tartas",
+      "tax_class_hint": "reduced",
+      "price": 3.5
+    },
+    {
+      "code": "tarta_queso",
+      "name": "Tarta de queso",
+      "category": "tartas",
+      "tax_class_hint": "reduced",
+      "price": 3.8
+    },
+    {
+      "code": "tarta_chocolate",
+      "name": "Tarta de chocolate",
+      "category": "tartas",
+      "tax_class_hint": "reduced",
+      "price": 3.8
+    },
+    {
+      "code": "bocadillo_jamon_queso",
+      "name": "Bocadillo de jamon y queso",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 4.0
+    },
+    {
+      "code": "bocadillo_vegetal",
+      "name": "Bocadillo vegetal",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 3.8
+    },
+    {
+      "code": "galleta_mantequilla",
+      "name": "Galleta de mantequilla",
+      "category": "galletas",
+      "tax_class_hint": "reduced",
+      "price": 1.0
+    },
+    {
+      "code": "galleta_chocolate",
+      "name": "Galleta con pepitas de chocolate",
+      "category": "galletas",
+      "tax_class_hint": "reduced",
+      "price": 1.2
+    }
+  ]
+}

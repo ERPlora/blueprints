@@ -1,0 +1,43 @@
+{
+  "code": "pharmacy",
+  "sector": "pharmacy",
+  "name": "Pharmacy",
+  "description": "Pharmacy with prescriptions, lot traceability, strict expiry, e-prescription",
+  "icon": "medkit-outline",
+  "color": "#4caf50",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Prescriptions",
+    "Lot traceability",
+    "E-prescription",
+    "SIGRE"
+  ],
+  "roles": [
+    {
+      "id": "pharmacist",
+      "name": "Pharmacist",
+      "permissions": [
+        "sales.*",
+        "inventory.*",
+        "customers.*"
+      ]
+    }
+  ],
+  "products_file": "products/pharmacy.json"
+}

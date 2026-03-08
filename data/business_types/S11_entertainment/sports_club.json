@@ -1,0 +1,40 @@
+{
+  "code": "sports_club",
+  "sector": "entertainment",
+  "name": "Sports Club",
+  "description": "Sports club with memberships, court booking, sports schools, leagues",
+  "icon": "football-outline",
+  "color": "#1b5e20",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Memberships",
+    "Court booking",
+    "Sports schools"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/sports_club.json"
+}

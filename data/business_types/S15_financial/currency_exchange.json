@@ -1,0 +1,40 @@
+{
+  "code": "currency_exchange",
+  "sector": "financial",
+  "name": "Currency Exchange",
+  "description": "Currency exchange with real-time rates, commissions, KYC AML, multi-currency count",
+  "icon": "cash-outline",
+  "color": "#1b5e20",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Real-time rates",
+    "KYC AML",
+    "Multi-currency count"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/currency_exchange.json"
+}

@@ -1,0 +1,339 @@
+{
+  "version": "1.0.0",
+  "business_type": "fast_food",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cafes",
+      "name": "Cafes",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "aguas",
+      "name": "Aguas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "zumos",
+      "name": "Zumos",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "infusiones",
+      "name": "Infusiones y Te",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "hamburguesas",
+      "name": "Hamburguesas",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "perritos",
+      "name": "Perritos calientes",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "bocadillos",
+      "name": "Bocadillos y Wraps",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "acompanamiento",
+      "name": "Acompanamientos",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "menus",
+      "name": "Menus / Combos",
+      "icon": "document-text-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "postres",
+      "name": "Postres",
+      "icon": "ice-cream-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.3
+    },
+    {
+      "code": "cafe_cortado",
+      "name": "Cafe cortado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4
+    },
+    {
+      "code": "cafe_con_leche",
+      "name": "Cafe con leche",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.6
+    },
+    {
+      "code": "capuchino",
+      "name": "Capuchino",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "descafeinado",
+      "name": "Descafeinado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4
+    },
+    {
+      "code": "carajillo",
+      "name": "Carajillo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "coca_cola_zero",
+      "name": "Coca-Cola Zero",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "fanta_limon",
+      "name": "Fanta limon",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "sprite",
+      "name": "Sprite",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "aquarius",
+      "name": "Aquarius",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "tonica",
+      "name": "Tonica",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "agua_con_gas",
+      "name": "Agua con gas",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "zumo_naranja",
+      "name": "Zumo de naranja",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 3.0
+    },
+    {
+      "code": "zumo_tomate",
+      "name": "Zumo de tomate",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8
+    },
+    {
+      "code": "zumo_pina",
+      "name": "Zumo de pina",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8
+    },
+    {
+      "code": "te_negro",
+      "name": "Te negro",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "te_verde",
+      "name": "Te verde",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "manzanilla",
+      "name": "Manzanilla",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "poleo_menta",
+      "name": "Poleo menta",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "hamburguesa_clasica",
+      "name": "Hamburguesa clasica",
+      "category": "hamburguesas",
+      "tax_class_hint": "reduced",
+      "price": 7.5
+    },
+    {
+      "code": "hamburguesa_queso",
+      "name": "Hamburguesa con queso",
+      "category": "hamburguesas",
+      "tax_class_hint": "reduced",
+      "price": 8.5
+    },
+    {
+      "code": "hamburguesa_doble",
+      "name": "Hamburguesa doble",
+      "category": "hamburguesas",
+      "tax_class_hint": "reduced",
+      "price": 10.0
+    },
+    {
+      "code": "hamburguesa_pollo",
+      "name": "Hamburguesa de pollo",
+      "category": "hamburguesas",
+      "tax_class_hint": "reduced",
+      "price": 8.0
+    },
+    {
+      "code": "perrito_clasico",
+      "name": "Perrito clasico",
+      "category": "perritos",
+      "tax_class_hint": "reduced",
+      "price": 5.0
+    },
+    {
+      "code": "wrap_pollo",
+      "name": "Wrap de pollo",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 6.5
+    },
+    {
+      "code": "wrap_vegetal",
+      "name": "Wrap vegetal",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 6.0
+    },
+    {
+      "code": "patatas_fritas",
+      "name": "Patatas fritas",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 3.0
+    },
+    {
+      "code": "aros_cebolla",
+      "name": "Aros de cebolla",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 3.5
+    },
+    {
+      "code": "nuggets",
+      "name": "Nuggets de pollo",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 4.5
+    },
+    {
+      "code": "menu_hamburguesa",
+      "name": "Menu hamburguesa",
+      "category": "menus",
+      "tax_class_hint": "reduced",
+      "price": 10.5
+    },
+    {
+      "code": "menu_infantil",
+      "name": "Menu infantil",
+      "category": "menus",
+      "tax_class_hint": "reduced",
+      "price": 7.0
+    },
+    {
+      "code": "helado_soft",
+      "name": "Helado soft",
+      "category": "postres",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "brownie",
+      "name": "Brownie",
+      "category": "postres",
+      "tax_class_hint": "reduced",
+      "price": 3.5
+    }
+  ]
+}

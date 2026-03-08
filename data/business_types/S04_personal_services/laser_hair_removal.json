@@ -1,0 +1,40 @@
+{
+  "code": "laser_hair_removal",
+  "sector": "personal_services",
+  "name": "Laser Hair Removal",
+  "description": "Laser with body zone services, session packs, phototype profile",
+  "icon": "flash-outline",
+  "color": "#ec407a",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Body zone services",
+    "Session packs",
+    "Phototype profile"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/laser_hair_removal.json"
+}

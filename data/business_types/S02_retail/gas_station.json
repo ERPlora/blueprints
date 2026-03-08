@@ -1,0 +1,40 @@
+{
+  "code": "gas_station",
+  "sector": "retail",
+  "name": "Gas Station",
+  "description": "Gas station with pump integration, multi-POS, fleet cards, license plate invoicing",
+  "icon": "car-sport-outline",
+  "color": "#f44336",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Pump integration",
+    "Multi-POS",
+    "Fleet cards"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/gas_station.json"
+}

@@ -1,0 +1,40 @@
+{
+  "code": "boat_rental",
+  "sector": "rental",
+  "name": "Boat Rental",
+  "description": "Boat rental with fleet, reservations, client licenses, insurance, check-in/out",
+  "icon": "boat-outline",
+  "color": "#0277bd",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Fleet catalog",
+    "Reservations",
+    "Client licenses"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/boat_rental.json"
+}

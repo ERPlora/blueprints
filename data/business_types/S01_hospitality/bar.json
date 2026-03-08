@@ -1,0 +1,47 @@
+{
+  "code": "bar",
+  "sector": "hospitality",
+  "name": "Bar / Pub",
+  "description": "Bar or cafe with counter service, simple drinks and snacks menu, open tabs and basic table management",
+  "icon": "wine-outline",
+  "color": "#eb445a",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "tables",
+    "orders"
+  ],
+  "sector_features": [
+    "Basic tables",
+    "Open tabs",
+    "Cash register shifts",
+    "Happy hour"
+  ],
+  "roles": [
+    {
+      "id": "bartender",
+      "name": "Bartender",
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "tables.*",
+        "orders.*"
+      ]
+    }
+  ],
+  "products_file": "products/bar.json"
+}

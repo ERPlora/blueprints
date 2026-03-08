@@ -1,0 +1,40 @@
+{
+  "code": "academy",
+  "sector": "education",
+  "name": "Academy / Training Center",
+  "description": "Training center with students, schedules, teachers, certifications, student portal",
+  "icon": "school-outline",
+  "color": "#1565c0",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Students/enrollment",
+    "Schedules",
+    "Certifications"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/academy.json"
+}

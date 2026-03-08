@@ -1,0 +1,40 @@
+{
+  "code": "notary",
+  "sector": "professional_services",
+  "name": "Notary Office",
+  "description": "Notary with deed scheduling, regulated fees, deed archive",
+  "icon": "document-lock-outline",
+  "color": "#424242",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Deed scheduling",
+    "Regulated fees",
+    "Deed archive"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/notary.json"
+}

@@ -1,0 +1,40 @@
+{
+  "code": "vehicle_rental",
+  "sector": "transport",
+  "name": "Vehicle Rental",
+  "description": "Vehicle rental with catalog, contracts, check-in/out, deposits, online booking",
+  "icon": "car-sport-outline",
+  "color": "#1565c0",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Catalog/availability",
+    "Contracts",
+    "Online booking"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/vehicle_rental.json"
+}

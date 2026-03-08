@@ -1,0 +1,40 @@
+{
+  "code": "tattoo_studio",
+  "sector": "personal_services",
+  "name": "Tattoo / Piercing",
+  "description": "Tattoo studio with portfolio, mandatory consent, design quotes",
+  "icon": "brush-outline",
+  "color": "#212121",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Artist portfolio",
+    "Mandatory consent",
+    "Design quotes"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/tattoo_studio.json"
+}

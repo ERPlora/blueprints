@@ -1,0 +1,52 @@
+{
+  "code": "nightclub",
+  "sector": "hospitality",
+  "name": "Nightclub / Disco / Pub",
+  "description": "Nightclub or dance club with capacity control, VIP reservations, pre-loaded wristbands, bottle service and night shift management",
+  "icon": "musical-notes-outline",
+  "color": "#5856d6",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "tables",
+    "reservations"
+  ],
+  "sector_features": [
+    "Capacity control",
+    "VIP reservations",
+    "Pre-loaded wristbands",
+    "Table bottle service",
+    "Night shifts"
+  ],
+  "roles": [
+    {
+      "id": "door_staff",
+      "name": "Door Staff",
+      "permissions": [
+        "reservations.view_*"
+      ]
+    },
+    {
+      "id": "dj_booth",
+      "name": "DJ Booth",
+      "permissions": [
+        "cash_register.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/nightclub.json"
+}

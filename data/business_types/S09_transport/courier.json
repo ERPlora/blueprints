@@ -1,0 +1,41 @@
+{
+  "code": "courier",
+  "sector": "transport",
+  "name": "Transport / Courier",
+  "description": "Transport with shipments, routes, fleet, tracking, digital signature",
+  "icon": "car-outline",
+  "color": "#37474f",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Shipments",
+    "Routes",
+    "Fleet",
+    "Tracking"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/courier.json"
+}

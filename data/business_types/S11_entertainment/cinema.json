@@ -1,0 +1,40 @@
+{
+  "code": "cinema",
+  "sector": "entertainment",
+  "name": "Cinema",
+  "description": "Cinema with listings, seating, online tickets, snack bar, subscriptions",
+  "icon": "film-outline",
+  "color": "#b71c1c",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Listings/sessions",
+    "Seating",
+    "Online tickets"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/cinema.json"
+}

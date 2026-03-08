@@ -1,0 +1,40 @@
+{
+  "code": "second_hand",
+  "sector": "retail",
+  "name": "Second-Hand / Vintage",
+  "description": "Second-hand with buy from individuals, condition grading, consignment, margin VAT",
+  "icon": "refresh-outline",
+  "color": "#607d8b",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Buy from individuals",
+    "Condition grading",
+    "Consignment"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/second_hand.json"
+}

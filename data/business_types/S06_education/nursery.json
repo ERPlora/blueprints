@@ -1,0 +1,40 @@
+{
+  "code": "nursery",
+  "sector": "education",
+  "name": "Nursery / Preschool",
+  "description": "Nursery with child profiles, attendance, dining, family communication",
+  "icon": "happy-outline",
+  "color": "#f06292",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Child profiles",
+    "Attendance",
+    "Family communication"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/nursery.json"
+}

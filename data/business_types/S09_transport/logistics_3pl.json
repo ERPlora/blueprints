@@ -1,0 +1,40 @@
+{
+  "code": "logistics_3pl",
+  "sector": "transport",
+  "name": "Logistics Operator / 3PL",
+  "description": "3PL with multi-client warehouse, pick/pack/ship, cross-docking, WMS",
+  "icon": "layers-outline",
+  "color": "#263238",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Multi-client warehouse",
+    "Pick/pack/ship",
+    "WMS"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/logistics_3pl.json"
+}

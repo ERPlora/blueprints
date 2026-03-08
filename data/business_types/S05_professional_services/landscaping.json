@@ -1,0 +1,40 @@
+{
+  "code": "landscaping",
+  "sector": "professional_services",
+  "name": "Landscaping",
+  "description": "Landscaping with maintenance contracts, projects, team routes, plant materials",
+  "icon": "leaf-outline",
+  "color": "#2e7d32",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Maintenance contracts",
+    "Projects",
+    "Team routes"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/landscaping.json"
+}

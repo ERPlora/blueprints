@@ -1,0 +1,40 @@
+{
+  "code": "insurance_brokerage",
+  "sector": "financial",
+  "name": "Insurance Brokerage",
+  "description": "Insurance brokerage with multi-carrier policies, mass renewals, claims",
+  "icon": "shield-checkmark-outline",
+  "color": "#0d47a1",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Multi-carrier policies",
+    "Mass renewals",
+    "Claims"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/insurance_brokerage.json"
+}

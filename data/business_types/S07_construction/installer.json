@@ -1,0 +1,40 @@
+{
+  "code": "installer",
+  "sector": "construction",
+  "name": "Installer (Plumber, Electrician, HVAC)",
+  "description": "Installer with work orders, parts, mobile warehouse, maintenance contracts",
+  "icon": "flash-outline",
+  "color": "#e65100",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Work orders",
+    "Mobile warehouse",
+    "Maintenance contracts"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/installer.json"
+}

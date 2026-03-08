@@ -1,0 +1,1778 @@
+{
+  "sectors": {
+    "hospitality": {
+      "name": "Hosteleria y Restauracion",
+      "description": "Bares, restaurantes, cafeterias, hoteles, catering, discotecas"
+    },
+    "retail": {
+      "name": "Comercio / Retail",
+      "description": "Ropa, supermercados, tiendas especializadas, mayoristas"
+    },
+    "pharmacy": {
+      "name": "Farmacia y Salud",
+      "description": "Farmacias, parafarmacias, herbolarios, ortopedias"
+    },
+    "personal_services": {
+      "name": "Servicios Personales y Bienestar",
+      "description": "Peluquerias, clinicas, gimnasios, centros de belleza, terapias"
+    },
+    "professional_services": {
+      "name": "Servicios Profesionales",
+      "description": "Consultorias, despachos, inmobiliarias, agencias"
+    },
+    "education": {
+      "name": "Educacion y Formacion",
+      "description": "Academias, autoescuelas, guarderias, escuelas de idiomas"
+    },
+    "construction": {
+      "name": "Construccion e Instalaciones",
+      "description": "Constructoras, reformas, instaladores, energia solar"
+    },
+    "manufacturing": {
+      "name": "Manufactura e Industria",
+      "description": "Fabricas, talleres, bodegas, procesado de alimentos"
+    },
+    "transport": {
+      "name": "Transporte y Logistica",
+      "description": "Mensajeria, alquiler vehiculos, mudanzas, 3PL, parking"
+    },
+    "agriculture": {
+      "name": "Agricultura y Sector Primario",
+      "description": "Explotaciones, cooperativas, viveros, ganaderia, apicultura"
+    },
+    "entertainment": {
+      "name": "Ocio y Entretenimiento",
+      "description": "Escape rooms, recreativos, clubs deportivos, cines, parques tematicos"
+    },
+    "nonprofit": {
+      "name": "ONG y Entidades",
+      "description": "ONGs, asociaciones, administracion fincas, colegios profesionales"
+    },
+    "technology": {
+      "name": "Tecnologia y Digital",
+      "description": "Desarrollo software, MSP, agencias web, hosting, telecomunicaciones"
+    },
+    "travel": {
+      "name": "Viajes y Turismo",
+      "description": "Agencias de viajes, tour operadores, guias turisticos"
+    },
+    "financial": {
+      "name": "Servicios Financieros",
+      "description": "Casas de cambio, casas de empeno, cobros, correduria de seguros"
+    },
+    "media": {
+      "name": "Media / Produccion / Creativos",
+      "description": "Fotografia, produccion video, estudios grabacion, editoriales, galerias de arte"
+    },
+    "rental": {
+      "name": "Alquiler y Rental",
+      "description": "Maquinaria, equipos eventos, trasteros, embarcaciones, bicicletas, disfraces"
+    },
+    "maritime": {
+      "name": "Sector Maritimo y Nautico",
+      "description": "Puertos deportivos, empresas pesqueras, talleres nauticos"
+    },
+    "funeral": {
+      "name": "Servicios Funerarios",
+      "description": "Funerarias, cementerios, tanatorios"
+    },
+    "coworking": {
+      "name": "Espacios y Coworking",
+      "description": "Espacios de coworking, centros de negocios, estudios compartidos"
+    }
+  },
+  "types": {
+    "bar": {
+      "name": "Bar / Cafeteria",
+      "description": "Bar o cafeteria con servicio en barra, carta sencilla de bebidas y tapas, tabs abiertos y gestion basica de mesas",
+      "sector_features": [
+        "Mesas basicas",
+        "Tabs abiertos",
+        "Turnos de caja",
+        "Happy hour"
+      ]
+    },
+    "restaurant": {
+      "name": "Restaurante",
+      "description": "Restaurante con servicio completo, plano de mesas/pisos, comandas cocina (KDS), cursos, reservas, division de cuenta, propinas y soporte take away/delivery",
+      "sector_features": [
+        "Plano mesas/pisos",
+        "Comandas cocina (KDS)",
+        "Cursos",
+        "Split bill",
+        "Reservas",
+        "Propinas",
+        "Take away/delivery",
+        "Impresora cocina+barra"
+      ]
+    },
+    "bar_restaurant": {
+      "name": "Bar-Restaurante",
+      "description": "Bar y restaurante combinados con zonas diferenciadas de barra y comedor, heredando capacidades de ambos tipos de negocio",
+      "sector_features": [
+        "Multi-zona barra+comedor"
+      ]
+    },
+    "fast_food": {
+      "name": "Comida Rapida / Fast Food",
+      "description": "Restaurante de comida rapida con kiosco de auto-pedido, KDS, pedidos por numero, integracion con delivery y combos",
+      "sector_features": [
+        "Kiosco auto-pedido",
+        "KDS",
+        "Pedido por numero",
+        "Integracion delivery",
+        "Combos"
+      ]
+    },
+    "food_truck": {
+      "name": "Food Truck",
+      "description": "Food truck movil con menu reducido, pagos moviles y operacion con prioridad offline",
+      "sector_features": [
+        "Offline prioritario",
+        "Menu reducido",
+        "Pagos moviles"
+      ]
+    },
+    "catering": {
+      "name": "Catering / Eventos Gastronomicos",
+      "description": "Empresa de catering con presupuestos de eventos, produccion por evento, rutas de entrega y alquiler de material",
+      "sector_features": [
+        "Presupuestos evento",
+        "Produccion por evento",
+        "Rutas entrega",
+        "Alquiler material"
+      ]
+    },
+    "bakery": {
+      "name": "Panaderia / Pasteleria (obrador)",
+      "description": "Panaderia o pasteleria con obrador, BOM/recetas, produccion diaria, encargos, control de caducidad y gestion de lotes",
+      "sector_features": [
+        "BOM/recetas",
+        "Produccion diaria",
+        "Encargos",
+        "Caducidad",
+        "Lotes"
+      ]
+    },
+    "ice_cream_shop": {
+      "name": "Heladeria",
+      "description": "Heladeria con venta por peso o bola, combos y gestion de sabores por temporada",
+      "sector_features": [
+        "Venta por peso/bola",
+        "Combos",
+        "Temporalidad"
+      ]
+    },
+    "nightclub": {
+      "name": "Discoteca / Pub / Club Nocturno",
+      "description": "Discoteca o club nocturno con control de aforo, reservas VIP, pulseras precargadas, servicio de botellas en mesa y gestion de turnos nocturnos",
+      "sector_features": [
+        "Control aforo",
+        "Reservas VIP",
+        "Pulseras precargadas",
+        "Botellas mesa",
+        "Turnos nocturnos"
+      ]
+    },
+    "hotel": {
+      "name": "Hotel / Alojamiento",
+      "description": "Hotel o alojamiento con reservas y booking, channel manager, check-in/check-out, housekeeping, room service y yield management",
+      "sector_features": [
+        "Reservas/booking",
+        "Channel manager",
+        "Check-in/check-out",
+        "Housekeeping",
+        "Room service",
+        "Yield management"
+      ]
+    },
+    "hostel": {
+      "name": "Hostal / Pension / Casa Rural",
+      "description": "Hostal, pension o casa rural con calendario de disponibilidad, booking simplificado y libro de policia (Espana)",
+      "sector_features": [
+        "Calendario disponibilidad",
+        "Booking simplificado",
+        "Libro policia (Espana)"
+      ]
+    },
+    "camping": {
+      "name": "Camping / Glamping",
+      "description": "Camping o glamping con mapa de parcelas, temporadas, actividades y mini-market y bar integrados",
+      "sector_features": [
+        "Mapa parcelas",
+        "Temporadas",
+        "Actividades",
+        "Mini-market+bar integrados"
+      ]
+    },
+    "cider_house": {
+      "name": "Sidreria / Brewpub",
+      "description": "Sidreria o brewpub con produccion propia de cerveza/sidra, gestion de tiradores y barriles, catas, venta de botella y distribucion B2B a otros bares",
+      "sector_features": [
+        "Produccion cerveza/sidra",
+        "Tiradores/barriles",
+        "Catas",
+        "Venta botella",
+        "B2B a otros bares"
+      ]
+    },
+    "dark_kitchen": {
+      "name": "Dark Kitchen / Obrador Comida Preparada",
+      "description": "Dark kitchen u obrador de comida preparada con multi-marca virtual, integracion con plataformas de delivery, produccion por demanda y gestion de rutas de reparto",
+      "sector_features": [
+        "Multi-marca virtual",
+        "Integracion delivery",
+        "Produccion por demanda",
+        "Rutas reparto"
+      ]
+    },
+    "beach_bar": {
+      "name": "Chiringuito / Terraza Temporada",
+      "description": "Chiringuito o terraza de temporada con apertura/cierre estacional, inventario simplificado, gestion de personal temporal y capacidad offline",
+      "sector_features": [
+        "Apertura/cierre estacional",
+        "Inventario simplificado",
+        "Personal temporal",
+        "Offline"
+      ]
+    },
+    "wine_bar": {
+      "name": "Vinoteca / Wine Bar",
+      "description": "Vinoteca o wine bar con catalogo de vinos (D.O., anada), venta por copa y botella, stock de botella abierta y catas",
+      "sector_features": [
+        "Catalogo vinos (D.O., anada)",
+        "Venta copa+botella",
+        "Stock botella abierta",
+        "Catas"
+      ]
+    },
+    "clothing": {
+      "name": "Tienda de Ropa / Moda",
+      "description": "Tienda de moda con variantes talla/color, temporadas/colecciones, multi-tienda y fidelizacion",
+      "sector_features": [
+        "Variantes talla/color",
+        "Temporadas/colecciones",
+        "Rebajas masivas",
+        "Fidelizacion"
+      ]
+    },
+    "supermarket": {
+      "name": "Supermercado / Alimentacion",
+      "description": "Supermercado con balanza, EAN/GTIN, caducidad/lotes, fidelizacion, self-checkout",
+      "sector_features": [
+        "Balanza",
+        "EAN/GTIN",
+        "Caducidad/lotes",
+        "Self-checkout",
+        "Control mermas"
+      ]
+    },
+    "fruit_shop": {
+      "name": "Fruteria / Verduleria",
+      "description": "Fruteria con balanza, venta peso/unidad, precios variables, merma",
+      "sector_features": [
+        "Balanza",
+        "Venta peso/unidad",
+        "Precios variables"
+      ]
+    },
+    "butcher_shop": {
+      "name": "Carniceria / Charcuteria",
+      "description": "Carniceria con trazabilidad lotes, despiece, balanza, alergenos",
+      "sector_features": [
+        "Trazabilidad lotes",
+        "Despiece",
+        "Alergenos"
+      ]
+    },
+    "fish_shop": {
+      "name": "Pescaderia",
+      "description": "Pescaderia con trazabilidad zona captura, peso, cadena frio, etiquetado",
+      "sector_features": [
+        "Trazabilidad zona captura",
+        "Cadena frio",
+        "Etiquetado"
+      ]
+    },
+    "hardware_store": {
+      "name": "Ferreteria",
+      "description": "Ferreteria con +10K SKUs, UdM mixtas, corte a medida, B2B+B2C",
+      "sector_features": [
+        "Catalogo masivo",
+        "Corte a medida",
+        "B2B+B2C"
+      ]
+    },
+    "electronics": {
+      "name": "Electronica / Informatica",
+      "description": "Electronica con n. serie, garantias, servicio tecnico, trade-in, financiacion",
+      "sector_features": [
+        "N. serie",
+        "Garantias",
+        "Servicio tecnico"
+      ]
+    },
+    "bookshop": {
+      "name": "Libreria / Papeleria",
+      "description": "Libreria con ISBN, listados escolares, encargos, precio fijo regulado",
+      "sector_features": [
+        "ISBN",
+        "Listados escolares",
+        "Precio fijo regulado"
+      ]
+    },
+    "jewelry": {
+      "name": "Joyeria / Relojeria",
+      "description": "Joyeria con n. serie/certificado, taller, grabados, tasaciones",
+      "sector_features": [
+        "N. serie/certificado",
+        "Grabados",
+        "Tasaciones"
+      ]
+    },
+    "optician": {
+      "name": "Optica",
+      "description": "Optica con ficha graduacion, pedidos laboratorio, seguros, citas",
+      "sector_features": [
+        "Ficha graduacion",
+        "Pedidos laboratorio",
+        "Seguros"
+      ]
+    },
+    "florist": {
+      "name": "Floristeria",
+      "description": "Floristeria con encargos, dedicatorias, rutas entrega, catalogo estacional",
+      "sector_features": [
+        "Encargos fecha/hora",
+        "Dedicatorias",
+        "Rutas entrega"
+      ]
+    },
+    "pet_shop": {
+      "name": "Tienda Mascotas",
+      "description": "Tienda mascotas con ficha mascota, suscripciones pienso, peluqueria canina",
+      "sector_features": [
+        "Ficha mascota",
+        "Suscripciones pienso",
+        "Peluqueria canina"
+      ]
+    },
+    "sports_shop": {
+      "name": "Tienda Deportes",
+      "description": "Tienda deportes con variantes talla, alquiler material, taller, fidelizacion",
+      "sector_features": [
+        "Variantes talla/color",
+        "Alquiler material",
+        "Fidelizacion"
+      ]
+    },
+    "furniture": {
+      "name": "Muebleria / Decoracion",
+      "description": "Muebleria con bajo pedido, entregas montaje, proyectos decoracion, configurador",
+      "sector_features": [
+        "Bajo pedido",
+        "Entregas con montaje",
+        "Proyectos decoracion"
+      ]
+    },
+    "cosmetics": {
+      "name": "Cosmetica / Perfumeria",
+      "description": "Perfumeria con muestras, fidelizacion, ficha cliente, asesoramiento",
+      "sector_features": [
+        "Muestras gratuitas",
+        "Ficha cliente piel",
+        "Fidelizacion"
+      ]
+    },
+    "tobacco_shop": {
+      "name": "Estanco / Tabaqueria",
+      "description": "Estanco con precios regulados, comision loteria, control stock tabaco",
+      "sector_features": [
+        "Precios regulados",
+        "Comision loteria",
+        "Control stock tabaco"
+      ]
+    },
+    "gas_station": {
+      "name": "Gasolinera",
+      "description": "Gasolinera con surtidores, multi-TPV, tarjetas flota, facturacion matricula",
+      "sector_features": [
+        "Integracion surtidores",
+        "Multi-TPV",
+        "Tarjetas flota"
+      ]
+    },
+    "sex_shop": {
+      "name": "Sex Shop",
+      "description": "Sex shop con facturacion discreta, restriccion edad, fidelizacion",
+      "sector_features": [
+        "Facturacion discreta",
+        "Restriccion edad"
+      ]
+    },
+    "grow_shop": {
+      "name": "Grow Shop",
+      "description": "Grow shop con fichas tecnicas, kits configurables, fidelizacion",
+      "sector_features": [
+        "Fichas tecnicas",
+        "Kits configurables"
+      ]
+    },
+    "bazaar": {
+      "name": "Bazar / Todo a 100",
+      "description": "Bazar con importacion masiva, multi-categoria, redondeo",
+      "sector_features": [
+        "Importacion masiva",
+        "Multi-categoria",
+        "Redondeo"
+      ]
+    },
+    "second_hand": {
+      "name": "Segunda Mano / Vintage",
+      "description": "Segunda mano con compra a particulares, condicion, consignacion, REBU",
+      "sector_features": [
+        "Compra a particulares",
+        "Estado/condicion",
+        "Consignacion"
+      ]
+    },
+    "toy_shop": {
+      "name": "Jugueteria",
+      "description": "Jugueteria con temporalidad Navidad, clasificacion edad, envoltorio regalo",
+      "sector_features": [
+        "Temporalidad Navidad/Reyes",
+        "Clasificacion edad",
+        "Envoltorio regalo"
+      ]
+    },
+    "musical_instruments": {
+      "name": "Instrumentos Musicales",
+      "description": "Instrumentos con n. serie, alquiler, taller luthier, financiacion",
+      "sector_features": [
+        "N. serie",
+        "Alquiler",
+        "Taller luthier"
+      ]
+    },
+    "wine_shop": {
+      "name": "Vinoteca (retail)",
+      "description": "Vinoteca retail con D.O./bodega, catas, club vinos",
+      "sector_features": [
+        "D.O./bodega/anada",
+        "Catas",
+        "Club vinos"
+      ]
+    },
+    "vape": {
+      "name": "Vape / Cigarrillo Electronico",
+      "description": "Vape con regulacion TPD, asesoramiento, caducidad liquidos, restriccion edad",
+      "sector_features": [
+        "Regulacion TPD",
+        "Caducidad liquidos",
+        "Restriccion edad"
+      ]
+    },
+    "bicycle_shop": {
+      "name": "Bicicletas",
+      "description": "Bicicletas con variantes talla, taller, alquiler, ficha bici",
+      "sector_features": [
+        "Variantes talla cuadro",
+        "Taller",
+        "Alquiler"
+      ]
+    },
+    "gourmet": {
+      "name": "Alimentacion Gourmet / Delicatessen",
+      "description": "Delicatessen con importacion, caducidad, trazabilidad, catas, cestas regalo",
+      "sector_features": [
+        "Importacion",
+        "Trazabilidad origen",
+        "Cestas regalo"
+      ]
+    },
+    "telecom_shop": {
+      "name": "Telefonia / Operador Local",
+      "description": "Telefonia con IMEI, contratos, reparaciones, comisiones portabilidades",
+      "sector_features": [
+        "IMEI",
+        "Contratos linea",
+        "Reparaciones"
+      ]
+    },
+    "office_supplies": {
+      "name": "Material Oficina (B2B)",
+      "description": "Material oficina B2B con catalogo masivo, pedidos recurrentes, licitaciones",
+      "sector_features": [
+        "Catalogo masivo",
+        "Pedidos recurrentes",
+        "Licitaciones"
+      ]
+    },
+    "cash_carry": {
+      "name": "Cash & Carry / Mayorista",
+      "description": "Mayorista con precios escalonados, minimo compra, pallets, tarjeta profesional",
+      "sector_features": [
+        "Precios escalonados",
+        "Minimo compra",
+        "Tarjeta profesional"
+      ]
+    },
+    "street_market": {
+      "name": "Mercadillo / Venta Ambulante",
+      "description": "Mercadillo con TPV movil, offline, cambio ubicacion, stock simplificado",
+      "sector_features": [
+        "TPV movil",
+        "Offline",
+        "Cambio ubicacion"
+      ]
+    },
+    "pharmacy": {
+      "name": "Farmacia",
+      "description": "Farmacia con recetas, trazabilidad, caducidad estricto, receta electronica",
+      "sector_features": [
+        "Recetas",
+        "Trazabilidad lote+serie",
+        "Receta electronica",
+        "SIGRE"
+      ]
+    },
+    "health_store": {
+      "name": "Parafarmacia / Herbolario",
+      "description": "Parafarmacia con ficha alergias, asesoramiento nutricional, eco/bio",
+      "sector_features": [
+        "Ficha alergias",
+        "Asesoramiento nutricional",
+        "Eco/bio"
+      ]
+    },
+    "orthopedics": {
+      "name": "Ortopedia",
+      "description": "Ortopedia con alquiler equipos, prescripciones, adaptaciones medida",
+      "sector_features": [
+        "Alquiler equipos",
+        "Prescripciones",
+        "Adaptaciones medida"
+      ]
+    },
+    "nutrition_shop": {
+      "name": "Dietetica / Nutricion Deportiva",
+      "description": "Dietetica con ficha cliente, caducidad, fidelizacion, suscripcion",
+      "sector_features": [
+        "Ficha cliente objetivos",
+        "Caducidad",
+        "Suscripcion mensual"
+      ]
+    },
+    "cbd_shop": {
+      "name": "CBD Shop / Herbolario Cannabico",
+      "description": "CBD shop con trazabilidad %THC, regulacion, certificados, restriccion edad",
+      "sector_features": [
+        "Trazabilidad %THC",
+        "Certificados laboratorio",
+        "Restriccion edad"
+      ]
+    },
+    "hair_salon": {
+      "name": "Peluqueria",
+      "description": "Peluqueria con agenda citas, ficha formulas, comisiones, venta productos",
+      "sector_features": [
+        "Agenda citas",
+        "Ficha formulas tinte",
+        "Comisiones",
+        "Venta productos"
+      ]
+    },
+    "barber_shop": {
+      "name": "Barberia",
+      "description": "Barberia con cola walk-in, servicios express",
+      "sector_features": [
+        "Cola walk-in",
+        "Servicios express"
+      ]
+    },
+    "beauty_center": {
+      "name": "Centro Estetica / Belleza",
+      "description": "Centro estetica con agenda cabina, bonos sesiones, consentimientos",
+      "sector_features": [
+        "Agenda cabina+profesional",
+        "Bonos sesiones",
+        "Consentimientos"
+      ]
+    },
+    "spa": {
+      "name": "Spa / Masajes",
+      "description": "Spa con circuitos, reserva online, paquetes combinados",
+      "sector_features": [
+        "Circuitos (piscina, sauna)",
+        "Reserva online",
+        "Paquetes combinados"
+      ]
+    },
+    "dental_clinic": {
+      "name": "Clinica Dental",
+      "description": "Clinica dental con historial, odontograma, presupuestos, radiografias",
+      "sector_features": [
+        "Historial clinico",
+        "Odontograma",
+        "Presupuestos tratamiento",
+        "Financiacion"
+      ]
+    },
+    "vet_clinic": {
+      "name": "Clinica Veterinaria",
+      "description": "Clinica veterinaria con ficha mascota, historial, vacunaciones",
+      "sector_features": [
+        "Ficha mascota",
+        "Historial clinico",
+        "Vacunaciones",
+        "Hospitalizacion"
+      ]
+    },
+    "medical_clinic": {
+      "name": "Consulta Medica / Clinica Privada",
+      "description": "Consulta medica con historial, recetas, seguros, telemedicina",
+      "sector_features": [
+        "Historial clinico",
+        "Recetas",
+        "Seguros/mutuas",
+        "Telemedicina"
+      ]
+    },
+    "physiotherapy": {
+      "name": "Fisioterapia / Rehabilitacion",
+      "description": "Fisioterapia con ficha evolucion, bonos sesiones, agenda",
+      "sector_features": [
+        "Ficha evolucion",
+        "Bonos sesiones",
+        "Agenda fisioterapeuta"
+      ]
+    },
+    "podiatry": {
+      "name": "Podologia",
+      "description": "Podologia con historial, plantillas personalizadas, agenda citas",
+      "sector_features": [
+        "Historial paciente",
+        "Plantillas personalizadas",
+        "Agenda citas"
+      ]
+    },
+    "tattoo_studio": {
+      "name": "Tatuajes / Piercing",
+      "description": "Tatuajes con portfolio, consentimientos, presupuestos diseno",
+      "sector_features": [
+        "Portfolio artista",
+        "Consentimientos obligatorios",
+        "Presupuestos tamano/diseno"
+      ]
+    },
+    "laundry": {
+      "name": "Lavanderia / Tintoreria",
+      "description": "Lavanderia con etiquetado prenda, estados pedido, recogida/entrega",
+      "sector_features": [
+        "Etiquetado prenda",
+        "Estados pedido",
+        "Recogida/entrega",
+        "Abonos"
+      ]
+    },
+    "gym": {
+      "name": "Gimnasio / Centro Deportivo",
+      "description": "Gimnasio con membresias, cuotas, control acceso, reserva clases",
+      "sector_features": [
+        "Membresias",
+        "Cuotas recurrentes",
+        "Control acceso",
+        "Reserva clases"
+      ]
+    },
+    "psychology": {
+      "name": "Psicologia / Coaching",
+      "description": "Psicologia con notas cifradas, bonos, videoconsulta",
+      "sector_features": [
+        "Notas sesion cifradas",
+        "Bonos",
+        "Videoconsulta"
+      ]
+    },
+    "nutrition": {
+      "name": "Nutricion / Dietista",
+      "description": "Nutricion con ficha peso/medidas, planes alimentarios, evolucion",
+      "sector_features": [
+        "Ficha peso/medidas",
+        "Planes alimentarios",
+        "Evolucion graficos"
+      ]
+    },
+    "pilates_yoga": {
+      "name": "Pilates / Yoga",
+      "description": "Pilates/yoga con reserva clases, abonos, agenda monitores",
+      "sector_features": [
+        "Reserva clases plazas limitadas",
+        "Abonos",
+        "Agenda monitores"
+      ]
+    },
+    "dog_grooming": {
+      "name": "Peluqueria Canina / Grooming",
+      "description": "Peluqueria canina con ficha mascota, servicios por tamano",
+      "sector_features": [
+        "Ficha mascota",
+        "Servicios por tamano",
+        "Fotos antes/despues"
+      ]
+    },
+    "laser_hair_removal": {
+      "name": "Depilacion Laser",
+      "description": "Depilacion laser con zonas corporales, packs sesiones, ficha fototipo",
+      "sector_features": [
+        "Servicios por zona",
+        "Packs sesiones",
+        "Ficha fototipo"
+      ]
+    },
+    "speech_therapy": {
+      "name": "Logopedia / Terapia Ocupacional",
+      "description": "Logopedia con historial, informes evolucion, agenda terapeuta",
+      "sector_features": [
+        "Historial clinico",
+        "Informes evolucion",
+        "Agenda terapeuta"
+      ]
+    },
+    "consulting": {
+      "name": "Consultoria / Asesoria General",
+      "description": "Consultoria con timesheet, facturacion horas, contratos, pipeline CRM",
+      "sector_features": [
+        "Timesheet",
+        "Facturacion horas",
+        "Contratos servicio"
+      ]
+    },
+    "tax_advisory": {
+      "name": "Asesoria Fiscal / Contable / Laboral",
+      "description": "Asesoria fiscal con calendario fiscal, multi-empresa, portal cliente",
+      "sector_features": [
+        "Calendario fiscal",
+        "Multi-empresa",
+        "Portal cliente"
+      ]
+    },
+    "law_firm": {
+      "name": "Despacho Abogados",
+      "description": "Despacho abogados con expedientes, timesheet legal, plazos judiciales",
+      "sector_features": [
+        "Expedientes/casos",
+        "Timesheet legal",
+        "Plazos judiciales"
+      ]
+    },
+    "real_estate": {
+      "name": "Agencia Inmobiliaria",
+      "description": "Agencia inmobiliaria con catalogo propiedades, matching, visitas, comisiones",
+      "sector_features": [
+        "Catalogo propiedades",
+        "Matching comprador-propiedad",
+        "Comisiones"
+      ]
+    },
+    "insurance": {
+      "name": "Agencia Seguros",
+      "description": "Agencia seguros con polizas, renovaciones, siniestros, multi-compania",
+      "sector_features": [
+        "Polizas",
+        "Renovaciones",
+        "Siniestros",
+        "Multi-compania"
+      ]
+    },
+    "marketing": {
+      "name": "Agencia Marketing / Publicidad",
+      "description": "Agencia marketing con proyectos creativos, briefings, timesheet, freelancers",
+      "sector_features": [
+        "Proyectos creativos",
+        "Briefings",
+        "Freelancers"
+      ]
+    },
+    "design_studio": {
+      "name": "Estudio Diseno / Arquitectura",
+      "description": "Estudio diseno con proyectos fases, timesheet, gestion documental",
+      "sector_features": [
+        "Proyectos por fases",
+        "Gestion documental"
+      ]
+    },
+    "cleaning_company": {
+      "name": "Empresa Limpieza",
+      "description": "Limpieza con contratos recurrentes, rutas, material, checklists",
+      "sector_features": [
+        "Contratos recurrentes",
+        "Equipos/rutas",
+        "Checklists"
+      ]
+    },
+    "security_company": {
+      "name": "Empresa Seguridad",
+      "description": "Seguridad con contratos vigilancia, turnos, control rondas, incidencias",
+      "sector_features": [
+        "Contratos vigilancia",
+        "Turnos/cuadrantes",
+        "Control rondas"
+      ]
+    },
+    "notary": {
+      "name": "Notaria",
+      "description": "Notaria con agenda otorgamientos, aranceles regulados, archivo escrituras",
+      "sector_features": [
+        "Agenda otorgamientos",
+        "Aranceles regulados",
+        "Archivo escrituras"
+      ]
+    },
+    "translation_agency": {
+      "name": "Agencia Traduccion",
+      "description": "Agencia traduccion con tarifas idioma/palabra, traductores, QA",
+      "sector_features": [
+        "Tarifas idioma/palabra",
+        "Pool traductores",
+        "QA"
+      ]
+    },
+    "ett": {
+      "name": "ETT / Agencia Trabajo Temporal",
+      "description": "ETT con BBDD candidatos, contratos, nominas, facturacion horas",
+      "sector_features": [
+        "BBDD candidatos",
+        "Contratos",
+        "Nominas cesion"
+      ]
+    },
+    "maintenance_company": {
+      "name": "Empresa Mantenimiento / SAT",
+      "description": "Mantenimiento con contratos SLA, tickets, tecnicos, furgoneta-almacen",
+      "sector_features": [
+        "Contratos SLA",
+        "Tickets/avisos",
+        "Furgoneta-almacen",
+        "Partes trabajo"
+      ]
+    },
+    "pest_control": {
+      "name": "Control Plagas / Desinfeccion",
+      "description": "Control plagas con contratos periodicos, certificados, productos regulados",
+      "sector_features": [
+        "Contratos periodicos",
+        "Certificados",
+        "Productos regulados"
+      ]
+    },
+    "admin_agency": {
+      "name": "Gestoria Administrativa",
+      "description": "Gestoria con expedientes, plazos administrativos, multi-cliente",
+      "sector_features": [
+        "Expedientes por tramite",
+        "Plazos administrativos",
+        "Multi-cliente"
+      ]
+    },
+    "landscaping": {
+      "name": "Jardineria / Paisajismo",
+      "description": "Jardineria con contratos mantenimiento, proyectos, rutas, material vegetal",
+      "sector_features": [
+        "Contratos mantenimiento",
+        "Proyectos paisajismo",
+        "Rutas equipos"
+      ]
+    },
+    "appraisal": {
+      "name": "Peritaje / Tasaciones",
+      "description": "Peritaje con encargos, agenda visitas, informes periciales",
+      "sector_features": [
+        "Encargos peritaje",
+        "Agenda visitas",
+        "Informes periciales"
+      ]
+    },
+    "academy": {
+      "name": "Academia / Centro Formacion",
+      "description": "Academia con alumnos, horarios, profesores, certificaciones, portal alumno",
+      "sector_features": [
+        "Alumnos/matriculas",
+        "Horarios",
+        "Certificaciones"
+      ]
+    },
+    "driving_school": {
+      "name": "Autoescuela",
+      "description": "Autoescuela con agenda practicas, teorico/practico, examenes, flota",
+      "sector_features": [
+        "Agenda practicas",
+        "Teorico/practico",
+        "Examenes"
+      ]
+    },
+    "nursery": {
+      "name": "Guarderia / Escuela Infantil",
+      "description": "Guarderia con ficha nino, asistencia, comedor, comunicacion familias",
+      "sector_features": [
+        "Ficha nino",
+        "Asistencia",
+        "Comunicacion familias"
+      ]
+    },
+    "music_school": {
+      "name": "Escuela de Musica",
+      "description": "Escuela musica con clases individuales+grupales, alquiler aulas",
+      "sector_features": [
+        "Clases individuales+grupales",
+        "Alquiler aulas"
+      ]
+    },
+    "dance_school": {
+      "name": "Escuela Danza / Baile",
+      "description": "Escuela danza con clases estilo/nivel, reserva salas, vestuario",
+      "sector_features": [
+        "Clases estilo/nivel",
+        "Reserva salas",
+        "Vestuario espectaculos"
+      ]
+    },
+    "language_school": {
+      "name": "Escuela Idiomas",
+      "description": "Escuela idiomas con niveles MCER, test nivel, online/presencial",
+      "sector_features": [
+        "Niveles MCER",
+        "Test nivel",
+        "Online/presencial/hibrido"
+      ]
+    },
+    "exam_prep": {
+      "name": "Centro Estudios / Oposiciones",
+      "description": "Centro estudios con temarios, simulacros, seguimiento individualizado",
+      "sector_features": [
+        "Temarios por oposicion",
+        "Simulacros",
+        "Seguimiento individualizado"
+      ]
+    },
+    "construction_company": {
+      "name": "Constructora",
+      "description": "Constructora con presupuestos obra, certificaciones, subcontratas, PRL",
+      "sector_features": [
+        "Presupuestos obra",
+        "Certificaciones",
+        "Subcontratas",
+        "PRL"
+      ]
+    },
+    "renovation": {
+      "name": "Empresa Reformas",
+      "description": "Reformas con presupuestos, proyectos, fotos antes/despues, subcontratas",
+      "sector_features": [
+        "Presupuestos reforma",
+        "Fotos antes/despues",
+        "Subcontratas"
+      ]
+    },
+    "installer": {
+      "name": "Instalador (Fontanero, Electricista, Clima)",
+      "description": "Instalador con avisos, partes trabajo, furgoneta-almacen, contratos",
+      "sector_features": [
+        "Partes trabajo",
+        "Furgoneta-almacen",
+        "Contratos mantenimiento"
+      ]
+    },
+    "carpentry": {
+      "name": "Carpinteria / Ebanisteria",
+      "description": "Carpinteria con presupuestos medida, BOM/despiece, produccion",
+      "sector_features": [
+        "Presupuestos medida",
+        "BOM/despiece",
+        "Produccion"
+      ]
+    },
+    "locksmith": {
+      "name": "Cerrajeria",
+      "description": "Cerrajeria con servicio urgente 24h, presupuestos campo, stock movil",
+      "sector_features": [
+        "Servicio urgente 24h",
+        "Presupuestos campo",
+        "Stock movil"
+      ]
+    },
+    "solar_energy": {
+      "name": "Energia Solar / Renovables",
+      "description": "Energia solar con presupuestos tecnicos, permisos, instalacion fases",
+      "sector_features": [
+        "Presupuestos tecnicos",
+        "Permisos+subvenciones",
+        "Monitorizacion"
+      ]
+    },
+    "elevator_company": {
+      "name": "Empresa Ascensores",
+      "description": "Ascensores con mantenimiento obligatorio, inspecciones, avisos/averias",
+      "sector_features": [
+        "Mantenimiento obligatorio",
+        "Inspecciones",
+        "Avisos/averias"
+      ]
+    },
+    "factory": {
+      "name": "Fabrica / Taller Industrial",
+      "description": "Fabrica con BOM multi-nivel, MRP, centros trabajo, calidad, OEE",
+      "sector_features": [
+        "BOM multi-nivel",
+        "MRP",
+        "Calidad",
+        "OEE"
+      ]
+    },
+    "printing": {
+      "name": "Imprenta / Artes Graficas",
+      "description": "Imprenta con configurador, presupuestos tirada, produccion maquina",
+      "sector_features": [
+        "Configurador",
+        "Presupuestos tirada",
+        "Produccion por maquina"
+      ]
+    },
+    "winery": {
+      "name": "Bodega / Vinedo",
+      "description": "Bodega con trazabilidad vinedo-botella, vendimia, fermentacion, D.O.",
+      "sector_features": [
+        "Trazabilidad vinedo-botella",
+        "Vendimia",
+        "D.O.",
+        "Enoturismo"
+      ]
+    },
+    "auto_repair": {
+      "name": "Taller Mecanico",
+      "description": "Taller mecanico con ficha vehiculo, ordenes reparacion, recambios, ITV",
+      "sector_features": [
+        "Ficha vehiculo",
+        "Ordenes reparacion",
+        "Recambios",
+        "ITV"
+      ]
+    },
+    "electronics_repair": {
+      "name": "Taller Reparaciones (Electronica)",
+      "description": "Taller reparaciones con ficha dispositivo, ordenes, diagnostico, garantia",
+      "sector_features": [
+        "Ficha dispositivo",
+        "Diagnostico",
+        "Garantia"
+      ]
+    },
+    "craft_brewery": {
+      "name": "Cerveceria Artesanal (sin bar)",
+      "description": "Cerveceria artesanal con recetas, lotes, embotillado, distribucion B2B",
+      "sector_features": [
+        "Recetas cerveza",
+        "Lotes",
+        "Distribucion B2B"
+      ]
+    },
+    "distillery": {
+      "name": "Destileria",
+      "description": "Destileria con recetas, alambiques, envejecimiento, IIEE alcohol",
+      "sector_features": [
+        "Recetas destilacion",
+        "Envejecimiento/barricas",
+        "IIEE alcohol"
+      ]
+    },
+    "cheese_dairy": {
+      "name": "Queseria / Lacteos Artesanales",
+      "description": "Queseria con produccion lotes, control maduracion, D.O., venta directa",
+      "sector_features": [
+        "Produccion lotes",
+        "Control maduracion",
+        "D.O."
+      ]
+    },
+    "canning": {
+      "name": "Conservera",
+      "description": "Conservera con produccion lotes, APPCC, etiquetado nutricional",
+      "sector_features": [
+        "Produccion lotes/campanas",
+        "APPCC",
+        "Etiquetado nutricional"
+      ]
+    },
+    "industrial_bakery": {
+      "name": "Obrador Industrial",
+      "description": "Obrador industrial con produccion planificada, BOM/recetas, APPCC",
+      "sector_features": [
+        "Produccion planificada",
+        "BOM/recetas",
+        "APPCC"
+      ]
+    },
+    "textile_workshop": {
+      "name": "Taller Textil / Confeccion",
+      "description": "Taller textil con patronaje, produccion tallas, tejidos, calidad",
+      "sector_features": [
+        "Patronaje",
+        "Produccion tallas/colores",
+        "Tejidos"
+      ]
+    },
+    "laboratory": {
+      "name": "Laboratorio (analisis, calidad)",
+      "description": "Laboratorio con muestras, ensayos, informes, ISO 17025, equipos calibrados",
+      "sector_features": [
+        "Muestras",
+        "Ensayos/protocolos",
+        "ISO 17025"
+      ]
+    },
+    "courier": {
+      "name": "Empresa Transporte / Mensajeria",
+      "description": "Transporte con envios, rutas, flota, tracking, firma digital",
+      "sector_features": [
+        "Envios",
+        "Rutas",
+        "Flota",
+        "Tracking"
+      ]
+    },
+    "vehicle_rental": {
+      "name": "Alquiler Vehiculos",
+      "description": "Alquiler vehiculos con catalogo, contratos, check-in/out, fianzas",
+      "sector_features": [
+        "Catalogo/disponibilidad",
+        "Contratos",
+        "Reserva online"
+      ]
+    },
+    "moving_company": {
+      "name": "Mudanzas",
+      "description": "Mudanzas con presupuestos, equipos, inventario enseres, seguros",
+      "sector_features": [
+        "Presupuestos volumen/distancia",
+        "Inventario enseres",
+        "Seguros transporte"
+      ]
+    },
+    "logistics_3pl": {
+      "name": "Operador Logistico / 3PL",
+      "description": "Operador logistico con almacen multi-cliente, picking, cross-docking, WMS",
+      "sector_features": [
+        "Almacen multi-cliente",
+        "Picking/packing",
+        "WMS"
+      ]
+    },
+    "parking": {
+      "name": "Parking / Aparcamiento",
+      "description": "Parking con mapa plazas, abonos, tarifa minuto/hora, barreras/LPR",
+      "sector_features": [
+        "Mapa plazas",
+        "Abonos",
+        "Barreras/LPR"
+      ]
+    },
+    "farm": {
+      "name": "Explotacion Agricola",
+      "description": "Explotacion agricola con parcelas, campanas, cuaderno campo, maquinaria",
+      "sector_features": [
+        "Parcelas/cultivos",
+        "Campanas",
+        "Cuaderno campo"
+      ]
+    },
+    "cooperative": {
+      "name": "Cooperativa Agraria",
+      "description": "Cooperativa con socios, recepcion producto, liquidaciones, almacen",
+      "sector_features": [
+        "Socios cooperativistas",
+        "Recepcion producto",
+        "Liquidaciones"
+      ]
+    },
+    "garden_center": {
+      "name": "Vivero / Garden Center",
+      "description": "Vivero con invernaderos, produccion temporada, catalogo plantas",
+      "sector_features": [
+        "Invernaderos",
+        "Produccion temporada",
+        "Catalogo plantas"
+      ]
+    },
+    "livestock": {
+      "name": "Ganaderia",
+      "description": "Ganaderia con registro animales, trazabilidad, alimentacion, veterinario",
+      "sector_features": [
+        "Registro animales",
+        "Trazabilidad",
+        "Veterinario"
+      ]
+    },
+    "beekeeping": {
+      "name": "Apicultura",
+      "description": "Apicultura con colmenares, produccion temporada, trazabilidad, envasado",
+      "sector_features": [
+        "Colmenares",
+        "Produccion temporada",
+        "Venta directa+B2B"
+      ]
+    },
+    "aquaculture": {
+      "name": "Acuicultura / Piscifactoria",
+      "description": "Acuicultura con tanques, ciclos produccion, alimentacion, calidad agua",
+      "sector_features": [
+        "Tanques/jaulas",
+        "Ciclos produccion",
+        "Calidad agua"
+      ]
+    },
+    "escape_room": {
+      "name": "Escape Room / Actividades Ocio",
+      "description": "Escape room con salas, reservas grupo, reserva online, bonos regalo",
+      "sector_features": [
+        "Salas/juegos",
+        "Reservas grupo",
+        "Reserva online"
+      ]
+    },
+    "arcade": {
+      "name": "Sala Juegos / Recreativos / Bolera",
+      "description": "Sala juegos con alquiler tiempo, tarjetas/fichas, bar, packs fiestas",
+      "sector_features": [
+        "Alquiler por tiempo",
+        "Tarjetas/fichas",
+        "Packs fiestas"
+      ]
+    },
+    "sports_club": {
+      "name": "Club Deportivo / Polideportivo",
+      "description": "Club deportivo con socios, reserva pistas, escuelas deportivas, ligas",
+      "sector_features": [
+        "Socios/cuotas",
+        "Reserva pistas",
+        "Escuelas deportivas"
+      ]
+    },
+    "cinema": {
+      "name": "Cine",
+      "description": "Cine con cartelera, butacas, entradas online, bar/snacks, abonos",
+      "sector_features": [
+        "Cartelera/sesiones",
+        "Butacas",
+        "Entradas online"
+      ]
+    },
+    "theme_park": {
+      "name": "Parque Atracciones / Tematico",
+      "description": "Parque atracciones con entradas, multi-TPV, aforo zona, espectaculos",
+      "sector_features": [
+        "Entradas/pases",
+        "Multi-TPV",
+        "Aforo zona"
+      ]
+    },
+    "water_park": {
+      "name": "Parque Acuatico / Piscina",
+      "description": "Parque acuatico con entradas, aforo, cursillos, bar, socorristas",
+      "sector_features": [
+        "Entradas/abonos",
+        "Aforo",
+        "Cursillos natacion"
+      ]
+    },
+    "concert_hall": {
+      "name": "Sala Conciertos / Teatro",
+      "description": "Sala conciertos con programacion, entradas, asientos, caches, bar",
+      "sector_features": [
+        "Programacion eventos",
+        "Entradas taquilla+online",
+        "Caches artisticos"
+      ]
+    },
+    "event_venue": {
+      "name": "Salon Celebraciones / Finca Eventos",
+      "description": "Salon celebraciones con calendario, presupuestos, proveedores, senal",
+      "sector_features": [
+        "Calendario disponibilidad",
+        "Presupuestos evento",
+        "Proveedores"
+      ]
+    },
+    "casino": {
+      "name": "Casino / Salon Juegos Azar",
+      "description": "Casino con control acceso, regulacion juego, maquinas/mesas, reporting",
+      "sector_features": [
+        "Control acceso",
+        "Regulacion juego",
+        "Reporting regulatorio"
+      ]
+    },
+    "nonprofit": {
+      "name": "ONG / Asociacion",
+      "description": "ONG con donantes, cuotas socios, voluntarios, proyectos sociales",
+      "sector_features": [
+        "Donantes/donaciones",
+        "Cuotas socios",
+        "Voluntarios",
+        "Subvenciones"
+      ]
+    },
+    "property_management": {
+      "name": "Comunidad Vecinos / Administrador Fincas",
+      "description": "Comunidad vecinos con comunidades, cuotas, incidencias, proveedores",
+      "sector_features": [
+        "Comunidades",
+        "Cuotas/derramas",
+        "Incidencias"
+      ]
+    },
+    "professional_college": {
+      "name": "Colegio Profesional",
+      "description": "Colegio profesional con registro colegiados, cuotas, formacion continua",
+      "sector_features": [
+        "Registro colegiados",
+        "Formacion continua",
+        "Bolsa trabajo"
+      ]
+    },
+    "brotherhood": {
+      "name": "Cofradia / Hermandad",
+      "description": "Cofradia con hermanos, cuotas, inventario enseres, cultos/eventos",
+      "sector_features": [
+        "Hermanos",
+        "Inventario enseres",
+        "Cultos/eventos"
+      ]
+    },
+    "social_club": {
+      "name": "Club Social / Pena",
+      "description": "Club social con socios, bar simplificado, actividades, reserva instalaciones",
+      "sector_features": [
+        "Socios/cuotas",
+        "Bar simplificado",
+        "Actividades"
+      ]
+    },
+    "software": {
+      "name": "Desarrollo de Software",
+      "description": "Desarrollo software con proyectos agiles, timesheet, facturacion horas",
+      "sector_features": [
+        "Proyectos agiles",
+        "Timesheet",
+        "Contratos SaaS"
+      ]
+    },
+    "msp": {
+      "name": "Proveedor Servicios IT / MSP",
+      "description": "MSP con contratos SLA, helpdesk, CMDB, facturacion recurrente",
+      "sector_features": [
+        "Contratos SLA",
+        "Helpdesk",
+        "CMDB"
+      ]
+    },
+    "web_agency": {
+      "name": "Agencia Web / Marketing Digital",
+      "description": "Agencia web con proyectos web, campanas digitales, timesheet, KPIs",
+      "sector_features": [
+        "Proyectos web fases",
+        "Campanas digitales",
+        "KPIs cliente"
+      ]
+    },
+    "hosting": {
+      "name": "Hosting / Data Center",
+      "description": "Hosting con catalogo servicios, facturacion consumo, provisioning, SLA",
+      "sector_features": [
+        "Catalogo servicios",
+        "Facturacion consumo",
+        "SLA"
+      ]
+    },
+    "telecom": {
+      "name": "Telecomunicaciones / ISP",
+      "description": "Telecomunicaciones con altas/bajas, equipos, facturacion masiva",
+      "sector_features": [
+        "Altas/bajas/portabilidades",
+        "Facturacion masiva",
+        "Instalaciones campo"
+      ]
+    },
+    "travel_agency": {
+      "name": "Agencia de Viajes",
+      "description": "Agencia viajes con paquetes, reservas GDS, comisiones, seguros viaje",
+      "sector_features": [
+        "Paquetes",
+        "Reservas GDS",
+        "Comisiones"
+      ]
+    },
+    "tour_operator": {
+      "name": "Tour Operator / Actividades Turisticas",
+      "description": "Tour operator con catalogo excursiones, reservas, guias, equipamiento",
+      "sector_features": [
+        "Catalogo excursiones",
+        "Reservas plazas limitadas",
+        "Guias"
+      ]
+    },
+    "tour_guide": {
+      "name": "Guia Turistico Independiente",
+      "description": "Guia turistico con agenda tours, reserva online, resenas, multi-idioma",
+      "sector_features": [
+        "Agenda tours",
+        "Reserva online",
+        "Resenas"
+      ]
+    },
+    "currency_exchange": {
+      "name": "Casa de Cambio / Exchange",
+      "description": "Casa cambio con cotizacion multi-divisa, comisiones, KYC, arqueo",
+      "sector_features": [
+        "Cotizacion multi-divisa",
+        "KYC anti-blanqueo",
+        "Arqueo multi-divisa"
+      ]
+    },
+    "pawnshop": {
+      "name": "Casa de Empenos",
+      "description": "Casa empenos con tasacion, contratos empeno, custodia, subastas",
+      "sector_features": [
+        "Tasacion",
+        "Contratos empeno",
+        "Subastas"
+      ]
+    },
+    "debt_collection": {
+      "name": "Gestion de Cobros / Recobros",
+      "description": "Gestion cobros con cartera deuda, seguimiento contactos, acuerdos pago",
+      "sector_features": [
+        "Cartera deuda",
+        "Seguimiento contactos",
+        "Acuerdos pago"
+      ]
+    },
+    "insurance_brokerage": {
+      "name": "Correduria Seguros",
+      "description": "Correduria seguros con cartera polizas, renovaciones masivas, siniestros",
+      "sector_features": [
+        "Cartera polizas",
+        "Renovaciones masivas",
+        "Siniestros"
+      ]
+    },
+    "photography": {
+      "name": "Estudio Fotografia",
+      "description": "Estudio fotografia con sesiones, proyectos, entrega digital, venta copias",
+      "sector_features": [
+        "Reserva sesiones",
+        "Proyectos fotograficos",
+        "Entrega digital"
+      ]
+    },
+    "video_production": {
+      "name": "Productora Video / Audiovisual",
+      "description": "Productora video con proyectos fases, presupuestos, alquiler equipos",
+      "sector_features": [
+        "Proyectos fases",
+        "Presupuestos produccion",
+        "Freelancers"
+      ]
+    },
+    "recording_studio": {
+      "name": "Estudio Grabacion / Musica",
+      "description": "Estudio grabacion con reserva horas, ingenieros sonido, mezcla/mastering",
+      "sector_features": [
+        "Reserva salas horas",
+        "Ingenieros sonido",
+        "Mezcla/mastering"
+      ]
+    },
+    "editorial": {
+      "name": "Editorial / Publicacion",
+      "description": "Editorial con catalogo titulos, contratos autores, tiradas, distribucion",
+      "sector_features": [
+        "Catalogo titulos (ISBN)",
+        "Contratos autores",
+        "Tiradas",
+        "Distribucion"
+      ]
+    },
+    "art_gallery": {
+      "name": "Galeria de Arte",
+      "description": "Galeria arte con catalogo obras, exposiciones, consignacion, certificados",
+      "sector_features": [
+        "Catalogo obras",
+        "Exposiciones",
+        "Consignacion"
+      ]
+    },
+    "event_production": {
+      "name": "Productora de Eventos",
+      "description": "Productora eventos con presupuestos, proveedores, cronograma, personal",
+      "sector_features": [
+        "Presupuestos evento",
+        "Proveedores",
+        "Cronograma"
+      ]
+    },
+    "machinery_rental": {
+      "name": "Alquiler Maquinaria / Herramientas",
+      "description": "Alquiler maquinaria con catalogo, contratos, fianzas, mantenimiento",
+      "sector_features": [
+        "Catalogo/disponibilidad",
+        "Contratos",
+        "Mantenimiento"
+      ]
+    },
+    "event_equipment_rental": {
+      "name": "Alquiler Equipos Eventos",
+      "description": "Alquiler eventos con reservas, montaje/desmontaje, inventario estado",
+      "sector_features": [
+        "Reservas evento/fecha",
+        "Montaje/desmontaje",
+        "Inventario estado"
+      ]
+    },
+    "self_storage": {
+      "name": "Trasteros / Self-Storage",
+      "description": "Trasteros con mapa unidades, contratos, control acceso, facturacion recurrente",
+      "sector_features": [
+        "Mapa unidades",
+        "Control acceso",
+        "Facturacion recurrente"
+      ]
+    },
+    "boat_rental": {
+      "name": "Alquiler Embarcaciones",
+      "description": "Alquiler embarcaciones con catalogo, reservas, licencias, seguros",
+      "sector_features": [
+        "Catalogo embarcaciones",
+        "Reservas",
+        "Licencias cliente"
+      ]
+    },
+    "bike_rental": {
+      "name": "Alquiler Bicicletas / Patinetes",
+      "description": "Alquiler bicicletas con flota GPS, alquiler hora/dia, suscripciones",
+      "sector_features": [
+        "Flota GPS",
+        "Alquiler hora/dia",
+        "Suscripciones"
+      ]
+    },
+    "costume_rental": {
+      "name": "Alquiler Disfraces / Vestuario",
+      "description": "Alquiler disfraces con catalogo tipo/talla, reservas, depositos",
+      "sector_features": [
+        "Catalogo tipo/talla",
+        "Reservas",
+        "Estado vestuario"
+      ]
+    },
+    "marina": {
+      "name": "Marina / Puerto Deportivo",
+      "description": "Marina con mapa amarres, contratos amarre, servicios, varadero, tienda",
+      "sector_features": [
+        "Mapa amarres",
+        "Contratos amarre",
+        "Varadero"
+      ]
+    },
+    "fishing_company": {
+      "name": "Empresa Pesquera",
+      "description": "Empresa pesquera con flota, capturas, trazabilidad, venta lonja, cuotas",
+      "sector_features": [
+        "Flota pesquera",
+        "Registro capturas",
+        "Cuotas pesca"
+      ]
+    },
+    "nautical_workshop": {
+      "name": "Taller Nautico",
+      "description": "Taller nautico con ficha embarcacion, ordenes reparacion, varada/botadura",
+      "sector_features": [
+        "Ficha embarcacion",
+        "Ordenes reparacion",
+        "Varada/botadura"
+      ]
+    },
+    "funeral_home": {
+      "name": "Funeraria",
+      "description": "Funeraria con presupuestos, catalogo, traslados, tramites legales, 24h",
+      "sector_features": [
+        "Presupuestos servicio",
+        "Traslados",
+        "Tramites legales",
+        "Servicio 24h"
+      ]
+    },
+    "cemetery": {
+      "name": "Cementerio / Crematorio",
+      "description": "Cementerio con mapa parcelas/nichos, concesiones, anualidades, registro",
+      "sector_features": [
+        "Mapa parcelas/nichos",
+        "Concesiones",
+        "Registro inhumaciones"
+      ]
+    },
+    "mortuary": {
+      "name": "Tanatorio",
+      "description": "Tanatorio con salas velatorio, reservas, servicios adicionales, 24h",
+      "sector_features": [
+        "Salas velatorio",
+        "Reservas",
+        "Servicio 24h"
+      ]
+    },
+    "coworking": {
+      "name": "Coworking",
+      "description": "Coworking con puestos, membresias, reserva salas, control acceso",
+      "sector_features": [
+        "Puestos (fijos, flexibles, privados)",
+        "Membresias",
+        "Reserva salas",
+        "Control acceso"
+      ]
+    },
+    "business_center": {
+      "name": "Centro de Negocios",
+      "description": "Centro negocios con oficinas fisicas+virtuales, domiciliacion, secretaria",
+      "sector_features": [
+        "Oficinas fisicas+virtuales",
+        "Domiciliacion fiscal",
+        "Salas reuniones"
+      ]
+    },
+    "rehearsal_studio": {
+      "name": "Sala Ensayo / Estudio Compartido",
+      "description": "Sala ensayo con salas equipadas, reserva horas, bonos, control acceso",
+      "sector_features": [
+        "Salas equipadas",
+        "Reserva horas/bloques",
+        "Bonos horas"
+      ]
+    }
+  },
+  "functional_units": {
+    "FIN": {
+      "name": "Finanzas y Contabilidad",
+      "description": "Contabilidad general, cuentas por pagar/cobrar, tesoreria, activos fijos, impuestos, presupuestos, cierres contables"
+    },
+    "COM": {
+      "name": "Compras",
+      "description": "Proveedores, solicitudes y ordenes de compra, recepcion, facturas de proveedores"
+    },
+    "ALM": {
+      "name": "Almacenes e Inventarios",
+      "description": "Control de stock, ubicaciones, trazabilidad (lotes/series), valoraciones, inventarios fisicos"
+    },
+    "TPV": {
+      "name": "TPV - Punto de Venta / Tiendas",
+      "description": "Cajas tactiles, turnos de caja, metodos de pago, promociones, descuentos, impresion de tickets, modo offline, fidelizacion en tienda"
+    },
+    "VEN": {
+      "name": "Ventas Comerciales (B2B)",
+      "description": "Presupuestos, pedidos mayoristas, facturacion, condiciones comerciales"
+    },
+    "CRM": {
+      "name": "CRM y Marketing",
+      "description": "Fichas de clientes, oportunidades, campanas, servicio postventa"
+    },
+    "ECO": {
+      "name": "E-commerce",
+      "description": "Tienda online, pedidos web, integraciones con marketplaces"
+    },
+    "PRO": {
+      "name": "Produccion / Manufactura",
+      "description": "Listas de materiales, ordenes de fabricacion, MRP, control de costes"
+    },
+    "LOG": {
+      "name": "Logistica y Distribucion",
+      "description": "Envios, rutas de transporte, gestion de flotas"
+    },
+    "RRH": {
+      "name": "Recursos Humanos",
+      "description": "Nomina, expedientes de empleados, reclutamiento, evaluaciones"
+    },
+    "PRY": {
+      "name": "Proyectos y Servicios",
+      "description": "Gestion de proyectos, mantenimiento, servicio tecnico"
+    },
+    "BI": {
+      "name": "Inteligencia de Negocios",
+      "description": "Dashboards, reportes, KPIs, analisis predictivos"
+    }
+  },
+  "transversals": {
+    "franchise_franchisee": {
+      "name": "Franquicia (Franquiciado)",
+      "description": "Reporting al franquiciador, estandares marca, royalties/canon, compras centralizadas, formacion obligatoria"
+    },
+    "franchise_franchisor": {
+      "name": "Franquicia (Franquiciador)",
+      "description": "Gestion red franquiciados, cobro canon/royalties, auditoria, formacion centralizada, expansion"
+    },
+    "multi_store": {
+      "name": "Multi-tienda / Cadena Propia",
+      "description": "Multi-almacen, traspasos entre tiendas, reporting consolidado, precios centralizados, nomina multi-centro"
+    },
+    "marketplace_platform": {
+      "name": "Marketplace / Plataforma",
+      "description": "Multi-vendedor, comisiones venta, onboarding vendedores, disputas, split pagos, panel vendedor"
+    },
+    "subscription_model": {
+      "name": "Modelo Suscripcion",
+      "description": "Facturacion recurrente, planes/tiers, churn/retencion, metricas (MRR, LTV, CAC), upgrade/downgrade, trial"
+    },
+    "street_vendor": {
+      "name": "Venta Ambulante / Mercadillos",
+      "description": "Multi-ubicacion temporal, TPV movil/offline, cambio ubicacion, stock portable, licencias municipio"
+    },
+    "vending_machines": {
+      "name": "Maquinas Vending",
+      "description": "Inventario por maquina, rutas reposicion, telemetria/alertas, cobro sin personal, reporting maquina"
+    },
+    "dealer_distributor": {
+      "name": "Concesionario / Distribuidor Oficial",
+      "description": "Catalogo marca impuesto, objetivos venta, garantias fabrica, pedidos fabrica, incentivos/rappels"
+    },
+    "worker_cooperative": {
+      "name": "Cooperativa de Trabajo",
+      "description": "Socios trabajadores, reparto beneficios, asambleas/votaciones, contabilidad cooperativa, capital social"
+    },
+    "seasonal_popup": {
+      "name": "Negocio Estacional / Pop-up",
+      "description": "Apertura/cierre rapido, inventario temporal, personal temporal, licencias temporales, rentabilidad temporada"
+    }
+  },
+  "roles": {
+    "bartender": "Camarero/a de barra",
+    "site_manager": "Responsable de parcelas",
+    "event_manager": "Responsable de eventos",
+    "kitchen_manager": "Jefe de cocina",
+    "door_staff": "Personal de puerta",
+    "dj_booth": "Cabina DJ",
+    "cashier": "Cajero/a",
+    "prep_cook": "Cocinero/a de linea",
+    "receptionist": "Recepcionista",
+    "housekeeper": "Gobernanta / Limpieza",
+    "baker": "Panadero/a",
+    "waiter": "Camarero/a",
+    "chef": "Chef / Jefe de cocina",
+    "brewmaster": "Maestro cervecero",
+    "sommelier": "Sommelier",
+    "manager": "Encargado/a",
+    "sales_assistant": "Dependiente/a",
+    "stock_clerk": "Reponedor/a",
+    "pharmacist": "Farmaceutico/a",
+    "dentist": "Dentista",
+    "hygienist": "Higienista",
+    "trainer": "Monitor/a",
+    "stylist": "Estilista"
+  }
+}

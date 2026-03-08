@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://erplora.com/schemas/business_type.schema.json",
+  "title": "Business Type",
+  "description": "Schema for a business type definition. All text fields are plain English strings; translations are in separate i18n files.",
+  "type": "object",
+  "required": ["code", "sector", "name", "description", "icon", "color", "inherits_from", "is_combinable", "ufo_matrix", "extra_modules", "sector_features", "roles", "products_file"],
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Unique identifier (English)"
+    },
+    "sector": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Sector code (English)"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "icon": {
+      "type": "string",
+      "description": "Ionicon name"
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "inherits_from": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "is_combinable": { "type": "boolean" },
+    "ufo_matrix": {
+      "type": "object",
+      "required": ["FIN", "COM", "ALM", "TPV", "VEN", "CRM", "ECO", "PRO", "LOG", "RRH", "PRY", "BI"],
+      "additionalProperties": false,
+      "properties": {
+        "FIN": { "$ref": "#/$defs/UfoLevel" },
+        "COM": { "$ref": "#/$defs/UfoLevel" },
+        "ALM": { "$ref": "#/$defs/UfoLevel" },
+        "TPV": { "$ref": "#/$defs/UfoLevel" },
+        "VEN": { "$ref": "#/$defs/UfoLevel" },
+        "CRM": { "$ref": "#/$defs/UfoLevel" },
+        "ECO": { "$ref": "#/$defs/UfoLevel" },
+        "PRO": { "$ref": "#/$defs/UfoLevel" },
+        "LOG": { "$ref": "#/$defs/UfoLevel" },
+        "RRH": { "$ref": "#/$defs/UfoLevel" },
+        "PRY": { "$ref": "#/$defs/UfoLevel" },
+        "BI": { "$ref": "#/$defs/UfoLevel" }
+      }
+    },
+    "extra_modules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sector_features": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key features as plain English strings"
+    },
+    "roles": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Role" }
+    },
+    "products_file": {
+      "type": "string",
+      "description": "Relative path to the products file (e.g. products/bar.json)"
+    }
+  },
+  "$defs": {
+    "UfoLevel": {
+      "type": "string",
+      "enum": ["essential", "recommended", "na"]
+    },
+    "Role": {
+      "type": "object",
+      "required": ["id", "name", "permissions"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "permissions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

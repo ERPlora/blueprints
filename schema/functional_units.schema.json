@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://erplora.com/schemas/functional_units.schema.json",
+  "title": "Functional Units",
+  "description": "Schema for the 12 UFOs (Unidades Funcionales Operativas) in the ERPlora blueprint system. All text fields are plain English strings; translations are in separate i18n files.",
+  "type": "object",
+  "required": ["version", "units"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "units": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/FunctionalUnit" },
+      "minItems": 12,
+      "maxItems": 12
+    }
+  },
+  "$defs": {
+    "FunctionalUnit": {
+      "type": "object",
+      "required": ["code", "name", "description", "icon", "color", "order", "modules"],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": ["FIN", "COM", "ALM", "TPV", "VEN", "CRM", "ECO", "PRO", "LOG", "RRH", "PRY", "BI"]
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "icon": { "type": "string" },
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "modules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

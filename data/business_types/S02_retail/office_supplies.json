@@ -1,0 +1,40 @@
+{
+  "code": "office_supplies",
+  "sector": "retail",
+  "name": "Office Supplies (B2B)",
+  "description": "B2B office supplies with massive catalog, recurring orders, bids, scheduled deliveries",
+  "icon": "document-text-outline",
+  "color": "#455a64",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Massive catalog",
+    "Recurring orders",
+    "Bids"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/office_supplies.json"
+}

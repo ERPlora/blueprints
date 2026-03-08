@@ -1,0 +1,40 @@
+{
+  "code": "machinery_rental",
+  "sector": "rental",
+  "name": "Equipment Rental",
+  "description": "Equipment rental with catalog, contracts, deposits, maintenance, insurance",
+  "icon": "construct-outline",
+  "color": "#795548",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Catalog/availability",
+    "Contracts",
+    "Maintenance"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/machinery_rental.json"
+}

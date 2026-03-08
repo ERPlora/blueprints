@@ -1,0 +1,41 @@
+{
+  "code": "editorial",
+  "sector": "media",
+  "name": "Publishing House",
+  "description": "Publisher with title catalog, author contracts, print runs, distribution, rights",
+  "icon": "book-outline",
+  "color": "#37474f",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "essential",
+    "LOG": "essential",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Title catalog (ISBN)",
+    "Author contracts",
+    "Print runs",
+    "Distribution"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/editorial.json"
+}

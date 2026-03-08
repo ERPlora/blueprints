@@ -1,0 +1,63 @@
+{
+  "code": "restaurant",
+  "sector": "hospitality",
+  "name": "Restaurant",
+  "description": "Full-service restaurant with table plan, kitchen display system, courses, reservations, split bills, tips, and takeaway/delivery support",
+  "icon": "restaurant-outline",
+  "color": "#ff6b35",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "tables",
+    "kitchen",
+    "orders",
+    "reservations"
+  ],
+  "sector_features": [
+    "Table plan / floors",
+    "Kitchen display system (KDS)",
+    "Courses",
+    "Split bill",
+    "Reservations",
+    "Tips",
+    "Takeaway / delivery",
+    "Kitchen + bar printer"
+  ],
+  "roles": [
+    {
+      "id": "waiter",
+      "name": "Waiter",
+      "permissions": [
+        "sales.*",
+        "tables.*",
+        "orders.*",
+        "kitchen.view_*",
+        "reservations.view_*"
+      ]
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "permissions": [
+        "kitchen.*",
+        "orders.view_*",
+        "inventory.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/restaurant.json"
+}

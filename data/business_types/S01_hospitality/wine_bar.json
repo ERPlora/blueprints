@@ -1,0 +1,45 @@
+{
+  "code": "wine_bar",
+  "sector": "hospitality",
+  "name": "Wine Bar",
+  "description": "Wine bar with wine catalog (appellation, vintage), by-the-glass and bottle sales, open bottle stock tracking and tasting events",
+  "icon": "wine-outline",
+  "color": "#eb445a",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "tables"
+  ],
+  "sector_features": [
+    "Wine catalog (D.O., vintage)",
+    "By glass + bottle sales",
+    "Open bottle stock",
+    "Tastings"
+  ],
+  "roles": [
+    {
+      "id": "sommelier",
+      "name": "Sommelier",
+      "permissions": [
+        "inventory.*",
+        "sales.*",
+        "customers.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/wine_bar.json"
+}

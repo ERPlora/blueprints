@@ -1,0 +1,269 @@
+{
+  "version": "1.0.0",
+  "business_type": "food_truck",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cafes",
+      "name": "Cafes",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "aguas",
+      "name": "Aguas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "zumos",
+      "name": "Zumos",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "infusiones",
+      "name": "Infusiones y Te",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "principal",
+      "name": "Platos principales",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "acompanamiento",
+      "name": "Acompanamientos",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "postres",
+      "name": "Postres",
+      "icon": "ice-cream-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    }
+  ],
+  "products": [
+    {
+      "code": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.3
+    },
+    {
+      "code": "cafe_cortado",
+      "name": "Cafe cortado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4
+    },
+    {
+      "code": "cafe_con_leche",
+      "name": "Cafe con leche",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.6
+    },
+    {
+      "code": "capuchino",
+      "name": "Capuchino",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "descafeinado",
+      "name": "Descafeinado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4
+    },
+    {
+      "code": "carajillo",
+      "name": "Carajillo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "coca_cola_zero",
+      "name": "Coca-Cola Zero",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "fanta_limon",
+      "name": "Fanta limon",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "sprite",
+      "name": "Sprite",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "aquarius",
+      "name": "Aquarius",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "tonica",
+      "name": "Tonica",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "agua_con_gas",
+      "name": "Agua con gas",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 2.0
+    },
+    {
+      "code": "zumo_naranja",
+      "name": "Zumo de naranja",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 3.0
+    },
+    {
+      "code": "zumo_tomate",
+      "name": "Zumo de tomate",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8
+    },
+    {
+      "code": "zumo_pina",
+      "name": "Zumo de pina",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8
+    },
+    {
+      "code": "te_negro",
+      "name": "Te negro",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "te_verde",
+      "name": "Te verde",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "manzanilla",
+      "name": "Manzanilla",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "poleo_menta",
+      "name": "Poleo menta",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8
+    },
+    {
+      "code": "hamburguesa_gourmet",
+      "name": "Hamburguesa gourmet",
+      "category": "principal",
+      "tax_class_hint": "reduced",
+      "price": 9.0
+    },
+    {
+      "code": "tacos",
+      "name": "Tacos (3 uds)",
+      "category": "principal",
+      "tax_class_hint": "reduced",
+      "price": 8.5
+    },
+    {
+      "code": "bocadillo_pulled_pork",
+      "name": "Bocadillo de pulled pork",
+      "category": "principal",
+      "tax_class_hint": "reduced",
+      "price": 8.0
+    },
+    {
+      "code": "wrap_falafel",
+      "name": "Wrap de falafel",
+      "category": "principal",
+      "tax_class_hint": "reduced",
+      "price": 7.0
+    },
+    {
+      "code": "patatas_fritas",
+      "name": "Patatas fritas",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 3.5
+    },
+    {
+      "code": "nachos_queso",
+      "name": "Nachos con queso",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 5.0
+    },
+    {
+      "code": "churros",
+      "name": "Churros",
+      "category": "postres",
+      "tax_class_hint": "reduced",
+      "price": 4.0
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "code": "photography",
+  "sector": "media",
+  "name": "Photography Studio",
+  "description": "Photography studio with session booking, projects, digital delivery, print sales",
+  "icon": "camera-outline",
+  "color": "#424242",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Session booking",
+    "Projects",
+    "Digital delivery"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/photography.json"
+}

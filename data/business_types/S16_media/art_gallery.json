@@ -1,0 +1,40 @@
+{
+  "code": "art_gallery",
+  "sector": "media",
+  "name": "Art Gallery",
+  "description": "Art gallery with artwork catalog, exhibitions, consignment, authenticity certificates",
+  "icon": "image-outline",
+  "color": "#880e4f",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "recommended",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Artwork catalog",
+    "Exhibitions",
+    "Consignment"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/art_gallery.json"
+}

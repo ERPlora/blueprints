@@ -1,0 +1,49 @@
+{
+  "code": "dental_clinic",
+  "sector": "personal_services",
+  "name": "Dental Clinic",
+  "description": "Dental clinic with clinical history, odontogram, treatment quotes, x-rays, financing",
+  "icon": "medkit-outline",
+  "color": "#00bcd4",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Clinical history",
+    "Odontogram",
+    "Treatment quotes",
+    "Financing"
+  ],
+  "roles": [
+    {
+      "id": "dentist",
+      "name": "Dentist",
+      "permissions": [
+        "*"
+      ]
+    },
+    {
+      "id": "hygienist",
+      "name": "Dental Hygienist",
+      "permissions": [
+        "appointments.*",
+        "customers.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/dental_clinic.json"
+}

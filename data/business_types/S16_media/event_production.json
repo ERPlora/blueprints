@@ -1,0 +1,40 @@
+{
+  "code": "event_production",
+  "sector": "media",
+  "name": "Event Production",
+  "description": "Event production with quotes, suppliers, timeline, temporary staff, ticketing",
+  "icon": "calendar-outline",
+  "color": "#c62828",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Event quotes",
+    "Suppliers",
+    "Timeline"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/event_production.json"
+}

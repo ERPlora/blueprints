@@ -1,0 +1,40 @@
+{
+  "code": "street_market",
+  "sector": "retail",
+  "name": "Market Stall / Street Vendor",
+  "description": "Market stall with mobile POS, offline, location change, simplified stock",
+  "icon": "location-outline",
+  "color": "#ff7043",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "recommended",
+    "BI": "na"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Mobile POS",
+    "Offline",
+    "Location change"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/street_market.json"
+}

@@ -1,0 +1,32 @@
+{
+  "code": "ice_cream_shop",
+  "sector": "hospitality",
+  "name": "Ice Cream Shop",
+  "description": "Ice cream shop with sales by weight or scoop, combo offers, and seasonal flavor management",
+  "icon": "ice-cream-outline",
+  "color": "#5ac8fa",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "recommended",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Sale by weight / scoop",
+    "Combos",
+    "Seasonality"
+  ],
+  "roles": [],
+  "products_file": "products/ice_cream_shop.json"
+}

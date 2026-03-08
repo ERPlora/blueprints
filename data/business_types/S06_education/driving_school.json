@@ -1,0 +1,40 @@
+{
+  "code": "driving_school",
+  "sector": "education",
+  "name": "Driving School",
+  "description": "Driving school with practice scheduling, theory/practical, exams, fleet",
+  "icon": "car-outline",
+  "color": "#ef6c00",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Practice scheduling",
+    "Theory/practical",
+    "Exams"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/driving_school.json"
+}

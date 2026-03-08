@@ -1,0 +1,40 @@
+{
+  "code": "renovation",
+  "sector": "construction",
+  "name": "Renovation Company",
+  "description": "Renovation with quotes, projects, before/after photos, subcontractors",
+  "icon": "hammer-outline",
+  "color": "#8d6e63",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Quotes",
+    "Before/after photos",
+    "Subcontractors"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/renovation.json"
+}

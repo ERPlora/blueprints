@@ -1,0 +1,40 @@
+{
+  "code": "musical_instruments",
+  "sector": "retail",
+  "name": "Musical Instruments",
+  "description": "Music store with serial numbers, instrument rental, luthier workshop, financing",
+  "icon": "musical-notes-outline",
+  "color": "#3f51b5",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Serial numbers",
+    "Instrument rental",
+    "Luthier workshop"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/musical_instruments.json"
+}

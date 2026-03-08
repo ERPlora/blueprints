@@ -1,0 +1,33 @@
+{
+  "code": "bar_restaurant",
+  "sector": "hospitality",
+  "name": "Bar-Restaurant",
+  "description": "Combined bar and restaurant with separate bar and dining zones, inheriting capabilities from both business types",
+  "icon": "restaurant-outline",
+  "color": "#ff6b35",
+  "inherits_from": [
+    "bar",
+    "restaurant"
+  ],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Multi-zone bar + dining"
+  ],
+  "roles": [],
+  "products_file": "products/bar_restaurant.json"
+}

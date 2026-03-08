@@ -1,0 +1,39 @@
+{
+  "code": "music_school",
+  "sector": "education",
+  "name": "Music School",
+  "description": "Music school with individual+group classes, room/instrument rental",
+  "icon": "musical-notes-outline",
+  "color": "#7b1fa2",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Individual+group classes",
+    "Room rental"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/music_school.json"
+}

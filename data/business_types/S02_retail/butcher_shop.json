@@ -1,0 +1,40 @@
+{
+  "code": "butcher_shop",
+  "sector": "retail",
+  "name": "Butcher Shop",
+  "description": "Butcher with mandatory lot traceability, butchering, scale, allergens",
+  "icon": "restaurant-outline",
+  "color": "#b71c1c",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Mandatory lot traceability",
+    "Butchering",
+    "Allergens"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/butcher_shop.json"
+}

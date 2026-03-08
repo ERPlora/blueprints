@@ -1,0 +1,41 @@
+{
+  "code": "coworking",
+  "sector": "coworking",
+  "name": "Coworking Space",
+  "description": "Coworking with desks, memberships, meeting room booking, access control, community",
+  "icon": "desktop-outline",
+  "color": "#1565c0",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Desks",
+    "Memberships",
+    "Meeting room booking",
+    "Access control"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/coworking.json"
+}

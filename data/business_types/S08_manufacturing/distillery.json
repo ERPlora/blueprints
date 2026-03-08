@@ -1,0 +1,40 @@
+{
+  "code": "distillery",
+  "sector": "manufacturing",
+  "name": "Distillery",
+  "description": "Distillery with recipes, stills, aging/barrels, excise duty, bottling",
+  "icon": "flask-outline",
+  "color": "#4e342e",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "essential",
+    "LOG": "essential",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Distillation recipes",
+    "Aging/barrels",
+    "Excise duty"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/distillery.json"
+}

@@ -1,0 +1,43 @@
+{
+  "code": "bakery",
+  "sector": "hospitality",
+  "name": "Bakery / Pastry Shop",
+  "description": "Bakery or pastry shop with workshop production, BOM/recipes, daily production runs, custom orders, expiration tracking, and batch/lot management",
+  "icon": "nutrition-outline",
+  "color": "#ff9500",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "BOM / recipes",
+    "Daily production",
+    "Custom orders",
+    "Expiry dates",
+    "Batch tracking"
+  ],
+  "roles": [
+    {
+      "id": "baker",
+      "name": "Baker",
+      "permissions": [
+        "manufacturing.*",
+        "inventory.*"
+      ]
+    }
+  ],
+  "products_file": "products/bakery.json"
+}

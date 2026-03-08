@@ -1,0 +1,40 @@
+{
+  "code": "appraisal",
+  "sector": "professional_services",
+  "name": "Expert Appraisal",
+  "description": "Expert appraisal with assignments, visit scheduling, reports, photo documentation",
+  "icon": "search-outline",
+  "color": "#757575",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Assignments",
+    "Visit scheduling",
+    "Reports"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/appraisal.json"
+}

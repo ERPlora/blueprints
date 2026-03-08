@@ -1,0 +1,40 @@
+{
+  "code": "security_company",
+  "sector": "professional_services",
+  "name": "Security Company",
+  "description": "Security with surveillance contracts, shift scheduling, patrol control, incidents",
+  "icon": "shield-outline",
+  "color": "#1a237e",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Surveillance contracts",
+    "Shift scheduling",
+    "Patrol control"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/security_company.json"
+}

@@ -1,0 +1,40 @@
+{
+  "code": "debt_collection",
+  "sector": "financial",
+  "name": "Debt Collection",
+  "description": "Debt collection with debt portfolio, contact tracking, payment agreements",
+  "icon": "trending-up-outline",
+  "color": "#b71c1c",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Debt portfolio",
+    "Contact tracking",
+    "Payment agreements"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/debt_collection.json"
+}

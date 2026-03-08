@@ -1,0 +1,40 @@
+{
+  "code": "recording_studio",
+  "sector": "media",
+  "name": "Recording Studio",
+  "description": "Recording studio with hourly booking, sound engineers, equipment rental, mixing",
+  "icon": "mic-outline",
+  "color": "#6a1b9a",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Hourly booking",
+    "Sound engineers",
+    "Mixing/mastering"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/recording_studio.json"
+}

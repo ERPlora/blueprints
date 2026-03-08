@@ -1,0 +1,40 @@
+{
+  "code": "hosting",
+  "sector": "technology",
+  "name": "Hosting / Data Center",
+  "description": "Hosting with service catalog, consumption billing, provisioning, SLA, client portal",
+  "icon": "cloud-outline",
+  "color": "#0d47a1",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Service catalog",
+    "Consumption billing",
+    "SLA"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/hosting.json"
+}

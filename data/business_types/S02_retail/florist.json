@@ -1,0 +1,40 @@
+{
+  "code": "florist",
+  "sector": "retail",
+  "name": "Florist",
+  "description": "Florist with date/time orders, dedications, delivery routes, seasonal catalog",
+  "icon": "flower-outline",
+  "color": "#e91e63",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Date/time orders",
+    "Dedications",
+    "Delivery routes"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/florist.json"
+}
