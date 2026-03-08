@@ -1,0 +1,349 @@
+{
+  "version": "1.0.0",
+  "business_type": "supermarket",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "frescos",
+      "name": "Frescos",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 1
+    },
+    {
+      "code": "lacteos",
+      "name": "Lacteos",
+      "icon": "water-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 2
+    },
+    {
+      "code": "panaderia",
+      "name": "Panaderia",
+      "icon": "bread-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 3
+    },
+    {
+      "code": "carniceria",
+      "name": "Carniceria",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "bebidas",
+      "name": "Bebidas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "limpieza",
+      "name": "Limpieza",
+      "icon": "sparkles-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    },
+    {
+      "code": "higiene",
+      "name": "Higiene",
+      "icon": "body-outline",
+      "tax_class_hint": "standard",
+      "order": 7
+    }
+  ],
+  "products": [
+    {
+      "code": "manzanas_kg",
+      "name": "Manzanas (kg)",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 2.29,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/manzanas_kg.jpg"
+    },
+    {
+      "code": "platanos_kg",
+      "name": "Platanos (kg)",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.69,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/platanos_kg.jpg"
+    },
+    {
+      "code": "tomates_kg",
+      "name": "Tomates (kg)",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 2.49,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/tomates_kg.jpg"
+    },
+    {
+      "code": "lechugas",
+      "name": "Lechuga",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 0.99,
+      "image": "retail/lechugas.jpg"
+    },
+    {
+      "code": "patatas_kg",
+      "name": "Patatas (kg)",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.29,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/patatas_kg.jpg"
+    },
+    {
+      "code": "cebollas_kg",
+      "name": "Cebollas (kg)",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.49,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/cebollas_kg.jpg"
+    },
+    {
+      "code": "zanahorias_kg",
+      "name": "Zanahorias (kg)",
+      "category": "frescos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.19,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/zanahorias_kg.jpg"
+    },
+    {
+      "code": "leche_entera",
+      "name": "Leche entera (1L)",
+      "category": "lacteos",
+      "tax_class_hint": "super_reduced",
+      "price": 0.89,
+      "image": "retail/leche_entera.jpg"
+    },
+    {
+      "code": "leche_desnatada",
+      "name": "Leche desnatada (1L)",
+      "category": "lacteos",
+      "tax_class_hint": "super_reduced",
+      "price": 0.85,
+      "image": "retail/leche_desnatada.jpg"
+    },
+    {
+      "code": "yogur_natural",
+      "name": "Yogur natural (pack 4)",
+      "category": "lacteos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.29,
+      "image": "retail/yogur_natural.jpg"
+    },
+    {
+      "code": "queso_fresco",
+      "name": "Queso fresco",
+      "category": "lacteos",
+      "tax_class_hint": "super_reduced",
+      "price": 2.49,
+      "image": "retail/queso_fresco.jpg"
+    },
+    {
+      "code": "mantequilla",
+      "name": "Mantequilla",
+      "category": "lacteos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.79,
+      "image": "retail/mantequilla.jpg"
+    },
+    {
+      "code": "nata",
+      "name": "Nata para cocinar",
+      "category": "lacteos",
+      "tax_class_hint": "super_reduced",
+      "price": 1.19,
+      "image": "retail/nata.jpg"
+    },
+    {
+      "code": "barra_pan",
+      "name": "Barra de pan",
+      "category": "panaderia",
+      "tax_class_hint": "super_reduced",
+      "price": 0.65,
+      "image": "retail/barra_pan.jpg"
+    },
+    {
+      "code": "pan_molde",
+      "name": "Pan de molde",
+      "category": "panaderia",
+      "tax_class_hint": "super_reduced",
+      "price": 1.39,
+      "image": "retail/pan_molde.jpg"
+    },
+    {
+      "code": "bolleria_pack",
+      "name": "Bolleria variada (6 uds)",
+      "category": "panaderia",
+      "tax_class_hint": "super_reduced",
+      "price": 2.29,
+      "image": "retail/bolleria_pack.jpg"
+    },
+    {
+      "code": "pechuga_pollo",
+      "name": "Pechuga de pollo (kg)",
+      "category": "carniceria",
+      "tax_class_hint": "reduced",
+      "price": 7.99,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/pechuga_pollo.jpg"
+    },
+    {
+      "code": "carne_picada",
+      "name": "Carne picada (500g)",
+      "category": "carniceria",
+      "tax_class_hint": "reduced",
+      "price": 4.29,
+      "image": "retail/carne_picada.jpg"
+    },
+    {
+      "code": "chuletas_cerdo",
+      "name": "Chuletas de cerdo (kg)",
+      "category": "carniceria",
+      "tax_class_hint": "reduced",
+      "price": 6.49,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/chuletas_cerdo.jpg"
+    },
+    {
+      "code": "filete_ternera",
+      "name": "Filete de ternera (kg)",
+      "category": "carniceria",
+      "tax_class_hint": "reduced",
+      "price": 14.99,
+      "is_weighable": true,
+      "unit": "kg",
+      "image": "retail/filete_ternera.jpg"
+    },
+    {
+      "code": "agua_pack",
+      "name": "Agua mineral (pack 6)",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 1.89,
+      "image": "retail/agua_pack.jpg"
+    },
+    {
+      "code": "coca_cola_2l",
+      "name": "Coca-Cola (2L)",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 1.99,
+      "image": "retail/coca_cola_2l.jpg"
+    },
+    {
+      "code": "cerveza_pack",
+      "name": "Cerveza (pack 6)",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 4.49,
+      "image": "retail/cerveza_pack.jpg"
+    },
+    {
+      "code": "zumo_brick",
+      "name": "Zumo de naranja (1L)",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 1.49,
+      "image": "retail/zumo_brick.jpg"
+    },
+    {
+      "code": "detergente",
+      "name": "Detergente (33 lavados)",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 6.99,
+      "image": "retail/detergente.jpg"
+    },
+    {
+      "code": "suavizante",
+      "name": "Suavizante (60 lavados)",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 3.99,
+      "image": "retail/suavizante.jpg"
+    },
+    {
+      "code": "lejia",
+      "name": "Lejia (2L)",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 1.49,
+      "image": "retail/lejia.jpg"
+    },
+    {
+      "code": "lavavajillas",
+      "name": "Lavavajillas",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 2.99,
+      "image": "retail/lavavajillas.jpg"
+    },
+    {
+      "code": "papel_cocina",
+      "name": "Papel de cocina (3 rollos)",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 2.79,
+      "image": "retail/papel_cocina.jpg"
+    },
+    {
+      "code": "gel_ducha",
+      "name": "Gel de ducha",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 2.49,
+      "image": "retail/gel_ducha.jpg"
+    },
+    {
+      "code": "champu",
+      "name": "Champu",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 3.49,
+      "image": "retail/champu.jpg"
+    },
+    {
+      "code": "pasta_dientes",
+      "name": "Pasta de dientes",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 2.29,
+      "image": "retail/pasta_dientes.jpg"
+    },
+    {
+      "code": "papel_higienico",
+      "name": "Papel higienico (12 rollos)",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 4.99,
+      "image": "retail/papel_higienico.jpg"
+    },
+    {
+      "code": "desodorante",
+      "name": "Desodorante",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 2.99,
+      "image": "retail/desodorante.jpg"
+    }
+  ]
+}

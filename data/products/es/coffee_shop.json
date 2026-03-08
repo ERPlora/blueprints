@@ -61,7 +61,7 @@
       "price": 1.5,
       "tax_class_hint": "reduced",
       "code": "espresso",
-      "image": "espresso.jpg"
+      "image": "hospitality/espresso.jpg"
     },
     {
       "name": "Americano",
@@ -69,7 +69,7 @@
       "price": 1.8,
       "tax_class_hint": "reduced",
       "code": "americano",
-      "image": "americano.jpg"
+      "image": "hospitality/americano.jpg"
     },
     {
       "name": "Cafe con leche",
@@ -77,7 +77,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "cafe_con_leche",
-      "image": "cafe_con_leche.jpg"
+      "image": "hospitality/cafe_con_leche.jpg"
     },
     {
       "name": "Cortado",
@@ -85,7 +85,7 @@
       "price": 1.6,
       "tax_class_hint": "reduced",
       "code": "cortado",
-      "image": "cortado.jpg"
+      "image": "hospitality/cortado.jpg"
     },
     {
       "name": "Capuchino",
@@ -93,7 +93,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "capuchino",
-      "image": "capuchino.jpg"
+      "image": "hospitality/capuchino.jpg"
     },
     {
       "name": "Doble espresso",
@@ -101,7 +101,7 @@
       "price": 2.2,
       "tax_class_hint": "reduced",
       "code": "doble_espresso",
-      "image": "doble_espresso.jpg"
+      "image": "hospitality/doble_espresso.jpg"
     },
     {
       "name": "Descafeinado",
@@ -109,7 +109,7 @@
       "price": 1.6,
       "tax_class_hint": "reduced",
       "code": "descafeinado",
-      "image": "descafeinado.jpg"
+      "image": "hospitality/descafeinado.jpg"
     },
     {
       "name": "Latte",
@@ -117,7 +117,7 @@
       "price": 3.2,
       "tax_class_hint": "reduced",
       "code": "latte",
-      "image": "latte.jpg"
+      "image": "hospitality/latte.jpg"
     },
     {
       "name": "Flat white",
@@ -125,7 +125,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "flat_white",
-      "image": "flat_white.jpg"
+      "image": "hospitality/flat_white.jpg"
     },
     {
       "name": "Mocha",
@@ -133,7 +133,7 @@
       "price": 3.8,
       "tax_class_hint": "reduced",
       "code": "mocha",
-      "image": "mocha.jpg"
+      "image": "hospitality/mocha.jpg"
     },
     {
       "name": "Latte de vainilla",
@@ -141,7 +141,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "latte_vainilla",
-      "image": "latte_vainilla.jpg"
+      "image": "hospitality/latte_vainilla.jpg"
     },
     {
       "name": "Latte de caramelo",
@@ -149,7 +149,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "latte_caramelo",
-      "image": "latte_caramelo.jpg"
+      "image": "hospitality/latte_caramelo.jpg"
     },
     {
       "name": "Cafe bombon",
@@ -157,7 +157,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "cafe_bombom",
-      "image": "cafe_bombom.jpg"
+      "image": "hospitality/cafe_bombom.jpg"
     },
     {
       "name": "Chai latte",
@@ -165,7 +165,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "chai_latte",
-      "image": "chai_latte.jpg"
+      "image": "hospitality/chai_latte.jpg"
     },
     {
       "name": "Matcha latte",
@@ -173,7 +173,7 @@
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "matcha_latte",
-      "image": "matcha_latte.jpg"
+      "image": "hospitality/matcha_latte.jpg"
     },
     {
       "name": "Te negro",
@@ -181,7 +181,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "te_negro",
-      "image": "te_negro.jpg"
+      "image": "hospitality/te_negro.jpg"
     },
     {
       "name": "Te verde",
@@ -189,7 +189,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "te_verde",
-      "image": "te_verde.jpg"
+      "image": "hospitality/te_verde.jpg"
     },
     {
       "name": "Te rojo",
@@ -197,7 +197,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "te_rojo",
-      "image": "te_rojo.jpg"
+      "image": "hospitality/te_rojo.jpg"
     },
     {
       "name": "Manzanilla",
@@ -205,7 +205,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "manzanilla",
-      "image": "manzanilla.jpg"
+      "image": "hospitality/manzanilla.jpg"
     },
     {
       "name": "Poleo menta",
@@ -213,7 +213,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "poleo_menta",
-      "image": "poleo_menta.jpg"
+      "image": "hospitality/poleo_menta.jpg"
     },
     {
       "name": "Cafe helado",
@@ -221,7 +221,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "cafe_helado",
-      "image": "cafe_helado.jpg"
+      "image": "hospitality/cafe_helado.jpg"
     },
     {
       "name": "Frappuccino",
@@ -229,7 +229,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "frappuccino",
-      "image": "frappuccino.jpg"
+      "image": "hospitality/frappuccino.jpg"
     },
     {
       "name": "Smoothie de fresa",
@@ -237,7 +237,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "smoothie_fresa",
-      "image": "smoothie_fresa.jpg"
+      "image": "hospitality/smoothie_fresa.jpg"
     },
     {
       "name": "Smoothie de mango",
@@ -245,7 +245,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "smoothie_mango",
-      "image": "smoothie_mango.jpg"
+      "image": "hospitality/smoothie_mango.jpg"
     },
     {
       "name": "Limonada natural",
@@ -253,7 +253,7 @@
       "price": 3.0,
       "tax_class_hint": "reduced",
       "code": "limonada",
-      "image": "limonada.jpg"
+      "image": "hospitality/limonada.jpg"
     },
     {
       "name": "Croissant",
@@ -261,7 +261,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "croissant",
-      "image": "croissant.jpg"
+      "image": "hospitality/croissant.jpg"
     },
     {
       "name": "Croissant de chocolate",
@@ -269,7 +269,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "croissant_chocolate",
-      "image": "croissant_chocolate.jpg"
+      "image": "hospitality/croissant_chocolate.jpg"
     },
     {
       "name": "Muffin de chocolate",
@@ -277,7 +277,7 @@
       "price": 2.8,
       "tax_class_hint": "reduced",
       "code": "muffin_chocolate",
-      "image": "muffin_chocolate.jpg"
+      "image": "hospitality/muffin_chocolate.jpg"
     },
     {
       "name": "Muffin de arandanos",
@@ -285,7 +285,7 @@
       "price": 2.8,
       "tax_class_hint": "reduced",
       "code": "muffin_arandanos",
-      "image": "muffin_arandanos.jpg"
+      "image": "hospitality/muffin_arandanos.jpg"
     },
     {
       "name": "Tarta de zanahoria",
@@ -293,7 +293,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "tarta_zanahoria",
-      "image": "tarta_zanahoria.jpg"
+      "image": "hospitality/tarta_zanahoria.jpg"
     },
     {
       "name": "Cookie",
@@ -301,7 +301,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "cookie",
-      "image": "cookie.jpg"
+      "image": "hospitality/cookie.jpg"
     },
     {
       "name": "Brownie",
@@ -309,7 +309,7 @@
       "price": 3.0,
       "tax_class_hint": "reduced",
       "code": "brownie",
-      "image": "brownie.jpg"
+      "image": "hospitality/brownie.jpg"
     },
     {
       "name": "Cheesecake",
@@ -317,7 +317,7 @@
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "cheesecake",
-      "image": "cheesecake.jpg"
+      "image": "hospitality/cheesecake.jpg"
     },
     {
       "name": "Tostada con tomate",
@@ -325,7 +325,7 @@
       "price": 2.8,
       "tax_class_hint": "reduced",
       "code": "tostada_tomate",
-      "image": "tostada_tomate.jpg"
+      "image": "hospitality/tostada_tomate.jpg"
     },
     {
       "name": "Tostada de aguacate",
@@ -333,7 +333,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "tostada_aguacate",
-      "image": "tostada_aguacate.jpg"
+      "image": "hospitality/tostada_aguacate.jpg"
     },
     {
       "name": "Sandwich mixto",
@@ -341,7 +341,7 @@
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "sandwich_mixto",
-      "image": "sandwich_mixto.jpg"
+      "image": "hospitality/sandwich_mixto.jpg"
     },
     {
       "name": "Sandwich vegetal",
@@ -349,7 +349,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "sandwich_vegetal",
-      "image": "sandwich_vegetal.jpg"
+      "image": "hospitality/sandwich_vegetal.jpg"
     },
     {
       "name": "Bagel de salmon",
@@ -357,7 +357,7 @@
       "price": 5.5,
       "tax_class_hint": "reduced",
       "code": "bagel_salmon",
-      "image": "bagel_salmon.jpg"
+      "image": "hospitality/bagel_salmon.jpg"
     },
     {
       "name": "Agua mineral",
@@ -365,7 +365,7 @@
       "price": 1.8,
       "tax_class_hint": "reduced",
       "code": "agua_mineral",
-      "image": "agua_mineral.jpg"
+      "image": "hospitality/agua_mineral.jpg"
     },
     {
       "name": "Coca-Cola",
@@ -373,7 +373,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "coca_cola",
-      "image": "coca_cola.jpg"
+      "image": "hospitality/coca_cola.jpg"
     },
     {
       "name": "Zumo de naranja natural",
@@ -381,7 +381,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "zumo_naranja",
-      "image": "zumo_naranja.jpg"
+      "image": "hospitality/zumo_naranja.jpg"
     }
   ]
 }

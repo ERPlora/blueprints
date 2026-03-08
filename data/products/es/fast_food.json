@@ -89,7 +89,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.3,
-      "image": "cafe_solo.jpg"
+      "image": "hospitality/cafe_solo.jpg"
     },
     {
       "code": "cafe_cortado",
@@ -97,7 +97,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.4,
-      "image": "cafe_cortado.jpg"
+      "image": "hospitality/cafe_cortado.jpg"
     },
     {
       "code": "cafe_con_leche",
@@ -105,7 +105,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.6,
-      "image": "cafe_con_leche.jpg"
+      "image": "hospitality/cafe_con_leche.jpg"
     },
     {
       "code": "capuchino",
@@ -113,7 +113,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "capuchino.jpg"
+      "image": "hospitality/capuchino.jpg"
     },
     {
       "code": "descafeinado",
@@ -121,7 +121,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.4,
-      "image": "descafeinado.jpg"
+      "image": "hospitality/descafeinado.jpg"
     },
     {
       "code": "carajillo",
@@ -129,7 +129,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "carajillo.jpg"
+      "image": "hospitality/carajillo.jpg"
     },
     {
       "code": "coca_cola",
@@ -137,7 +137,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "coca_cola.jpg"
+      "image": "hospitality/coca_cola.jpg"
     },
     {
       "code": "coca_cola_zero",
@@ -145,7 +145,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "coca_cola_zero.jpg"
+      "image": "hospitality/coca_cola_zero.jpg"
     },
     {
       "code": "fanta_naranja",
@@ -153,7 +153,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "fanta_naranja.jpg"
+      "image": "hospitality/fanta_naranja.jpg"
     },
     {
       "code": "fanta_limon",
@@ -161,7 +161,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "fanta_limon.jpg"
+      "image": "hospitality/fanta_limon.jpg"
     },
     {
       "code": "sprite",
@@ -169,7 +169,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "sprite.jpg"
+      "image": "hospitality/sprite.jpg"
     },
     {
       "code": "aquarius",
@@ -177,7 +177,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "aquarius.jpg"
+      "image": "hospitality/aquarius.jpg"
     },
     {
       "code": "tonica",
@@ -185,7 +185,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "tonica.jpg"
+      "image": "hospitality/tonica.jpg"
     },
     {
       "code": "agua_mineral",
@@ -193,7 +193,7 @@
       "category": "aguas",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "agua_mineral.jpg"
+      "image": "hospitality/agua_mineral.jpg"
     },
     {
       "code": "agua_con_gas",
@@ -201,7 +201,7 @@
       "category": "aguas",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "agua_con_gas.jpg"
+      "image": "hospitality/agua_con_gas.jpg"
     },
     {
       "code": "zumo_naranja",
@@ -209,7 +209,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "zumo_naranja.jpg"
+      "image": "hospitality/zumo_naranja.jpg"
     },
     {
       "code": "zumo_tomate",
@@ -217,7 +217,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "zumo_tomate.jpg"
+      "image": "hospitality/zumo_tomate.jpg"
     },
     {
       "code": "zumo_pina",
@@ -225,7 +225,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "zumo_pina.jpg"
+      "image": "hospitality/zumo_pina.jpg"
     },
     {
       "code": "te_negro",
@@ -233,7 +233,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "te_negro.jpg"
+      "image": "hospitality/te_negro.jpg"
     },
     {
       "code": "te_verde",
@@ -241,7 +241,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "te_verde.jpg"
+      "image": "hospitality/te_verde.jpg"
     },
     {
       "code": "manzanilla",
@@ -249,7 +249,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "manzanilla.jpg"
+      "image": "hospitality/manzanilla.jpg"
     },
     {
       "code": "poleo_menta",
@@ -257,7 +257,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "poleo_menta.jpg"
+      "image": "hospitality/poleo_menta.jpg"
     },
     {
       "code": "hamburguesa_clasica",
@@ -265,7 +265,7 @@
       "category": "hamburguesas",
       "tax_class_hint": "reduced",
       "price": 7.5,
-      "image": "hamburguesa_clasica.jpg"
+      "image": "hospitality/hamburguesa_clasica.jpg"
     },
     {
       "code": "hamburguesa_queso",
@@ -273,7 +273,7 @@
       "category": "hamburguesas",
       "tax_class_hint": "reduced",
       "price": 8.5,
-      "image": "hamburguesa_queso.jpg"
+      "image": "hospitality/hamburguesa_queso.jpg"
     },
     {
       "code": "hamburguesa_doble",
@@ -281,7 +281,7 @@
       "category": "hamburguesas",
       "tax_class_hint": "reduced",
       "price": 10.0,
-      "image": "hamburguesa_doble.jpg"
+      "image": "hospitality/hamburguesa_doble.jpg"
     },
     {
       "code": "hamburguesa_pollo",
@@ -289,7 +289,7 @@
       "category": "hamburguesas",
       "tax_class_hint": "reduced",
       "price": 8.0,
-      "image": "hamburguesa_pollo.jpg"
+      "image": "hospitality/hamburguesa_pollo.jpg"
     },
     {
       "code": "perrito_clasico",
@@ -297,7 +297,7 @@
       "category": "perritos",
       "tax_class_hint": "reduced",
       "price": 5.0,
-      "image": "perrito_clasico.jpg"
+      "image": "hospitality/perrito_clasico.jpg"
     },
     {
       "code": "wrap_pollo",
@@ -305,7 +305,7 @@
       "category": "bocadillos",
       "tax_class_hint": "reduced",
       "price": 6.5,
-      "image": "wrap_pollo.jpg"
+      "image": "hospitality/wrap_pollo.jpg"
     },
     {
       "code": "wrap_vegetal",
@@ -313,7 +313,7 @@
       "category": "bocadillos",
       "tax_class_hint": "reduced",
       "price": 6.0,
-      "image": "wrap_vegetal.jpg"
+      "image": "hospitality/wrap_vegetal.jpg"
     },
     {
       "code": "patatas_fritas",
@@ -321,7 +321,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "patatas_fritas.jpg"
+      "image": "hospitality/patatas_fritas.jpg"
     },
     {
       "code": "aros_cebolla",
@@ -329,7 +329,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "aros_cebolla.jpg"
+      "image": "hospitality/aros_cebolla.jpg"
     },
     {
       "code": "nuggets",
@@ -337,7 +337,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 4.5,
-      "image": "nuggets.jpg"
+      "image": "hospitality/nuggets.jpg"
     },
     {
       "code": "menu_hamburguesa",
@@ -345,7 +345,7 @@
       "category": "menus",
       "tax_class_hint": "reduced",
       "price": 10.5,
-      "image": "menu_hamburguesa.jpg"
+      "image": "hospitality/menu_hamburguesa.jpg"
     },
     {
       "code": "menu_infantil",
@@ -353,7 +353,7 @@
       "category": "menus",
       "tax_class_hint": "reduced",
       "price": 7.0,
-      "image": "menu_infantil.jpg"
+      "image": "hospitality/menu_infantil.jpg"
     },
     {
       "code": "helado_soft",
@@ -361,7 +361,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "helado_soft.jpg"
+      "image": "hospitality/helado_soft.jpg"
     },
     {
       "code": "brownie",
@@ -369,7 +369,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "brownie.jpg"
+      "image": "hospitality/brownie.jpg"
     }
   ]
 }

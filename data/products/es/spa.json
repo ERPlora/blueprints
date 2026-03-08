@@ -1,0 +1,198 @@
+{
+  "version": "1.0.0",
+  "business_type": "spa",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "circuito",
+      "name": "Circuitos",
+      "icon": "water-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "masajes",
+      "name": "Masajes",
+      "icon": "hand-left-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "tratamientos",
+      "name": "Tratamientos",
+      "icon": "flask-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "packs",
+      "name": "Packs",
+      "icon": "gift-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    }
+  ],
+  "products": [
+    {
+      "code": "circuito_spa",
+      "name": "Circuito spa (90min)",
+      "category": "circuito",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/circuito_spa.jpg"
+    },
+    {
+      "code": "circuito_premium",
+      "name": "Circuito spa premium (120min)",
+      "category": "circuito",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "image": "personal_services/circuito_premium.jpg"
+    },
+    {
+      "code": "acceso_piscina",
+      "name": "Acceso piscina termal",
+      "category": "circuito",
+      "tax_class_hint": "standard",
+      "price": 20.0,
+      "image": "personal_services/acceso_piscina.jpg"
+    },
+    {
+      "code": "sauna_privada",
+      "name": "Sauna privada (30min)",
+      "category": "circuito",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/sauna_privada.jpg"
+    },
+    {
+      "code": "masaje_relajante",
+      "name": "Masaje relajante (60min)",
+      "category": "masajes",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "image": "personal_services/masaje_relajante.jpg"
+    },
+    {
+      "code": "masaje_piedras",
+      "name": "Masaje con piedras calientes",
+      "category": "masajes",
+      "tax_class_hint": "standard",
+      "price": 65.0,
+      "image": "personal_services/masaje_piedras.jpg"
+    },
+    {
+      "code": "masaje_aromaterapia",
+      "name": "Masaje aromaterapia",
+      "category": "masajes",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "image": "personal_services/masaje_aromaterapia.jpg"
+    },
+    {
+      "code": "masaje_deportivo",
+      "name": "Masaje deportivo",
+      "category": "masajes",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "image": "personal_services/masaje_deportivo.jpg"
+    },
+    {
+      "code": "masaje_parejas",
+      "name": "Masaje en pareja",
+      "category": "masajes",
+      "tax_class_hint": "standard",
+      "price": 100.0,
+      "image": "personal_services/masaje_parejas.jpg"
+    },
+    {
+      "code": "reflexologia",
+      "name": "Reflexologia podal",
+      "category": "masajes",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/reflexologia.jpg"
+    },
+    {
+      "code": "facial_spa",
+      "name": "Facial rejuvenecedor",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "image": "personal_services/facial_spa.jpg"
+    },
+    {
+      "code": "envolvimiento_chocolate",
+      "name": "Envolvimiento de chocolate",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "image": "personal_services/envolvimiento_chocolate.jpg"
+    },
+    {
+      "code": "ritual_oriental",
+      "name": "Ritual oriental",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 80.0,
+      "image": "personal_services/ritual_oriental.jpg"
+    },
+    {
+      "code": "exfoliacion_sal",
+      "name": "Exfoliacion con sales",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/exfoliacion_sal.jpg"
+    },
+    {
+      "code": "flotacion",
+      "name": "Sesion de flotacion",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 45.0,
+      "image": "personal_services/flotacion.jpg"
+    },
+    {
+      "code": "pack_relax",
+      "name": "Pack relax (circuito + masaje)",
+      "category": "packs",
+      "tax_class_hint": "standard",
+      "price": 75.0,
+      "image": "personal_services/pack_relax.jpg"
+    },
+    {
+      "code": "pack_parejas",
+      "name": "Pack parejas",
+      "category": "packs",
+      "tax_class_hint": "standard",
+      "price": 140.0,
+      "image": "personal_services/pack_parejas.jpg"
+    },
+    {
+      "code": "pack_dia_completo",
+      "name": "Pack dia completo",
+      "category": "packs",
+      "tax_class_hint": "standard",
+      "price": 120.0,
+      "image": "personal_services/pack_dia_completo.jpg"
+    },
+    {
+      "code": "bono_5_masajes",
+      "name": "Bono 5 masajes",
+      "category": "packs",
+      "tax_class_hint": "standard",
+      "price": 230.0,
+      "image": "personal_services/bono_5_masajes.jpg"
+    },
+    {
+      "code": "tarjeta_regalo",
+      "name": "Tarjeta regalo",
+      "category": "packs",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "image": "personal_services/tarjeta_regalo.jpg"
+    }
+  ]
+}

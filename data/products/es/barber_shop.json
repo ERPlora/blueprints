@@ -1,0 +1,202 @@
+{
+  "version": "1.0.0",
+  "business_type": "barber_shop",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "id": "cortes",
+      "name": "Cortes",
+      "icon": "cut-outline",
+      "type": "standard",
+      "order": 1,
+      "tax_class_hint": "standard"
+    },
+    {
+      "id": "barba",
+      "name": "Barba",
+      "icon": "man-outline",
+      "type": "standard",
+      "order": 2,
+      "tax_class_hint": "standard"
+    },
+    {
+      "id": "tratamientos",
+      "name": "Tratamientos",
+      "icon": "flask-outline",
+      "type": "standard",
+      "order": 3,
+      "tax_class_hint": "standard"
+    },
+    {
+      "id": "productos",
+      "name": "Productos",
+      "icon": "bag-outline",
+      "type": "standard",
+      "order": 4,
+      "tax_class_hint": "standard"
+    }
+  ],
+  "products": [
+    {
+      "name": "Corte clasico",
+      "category": "cortes",
+      "price": 14.0,
+      "tax_class_hint": "standard",
+      "code": "corte_clasico",
+      "image": "personal_services/corte_clasico.jpg"
+    },
+    {
+      "name": "Degradado / Fade",
+      "category": "cortes",
+      "price": 16.0,
+      "tax_class_hint": "standard",
+      "code": "corte_degradado",
+      "image": "personal_services/corte_degradado.jpg"
+    },
+    {
+      "name": "Corte nino",
+      "category": "cortes",
+      "price": 10.0,
+      "tax_class_hint": "standard",
+      "code": "corte_nino",
+      "image": "personal_services/corte_nino.jpg"
+    },
+    {
+      "name": "Rapado maquina",
+      "category": "cortes",
+      "price": 10.0,
+      "tax_class_hint": "standard",
+      "code": "rapado",
+      "image": "personal_services/rapado.jpg"
+    },
+    {
+      "name": "Corte a tijera",
+      "category": "cortes",
+      "price": 16.0,
+      "tax_class_hint": "standard",
+      "code": "corte_tijera",
+      "image": "personal_services/corte_tijera.jpg"
+    },
+    {
+      "name": "Corte con diseno",
+      "category": "cortes",
+      "price": 18.0,
+      "tax_class_hint": "standard",
+      "code": "corte_diseno",
+      "image": "personal_services/corte_diseno.jpg"
+    },
+    {
+      "name": "Recorte de barba",
+      "category": "barba",
+      "price": 8.0,
+      "tax_class_hint": "standard",
+      "code": "recorte_barba",
+      "image": "personal_services/recorte_barba.jpg"
+    },
+    {
+      "name": "Afeitado a navaja",
+      "category": "barba",
+      "price": 15.0,
+      "tax_class_hint": "standard",
+      "code": "afeitado_navaja",
+      "image": "personal_services/afeitado_navaja.jpg"
+    },
+    {
+      "name": "Perfilado de barba",
+      "category": "barba",
+      "price": 10.0,
+      "tax_class_hint": "standard",
+      "code": "perfilado_barba",
+      "image": "personal_services/perfilado_barba.jpg"
+    },
+    {
+      "name": "Tinte de barba",
+      "category": "barba",
+      "price": 12.0,
+      "tax_class_hint": "standard",
+      "code": "tinte_barba",
+      "image": "personal_services/tinte_barba.jpg"
+    },
+    {
+      "name": "Tratamiento hidratante barba",
+      "category": "barba",
+      "price": 15.0,
+      "tax_class_hint": "standard",
+      "code": "tratamiento_barba",
+      "image": "personal_services/tratamiento_barba.jpg"
+    },
+    {
+      "name": "Lavado con masaje craneal",
+      "category": "tratamientos",
+      "price": 8.0,
+      "tax_class_hint": "standard",
+      "code": "lavado_masaje",
+      "image": "personal_services/lavado_masaje.jpg"
+    },
+    {
+      "name": "Tratamiento anticaida",
+      "category": "tratamientos",
+      "price": 20.0,
+      "tax_class_hint": "standard",
+      "code": "tratamiento_anticaida",
+      "image": "personal_services/tratamiento_anticaida.jpg"
+    },
+    {
+      "name": "Depilacion con cera (cejas/orejas)",
+      "category": "tratamientos",
+      "price": 5.0,
+      "tax_class_hint": "standard",
+      "code": "cera_oidos",
+      "image": "personal_services/cera_oidos.jpg"
+    },
+    {
+      "name": "Black mask facial",
+      "category": "tratamientos",
+      "price": 12.0,
+      "tax_class_hint": "standard",
+      "code": "black_mask",
+      "image": "personal_services/black_mask.jpg"
+    },
+    {
+      "name": "Cera moldeadora",
+      "category": "productos",
+      "price": 12.0,
+      "tax_class_hint": "standard",
+      "code": "cera_moldeadora",
+      "image": "personal_services/cera_moldeadora.jpg"
+    },
+    {
+      "name": "Pomada de fijacion",
+      "category": "productos",
+      "price": 14.0,
+      "tax_class_hint": "standard",
+      "code": "pomada_fijacion",
+      "image": "personal_services/pomada_fijacion.jpg"
+    },
+    {
+      "name": "Aceite para barba",
+      "category": "productos",
+      "price": 16.0,
+      "tax_class_hint": "standard",
+      "code": "aceite_barba",
+      "image": "personal_services/aceite_barba.jpg"
+    },
+    {
+      "name": "Balsamo para barba",
+      "category": "productos",
+      "price": 14.0,
+      "tax_class_hint": "standard",
+      "code": "balsamo_barba",
+      "image": "personal_services/balsamo_barba.jpg"
+    },
+    {
+      "name": "After shave",
+      "category": "productos",
+      "price": 10.0,
+      "tax_class_hint": "standard",
+      "code": "aftershave",
+      "image": "personal_services/aftershave.jpg"
+    }
+  ]
+}

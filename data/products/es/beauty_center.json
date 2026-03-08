@@ -1,0 +1,332 @@
+{
+  "version": "1.0.0",
+  "business_type": "beauty_center",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "facial",
+      "name": "Tratamientos faciales",
+      "icon": "sparkles-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "corporal",
+      "name": "Tratamientos corporales",
+      "icon": "body-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "depilacion",
+      "name": "Depilacion",
+      "icon": "flame-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "unas",
+      "name": "Unas",
+      "icon": "hand-left-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "maquillaje",
+      "name": "Maquillaje",
+      "icon": "color-palette-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "productos",
+      "name": "Productos",
+      "icon": "bag-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "limpieza_facial",
+      "name": "Limpieza facial",
+      "category": "facial",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/limpieza_facial.jpg"
+    },
+    {
+      "code": "hidratacion_facial",
+      "name": "Hidratacion facial",
+      "category": "facial",
+      "tax_class_hint": "standard",
+      "price": 45.0,
+      "image": "personal_services/hidratacion_facial.jpg"
+    },
+    {
+      "code": "peeling",
+      "name": "Peeling quimico",
+      "category": "facial",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "image": "personal_services/peeling.jpg"
+    },
+    {
+      "code": "microdermoabrasion",
+      "name": "Microdermoabrasion",
+      "category": "facial",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "image": "personal_services/microdermoabrasion.jpg"
+    },
+    {
+      "code": "radiofrecuencia_facial",
+      "name": "Radiofrecuencia facial",
+      "category": "facial",
+      "tax_class_hint": "standard",
+      "price": 70.0,
+      "image": "personal_services/radiofrecuencia_facial.jpg"
+    },
+    {
+      "code": "vitamina_c",
+      "name": "Tratamiento vitamina C",
+      "category": "facial",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "image": "personal_services/vitamina_c.jpg"
+    },
+    {
+      "code": "masaje_relajante",
+      "name": "Masaje relajante (60min)",
+      "category": "corporal",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "image": "personal_services/masaje_relajante.jpg"
+    },
+    {
+      "code": "masaje_descontracturante",
+      "name": "Masaje descontracturante",
+      "category": "corporal",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "image": "personal_services/masaje_descontracturante.jpg"
+    },
+    {
+      "code": "presoterapia",
+      "name": "Presoterapia",
+      "category": "corporal",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/presoterapia.jpg"
+    },
+    {
+      "code": "envolvimiento",
+      "name": "Envolvimiento corporal",
+      "category": "corporal",
+      "tax_class_hint": "standard",
+      "price": 45.0,
+      "image": "personal_services/envolvimiento.jpg"
+    },
+    {
+      "code": "exfoliacion_corporal",
+      "name": "Exfoliacion corporal",
+      "category": "corporal",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/exfoliacion_corporal.jpg"
+    },
+    {
+      "code": "drenaje_linfatico",
+      "name": "Drenaje linfatico",
+      "category": "corporal",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "image": "personal_services/drenaje_linfatico.jpg"
+    },
+    {
+      "code": "depilacion_piernas",
+      "name": "Depilacion piernas completas",
+      "category": "depilacion",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/depilacion_piernas.jpg"
+    },
+    {
+      "code": "depilacion_ingles",
+      "name": "Depilacion ingles",
+      "category": "depilacion",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/depilacion_ingles.jpg"
+    },
+    {
+      "code": "depilacion_axilas",
+      "name": "Depilacion axilas",
+      "category": "depilacion",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/depilacion_axilas.jpg"
+    },
+    {
+      "code": "depilacion_brazos",
+      "name": "Depilacion brazos",
+      "category": "depilacion",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/depilacion_brazos.jpg"
+    },
+    {
+      "code": "depilacion_labio",
+      "name": "Depilacion labio superior",
+      "category": "depilacion",
+      "tax_class_hint": "standard",
+      "price": 6.0,
+      "image": "personal_services/depilacion_labio.jpg"
+    },
+    {
+      "code": "depilacion_laser_sesion",
+      "name": "Sesion laser diodo",
+      "category": "depilacion",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "image": "personal_services/depilacion_laser_sesion.jpg"
+    },
+    {
+      "code": "manicura_basica",
+      "name": "Manicura basica",
+      "category": "unas",
+      "tax_class_hint": "standard",
+      "price": 18.0,
+      "image": "personal_services/manicura_basica.jpg"
+    },
+    {
+      "code": "manicura_semipermanente",
+      "name": "Manicura semipermanente",
+      "category": "unas",
+      "tax_class_hint": "standard",
+      "price": 28.0,
+      "image": "personal_services/manicura_semipermanente.jpg"
+    },
+    {
+      "code": "pedicura_basica",
+      "name": "Pedicura basica",
+      "category": "unas",
+      "tax_class_hint": "standard",
+      "price": 22.0,
+      "image": "personal_services/pedicura_basica.jpg"
+    },
+    {
+      "code": "pedicura_semipermanente",
+      "name": "Pedicura semipermanente",
+      "category": "unas",
+      "tax_class_hint": "standard",
+      "price": 32.0,
+      "image": "personal_services/pedicura_semipermanente.jpg"
+    },
+    {
+      "code": "unas_gel",
+      "name": "Unas de gel",
+      "category": "unas",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/unas_gel.jpg"
+    },
+    {
+      "code": "unas_acrilicas",
+      "name": "Unas acrilicas",
+      "category": "unas",
+      "tax_class_hint": "standard",
+      "price": 45.0,
+      "image": "personal_services/unas_acrilicas.jpg"
+    },
+    {
+      "code": "maquillaje_dia",
+      "name": "Maquillaje de dia",
+      "category": "maquillaje",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "personal_services/maquillaje_dia.jpg"
+    },
+    {
+      "code": "maquillaje_noche",
+      "name": "Maquillaje de noche",
+      "category": "maquillaje",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/maquillaje_noche.jpg"
+    },
+    {
+      "code": "maquillaje_novia",
+      "name": "Maquillaje novia",
+      "category": "maquillaje",
+      "tax_class_hint": "standard",
+      "price": 80.0,
+      "image": "personal_services/maquillaje_novia.jpg"
+    },
+    {
+      "code": "extension_pestanas",
+      "name": "Extension de pestanas",
+      "category": "maquillaje",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "image": "personal_services/extension_pestanas.jpg"
+    },
+    {
+      "code": "tinte_cejas",
+      "name": "Tinte de cejas",
+      "category": "maquillaje",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/tinte_cejas.jpg"
+    },
+    {
+      "code": "lifting_pestanas",
+      "name": "Lifting de pestanas",
+      "category": "maquillaje",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/lifting_pestanas.jpg"
+    },
+    {
+      "code": "crema_hidratante",
+      "name": "Crema hidratante",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/crema_hidratante.jpg"
+    },
+    {
+      "code": "serum_facial",
+      "name": "Serum facial",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "personal_services/serum_facial.jpg"
+    },
+    {
+      "code": "protector_solar",
+      "name": "Protector solar facial",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 18.0,
+      "image": "personal_services/protector_solar.jpg"
+    },
+    {
+      "code": "contorno_ojos",
+      "name": "Contorno de ojos",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 22.0,
+      "image": "personal_services/contorno_ojos.jpg"
+    },
+    {
+      "code": "agua_micelar",
+      "name": "Agua micelar",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/agua_micelar.jpg"
+    }
+  ]
+}

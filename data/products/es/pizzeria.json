@@ -68,7 +68,7 @@
       "price": 8.5,
       "tax_class_hint": "reduced",
       "code": "pizza_margarita",
-      "image": "pizza_margarita.jpg"
+      "image": "hospitality/pizza_margarita.jpg"
     },
     {
       "name": "Pizza Jamon y Queso",
@@ -76,7 +76,7 @@
       "price": 9.5,
       "tax_class_hint": "reduced",
       "code": "pizza_jamon_queso",
-      "image": "pizza_jamon_queso.jpg"
+      "image": "hospitality/pizza_jamon_queso.jpg"
     },
     {
       "name": "Pizza Pepperoni",
@@ -84,7 +84,7 @@
       "price": 10.0,
       "tax_class_hint": "reduced",
       "code": "pizza_pepperoni",
-      "image": "pizza_pepperoni.jpg"
+      "image": "hospitality/pizza_pepperoni.jpg"
     },
     {
       "name": "Pizza 4 Quesos",
@@ -92,7 +92,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_4_quesos",
-      "image": "pizza_4_quesos.jpg"
+      "image": "hospitality/pizza_4_quesos.jpg"
     },
     {
       "name": "Pizza Barbacoa",
@@ -100,7 +100,7 @@
       "price": 11.0,
       "tax_class_hint": "reduced",
       "code": "pizza_barbacoa",
-      "image": "pizza_barbacoa.jpg"
+      "image": "hospitality/pizza_barbacoa.jpg"
     },
     {
       "name": "Pizza Vegetal",
@@ -108,7 +108,7 @@
       "price": 9.5,
       "tax_class_hint": "reduced",
       "code": "pizza_vegetal",
-      "image": "pizza_vegetal.jpg"
+      "image": "hospitality/pizza_vegetal.jpg"
     },
     {
       "name": "Pizza Carbonara",
@@ -116,7 +116,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_carbonara",
-      "image": "pizza_carbonara.jpg"
+      "image": "hospitality/pizza_carbonara.jpg"
     },
     {
       "name": "Pizza Hawaiana",
@@ -124,7 +124,7 @@
       "price": 10.0,
       "tax_class_hint": "reduced",
       "code": "pizza_hawaiana",
-      "image": "pizza_hawaiana.jpg"
+      "image": "hospitality/pizza_hawaiana.jpg"
     },
     {
       "name": "Pizza Diavola",
@@ -132,7 +132,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_diavola",
-      "image": "pizza_diavola.jpg"
+      "image": "hospitality/pizza_diavola.jpg"
     },
     {
       "name": "Pizza Caprichosa",
@@ -140,7 +140,7 @@
       "price": 11.0,
       "tax_class_hint": "reduced",
       "code": "pizza_caprichosa",
-      "image": "pizza_caprichosa.jpg"
+      "image": "hospitality/pizza_caprichosa.jpg"
     },
     {
       "name": "Calzone",
@@ -148,7 +148,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_calzone",
-      "image": "pizza_calzone.jpg"
+      "image": "hospitality/pizza_calzone.jpg"
     },
     {
       "name": "Pizza familiar",
@@ -156,7 +156,7 @@
       "price": 16.0,
       "tax_class_hint": "reduced",
       "code": "pizza_familiar",
-      "image": "pizza_familiar.jpg"
+      "image": "hospitality/pizza_familiar.jpg"
     },
     {
       "name": "Pan de ajo",
@@ -164,7 +164,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "pan_ajo",
-      "image": "pan_ajo.jpg"
+      "image": "hospitality/pan_ajo.jpg"
     },
     {
       "name": "Bruschetta",
@@ -172,7 +172,7 @@
       "price": 5.5,
       "tax_class_hint": "reduced",
       "code": "bruschetta",
-      "image": "bruschetta.jpg"
+      "image": "hospitality/bruschetta.jpg"
     },
     {
       "name": "Alitas de pollo",
@@ -180,7 +180,7 @@
       "price": 6.5,
       "tax_class_hint": "reduced",
       "code": "alitas_pollo",
-      "image": "alitas_pollo.jpg"
+      "image": "hospitality/alitas_pollo.jpg"
     },
     {
       "name": "Focaccia",
@@ -188,7 +188,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "focaccia",
-      "image": "focaccia.jpg"
+      "image": "hospitality/focaccia.jpg"
     },
     {
       "name": "Ensalada Cesar",
@@ -196,7 +196,7 @@
       "price": 7.5,
       "tax_class_hint": "reduced",
       "code": "ensalada_cesar",
-      "image": "ensalada_cesar.jpg"
+      "image": "hospitality/ensalada_cesar.jpg"
     },
     {
       "name": "Ensalada Caprese",
@@ -204,7 +204,7 @@
       "price": 7.0,
       "tax_class_hint": "reduced",
       "code": "ensalada_caprese",
-      "image": "ensalada_caprese.jpg"
+      "image": "hospitality/ensalada_caprese.jpg"
     },
     {
       "name": "Ensalada mixta",
@@ -212,7 +212,7 @@
       "price": 6.0,
       "tax_class_hint": "reduced",
       "code": "ensalada_mixta",
-      "image": "ensalada_mixta.jpg"
+      "image": "hospitality/ensalada_mixta.jpg"
     },
     {
       "name": "Pasta Bolonesa",
@@ -220,7 +220,7 @@
       "price": 8.5,
       "tax_class_hint": "reduced",
       "code": "pasta_bolonesa",
-      "image": "pasta_bolonesa.jpg"
+      "image": "hospitality/pasta_bolonesa.jpg"
     },
     {
       "name": "Pasta Carbonara",
@@ -228,7 +228,7 @@
       "price": 8.5,
       "tax_class_hint": "reduced",
       "code": "pasta_carbonara",
-      "image": "pasta_carbonara.jpg"
+      "image": "hospitality/pasta_carbonara.jpg"
     },
     {
       "name": "Lasana",
@@ -236,7 +236,7 @@
       "price": 9.0,
       "tax_class_hint": "reduced",
       "code": "lasana",
-      "image": "lasana.jpg"
+      "image": "hospitality/lasana.jpg"
     },
     {
       "name": "Pasta al pesto",
@@ -244,7 +244,7 @@
       "price": 8.0,
       "tax_class_hint": "reduced",
       "code": "pasta_pesto",
-      "image": "pasta_pesto.jpg"
+      "image": "hospitality/pasta_pesto.jpg"
     },
     {
       "name": "Tiramisu",
@@ -252,7 +252,7 @@
       "price": 5.5,
       "tax_class_hint": "reduced",
       "code": "tiramisu",
-      "image": "tiramisu.jpg"
+      "image": "hospitality/tiramisu.jpg"
     },
     {
       "name": "Tarta de queso",
@@ -260,7 +260,7 @@
       "price": 5.0,
       "tax_class_hint": "reduced",
       "code": "tarta_queso",
-      "image": "tarta_queso.jpg"
+      "image": "hospitality/tarta_queso.jpg"
     },
     {
       "name": "Helado 2 bolas",
@@ -268,7 +268,7 @@
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "helado_2_bolas",
-      "image": "helado_2_bolas.jpg"
+      "image": "hospitality/helado_2_bolas.jpg"
     },
     {
       "name": "Panna cotta",
@@ -276,7 +276,7 @@
       "price": 5.0,
       "tax_class_hint": "reduced",
       "code": "panna_cotta",
-      "image": "panna_cotta.jpg"
+      "image": "hospitality/panna_cotta.jpg"
     },
     {
       "name": "Coca-Cola",
@@ -284,7 +284,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "coca_cola",
-      "image": "coca_cola.jpg"
+      "image": "hospitality/coca_cola.jpg"
     },
     {
       "name": "Coca-Cola Zero",
@@ -292,7 +292,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "coca_cola_zero",
-      "image": "coca_cola_zero.jpg"
+      "image": "hospitality/coca_cola_zero.jpg"
     },
     {
       "name": "Fanta naranja",
@@ -300,7 +300,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "fanta_naranja",
-      "image": "fanta_naranja.jpg"
+      "image": "hospitality/fanta_naranja.jpg"
     },
     {
       "name": "Agua mineral",
@@ -308,7 +308,7 @@
       "price": 1.8,
       "tax_class_hint": "reduced",
       "code": "agua_mineral",
-      "image": "agua_mineral.jpg"
+      "image": "hospitality/agua_mineral.jpg"
     },
     {
       "name": "Agua con gas",
@@ -316,7 +316,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "agua_con_gas",
-      "image": "agua_con_gas.jpg"
+      "image": "hospitality/agua_con_gas.jpg"
     },
     {
       "name": "Cana",
@@ -324,7 +324,7 @@
       "price": 2.0,
       "tax_class_hint": "standard",
       "code": "cerveza_cana",
-      "image": "cerveza_cana.jpg"
+      "image": "hospitality/cerveza_cana.jpg"
     },
     {
       "name": "Cerveza botella",
@@ -332,7 +332,7 @@
       "price": 2.8,
       "tax_class_hint": "standard",
       "code": "cerveza_botella",
-      "image": "cerveza_botella.jpg"
+      "image": "hospitality/cerveza_botella.jpg"
     },
     {
       "name": "Cerveza sin alcohol",
@@ -340,7 +340,7 @@
       "price": 2.5,
       "tax_class_hint": "standard",
       "code": "cerveza_sin",
-      "image": "cerveza_sin.jpg"
+      "image": "hospitality/cerveza_sin.jpg"
     },
     {
       "name": "Copa de vino tinto",
@@ -348,7 +348,7 @@
       "price": 3.5,
       "tax_class_hint": "standard",
       "code": "vino_tinto_copa",
-      "image": "vino_tinto_copa.jpg"
+      "image": "hospitality/vino_tinto_copa.jpg"
     },
     {
       "name": "Copa de vino blanco",
@@ -356,7 +356,7 @@
       "price": 3.5,
       "tax_class_hint": "standard",
       "code": "vino_blanco_copa",
-      "image": "vino_blanco_copa.jpg"
+      "image": "hospitality/vino_blanco_copa.jpg"
     }
   ]
 }

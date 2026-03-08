@@ -1,0 +1,229 @@
+{
+  "version": "1.0.0",
+  "business_type": "bookshop",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "ficcion",
+      "name": "Ficcion",
+      "icon": "book-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 1
+    },
+    {
+      "code": "no_ficcion",
+      "name": "No ficcion",
+      "icon": "library-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 2
+    },
+    {
+      "code": "infantil",
+      "name": "Infantil",
+      "icon": "happy-outline",
+      "tax_class_hint": "super_reduced",
+      "order": 3
+    },
+    {
+      "code": "papeleria",
+      "name": "Papeleria",
+      "icon": "create-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "regalo",
+      "name": "Regalo",
+      "icon": "gift-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    }
+  ],
+  "products": [
+    {
+      "code": "novela",
+      "name": "Novela",
+      "category": "ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 18.9,
+      "image": "retail/novela.jpg"
+    },
+    {
+      "code": "novela_bolsillo",
+      "name": "Novela bolsillo",
+      "category": "ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 9.95,
+      "image": "retail/novela_bolsillo.jpg"
+    },
+    {
+      "code": "comic",
+      "name": "Comic",
+      "category": "ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 12.0,
+      "image": "retail/comic.jpg"
+    },
+    {
+      "code": "manga",
+      "name": "Manga",
+      "category": "ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 8.5,
+      "image": "retail/manga.jpg"
+    },
+    {
+      "code": "poesia",
+      "name": "Poemario",
+      "category": "ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 14.0,
+      "image": "retail/poesia.jpg"
+    },
+    {
+      "code": "ensayo",
+      "name": "Ensayo",
+      "category": "no_ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 19.9,
+      "image": "retail/ensayo.jpg"
+    },
+    {
+      "code": "biografia",
+      "name": "Biografia",
+      "category": "no_ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 21.0,
+      "image": "retail/biografia.jpg"
+    },
+    {
+      "code": "libro_cocina",
+      "name": "Libro de cocina",
+      "category": "no_ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 24.9,
+      "image": "retail/libro_cocina.jpg"
+    },
+    {
+      "code": "guia_viaje",
+      "name": "Guia de viaje",
+      "category": "no_ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 22.0,
+      "image": "retail/guia_viaje.jpg"
+    },
+    {
+      "code": "libro_arte",
+      "name": "Libro de arte",
+      "category": "no_ficcion",
+      "tax_class_hint": "super_reduced",
+      "price": 35.0,
+      "image": "retail/libro_arte.jpg"
+    },
+    {
+      "code": "cuento_infantil",
+      "name": "Cuento infantil",
+      "category": "infantil",
+      "tax_class_hint": "super_reduced",
+      "price": 12.0,
+      "image": "retail/cuento_infantil.jpg"
+    },
+    {
+      "code": "album_ilustrado",
+      "name": "Album ilustrado",
+      "category": "infantil",
+      "tax_class_hint": "super_reduced",
+      "price": 16.0,
+      "image": "retail/album_ilustrado.jpg"
+    },
+    {
+      "code": "libro_actividades",
+      "name": "Libro de actividades",
+      "category": "infantil",
+      "tax_class_hint": "super_reduced",
+      "price": 8.5,
+      "image": "retail/libro_actividades.jpg"
+    },
+    {
+      "code": "libro_juvenil",
+      "name": "Novela juvenil",
+      "category": "infantil",
+      "tax_class_hint": "super_reduced",
+      "price": 14.0,
+      "image": "retail/libro_juvenil.jpg"
+    },
+    {
+      "code": "cuaderno",
+      "name": "Cuaderno",
+      "category": "papeleria",
+      "tax_class_hint": "standard",
+      "price": 4.5,
+      "image": "retail/cuaderno.jpg"
+    },
+    {
+      "code": "boligrafo",
+      "name": "Boligrafo",
+      "category": "papeleria",
+      "tax_class_hint": "standard",
+      "price": 2.5,
+      "image": "retail/boligrafo.jpg"
+    },
+    {
+      "code": "agenda",
+      "name": "Agenda",
+      "category": "papeleria",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "retail/agenda.jpg"
+    },
+    {
+      "code": "pack_rotuladores",
+      "name": "Pack rotuladores",
+      "category": "papeleria",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "retail/pack_rotuladores.jpg"
+    },
+    {
+      "code": "mochila",
+      "name": "Mochila escolar",
+      "category": "papeleria",
+      "tax_class_hint": "standard",
+      "price": 24.99,
+      "image": "retail/mochila.jpg"
+    },
+    {
+      "code": "marcapaginas",
+      "name": "Marcapaginas",
+      "category": "regalo",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "retail/marcapaginas.jpg"
+    },
+    {
+      "code": "tarjeta_regalo",
+      "name": "Tarjeta regalo",
+      "category": "regalo",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "retail/tarjeta_regalo.jpg"
+    },
+    {
+      "code": "puzzle",
+      "name": "Puzzle",
+      "category": "regalo",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "retail/puzzle.jpg"
+    },
+    {
+      "code": "juego_mesa",
+      "name": "Juego de mesa",
+      "category": "regalo",
+      "tax_class_hint": "standard",
+      "price": 29.99,
+      "image": "retail/juego_mesa.jpg"
+    }
+  ]
+}

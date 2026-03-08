@@ -1,0 +1,206 @@
+{
+  "version": "1.0.0",
+  "business_type": "gym",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cuotas",
+      "name": "Cuotas",
+      "icon": "card-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "clases",
+      "name": "Clases",
+      "icon": "people-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "entrenamiento",
+      "name": "Entrenamiento personal",
+      "icon": "barbell-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "complementos",
+      "name": "Complementos",
+      "icon": "cart-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    }
+  ],
+  "products": [
+    {
+      "code": "cuota_mensual",
+      "name": "Cuota mensual",
+      "category": "cuotas",
+      "tax_class_hint": "standard",
+      "price": 39.9,
+      "image": "personal_services/cuota_mensual.jpg"
+    },
+    {
+      "code": "cuota_trimestral",
+      "name": "Cuota trimestral",
+      "category": "cuotas",
+      "tax_class_hint": "standard",
+      "price": 99.0,
+      "image": "personal_services/cuota_trimestral.jpg"
+    },
+    {
+      "code": "cuota_anual",
+      "name": "Cuota anual",
+      "category": "cuotas",
+      "tax_class_hint": "standard",
+      "price": 349.0,
+      "image": "personal_services/cuota_anual.jpg"
+    },
+    {
+      "code": "matricula",
+      "name": "Matricula",
+      "category": "cuotas",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "personal_services/matricula.jpg"
+    },
+    {
+      "code": "pase_dia",
+      "name": "Pase de dia",
+      "category": "cuotas",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/pase_dia.jpg"
+    },
+    {
+      "code": "clase_spinning",
+      "name": "Clase spinning",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "personal_services/clase_spinning.jpg"
+    },
+    {
+      "code": "clase_yoga",
+      "name": "Clase yoga",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/clase_yoga.jpg"
+    },
+    {
+      "code": "clase_pilates",
+      "name": "Clase pilates",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/clase_pilates.jpg"
+    },
+    {
+      "code": "clase_crossfit",
+      "name": "Clase CrossFit",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/clase_crossfit.jpg"
+    },
+    {
+      "code": "clase_boxeo",
+      "name": "Clase boxeo",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/clase_boxeo.jpg"
+    },
+    {
+      "code": "clase_zumba",
+      "name": "Clase zumba",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "personal_services/clase_zumba.jpg"
+    },
+    {
+      "code": "bono_10_clases",
+      "name": "Bono 10 clases",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 70.0,
+      "image": "personal_services/bono_10_clases.jpg"
+    },
+    {
+      "code": "sesion_personal",
+      "name": "Sesion entrenamiento personal",
+      "category": "entrenamiento",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/sesion_personal.jpg"
+    },
+    {
+      "code": "bono_10_personal",
+      "name": "Bono 10 sesiones PT",
+      "category": "entrenamiento",
+      "tax_class_hint": "standard",
+      "price": 280.0,
+      "image": "personal_services/bono_10_personal.jpg"
+    },
+    {
+      "code": "plan_nutricional",
+      "name": "Plan nutricional",
+      "category": "entrenamiento",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "image": "personal_services/plan_nutricional.jpg"
+    },
+    {
+      "code": "valoracion_corporal",
+      "name": "Valoracion corporal",
+      "category": "entrenamiento",
+      "tax_class_hint": "standard",
+      "price": 20.0,
+      "image": "personal_services/valoracion_corporal.jpg"
+    },
+    {
+      "code": "toalla_alquiler",
+      "name": "Alquiler toalla",
+      "category": "complementos",
+      "tax_class_hint": "standard",
+      "price": 2.0,
+      "image": "personal_services/toalla_alquiler.jpg"
+    },
+    {
+      "code": "taquilla_mensual",
+      "name": "Taquilla mensual",
+      "category": "complementos",
+      "tax_class_hint": "standard",
+      "price": 5.0,
+      "image": "personal_services/taquilla_mensual.jpg"
+    },
+    {
+      "code": "batido_proteinas",
+      "name": "Batido de proteinas",
+      "category": "complementos",
+      "tax_class_hint": "standard",
+      "price": 4.0,
+      "image": "personal_services/batido_proteinas.jpg"
+    },
+    {
+      "code": "barrita_energetica",
+      "name": "Barrita energetica",
+      "category": "complementos",
+      "tax_class_hint": "standard",
+      "price": 2.5,
+      "image": "personal_services/barrita_energetica.jpg"
+    },
+    {
+      "code": "agua_gym",
+      "name": "Agua mineral",
+      "category": "complementos",
+      "tax_class_hint": "standard",
+      "price": 1.5,
+      "image": "personal_services/agua_gym.jpg"
+    }
+  ]
+}

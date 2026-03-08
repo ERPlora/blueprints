@@ -1,0 +1,359 @@
+{
+  "version": "1.0.0",
+  "business_type": "hair_salon",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cortes",
+      "name": "Cortes",
+      "icon": "cut-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "color",
+      "name": "Color y tintes",
+      "icon": "color-palette-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "peinados",
+      "name": "Peinados",
+      "icon": "happy-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "tratamientos",
+      "name": "Tratamientos capilares",
+      "icon": "flask-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "barba",
+      "name": "Barba",
+      "icon": "man-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "productos",
+      "name": "Productos capilares",
+      "icon": "bag-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "corte_caballero",
+      "name": "Corte caballero",
+      "category": "cortes",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/corte_caballero.jpg"
+    },
+    {
+      "code": "corte_senora",
+      "name": "Corte senora",
+      "category": "cortes",
+      "tax_class_hint": "standard",
+      "price": 22.0,
+      "image": "personal_services/corte_senora.jpg"
+    },
+    {
+      "code": "corte_nino",
+      "name": "Corte nino (hasta 12 anos)",
+      "category": "cortes",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/corte_nino.jpg"
+    },
+    {
+      "code": "corte_puntas",
+      "name": "Corte de puntas",
+      "category": "cortes",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/corte_puntas.jpg"
+    },
+    {
+      "code": "corte_degradado",
+      "name": "Degradado / Fade",
+      "category": "cortes",
+      "tax_class_hint": "standard",
+      "price": 16.0,
+      "image": "personal_services/corte_degradado.jpg"
+    },
+    {
+      "code": "rapado",
+      "name": "Rapado maquina",
+      "category": "cortes",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/rapado.jpg"
+    },
+    {
+      "code": "tinte_raiz",
+      "name": "Retoque de raiz",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "personal_services/tinte_raiz.jpg"
+    },
+    {
+      "code": "tinte_completo",
+      "name": "Tinte completo",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 45.0,
+      "unit": "hour",
+      "image": "personal_services/tinte_completo.jpg"
+    },
+    {
+      "code": "mechas",
+      "name": "Mechas",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 55.0,
+      "unit": "hour",
+      "image": "personal_services/mechas.jpg"
+    },
+    {
+      "code": "mechas_balayage",
+      "name": "Balayage",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 70.0,
+      "unit": "hour",
+      "image": "personal_services/mechas_balayage.jpg"
+    },
+    {
+      "code": "decoloracion",
+      "name": "Decoloracion",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 50.0,
+      "unit": "hour",
+      "image": "personal_services/decoloracion.jpg"
+    },
+    {
+      "code": "matizador",
+      "name": "Matizador / Toner",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/matizador.jpg"
+    },
+    {
+      "code": "canas_cobertura",
+      "name": "Cobertura de canas",
+      "category": "color",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/canas_cobertura.jpg"
+    },
+    {
+      "code": "lavado_secado",
+      "name": "Lavado y secado",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/lavado_secado.jpg"
+    },
+    {
+      "code": "brushing",
+      "name": "Brushing",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 20.0,
+      "image": "personal_services/brushing.jpg"
+    },
+    {
+      "code": "recogido",
+      "name": "Recogido",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "unit": "hour",
+      "image": "personal_services/recogido.jpg"
+    },
+    {
+      "code": "recogido_novia",
+      "name": "Recogido novia",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "unit": "hour",
+      "image": "personal_services/recogido_novia.jpg"
+    },
+    {
+      "code": "trenzas",
+      "name": "Trenzas",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/trenzas.jpg"
+    },
+    {
+      "code": "ondas",
+      "name": "Ondas / Rizos",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/ondas.jpg"
+    },
+    {
+      "code": "alisado_plancha",
+      "name": "Alisado con plancha",
+      "category": "peinados",
+      "tax_class_hint": "standard",
+      "price": 20.0,
+      "image": "personal_services/alisado_plancha.jpg"
+    },
+    {
+      "code": "hidratacion",
+      "name": "Tratamiento hidratacion",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 20.0,
+      "unit": "hour",
+      "image": "personal_services/hidratacion.jpg"
+    },
+    {
+      "code": "keratina",
+      "name": "Tratamiento de keratina",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 80.0,
+      "unit": "hour",
+      "image": "personal_services/keratina.jpg"
+    },
+    {
+      "code": "botox_capilar",
+      "name": "Botox capilar",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "unit": "hour",
+      "image": "personal_services/botox_capilar.jpg"
+    },
+    {
+      "code": "olaplex",
+      "name": "Tratamiento Olaplex",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "unit": "hour",
+      "image": "personal_services/olaplex.jpg"
+    },
+    {
+      "code": "mascarilla",
+      "name": "Mascarilla nutritiva",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/mascarilla.jpg"
+    },
+    {
+      "code": "tratamiento_anticaida",
+      "name": "Tratamiento anticaida",
+      "category": "tratamientos",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "unit": "hour",
+      "image": "personal_services/tratamiento_anticaida.jpg"
+    },
+    {
+      "code": "recorte_barba",
+      "name": "Recorte de barba",
+      "category": "barba",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "personal_services/recorte_barba.jpg"
+    },
+    {
+      "code": "afeitado_navaja",
+      "name": "Afeitado a navaja",
+      "category": "barba",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/afeitado_navaja.jpg"
+    },
+    {
+      "code": "perfilado_barba",
+      "name": "Perfilado de barba",
+      "category": "barba",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/perfilado_barba.jpg"
+    },
+    {
+      "code": "champu_profesional",
+      "name": "Champu profesional",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 18.0,
+      "image": "personal_services/champu_profesional.jpg"
+    },
+    {
+      "code": "acondicionador",
+      "name": "Acondicionador",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 16.0,
+      "image": "personal_services/acondicionador.jpg"
+    },
+    {
+      "code": "mascarilla_venta",
+      "name": "Mascarilla capilar",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 22.0,
+      "image": "personal_services/mascarilla_venta.jpg"
+    },
+    {
+      "code": "aceite_argan",
+      "name": "Aceite de argan",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "personal_services/aceite_argan.jpg"
+    },
+    {
+      "code": "cera_moldeadora",
+      "name": "Cera moldeadora",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/cera_moldeadora.jpg"
+    },
+    {
+      "code": "laca_fijacion",
+      "name": "Laca de fijacion",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/laca_fijacion.jpg"
+    },
+    {
+      "code": "serum_puntas",
+      "name": "Serum puntas",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 14.0,
+      "image": "personal_services/serum_puntas.jpg"
+    },
+    {
+      "code": "tinte_domestico",
+      "name": "Tinte para casa",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/tinte_domestico.jpg"
+    }
+  ]
+}
