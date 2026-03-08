@@ -1,0 +1,59 @@
+{
+  "code": "sushi_restaurant",
+  "sector": "hospitality",
+  "name": "Sushi Restaurant",
+  "description": "Japanese sushi restaurant with sushi bar, maki rolls, sashimi, tempura, and Asian cuisine",
+  "icon": "fish-outline",
+  "color": "#2ecc71",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "kitchen",
+    "tables",
+    "orders",
+    "reservations"
+  ],
+  "sector_features": [
+    "Sushi bar counter",
+    "Conveyor belt option",
+    "Chopstick service",
+    "Delivery packaging",
+    "Omakase menu"
+  ],
+  "roles": [
+    {
+      "id": "sushi_chef",
+      "name": "Sushi Chef",
+      "permissions": [
+        "kitchen.*",
+        "orders.view_*",
+        "inventory.view_*"
+      ]
+    },
+    {
+      "id": "waiter",
+      "name": "Waiter",
+      "permissions": [
+        "sales.*",
+        "tables.*",
+        "orders.*",
+        "reservations.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/sushi_restaurant.json"
+}

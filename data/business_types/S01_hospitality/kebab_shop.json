@@ -1,0 +1,48 @@
+{
+  "code": "kebab_shop",
+  "sector": "hospitality",
+  "name": "Kebab Shop",
+  "description": "Doner kebab shop with vertical rotisserie, wraps, plates, and fast-casual service",
+  "icon": "fast-food-outline",
+  "color": "#e67e22",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [
+    "kitchen",
+    "orders"
+  ],
+  "sector_features": [
+    "Doner rotisserie",
+    "Wrap assembly",
+    "Delivery integration",
+    "Late-night hours",
+    "Combo meals"
+  ],
+  "roles": [
+    {
+      "id": "kebab_cook",
+      "name": "Kebab Cook",
+      "permissions": [
+        "kitchen.*",
+        "orders.view_*",
+        "sales.*",
+        "cash_register.*"
+      ]
+    }
+  ],
+  "products_file": "products/kebab_shop.json"
+}

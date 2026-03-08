@@ -1,0 +1,362 @@
+{
+  "version": "1.0.0",
+  "business_type": "pizzeria",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "slug": "pizzas",
+      "name": "Pizzas",
+      "icon": "pizza-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "slug": "entrantes",
+      "name": "Entrantes",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "slug": "ensaladas",
+      "name": "Ensaladas",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "slug": "pastas",
+      "name": "Pastas",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "slug": "postres",
+      "name": "Postres",
+      "icon": "ice-cream-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "slug": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    },
+    {
+      "slug": "cervezas",
+      "name": "Cervezas",
+      "icon": "beer-outline",
+      "tax_class_hint": "standard",
+      "order": 7
+    },
+    {
+      "slug": "vinos",
+      "name": "Vinos",
+      "icon": "wine-outline",
+      "tax_class_hint": "standard",
+      "order": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "Pizza Margarita",
+      "category": "pizzas",
+      "price": 8.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_margarita",
+      "image": "pizza_margarita.jpg"
+    },
+    {
+      "name": "Pizza Jamon y Queso",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_jamon_queso",
+      "image": "pizza_jamon_queso.jpg"
+    },
+    {
+      "name": "Pizza Pepperoni",
+      "category": "pizzas",
+      "price": 10.0,
+      "tax_class_hint": "reduced",
+      "code": "pizza_pepperoni",
+      "image": "pizza_pepperoni.jpg"
+    },
+    {
+      "name": "Pizza 4 Quesos",
+      "category": "pizzas",
+      "price": 10.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_4_quesos",
+      "image": "pizza_4_quesos.jpg"
+    },
+    {
+      "name": "Pizza Barbacoa",
+      "category": "pizzas",
+      "price": 11.0,
+      "tax_class_hint": "reduced",
+      "code": "pizza_barbacoa",
+      "image": "pizza_barbacoa.jpg"
+    },
+    {
+      "name": "Pizza Vegetal",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_vegetal",
+      "image": "pizza_vegetal.jpg"
+    },
+    {
+      "name": "Pizza Carbonara",
+      "category": "pizzas",
+      "price": 10.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_carbonara",
+      "image": "pizza_carbonara.jpg"
+    },
+    {
+      "name": "Pizza Hawaiana",
+      "category": "pizzas",
+      "price": 10.0,
+      "tax_class_hint": "reduced",
+      "code": "pizza_hawaiana",
+      "image": "pizza_hawaiana.jpg"
+    },
+    {
+      "name": "Pizza Diavola",
+      "category": "pizzas",
+      "price": 10.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_diavola",
+      "image": "pizza_diavola.jpg"
+    },
+    {
+      "name": "Pizza Caprichosa",
+      "category": "pizzas",
+      "price": 11.0,
+      "tax_class_hint": "reduced",
+      "code": "pizza_caprichosa",
+      "image": "pizza_caprichosa.jpg"
+    },
+    {
+      "name": "Calzone",
+      "category": "pizzas",
+      "price": 10.5,
+      "tax_class_hint": "reduced",
+      "code": "pizza_calzone",
+      "image": "pizza_calzone.jpg"
+    },
+    {
+      "name": "Pizza familiar",
+      "category": "pizzas",
+      "price": 16.0,
+      "tax_class_hint": "reduced",
+      "code": "pizza_familiar",
+      "image": "pizza_familiar.jpg"
+    },
+    {
+      "name": "Pan de ajo",
+      "category": "entrantes",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "pan_ajo",
+      "image": "pan_ajo.jpg"
+    },
+    {
+      "name": "Bruschetta",
+      "category": "entrantes",
+      "price": 5.5,
+      "tax_class_hint": "reduced",
+      "code": "bruschetta",
+      "image": "bruschetta.jpg"
+    },
+    {
+      "name": "Alitas de pollo",
+      "category": "entrantes",
+      "price": 6.5,
+      "tax_class_hint": "reduced",
+      "code": "alitas_pollo",
+      "image": "alitas_pollo.jpg"
+    },
+    {
+      "name": "Focaccia",
+      "category": "entrantes",
+      "price": 4.5,
+      "tax_class_hint": "reduced",
+      "code": "focaccia",
+      "image": "focaccia.jpg"
+    },
+    {
+      "name": "Ensalada Cesar",
+      "category": "ensaladas",
+      "price": 7.5,
+      "tax_class_hint": "reduced",
+      "code": "ensalada_cesar",
+      "image": "ensalada_cesar.jpg"
+    },
+    {
+      "name": "Ensalada Caprese",
+      "category": "ensaladas",
+      "price": 7.0,
+      "tax_class_hint": "reduced",
+      "code": "ensalada_caprese",
+      "image": "ensalada_caprese.jpg"
+    },
+    {
+      "name": "Ensalada mixta",
+      "category": "ensaladas",
+      "price": 6.0,
+      "tax_class_hint": "reduced",
+      "code": "ensalada_mixta",
+      "image": "ensalada_mixta.jpg"
+    },
+    {
+      "name": "Pasta Bolonesa",
+      "category": "pastas",
+      "price": 8.5,
+      "tax_class_hint": "reduced",
+      "code": "pasta_bolonesa",
+      "image": "pasta_bolonesa.jpg"
+    },
+    {
+      "name": "Pasta Carbonara",
+      "category": "pastas",
+      "price": 8.5,
+      "tax_class_hint": "reduced",
+      "code": "pasta_carbonara",
+      "image": "pasta_carbonara.jpg"
+    },
+    {
+      "name": "Lasana",
+      "category": "pastas",
+      "price": 9.0,
+      "tax_class_hint": "reduced",
+      "code": "lasana",
+      "image": "lasana.jpg"
+    },
+    {
+      "name": "Pasta al pesto",
+      "category": "pastas",
+      "price": 8.0,
+      "tax_class_hint": "reduced",
+      "code": "pasta_pesto",
+      "image": "pasta_pesto.jpg"
+    },
+    {
+      "name": "Tiramisu",
+      "category": "postres",
+      "price": 5.5,
+      "tax_class_hint": "reduced",
+      "code": "tiramisu",
+      "image": "tiramisu.jpg"
+    },
+    {
+      "name": "Tarta de queso",
+      "category": "postres",
+      "price": 5.0,
+      "tax_class_hint": "reduced",
+      "code": "tarta_queso",
+      "image": "tarta_queso.jpg"
+    },
+    {
+      "name": "Helado 2 bolas",
+      "category": "postres",
+      "price": 4.0,
+      "tax_class_hint": "reduced",
+      "code": "helado_2_bolas",
+      "image": "helado_2_bolas.jpg"
+    },
+    {
+      "name": "Panna cotta",
+      "category": "postres",
+      "price": 5.0,
+      "tax_class_hint": "reduced",
+      "code": "panna_cotta",
+      "image": "panna_cotta.jpg"
+    },
+    {
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "coca_cola",
+      "image": "coca_cola.jpg"
+    },
+    {
+      "name": "Coca-Cola Zero",
+      "category": "refrescos",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "coca_cola_zero",
+      "image": "coca_cola_zero.jpg"
+    },
+    {
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "fanta_naranja",
+      "image": "fanta_naranja.jpg"
+    },
+    {
+      "name": "Agua mineral",
+      "category": "refrescos",
+      "price": 1.8,
+      "tax_class_hint": "reduced",
+      "code": "agua_mineral",
+      "image": "agua_mineral.jpg"
+    },
+    {
+      "name": "Agua con gas",
+      "category": "refrescos",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "agua_con_gas",
+      "image": "agua_con_gas.jpg"
+    },
+    {
+      "name": "Cana",
+      "category": "cervezas",
+      "price": 2.0,
+      "tax_class_hint": "standard",
+      "code": "cerveza_cana",
+      "image": "cerveza_cana.jpg"
+    },
+    {
+      "name": "Cerveza botella",
+      "category": "cervezas",
+      "price": 2.8,
+      "tax_class_hint": "standard",
+      "code": "cerveza_botella",
+      "image": "cerveza_botella.jpg"
+    },
+    {
+      "name": "Cerveza sin alcohol",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_class_hint": "standard",
+      "code": "cerveza_sin",
+      "image": "cerveza_sin.jpg"
+    },
+    {
+      "name": "Copa de vino tinto",
+      "category": "vinos",
+      "price": 3.5,
+      "tax_class_hint": "standard",
+      "code": "vino_tinto_copa",
+      "image": "vino_tinto_copa.jpg"
+    },
+    {
+      "name": "Copa de vino blanco",
+      "category": "vinos",
+      "price": 3.5,
+      "tax_class_hint": "standard",
+      "code": "vino_blanco_copa",
+      "image": "vino_blanco_copa.jpg"
+    }
+  ]
+}

@@ -102,343 +102,392 @@
       "name": "Cafe solo",
       "category": "cafes",
       "tax_class_hint": "reduced",
-      "price": 1.3
+      "price": 1.3,
+      "image": "cafe_solo.jpg"
     },
     {
       "code": "cafe_cortado",
       "name": "Cafe cortado",
       "category": "cafes",
       "tax_class_hint": "reduced",
-      "price": 1.4
+      "price": 1.4,
+      "image": "cafe_cortado.jpg"
     },
     {
       "code": "cafe_con_leche",
       "name": "Cafe con leche",
       "category": "cafes",
       "tax_class_hint": "reduced",
-      "price": 1.6
+      "price": 1.6,
+      "image": "cafe_con_leche.jpg"
     },
     {
       "code": "capuchino",
       "name": "Capuchino",
       "category": "cafes",
       "tax_class_hint": "reduced",
-      "price": 2.0
+      "price": 2.0,
+      "image": "capuchino.jpg"
     },
     {
       "code": "descafeinado",
       "name": "Descafeinado",
       "category": "cafes",
       "tax_class_hint": "reduced",
-      "price": 1.4
+      "price": 1.4,
+      "image": "descafeinado.jpg"
     },
     {
       "code": "carajillo",
       "name": "Carajillo",
       "category": "cafes",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "carajillo.jpg"
     },
     {
       "code": "coca_cola",
       "name": "Coca-Cola",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "coca_cola.jpg"
     },
     {
       "code": "coca_cola_zero",
       "name": "Coca-Cola Zero",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "coca_cola_zero.jpg"
     },
     {
       "code": "fanta_naranja",
       "name": "Fanta naranja",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "fanta_naranja.jpg"
     },
     {
       "code": "fanta_limon",
       "name": "Fanta limon",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "fanta_limon.jpg"
     },
     {
       "code": "sprite",
       "name": "Sprite",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "sprite.jpg"
     },
     {
       "code": "aquarius",
       "name": "Aquarius",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "aquarius.jpg"
     },
     {
       "code": "tonica",
       "name": "Tonica",
       "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.5
+      "price": 2.5,
+      "image": "tonica.jpg"
     },
     {
       "code": "agua_mineral",
       "name": "Agua mineral",
       "category": "aguas",
       "tax_class_hint": "reduced",
-      "price": 1.8
+      "price": 1.8,
+      "image": "agua_mineral.jpg"
     },
     {
       "code": "agua_con_gas",
       "name": "Agua con gas",
       "category": "aguas",
       "tax_class_hint": "reduced",
-      "price": 2.0
+      "price": 2.0,
+      "image": "agua_con_gas.jpg"
     },
     {
       "code": "zumo_naranja",
       "name": "Zumo de naranja",
       "category": "zumos",
       "tax_class_hint": "reduced",
-      "price": 3.0
+      "price": 3.0,
+      "image": "zumo_naranja.jpg"
     },
     {
       "code": "zumo_tomate",
       "name": "Zumo de tomate",
       "category": "zumos",
       "tax_class_hint": "reduced",
-      "price": 2.8
+      "price": 2.8,
+      "image": "zumo_tomate.jpg"
     },
     {
       "code": "zumo_pina",
       "name": "Zumo de pina",
       "category": "zumos",
       "tax_class_hint": "reduced",
-      "price": 2.8
+      "price": 2.8,
+      "image": "zumo_pina.jpg"
     },
     {
       "code": "te_negro",
       "name": "Te negro",
       "category": "infusiones",
       "tax_class_hint": "reduced",
-      "price": 1.8
+      "price": 1.8,
+      "image": "te_negro.jpg"
     },
     {
       "code": "te_verde",
       "name": "Te verde",
       "category": "infusiones",
       "tax_class_hint": "reduced",
-      "price": 1.8
+      "price": 1.8,
+      "image": "te_verde.jpg"
     },
     {
       "code": "manzanilla",
       "name": "Manzanilla",
       "category": "infusiones",
       "tax_class_hint": "reduced",
-      "price": 1.8
+      "price": 1.8,
+      "image": "manzanilla.jpg"
     },
     {
       "code": "poleo_menta",
       "name": "Poleo menta",
       "category": "infusiones",
       "tax_class_hint": "reduced",
-      "price": 1.8
+      "price": 1.8,
+      "image": "poleo_menta.jpg"
     },
     {
       "code": "cerveza_cana",
       "name": "Cana",
       "category": "cervezas",
       "tax_class_hint": "standard",
-      "price": 1.8
+      "price": 1.8,
+      "image": "cerveza_cana.jpg"
     },
     {
       "code": "cerveza_jarra",
       "name": "Jarra de cerveza",
       "category": "cervezas",
       "tax_class_hint": "standard",
-      "price": 3.5
+      "price": 3.5,
+      "image": "cerveza_jarra.jpg"
     },
     {
       "code": "cerveza_botella",
       "name": "Cerveza botella",
       "category": "cervezas",
       "tax_class_hint": "standard",
-      "price": 2.5
+      "price": 2.5,
+      "image": "cerveza_botella.jpg"
     },
     {
       "code": "cerveza_sin",
       "name": "Cerveza sin alcohol",
       "category": "cervezas",
       "tax_class_hint": "reduced",
-      "price": 2.2
+      "price": 2.2,
+      "image": "cerveza_sin.jpg"
     },
     {
       "code": "clara",
       "name": "Clara",
       "category": "cervezas",
       "tax_class_hint": "standard",
-      "price": 2.0
+      "price": 2.0,
+      "image": "clara.jpg"
     },
     {
       "code": "vino_tinto_copa",
       "name": "Vino tinto (copa)",
       "category": "vinos",
       "tax_class_hint": "standard",
-      "price": 3.0
+      "price": 3.0,
+      "image": "vino_tinto_copa.jpg"
     },
     {
       "code": "vino_blanco_copa",
       "name": "Vino blanco (copa)",
       "category": "vinos",
       "tax_class_hint": "standard",
-      "price": 3.0
+      "price": 3.0,
+      "image": "vino_blanco_copa.jpg"
     },
     {
       "code": "vino_rosado_copa",
       "name": "Vino rosado (copa)",
       "category": "vinos",
       "tax_class_hint": "standard",
-      "price": 3.0
+      "price": 3.0,
+      "image": "vino_rosado_copa.jpg"
     },
     {
       "code": "sangria_jarra",
       "name": "Sangria (jarra)",
       "category": "vinos",
       "tax_class_hint": "standard",
-      "price": 12.0
+      "price": 12.0,
+      "image": "sangria_jarra.jpg"
     },
     {
       "code": "tinto_verano",
       "name": "Tinto de verano",
       "category": "vinos",
       "tax_class_hint": "standard",
-      "price": 2.5
+      "price": 2.5,
+      "image": "tinto_verano.jpg"
     },
     {
       "code": "vermut",
       "name": "Vermut",
       "category": "licores",
       "tax_class_hint": "standard",
-      "price": 3.0
+      "price": 3.0,
+      "image": "vermut.jpg"
     },
     {
       "code": "gin_tonic",
       "name": "Gin tonic",
       "category": "cocktails",
       "tax_class_hint": "standard",
-      "price": 8.0
+      "price": 8.0,
+      "image": "gin_tonic.jpg"
     },
     {
       "code": "ron_cola",
       "name": "Cubata de ron",
       "category": "cocktails",
       "tax_class_hint": "standard",
-      "price": 7.0
+      "price": 7.0,
+      "image": "ron_cola.jpg"
     },
     {
       "code": "whisky_cola",
       "name": "Cubata de whisky",
       "category": "cocktails",
       "tax_class_hint": "standard",
-      "price": 7.0
+      "price": 7.0,
+      "image": "whisky_cola.jpg"
     },
     {
       "code": "mojito",
       "name": "Mojito",
       "category": "cocktails",
       "tax_class_hint": "standard",
-      "price": 8.5
+      "price": 8.5,
+      "image": "mojito.jpg"
     },
     {
       "code": "sidra_natural",
       "name": "Sidra natural",
       "category": "sidras",
       "tax_class_hint": "standard",
-      "price": 3.5
+      "price": 3.5,
+      "image": "sidra_natural.jpg"
     },
     {
       "code": "sidra_botella",
       "name": "Botella de sidra",
       "category": "sidras",
       "tax_class_hint": "standard",
-      "price": 8.0
+      "price": 8.0,
+      "image": "sidra_botella.jpg"
     },
     {
       "code": "culin_sidra",
       "name": "Culin de sidra",
       "category": "sidras",
       "tax_class_hint": "standard",
-      "price": 2.0
+      "price": 2.0,
+      "image": "culin_sidra.jpg"
     },
     {
       "code": "ipa_artesana",
       "name": "IPA artesana",
       "category": "cervezas_artesanas",
       "tax_class_hint": "standard",
-      "price": 5.0
+      "price": 5.0,
+      "image": "ipa_artesana.jpg"
     },
     {
       "code": "pale_ale",
       "name": "Pale Ale",
       "category": "cervezas_artesanas",
       "tax_class_hint": "standard",
-      "price": 5.0
+      "price": 5.0,
+      "image": "pale_ale.jpg"
     },
     {
       "code": "stout",
       "name": "Stout",
       "category": "cervezas_artesanas",
       "tax_class_hint": "standard",
-      "price": 5.5
+      "price": 5.5,
+      "image": "stout.jpg"
     },
     {
       "code": "wheat_beer",
       "name": "Cerveza de trigo",
       "category": "cervezas_artesanas",
       "tax_class_hint": "standard",
-      "price": 5.0
+      "price": 5.0,
+      "image": "wheat_beer.jpg"
     },
     {
       "code": "racion_croquetas",
       "name": "Racion de croquetas",
       "category": "raciones",
       "tax_class_hint": "reduced",
-      "price": 8.5
+      "price": 8.5,
+      "image": "racion_croquetas.jpg"
     },
     {
       "code": "racion_rabas",
       "name": "Racion de rabas",
       "category": "raciones",
       "tax_class_hint": "reduced",
-      "price": 10.0
+      "price": 10.0,
+      "image": "racion_rabas.jpg"
     },
     {
       "code": "racion_cachopo",
       "name": "Cachopo",
       "category": "raciones",
       "tax_class_hint": "reduced",
-      "price": 16.0
+      "price": 16.0,
+      "image": "racion_cachopo.jpg"
     },
     {
       "code": "tabla_quesos",
       "name": "Tabla de quesos",
       "category": "tablas",
       "tax_class_hint": "reduced",
-      "price": 14.0
+      "price": 14.0,
+      "image": "tabla_quesos.jpg"
     },
     {
       "code": "tabla_embutidos",
       "name": "Tabla de embutidos",
       "category": "tablas",
       "tax_class_hint": "reduced",
-      "price": 14.0
+      "price": 14.0,
+      "image": "tabla_embutidos.jpg"
     }
   ]
 }

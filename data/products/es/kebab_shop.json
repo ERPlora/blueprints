@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "business_type": "kebab_shop",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "kebabs",
+      "name": "Kebabs",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "durum",
+      "name": "Durum / Wraps",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "platos",
+      "name": "Platos",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "acompanamiento",
+      "name": "Acompanamientos",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "menus",
+      "name": "Menus",
+      "icon": "document-text-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "bebidas",
+      "name": "Bebidas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "kebab_ternera",
+      "name": "Kebab de ternera",
+      "category": "kebabs",
+      "tax_class_hint": "reduced",
+      "price": 5.5,
+      "image": "kebab_ternera.jpg"
+    },
+    {
+      "code": "kebab_pollo",
+      "name": "Kebab de pollo",
+      "category": "kebabs",
+      "tax_class_hint": "reduced",
+      "price": 5.5,
+      "image": "kebab_pollo.jpg"
+    },
+    {
+      "code": "kebab_mixto",
+      "name": "Kebab mixto",
+      "category": "kebabs",
+      "tax_class_hint": "reduced",
+      "price": 6.0,
+      "image": "kebab_mixto.jpg"
+    },
+    {
+      "code": "kebab_falafel",
+      "name": "Kebab de falafel",
+      "category": "kebabs",
+      "tax_class_hint": "reduced",
+      "price": 5.5,
+      "image": "kebab_falafel.jpg"
+    },
+    {
+      "code": "durum_ternera",
+      "name": "Durum de ternera",
+      "category": "durum",
+      "tax_class_hint": "reduced",
+      "price": 6.0,
+      "image": "durum_ternera.jpg"
+    },
+    {
+      "code": "durum_pollo",
+      "name": "Durum de pollo",
+      "category": "durum",
+      "tax_class_hint": "reduced",
+      "price": 6.0,
+      "image": "durum_pollo.jpg"
+    },
+    {
+      "code": "durum_mixto",
+      "name": "Durum mixto",
+      "category": "durum",
+      "tax_class_hint": "reduced",
+      "price": 6.5,
+      "image": "durum_mixto.jpg"
+    },
+    {
+      "code": "plato_kebab",
+      "name": "Plato kebab",
+      "category": "platos",
+      "tax_class_hint": "reduced",
+      "price": 8.0,
+      "image": "plato_kebab.jpg"
+    },
+    {
+      "code": "plato_falafel",
+      "name": "Plato falafel",
+      "category": "platos",
+      "tax_class_hint": "reduced",
+      "price": 7.5,
+      "image": "plato_falafel.jpg"
+    },
+    {
+      "code": "shawarma_plato",
+      "name": "Plato shawarma",
+      "category": "platos",
+      "tax_class_hint": "reduced",
+      "price": 8.5,
+      "image": "shawarma_plato.jpg"
+    },
+    {
+      "code": "lahmacun",
+      "name": "Lahmacun",
+      "category": "platos",
+      "tax_class_hint": "reduced",
+      "price": 5.0,
+      "image": "lahmacun.jpg"
+    },
+    {
+      "code": "patatas_fritas",
+      "name": "Patatas fritas",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "patatas_fritas.jpg"
+    },
+    {
+      "code": "hummus",
+      "name": "Hummus",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 3.5,
+      "image": "hummus.jpg"
+    },
+    {
+      "code": "ensalada_turca",
+      "name": "Ensalada turca",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 3.0,
+      "image": "ensalada_turca.jpg"
+    },
+    {
+      "code": "pan_pita",
+      "name": "Pan de pita",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 1.5,
+      "image": "pan_pita.jpg"
+    },
+    {
+      "code": "salsa_yogur",
+      "name": "Salsa de yogur",
+      "category": "acompanamiento",
+      "tax_class_hint": "reduced",
+      "price": 1.0,
+      "image": "salsa_yogur.jpg"
+    },
+    {
+      "code": "menu_kebab",
+      "name": "Menu kebab (+ patatas + bebida)",
+      "category": "menus",
+      "tax_class_hint": "reduced",
+      "price": 8.5,
+      "image": "menu_kebab.jpg"
+    },
+    {
+      "code": "menu_durum",
+      "name": "Menu durum (+ patatas + bebida)",
+      "category": "menus",
+      "tax_class_hint": "reduced",
+      "price": 9.0
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 1.5,
+      "image": "agua_mineral.jpg"
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "coca_cola.jpg"
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "fanta_naranja.jpg"
+    },
+    {
+      "code": "ayran",
+      "name": "Ayran",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "ayran.jpg"
+    },
+    {
+      "code": "te_turco",
+      "name": "Te turco",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 1.5,
+      "image": "te_turco.jpg"
+    }
+  ]
+}

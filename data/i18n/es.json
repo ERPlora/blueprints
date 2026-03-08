@@ -1656,6 +1656,50 @@
         "Reserva horas/bloques",
         "Bonos horas"
       ]
+    },
+    "pizzeria": {
+      "name": "Pizzeria",
+      "description": "Pizzeria con horno de lena o electrico, preparacion de masa, pizza por porcion o entera, enfoque en reparto y para llevar",
+      "sector_features": [
+        "Gestion de horno de pizza",
+        "Control de masa por lotes",
+        "Integracion con delivery",
+        "Pizzas mitad y mitad",
+        "Variantes de tamano"
+      ]
+    },
+    "coffee_shop": {
+      "name": "Cafeteria especializada",
+      "description": "Cafeteria de especialidad con bebidas de espresso, bolleria, comida ligera y enfoque en take-away",
+      "sector_features": [
+        "Carta de cafe de especialidad",
+        "Vasos para llevar",
+        "Tarjetas de fidelizacion",
+        "Mostrador de bolleria",
+        "Zona WiFi"
+      ]
+    },
+    "sushi_restaurant": {
+      "name": "Restaurante de sushi",
+      "description": "Restaurante japones de sushi con barra de sushi, makis, sashimi, tempura y cocina asiatica",
+      "sector_features": [
+        "Barra de sushi",
+        "Opcion de cinta transportadora",
+        "Servicio de palillos",
+        "Empaquetado para delivery",
+        "Menu omakase"
+      ]
+    },
+    "kebab_shop": {
+      "name": "Kebab",
+      "description": "Tienda de doner kebab con asador vertical, wraps, platos y servicio rapido-casual",
+      "sector_features": [
+        "Asador doner",
+        "Montaje de wraps",
+        "Integracion con delivery",
+        "Horario nocturno",
+        "Menus combo"
+      ]
     }
   },
   "functional_units": {
@@ -1773,6 +1817,10 @@
     "dentist": "Dentista",
     "hygienist": "Higienista",
     "trainer": "Monitor/a",
-    "stylist": "Estilista"
+    "stylist": "Estilista",
+    "pizzaiolo": "Pizzaiolo",
+    "barista": "Barista",
+    "sushi_chef": "Chef de sushi",
+    "kebab_cook": "Cocinero de kebab"
   }
 }

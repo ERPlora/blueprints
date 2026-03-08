@@ -1,205 +1,1946 @@
 {
-  "version": "2.0.0",
-  "schema_version": "2",
-  "last_updated": "2026-03-08T03:30:00Z",
-  "file_count": 192,
-  "checksums": {
-    "data/business_sectors.json": "sha256:14311e417d14cb51bb30cc1ee89e4eef338d6e5e4896b9bdeeb76989f9c5b7ab",
-    "data/functional_units.json": "sha256:0ba47a7c31f657dffd9e63a2f2807b8e1441d2964407b1627e892a1ef18cac51",
-    "data/transversal_models.json": "sha256:1c6434f31d6012c961225bbadadeddf967ec58c6aeb29961a9e36d17b0805306",
-    "data/business_types/index.json": "sha256:b9f497f73aafac9791071023ed6053a615e421278089ed23c66db40ede8eead8",
-    "data/business_types/S01_hospitality/bakery.json": "sha256:393f5f282ed04c8fe191dc3089453d50a117ef60605fe6cbbe07b92e05b15bcb",
-    "data/business_types/S01_hospitality/bar.json": "sha256:81fe43853bfac11ecfbbb361c9bf930b0ad74b28bf84def54d2648ec068440c7",
-    "data/business_types/S01_hospitality/bar_restaurant.json": "sha256:e6fa2d0ff37ba84321000d19b2de902d725d9f35101f797ba1194788cb9a1b23",
-    "data/business_types/S01_hospitality/beach_bar.json": "sha256:3817af9013d97cd98f476d469494fb9e0e24dbdf679de0578738146ee870bf7b",
-    "data/business_types/S01_hospitality/camping.json": "sha256:0e4ad8792c857d1178436dfbcb088490849efc6cb9e885d20003cdabc60fa3fb",
-    "data/business_types/S01_hospitality/catering.json": "sha256:2a49847fd1f1bf831d97b1d903e4a9d08a4ac38bfc1cca98a05395c5265f5a34",
-    "data/business_types/S01_hospitality/cider_house.json": "sha256:5dc05cc13ece8ec20a6148753fa5aa438a4ba3814818609fb925549935e8c173",
-    "data/business_types/S01_hospitality/dark_kitchen.json": "sha256:3e542d26a3347461aff54545f91e01c6cbbdef1194a28217e3c9406c7df072b0",
-    "data/business_types/S01_hospitality/fast_food.json": "sha256:b8205a7b0812aab77842b14b4df7c0d256ee1fb183a2a2550b69dd1d7fef82d7",
-    "data/business_types/S01_hospitality/food_truck.json": "sha256:c9544ca2204ac533190c47cab121bb79a897267d91533b095e9dbce8dc4e087f",
-    "data/business_types/S01_hospitality/hostel.json": "sha256:603ac1fd6c20896bdcdad505e5cbdcabf6ca78b81aed791b70be50717269ee9c",
-    "data/business_types/S01_hospitality/hotel.json": "sha256:c4785fc765ae9da8c907b8b6b4f676706a03c1affded57892f8fa16807ee5ed0",
-    "data/business_types/S01_hospitality/ice_cream_shop.json": "sha256:dbd81f8a4ff355afaf41994765ac741e00862bcad4896b6ff4f388a3d7bd44f6",
-    "data/business_types/S01_hospitality/nightclub.json": "sha256:16e60b73b93d70faea0493c1d6336c8cc6fae905fdd192b3ba1d57b07c63404b",
-    "data/business_types/S01_hospitality/restaurant.json": "sha256:8e7c5e7b146e71c008bcc3f543f6ea902552fa92c09049469f67ab0323896ae1",
-    "data/business_types/S01_hospitality/wine_bar.json": "sha256:9ef4e0e4ff0b8ec0deb58f34da4cbdc7249f2ed395128388d29e0ceeacef6e80",
-    "data/business_types/S02_retail/bazaar.json": "sha256:03679b92afbabe868a4e0b90322bdc847a1409fdda13891fb80596e566ad3d7e",
-    "data/business_types/S02_retail/bicycle_shop.json": "sha256:25025cd91e8fbc506dc87fdbb367e1e7d6d375bbc3bc5cf4dda02245329e2d5b",
-    "data/business_types/S02_retail/bookshop.json": "sha256:7a0f760093c45770619b94f1b9abfdfcb90bd559f0d6fc85bdcaa3634ceb9161",
-    "data/business_types/S02_retail/butcher_shop.json": "sha256:c2b4e160b33736d034843779376b807c8bed00f98c1ca72c91ee7bfa8da1b893",
-    "data/business_types/S02_retail/cash_carry.json": "sha256:ab1480d32f800771ac535fda0555ff7c0352fa70ac45bb4a8451cfd4d97b7566",
-    "data/business_types/S02_retail/clothing.json": "sha256:dcd161b45ea9fff167d3a0a874cac88e12f597f7d7d5f4bec1c3617632f21895",
-    "data/business_types/S02_retail/cosmetics.json": "sha256:4e8c31b0aa5d9fc5e6633d28fa2c3dcf958defeb0ee3bda7122a1c181cb55533",
-    "data/business_types/S02_retail/electronics.json": "sha256:401aaaa0c266e9a7610c1d2c1708c223a9a26ca4feb4fc81c0313e52ba1a2679",
-    "data/business_types/S02_retail/fish_shop.json": "sha256:473f07b4cffb7d0d7830e251f2288def70f6e5a536220d7e5ce4b04e0fe7ac9b",
-    "data/business_types/S02_retail/florist.json": "sha256:33449feac8814574a25431ee023ecb485db03ea6987059648ebda509cdeb42c0",
-    "data/business_types/S02_retail/fruit_shop.json": "sha256:b0cd5d76934230607f77d2f4fab0855a5414eae4122ac37df08be660f2369a0c",
-    "data/business_types/S02_retail/furniture.json": "sha256:7f5206e831066df499630fbceaad970dbb8565aa7012fb9b6216e30926e7be0c",
-    "data/business_types/S02_retail/gas_station.json": "sha256:2969bbd8010d5b0d6506498765a0a098ac59e9938911b398b3903f2ddf185459",
-    "data/business_types/S02_retail/gourmet.json": "sha256:7d0e017eecd796dfde917420293b0eaa957e192e15edd07665451ad3d0fe4bf3",
-    "data/business_types/S02_retail/grow_shop.json": "sha256:a19c72d6ac277eeeaf6e6118ae4b17f950ce4d71f2f198daff8eaffa15686a8a",
-    "data/business_types/S02_retail/hardware_store.json": "sha256:c15dd1c0a03b898cef488c1192fc9fd0ae58149d37e3854bbb2e3a52aae7ac01",
-    "data/business_types/S02_retail/jewelry.json": "sha256:61b9ee8beaaa136cfd2f6577c7cc6f73be9489bad7ec2726edd85adea2a342d5",
-    "data/business_types/S02_retail/musical_instruments.json": "sha256:b9970e67626935ef960671d8cf9ba81f5b68a4c367e295b8743f1cbb4820f085",
-    "data/business_types/S02_retail/office_supplies.json": "sha256:2864a2a3a4d9643fb47ea63f6013c17879da295dbcffda30be52ddee20acc224",
-    "data/business_types/S02_retail/optician.json": "sha256:69032d10dde69d90cfcb10473f52f008f392548b646a6a2fcd14c5e13de85790",
-    "data/business_types/S02_retail/pet_shop.json": "sha256:99a233fe9be1a5f5b11544a51b967fa76d1317c2ba8e298715013ce15665f46c",
-    "data/business_types/S02_retail/second_hand.json": "sha256:4b67b616f41a503d365d159a509bdcd720e0a0e9dd512c9dbeeaf567e7815425",
-    "data/business_types/S02_retail/sex_shop.json": "sha256:e418269f1df4d86f1b2a4a533b2e4f339863e2747dd6d51fcb81d5747c9aa04d",
-    "data/business_types/S02_retail/sports_shop.json": "sha256:f7da11d2920d2354ccf11f6e4b54390d1aa993dc23da9cc81b2c9ba10a85cea1",
-    "data/business_types/S02_retail/street_market.json": "sha256:9807d6313cb0f1f4017e2d9053f595c18e069d936fb1164d5a557e2e25ed6daa",
-    "data/business_types/S02_retail/supermarket.json": "sha256:132dbf03524b4f6c185bcb7ea93b03786cb37bf2028c5d79c5914b0053b0abab",
-    "data/business_types/S02_retail/telecom_shop.json": "sha256:5409527fbc3910c6e35338259a59b79860118952ebc46a772d70954ce7a65521",
-    "data/business_types/S02_retail/tobacco_shop.json": "sha256:5205687b4aa02952a8b587d5ff3253d6c437c96d5cb13a6293455de096902daa",
-    "data/business_types/S02_retail/toy_shop.json": "sha256:75c584a9c2604105079c18748951ac6408194d5dcd799c8ca1d7efe10e23036c",
-    "data/business_types/S02_retail/vape.json": "sha256:ecfdff754451a1590d87e923551cea38faf36b16afbed43ab5e7e30479ac65bd",
-    "data/business_types/S02_retail/wine_shop.json": "sha256:59a97d9c484c74c2bd47c821169860e84ecb627d6b4c675e789628fcd77fef42",
-    "data/business_types/S03_pharmacy/cbd_shop.json": "sha256:1137ac378a7c4c865d0663088b5a9b9923f0b0a5f610fe4703b2af525a716cd4",
-    "data/business_types/S03_pharmacy/health_store.json": "sha256:4f9fc08d33c9f0c1fef9e3a60cf4987dccfac90ed36ac23963bf86c55e5226a3",
-    "data/business_types/S03_pharmacy/nutrition_shop.json": "sha256:e7428e7207f61e9443b8145ae1a2f5cb63ea7497b485648c849373c785ab8640",
-    "data/business_types/S03_pharmacy/orthopedics.json": "sha256:49c32490303782544f3e8710221a15406e8a0054ad4c69f031dd3e0c47ce9284",
-    "data/business_types/S03_pharmacy/pharmacy.json": "sha256:230843d22b8f13567cf8e89037fc506d12b31b9c19f071b9b0c5dafd8641b260",
-    "data/business_types/S04_personal_services/barber_shop.json": "sha256:b1d6a5fae126038844bee0bf56714343e7683e1cf02e8d7b7106b8510ae229eb",
-    "data/business_types/S04_personal_services/beauty_center.json": "sha256:09ac770935db4e699dd5777d37b196682900f1ae3ded2691816308b9f8daf433",
-    "data/business_types/S04_personal_services/dental_clinic.json": "sha256:0a96ca4f929dc3f47a528ae45c51e5d0f3a8f8fb5361d1b283da91f67eb00207",
-    "data/business_types/S04_personal_services/dog_grooming.json": "sha256:f802821e52bad2ad98824d7f5c76794c02e3efa7099c677f3c4dc62cbf2163c5",
-    "data/business_types/S04_personal_services/gym.json": "sha256:16b14b5983a601cc6fb94d63cd49b1dc21190aada290a90b38650b34c4625ce5",
-    "data/business_types/S04_personal_services/hair_salon.json": "sha256:3757fcc7845ce57dae155eca034e86e20460036e29f80b2351074dd77de17989",
-    "data/business_types/S04_personal_services/laser_hair_removal.json": "sha256:6584cf7d078232e3e6a30416cc1c153e869e1da270325ddcad37f7acbda1fa1f",
-    "data/business_types/S04_personal_services/laundry.json": "sha256:f2378efa57cc2d2763bac50bc453c772b1d916737c99d1cece569c27f75e7e0d",
-    "data/business_types/S04_personal_services/medical_clinic.json": "sha256:635ac7bf21453a650811241fb23882deded591e10739a758617663cef1d04957",
-    "data/business_types/S04_personal_services/nutrition.json": "sha256:5bad6d79319c4de7711a04f4ae8705437acefc7e0f29b69d05de7947e889ade9",
-    "data/business_types/S04_personal_services/physiotherapy.json": "sha256:af3a65f99a3b018b32b01ab615e37e6953c8af997c406da9d14f211e8aa645b3",
-    "data/business_types/S04_personal_services/pilates_yoga.json": "sha256:59c473b6e84c625c257cbe90dc0aa9c2488fce7836a475b67f3c9a181df1ede4",
-    "data/business_types/S04_personal_services/podiatry.json": "sha256:c89a66038890d677770dba5a0340d7d30e3a39cdcbdd6a08ad65e5f393d5fc06",
-    "data/business_types/S04_personal_services/psychology.json": "sha256:892e9428131f7288be66b59a2e75347ac07c1169b0c720a42ee43de1365f2730",
-    "data/business_types/S04_personal_services/spa.json": "sha256:52d0d53f9a813b0c7882e80eeae581a03811f8bde17c21bb223ea100139242b5",
-    "data/business_types/S04_personal_services/speech_therapy.json": "sha256:e9e18c59bb2a893058ecacdda35d4193e921e0bea7c7c588fc459be1ba0bf86b",
-    "data/business_types/S04_personal_services/tattoo_studio.json": "sha256:8d6d4e6e95b09f8df0f31a22a1091a7379bc93cb456349bf9b0760f4dc6113b0",
-    "data/business_types/S04_personal_services/vet_clinic.json": "sha256:d5e46e95fe211e49e7f429cd4985e206a67a0b3be2eba4aa54aef30b1aa205e0",
-    "data/business_types/S05_professional_services/admin_agency.json": "sha256:4582aaa968393147d6986ae45f60055d68323b46a77e3c741de37c1c0ea39744",
-    "data/business_types/S05_professional_services/appraisal.json": "sha256:9c3ae05ba98619da7dffd2c936fa1ad10973ea8ea19e7e66c99a7e4860031372",
-    "data/business_types/S05_professional_services/cleaning_company.json": "sha256:e00e68e43e87ed915451487779bd657fc68151c543e26867f7cbc6fa58ee65ae",
-    "data/business_types/S05_professional_services/consulting.json": "sha256:489428404f8914cc3a066d84b186c0a6183ded01fd020570ae097424d34be00e",
-    "data/business_types/S05_professional_services/design_studio.json": "sha256:b6b1591a65fc19c2d5b378991801c6385732dbb12cce0a9ef9e05fe724b801fb",
-    "data/business_types/S05_professional_services/ett.json": "sha256:069752da8d3db9ecdcb4d8e27853a8491357a8f64591343127927e858227befa",
-    "data/business_types/S05_professional_services/insurance.json": "sha256:e7c3e8766b916fcc18cbfcc842f09177a9cde582ee957bceacb5f83d650ab6a9",
-    "data/business_types/S05_professional_services/landscaping.json": "sha256:00bb03873457a2f26e2dcc344bb17cf521c23fd485d8eee4acfad911f4ac794d",
-    "data/business_types/S05_professional_services/law_firm.json": "sha256:5b885b043f79d1e8a291b8c14f31b376a83b380e375ecfa32a685ba6f31e9957",
-    "data/business_types/S05_professional_services/maintenance_company.json": "sha256:71a9823d9071a3ccf684aaf6e34336f7e1f77e022db86f0e6410a4f410b1661f",
-    "data/business_types/S05_professional_services/marketing.json": "sha256:1f717e0bc93fb102a8e1a65dea9f50058f431f202f5c7fef738bb319cb97dd44",
-    "data/business_types/S05_professional_services/notary.json": "sha256:de293f45ebf0c89a874f3d01aa2b14fb1a2d7a82d0c06c7627e8a258e68e05be",
-    "data/business_types/S05_professional_services/pest_control.json": "sha256:c373527bd88ccb3971380545ce950169754268aaec779463024a79ec05956bca",
-    "data/business_types/S05_professional_services/real_estate.json": "sha256:b36b7ed773d2659c1c9792b45f612a6bc20a6ef0cfa0a9d2121e4ea79b40c65c",
-    "data/business_types/S05_professional_services/security_company.json": "sha256:c737fabbe265b5ab3048da38b436e4db55a865d3698d14754c47de5e34440116",
-    "data/business_types/S05_professional_services/tax_advisory.json": "sha256:f98dc42005642ac5cae3cd3518ca5cf25b3fb3ce5ad13746b60a76db8c4cb8b4",
-    "data/business_types/S05_professional_services/translation_agency.json": "sha256:f449042058f9e4b1064d17bdc7221b8d54e13fb8a0a699b9903cde68d4312276",
-    "data/business_types/S06_education/academy.json": "sha256:f6a2ee5a1b819852d3b67dd021fb503c122a710db92185ddb4f1d208b8a86f7d",
-    "data/business_types/S06_education/dance_school.json": "sha256:162780423c5811bcc185ea7893c2bf9120bb68ea6216a4dea9fea678a6143d81",
-    "data/business_types/S06_education/driving_school.json": "sha256:33727e5130f33f16b0c2996372b9543d7424a834da28c860ff3202222031d124",
-    "data/business_types/S06_education/exam_prep.json": "sha256:e141929cd7aff8df68f79757f469a80f59c999a6cf16cb16e5cfc134be4771c2",
-    "data/business_types/S06_education/language_school.json": "sha256:41b61e4c514df78447d436a787a75a3b52e107c4fc60d98b2e80e65a03fbd054",
-    "data/business_types/S06_education/music_school.json": "sha256:f96ef5fd4a3d55e90b272772f62c16076480aadfbd606811dc36442649655c45",
-    "data/business_types/S06_education/nursery.json": "sha256:21e7b29b544e3aab85a980e95d636086305c43159a0e1b1066f8ba10c11ab2c5",
-    "data/business_types/S07_construction/carpentry.json": "sha256:192f0d44815c869a83699e6f02be10cfe71588e20c72b185374ef98a59f0a1f3",
-    "data/business_types/S07_construction/construction_company.json": "sha256:24b3097aa2dd9c6772637243b9323961b05f170ec635e9e9545fdf456f442a34",
-    "data/business_types/S07_construction/elevator_company.json": "sha256:99deb0111a008b66b8175998e7c1ee9d69aa77ce9331b185ace43dcf49725725",
-    "data/business_types/S07_construction/installer.json": "sha256:8fa991db7f3485ae33485674a39bfd5e5909a2e9b148776d520768e792f44377",
-    "data/business_types/S07_construction/locksmith.json": "sha256:7496f124abeeea135c9ecdb7dfc0241122af80d7ced44eb0ea4cef84b7eb0d9e",
-    "data/business_types/S07_construction/renovation.json": "sha256:74a5b319194002a1ac4c2e03abde47572702acd0a7f487767c9a4c5785d8f99e",
-    "data/business_types/S07_construction/solar_energy.json": "sha256:64f6b103cfe09ea6f49db1e41b43b88bf6150e10daa2c7c2a68e70f6cb6da9ed",
-    "data/business_types/S08_manufacturing/auto_repair.json": "sha256:844378fb577b8cc73239db538689c173c2f2fa5f69e8e52b93055963f834c523",
-    "data/business_types/S08_manufacturing/canning.json": "sha256:6f56ee16d75e64336d53104e6e49420887f0757556f858786cfa7bcd13189f09",
-    "data/business_types/S08_manufacturing/cheese_dairy.json": "sha256:0c3a139327d330cc0bd4f72891044e23f4649bc54213623970cd9457ada740c2",
-    "data/business_types/S08_manufacturing/craft_brewery.json": "sha256:c0003b7b31a5000c2c7ed67ca9fad9f214f99138916f11d34dbdf71a8da41d86",
-    "data/business_types/S08_manufacturing/distillery.json": "sha256:18712e90797100e99cd3ca8492963d719b224662d1d9caf36d752f6467837672",
-    "data/business_types/S08_manufacturing/electronics_repair.json": "sha256:52147f363fc1a62c61481df45652fedec9dd3c55c6adeabd0508b3f38da0dfaf",
-    "data/business_types/S08_manufacturing/factory.json": "sha256:29dce6b5e11c4202a9d37a35d98321dc2857ca5068c74e538ed4b091902ea08e",
-    "data/business_types/S08_manufacturing/industrial_bakery.json": "sha256:de11207af7ef51e5db795314814246b5b34fae80b5e4285fce68fea8fb95671f",
-    "data/business_types/S08_manufacturing/laboratory.json": "sha256:9c1acf6e27d3deb8a363d32c1f84e1bb72372178ca9e9148a35af968910aac5d",
-    "data/business_types/S08_manufacturing/printing.json": "sha256:57fdbf530f302c5553483832eb1cc220b577fe8c45eee8b7bd8fc9b3aa0c2904",
-    "data/business_types/S08_manufacturing/textile_workshop.json": "sha256:c57c5ac303ea97e3c5c51d79b320c2429b1bb12e1c62839fdc2b9ef124e1d6d6",
-    "data/business_types/S08_manufacturing/winery.json": "sha256:80a0e96b2c743d2342eb9af02401c28f8058b73a99f401144b692dcbb873d83c",
-    "data/business_types/S09_transport/courier.json": "sha256:be783757e8bf84c3b87d2b21a4e94a14082d4f239687fe0fdf1cec537035b7c1",
-    "data/business_types/S09_transport/logistics_3pl.json": "sha256:5d4c0d1d0773682c35c8eac1e8f1e08804fecf5f02e8bf9c56dc6ad73c9efb54",
-    "data/business_types/S09_transport/moving_company.json": "sha256:2af10a6c03a512b8718e5206016f8b6dc72670cfbc32fe114ad70fa6845e9a5b",
-    "data/business_types/S09_transport/parking.json": "sha256:dc81c4dac11ffb8c19e5da1a4409e7735c6be858d196dd57d8e92d281b3f19c9",
-    "data/business_types/S09_transport/vehicle_rental.json": "sha256:db6ac32b6f479030704931664952d7e639afaafbc111c4c12555103ea1994b95",
-    "data/business_types/S10_agriculture/aquaculture.json": "sha256:6c42680cbd5d55695975340886129c46190c17c49252ead9284df02d1b4e34d7",
-    "data/business_types/S10_agriculture/beekeeping.json": "sha256:8a0c6aa5f609ea339cc8654d90449be0f3df78b53d75c9d9baf9c1b48766099c",
-    "data/business_types/S10_agriculture/cooperative.json": "sha256:58b2364751cc62c2bd54fd2474eec2d6d0ae7b70a48d945961c018a50a258d7b",
-    "data/business_types/S10_agriculture/farm.json": "sha256:99cd025322a2fb7a6615ad00b268736d53c1a9c892ec708499d68909e9143b4b",
-    "data/business_types/S10_agriculture/garden_center.json": "sha256:17f2a8c0a9abdb223003f09c8feaa4cf9503ea0c01c94be11ed69c029f0869b5",
-    "data/business_types/S10_agriculture/livestock.json": "sha256:f1bf7d1f30451b0ba8c5424f0ac43d7635ad2191fb7a270691b39fece170d189",
-    "data/business_types/S11_entertainment/arcade.json": "sha256:2fd9a4c089da4f0655943d827a83cdea6cb6760b70bd6548ef48668022a1fa29",
-    "data/business_types/S11_entertainment/casino.json": "sha256:11183ca2ca9972322b4d5b46f421324f7afed875c54ad820befbab7e2fc3a6a1",
-    "data/business_types/S11_entertainment/cinema.json": "sha256:913ebed9c4e24dd6bfa77ead53a066a87492d176314ed82bce09258a09f28d22",
-    "data/business_types/S11_entertainment/concert_hall.json": "sha256:f3ee903963913af373efbb95f5bc314c3dc99b6c03cf7326e6fb04b5b3a63041",
-    "data/business_types/S11_entertainment/escape_room.json": "sha256:f151107dc2f944c78cbf0cfe3fa8f244c54029140da23e48c92d9c1113469c42",
-    "data/business_types/S11_entertainment/event_venue.json": "sha256:6b3e1456172eff3fd9c7f40541116254c54991efdfccf6417a552db5a2210702",
-    "data/business_types/S11_entertainment/sports_club.json": "sha256:81ecd17092629a6ab1dec26f3597b317a0b9a78734ea70e0ec801a02dbe1f291",
-    "data/business_types/S11_entertainment/theme_park.json": "sha256:02898b440b4e53a08f67b9a882128d578a17cd4e40ce216c19219a06b044f48a",
-    "data/business_types/S11_entertainment/water_park.json": "sha256:4542b77c6616278b5c3296d830518db8a35384961183b1429dfbc3593c993e0d",
-    "data/business_types/S12_nonprofit/brotherhood.json": "sha256:d21f91c8878b9ec4179424d580aafa7ed4cca057aae6ef99cb1e827dcacf45ae",
-    "data/business_types/S12_nonprofit/nonprofit.json": "sha256:0097acaa3cea865c720d0fcd27c72d1ad8435612318e12df69c918c80c83bf06",
-    "data/business_types/S12_nonprofit/professional_college.json": "sha256:d6edef5d49169122187cb070b63933e02dddcd70dffd3cc12cf25500b99e57cf",
-    "data/business_types/S12_nonprofit/property_management.json": "sha256:dde69d240e292cdc9b289c266b3a78044734292b54bebd307eee6d1ca1fd64df",
-    "data/business_types/S12_nonprofit/social_club.json": "sha256:b6029813fa99ffd943b673d3bdc3b80472763be2ad7fa5107318123f5dc400b9",
-    "data/business_types/S13_technology/hosting.json": "sha256:661270fe4c575b54f953702ab084c206e19489fb97cabba3c7fd694b3db854be",
-    "data/business_types/S13_technology/msp.json": "sha256:ccde1b326bb0aba1c7b3b160e0eae75fbe13a65060ec85a5542006e42453790b",
-    "data/business_types/S13_technology/software.json": "sha256:1cffbee6f7a43a36cb748d9869533ac5faccb3ed6b66877c7311a65dac6421fa",
-    "data/business_types/S13_technology/telecom.json": "sha256:c3915c368d3acc8b546fb711ffd77d6572d6a0c3fd9fd6be488c5a1252060fa9",
-    "data/business_types/S13_technology/web_agency.json": "sha256:b95cb0b0b7c09a41da8f93f9cf44551a5e568c5b7d90abd38cb4b907dd9807d7",
-    "data/business_types/S14_travel/tour_guide.json": "sha256:a45eeaedbd1ec47feed0dc7575c83aea0d82a123b7075b4a2d13cc6156b4b02b",
-    "data/business_types/S14_travel/tour_operator.json": "sha256:04e40dd2a63a551b86502edd7af830287871ff966e65f14c01d29ab7269f14b8",
-    "data/business_types/S14_travel/travel_agency.json": "sha256:127167cf8db03fbfc27aa7e2935c81433628354629d5abdab3b9aae83a3f898a",
-    "data/business_types/S15_financial/currency_exchange.json": "sha256:a3f925520b9b256c4b1cc4105288bc8ae9b299a602c528e8daa36ec6e2e45bc6",
-    "data/business_types/S15_financial/debt_collection.json": "sha256:8fed84492c7cdaa97b7110cb190625b80fd75addfb64c2ecea3b937a5f69a7f1",
-    "data/business_types/S15_financial/insurance_brokerage.json": "sha256:ff8e725bca2d1dfeae72c07b5ecebe23b998879a446d9437e8aeaba954432e04",
-    "data/business_types/S15_financial/pawnshop.json": "sha256:001a8cf88e805a8dca074223a93027a693235afb905a091a4562b6fd60d6d8fc",
-    "data/business_types/S16_media/art_gallery.json": "sha256:0c94b7bc4e629c637ff68d80cb83f2d42297bc98b8b84be964a579ebf456815f",
-    "data/business_types/S16_media/editorial.json": "sha256:b036d28f841626e19b4e89b4bbfc87dd208643b8253494952bb48aa15880e9c0",
-    "data/business_types/S16_media/event_production.json": "sha256:0873c4fb32676916f96fe86160a51ea7e0271402655b9f46d5e76c07cee003e5",
-    "data/business_types/S16_media/photography.json": "sha256:2f972177fd64cecf2487d0d52fcacdcfe8a09380adc52acb9c4ee9b5afef79ad",
-    "data/business_types/S16_media/recording_studio.json": "sha256:324c762d36576e37d54cab152a9a02ebe2ac5065cd658f8eaa40f630158ba063",
-    "data/business_types/S16_media/video_production.json": "sha256:4c10e5e2e00421a6751b40cf49f06e13bb6e2f61d232d2b6ed5c637f1de00bc4",
-    "data/business_types/S17_rental/bike_rental.json": "sha256:c132638701d1a06dfd195c3a50c24a42e27610644aa2f77d8cbde576e8c16db7",
-    "data/business_types/S17_rental/boat_rental.json": "sha256:5ffc8a622f1d2d834c42e9b22783b7ded999f97509a317f2e141b45cce0e06f5",
-    "data/business_types/S17_rental/costume_rental.json": "sha256:99398a92373a0907c58af5e3e4f1f3121a66d0bac8dd889edd1f617e35de4801",
-    "data/business_types/S17_rental/event_equipment_rental.json": "sha256:ebcd64895a6920448bbe77039ca9f19129a148f3b428b89ca65c8d6f171c803c",
-    "data/business_types/S17_rental/machinery_rental.json": "sha256:2a85c85eccfa384034cdbfa48d02b5893b9bc016f41f75b156bbba812d286b47",
-    "data/business_types/S17_rental/self_storage.json": "sha256:7e317d67f7c5a787b918b92bfb915f3a4dbbc51adbc081834a8c2a3be500af18",
-    "data/business_types/S18_maritime/fishing_company.json": "sha256:e866e2a0fd1ec417c0d816eafe6dd446ac4a015fe82dfaab93812c3262d66630",
-    "data/business_types/S18_maritime/marina.json": "sha256:cc99d4e501c3a72061216dcf93fc1d2d7aada12a95e03bcfd0beb9653437be0b",
-    "data/business_types/S18_maritime/nautical_workshop.json": "sha256:b5bdb7eaf1077de3e40d123960271734754c24a5c2b1bec1fbb67dab97059305",
-    "data/business_types/S19_funeral/cemetery.json": "sha256:bb4472cb5a0f70871a356dff538f0e390abd660987230ccff7a892148e29ab5c",
-    "data/business_types/S19_funeral/funeral_home.json": "sha256:6a51ab7eb4c506b5f6f1bd06ab275e8452afb437763ddb3dd29ca3350e59bb1f",
-    "data/business_types/S19_funeral/mortuary.json": "sha256:d53b77ac0b6166d194e22fc4f8e43a7f0795291d4336e15a1b5790c2ad899059",
-    "data/business_types/S20_coworking/business_center.json": "sha256:6b8aabfd1316bc8ce6856588f42029890de27f4dcc310b93bd3294985c1a9948",
-    "data/business_types/S20_coworking/coworking.json": "sha256:acbc0a62c1e8df5a16339d2656838708bfecf9b0472492d1c31025bc4f528a13",
-    "data/business_types/S20_coworking/rehearsal_studio.json": "sha256:706d9116415f067049811675f62c947f5adc12a8592b0e2875ef17f929100cd2",
-    "data/i18n/es.json": "sha256:4e3080e6003f0a0ac4288d40649678591e7c4de6a0cbf61ee69c2f86e39e205f",
-    "data/products/es/bakery.json": "sha256:eaf474a6d5416cb8d831dd6c7eae81197ff51c28e493ae33798decd178ef9421",
-    "data/products/es/bar.json": "sha256:fef4e31351a340310cd804d852d8bd232b7ad60303ac80325cd93d6c9d4f2ba5",
-    "data/products/es/bar_restaurant.json": "sha256:7bac5ab1cf513c26db14e43c1cba1dbc7186868a77b021e84c85c3742d87ccc1",
-    "data/products/es/beach_bar.json": "sha256:120523186bcf11b9b8bb4b0f9a374b8d37736d386420b845e1a37d7018670d84",
-    "data/products/es/camping.json": "sha256:36624eea30797d6b5cd7014d3e16a8d1f5685d42747f2c9de9c3be56ff63d250",
-    "data/products/es/catering.json": "sha256:34a356dc222ed982637358cc3c7b21bc2b8214e5ea5571207655c225a2a9193f",
-    "data/products/es/cider_house.json": "sha256:883f1fe8bb941e6327f2e5bf8d7183a2b832aaa0ccf252eff2267b2d326e675f",
-    "data/products/es/dark_kitchen.json": "sha256:b182f2ae05af205872eb621f1df0c6c2eaddc7467fc9e37f44ae75268e47262b",
-    "data/products/es/fast_food.json": "sha256:6b0aa5be09a93c6d4ab2c4558dbccc7c2fc9d54299e31200460136ba1ed43d99",
-    "data/products/es/food_truck.json": "sha256:86802a32396acde596a4f2663b09b28984167bdf3dcab33fb854263f5b6416b9",
-    "data/products/es/hostel.json": "sha256:cb0f808d57fe31a6951daaec42bf8da85270b424e590f713626c6fecf10b9623",
-    "data/products/es/hotel.json": "sha256:791c39b633c4626ec2cffc8792e132ada8c329f7b74cf5fbd7b1b6ee0c39ba9c",
-    "data/products/es/ice_cream_shop.json": "sha256:636c6e19d3955c983f20ef7041194d52c1240daf4a8aeb906db6d534428ee143",
-    "data/products/es/nightclub.json": "sha256:d6367c1df666562a9a0cf44d2899d98149bf11622ca725403219b71985e10eaf",
-    "data/products/es/restaurant.json": "sha256:7d08121c000c4d27e383b24c710971b3bc0b619cfe7816863d6330af9963f32e",
-    "data/products/es/wine_bar.json": "sha256:ee7aba2d513f088417d310fdf93dca683bf28289ca0143c22bf6b1571343dd3f"
-  },
-  "i18n_languages": [
-    "en",
-    "es"
-  ],
-  "i18n_default": "en"
+  "schema_version": 2,
+  "total_files": 485,
+  "files": {
+    "assets/products/agua_con_gas.jpg": {
+      "sha256": "9f1370987e567360afdeaee654c841d589af123a162bd17b8b93caa58ec644b9",
+      "size": 16589
+    },
+    "assets/products/agua_mineral.jpg": {
+      "sha256": "368ce87b71bb95e622f6bd813c236f1322a3a9486e8f9a4eea460ce4802ec26e",
+      "size": 12017
+    },
+    "assets/products/alitas_pollo.jpg": {
+      "sha256": "e2baa1aeae55d7168ab91223f1604098c33c2ad70569de2db92c40159f4c17f6",
+      "size": 62956
+    },
+    "assets/products/americano.jpg": {
+      "sha256": "d2071f065cbb3d5ad487407629ddc9e57708b5d77257e98e980cef469faa3cb5",
+      "size": 29839
+    },
+    "assets/products/aquarius.jpg": {
+      "sha256": "48ef34aaf9ef1e2c5b13ce7dd90e6ec6221ef0654dd3dfde19038afc7e5347c3",
+      "size": 16528
+    },
+    "assets/products/aros_cebolla.jpg": {
+      "sha256": "d8b033ff3a870d540f5f67c445ab1224f98ac3d044132e40b4ef7d7a55b773fd",
+      "size": 63756
+    },
+    "assets/products/arroz_banda.jpg": {
+      "sha256": "9642e071c949f621fbb5093baac2fe59617cb7f048f6e1653b387f262d4e97b2",
+      "size": 50672
+    },
+    "assets/products/arroz_extra.jpg": {
+      "sha256": "86d23ca1e36fdf7880176bfa7c6eb2cf1bb7da11f2b1136108117eac8864473b",
+      "size": 32470
+    },
+    "assets/products/arroz_negro.jpg": {
+      "sha256": "cd0da303617623df6065871375d8f774cf726c87d20e6c39a40775dedb802094",
+      "size": 88270
+    },
+    "assets/products/arroz_wok.jpg": {
+      "sha256": "3f11415d66cbea5ec78ee56bb9996bdbb30b75e80893e961e98f97dfa75a8b64",
+      "size": 62799
+    },
+    "assets/products/ayran.jpg": {
+      "sha256": "19871fa76a5de4fd8720f157ac70e07ef705068caf6c8aead9ae28e04193fb3e",
+      "size": 43478
+    },
+    "assets/products/bagel_salmon.jpg": {
+      "sha256": "ec5f43f3444e1cab94ea6785b082cd4995f70b8a72ece6d2b1644b3ce687fa2f",
+      "size": 29945
+    },
+    "assets/products/barra_pan.jpg": {
+      "sha256": "6cbabcbde6ad96303ef4ecab7f2c8dc7f5927ffc4f50b7274b307b6e7e640b40",
+      "size": 14644
+    },
+    "assets/products/batido_chocolate.jpg": {
+      "sha256": "613381029528043560a6901096b643c77677b7ed1a657ab0e6799ad1c218e217",
+      "size": 28655
+    },
+    "assets/products/batido_fresa.jpg": {
+      "sha256": "ff28ed9c2583a38e0e24738667eb03f0b4782706855a337258ed70f82b8e5de7",
+      "size": 39589
+    },
+    "assets/products/batido_vainilla.jpg": {
+      "sha256": "1c8fbd2f5085f0da4be01c220914dc496d6bc4ba0778e3c10cb11aa1724e9ead",
+      "size": 35747
+    },
+    "assets/products/bocadillo_calamares.jpg": {
+      "sha256": "73804db5b5a927675e990e6c5af72d0a3fc9a6dbaf25fae1673cf4011395b625",
+      "size": 40010
+    },
+    "assets/products/bocadillo_jamon.jpg": {
+      "sha256": "dee60eb3bc98afd7ee3c99beb8193721a47d82b6b78ad558b710517d9e3c337d",
+      "size": 44044
+    },
+    "assets/products/bocadillo_jamon_queso.jpg": {
+      "sha256": "84d4aa2f4cbe382bf0ee6dbb082a5693d4c9719db33dd408e9eff17b7a62cccb",
+      "size": 31686
+    },
+    "assets/products/bocadillo_lomo.jpg": {
+      "sha256": "a7b89b421f6387467086a2c90e91689c479526d1f838c2fd8edbb56b147f1b31",
+      "size": 41485
+    },
+    "assets/products/bocadillo_pulled_pork.jpg": {
+      "sha256": "c2914b0b4d449d9b0b4c35bf3f6bffbdb26ccc98a74d4dcfa285d10cd7ca12ad",
+      "size": 62129
+    },
+    "assets/products/bocadillo_tortilla.jpg": {
+      "sha256": "f731cf778d7fa739091086c9eac86e95bba0bad3a11994b94cb9f1c9bad60fe1",
+      "size": 21828
+    },
+    "assets/products/bocadillo_vegetal.jpg": {
+      "sha256": "34f8f056e2d655e92752e10e3687673ea7e86ef87dbda54617c62747bc2affce",
+      "size": 70703
+    },
+    "assets/products/botella_albarino.jpg": {
+      "sha256": "e08ddf228a99e50ba3cc4362ce4771e319509cd9bd999ea430e73db6541e1831",
+      "size": 60133
+    },
+    "assets/products/botella_champagne.jpg": {
+      "sha256": "9117fa1830707dac6ea78d9355e798755e71e21a04b48d4abb65b2d768bfa866",
+      "size": 48760
+    },
+    "assets/products/botella_ribera_duero.jpg": {
+      "sha256": "972739821d0ccd4740ea1b82056fd6b8085e31148ad060622ad0e1325835d7f8",
+      "size": 14598
+    },
+    "assets/products/botella_rioja_crianza.jpg": {
+      "sha256": "84f1690a34b70c1a9ccd5db29395d04c1e100bbab5754535fbf1d709f8557068",
+      "size": 16546
+    },
+    "assets/products/bowl_pollo.jpg": {
+      "sha256": "a09ac97c1d052acdc537020d522b96df77f70d9974d92bc391047e8206a745e1",
+      "size": 44202
+    },
+    "assets/products/brownie.jpg": {
+      "sha256": "1e673857f23232d6a9b055d6c1100ee5e41faf570d12f9a48ed618addf4c480a",
+      "size": 58603
+    },
+    "assets/products/brownie_chocolate.jpg": {
+      "sha256": "e5ce14119c8263855c3f3addbf1f2da9f65481fd8b836e387ab9699235e35205",
+      "size": 58694
+    },
+    "assets/products/bruschetta.jpg": {
+      "sha256": "481a32694da8af4a087f568a12cd3dc5404dc7de8aa63c7f6ae3726d0d8f2bee",
+      "size": 42980
+    },
+    "assets/products/cafe_bombom.jpg": {
+      "sha256": "291377e4ea9f08a086614cef7f051432f5bf5bf6ce5bb01f5c977d5a76757183",
+      "size": 48489
+    },
+    "assets/products/cafe_con_leche.jpg": {
+      "sha256": "836ef278b0e45ef83c45280d7c130b708cdf5ac148a1d4f8043947229dc89856",
+      "size": 8485
+    },
+    "assets/products/cafe_cortado.jpg": {
+      "sha256": "6119cc3c599a05de9d22ffdebbb446ba3eab2381afc90596b3e5f76dd12af06a",
+      "size": 19919
+    },
+    "assets/products/cafe_helado.jpg": {
+      "sha256": "cedfde6386ff95e561656ef1a691538e952421e48ca0e2cbe5263c9e26b82006",
+      "size": 31931
+    },
+    "assets/products/cafe_solo.jpg": {
+      "sha256": "802cfb75dd9fdb07a69d4e95260d71eea1d3227a442f2c87d0216a9d250a1375",
+      "size": 19423
+    },
+    "assets/products/calamares_romana.jpg": {
+      "sha256": "60c6f3ca2f1bfe7d6362f3bcab397735d7ee29663636c9dcb98e385f6e36acec",
+      "size": 19597
+    },
+    "assets/products/california_roll.jpg": {
+      "sha256": "7b0b681305e5e65e302318b4fc2d15fd92baf7674b03adbacf6282a373cff4dc",
+      "size": 63537
+    },
+    "assets/products/capuchino.jpg": {
+      "sha256": "424490da55d1303fded4b8c4b45665ac4b400d6b7124dd1e3e7b92e84bf2031d",
+      "size": 64449
+    },
+    "assets/products/carajillo.jpg": {
+      "sha256": "fdab3eb7ec5be42268b7545b40e9f8dc79222a6340e7ec66adb145f95d38ff46",
+      "size": 47712
+    },
+    "assets/products/cerveza_botella.jpg": {
+      "sha256": "0ffe79bd911fc4f29b420b3b608e8ca1e19fc009e58b7693bb3564bc994667d5",
+      "size": 23772
+    },
+    "assets/products/cerveza_cana.jpg": {
+      "sha256": "842265da5150b3e764b8b7c3b33fce4c6c8e2e9c33b1b56c58cb7d7623964f8d",
+      "size": 37758
+    },
+    "assets/products/cerveza_japonesa.jpg": {
+      "sha256": "266c0d79009a365e4f58a47891deadb10022816e8b3c67d8569d5262c513e223",
+      "size": 12182
+    },
+    "assets/products/cerveza_jarra.jpg": {
+      "sha256": "3b21ddbd29f4823f7d827a5f799f4efa8a1b94c090002119ae1a9075052baf4a",
+      "size": 34554
+    },
+    "assets/products/cerveza_sin.jpg": {
+      "sha256": "4093a7dd037c9858a98198c67c2ad0a5a78042b4deebcb6be7416029f18966c7",
+      "size": 20490
+    },
+    "assets/products/chai_latte.jpg": {
+      "sha256": "530547c0b1ba60c8e98ac84150aba5cdc2e3dcd6d539f91452a814070fb4890d",
+      "size": 17039
+    },
+    "assets/products/chapata.jpg": {
+      "sha256": "69717c7c03c860112aa8192ca83c5ee1f03104cb03303ea5d5d9d2bfdbf8e24a",
+      "size": 37045
+    },
+    "assets/products/cheesecake.jpg": {
+      "sha256": "b03aae62837ec969d00f5ca062c03da3649f58f97cb879b70dc775e81eed7402",
+      "size": 41254
+    },
+    "assets/products/chupito_jager.jpg": {
+      "sha256": "f229b2dba5e2f1f5311cd4858ba8fa441d105da487a6b7be5df869763a73f5d3",
+      "size": 27576
+    },
+    "assets/products/chupito_sambuca.jpg": {
+      "sha256": "e0470185742b1d77c19ded0e3119d7f5ca378677e2ce7564b7c6766fad3024ff",
+      "size": 17815
+    },
+    "assets/products/chupito_tequila.jpg": {
+      "sha256": "fbf7a9473926f3bb37068d4a9b384e21bab912c9f4203bd0ef91218ffb144f8d",
+      "size": 19039
+    },
+    "assets/products/churros.jpg": {
+      "sha256": "c08038608859e261e8eb6afb2804249402d9574eaafb44ac2b3114e84c7186c6",
+      "size": 40480
+    },
+    "assets/products/clara.jpg": {
+      "sha256": "46ae6840bd9708f12025ce4379161c5b7f150c572e8735e55a3d1a6b0373c58c",
+      "size": 15287
+    },
+    "assets/products/coca_cola.jpg": {
+      "sha256": "ed6738c391944bcb44e30322a4b61308020929488681e2b337f88cd13fdebd43",
+      "size": 27774
+    },
+    "assets/products/coca_cola_zero.jpg": {
+      "sha256": "8595bea0fe41813b04bc0db0d8658c71603c9340ceba812ec267e32f7940b42f",
+      "size": 43094
+    },
+    "assets/products/cookie.jpg": {
+      "sha256": "3e61fbf766713be1d93b48d0ba8a79bab5f140bbcb30b952f77ac81e9e17ddd5",
+      "size": 46966
+    },
+    "assets/products/copa_albarino.jpg": {
+      "sha256": "60c6c229bba1430b52fff0a0ad19f6fe9ad51fb80525b02374392e27320ddf71",
+      "size": 44364
+    },
+    "assets/products/copa_cava.jpg": {
+      "sha256": "674565d3c33cfd8bc030f6ded0bb7f98fcab158e67293624a4bbdeb07a050165",
+      "size": 13116
+    },
+    "assets/products/copa_helado.jpg": {
+      "sha256": "0b9bd3beb2211eae889133011d49f4db636ecb926b41eecfab61277103d76dc1",
+      "size": 20733
+    },
+    "assets/products/copa_ribera_duero.jpg": {
+      "sha256": "68ff9c43088ac1b7140c439cc76b4c14e389bf1c505b6b8110dee3c938ba403f",
+      "size": 56984
+    },
+    "assets/products/copa_rioja_crianza.jpg": {
+      "sha256": "c54aca6a4d845fed1b6a421daefbf8ba367bf1c66a93189d5419d4e04638cbe7",
+      "size": 16114
+    },
+    "assets/products/copa_verdejo.jpg": {
+      "sha256": "a8d39bad812d1c47ebadc3b082fae83cf138fe60297bab3cb99281e058b97c44",
+      "size": 49638
+    },
+    "assets/products/cortado.jpg": {
+      "sha256": "56adfcb68a8f59ca9900e4ed6591d1e4e07427c56cd57200550326fa217bb356",
+      "size": 56612
+    },
+    "assets/products/crema_catalana.jpg": {
+      "sha256": "b840a07dc406f5fc917c65a83bc2ebb656a1b50b59d6dfb5ce1718fb751c52ac",
+      "size": 62633
+    },
+    "assets/products/crepe_nutella.jpg": {
+      "sha256": "b82710783800294e6349f78c33d4bc59a4b814b647c91ccdc757e3eee914a087",
+      "size": 92943
+    },
+    "assets/products/croissant.jpg": {
+      "sha256": "22de16f590740481e59e17667c24cfc7fa59b5c931b31f5ac398acd80510f469",
+      "size": 20862
+    },
+    "assets/products/croissant_chocolate.jpg": {
+      "sha256": "cde9ea17827e6b6e94918a9d32059be466d899ffefcd5ce939af0f21a74bb674",
+      "size": 34719
+    },
+    "assets/products/croquetas_jamon.jpg": {
+      "sha256": "b77d6202dfc598fdacc231bbf0e4fcf3ba7da29a7cc024e5ecba30e67ea91e18",
+      "size": 38299
+    },
+    "assets/products/cuba_libre.jpg": {
+      "sha256": "3b03b3149977b51b2dd5c8db5a0c2b03faf3625bde442954dae14eef2c2a66f4",
+      "size": 45441
+    },
+    "assets/products/cubata_ron.jpg": {
+      "sha256": "3b03b3149977b51b2dd5c8db5a0c2b03faf3625bde442954dae14eef2c2a66f4",
+      "size": 45441
+    },
+    "assets/products/cubata_vodka.jpg": {
+      "sha256": "d5d636b078a58b870c795e841aa5b1812735c6eb288708c833bde5f64778cce5",
+      "size": 29514
+    },
+    "assets/products/culin_sidra.jpg": {
+      "sha256": "089c652289da614a0acea2c9d755a6218e44e72aef6720dba71c4bc3ef1d3b16",
+      "size": 18440
+    },
+    "assets/products/desayuno_buffet.jpg": {
+      "sha256": "a9f65add2ef5f376eefbb483d8c4c1955a65f3005e90a437d46bfecd38949d76",
+      "size": 62725
+    },
+    "assets/products/desayuno_continental.jpg": {
+      "sha256": "a9f65add2ef5f376eefbb483d8c4c1955a65f3005e90a437d46bfecd38949d76",
+      "size": 62725
+    },
+    "assets/products/descafeinado.jpg": {
+      "sha256": "804dd4d7c69d6b22f35e47b35569123aaeb1972a934dcab585159925f5c3a2b4",
+      "size": 18282
+    },
+    "assets/products/doble_espresso.jpg": {
+      "sha256": "64253c1184d7f1b0fbec55839aa13f80045e16392197980611abf8bcf5c7ebf8",
+      "size": 50351
+    },
+    "assets/products/dragon_roll.jpg": {
+      "sha256": "efe60fda8a0653b853770687d3f55b229d4b85ab7a68bc6a24256b448e686e0d",
+      "size": 23087
+    },
+    "assets/products/durum_mixto.jpg": {
+      "sha256": "a5cf0989edb408956f1c0909941cf9aaf521615670ae662f6577a41e53e22ad6",
+      "size": 71462
+    },
+    "assets/products/durum_pollo.jpg": {
+      "sha256": "ce2060c67d07d06b1c9dcdc35e0295ec5c83f9d075915e6bb6915651527d03bc",
+      "size": 55850
+    },
+    "assets/products/durum_ternera.jpg": {
+      "sha256": "44ff6fc4330ac2d21d98b1e1e23a9cc8a8b2525728dae75dbdfd5c65711dd3ca",
+      "size": 34410
+    },
+    "assets/products/edamame.jpg": {
+      "sha256": "e742034d9a9ec61cf9ca6b8e37c95ecb7b7982ced39a0f472a08e20835339283",
+      "size": 52031
+    },
+    "assets/products/ensaimada.jpg": {
+      "sha256": "061fc13f25f6fca67255c4658fedcfd5831f238b997608f5e8a3f40f5720ff42",
+      "size": 48419
+    },
+    "assets/products/ensalada_acomp.jpg": {
+      "sha256": "734b53c67adb47be78025717901f7f91f4924f1886135238b030bfc6d30e8539",
+      "size": 47844
+    },
+    "assets/products/ensalada_caprese.jpg": {
+      "sha256": "f8970e2b777b06751e0f39ce4a8fcb4104d10e87bd2273043d8335845f50dfc6",
+      "size": 43239
+    },
+    "assets/products/ensalada_cesar.jpg": {
+      "sha256": "3304e0fc467511c0038e6b3dbdff3d9bf880d0cba328431d6b68892b99539437",
+      "size": 21921
+    },
+    "assets/products/ensalada_mixta.jpg": {
+      "sha256": "734b53c67adb47be78025717901f7f91f4924f1886135238b030bfc6d30e8539",
+      "size": 47844
+    },
+    "assets/products/ensalada_turca.jpg": {
+      "sha256": "f21d7e0a5f979c46945a3290a41382ee4c19ed9ee1b24310de8fcb4181f0621e",
+      "size": 49440
+    },
+    "assets/products/ensalada_wakame.jpg": {
+      "sha256": "b595796d7889e3deb75627870991e1eac572edfbef3bd9dd588597b82a1c57e7",
+      "size": 63811
+    },
+    "assets/products/entrecot.jpg": {
+      "sha256": "089fb988def1f3e9cf112d0a95f5b20a3db23ed75786422f2c490d49c3f9a325",
+      "size": 49389
+    },
+    "assets/products/espeto_sardinas.jpg": {
+      "sha256": "93444db86698ce2567a99313ec7513c60605791838b1d16bd4c4b2b90d6afd49",
+      "size": 47661
+    },
+    "assets/products/espresso.jpg": {
+      "sha256": "802cfb75dd9fdb07a69d4e95260d71eea1d3227a442f2c87d0216a9d250a1375",
+      "size": 19423
+    },
+    "assets/products/fanta_limon.jpg": {
+      "sha256": "7e7bc095f3527a32eb6d17025bae53c38ea3c48ee9c3d856a813a91ad64ef2f6",
+      "size": 61854
+    },
+    "assets/products/fanta_naranja.jpg": {
+      "sha256": "77f389d2169fffaeff0b8e455c5cafb56502531fea3cb6f551b799f8805d2bfd",
+      "size": 29807
+    },
+    "assets/products/fideua.jpg": {
+      "sha256": "f7c8d53a07cc5eb94200de7bccc4c675b7a2d176e84a8e345bc2168165d814b2",
+      "size": 119818
+    },
+    "assets/products/flan_casero.jpg": {
+      "sha256": "e1fbd4d9f8ca10c6ad4ede3d5925a214e4035d2773a5f0d036a25bfafbd36a95",
+      "size": 50371
+    },
+    "assets/products/flat_white.jpg": {
+      "sha256": "64253c1184d7f1b0fbec55839aa13f80045e16392197980611abf8bcf5c7ebf8",
+      "size": 50351
+    },
+    "assets/products/focaccia.jpg": {
+      "sha256": "e39bf4e5f8da0b22dc7dcb5eed40e98c6812475090cc873a3e09b6a17733984b",
+      "size": 67355
+    },
+    "assets/products/frappuccino.jpg": {
+      "sha256": "4eb1bf568d879258b1b61ba608892295e1d2c09556c3b350afcd427be4ae89db",
+      "size": 47607
+    },
+    "assets/products/galleta_chocolate.jpg": {
+      "sha256": "7be6b911b7e7e04844e557e2e2495f70771981ddbdb82ba141ba6fe952b32d63",
+      "size": 52906
+    },
+    "assets/products/galleta_mantequilla.jpg": {
+      "sha256": "01e1407f56d28f025ad175fcffface6f489c0eb01ef240cbd84df8f63dd487ef",
+      "size": 15212
+    },
+    "assets/products/gambas_ajillo.jpg": {
+      "sha256": "3d505bdc0362cd54c2df0bf45e0e54c58f25208a27d9f7c4b995e9de6f13a5e3",
+      "size": 17219
+    },
+    "assets/products/gambas_plancha.jpg": {
+      "sha256": "ae01650943f3baaef5b72e4da9d19f2a27155cd229a7a1f2ef94987c3bfe69db",
+      "size": 42661
+    },
+    "assets/products/gazpacho.jpg": {
+      "sha256": "18955a6ebf4da2b3c03e289a52f5227fb684c33addedeb473eaad18d495fab24",
+      "size": 21453
+    },
+    "assets/products/gin_tonic.jpg": {
+      "sha256": "4af6536678de8e4e32a30639069a40f58be36c25f7ba710da4be5cdd97d26954",
+      "size": 28204
+    },
+    "assets/products/gofre_clasico.jpg": {
+      "sha256": "e7f16037f9ffa6835fb61049b56519281a4c18ac0da30efaebb1b3b3bf7eb10f",
+      "size": 37759
+    },
+    "assets/products/granizado_cafe.jpg": {
+      "sha256": "0c128c4780caecd2b0d0dd2ba7146d9c0fc6fdc9ece7dc8fc27a252a365c180b",
+      "size": 15828
+    },
+    "assets/products/granizado_limon.jpg": {
+      "sha256": "e989ab0fc76a75c4d9b407b3736e46b560410af5a7326a7d7dc26943cfdc3ed2",
+      "size": 20165
+    },
+    "assets/products/gyozas.jpg": {
+      "sha256": "e5257af83e103e2af921b0abf67f9388db175942dc494844600425d14efaca82",
+      "size": 46384
+    },
+    "assets/products/hamburguesa_clasica.jpg": {
+      "sha256": "2ed8384a3a0d1d2608b311e6c809f4ad28a0a12c6dc5dddc128b5b18aaec779c",
+      "size": 23112
+    },
+    "assets/products/hamburguesa_doble.jpg": {
+      "sha256": "a14a0a388742fddbb501fa4d996cdafa24e6de005ff7269a6b48e4de811523c6",
+      "size": 60894
+    },
+    "assets/products/hamburguesa_gourmet.jpg": {
+      "sha256": "9610ce3d426d25035098fc2d464aa3122405bc9307712af17efb5d3d1282bf71",
+      "size": 70269
+    },
+    "assets/products/hamburguesa_pollo.jpg": {
+      "sha256": "e0638de196d7bb37a0d391cb697a8cecd7cb5998fd63ca4063367b78ed6c01ad",
+      "size": 58430
+    },
+    "assets/products/hamburguesa_queso.jpg": {
+      "sha256": "afb1ede2fe6da38481decd0bb5ccc6eb688e6eb4a2c46178e81ddd4523f5652c",
+      "size": 55962
+    },
+    "assets/products/hamburguesa_smash.jpg": {
+      "sha256": "39ce53e146fb8425dffac5b64b979ece56d5c1f512b10c37b545e5fbdbf962b3",
+      "size": 60756
+    },
+    "assets/products/helado_1_bola.jpg": {
+      "sha256": "ddef276e350439668d947cba35b76e86bd5c6ff42c000034aec43af691ace1f3",
+      "size": 40686
+    },
+    "assets/products/helado_2_bolas.jpg": {
+      "sha256": "0c227915834d45b53ad8cd5cea5a0b9721269b48a4c0c34267890c7e5f23144f",
+      "size": 16567
+    },
+    "assets/products/helado_3_bolas.jpg": {
+      "sha256": "0c227915834d45b53ad8cd5cea5a0b9721269b48a4c0c34267890c7e5f23144f",
+      "size": 16567
+    },
+    "assets/products/helado_bola.jpg": {
+      "sha256": "d68f4175c35c45ee71180bc510ba3d4f55ebff9a2834f2bb9d8d4e3c23e76b30",
+      "size": 44524
+    },
+    "assets/products/helado_soft.jpg": {
+      "sha256": "79a523f329c6d83c995c2da0564f0a928108f7f7d85a30596b672559e6cb04e3",
+      "size": 22415
+    },
+    "assets/products/hielo.jpg": {
+      "sha256": "2b3ea6399be0e2932d5fb72d18c5d487bce1bc0cd2effba1fc682bbea32ac79f",
+      "size": 15609
+    },
+    "assets/products/hogaza.jpg": {
+      "sha256": "f6b6ddb41804b0bbb2fef592b0b1b452e2ae21cc302f0002c4236c0721a312bc",
+      "size": 40438
+    },
+    "assets/products/hummus.jpg": {
+      "sha256": "8a42797e75ef63134b59c7aa807a037c0dc3209caed1c5de181077f9cf3d4493",
+      "size": 38569
+    },
+    "assets/products/ipa_artesana.jpg": {
+      "sha256": "570ebf655e5ab53d3c646c74aae778fad2cfec8acbbdb2e1195a4016e9ba702d",
+      "size": 21373
+    },
+    "assets/products/jamon_iberico.jpg": {
+      "sha256": "f71ab0cee804edfc7d899956813124e0a8708d746d0681204dcc58e1c81000f6",
+      "size": 70802
+    },
+    "assets/products/kebab_falafel.jpg": {
+      "sha256": "e383c2aa2da1f48756f050044353547cbc4765e7aaf1de1da58b2cc91243ac0a",
+      "size": 42349
+    },
+    "assets/products/kebab_mixto.jpg": {
+      "sha256": "f314af4fbc641071f495c49c16fe0494d6902d13eba4d303c4ca56a74e03e96a",
+      "size": 73333
+    },
+    "assets/products/kebab_pollo.jpg": {
+      "sha256": "d9a3e00b34a6d4d54dacb0a29c0ff88e9a600e1bc3659aaa678fe6f09c3dfb79",
+      "size": 68171
+    },
+    "assets/products/kebab_ternera.jpg": {
+      "sha256": "37f2d16e7941440a0de1b233345e06936f93dac264814dc6ef975a13e8123b36",
+      "size": 42423
+    },
+    "assets/products/lahmacun.jpg": {
+      "sha256": "02ebfbbff9d8b5553b87d05a544f0f756ee995a54839470df4e9a346d70e6422",
+      "size": 66621
+    },
+    "assets/products/lasana.jpg": {
+      "sha256": "b32873f367b2d8b2cb9ab9bf7372ba3e9bb9ed86ddf93fb0ed9b7a6b19218284",
+      "size": 41495
+    },
+    "assets/products/latte.jpg": {
+      "sha256": "919b7bf264e1b284f8b5439dda7761f191985d21e2a4b321d7568494f48d6d9d",
+      "size": 16909
+    },
+    "assets/products/latte_caramelo.jpg": {
+      "sha256": "ead97ffa87f99a1376ce3bb38c274e159bd32a2571839b1df374b7ef3ae48895",
+      "size": 46508
+    },
+    "assets/products/latte_vainilla.jpg": {
+      "sha256": "7017e64df36485a44f51cc9c22eb73f1dcc843a1a3cd7a2a8e73115a3567e593",
+      "size": 21091
+    },
+    "assets/products/lavanderia.jpg": {
+      "sha256": "95e06ab757cacf8c0e8c2e1288d3a505a9709da090ab4a79dd6e527877a55bdb",
+      "size": 18014
+    },
+    "assets/products/lena.jpg": {
+      "sha256": "329adaa1356ab1450ac0f2e73c1c390df7577476355f1e12283a6608a34f35be",
+      "size": 39784
+    },
+    "assets/products/limonada.jpg": {
+      "sha256": "504f1d6428cbd276ea31e03e44fa462ec0e6e65b892490e29870e01589582710",
+      "size": 29384
+    },
+    "assets/products/limonada_yuzu.jpg": {
+      "sha256": "4825a192a5c0d6d24005cd372f0a609ae1996a5f7a725f42ad72345a62e4543f",
+      "size": 41475
+    },
+    "assets/products/lubina_horno.jpg": {
+      "sha256": "0884da7eae196449387ae3c24f8db5328157f57f3623c63885882f81a2083dfa",
+      "size": 43490
+    },
+    "assets/products/magdalena.jpg": {
+      "sha256": "b089f9c7729169e8c2595e1bcba53f0f8effc04aa812a880a95f2ee7e6242472",
+      "size": 78703
+    },
+    "assets/products/maki_atun.jpg": {
+      "sha256": "5a17df13b3454d5d6616351debdb4b7c6ab3af975e8411cd61d7bee2cd8210cc",
+      "size": 50621
+    },
+    "assets/products/maki_salmon.jpg": {
+      "sha256": "7a8a26a9dab42bf5ed23a9544f3fdfbf5bcae932884542164d07a203ed1a7c9b",
+      "size": 19357
+    },
+    "assets/products/manzanilla.jpg": {
+      "sha256": "c404593e103abe0ab570727b4a2b102914f1be6b6d7055ed07c0a6420e90e3cc",
+      "size": 26527
+    },
+    "assets/products/matcha_latte.jpg": {
+      "sha256": "cbc873940d2637978df6ad6dee05433d17e849c0ec7ea0af7212a15519c89461",
+      "size": 16927
+    },
+    "assets/products/menu_dia.jpg": {
+      "sha256": "4c0077782ce471b98aeb7b5eeee6251664c5bfbfd807da77b28ab2afc3f3d8de",
+      "size": 56450
+    },
+    "assets/products/menu_hamburguesa.jpg": {
+      "sha256": "cddd047fa522a8652292a99fad2ae3c1bcc857e19de65f68dc200eed9c681a27",
+      "size": 79101
+    },
+    "assets/products/menu_infantil.jpg": {
+      "sha256": "c9f3e1be4f9620bead0448b2eceafcb5b76efe86309c31efa5edb14f8ccdd386",
+      "size": 35450
+    },
+    "assets/products/menu_kebab.jpg": {
+      "sha256": "c2b3f092d8d3b2f33411c1818ebc2bf659475a406043f0ce4d09655fb74317df",
+      "size": 92037
+    },
+    "assets/products/merluza_plancha.jpg": {
+      "sha256": "498ed696b1cdfee1e71dae1325cf0f495de4685662fb7112382a5b86b407e361",
+      "size": 55684
+    },
+    "assets/products/mesa_dulce.jpg": {
+      "sha256": "3471295d395b08de1e3e6bc159fc4dfcfcaf9f2959ef5a433447fe4f9dce512c",
+      "size": 34066
+    },
+    "assets/products/mocha.jpg": {
+      "sha256": "aa5c11663b11c4dd207323f5d954c3a199fc0de227c9d0530c944282e5586237",
+      "size": 12729
+    },
+    "assets/products/mochi_helado.jpg": {
+      "sha256": "9cd7f748acd162564b6869e4c1d64c65d3b022eb3aae5c27ede1ecc487148317",
+      "size": 30366
+    },
+    "assets/products/mojito.jpg": {
+      "sha256": "79ce84a601c1a54e06531155fa643391ff03992d414ebf63b69e3639ffaad04b",
+      "size": 35902
+    },
+    "assets/products/muffin_arandanos.jpg": {
+      "sha256": "8177d9fe26c676c72c34f9645b4994d31e38b8784570407e3c2ced3af8d26709",
+      "size": 20363
+    },
+    "assets/products/muffin_chocolate.jpg": {
+      "sha256": "67b1a677927f1ca0f03034c614e7b4003d78ca12b5adb4b45ec361d89b011633",
+      "size": 63507
+    },
+    "assets/products/nachos_queso.jpg": {
+      "sha256": "dc190e92cb99756d9760a931651a7ebd683905f092abdf7ad0cdbff4988d2ba8",
+      "size": 33194
+    },
+    "assets/products/napolitana_chocolate.jpg": {
+      "sha256": "cb190651110794855dba6f81421d0f272035565d4465c116e0e8a20870775754",
+      "size": 40525
+    },
+    "assets/products/nigiri_anguila.jpg": {
+      "sha256": "f9704fc24dff89fbb06650c4d0069127f3ed29debc9476cbbcad33313496c084",
+      "size": 30927
+    },
+    "assets/products/nigiri_atun.jpg": {
+      "sha256": "8e1ad9b83cc651e95948e6f0273717a0681bc7bee8636b27f81347360c3ce50f",
+      "size": 30243
+    },
+    "assets/products/nigiri_gamba.jpg": {
+      "sha256": "84208a499b15676359837b705437442af8c03bd402fca18ca727da5525a01428",
+      "size": 25949
+    },
+    "assets/products/nigiri_pulpo.jpg": {
+      "sha256": "c6c8df06bedaa981c7523ba47eeb677fa33cf3e1454a7ed789689a57c182eb0b",
+      "size": 33706
+    },
+    "assets/products/nigiri_salmon.jpg": {
+      "sha256": "cba1f3895b085f45dc9f79f2ff8421fe861da72005329108be6beda1ff30ef32",
+      "size": 55769
+    },
+    "assets/products/nuggets.jpg": {
+      "sha256": "b2a083bae862d27b7b0ebbd3b4d701a55c67203c6adeca465a2f1b11ad0377ef",
+      "size": 59789
+    },
+    "assets/products/pad_thai.jpg": {
+      "sha256": "cffa299f479b9cdeb28443e2633fa150968be236a1d7ec83f1b311f526b0ad5f",
+      "size": 30938
+    },
+    "assets/products/paella_marisco.jpg": {
+      "sha256": "99d57db5937c7ef564dfd5ae824df4b9d62c2b16b30f565d13f4474a143c9e4f",
+      "size": 76984
+    },
+    "assets/products/paella_mixta.jpg": {
+      "sha256": "ddcec16cda7835e9513d3fdf8859a047c74b3f85cf69f176d67d6d3b2839c45e",
+      "size": 54156
+    },
+    "assets/products/paella_valenciana.jpg": {
+      "sha256": "5772ca2cc4940462bb39184294b96082da94f4aed8e0afc76b07ea5fa4d75789",
+      "size": 81895
+    },
+    "assets/products/pale_ale.jpg": {
+      "sha256": "24ceecff7373ac432f89f3ef4a9c91431f4336d3dfbc2f2c7e23e2098c011056",
+      "size": 8122
+    },
+    "assets/products/palmera_chocolate.jpg": {
+      "sha256": "384ce535a604937d37a1b26b81305d35eea77e7815a457218e0822cac839a6f6",
+      "size": 39530
+    },
+    "assets/products/pan_ajo.jpg": {
+      "sha256": "53d953fe5e6477e4b43caaed792c686e3ded8d870e7fef77f91aa973146c17aa",
+      "size": 55310
+    },
+    "assets/products/pan_centeno.jpg": {
+      "sha256": "a523326f8e859c39b38609dab87e273c0ae1add5c63b8b4418b19c7f351d2a57",
+      "size": 35475
+    },
+    "assets/products/pan_integral.jpg": {
+      "sha256": "d2a462d7d1ae39e17f8fad7e92c5e1ec50c89f3fc1389d0d5f0fcb64674f0c89",
+      "size": 20670
+    },
+    "assets/products/pan_pita.jpg": {
+      "sha256": "175f9e5c5b762d2fbfac5bf076ea045f3d8331577ab7704f72ce24edb28a3075",
+      "size": 28623
+    },
+    "assets/products/pan_semillas.jpg": {
+      "sha256": "55874b61ec0f891f9cf4f2456a6ca42e2298b5a1ad6c2408ea75f8ad645781cd",
+      "size": 49469
+    },
+    "assets/products/panna_cotta.jpg": {
+      "sha256": "f84d2e152e5ffb2d2431446c07cef3710dd5bd761ae90efdf0b5ec3f827dc9d7",
+      "size": 42205
+    },
+    "assets/products/pasta_bolonesa.jpg": {
+      "sha256": "b9dbba1d062c7f8e2a9bf3b41abf1706567bb9cbe8043f9ecc24ffc417d62190",
+      "size": 34205
+    },
+    "assets/products/pasta_carbonara.jpg": {
+      "sha256": "f5aeb8b65a66223d86088485c23d42b44bc34e1bbdd9556a12123f3dbd24540c",
+      "size": 54470
+    },
+    "assets/products/pasta_pesto.jpg": {
+      "sha256": "bb0e232a556bede8b8f6a4c247d5ffec98fef9b94160bb79ce7fe73dec4ded41",
+      "size": 38289
+    },
+    "assets/products/patatas_bravas.jpg": {
+      "sha256": "f3f621390e925b5f07f1ea06ceb997a1d7eb057cd96814e1a6e1169e94e07073",
+      "size": 58042
+    },
+    "assets/products/patatas_fritas.jpg": {
+      "sha256": "a43793b6470521d102a7d1b80cc542e33070410ba88433513a5a739ebf11b6ba",
+      "size": 34032
+    },
+    "assets/products/perrito_clasico.jpg": {
+      "sha256": "a852d942c0ec18b4885d0c9cfaf4e6ff823d38850e739a09ea4dd8707031d538",
+      "size": 70224
+    },
+    "assets/products/pescaito_frito.jpg": {
+      "sha256": "d16c7157e7396bcb710798017b8f528235c28ac0e36488f9cb62da54b67d57c2",
+      "size": 58779
+    },
+    "assets/products/pincho_tortilla.jpg": {
+      "sha256": "00fb9e3a8f5b00f77c19c2ac34853f6fb976e98ba1cae7b4fda81d2ba24ee701",
+      "size": 51124
+    },
+    "assets/products/pizza_4_quesos.jpg": {
+      "sha256": "68ea01c7b5da5410116cf97f5a9a96bf8f6ac106efe0f49b0926992edd2296a9",
+      "size": 39939
+    },
+    "assets/products/pizza_barbacoa.jpg": {
+      "sha256": "243ceaa299424f76f60c07fb9b558e68d88eab897b2f2a7dccc27fcdd431e63d",
+      "size": 95193
+    },
+    "assets/products/pizza_calzone.jpg": {
+      "sha256": "2393c4b45fe51a01661be4f22b4ff5e60ee8ea6ee4191311ce3a3a8d21cb6819",
+      "size": 73690
+    },
+    "assets/products/pizza_caprichosa.jpg": {
+      "sha256": "6e06e87c224b27600cd0aba6d5e6434cf946d314d9a2997e288094393c5b5137",
+      "size": 62435
+    },
+    "assets/products/pizza_carbonara.jpg": {
+      "sha256": "c00210acd5ccd53a5e9c6332b78f18668f05d5404ac90e0aff01592b7e865947",
+      "size": 52796
+    },
+    "assets/products/pizza_diavola.jpg": {
+      "sha256": "bd00c422d3c151e19252a10f7e09cbfee9dc48cdf57711359131fb2256bfd980",
+      "size": 40802
+    },
+    "assets/products/pizza_familiar.jpg": {
+      "sha256": "6ba701ba31016f0b1a496884feb60178f49f1522750aae06dbc3225521953070",
+      "size": 49318
+    },
+    "assets/products/pizza_hawaiana.jpg": {
+      "sha256": "85f3430fcd17aaaad54398120387bd283d60103e3f453f4a249b9bd06b1d5c4d",
+      "size": 59331
+    },
+    "assets/products/pizza_jamon_queso.jpg": {
+      "sha256": "ea8ddcd6c3d253f590c1baeeb0bf725e91c46d668ea12a4012115de048559244",
+      "size": 62653
+    },
+    "assets/products/pizza_margarita.jpg": {
+      "sha256": "cb4c5d4d5fae6ba7bedcb3902f26e27c5690df1cd344c6b8a39ede3ac919f20c",
+      "size": 60326
+    },
+    "assets/products/pizza_pepperoni.jpg": {
+      "sha256": "25b865c30c6a1c7bd021c9110f51f3a71a273c3a3c93fe41bc795819ac4ecaf1",
+      "size": 105512
+    },
+    "assets/products/pizza_vegetal.jpg": {
+      "sha256": "8476a22eeecffd1541afe1f7f4664dac5756a6d3ae81182d4820f964a4a405fd",
+      "size": 50999
+    },
+    "assets/products/plato_falafel.jpg": {
+      "sha256": "468ab6a2eff68a5d11ab4e173794db4d98c3f195e7d27fe1c40d64273842c5b5",
+      "size": 76103
+    },
+    "assets/products/plato_kebab.jpg": {
+      "sha256": "fdf77980353db1c327b935042c9b573656c9ec3678f8ca2f1f46878360e35d57",
+      "size": 47480
+    },
+    "assets/products/poke_atun.jpg": {
+      "sha256": "33253dcdcd1e1ad55b475bb8e1e6cdb1b872e7d2cfa804ec3089f56970caf8d1",
+      "size": 48772
+    },
+    "assets/products/poke_salmon.jpg": {
+      "sha256": "a5c168465c7af4741898b3b0049aaa24860ec869ac32ef3db6daaecc49c9c4aa",
+      "size": 35759
+    },
+    "assets/products/poleo_menta.jpg": {
+      "sha256": "e582fdebe654e912d6cad0616e035d6deb7880cd521f44c1c3d9631c453c8a01",
+      "size": 40734
+    },
+    "assets/products/pollo_asado.jpg": {
+      "sha256": "20c8d6cb88549edbbb24418019578394572b9e22795583c4483fecc510e447b0",
+      "size": 72023
+    },
+    "assets/products/pollo_teriyaki.jpg": {
+      "sha256": "a20920ed34cda82e451ab6448b82877a6ecd583f8adb7b95d6b3733b19836a25",
+      "size": 83317
+    },
+    "assets/products/polo_artesano.jpg": {
+      "sha256": "d29dd0f6c575417df09c58fa1a0e86aad2ecc1a0b6cc8ddb82673baf2479c75b",
+      "size": 13212
+    },
+    "assets/products/pulpo_gallega.jpg": {
+      "sha256": "934dbd4612e20e431bf9ddc0a2d9b62439308358212da34ae35c052e6b2e2e58",
+      "size": 72316
+    },
+    "assets/products/racion_cachopo.jpg": {
+      "sha256": "78f3d3b1e569ef21f4544cc97b8c54d0755d20d57fd7a63b7be36b1f2e8f337b",
+      "size": 56260
+    },
+    "assets/products/racion_croquetas.jpg": {
+      "sha256": "87f53e210023f8745579e84f3e70b31ecaca633e63c18e3bc5a122f8f1aedca7",
+      "size": 38236
+    },
+    "assets/products/racion_gambas.jpg": {
+      "sha256": "3d505bdc0362cd54c2df0bf45e0e54c58f25208a27d9f7c4b995e9de6f13a5e3",
+      "size": 17219
+    },
+    "assets/products/racion_patatas_bravas.jpg": {
+      "sha256": "f3f621390e925b5f07f1ea06ceb997a1d7eb057cd96814e1a6e1169e94e07073",
+      "size": 58042
+    },
+    "assets/products/racion_rabas.jpg": {
+      "sha256": "fd1a30e65853671e13272266478081cad467b7ee4d1095bf52c5ea27b6936acb",
+      "size": 19786
+    },
+    "assets/products/ramen_cerdo.jpg": {
+      "sha256": "3efc45fe0259f4949445c31339e59479818cffd417e7bfdf2013280923c4ffc0",
+      "size": 37232
+    },
+    "assets/products/ramen_pollo.jpg": {
+      "sha256": "5b0fd6c975cc64add90debe0c00e7e40ee334f50725ffa13f4f2b07a23b2c332",
+      "size": 60223
+    },
+    "assets/products/ron_cola.jpg": {
+      "sha256": "3b03b3149977b51b2dd5c8db5a0c2b03faf3625bde442954dae14eef2c2a66f4",
+      "size": 45441
+    },
+    "assets/products/sake_copa.jpg": {
+      "sha256": "604aa17b75825d0677402e6662f57014a44b12a6781142c4acb1d740504ee9a4",
+      "size": 32249
+    },
+    "assets/products/salmon_teriyaki.jpg": {
+      "sha256": "cbe6f93948ab831f512af327668c259a23f803af6d5b5f220769a37779ee5999",
+      "size": 29236
+    },
+    "assets/products/salmorejo.jpg": {
+      "sha256": "f028bf14925cd85211547dae90e1b9eb932cee184e3405f5e8acc3d840ba88a0",
+      "size": 39977
+    },
+    "assets/products/salsa_extra.jpg": {
+      "sha256": "eb7b26b6e2177f843067c1370c5ff39d3f117041d3f10a1c60b68cc388af89e2",
+      "size": 50233
+    },
+    "assets/products/salsa_yogur.jpg": {
+      "sha256": "c0ddf507e02e3f88fd2dc8a01171a92ece4593168bedf7a1a614436e4371e5b4",
+      "size": 82171
+    },
+    "assets/products/sandwich_mixto.jpg": {
+      "sha256": "09235c9204161e02fa938853381350fffd01af0ada2198ec56a44eedeb48b0b7",
+      "size": 57667
+    },
+    "assets/products/sandwich_vegetal.jpg": {
+      "sha256": "fadac48d412ec9beb86009acc9a0ad75adf37535b1d84f0e2e57fe04d71a1c9f",
+      "size": 24432
+    },
+    "assets/products/sangria_jarra.jpg": {
+      "sha256": "eeb6b900fd590824451709f570483ff25b3ee9c36ea144812b5d36bb7e628eeb",
+      "size": 34572
+    },
+    "assets/products/sashimi_atun.jpg": {
+      "sha256": "1e9efe552b585afb4b7349fb47893bc85036ec7b6cdb43d60aae4d8ec8b15289",
+      "size": 46959
+    },
+    "assets/products/sashimi_mixto.jpg": {
+      "sha256": "ce3d084a103c35f774f986c6f6e6f6e2d83884c65c775af655fcaf5c1d53bf91",
+      "size": 15474
+    },
+    "assets/products/sashimi_salmon.jpg": {
+      "sha256": "6bb50d07b732b5bb708a1bbcae328b4b06025f611b5ff214069c221a27b64bc6",
+      "size": 24790
+    },
+    "assets/products/secreto_iberico.jpg": {
+      "sha256": "7fcf14d38b270f552c276184bbd415364112a8a5cc3b6b0060ac115cc56abcd6",
+      "size": 62494
+    },
+    "assets/products/shawarma_plato.jpg": {
+      "sha256": "fb9425e5f45208ea124ec82b6b475d302530cd25939b5dd19b6c32995c17c7cc",
+      "size": 34285
+    },
+    "assets/products/sidra_botella.jpg": {
+      "sha256": "bb04f0949a733410e78bd377eda1be351633eb48e6ca5a8be5d9828c0ab0b6fa",
+      "size": 16712
+    },
+    "assets/products/sidra_natural.jpg": {
+      "sha256": "bd172d6dc9be3879f14d728a47faaf9027406589c00fa61aa3a772f50e7b2bab",
+      "size": 58351
+    },
+    "assets/products/smoothie_fresa.jpg": {
+      "sha256": "873f4eddcd704c4707ef61ce9a1e8319815aacd7f00049b2547dd609c6087d13",
+      "size": 48700
+    },
+    "assets/products/smoothie_mango.jpg": {
+      "sha256": "063867444c9900c16a6c88b1ecd5c8ddbab417d42ffb006c18f6a2d5dc9f8228",
+      "size": 38818
+    },
+    "assets/products/solomillo.jpg": {
+      "sha256": "4174b15ed68ef673a1a68df2f97769d2359fd314f0b52dd9bcebd0898f676a68",
+      "size": 30261
+    },
+    "assets/products/sopa_miso.jpg": {
+      "sha256": "9e7032a1fa46dbde17ae9597dba4d40d2ff5009caeef00206c7c15c318133213",
+      "size": 25888
+    },
+    "assets/products/spicy_salmon_roll.jpg": {
+      "sha256": "d02c964e23411f05ab02da88f727ac3bcec14241b2377beedbf340b6e3dbe6e0",
+      "size": 83197
+    },
+    "assets/products/spring_rolls.jpg": {
+      "sha256": "4fb5745a56101f188d961ebcb792ab6da9a114c9e8a7a68b552b984da8f2c32f",
+      "size": 44656
+    },
+    "assets/products/sprite.jpg": {
+      "sha256": "7ba510e6d8da80e3c57adb87bd023c5ed149e119f80cfa86347d74b9c9a84ca0",
+      "size": 18873
+    },
+    "assets/products/stout.jpg": {
+      "sha256": "da3eb8fb440b4bfca464677e4b3d3b875a4d7c751bb85af9e59c3a915e375366",
+      "size": 86510
+    },
+    "assets/products/suite.jpg": {
+      "sha256": "3a6dd1cf622c3644afe5e796091a8ba4707030e35eecfe753ed6dab557d4069c",
+      "size": 24570
+    },
+    "assets/products/tabla_embutidos.jpg": {
+      "sha256": "ea205dcfdee14b78dc78f50af434f699eb4be2d3e30c64541de38ceb8f501222",
+      "size": 69913
+    },
+    "assets/products/tabla_iberica.jpg": {
+      "sha256": "6fdd10d7fb9d06319382f040143fcab354baa02c398d462f133e00d75e6f49f4",
+      "size": 35422
+    },
+    "assets/products/tabla_mixta.jpg": {
+      "sha256": "624974d995dec2e1f0f1d3cef460c66c71f96bf59e0b742e019f8c19aa37780c",
+      "size": 75701
+    },
+    "assets/products/tabla_quesos.jpg": {
+      "sha256": "8710e8b2bf9a2560fbe5db091c1d7eea97a4a792d8585d39bb41fab40d16877b",
+      "size": 66049
+    },
+    "assets/products/tacos.jpg": {
+      "sha256": "87298f54dcea7ea73a00b447d6e65396426c493373f4c68f3fe5be8e461a0276",
+      "size": 45368
+    },
+    "assets/products/tapa_aceitunas.jpg": {
+      "sha256": "16a4ea5152e301110f3043446cfbd7ca9d0d5c5089e01fc9bea7070094ccab59",
+      "size": 66920
+    },
+    "assets/products/tapa_bravas.jpg": {
+      "sha256": "11ae55bd118ea70348034c7eb135963cb9464bb176020525f4f54fcfd6cb6efe",
+      "size": 57882
+    },
+    "assets/products/tapa_croquetas.jpg": {
+      "sha256": "5858ec29e69eaa96c31154c78962fd8da4cd696bc000936f30117964b27efa5c",
+      "size": 30338
+    },
+    "assets/products/tapa_jamon.jpg": {
+      "sha256": "0b75b89e95b51e6c64bb435e394b269022ddffb7c20e1f204ea57ce78ba7c227",
+      "size": 91546
+    },
+    "assets/products/tapa_queso.jpg": {
+      "sha256": "2cf7c0fed2b0b5568de9d99802a008337da2957a37a2cfab2301cf8ca544d4c2",
+      "size": 53570
+    },
+    "assets/products/tapa_queso_manchego.jpg": {
+      "sha256": "2cf7c0fed2b0b5568de9d99802a008337da2957a37a2cfab2301cf8ca544d4c2",
+      "size": 53570
+    },
+    "assets/products/tapa_tortilla.jpg": {
+      "sha256": "fc2eeb4d468df9eeb693edc756cf13d6a7aa1bf5f1e69881a865cbd7faa52013",
+      "size": 56676
+    },
+    "assets/products/tarrina_1l.jpg": {
+      "sha256": "e57da2d275b13d6fca5a025c8b70d6b2221c4f365df99b9f6a1638f877607126",
+      "size": 42568
+    },
+    "assets/products/tarrina_500ml.jpg": {
+      "sha256": "1515471da0e42527a7a8b19c06b42db7e70b86381ddf2d518bd5e6796b39e90d",
+      "size": 43561
+    },
+    "assets/products/tarta_chocolate.jpg": {
+      "sha256": "768a8861079184e0e6b4eb83fb75459a42c2c0c704a36a336449ed1e63c7ebe5",
+      "size": 40110
+    },
+    "assets/products/tarta_manzana.jpg": {
+      "sha256": "826d94a30ee009d356f7c8896def53c9262fda66cae5905aada6cb40b98ab136",
+      "size": 72072
+    },
+    "assets/products/tarta_matcha.jpg": {
+      "sha256": "e851c882b5648a09dd2b206144bcd2358a7008b405d1ac68738da6c79839b0be",
+      "size": 83847
+    },
+    "assets/products/tarta_queso.jpg": {
+      "sha256": "b761bc446c7b9621867398f82f006e59c10f594d047e502aef7528f87d370ee2",
+      "size": 21239
+    },
+    "assets/products/tarta_zanahoria.jpg": {
+      "sha256": "bd527d26c8e1ba34a97fe44c40cf3ec8e510710d779e1b4cedc8328dbb01ae6a",
+      "size": 55387
+    },
+    "assets/products/te_negro.jpg": {
+      "sha256": "bb349ecfa8cbd167921925e31efdc01f2f92ec1ef3f9e223963f14d14bab506e",
+      "size": 22390
+    },
+    "assets/products/te_rojo.jpg": {
+      "sha256": "a320ba35ee50a3b98bcf12bca80d7904c023161514df554432e3972660fd94cb",
+      "size": 13846
+    },
+    "assets/products/te_turco.jpg": {
+      "sha256": "642d182543f85af525d7c830940a87ac9a0e550c29bd848df3a5e1550dd64806",
+      "size": 23932
+    },
+    "assets/products/te_verde.jpg": {
+      "sha256": "20c22684435c62e72d203bea389556dc55e71018d802687869992a389a5bf6f2",
+      "size": 18803
+    },
+    "assets/products/te_verde_japones.jpg": {
+      "sha256": "20c22684435c62e72d203bea389556dc55e71018d802687869992a389a5bf6f2",
+      "size": 18803
+    },
+    "assets/products/tempura_gambas.jpg": {
+      "sha256": "6ec3d9a7a039799b79b1ad9c474641d818b6357ad691ff3b9b084b7641f10316",
+      "size": 36880
+    },
+    "assets/products/tempura_helado.jpg": {
+      "sha256": "47f6c6d969f680b8ff487b4cf2c5a83491cbf688c3f6e03f4b59fd8d216f7cf9",
+      "size": 15678
+    },
+    "assets/products/tempura_roll.jpg": {
+      "sha256": "43b2d299c81c4f77de5cc88bc2fcbff50a2fd43f2e5cb16a35668f680fdc642a",
+      "size": 54307
+    },
+    "assets/products/tempura_verduras.jpg": {
+      "sha256": "453eacf5e68079bef792ccab63642fd3ad054c0fdcd0d3ba4276906ab3f3787a",
+      "size": 58263
+    },
+    "assets/products/tinto_verano.jpg": {
+      "sha256": "2a6d78ca317ada09d19f3732374468b9a4455618fc73db7b733e2ff36a117f5b",
+      "size": 19865
+    },
+    "assets/products/tiramisu.jpg": {
+      "sha256": "c85adb3eb830b760b75f55d376efa4c47709be6dcd8c27d12cf34d0dade5ea71",
+      "size": 50037
+    },
+    "assets/products/tonica.jpg": {
+      "sha256": "a52acb9ff6df4c0418ab9398f3c27340ba124f6bac0641c8e19e58230ce2f81c",
+      "size": 45160
+    },
+    "assets/products/tortilla_espanola.jpg": {
+      "sha256": "fc2eeb4d468df9eeb693edc756cf13d6a7aa1bf5f1e69881a865cbd7faa52013",
+      "size": 56676
+    },
+    "assets/products/tostada_aguacate.jpg": {
+      "sha256": "9025b1841112a70cb47129f1be9dbb5c20da7cfa195ca57069e70dfc8fd92535",
+      "size": 20654
+    },
+    "assets/products/tostada_mantequilla.jpg": {
+      "sha256": "cc8e0df87ab08b2637cde45ba453494a8846c76523acf98ffbb6544167298880",
+      "size": 75055
+    },
+    "assets/products/tostada_tomate.jpg": {
+      "sha256": "6a0b5a4445d5b5a0c1e6b79fb8f7acf8c5102f5e3f4563e1e3fd95d86751f73d",
+      "size": 63418
+    },
+    "assets/products/uramaki_aguacate.jpg": {
+      "sha256": "129590284c7ba66c1941315faa1ba65e8807fb87e953ece196f0c04f96015bbc",
+      "size": 42013
+    },
+    "assets/products/vegetariano_roll.jpg": {
+      "sha256": "eb8716101d4f6b9026fbca906a51e4485d0033413cfd2eaa77594c280f5199e4",
+      "size": 40371
+    },
+    "assets/products/verduras_plancha.jpg": {
+      "sha256": "894eb2f7ad0b020234461e9d4143ff43ce18a12642535b816450284e188a5cfa",
+      "size": 40323
+    },
+    "assets/products/vermut.jpg": {
+      "sha256": "864cbb7b38453658846bbcaf2a1e2835ffeab6ba13632d5c74a1732c72aed0ec",
+      "size": 108769
+    },
+    "assets/products/vino_blanco_copa.jpg": {
+      "sha256": "65f0b9e52007785c01e45f135a153646d68d7820d05673510b47f1897ac71bd7",
+      "size": 55870
+    },
+    "assets/products/vino_rosado_copa.jpg": {
+      "sha256": "61bab53d4eda9c1c9b0e4bd91e05467990c5259073e099ccff68daf88da9a128",
+      "size": 24259
+    },
+    "assets/products/vino_tinto_copa.jpg": {
+      "sha256": "06e176c1ce1a6bc74d5d197fec42d3ef1f6fda1151547f4ed49a8f09eb29ac38",
+      "size": 57938
+    },
+    "assets/products/wheat_beer.jpg": {
+      "sha256": "bec7dd8b19c52f23ca0ff8f0b6b089c98fa8064543d323f57b48e7d3e53dbddc",
+      "size": 68789
+    },
+    "assets/products/whisky_cola.jpg": {
+      "sha256": "b5d2a950e602fd2615a27b5ccfb187aae905319937b8565c731219d18d681b54",
+      "size": 30351
+    },
+    "assets/products/wrap_falafel.jpg": {
+      "sha256": "8ad40b01efb6b46da0b97ab3d513962b2df93b41273a800c8805206254193d6c",
+      "size": 32068
+    },
+    "assets/products/wrap_pollo.jpg": {
+      "sha256": "f176ab6055206a4c351f92041dd4cc61e89ab55376936835c2d082863dbd8390",
+      "size": 50104
+    },
+    "assets/products/wrap_vegetal.jpg": {
+      "sha256": "5d57f5f4cd954a14da986d0ed98ac0749b64b6ff80a5f0d6f2f77ff50a7aab12",
+      "size": 31476
+    },
+    "assets/products/zumo_naranja.jpg": {
+      "sha256": "a868490d9ade841ff4bfe7e2c14ad7b7b115d2c330bdeaafbe1f72d663fcf7c0",
+      "size": 14998
+    },
+    "assets/products/zumo_pina.jpg": {
+      "sha256": "a86523e11545c9df4d90bf432998f0169e144e5285be3e3cf610a0cc9ea996c6",
+      "size": 17880
+    },
+    "assets/products/zumo_tomate.jpg": {
+      "sha256": "7af7137725a77127dd3334d0c22d35c07b18e1711744ca523b7bca413b9fc8a3",
+      "size": 14464
+    },
+    "business_sectors.json": {
+      "sha256": "14311e417d14cb51bb30cc1ee89e4eef338d6e5e4896b9bdeeb76989f9c5b7ab",
+      "size": 5170
+    },
+    "business_types/S01_hospitality/bakery.json": {
+      "sha256": "393f5f282ed04c8fe191dc3089453d50a117ef60605fe6cbbe07b92e05b15bcb",
+      "size": 1018
+    },
+    "business_types/S01_hospitality/bar.json": {
+      "sha256": "81fe43853bfac11ecfbbb361c9bf930b0ad74b28bf84def54d2648ec068440c7",
+      "size": 970
+    },
+    "business_types/S01_hospitality/bar_restaurant.json": {
+      "sha256": "e6fa2d0ff37ba84321000d19b2de902d725d9f35101f797ba1194788cb9a1b23",
+      "size": 794
+    },
+    "business_types/S01_hospitality/beach_bar.json": {
+      "sha256": "3817af9013d97cd98f476d469494fb9e0e24dbdf679de0578738146ee870bf7b",
+      "size": 839
+    },
+    "business_types/S01_hospitality/camping.json": {
+      "sha256": "0e4ad8792c857d1178436dfbcb088490849efc6cb9e885d20003cdabc60fa3fb",
+      "size": 1002
+    },
+    "business_types/S01_hospitality/catering.json": {
+      "sha256": "2a49847fd1f1bf831d97b1d903e4a9d08a4ac38bfc1cca98a05395c5265f5a34",
+      "size": 1006
+    },
+    "business_types/S01_hospitality/cider_house.json": {
+      "sha256": "5dc05cc13ece8ec20a6148753fa5aa438a4ba3814818609fb925549935e8c173",
+      "size": 1088
+    },
+    "business_types/S01_hospitality/coffee_shop.json": {
+      "sha256": "9e7826bb0b6d5f3b9b557cf634259d190b43182cca5bcbd155cffa91b8e73305",
+      "size": 969
+    },
+    "business_types/S01_hospitality/dark_kitchen.json": {
+      "sha256": "3e542d26a3347461aff54545f91e01c6cbbdef1194a28217e3c9406c7df072b0",
+      "size": 1108
+    },
+    "business_types/S01_hospitality/fast_food.json": {
+      "sha256": "b8205a7b0812aab77842b14b4df7c0d256ee1fb183a2a2550b69dd1d7fef82d7",
+      "size": 1166
+    },
+    "business_types/S01_hospitality/food_truck.json": {
+      "sha256": "c9544ca2204ac533190c47cab121bb79a897267d91533b095e9dbce8dc4e087f",
+      "size": 731
+    },
+    "business_types/S01_hospitality/hostel.json": {
+      "sha256": "603ac1fd6c20896bdcdad505e5cbdcabf6ca78b81aed791b70be50717269ee9c",
+      "size": 851
+    },
+    "business_types/S01_hospitality/hotel.json": {
+      "sha256": "c4785fc765ae9da8c907b8b6b4f676706a03c1affded57892f8fa16807ee5ed0",
+      "size": 1233
+    },
+    "business_types/S01_hospitality/ice_cream_shop.json": {
+      "sha256": "dbd81f8a4ff355afaf41994765ac741e00862bcad4896b6ff4f388a3d7bd44f6",
+      "size": 776
+    },
+    "business_types/S01_hospitality/kebab_shop.json": {
+      "sha256": "e97d751feafd2fd7b6fae06dc08f14b23f38905dbadb3f8013dcd483ffc46507",
+      "size": 1002
+    },
+    "business_types/S01_hospitality/nightclub.json": {
+      "sha256": "16e60b73b93d70faea0493c1d6336c8cc6fae905fdd192b3ba1d57b07c63404b",
+      "size": 1158
+    },
+    "business_types/S01_hospitality/pizzeria.json": {
+      "sha256": "c306febb221cd4ce5885a880f84ab0d624bee712fe1ee8fcaab35bc5a3418ce0",
+      "size": 1213
+    },
+    "business_types/S01_hospitality/restaurant.json": {
+      "sha256": "8e7c5e7b146e71c008bcc3f543f6ea902552fa92c09049469f67ab0323896ae1",
+      "size": 1359
+    },
+    "business_types/S01_hospitality/sushi_restaurant.json": {
+      "sha256": "99538d59fc537dd917037e3a9798bd6f1bcf70e283e12aded8be1dcb2f387657",
+      "size": 1251
+    },
+    "business_types/S01_hospitality/wine_bar.json": {
+      "sha256": "9ef4e0e4ff0b8ec0deb58f34da4cbdc7249f2ed395128388d29e0ceeacef6e80",
+      "size": 1014
+    },
+    "business_types/S02_retail/bazaar.json": {
+      "sha256": "03679b92afbabe868a4e0b90322bdc847a1409fdda13891fb80596e566ad3d7e",
+      "size": 825
+    },
+    "business_types/S02_retail/bicycle_shop.json": {
+      "sha256": "25025cd91e8fbc506dc87fdbb367e1e7d6d375bbc3bc5cf4dda02245329e2d5b",
+      "size": 870
+    },
+    "business_types/S02_retail/bookshop.json": {
+      "sha256": "7a0f760093c45770619b94f1b9abfdfcb90bd559f0d6fc85bdcaa3634ceb9161",
+      "size": 814
+    },
+    "business_types/S02_retail/butcher_shop.json": {
+      "sha256": "c2b4e160b33736d034843779376b807c8bed00f98c1ca72c91ee7bfa8da1b893",
+      "size": 819
+    },
+    "business_types/S02_retail/cash_carry.json": {
+      "sha256": "ab1480d32f800771ac535fda0555ff7c0352fa70ac45bb4a8451cfd4d97b7566",
+      "size": 868
+    },
+    "business_types/S02_retail/clothing.json": {
+      "sha256": "dcd161b45ea9fff167d3a0a874cac88e12f597f7d7d5f4bec1c3617632f21895",
+      "size": 982
+    },
+    "business_types/S02_retail/cosmetics.json": {
+      "sha256": "4e8c31b0aa5d9fc5e6633d28fa2c3dcf958defeb0ee3bda7122a1c181cb55533",
+      "size": 839
+    },
+    "business_types/S02_retail/electronics.json": {
+      "sha256": "401aaaa0c266e9a7610c1d2c1708c223a9a26ca4feb4fc81c0313e52ba1a2679",
+      "size": 877
+    },
+    "business_types/S02_retail/fish_shop.json": {
+      "sha256": "473f07b4cffb7d0d7830e251f2288def70f6e5a536220d7e5ce4b04e0fe7ac9b",
+      "size": 805
+    },
+    "business_types/S02_retail/florist.json": {
+      "sha256": "33449feac8814574a25431ee023ecb485db03ea6987059648ebda509cdeb42c0",
+      "size": 830
+    },
+    "business_types/S02_retail/fruit_shop.json": {
+      "sha256": "b0cd5d76934230607f77d2f4fab0855a5414eae4122ac37df08be660f2369a0c",
+      "size": 822
+    },
+    "business_types/S02_retail/furniture.json": {
+      "sha256": "7f5206e831066df499630fbceaad970dbb8565aa7012fb9b6216e30926e7be0c",
+      "size": 879
+    },
+    "business_types/S02_retail/gas_station.json": {
+      "sha256": "2969bbd8010d5b0d6506498765a0a098ac59e9938911b398b3903f2ddf185459",
+      "size": 851
+    },
+    "business_types/S02_retail/gourmet.json": {
+      "sha256": "7d0e017eecd796dfde917420293b0eaa957e192e15edd07665451ad3d0fe4bf3",
+      "size": 844
+    },
+    "business_types/S02_retail/grow_shop.json": {
+      "sha256": "a19c72d6ac277eeeaf6e6118ae4b17f950ce4d71f2f198daff8eaffa15686a8a",
+      "size": 800
+    },
+    "business_types/S02_retail/hardware_store.json": {
+      "sha256": "c15dd1c0a03b898cef488c1192fc9fd0ae58149d37e3854bbb2e3a52aae7ac01",
+      "size": 845
+    },
+    "business_types/S02_retail/jewelry.json": {
+      "sha256": "61b9ee8beaaa136cfd2f6577c7cc6f73be9489bad7ec2726edd85adea2a342d5",
+      "size": 863
+    },
+    "business_types/S02_retail/musical_instruments.json": {
+      "sha256": "b9970e67626935ef960671d8cf9ba81f5b68a4c367e295b8743f1cbb4820f085",
+      "size": 891
+    },
+    "business_types/S02_retail/office_supplies.json": {
+      "sha256": "2864a2a3a4d9643fb47ea63f6013c17879da295dbcffda30be52ddee20acc224",
+      "size": 883
+    },
+    "business_types/S02_retail/optician.json": {
+      "sha256": "69032d10dde69d90cfcb10473f52f008f392548b646a6a2fcd14c5e13de85790",
+      "size": 828
+    },
+    "business_types/S02_retail/pet_shop.json": {
+      "sha256": "99a233fe9be1a5f5b11544a51b967fa76d1317c2ba8e298715013ce15665f46c",
+      "size": 809
+    },
+    "business_types/S02_retail/second_hand.json": {
+      "sha256": "4b67b616f41a503d365d159a509bdcd720e0a0e9dd512c9dbeeaf567e7815425",
+      "size": 856
+    },
+    "business_types/S02_retail/sex_shop.json": {
+      "sha256": "e418269f1df4d86f1b2a4a533b2e4f339863e2747dd6d51fcb81d5747c9aa04d",
+      "size": 795
+    },
+    "business_types/S02_retail/sports_shop.json": {
+      "sha256": "f7da11d2920d2354ccf11f6e4b54390d1aa993dc23da9cc81b2c9ba10a85cea1",
+      "size": 837
+    },
+    "business_types/S02_retail/street_market.json": {
+      "sha256": "9807d6313cb0f1f4017e2d9053f595c18e069d936fb1164d5a557e2e25ed6daa",
+      "size": 829
+    },
+    "business_types/S02_retail/supermarket.json": {
+      "sha256": "132dbf03524b4f6c185bcb7ea93b03786cb37bf2028c5d79c5914b0053b0abab",
+      "size": 1056
+    },
+    "business_types/S02_retail/telecom_shop.json": {
+      "sha256": "5409527fbc3910c6e35338259a59b79860118952ebc46a772d70954ce7a65521",
+      "size": 857
+    },
+    "business_types/S02_retail/tobacco_shop.json": {
+      "sha256": "5205687b4aa02952a8b587d5ff3253d6c437c96d5cb13a6293455de096902daa",
+      "size": 844
+    },
+    "business_types/S02_retail/toy_shop.json": {
+      "sha256": "75c584a9c2604105079c18748951ac6408194d5dcd799c8ca1d7efe10e23036c",
+      "size": 843
+    },
+    "business_types/S02_retail/vape.json": {
+      "sha256": "ecfdff754451a1590d87e923551cea38faf36b16afbed43ab5e7e30479ac65bd",
+      "size": 821
+    },
+    "business_types/S02_retail/wine_shop.json": {
+      "sha256": "59a97d9c484c74c2bd47c821169860e84ecb627d6b4c675e789628fcd77fef42",
+      "size": 832
+    },
+    "business_types/S03_pharmacy/cbd_shop.json": {
+      "sha256": "1137ac378a7c4c865d0663088b5a9b9923f0b0a5f610fe4703b2af525a716cd4",
+      "size": 833
+    },
+    "business_types/S03_pharmacy/health_store.json": {
+      "sha256": "4f9fc08d33c9f0c1fef9e3a60cf4987dccfac90ed36ac23963bf86c55e5226a3",
+      "size": 853
+    },
+    "business_types/S03_pharmacy/nutrition_shop.json": {
+      "sha256": "e7428e7207f61e9443b8145ae1a2f5cb63ea7497b485648c849373c785ab8640",
+      "size": 843
+    },
+    "business_types/S03_pharmacy/orthopedics.json": {
+      "sha256": "49c32490303782544f3e8710221a15406e8a0054ad4c69f031dd3e0c47ce9284",
+      "size": 866
+    },
+    "business_types/S03_pharmacy/pharmacy.json": {
+      "sha256": "230843d22b8f13567cf8e89037fc506d12b31b9c19f071b9b0c5dafd8641b260",
+      "size": 902
+    },
+    "business_types/S04_personal_services/barber_shop.json": {
+      "sha256": "b1d6a5fae126038844bee0bf56714343e7683e1cf02e8d7b7106b8510ae229eb",
+      "size": 804
+    },
+    "business_types/S04_personal_services/beauty_center.json": {
+      "sha256": "09ac770935db4e699dd5777d37b196682900f1ae3ded2691816308b9f8daf433",
+      "size": 850
+    },
+    "business_types/S04_personal_services/dental_clinic.json": {
+      "sha256": "0a96ca4f929dc3f47a528ae45c51e5d0f3a8f8fb5361d1b283da91f67eb00207",
+      "size": 1035
+    },
+    "business_types/S04_personal_services/dog_grooming.json": {
+      "sha256": "f802821e52bad2ad98824d7f5c76794c02e3efa7099c677f3c4dc62cbf2163c5",
+      "size": 860
+    },
+    "business_types/S04_personal_services/gym.json": {
+      "sha256": "16b14b5983a601cc6fb94d63cd49b1dc21190aada290a90b38650b34c4625ce5",
+      "size": 891
+    },
+    "business_types/S04_personal_services/hair_salon.json": {
+      "sha256": "3757fcc7845ce57dae155eca034e86e20460036e29f80b2351074dd77de17989",
+      "size": 920
+    },
+    "business_types/S04_personal_services/laser_hair_removal.json": {
+      "sha256": "6584cf7d078232e3e6a30416cc1c153e869e1da270325ddcad37f7acbda1fa1f",
+      "size": 867
+    },
+    "business_types/S04_personal_services/laundry.json": {
+      "sha256": "f2378efa57cc2d2763bac50bc453c772b1d916737c99d1cece569c27f75e7e0d",
+      "size": 892
+    },
+    "business_types/S04_personal_services/medical_clinic.json": {
+      "sha256": "635ac7bf21453a650811241fb23882deded591e10739a758617663cef1d04957",
+      "size": 882
+    },
+    "business_types/S04_personal_services/nutrition.json": {
+      "sha256": "5bad6d79319c4de7711a04f4ae8705437acefc7e0f29b69d05de7947e889ade9",
+      "size": 846
+    },
+    "business_types/S04_personal_services/physiotherapy.json": {
+      "sha256": "af3a65f99a3b018b32b01ab615e37e6953c8af997c406da9d14f211e8aa645b3",
+      "size": 862
+    },
+    "business_types/S04_personal_services/pilates_yoga.json": {
+      "sha256": "59c473b6e84c625c257cbe90dc0aa9c2488fce7836a475b67f3c9a181df1ede4",
+      "size": 852
+    },
+    "business_types/S04_personal_services/podiatry.json": {
+      "sha256": "c89a66038890d677770dba5a0340d7d30e3a39cdcbdd6a08ad65e5f393d5fc06",
+      "size": 823
+    },
+    "business_types/S04_personal_services/psychology.json": {
+      "sha256": "892e9428131f7288be66b59a2e75347ac07c1169b0c720a42ee43de1365f2730",
+      "size": 831
+    },
+    "business_types/S04_personal_services/spa.json": {
+      "sha256": "52d0d53f9a813b0c7882e80eeae581a03811f8bde17c21bb223ea100139242b5",
+      "size": 808
+    },
+    "business_types/S04_personal_services/speech_therapy.json": {
+      "sha256": "e9e18c59bb2a893058ecacdda35d4193e921e0bea7c7c588fc459be1ba0bf86b",
+      "size": 840
+    },
+    "business_types/S04_personal_services/tattoo_studio.json": {
+      "sha256": "8d6d4e6e95b09f8df0f31a22a1091a7379bc93cb456349bf9b0760f4dc6113b0",
+      "size": 855
+    },
+    "business_types/S04_personal_services/vet_clinic.json": {
+      "sha256": "d5e46e95fe211e49e7f429cd4985e206a67a0b3be2eba4aa54aef30b1aa205e0",
+      "size": 871
+    },
+    "business_types/S05_professional_services/admin_agency.json": {
+      "sha256": "4582aaa968393147d6986ae45f60055d68323b46a77e3c741de37c1c0ea39744",
+      "size": 846
+    },
+    "business_types/S05_professional_services/appraisal.json": {
+      "sha256": "9c3ae05ba98619da7dffd2c936fa1ad10973ea8ea19e7e66c99a7e4860031372",
+      "size": 838
+    },
+    "business_types/S05_professional_services/cleaning_company.json": {
+      "sha256": "e00e68e43e87ed915451487779bd657fc68151c543e26867f7cbc6fa58ee65ae",
+      "size": 866
+    },
+    "business_types/S05_professional_services/consulting.json": {
+      "sha256": "489428404f8914cc3a066d84b186c0a6183ded01fd020570ae097424d34be00e",
+      "size": 843
+    },
+    "business_types/S05_professional_services/design_studio.json": {
+      "sha256": "b6b1591a65fc19c2d5b378991801c6385732dbb12cce0a9ef9e05fe724b801fb",
+      "size": 850
+    },
+    "business_types/S05_professional_services/ett.json": {
+      "sha256": "069752da8d3db9ecdcb4d8e27853a8491357a8f64591343127927e858227befa",
+      "size": 831
+    },
+    "business_types/S05_professional_services/insurance.json": {
+      "sha256": "e7c3e8766b916fcc18cbfcc842f09177a9cde582ee957bceacb5f83d650ab6a9",
+      "size": 839
+    },
+    "business_types/S05_professional_services/landscaping.json": {
+      "sha256": "00bb03873457a2f26e2dcc344bb17cf521c23fd485d8eee4acfad911f4ac794d",
+      "size": 857
+    },
+    "business_types/S05_professional_services/law_firm.json": {
+      "sha256": "5b885b043f79d1e8a291b8c14f31b376a83b380e375ecfa32a685ba6f31e9957",
+      "size": 849
+    },
+    "business_types/S05_professional_services/maintenance_company.json": {
+      "sha256": "71a9823d9071a3ccf684aaf6e34336f7e1f77e022db86f0e6410a4f410b1661f",
+      "size": 921
+    },
+    "business_types/S05_professional_services/marketing.json": {
+      "sha256": "1f717e0bc93fb102a8e1a65dea9f50058f431f202f5c7fef738bb319cb97dd44",
+      "size": 843
+    },
+    "business_types/S05_professional_services/notary.json": {
+      "sha256": "de293f45ebf0c89a874f3d01aa2b14fb1a2d7a82d0c06c7627e8a258e68e05be",
+      "size": 826
+    },
+    "business_types/S05_professional_services/pest_control.json": {
+      "sha256": "c373527bd88ccb3971380545ce950169754268aaec779463024a79ec05956bca",
+      "size": 871
+    },
+    "business_types/S05_professional_services/real_estate.json": {
+      "sha256": "b36b7ed773d2659c1c9792b45f612a6bc20a6ef0cfa0a9d2121e4ea79b40c65c",
+      "size": 836
+    },
+    "business_types/S05_professional_services/security_company.json": {
+      "sha256": "c737fabbe265b5ab3048da38b436e4db55a865d3698d14754c47de5e34440116",
+      "size": 887
+    },
+    "business_types/S05_professional_services/tax_advisory.json": {
+      "sha256": "f98dc42005642ac5cae3cd3518ca5cf25b3fb3ce5ad13746b60a76db8c4cb8b4",
+      "size": 868
+    },
+    "business_types/S05_professional_services/translation_agency.json": {
+      "sha256": "f449042058f9e4b1064d17bdc7221b8d54e13fb8a0a699b9903cde68d4312276",
+      "size": 847
+    },
+    "business_types/S06_education/academy.json": {
+      "sha256": "f6a2ee5a1b819852d3b67dd021fb503c122a710db92185ddb4f1d208b8a86f7d",
+      "size": 872
+    },
+    "business_types/S06_education/dance_school.json": {
+      "sha256": "162780423c5811bcc185ea7893c2bf9120bb68ea6216a4dea9fea678a6143d81",
+      "size": 839
+    },
+    "business_types/S06_education/driving_school.json": {
+      "sha256": "33727e5130f33f16b0c2996372b9543d7424a834da28c860ff3202222031d124",
+      "size": 836
+    },
+    "business_types/S06_education/exam_prep.json": {
+      "sha256": "e141929cd7aff8df68f79757f469a80f59c999a6cf16cb16e5cfc134be4771c2",
+      "size": 829
+    },
+    "business_types/S06_education/language_school.json": {
+      "sha256": "41b61e4c514df78447d436a787a75a3b52e107c4fc60d98b2e80e65a03fbd054",
+      "size": 860
+    },
+    "business_types/S06_education/music_school.json": {
+      "sha256": "f96ef5fd4a3d55e90b272772f62c16076480aadfbd606811dc36442649655c45",
+      "size": 831
+    },
+    "business_types/S06_education/nursery.json": {
+      "sha256": "21e7b29b544e3aab85a980e95d636086305c43159a0e1b1066f8ba10c11ab2c5",
+      "size": 822
+    },
+    "business_types/S07_construction/carpentry.json": {
+      "sha256": "192f0d44815c869a83699e6f02be10cfe71588e20c72b185374ef98a59f0a1f3",
+      "size": 878
+    },
+    "business_types/S07_construction/construction_company.json": {
+      "sha256": "24b3097aa2dd9c6772637243b9323961b05f170ec635e9e9545fdf456f442a34",
+      "size": 895
+    },
+    "business_types/S07_construction/elevator_company.json": {
+      "sha256": "99deb0111a008b66b8175998e7c1ee9d69aa77ce9331b185ace43dcf49725725",
+      "size": 886
+    },
+    "business_types/S07_construction/installer.json": {
+      "sha256": "8fa991db7f3485ae33485674a39bfd5e5909a2e9b148776d520768e792f44377",
+      "size": 889
+    },
+    "business_types/S07_construction/locksmith.json": {
+      "sha256": "7496f124abeeea135c9ecdb7dfc0241122af80d7ced44eb0ea4cef84b7eb0d9e",
+      "size": 843
+    },
+    "business_types/S07_construction/renovation.json": {
+      "sha256": "74a5b319194002a1ac4c2e03abde47572702acd0a7f487767c9a4c5785d8f99e",
+      "size": 847
+    },
+    "business_types/S07_construction/solar_energy.json": {
+      "sha256": "64f6b103cfe09ea6f49db1e41b43b88bf6150e10daa2c7c2a68e70f6cb6da9ed",
+      "size": 879
+    },
+    "business_types/S08_manufacturing/auto_repair.json": {
+      "sha256": "844378fb577b8cc73239db538689c173c2f2fa5f69e8e52b93055963f834c523",
+      "size": 854
+    },
+    "business_types/S08_manufacturing/canning.json": {
+      "sha256": "6f56ee16d75e64336d53104e6e49420887f0757556f858786cfa7bcd13189f09",
+      "size": 859
+    },
+    "business_types/S08_manufacturing/cheese_dairy.json": {
+      "sha256": "0c3a139327d330cc0bd4f72891044e23f4649bc54213623970cd9457ada740c2",
+      "size": 876
+    },
+    "business_types/S08_manufacturing/craft_brewery.json": {
+      "sha256": "c0003b7b31a5000c2c7ed67ca9fad9f214f99138916f11d34dbdf71a8da41d86",
+      "size": 880
+    },
+    "business_types/S08_manufacturing/distillery.json": {
+      "sha256": "18712e90797100e99cd3ca8492963d719b224662d1d9caf36d752f6467837672",
+      "size": 864
+    },
+    "business_types/S08_manufacturing/electronics_repair.json": {
+      "sha256": "52147f363fc1a62c61481df45652fedec9dd3c55c6adeabd0508b3f38da0dfaf",
+      "size": 866
+    },
+    "business_types/S08_manufacturing/factory.json": {
+      "sha256": "29dce6b5e11c4202a9d37a35d98321dc2857ca5068c74e538ed4b091902ea08e",
+      "size": 861
+    },
+    "business_types/S08_manufacturing/industrial_bakery.json": {
+      "sha256": "de11207af7ef51e5db795314814246b5b34fae80b5e4285fce68fea8fb95671f",
+      "size": 879
+    },
+    "business_types/S08_manufacturing/laboratory.json": {
+      "sha256": "9c1acf6e27d3deb8a363d32c1f84e1bb72372178ca9e9148a35af968910aac5d",
+      "size": 830
+    },
+    "business_types/S08_manufacturing/printing.json": {
+      "sha256": "57fdbf530f302c5553483832eb1cc220b577fe8c45eee8b7bd8fc9b3aa0c2904",
+      "size": 854
+    },
+    "business_types/S08_manufacturing/textile_workshop.json": {
+      "sha256": "c57c5ac303ea97e3c5c51d79b320c2429b1bb12e1c62839fdc2b9ef124e1d6d6",
+      "size": 858
+    },
+    "business_types/S08_manufacturing/winery.json": {
+      "sha256": "80a0e96b2c743d2342eb9af02401c28f8058b73a99f401144b692dcbb873d83c",
+      "size": 870
+    },
+    "business_types/S09_transport/courier.json": {
+      "sha256": "be783757e8bf84c3b87d2b21a4e94a14082d4f239687fe0fdf1cec537035b7c1",
+      "size": 832
+    },
+    "business_types/S09_transport/logistics_3pl.json": {
+      "sha256": "5d4c0d1d0773682c35c8eac1e8f1e08804fecf5f02e8bf9c56dc6ad73c9efb54",
+      "size": 843
+    },
+    "business_types/S09_transport/moving_company.json": {
+      "sha256": "2af10a6c03a512b8718e5206016f8b6dc72670cfbc32fe114ad70fa6845e9a5b",
+      "size": 865
+    },
+    "business_types/S09_transport/parking.json": {
+      "sha256": "dc81c4dac11ffb8c19e5da1a4409e7735c6be858d196dd57d8e92d281b3f19c9",
+      "size": 832
+    },
+    "business_types/S09_transport/vehicle_rental.json": {
+      "sha256": "db6ac32b6f479030704931664952d7e639afaafbc111c4c12555103ea1994b95",
+      "size": 857
+    },
+    "business_types/S10_agriculture/aquaculture.json": {
+      "sha256": "6c42680cbd5d55695975340886129c46190c17c49252ead9284df02d1b4e34d7",
+      "size": 859
+    },
+    "business_types/S10_agriculture/beekeeping.json": {
+      "sha256": "8a0c6aa5f609ea339cc8654d90449be0f3df78b53d75c9d9baf9c1b48766099c",
+      "size": 866
+    },
+    "business_types/S10_agriculture/cooperative.json": {
+      "sha256": "58b2364751cc62c2bd54fd2474eec2d6d0ae7b70a48d945961c018a50a258d7b",
+      "size": 871
+    },
+    "business_types/S10_agriculture/farm.json": {
+      "sha256": "99cd025322a2fb7a6615ad00b268736d53c1a9c892ec708499d68909e9143b4b",
+      "size": 832
+    },
+    "business_types/S10_agriculture/garden_center.json": {
+      "sha256": "17f2a8c0a9abdb223003f09c8feaa4cf9503ea0c01c94be11ed69c029f0869b5",
+      "size": 893
+    },
+    "business_types/S10_agriculture/livestock.json": {
+      "sha256": "f1bf7d1f30451b0ba8c5424f0ac43d7635ad2191fb7a270691b39fece170d189",
+      "size": 851
+    },
+    "business_types/S11_entertainment/arcade.json": {
+      "sha256": "2fd9a4c089da4f0655943d827a83cdea6cb6760b70bd6548ef48668022a1fa29",
+      "size": 839
+    },
+    "business_types/S11_entertainment/casino.json": {
+      "sha256": "11183ca2ca9972322b4d5b46f421324f7afed875c54ad820befbab7e2fc3a6a1",
+      "size": 857
+    },
+    "business_types/S11_entertainment/cinema.json": {
+      "sha256": "913ebed9c4e24dd6bfa77ead53a066a87492d176314ed82bce09258a09f28d22",
+      "size": 822
+    },
+    "business_types/S11_entertainment/concert_hall.json": {
+      "sha256": "f3ee903963913af373efbb95f5bc314c3dc99b6c03cf7326e6fb04b5b3a63041",
+      "size": 855
+    },
+    "business_types/S11_entertainment/escape_room.json": {
+      "sha256": "f151107dc2f944c78cbf0cfe3fa8f244c54029140da23e48c92d9c1113469c42",
+      "size": 844
+    },
+    "business_types/S11_entertainment/event_venue.json": {
+      "sha256": "6b3e1456172eff3fd9c7f40541116254c54991efdfccf6417a552db5a2210702",
+      "size": 861
+    },
+    "business_types/S11_entertainment/sports_club.json": {
+      "sha256": "81ecd17092629a6ab1dec26f3597b317a0b9a78734ea70e0ec801a02dbe1f291",
+      "size": 834
+    },
+    "business_types/S11_entertainment/theme_park.json": {
+      "sha256": "02898b440b4e53a08f67b9a882128d578a17cd4e40ce216c19219a06b044f48a",
+      "size": 836
+    },
+    "business_types/S11_entertainment/water_park.json": {
+      "sha256": "4542b77c6616278b5c3296d830518db8a35384961183b1429dfbc3593c993e0d",
+      "size": 846
+    },
+    "business_types/S12_nonprofit/brotherhood.json": {
+      "sha256": "d21f91c8878b9ec4179424d580aafa7ed4cca057aae6ef99cb1e827dcacf45ae",
+      "size": 827
+    },
+    "business_types/S12_nonprofit/nonprofit.json": {
+      "sha256": "0097acaa3cea865c720d0fcd27c72d1ad8435612318e12df69c918c80c83bf06",
+      "size": 831
+    },
+    "business_types/S12_nonprofit/professional_college.json": {
+      "sha256": "d6edef5d49169122187cb070b63933e02dddcd70dffd3cc12cf25500b99e57cf",
+      "size": 871
+    },
+    "business_types/S12_nonprofit/property_management.json": {
+      "sha256": "dde69d240e292cdc9b289c266b3a78044734292b54bebd307eee6d1ca1fd64df",
+      "size": 844
+    },
+    "business_types/S12_nonprofit/social_club.json": {
+      "sha256": "b6029813fa99ffd943b673d3bdc3b80472763be2ad7fa5107318123f5dc400b9",
+      "size": 829
+    },
+    "business_types/S13_technology/hosting.json": {
+      "sha256": "661270fe4c575b54f953702ab084c206e19489fb97cabba3c7fd694b3db854be",
+      "size": 851
+    },
+    "business_types/S13_technology/msp.json": {
+      "sha256": "ccde1b326bb0aba1c7b3b160e0eae75fbe13a65060ec85a5542006e42453790b",
+      "size": 810
+    },
+    "business_types/S13_technology/software.json": {
+      "sha256": "1cffbee6f7a43a36cb748d9869533ac5faccb3ed6b66877c7311a65dac6421fa",
+      "size": 841
+    },
+    "business_types/S13_technology/telecom.json": {
+      "sha256": "c3915c368d3acc8b546fb711ffd77d6572d6a0c3fd9fd6be488c5a1252060fa9",
+      "size": 874
+    },
+    "business_types/S13_technology/web_agency.json": {
+      "sha256": "b95cb0b0b7c09a41da8f93f9cf44551a5e568c5b7d90abd38cb4b907dd9807d7",
+      "size": 840
+    },
+    "business_types/S14_travel/tour_guide.json": {
+      "sha256": "a45eeaedbd1ec47feed0dc7575c83aea0d82a123b7075b4a2d13cc6156b4b02b",
+      "size": 798
+    },
+    "business_types/S14_travel/tour_operator.json": {
+      "sha256": "04e40dd2a63a551b86502edd7af830287871ff966e65f14c01d29ab7269f14b8",
+      "size": 854
+    },
+    "business_types/S14_travel/travel_agency.json": {
+      "sha256": "127167cf8db03fbfc27aa7e2935c81433628354629d5abdab3b9aae83a3f898a",
+      "size": 834
+    },
+    "business_types/S15_financial/currency_exchange.json": {
+      "sha256": "a3f925520b9b256c4b1cc4105288bc8ae9b299a602c528e8daa36ec6e2e45bc6",
+      "size": 843
+    },
+    "business_types/S15_financial/debt_collection.json": {
+      "sha256": "8fed84492c7cdaa97b7110cb190625b80fd75addfb64c2ecea3b937a5f69a7f1",
+      "size": 830
+    },
+    "business_types/S15_financial/insurance_brokerage.json": {
+      "sha256": "ff8e725bca2d1dfeae72c07b5ecebe23b998879a446d9437e8aeaba954432e04",
+      "size": 853
+    },
+    "business_types/S15_financial/pawnshop.json": {
+      "sha256": "001a8cf88e805a8dca074223a93027a693235afb905a091a4562b6fd60d6d8fc",
+      "size": 802
+    },
+    "business_types/S16_media/art_gallery.json": {
+      "sha256": "0c94b7bc4e629c637ff68d80cb83f2d42297bc98b8b84be964a579ebf456815f",
+      "size": 868
+    },
+    "business_types/S16_media/editorial.json": {
+      "sha256": "b036d28f841626e19b4e89b4bbfc87dd208643b8253494952bb48aa15880e9c0",
+      "size": 895
+    },
+    "business_types/S16_media/event_production.json": {
+      "sha256": "0873c4fb32676916f96fe86160a51ea7e0271402655b9f46d5e76c07cee003e5",
+      "size": 866
+    },
+    "business_types/S16_media/photography.json": {
+      "sha256": "2f972177fd64cecf2487d0d52fcacdcfe8a09380adc52acb9c4ee9b5afef79ad",
+      "size": 866
+    },
+    "business_types/S16_media/recording_studio.json": {
+      "sha256": "324c762d36576e37d54cab152a9a02ebe2ac5065cd658f8eaa40f630158ba063",
+      "size": 869
+    },
+    "business_types/S16_media/video_production.json": {
+      "sha256": "4c10e5e2e00421a6751b40cf49f06e13bb6e2f61d232d2b6ed5c637f1de00bc4",
+      "size": 865
+    },
+    "business_types/S17_rental/bike_rental.json": {
+      "sha256": "c132638701d1a06dfd195c3a50c24a42e27610644aa2f77d8cbde576e8c16db7",
+      "size": 864
+    },
+    "business_types/S17_rental/boat_rental.json": {
+      "sha256": "5ffc8a622f1d2d834c42e9b22783b7ded999f97509a317f2e141b45cce0e06f5",
+      "size": 846
+    },
+    "business_types/S17_rental/costume_rental.json": {
+      "sha256": "99398a92373a0907c58af5e3e4f1f3121a66d0bac8dd889edd1f617e35de4801",
+      "size": 852
+    },
+    "business_types/S17_rental/event_equipment_rental.json": {
+      "sha256": "ebcd64895a6920448bbe77039ca9f19129a148f3b428b89ca65c8d6f171c803c",
+      "size": 908
+    },
+    "business_types/S17_rental/machinery_rental.json": {
+      "sha256": "2a85c85eccfa384034cdbfa48d02b5893b9bc016f41f75b156bbba812d286b47",
+      "size": 869
+    },
+    "business_types/S17_rental/self_storage.json": {
+      "sha256": "7e317d67f7c5a787b918b92bfb915f3a4dbbc51adbc081834a8c2a3be500af18",
+      "size": 848
+    },
+    "business_types/S18_maritime/fishing_company.json": {
+      "sha256": "e866e2a0fd1ec417c0d816eafe6dd446ac4a015fe82dfaab93812c3262d66630",
+      "size": 841
+    },
+    "business_types/S18_maritime/marina.json": {
+      "sha256": "cc99d4e501c3a72061216dcf93fc1d2d7aada12a95e03bcfd0beb9653437be0b",
+      "size": 841
+    },
+    "business_types/S18_maritime/nautical_workshop.json": {
+      "sha256": "b5bdb7eaf1077de3e40d123960271734754c24a5c2b1bec1fbb67dab97059305",
+      "size": 871
+    },
+    "business_types/S19_funeral/cemetery.json": {
+      "sha256": "bb4472cb5a0f70871a356dff538f0e390abd660987230ccff7a892148e29ab5c",
+      "size": 834
+    },
+    "business_types/S19_funeral/funeral_home.json": {
+      "sha256": "6a51ab7eb4c506b5f6f1bd06ab275e8452afb437763ddb3dd29ca3350e59bb1f",
+      "size": 871
+    },
+    "business_types/S19_funeral/mortuary.json": {
+      "sha256": "d53b77ac0b6166d194e22fc4f8e43a7f0795291d4336e15a1b5790c2ad899059",
+      "size": 821
+    },
+    "business_types/S20_coworking/business_center.json": {
+      "sha256": "6b8aabfd1316bc8ce6856588f42029890de27f4dcc310b93bd3294985c1a9948",
+      "size": 878
+    },
+    "business_types/S20_coworking/coworking.json": {
+      "sha256": "acbc0a62c1e8df5a16339d2656838708bfecf9b0472492d1c31025bc4f528a13",
+      "size": 867
+    },
+    "business_types/S20_coworking/rehearsal_studio.json": {
+      "sha256": "706d9116415f067049811675f62c947f5adc12a8592b0e2875ef17f929100cd2",
+      "size": 857
+    },
+    "business_types/index.json": {
+      "sha256": "95db066aef79e3876c1282c7cabe4d34cab5c278b0ce04f7d94f04aea11faa97",
+      "size": 38973
+    },
+    "functional_units.json": {
+      "sha256": "0ba47a7c31f657dffd9e63a2f2807b8e1441d2964407b1627e892a1ef18cac51",
+      "size": 4327
+    },
+    "i18n/es.json": {
+      "sha256": "d6dae69022b4f2c0abd66e5a156075c27377ffdb84cc1dfb7237db6233927556",
+      "size": 58237
+    },
+    "products/es/bakery.json": {
+      "sha256": "4b4888a5d2256acabe4e26121b9c7eaab0bdb72486d22801ad01e56fcd96590e",
+      "size": 9310
+    },
+    "products/es/bar.json": {
+      "sha256": "3556bc8095d82f8aa74841c1d3342645cac98b8d6b0dce3a369a008e50a526b2",
+      "size": 12484
+    },
+    "products/es/bar_restaurant.json": {
+      "sha256": "1c0f866592a6af8504160941610aa058325a69ea7e53756f59014fe844bd51b8",
+      "size": 12108
+    },
+    "products/es/beach_bar.json": {
+      "sha256": "79a4f606967bc9c1f80271d31178af5ca2106bbe6c783dc8261d0e75ef69960f",
+      "size": 11574
+    },
+    "products/es/camping.json": {
+      "sha256": "d4a9ce946a05eeab20725ce30cae88f83f2b6738cb700b718a977e475a321d69",
+      "size": 11574
+    },
+    "products/es/catering.json": {
+      "sha256": "a606fc179d6fa2369b09b9da209958955912bee82435ada08b03002f9fbe72a8",
+      "size": 11228
+    },
+    "products/es/cider_house.json": {
+      "sha256": "da38052a0a27ee51071e4aa3dcd2111b6ad6e95a292a5aae05b738ce42859d38",
+      "size": 11414
+    },
+    "products/es/coffee_shop.json": {
+      "sha256": "97f002fe210a8cfbca7977a6e6bf10835716dde9c72f543fccb54fbd051fab27",
+      "size": 9108
+    },
+    "products/es/dark_kitchen.json": {
+      "sha256": "b37d8cc8b5b7f8077e34ec87ba8b7ef1ea713a88b34d753e10db07d6a2169d2f",
+      "size": 7957
+    },
+    "products/es/fast_food.json": {
+      "sha256": "d323e189374fc56ba458e7f7fbee73882b1c79e08f3c506a40fdf6fb0d27c679",
+      "size": 8732
+    },
+    "products/es/food_truck.json": {
+      "sha256": "d33d274cec89a7734a96ee2a44899a79c0afef66e88ffb5e265eb2c8fc42ef85",
+      "size": 6848
+    },
+    "products/es/hostel.json": {
+      "sha256": "e5c354654d98abce108f5f75b1ae9b42b64f223f4b6d595a159c56e7039c7859",
+      "size": 6831
+    },
+    "products/es/hotel.json": {
+      "sha256": "ac6cb90ff70edf93f75dff082de7d985972ea13471720d394f42809213c54cc7",
+      "size": 11971
+    },
+    "products/es/ice_cream_shop.json": {
+      "sha256": "6010a42b0e6191cacc396b7523f3710178f687f140cca91984644fe17197a33a",
+      "size": 8481
+    },
+    "products/es/kebab_shop.json": {
+      "sha256": "1c3d0cc6b1f67fe74d200f40a414be1a1e4ff3c54595f5780e909648712a3568",
+      "size": 5412
+    },
+    "products/es/nightclub.json": {
+      "sha256": "b3d1be7aa4848fcd07517e1053b36995721497d1a724c00ea869307dea3c8e23",
+      "size": 11835
+    },
+    "products/es/pizzeria.json": {
+      "sha256": "2fef16910b738d9b67f22325a70700cc5ca0b4e0b47ac9fada012f135b2a441c",
+      "size": 8514
+    },
+    "products/es/restaurant.json": {
+      "sha256": "10986dff5f9ab8c54d3a51d566cc13ed2c21118de289aeb7aed397852e23c8ab",
+      "size": 15669
+    },
+    "products/es/sushi_restaurant.json": {
+      "sha256": "870456c69f062950f3584aa926a0ac0390608d89b7b1f1ccfb27df8ac824eda8",
+      "size": 9278
+    },
+    "products/es/wine_bar.json": {
+      "sha256": "c21fba9f0e21b272a7465694ae05e9cc6abbfa872a057698a57dbde39cdce091",
+      "size": 11888
+    },
+    "transversal_models.json": {
+      "sha256": "1c6434f31d6012c961225bbadadeddf967ec58c6aeb29961a9e36d17b0805306",
+      "size": 4373
+    }
+  }
 }

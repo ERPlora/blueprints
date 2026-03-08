@@ -1,0 +1,387 @@
+{
+  "version": "1.0.0",
+  "business_type": "coffee_shop",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "slug": "cafes",
+      "name": "Cafes",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "slug": "especialidades",
+      "name": "Especialidades",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "slug": "tes_infusiones",
+      "name": "Tes e infusiones",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "slug": "frios",
+      "name": "Bebidas frias",
+      "icon": "snow-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "slug": "bolleria",
+      "name": "Bolleria y dulces",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "slug": "sandwiches",
+      "name": "Sandwiches y tostas",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    },
+    {
+      "slug": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 7
+    }
+  ],
+  "products": [
+    {
+      "name": "Espresso",
+      "category": "cafes",
+      "price": 1.5,
+      "tax_class_hint": "reduced",
+      "code": "espresso",
+      "image": "espresso.jpg"
+    },
+    {
+      "name": "Americano",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_class_hint": "reduced",
+      "code": "americano",
+      "image": "americano.jpg"
+    },
+    {
+      "name": "Cafe con leche",
+      "category": "cafes",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "cafe_con_leche",
+      "image": "cafe_con_leche.jpg"
+    },
+    {
+      "name": "Cortado",
+      "category": "cafes",
+      "price": 1.6,
+      "tax_class_hint": "reduced",
+      "code": "cortado",
+      "image": "cortado.jpg"
+    },
+    {
+      "name": "Capuchino",
+      "category": "cafes",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "capuchino",
+      "image": "capuchino.jpg"
+    },
+    {
+      "name": "Doble espresso",
+      "category": "cafes",
+      "price": 2.2,
+      "tax_class_hint": "reduced",
+      "code": "doble_espresso",
+      "image": "doble_espresso.jpg"
+    },
+    {
+      "name": "Descafeinado",
+      "category": "cafes",
+      "price": 1.6,
+      "tax_class_hint": "reduced",
+      "code": "descafeinado",
+      "image": "descafeinado.jpg"
+    },
+    {
+      "name": "Latte",
+      "category": "especialidades",
+      "price": 3.2,
+      "tax_class_hint": "reduced",
+      "code": "latte",
+      "image": "latte.jpg"
+    },
+    {
+      "name": "Flat white",
+      "category": "especialidades",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "flat_white",
+      "image": "flat_white.jpg"
+    },
+    {
+      "name": "Mocha",
+      "category": "especialidades",
+      "price": 3.8,
+      "tax_class_hint": "reduced",
+      "code": "mocha",
+      "image": "mocha.jpg"
+    },
+    {
+      "name": "Latte de vainilla",
+      "category": "especialidades",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "latte_vainilla",
+      "image": "latte_vainilla.jpg"
+    },
+    {
+      "name": "Latte de caramelo",
+      "category": "especialidades",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "latte_caramelo",
+      "image": "latte_caramelo.jpg"
+    },
+    {
+      "name": "Cafe bombon",
+      "category": "especialidades",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "cafe_bombom",
+      "image": "cafe_bombom.jpg"
+    },
+    {
+      "name": "Chai latte",
+      "category": "especialidades",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "chai_latte",
+      "image": "chai_latte.jpg"
+    },
+    {
+      "name": "Matcha latte",
+      "category": "especialidades",
+      "price": 4.0,
+      "tax_class_hint": "reduced",
+      "code": "matcha_latte",
+      "image": "matcha_latte.jpg"
+    },
+    {
+      "name": "Te negro",
+      "category": "tes_infusiones",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "te_negro",
+      "image": "te_negro.jpg"
+    },
+    {
+      "name": "Te verde",
+      "category": "tes_infusiones",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "te_verde",
+      "image": "te_verde.jpg"
+    },
+    {
+      "name": "Te rojo",
+      "category": "tes_infusiones",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "te_rojo",
+      "image": "te_rojo.jpg"
+    },
+    {
+      "name": "Manzanilla",
+      "category": "tes_infusiones",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "manzanilla",
+      "image": "manzanilla.jpg"
+    },
+    {
+      "name": "Poleo menta",
+      "category": "tes_infusiones",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "poleo_menta",
+      "image": "poleo_menta.jpg"
+    },
+    {
+      "name": "Cafe helado",
+      "category": "frios",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "cafe_helado",
+      "image": "cafe_helado.jpg"
+    },
+    {
+      "name": "Frappuccino",
+      "category": "frios",
+      "price": 4.5,
+      "tax_class_hint": "reduced",
+      "code": "frappuccino",
+      "image": "frappuccino.jpg"
+    },
+    {
+      "name": "Smoothie de fresa",
+      "category": "frios",
+      "price": 4.5,
+      "tax_class_hint": "reduced",
+      "code": "smoothie_fresa",
+      "image": "smoothie_fresa.jpg"
+    },
+    {
+      "name": "Smoothie de mango",
+      "category": "frios",
+      "price": 4.5,
+      "tax_class_hint": "reduced",
+      "code": "smoothie_mango",
+      "image": "smoothie_mango.jpg"
+    },
+    {
+      "name": "Limonada natural",
+      "category": "frios",
+      "price": 3.0,
+      "tax_class_hint": "reduced",
+      "code": "limonada",
+      "image": "limonada.jpg"
+    },
+    {
+      "name": "Croissant",
+      "category": "bolleria",
+      "price": 2.0,
+      "tax_class_hint": "reduced",
+      "code": "croissant",
+      "image": "croissant.jpg"
+    },
+    {
+      "name": "Croissant de chocolate",
+      "category": "bolleria",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "croissant_chocolate",
+      "image": "croissant_chocolate.jpg"
+    },
+    {
+      "name": "Muffin de chocolate",
+      "category": "bolleria",
+      "price": 2.8,
+      "tax_class_hint": "reduced",
+      "code": "muffin_chocolate",
+      "image": "muffin_chocolate.jpg"
+    },
+    {
+      "name": "Muffin de arandanos",
+      "category": "bolleria",
+      "price": 2.8,
+      "tax_class_hint": "reduced",
+      "code": "muffin_arandanos",
+      "image": "muffin_arandanos.jpg"
+    },
+    {
+      "name": "Tarta de zanahoria",
+      "category": "bolleria",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "tarta_zanahoria",
+      "image": "tarta_zanahoria.jpg"
+    },
+    {
+      "name": "Cookie",
+      "category": "bolleria",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "cookie",
+      "image": "cookie.jpg"
+    },
+    {
+      "name": "Brownie",
+      "category": "bolleria",
+      "price": 3.0,
+      "tax_class_hint": "reduced",
+      "code": "brownie",
+      "image": "brownie.jpg"
+    },
+    {
+      "name": "Cheesecake",
+      "category": "bolleria",
+      "price": 4.0,
+      "tax_class_hint": "reduced",
+      "code": "cheesecake",
+      "image": "cheesecake.jpg"
+    },
+    {
+      "name": "Tostada con tomate",
+      "category": "sandwiches",
+      "price": 2.8,
+      "tax_class_hint": "reduced",
+      "code": "tostada_tomate",
+      "image": "tostada_tomate.jpg"
+    },
+    {
+      "name": "Tostada de aguacate",
+      "category": "sandwiches",
+      "price": 4.5,
+      "tax_class_hint": "reduced",
+      "code": "tostada_aguacate",
+      "image": "tostada_aguacate.jpg"
+    },
+    {
+      "name": "Sandwich mixto",
+      "category": "sandwiches",
+      "price": 4.0,
+      "tax_class_hint": "reduced",
+      "code": "sandwich_mixto",
+      "image": "sandwich_mixto.jpg"
+    },
+    {
+      "name": "Sandwich vegetal",
+      "category": "sandwiches",
+      "price": 4.5,
+      "tax_class_hint": "reduced",
+      "code": "sandwich_vegetal",
+      "image": "sandwich_vegetal.jpg"
+    },
+    {
+      "name": "Bagel de salmon",
+      "category": "sandwiches",
+      "price": 5.5,
+      "tax_class_hint": "reduced",
+      "code": "bagel_salmon",
+      "image": "bagel_salmon.jpg"
+    },
+    {
+      "name": "Agua mineral",
+      "category": "refrescos",
+      "price": 1.8,
+      "tax_class_hint": "reduced",
+      "code": "agua_mineral",
+      "image": "agua_mineral.jpg"
+    },
+    {
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "price": 2.5,
+      "tax_class_hint": "reduced",
+      "code": "coca_cola",
+      "image": "coca_cola.jpg"
+    },
+    {
+      "name": "Zumo de naranja natural",
+      "category": "refrescos",
+      "price": 3.5,
+      "tax_class_hint": "reduced",
+      "code": "zumo_naranja",
+      "image": "zumo_naranja.jpg"
+    }
+  ]
+}

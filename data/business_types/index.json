@@ -149,6 +149,42 @@
       "is_combinable": true
     },
     {
+      "code": "pizzeria",
+      "sector": "hospitality",
+      "name": "Pizzeria",
+      "icon": "pizza-outline",
+      "color": "#e74c3c",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "coffee_shop",
+      "sector": "hospitality",
+      "name": "Coffee Shop",
+      "icon": "cafe-outline",
+      "color": "#6f4e37",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "sushi_restaurant",
+      "sector": "hospitality",
+      "name": "Sushi Restaurant",
+      "icon": "fish-outline",
+      "color": "#2ecc71",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "kebab_shop",
+      "sector": "hospitality",
+      "name": "Kebab Shop",
+      "icon": "fast-food-outline",
+      "color": "#e67e22",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
       "code": "clothing",
       "sector": "retail",
       "name": "Clothing / Fashion",
