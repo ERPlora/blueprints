@@ -172,7 +172,7 @@
       "price": 5.5,
       "tax_class_hint": "reduced",
       "code": "bruschetta",
-      "image": "hospitality/bruschetta.png"
+      "image": "hospitality/bruschetta.webp"
     },
     {
       "name": "Alitas de pollo",
@@ -180,7 +180,7 @@
       "price": 6.5,
       "tax_class_hint": "reduced",
       "code": "alitas_pollo",
-      "image": "hospitality/alitas_pollo.png"
+      "image": "hospitality/alitas_pollo.webp"
     },
     {
       "name": "Focaccia",
@@ -188,7 +188,7 @@
       "price": 4.5,
       "tax_class_hint": "reduced",
       "code": "focaccia",
-      "image": "hospitality/focaccia.png"
+      "image": "hospitality/focaccia.webp"
     },
     {
       "name": "Ensalada Cesar",
@@ -196,7 +196,7 @@
       "price": 7.5,
       "tax_class_hint": "reduced",
       "code": "ensalada_cesar",
-      "image": "hospitality/ensalada_cesar.png"
+      "image": "hospitality/ensalada_cesar.webp"
     },
     {
       "name": "Ensalada Caprese",
@@ -204,7 +204,7 @@
       "price": 7.0,
       "tax_class_hint": "reduced",
       "code": "ensalada_caprese",
-      "image": "hospitality/ensalada_caprese.png"
+      "image": "hospitality/ensalada_caprese.webp"
     },
     {
       "name": "Ensalada mixta",
@@ -212,7 +212,7 @@
       "price": 6.0,
       "tax_class_hint": "reduced",
       "code": "ensalada_mixta",
-      "image": "hospitality/ensalada_mixta.png"
+      "image": "hospitality/ensalada_mixta.webp"
     },
     {
       "name": "Pasta Bolonesa",
@@ -284,7 +284,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "coca_cola",
-      "image": "hospitality/coca_cola.png"
+      "image": "hospitality/coca_cola.webp"
     },
     {
       "name": "Coca-Cola Zero",
@@ -292,7 +292,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "coca_cola_zero",
-      "image": "hospitality/coca_cola_zero.png"
+      "image": "hospitality/coca_cola_zero.webp"
     },
     {
       "name": "Fanta naranja",
@@ -300,7 +300,7 @@
       "price": 2.5,
       "tax_class_hint": "reduced",
       "code": "fanta_naranja",
-      "image": "hospitality/fanta_naranja.png"
+      "image": "hospitality/fanta_naranja.webp"
     },
     {
       "name": "Agua mineral",
@@ -308,7 +308,7 @@
       "price": 1.8,
       "tax_class_hint": "reduced",
       "code": "agua_mineral",
-      "image": "hospitality/agua_mineral.png"
+      "image": "hospitality/agua_mineral.webp"
     },
     {
       "name": "Agua con gas",
@@ -316,7 +316,7 @@
       "price": 2.0,
       "tax_class_hint": "reduced",
       "code": "agua_con_gas",
-      "image": "hospitality/agua_con_gas.png"
+      "image": "hospitality/agua_con_gas.webp"
     },
     {
       "name": "Cana",
@@ -324,7 +324,7 @@
       "price": 2.0,
       "tax_class_hint": "standard",
       "code": "cerveza_cana",
-      "image": "hospitality/cerveza_cana.png"
+      "image": "hospitality/cerveza_cana.webp"
     },
     {
       "name": "Cerveza botella",
@@ -332,7 +332,7 @@
       "price": 2.8,
       "tax_class_hint": "standard",
       "code": "cerveza_botella",
-      "image": "hospitality/cerveza_botella.png"
+      "image": "hospitality/cerveza_botella.webp"
     },
     {
       "name": "Cerveza sin alcohol",
@@ -340,7 +340,7 @@
       "price": 2.5,
       "tax_class_hint": "standard",
       "code": "cerveza_sin",
-      "image": "hospitality/cerveza_sin.png"
+      "image": "hospitality/cerveza_sin.webp"
     },
     {
       "name": "Copa de vino tinto",

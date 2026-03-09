@@ -89,7 +89,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.3,
-      "image": "hospitality/cafe_solo.png"
+      "image": "hospitality/cafe_solo.webp"
     },
     {
       "code": "cafe_cortado",
@@ -97,7 +97,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.4,
-      "image": "hospitality/cafe_cortado.png"
+      "image": "hospitality/cafe_cortado.webp"
     },
     {
       "code": "cafe_con_leche",
@@ -105,7 +105,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.6,
-      "image": "hospitality/cafe_con_leche.png"
+      "image": "hospitality/cafe_con_leche.webp"
     },
     {
       "code": "capuchino",
@@ -113,7 +113,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/capuchino.png"
+      "image": "hospitality/capuchino.webp"
     },
     {
       "code": "descafeinado",
@@ -121,7 +121,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 1.4,
-      "image": "hospitality/descafeinado.png"
+      "image": "hospitality/descafeinado.webp"
     },
     {
       "code": "carajillo",
@@ -129,7 +129,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/carajillo.png"
+      "image": "hospitality/carajillo.webp"
     },
     {
       "code": "coca_cola",
@@ -137,7 +137,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/coca_cola.png"
+      "image": "hospitality/coca_cola.webp"
     },
     {
       "code": "coca_cola_zero",
@@ -145,7 +145,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/coca_cola_zero.png"
+      "image": "hospitality/coca_cola_zero.webp"
     },
     {
       "code": "fanta_naranja",
@@ -153,7 +153,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/fanta_naranja.png"
+      "image": "hospitality/fanta_naranja.webp"
     },
     {
       "code": "fanta_limon",
@@ -161,7 +161,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/fanta_limon.png"
+      "image": "hospitality/fanta_limon.webp"
     },
     {
       "code": "sprite",
@@ -177,7 +177,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/aquarius.png"
+      "image": "hospitality/aquarius.webp"
     },
     {
       "code": "tonica",
@@ -193,7 +193,7 @@
       "category": "aguas",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/agua_mineral.png"
+      "image": "hospitality/agua_mineral.webp"
     },
     {
       "code": "agua_con_gas",
@@ -201,7 +201,7 @@
       "category": "aguas",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": "hospitality/agua_con_gas.png"
+      "image": "hospitality/agua_con_gas.webp"
     },
     {
       "code": "zumo_naranja",
@@ -257,7 +257,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/poleo_menta.png"
+      "image": "hospitality/poleo_menta.webp"
     },
     {
       "code": "hamburguesa_clasica",
@@ -329,7 +329,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "hospitality/aros_cebolla.png"
+      "image": "hospitality/aros_cebolla.webp"
     },
     {
       "code": "nuggets",
@@ -369,7 +369,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "hospitality/brownie.png"
+      "image": "hospitality/brownie.webp"
     }
   ]
 }

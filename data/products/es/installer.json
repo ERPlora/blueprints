@@ -1,0 +1,248 @@
+{
+  "version": "1.0.0",
+  "business_type": "installer",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "fontaneria",
+      "name": "Fontaneria",
+      "icon": "water-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "calefaccion",
+      "name": "Calefaccion y ACS",
+      "icon": "flame-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "desatascos",
+      "name": "Desatascos y saneamiento",
+      "icon": "construct-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "bano_cocina",
+      "name": "Instalacion bano y cocina",
+      "icon": "home-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "mano_obra",
+      "name": "Mano de obra",
+      "icon": "time-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "materiales",
+      "name": "Materiales",
+      "icon": "cube-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "reparacion_grifo",
+      "name": "Reparacion de grifo",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "sustitucion_grifo",
+      "name": "Sustitucion de grifo (sin material)",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 60.00
+    },
+    {
+      "code": "reparacion_cisterna",
+      "name": "Reparacion cisterna WC",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 55.00
+    },
+    {
+      "code": "reparacion_fuga",
+      "name": "Localizacion y reparacion de fuga",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 80.00
+    },
+    {
+      "code": "instalacion_lavabo",
+      "name": "Instalacion lavabo completo",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "instalacion_inodoro",
+      "name": "Instalacion inodoro completo",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 130.00
+    },
+    {
+      "code": "revision_caldera",
+      "name": "Revision anual caldera gas",
+      "category": "calefaccion",
+      "tax_class_hint": "standard",
+      "price": 80.00
+    },
+    {
+      "code": "reparacion_caldera",
+      "name": "Reparacion caldera",
+      "category": "calefaccion",
+      "tax_class_hint": "standard",
+      "price": 150.00
+    },
+    {
+      "code": "instalacion_calentador",
+      "name": "Instalacion calentador de agua",
+      "category": "calefaccion",
+      "tax_class_hint": "standard",
+      "price": 180.00
+    },
+    {
+      "code": "purgado_radiadores",
+      "name": "Purgado de radiadores (vivienda completa)",
+      "category": "calefaccion",
+      "tax_class_hint": "standard",
+      "price": 60.00
+    },
+    {
+      "code": "instalacion_termo",
+      "name": "Instalacion termo electrico",
+      "category": "calefaccion",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "desatasco_fregadero",
+      "name": "Desatasco fregadero / lavabo",
+      "category": "desatascos",
+      "tax_class_hint": "standard",
+      "price": 50.00
+    },
+    {
+      "code": "desatasco_wc",
+      "name": "Desatasco WC",
+      "category": "desatascos",
+      "tax_class_hint": "standard",
+      "price": 65.00
+    },
+    {
+      "code": "desatasco_bajante",
+      "name": "Desatasco bajante comunitaria",
+      "category": "desatascos",
+      "tax_class_hint": "standard",
+      "price": 150.00
+    },
+    {
+      "code": "inspeccion_camara",
+      "name": "Inspeccion con camara de tuberias",
+      "category": "desatascos",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "reforma_bano_parcial",
+      "name": "Reforma bano parcial (sanitarios)",
+      "category": "bano_cocina",
+      "tax_class_hint": "standard",
+      "price": 1800.00
+    },
+    {
+      "code": "reforma_bano_completa",
+      "name": "Reforma bano completa",
+      "category": "bano_cocina",
+      "tax_class_hint": "standard",
+      "price": 3500.00
+    },
+    {
+      "code": "instalacion_fregadero",
+      "name": "Instalacion fregadero cocina",
+      "category": "bano_cocina",
+      "tax_class_hint": "standard",
+      "price": 90.00
+    },
+    {
+      "code": "instalacion_lavavajillas",
+      "name": "Conexion lavavajillas / lavadora",
+      "category": "bano_cocina",
+      "tax_class_hint": "standard",
+      "price": 55.00
+    },
+    {
+      "code": "hora_oficial",
+      "name": "Hora oficial fontanero",
+      "category": "mano_obra",
+      "tax_class_hint": "standard",
+      "price": 35.00
+    },
+    {
+      "code": "hora_ayudante",
+      "name": "Hora ayudante / aprendiz",
+      "category": "mano_obra",
+      "tax_class_hint": "standard",
+      "price": 22.00
+    },
+    {
+      "code": "desplazamiento",
+      "name": "Desplazamiento (hasta 15km)",
+      "category": "mano_obra",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    },
+    {
+      "code": "urgencia_festivo",
+      "name": "Recargo urgencia / festivo",
+      "category": "mano_obra",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "grifo_monomando",
+      "name": "Grifo monomando estandar",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "llave_paso",
+      "name": "Llave de paso 1/2\"",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 18.00
+    },
+    {
+      "code": "flexo_conexion",
+      "name": "Flexo de conexion",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 8.00
+    },
+    {
+      "code": "sifon",
+      "name": "Sifon botella",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 12.00
+    },
+    {
+      "code": "mecanismo_cisterna",
+      "name": "Mecanismo cisterna completo",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 25.00
+    }
+  ]
+}
