@@ -32,144 +32,126 @@
       "name": "Tatuaje pequeno (hasta 5cm)",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 60.0,
-      "image": "personal_services/tattoo_pequeno.jpg"
+      "price": 60.0
     },
     {
       "code": "tattoo_mediano",
       "name": "Tatuaje mediano (5-15cm)",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 150.0,
-      "image": "personal_services/tattoo_mediano.jpg"
+      "price": 150.0
     },
     {
       "code": "tattoo_grande",
       "name": "Tatuaje grande (15-30cm)",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 300.0,
-      "image": "personal_services/tattoo_grande.jpg"
+      "price": 300.0
     },
     {
       "code": "tattoo_manga",
       "name": "Manga completa",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 800.0,
-      "image": "personal_services/tattoo_manga.jpg"
+      "price": 800.0
     },
     {
       "code": "tattoo_espalda",
       "name": "Pieza espalda completa",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 1200.0,
-      "image": "personal_services/tattoo_espalda.jpg"
+      "price": 1200.0
     },
     {
       "code": "retoque",
       "name": "Retoque tatuaje",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 40.0,
-      "image": "personal_services/retoque.jpg"
+      "price": 40.0
     },
     {
       "code": "cover_up",
       "name": "Cover-up",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 200.0,
-      "image": "personal_services/cover_up.jpg"
+      "price": 200.0
     },
     {
       "code": "tattoo_lettering",
       "name": "Lettering",
       "category": "tatuajes",
       "tax_class_hint": "standard",
-      "price": 80.0,
-      "image": "personal_services/tattoo_lettering.jpg"
+      "price": 80.0
     },
     {
       "code": "piercing_oreja",
       "name": "Piercing oreja",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 25.0,
-      "image": "personal_services/piercing_oreja.jpg"
+      "price": 25.0
     },
     {
       "code": "piercing_nariz",
       "name": "Piercing nariz",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 30.0,
-      "image": "personal_services/piercing_nariz.jpg"
+      "price": 30.0
     },
     {
       "code": "piercing_labio",
       "name": "Piercing labio",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 35.0,
-      "image": "personal_services/piercing_labio.jpg"
+      "price": 35.0
     },
     {
       "code": "piercing_ceja",
       "name": "Piercing ceja",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 30.0,
-      "image": "personal_services/piercing_ceja.jpg"
+      "price": 30.0
     },
     {
       "code": "piercing_ombligo",
       "name": "Piercing ombligo",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 35.0,
-      "image": "personal_services/piercing_ombligo.jpg"
+      "price": 35.0
     },
     {
       "code": "piercing_lengua",
       "name": "Piercing lengua",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 40.0,
-      "image": "personal_services/piercing_lengua.jpg"
+      "price": 40.0
     },
     {
       "code": "cambio_joya",
       "name": "Cambio de joya",
       "category": "piercing",
       "tax_class_hint": "standard",
-      "price": 10.0,
-      "image": "personal_services/cambio_joya.jpg"
+      "price": 10.0
     },
     {
       "code": "crema_cicatrizante",
       "name": "Crema cicatrizante",
       "category": "productos",
       "tax_class_hint": "standard",
-      "price": 8.0,
-      "image": "personal_services/crema_cicatrizante.jpg"
+      "price": 8.0
     },
     {
       "code": "film_protector",
       "name": "Film protector",
       "category": "productos",
       "tax_class_hint": "standard",
-      "price": 5.0,
-      "image": "personal_services/film_protector.jpg"
+      "price": 5.0
     },
     {
       "code": "jabon_neutro",
       "name": "Jabon neutro",
       "category": "productos",
       "tax_class_hint": "standard",
-      "price": 6.0,
-      "image": "personal_services/jabon_neutro.jpg"
+      "price": 6.0
     }
   ]
 }
