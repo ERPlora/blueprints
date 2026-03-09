@@ -331,7 +331,7 @@
       "code": "bolsa_reutilizable",
       "name": "Bolsa reutilizable",
       "category": "otros",
-      "tax_class_hint": "general",
+      "tax_class_hint": "standard",
       "price": 0.50,
       "unit": "unit",
       "is_weighable": false
