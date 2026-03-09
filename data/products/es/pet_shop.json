@@ -1,0 +1,234 @@
+{
+  "version": "1.0.0",
+  "business_type": "pet_shop",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "alimentacion",
+      "name": "Alimentacion",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "higiene",
+      "name": "Higiene y cuidado",
+      "icon": "sparkles-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "accesorios",
+      "name": "Accesorios",
+      "icon": "paw-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "juguetes",
+      "name": "Juguetes",
+      "icon": "happy-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "farmacia",
+      "name": "Farmacia y salud",
+      "icon": "medkit-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    }
+  ],
+  "products": [
+    {
+      "code": "pienso_perro_adulto",
+      "name": "Pienso perro adulto (3kg)",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 15.9
+    },
+    {
+      "code": "pienso_perro_cachorro",
+      "name": "Pienso cachorro (3kg)",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 17.9
+    },
+    {
+      "code": "pienso_gato_adulto",
+      "name": "Pienso gato adulto (2kg)",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 12.9
+    },
+    {
+      "code": "comida_humeda_perro",
+      "name": "Latas perro (pack 6)",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 8.9
+    },
+    {
+      "code": "comida_humeda_gato",
+      "name": "Latas gato (pack 6)",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 7.5
+    },
+    {
+      "code": "snacks_perro",
+      "name": "Snacks perro",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 4.9
+    },
+    {
+      "code": "snacks_gato",
+      "name": "Snacks gato",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 3.9
+    },
+    {
+      "code": "heno_conejo",
+      "name": "Heno para conejo (1kg)",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 4.5
+    },
+    {
+      "code": "champu_perro",
+      "name": "Champu para perros",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 8.9
+    },
+    {
+      "code": "toallitas_mascota",
+      "name": "Toallitas higienicas",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 4.5
+    },
+    {
+      "code": "cepillo",
+      "name": "Cepillo pelo",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 7.9
+    },
+    {
+      "code": "cortaunas",
+      "name": "Cortaunas mascota",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 6.5
+    },
+    {
+      "code": "bolsas_excremento",
+      "name": "Bolsas excremento (120 uds)",
+      "category": "higiene",
+      "tax_class_hint": "standard",
+      "price": 3.9
+    },
+    {
+      "code": "collar_perro",
+      "name": "Collar perro",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 9.9
+    },
+    {
+      "code": "correa",
+      "name": "Correa",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 12.9
+    },
+    {
+      "code": "arnes",
+      "name": "Arnes",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 16.9
+    },
+    {
+      "code": "comedero",
+      "name": "Comedero",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 8.9
+    },
+    {
+      "code": "bebedero",
+      "name": "Bebedero automatico",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 14.9
+    },
+    {
+      "code": "transportin",
+      "name": "Transportin",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 29.9
+    },
+    {
+      "code": "cama_mascota",
+      "name": "Cama mascota",
+      "category": "accesorios",
+      "tax_class_hint": "standard",
+      "price": 24.9
+    },
+    {
+      "code": "pelota",
+      "name": "Pelota",
+      "category": "juguetes",
+      "tax_class_hint": "standard",
+      "price": 4.9
+    },
+    {
+      "code": "mordedor",
+      "name": "Mordedor",
+      "category": "juguetes",
+      "tax_class_hint": "standard",
+      "price": 6.9
+    },
+    {
+      "code": "juguete_gato",
+      "name": "Juguete para gato",
+      "category": "juguetes",
+      "tax_class_hint": "standard",
+      "price": 5.9
+    },
+    {
+      "code": "rascador",
+      "name": "Rascador gato",
+      "category": "juguetes",
+      "tax_class_hint": "standard",
+      "price": 19.9
+    },
+    {
+      "code": "antiparasitario",
+      "name": "Antiparasitario (pipeta)",
+      "category": "farmacia",
+      "tax_class_hint": "standard",
+      "price": 12.9
+    },
+    {
+      "code": "desparasitador",
+      "name": "Desparasitador interno",
+      "category": "farmacia",
+      "tax_class_hint": "standard",
+      "price": 9.9
+    },
+    {
+      "code": "vitaminas",
+      "name": "Vitaminas mascota",
+      "category": "farmacia",
+      "tax_class_hint": "standard",
+      "price": 11.9
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "version": "1.0.0",
+  "business_type": "tattoo_studio",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "tatuajes",
+      "name": "Tatuajes",
+      "icon": "brush-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "piercing",
+      "name": "Piercing",
+      "icon": "ellipse-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "productos",
+      "name": "Productos",
+      "icon": "bag-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    }
+  ],
+  "products": [
+    {
+      "code": "tattoo_pequeno",
+      "name": "Tatuaje pequeno (hasta 5cm)",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 60.0,
+      "image": "personal_services/tattoo_pequeno.jpg"
+    },
+    {
+      "code": "tattoo_mediano",
+      "name": "Tatuaje mediano (5-15cm)",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 150.0,
+      "image": "personal_services/tattoo_mediano.jpg"
+    },
+    {
+      "code": "tattoo_grande",
+      "name": "Tatuaje grande (15-30cm)",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 300.0,
+      "image": "personal_services/tattoo_grande.jpg"
+    },
+    {
+      "code": "tattoo_manga",
+      "name": "Manga completa",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 800.0,
+      "image": "personal_services/tattoo_manga.jpg"
+    },
+    {
+      "code": "tattoo_espalda",
+      "name": "Pieza espalda completa",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 1200.0,
+      "image": "personal_services/tattoo_espalda.jpg"
+    },
+    {
+      "code": "retoque",
+      "name": "Retoque tatuaje",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/retoque.jpg"
+    },
+    {
+      "code": "cover_up",
+      "name": "Cover-up",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 200.0,
+      "image": "personal_services/cover_up.jpg"
+    },
+    {
+      "code": "tattoo_lettering",
+      "name": "Lettering",
+      "category": "tatuajes",
+      "tax_class_hint": "standard",
+      "price": 80.0,
+      "image": "personal_services/tattoo_lettering.jpg"
+    },
+    {
+      "code": "piercing_oreja",
+      "name": "Piercing oreja",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "personal_services/piercing_oreja.jpg"
+    },
+    {
+      "code": "piercing_nariz",
+      "name": "Piercing nariz",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "personal_services/piercing_nariz.jpg"
+    },
+    {
+      "code": "piercing_labio",
+      "name": "Piercing labio",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/piercing_labio.jpg"
+    },
+    {
+      "code": "piercing_ceja",
+      "name": "Piercing ceja",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "personal_services/piercing_ceja.jpg"
+    },
+    {
+      "code": "piercing_ombligo",
+      "name": "Piercing ombligo",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "personal_services/piercing_ombligo.jpg"
+    },
+    {
+      "code": "piercing_lengua",
+      "name": "Piercing lengua",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 40.0,
+      "image": "personal_services/piercing_lengua.jpg"
+    },
+    {
+      "code": "cambio_joya",
+      "name": "Cambio de joya",
+      "category": "piercing",
+      "tax_class_hint": "standard",
+      "price": 10.0,
+      "image": "personal_services/cambio_joya.jpg"
+    },
+    {
+      "code": "crema_cicatrizante",
+      "name": "Crema cicatrizante",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "personal_services/crema_cicatrizante.jpg"
+    },
+    {
+      "code": "film_protector",
+      "name": "Film protector",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 5.0,
+      "image": "personal_services/film_protector.jpg"
+    },
+    {
+      "code": "jabon_neutro",
+      "name": "Jabon neutro",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 6.0,
+      "image": "personal_services/jabon_neutro.jpg"
+    }
+  ]
+}

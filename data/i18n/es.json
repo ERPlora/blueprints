@@ -50,35 +50,22 @@
     }
   },
   "types": {
-    "bar": {
-      "name": "Bar / Cafeteria",
-      "description": "Bar o cafeteria con servicio en barra, carta sencilla de bebidas y tapas, tabs abiertos y gestion basica de mesas",
-      "sector_features": [
-        "Mesas basicas",
-        "Tabs abiertos",
-        "Turnos de caja",
-        "Happy hour"
-      ]
-    },
-    "restaurant": {
-      "name": "Restaurante",
-      "description": "Restaurante con servicio completo, plano de mesas/pisos, comandas cocina (KDS), cursos, reservas, division de cuenta, propinas y soporte take away/delivery",
-      "sector_features": [
-        "Plano mesas/pisos",
-        "Comandas cocina (KDS)",
-        "Cursos",
-        "Split bill",
-        "Reservas",
-        "Propinas",
-        "Take away/delivery",
-        "Impresora cocina+barra"
-      ]
-    },
     "bar_restaurant": {
       "name": "Bar-Restaurante",
       "description": "Bar y restaurante combinados con zonas diferenciadas de barra y comedor, heredando capacidades de ambos tipos de negocio",
       "sector_features": [
         "Multi-zona barra+comedor"
+      ]
+    },
+    "catering": {
+      "name": "Catering / Eventos",
+      "description": "Catering con presupuestos por evento, recetas BOM, ordenes de produccion, personal eventual, inventario y facturacion por evento",
+      "sector_features": [
+        "Presupuestos por evento",
+        "Recetas BOM",
+        "Ordenes de produccion",
+        "Personal eventual",
+        "Seguimiento de eventos"
       ]
     },
     "fast_food": {
@@ -119,26 +106,6 @@
         "Venta por peso/bola",
         "Combos",
         "Temporalidad"
-      ]
-    },
-    "beach_bar": {
-      "name": "Chiringuito / Terraza Temporada",
-      "description": "Chiringuito o terraza de temporada con apertura/cierre estacional, inventario simplificado, gestion de personal temporal y capacidad offline",
-      "sector_features": [
-        "Apertura/cierre estacional",
-        "Inventario simplificado",
-        "Personal temporal",
-        "Offline"
-      ]
-    },
-    "wine_bar": {
-      "name": "Vinoteca / Wine Bar",
-      "description": "Vinoteca o wine bar con catalogo de vinos (D.O., anada), venta por copa y botella, stock de botella abierta y catas",
-      "sector_features": [
-        "Catalogo vinos (D.O., anada)",
-        "Venta copa+botella",
-        "Stock botella abierta",
-        "Catas"
       ]
     },
     "clothing": {
@@ -293,6 +260,17 @@
         "Temporalidad Navidad/Reyes",
         "Clasificacion edad",
         "Envoltorio regalo"
+      ]
+    },
+    "wholesale_distributor": {
+      "name": "Distribuidor Mayorista",
+      "description": "Distribuidor mayorista B2B con listas de precios por cliente, rutas de reparto, gestion de almacen, comisiones y facturacion agrupada",
+      "sector_features": [
+        "Listas de precios por cliente",
+        "Rutas de reparto",
+        "Comisiones comerciales",
+        "Facturacion agrupada",
+        "Ventas B2B"
       ]
     },
     "wine_shop": {
@@ -477,6 +455,17 @@
         "Ficha fototipo"
       ]
     },
+    "vet_clinic": {
+      "name": "Clinica Veterinaria",
+      "description": "Clinica veterinaria con historial clinico, agenda de citas, inventario de medicamentos, historial de vacunas y facturacion integrada",
+      "sector_features": [
+        "Historial clinico",
+        "Historia de vacunas",
+        "Inventario medicamentos",
+        "Agenda citas",
+        "Ficha mascota"
+      ]
+    },
     "consulting": {
       "name": "Consultoria / Asesoria General",
       "description": "Consultoria con timesheet, facturacion horas, contratos, pipeline CRM",
@@ -519,6 +508,17 @@
       "sector_features": [
         "Proyectos por fases",
         "Gestion documental"
+      ]
+    },
+    "freelancer": {
+      "name": "Autonomo / Freelancer",
+      "description": "Autonomo con facturacion VeriFactu, control de gastos, gestion de proyectos, registro de horas, cartera de clientes y presupuestos",
+      "sector_features": [
+        "Facturacion VeriFactu",
+        "Control de gastos",
+        "Registro de horas",
+        "Cartera de clientes",
+        "Presupuestos a facturas"
       ]
     },
     "cleaning_company": {
@@ -676,6 +676,17 @@
         "Garantia"
       ]
     },
+    "food_workshop": {
+      "name": "Obrador / Productor Artesano",
+      "description": "Obrador de produccion alimentaria con recetas BOM, ordenes de produccion, control de calidad, inventario materias primas, reparto B2B y trazabilidad de lotes",
+      "sector_features": [
+        "Recetas BOM",
+        "Ordenes de produccion",
+        "Control de calidad",
+        "Trazabilidad lotes",
+        "Rutas de reparto B2B"
+      ]
+    },
     "garden_center": {
       "name": "Vivero / Garden Center",
       "description": "Vivero con invernaderos, produccion temporada, catalogo plantas",
@@ -749,17 +760,6 @@
         "Integracion con delivery",
         "Pizzas mitad y mitad",
         "Variantes de tamano"
-      ]
-    },
-    "coffee_shop": {
-      "name": "Cafeteria especializada",
-      "description": "Cafeteria de especialidad con bebidas de espresso, bolleria, comida ligera y enfoque en take-away",
-      "sector_features": [
-        "Carta de cafe de especialidad",
-        "Vasos para llevar",
-        "Tarjetas de fidelizacion",
-        "Mostrador de bolleria",
-        "Zona WiFi"
       ]
     },
     "sushi_restaurant": {
@@ -878,7 +878,6 @@
     }
   },
   "roles": {
-    "bartender": "Camarero/a de barra",
     "site_manager": "Responsable de parcelas",
     "event_manager": "Responsable de eventos",
     "kitchen_manager": "Jefe de cocina",
@@ -892,7 +891,6 @@
     "waiter": "Camarero/a",
     "chef": "Chef / Jefe de cocina",
     "brewmaster": "Maestro cervecero",
-    "sommelier": "Sommelier",
     "manager": "Encargado/a",
     "sales_assistant": "Dependiente/a",
     "stock_clerk": "Reponedor/a",
@@ -902,8 +900,14 @@
     "trainer": "Monitor/a",
     "stylist": "Estilista",
     "pizzaiolo": "Pizzaiolo",
-    "barista": "Barista",
     "sushi_chef": "Chef de sushi",
-    "kebab_cook": "Cocinero de kebab"
+    "kebab_cook": "Cocinero de kebab",
+    "event_coordinator": "Coordinador/a de eventos",
+    "sales_rep": "Comercial / Representante",
+    "warehouse_worker": "Mozo/a de almacen",
+    "veterinarian": "Veterinario/a",
+    "vet_assistant": "Auxiliar veterinario/a",
+    "production_manager": "Jefe/a de produccion",
+    "delivery_driver": "Repartidor/a"
   }
 }

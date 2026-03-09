@@ -1,0 +1,70 @@
+{
+  "code": "vet_clinic",
+  "sector": "personal_services",
+  "name": "Veterinary Clinic",
+  "description": "Veterinary clinic with patient records, appointment scheduling, medication inventory, clinical history, and integrated billing",
+  "icon": "paw-outline",
+  "color": "#2e7d32",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "patient_records"
+  ],
+  "sector_features": [
+    "Patient records",
+    "Clinical history",
+    "Vaccination tracking",
+    "Medication inventory",
+    "Appointment scheduling"
+  ],
+  "roles": [
+    {
+      "id": "veterinarian",
+      "name": "Veterinarian",
+      "permissions": [
+        "patient_records.*",
+        "appointments.*",
+        "services.*",
+        "customers.*",
+        "inventory.view_*",
+        "sales.*"
+      ]
+    },
+    {
+      "id": "vet_assistant",
+      "name": "Veterinary Assistant",
+      "permissions": [
+        "patient_records.view_*",
+        "appointments.*",
+        "customers.view_*",
+        "inventory.view_*",
+        "sales.*"
+      ]
+    },
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": [
+        "appointments.*",
+        "customers.*",
+        "sales.*",
+        "cash_register.*"
+      ]
+    }
+  ],
+  "products_file": "products/vet_clinic.json"
+}

@@ -1,0 +1,54 @@
+{
+  "code": "catering",
+  "sector": "hospitality",
+  "name": "Catering / Events",
+  "description": "Catering with event quotes, BOM recipes, production orders, temporary staff, inventory tracking, and event-based invoicing",
+  "icon": "restaurant-outline",
+  "color": "#ff7043",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Event quotes",
+    "BOM recipes",
+    "Production orders",
+    "Temporary staff",
+    "Event project tracking"
+  ],
+  "roles": [
+    {
+      "id": "chef",
+      "name": "Chef",
+      "permissions": [
+        "manufacturing.*",
+        "inventory.view_*",
+        "purchase_orders.view_*"
+      ]
+    },
+    {
+      "id": "event_coordinator",
+      "name": "Event Coordinator",
+      "permissions": [
+        "quotes.*",
+        "projects.*",
+        "customers.*",
+        "staff.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/catering.json"
+}

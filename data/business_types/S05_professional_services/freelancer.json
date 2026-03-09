@@ -1,0 +1,34 @@
+{
+  "code": "freelancer",
+  "sector": "professional_services",
+  "name": "Freelancer / Self-Employed",
+  "description": "Freelancer with invoicing, expense tracking, project management, time tracking, client management, and VeriFactu compliance",
+  "icon": "person-outline",
+  "color": "#5c6bc0",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Invoicing with VeriFactu",
+    "Expense tracking",
+    "Project time tracking",
+    "Client management",
+    "Quotes to invoices"
+  ],
+  "roles": [],
+  "products_file": "products/freelancer.json"
+}

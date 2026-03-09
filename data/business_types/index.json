@@ -11,41 +11,20 @@
       "is_combinable": true
     },
     {
-      "code": "bar",
-      "sector": "hospitality",
-      "name": "Bar / Pub",
-      "icon": "wine-outline",
-      "color": "#eb445a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
       "code": "bar_restaurant",
       "sector": "hospitality",
       "name": "Bar-Restaurant",
       "icon": "restaurant-outline",
       "color": "#ff6b35",
-      "inherits_from": [
-        "bar",
-        "restaurant"
-      ],
-      "is_combinable": true
-    },
-    {
-      "code": "beach_bar",
-      "sector": "hospitality",
-      "name": "Beach Bar / Seasonal Terrace",
-      "icon": "sunny-outline",
-      "color": "#ff9500",
       "inherits_from": [],
       "is_combinable": true
     },
     {
-      "code": "coffee_shop",
+      "code": "catering",
       "sector": "hospitality",
-      "name": "Coffee Shop",
-      "icon": "cafe-outline",
-      "color": "#6f4e37",
+      "name": "Catering / Events",
+      "icon": "restaurant-outline",
+      "color": "#ff7043",
       "inherits_from": [],
       "is_combinable": true
     },
@@ -95,29 +74,11 @@
       "is_combinable": true
     },
     {
-      "code": "restaurant",
-      "sector": "hospitality",
-      "name": "Restaurant",
-      "icon": "restaurant-outline",
-      "color": "#ff6b35",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
       "code": "sushi_restaurant",
       "sector": "hospitality",
       "name": "Sushi Restaurant",
       "icon": "fish-outline",
       "color": "#2ecc71",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "wine_bar",
-      "sector": "hospitality",
-      "name": "Wine Bar",
-      "icon": "wine-outline",
-      "color": "#eb445a",
       "inherits_from": [],
       "is_combinable": true
     },
@@ -320,6 +281,15 @@
       "is_combinable": true
     },
     {
+      "code": "wholesale_distributor",
+      "sector": "retail",
+      "name": "Wholesale Distributor",
+      "icon": "cube-outline",
+      "color": "#455a64",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
       "code": "wine_shop",
       "sector": "retail",
       "name": "Wine Shop (retail)",
@@ -455,6 +425,15 @@
       "is_combinable": true
     },
     {
+      "code": "vet_clinic",
+      "sector": "personal_services",
+      "name": "Veterinary Clinic",
+      "icon": "paw-outline",
+      "color": "#2e7d32",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
       "code": "admin_agency",
       "sector": "professional_services",
       "name": "Administrative Agency",
@@ -487,6 +466,15 @@
       "name": "Design / Architecture Studio",
       "icon": "color-palette-outline",
       "color": "#6d4c41",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "freelancer",
+      "sector": "professional_services",
+      "name": "Freelancer / Self-Employed",
+      "icon": "person-outline",
+      "color": "#5c6bc0",
       "inherits_from": [],
       "is_combinable": true
     },
@@ -640,6 +628,15 @@
       "name": "Repair Shop (Electronics)",
       "icon": "phone-portrait-outline",
       "color": "#616161",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "food_workshop",
+      "sector": "manufacturing",
+      "name": "Food Workshop / Artisan Producer",
+      "icon": "nutrition-outline",
+      "color": "#bf360c",
       "inherits_from": [],
       "is_combinable": true
     },

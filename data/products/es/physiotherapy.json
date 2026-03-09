@@ -1,0 +1,174 @@
+{
+  "version": "1.0.0",
+  "business_type": "physiotherapy",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "sesiones",
+      "name": "Sesiones",
+      "icon": "body-outline",
+      "tax_class_hint": "exempt",
+      "order": 1
+    },
+    {
+      "code": "tratamientos",
+      "name": "Tratamientos especificos",
+      "icon": "pulse-outline",
+      "tax_class_hint": "exempt",
+      "order": 2
+    },
+    {
+      "code": "bonos",
+      "name": "Bonos",
+      "icon": "card-outline",
+      "tax_class_hint": "exempt",
+      "order": 3
+    },
+    {
+      "code": "productos",
+      "name": "Productos",
+      "icon": "bag-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    }
+  ],
+  "products": [
+    {
+      "code": "primera_consulta",
+      "name": "Primera consulta y valoracion",
+      "category": "sesiones",
+      "tax_class_hint": "exempt",
+      "price": 45.0,
+      "image": "personal_services/primera_consulta.jpg"
+    },
+    {
+      "code": "sesion_fisio",
+      "name": "Sesion fisioterapia (45min)",
+      "category": "sesiones",
+      "tax_class_hint": "exempt",
+      "price": 40.0,
+      "image": "personal_services/sesion_fisio.jpg"
+    },
+    {
+      "code": "sesion_osteopatia",
+      "name": "Sesion osteopatia (60min)",
+      "category": "sesiones",
+      "tax_class_hint": "exempt",
+      "price": 50.0,
+      "image": "personal_services/sesion_osteopatia.jpg"
+    },
+    {
+      "code": "sesion_readaptacion",
+      "name": "Sesion readaptacion deportiva",
+      "category": "sesiones",
+      "tax_class_hint": "exempt",
+      "price": 45.0,
+      "image": "personal_services/sesion_readaptacion.jpg"
+    },
+    {
+      "code": "puncion_seca",
+      "name": "Puncion seca",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 45.0,
+      "image": "personal_services/puncion_seca.jpg"
+    },
+    {
+      "code": "ondas_choque",
+      "name": "Ondas de choque",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 50.0,
+      "image": "personal_services/ondas_choque.jpg"
+    },
+    {
+      "code": "electroterapia",
+      "name": "Electroterapia",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 35.0,
+      "image": "personal_services/electroterapia.jpg"
+    },
+    {
+      "code": "vendaje_neuromuscular",
+      "name": "Vendaje neuromuscular",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 20.0,
+      "image": "personal_services/vendaje_neuromuscular.jpg"
+    },
+    {
+      "code": "drenaje_linfatico",
+      "name": "Drenaje linfatico",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 50.0,
+      "image": "personal_services/drenaje_linfatico.jpg"
+    },
+    {
+      "code": "masaje_deportivo",
+      "name": "Masaje deportivo",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 40.0,
+      "image": "personal_services/masaje_deportivo.jpg"
+    },
+    {
+      "code": "pilates_terapeutico",
+      "name": "Pilates terapeutico (grupal)",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 15.0,
+      "image": "personal_services/pilates_terapeutico.jpg"
+    },
+    {
+      "code": "rehabilitacion_postquirurgica",
+      "name": "Rehabilitacion postquirurgica",
+      "category": "tratamientos",
+      "tax_class_hint": "exempt",
+      "price": 50.0,
+      "image": "personal_services/rehabilitacion_postquirurgica.jpg"
+    },
+    {
+      "code": "bono_5_sesiones",
+      "name": "Bono 5 sesiones",
+      "category": "bonos",
+      "tax_class_hint": "exempt",
+      "price": 180.0,
+      "image": "personal_services/bono_5_sesiones.jpg"
+    },
+    {
+      "code": "bono_10_sesiones",
+      "name": "Bono 10 sesiones",
+      "category": "bonos",
+      "tax_class_hint": "exempt",
+      "price": 340.0,
+      "image": "personal_services/bono_10_sesiones.jpg"
+    },
+    {
+      "code": "crema_frio",
+      "name": "Crema efecto frio",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "personal_services/crema_frio.jpg"
+    },
+    {
+      "code": "banda_elastica",
+      "name": "Banda elastica",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "personal_services/banda_elastica.jpg"
+    },
+    {
+      "code": "rodillo_foam",
+      "name": "Rodillo foam",
+      "category": "productos",
+      "tax_class_hint": "standard",
+      "price": 18.0,
+      "image": "personal_services/rodillo_foam.jpg"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "version": "1.0.0",
+  "business_type": "freelancer",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "diseno_web",
+      "name": "Diseno web",
+      "icon": "globe-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "diseno_grafico",
+      "name": "Diseno grafico",
+      "icon": "color-palette-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "marketing_digital",
+      "name": "Marketing digital",
+      "icon": "megaphone-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "consultoria",
+      "name": "Consultoria y asesoria",
+      "icon": "chatbox-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "fotografia",
+      "name": "Fotografia y video",
+      "icon": "camera-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    }
+  ],
+  "products": [
+    {
+      "code": "web_landing",
+      "name": "Diseno landing page",
+      "category": "diseno_web",
+      "tax_class_hint": "standard",
+      "price": 500.00
+    },
+    {
+      "code": "web_corporativa",
+      "name": "Web corporativa (5-8 paginas)",
+      "category": "diseno_web",
+      "tax_class_hint": "standard",
+      "price": 1500.00
+    },
+    {
+      "code": "web_tienda_online",
+      "name": "Tienda online basica",
+      "category": "diseno_web",
+      "tax_class_hint": "standard",
+      "price": 2500.00
+    },
+    {
+      "code": "mantenimiento_web_mensual",
+      "name": "Mantenimiento web mensual",
+      "category": "diseno_web",
+      "tax_class_hint": "standard",
+      "price": 150.00
+    },
+    {
+      "code": "hora_desarrollo",
+      "name": "Hora de desarrollo web",
+      "category": "diseno_web",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "logo_basico",
+      "name": "Diseno de logotipo basico",
+      "category": "diseno_grafico",
+      "tax_class_hint": "standard",
+      "price": 300.00
+    },
+    {
+      "code": "identidad_corporativa",
+      "name": "Identidad corporativa completa",
+      "category": "diseno_grafico",
+      "tax_class_hint": "standard",
+      "price": 800.00
+    },
+    {
+      "code": "diseno_folleto",
+      "name": "Diseno folleto / flyer",
+      "category": "diseno_grafico",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "diseno_carteleria",
+      "name": "Diseno carteleria / banner",
+      "category": "diseno_grafico",
+      "tax_class_hint": "standard",
+      "price": 80.00
+    },
+    {
+      "code": "diseno_packaging",
+      "name": "Diseno packaging producto",
+      "category": "diseno_grafico",
+      "tax_class_hint": "standard",
+      "price": 400.00
+    },
+    {
+      "code": "gestion_rrss_mensual",
+      "name": "Gestion redes sociales mensual",
+      "category": "marketing_digital",
+      "tax_class_hint": "standard",
+      "price": 350.00
+    },
+    {
+      "code": "campana_google_ads",
+      "name": "Campana Google Ads (setup + gestion mensual)",
+      "category": "marketing_digital",
+      "tax_class_hint": "standard",
+      "price": 250.00
+    },
+    {
+      "code": "seo_mensual",
+      "name": "SEO posicionamiento mensual",
+      "category": "marketing_digital",
+      "tax_class_hint": "standard",
+      "price": 300.00
+    },
+    {
+      "code": "email_marketing_campana",
+      "name": "Campana email marketing",
+      "category": "marketing_digital",
+      "tax_class_hint": "standard",
+      "price": 150.00
+    },
+    {
+      "code": "hora_consultoria",
+      "name": "Hora de consultoria",
+      "category": "consultoria",
+      "tax_class_hint": "standard",
+      "price": 60.00
+    },
+    {
+      "code": "plan_negocio",
+      "name": "Plan de negocio / estrategia",
+      "category": "consultoria",
+      "tax_class_hint": "standard",
+      "price": 1200.00
+    },
+    {
+      "code": "auditoria_digital",
+      "name": "Auditoria digital (web + RRSS + SEO)",
+      "category": "consultoria",
+      "tax_class_hint": "standard",
+      "price": 500.00
+    },
+    {
+      "code": "sesion_fotos_producto",
+      "name": "Sesion fotos de producto (20 fotos)",
+      "category": "fotografia",
+      "tax_class_hint": "standard",
+      "price": 250.00
+    },
+    {
+      "code": "sesion_fotos_corporativa",
+      "name": "Sesion fotos corporativa (equipo/oficina)",
+      "category": "fotografia",
+      "tax_class_hint": "standard",
+      "price": 350.00
+    },
+    {
+      "code": "video_corporativo_1min",
+      "name": "Video corporativo 1 minuto",
+      "category": "fotografia",
+      "tax_class_hint": "standard",
+      "price": 600.00
+    },
+    {
+      "code": "video_rrss_reel",
+      "name": "Video reel / stories RRSS",
+      "category": "fotografia",
+      "tax_class_hint": "standard",
+      "price": 100.00
+    }
+  ]
+}

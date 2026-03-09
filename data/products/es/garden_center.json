@@ -1,0 +1,283 @@
+{
+  "version": "1.0.0",
+  "business_type": "garden_center",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "plantas_interior",
+      "name": "Plantas de interior",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "plantas_exterior",
+      "name": "Plantas de exterior",
+      "icon": "flower-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "arboles_arbustos",
+      "name": "Arboles y arbustos",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "macetas",
+      "name": "Macetas y jardineras",
+      "icon": "cube-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "sustratos",
+      "name": "Sustratos y abonos",
+      "icon": "layers-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "herramientas",
+      "name": "Herramientas de jardineria",
+      "icon": "hammer-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    },
+    {
+      "code": "riego",
+      "name": "Riego",
+      "icon": "water-outline",
+      "tax_class_hint": "standard",
+      "order": 7
+    },
+    {
+      "code": "semillas",
+      "name": "Semillas y bulbos",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 8
+    }
+  ],
+  "products": [
+    {
+      "code": "pothos",
+      "name": "Pothos (Epipremnum) maceta 14cm",
+      "category": "plantas_interior",
+      "tax_class_hint": "reduced",
+      "price": 6.50
+    },
+    {
+      "code": "monstera_deliciosa",
+      "name": "Monstera Deliciosa maceta 17cm",
+      "category": "plantas_interior",
+      "tax_class_hint": "reduced",
+      "price": 18.00
+    },
+    {
+      "code": "ficus_lyrata",
+      "name": "Ficus Lyrata maceta 21cm",
+      "category": "plantas_interior",
+      "tax_class_hint": "reduced",
+      "price": 28.00
+    },
+    {
+      "code": "sansevieria",
+      "name": "Sansevieria maceta 14cm",
+      "category": "plantas_interior",
+      "tax_class_hint": "reduced",
+      "price": 8.00
+    },
+    {
+      "code": "orquidea_phalaenopsis",
+      "name": "Orquidea Phalaenopsis 2 varas",
+      "category": "plantas_interior",
+      "tax_class_hint": "reduced",
+      "price": 14.00
+    },
+    {
+      "code": "cactus_surtido",
+      "name": "Cactus surtido maceta 8cm",
+      "category": "plantas_interior",
+      "tax_class_hint": "reduced",
+      "price": 3.50
+    },
+    {
+      "code": "geranio",
+      "name": "Geranio maceta 14cm",
+      "category": "plantas_exterior",
+      "tax_class_hint": "reduced",
+      "price": 4.50
+    },
+    {
+      "code": "petunia_pack_6",
+      "name": "Petunia pack 6 uds",
+      "category": "plantas_exterior",
+      "tax_class_hint": "reduced",
+      "price": 3.00
+    },
+    {
+      "code": "lavanda",
+      "name": "Lavanda maceta 14cm",
+      "category": "plantas_exterior",
+      "tax_class_hint": "reduced",
+      "price": 5.50
+    },
+    {
+      "code": "rosal_trepador",
+      "name": "Rosal trepador maceta 5L",
+      "category": "plantas_exterior",
+      "tax_class_hint": "reduced",
+      "price": 12.00
+    },
+    {
+      "code": "hortensia",
+      "name": "Hortensia maceta 19cm",
+      "category": "plantas_exterior",
+      "tax_class_hint": "reduced",
+      "price": 15.00
+    },
+    {
+      "code": "olivo_ornamental",
+      "name": "Olivo ornamental maceta 25L",
+      "category": "arboles_arbustos",
+      "tax_class_hint": "reduced",
+      "price": 45.00
+    },
+    {
+      "code": "limonero",
+      "name": "Limonero maceta 25L",
+      "category": "arboles_arbustos",
+      "tax_class_hint": "reduced",
+      "price": 35.00
+    },
+    {
+      "code": "ciprés",
+      "name": "Cipres seto maceta 10L",
+      "category": "arboles_arbustos",
+      "tax_class_hint": "reduced",
+      "price": 18.00
+    },
+    {
+      "code": "maceta_barro_30cm",
+      "name": "Maceta barro clasica 30cm",
+      "category": "macetas",
+      "tax_class_hint": "standard",
+      "price": 8.00
+    },
+    {
+      "code": "maceta_fibra_40cm",
+      "name": "Maceta fibra moderna 40cm",
+      "category": "macetas",
+      "tax_class_hint": "standard",
+      "price": 22.00
+    },
+    {
+      "code": "jardinera_resina_60cm",
+      "name": "Jardinera resina 60cm",
+      "category": "macetas",
+      "tax_class_hint": "standard",
+      "price": 18.00
+    },
+    {
+      "code": "sustrato_universal_20l",
+      "name": "Sustrato universal 20L",
+      "category": "sustratos",
+      "tax_class_hint": "reduced",
+      "price": 4.50
+    },
+    {
+      "code": "sustrato_universal_50l",
+      "name": "Sustrato universal 50L",
+      "category": "sustratos",
+      "tax_class_hint": "reduced",
+      "price": 8.00
+    },
+    {
+      "code": "abono_universal_1kg",
+      "name": "Abono universal granulado 1kg",
+      "category": "sustratos",
+      "tax_class_hint": "reduced",
+      "price": 6.00
+    },
+    {
+      "code": "humus_lombriz_20l",
+      "name": "Humus de lombriz 20L",
+      "category": "sustratos",
+      "tax_class_hint": "reduced",
+      "price": 5.50
+    },
+    {
+      "code": "corteza_pino_50l",
+      "name": "Corteza de pino decorativa 50L",
+      "category": "sustratos",
+      "tax_class_hint": "reduced",
+      "price": 7.00
+    },
+    {
+      "code": "tijera_poda",
+      "name": "Tijera de poda profesional",
+      "category": "herramientas",
+      "tax_class_hint": "standard",
+      "price": 18.00
+    },
+    {
+      "code": "pala_jardinero",
+      "name": "Pala de jardinero",
+      "category": "herramientas",
+      "tax_class_hint": "standard",
+      "price": 12.00
+    },
+    {
+      "code": "guantes_jardin",
+      "name": "Guantes de jardin",
+      "category": "herramientas",
+      "tax_class_hint": "standard",
+      "price": 6.00
+    },
+    {
+      "code": "regadera_10l",
+      "name": "Regadera 10L",
+      "category": "riego",
+      "tax_class_hint": "standard",
+      "price": 9.00
+    },
+    {
+      "code": "manguera_25m",
+      "name": "Manguera 25m con enrollador",
+      "category": "riego",
+      "tax_class_hint": "standard",
+      "price": 35.00
+    },
+    {
+      "code": "kit_riego_goteo",
+      "name": "Kit riego por goteo 15 plantas",
+      "category": "riego",
+      "tax_class_hint": "standard",
+      "price": 28.00
+    },
+    {
+      "code": "semillas_tomate",
+      "name": "Semillas tomate (sobre)",
+      "category": "semillas",
+      "tax_class_hint": "reduced",
+      "price": 1.80
+    },
+    {
+      "code": "semillas_cesped_1kg",
+      "name": "Semillas cesped 1kg",
+      "category": "semillas",
+      "tax_class_hint": "reduced",
+      "price": 12.00
+    },
+    {
+      "code": "bulbos_tulipan_pack_10",
+      "name": "Bulbos tulipan pack 10 uds",
+      "category": "semillas",
+      "tax_class_hint": "reduced",
+      "price": 6.50
+    }
+  ]
+}

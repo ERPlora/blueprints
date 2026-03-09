@@ -1,0 +1,248 @@
+{
+  "version": "1.0.0",
+  "business_type": "wholesale_distributor",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "bebidas_alcoholicas",
+      "name": "Bebidas alcoholicas",
+      "icon": "beer-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "bebidas_sin_alcohol",
+      "name": "Bebidas sin alcohol",
+      "icon": "water-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "alimentacion",
+      "name": "Alimentacion",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "limpieza",
+      "name": "Limpieza e higiene",
+      "icon": "sparkles-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "desechables",
+      "name": "Desechables y envases",
+      "icon": "cube-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "congelados",
+      "name": "Congelados",
+      "icon": "snow-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "cerveza_mahou_barril_30l",
+      "name": "Cerveza Mahou 5E barril 30L",
+      "category": "bebidas_alcoholicas",
+      "tax_class_hint": "standard",
+      "price": 85.00
+    },
+    {
+      "code": "cerveza_mahou_pack_24",
+      "name": "Cerveza Mahou 5E pack 24x33cl",
+      "category": "bebidas_alcoholicas",
+      "tax_class_hint": "standard",
+      "price": 14.40
+    },
+    {
+      "code": "cerveza_cruzcampo_barril_30l",
+      "name": "Cerveza Cruzcampo barril 30L",
+      "category": "bebidas_alcoholicas",
+      "tax_class_hint": "standard",
+      "price": 78.00
+    },
+    {
+      "code": "vino_tinto_rioja_caja_6",
+      "name": "Vino tinto Rioja Crianza caja 6 uds",
+      "category": "bebidas_alcoholicas",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "vino_blanco_rueda_caja_6",
+      "name": "Vino blanco Rueda Verdejo caja 6 uds",
+      "category": "bebidas_alcoholicas",
+      "tax_class_hint": "standard",
+      "price": 24.00
+    },
+    {
+      "code": "vermut_grifo_bag_in_box_15l",
+      "name": "Vermut grifo bag-in-box 15L",
+      "category": "bebidas_alcoholicas",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "coca_cola_pack_24",
+      "name": "Coca-Cola pack 24x33cl",
+      "category": "bebidas_sin_alcohol",
+      "tax_class_hint": "standard",
+      "price": 12.00
+    },
+    {
+      "code": "fanta_naranja_pack_24",
+      "name": "Fanta Naranja pack 24x33cl",
+      "category": "bebidas_sin_alcohol",
+      "tax_class_hint": "standard",
+      "price": 11.50
+    },
+    {
+      "code": "agua_mineral_pack_12",
+      "name": "Agua mineral pack 12x1.5L",
+      "category": "bebidas_sin_alcohol",
+      "tax_class_hint": "standard",
+      "price": 4.80
+    },
+    {
+      "code": "tonica_schweppes_pack_24",
+      "name": "Tonica Schweppes pack 24x20cl",
+      "category": "bebidas_sin_alcohol",
+      "tax_class_hint": "standard",
+      "price": 14.00
+    },
+    {
+      "code": "zumo_naranja_brick_12",
+      "name": "Zumo naranja brick pack 12x1L",
+      "category": "bebidas_sin_alcohol",
+      "tax_class_hint": "standard",
+      "price": 10.80
+    },
+    {
+      "code": "cafe_molido_kg",
+      "name": "Cafe molido natural 1kg",
+      "category": "bebidas_sin_alcohol",
+      "tax_class_hint": "reduced",
+      "price": 8.50
+    },
+    {
+      "code": "aceite_oliva_5l",
+      "name": "Aceite oliva virgen extra 5L",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 28.00
+    },
+    {
+      "code": "aceitunas_rellenas_5kg",
+      "name": "Aceitunas rellenas cubo 5kg",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 12.00
+    },
+    {
+      "code": "atun_lata_caja_24",
+      "name": "Atun en aceite lata caja 24 uds",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 36.00
+    },
+    {
+      "code": "tomate_frito_brick_caja_12",
+      "name": "Tomate frito brick caja 12x1L",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 14.40
+    },
+    {
+      "code": "sal_gruesa_saco_25kg",
+      "name": "Sal gruesa saco 25kg",
+      "category": "alimentacion",
+      "tax_class_hint": "reduced",
+      "price": 6.50
+    },
+    {
+      "code": "lejia_garrafa_5l",
+      "name": "Lejia garrafa 5L",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 3.20
+    },
+    {
+      "code": "lavavajillas_manual_5l",
+      "name": "Lavavajillas manual profesional 5L",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 8.50
+    },
+    {
+      "code": "fregasuelos_garrafa_5l",
+      "name": "Fregasuelos garrafa 5L",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 4.80
+    },
+    {
+      "code": "papel_cocina_rollo_industrial",
+      "name": "Papel cocina rollo industrial 2 uds",
+      "category": "limpieza",
+      "tax_class_hint": "standard",
+      "price": 6.00
+    },
+    {
+      "code": "bolsa_basura_120l_pack_20",
+      "name": "Bolsa basura 120L pack 20 uds",
+      "category": "desechables",
+      "tax_class_hint": "standard",
+      "price": 5.50
+    },
+    {
+      "code": "servilletas_pack_1000",
+      "name": "Servilletas blancas pack 1000 uds",
+      "category": "desechables",
+      "tax_class_hint": "standard",
+      "price": 7.00
+    },
+    {
+      "code": "vasos_plastico_pack_100",
+      "name": "Vasos plastico 33cl pack 100 uds",
+      "category": "desechables",
+      "tax_class_hint": "standard",
+      "price": 4.50
+    },
+    {
+      "code": "envase_aluminio_pack_100",
+      "name": "Envase aluminio delivery pack 100 uds",
+      "category": "desechables",
+      "tax_class_hint": "standard",
+      "price": 18.00
+    },
+    {
+      "code": "patatas_fritas_congeladas_2_5kg",
+      "name": "Patatas fritas congeladas 2.5kg",
+      "category": "congelados",
+      "tax_class_hint": "reduced",
+      "price": 4.50
+    },
+    {
+      "code": "croquetas_congeladas_3kg",
+      "name": "Croquetas jamon congeladas 3kg",
+      "category": "congelados",
+      "tax_class_hint": "reduced",
+      "price": 12.00
+    },
+    {
+      "code": "calamares_congelados_1kg",
+      "name": "Calamares a la romana congelados 1kg",
+      "category": "congelados",
+      "tax_class_hint": "reduced",
+      "price": 8.50
+    }
+  ]
+}

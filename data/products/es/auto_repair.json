@@ -1,0 +1,236 @@
+{
+  "version": "1.0.0",
+  "business_type": "auto_repair",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "revision",
+      "name": "Revisiones",
+      "icon": "speedometer-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "mecanica",
+      "name": "Mecanica general",
+      "icon": "build-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "neumaticos",
+      "name": "Neumaticos",
+      "icon": "car-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "electricidad",
+      "name": "Electricidad",
+      "icon": "flash-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "chapa_pintura",
+      "name": "Chapa y pintura",
+      "icon": "color-palette-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "itv",
+      "name": "Pre-ITV",
+      "icon": "shield-checkmark-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "revision_basica",
+      "name": "Revision basica",
+      "category": "revision",
+      "tax_class_hint": "standard",
+      "price": 49.9,
+      "image": "automotive/revision_basica.jpg"
+    },
+    {
+      "code": "revision_completa",
+      "name": "Revision completa",
+      "category": "revision",
+      "tax_class_hint": "standard",
+      "price": 89.9,
+      "image": "automotive/revision_completa.jpg"
+    },
+    {
+      "code": "cambio_aceite",
+      "name": "Cambio aceite + filtro",
+      "category": "revision",
+      "tax_class_hint": "standard",
+      "price": 59.9,
+      "image": "automotive/cambio_aceite.jpg"
+    },
+    {
+      "code": "cambio_filtros",
+      "name": "Cambio kit filtros",
+      "category": "revision",
+      "tax_class_hint": "standard",
+      "price": 39.9,
+      "image": "automotive/cambio_filtros.jpg"
+    },
+    {
+      "code": "pastillas_freno",
+      "name": "Cambio pastillas freno",
+      "category": "mecanica",
+      "tax_class_hint": "standard",
+      "price": 89.9,
+      "image": "automotive/pastillas_freno.jpg"
+    },
+    {
+      "code": "discos_freno",
+      "name": "Cambio discos + pastillas",
+      "category": "mecanica",
+      "tax_class_hint": "standard",
+      "price": 189.9,
+      "image": "automotive/discos_freno.jpg"
+    },
+    {
+      "code": "embrague",
+      "name": "Cambio embrague",
+      "category": "mecanica",
+      "tax_class_hint": "standard",
+      "price": 450.0,
+      "image": "automotive/embrague.jpg"
+    },
+    {
+      "code": "correa_distribucion",
+      "name": "Cambio correa distribucion",
+      "category": "mecanica",
+      "tax_class_hint": "standard",
+      "price": 380.0,
+      "image": "automotive/correa_distribucion.jpg"
+    },
+    {
+      "code": "amortiguadores",
+      "name": "Cambio amortiguadores (eje)",
+      "category": "mecanica",
+      "tax_class_hint": "standard",
+      "price": 250.0,
+      "image": "automotive/amortiguadores.jpg"
+    },
+    {
+      "code": "escape",
+      "name": "Reparacion escape",
+      "category": "mecanica",
+      "tax_class_hint": "standard",
+      "price": 120.0,
+      "image": "automotive/escape.jpg"
+    },
+    {
+      "code": "neumatico_turismo",
+      "name": "Neumatico turismo (unidad)",
+      "category": "neumaticos",
+      "tax_class_hint": "standard",
+      "price": 65.0,
+      "image": "automotive/neumatico_turismo.jpg"
+    },
+    {
+      "code": "equilibrado",
+      "name": "Equilibrado 4 ruedas",
+      "category": "neumaticos",
+      "tax_class_hint": "standard",
+      "price": 30.0,
+      "image": "automotive/equilibrado.jpg"
+    },
+    {
+      "code": "alineacion",
+      "name": "Alineacion direccion",
+      "category": "neumaticos",
+      "tax_class_hint": "standard",
+      "price": 45.0,
+      "image": "automotive/alineacion.jpg"
+    },
+    {
+      "code": "cambio_neumatico",
+      "name": "Montaje neumatico",
+      "category": "neumaticos",
+      "tax_class_hint": "standard",
+      "price": 15.0,
+      "image": "automotive/cambio_neumatico.jpg"
+    },
+    {
+      "code": "bateria",
+      "name": "Cambio bateria",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 95.0,
+      "image": "automotive/bateria.jpg"
+    },
+    {
+      "code": "alternador",
+      "name": "Reparacion alternador",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 180.0,
+      "image": "automotive/alternador.jpg"
+    },
+    {
+      "code": "diagnostico",
+      "name": "Diagnostico electronico",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 35.0,
+      "image": "automotive/diagnostico.jpg"
+    },
+    {
+      "code": "cambio_bombillas",
+      "name": "Cambio kit bombillas",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 25.0,
+      "image": "automotive/cambio_bombillas.jpg"
+    },
+    {
+      "code": "abolladura_pequena",
+      "name": "Reparacion abolladura pequena",
+      "category": "chapa_pintura",
+      "tax_class_hint": "standard",
+      "price": 80.0,
+      "image": "automotive/abolladura_pequena.jpg"
+    },
+    {
+      "code": "pintura_panel",
+      "name": "Pintura panel",
+      "category": "chapa_pintura",
+      "tax_class_hint": "standard",
+      "price": 250.0,
+      "image": "automotive/pintura_panel.jpg"
+    },
+    {
+      "code": "pulido",
+      "name": "Pulido carroceria",
+      "category": "chapa_pintura",
+      "tax_class_hint": "standard",
+      "price": 120.0,
+      "image": "automotive/pulido.jpg"
+    },
+    {
+      "code": "pre_itv",
+      "name": "Revision pre-ITV",
+      "category": "itv",
+      "tax_class_hint": "standard",
+      "price": 39.9,
+      "image": "automotive/pre_itv.jpg"
+    },
+    {
+      "code": "tramite_itv",
+      "name": "Gestion tramite ITV",
+      "category": "itv",
+      "tax_class_hint": "standard",
+      "price": 20.0,
+      "image": "automotive/tramite_itv.jpg"
+    }
+  ]
+}

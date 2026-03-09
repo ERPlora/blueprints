@@ -5,10 +5,7 @@
   "description": "Combined bar and restaurant with separate bar and dining zones, inheriting capabilities from both business types",
   "icon": "restaurant-outline",
   "color": "#ff6b35",
-  "inherits_from": [
-    "bar",
-    "restaurant"
-  ],
+  "inherits_from": [],
   "is_combinable": true,
   "ufo_matrix": {
     "FIN": "essential",

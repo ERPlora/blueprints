@@ -1,0 +1,234 @@
+{
+  "version": "1.0.0",
+  "business_type": "renovation",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "albanileria",
+      "name": "Albanileria y obra",
+      "icon": "construct-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "fontaneria",
+      "name": "Fontaneria",
+      "icon": "water-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "electricidad",
+      "name": "Electricidad",
+      "icon": "flash-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "pintura",
+      "name": "Pintura y acabados",
+      "icon": "color-palette-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "carpinteria",
+      "name": "Carpinteria",
+      "icon": "hammer-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "demolicion",
+      "name": "Demolicion y desescombro",
+      "icon": "trash-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    },
+    {
+      "code": "materiales",
+      "name": "Materiales",
+      "icon": "cube-outline",
+      "tax_class_hint": "standard",
+      "order": 7
+    }
+  ],
+  "products": [
+    {
+      "code": "mano_obra_oficial_hora",
+      "name": "Mano de obra oficial (hora)",
+      "category": "albanileria",
+      "tax_class_hint": "standard",
+      "price": 35.00
+    },
+    {
+      "code": "mano_obra_peon_hora",
+      "name": "Mano de obra peon (hora)",
+      "category": "albanileria",
+      "tax_class_hint": "standard",
+      "price": 22.00
+    },
+    {
+      "code": "alicatado_m2",
+      "name": "Alicatado (m2, material + mano obra)",
+      "category": "albanileria",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "solado_m2",
+      "name": "Solado (m2, material + mano obra)",
+      "category": "albanileria",
+      "tax_class_hint": "standard",
+      "price": 50.00
+    },
+    {
+      "code": "tabique_m2",
+      "name": "Tabique de ladrillo (m2)",
+      "category": "albanileria",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "pladur_m2",
+      "name": "Tabique pladur (m2)",
+      "category": "albanileria",
+      "tax_class_hint": "standard",
+      "price": 28.00
+    },
+    {
+      "code": "instalacion_bano_completo",
+      "name": "Instalacion bano completo (fontaneria)",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 1200.00
+    },
+    {
+      "code": "cambio_calentador",
+      "name": "Cambio calentador / termo",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 350.00
+    },
+    {
+      "code": "punto_agua",
+      "name": "Punto de agua nuevo",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 180.00
+    },
+    {
+      "code": "desatasco",
+      "name": "Desatasco tuberia",
+      "category": "fontaneria",
+      "tax_class_hint": "standard",
+      "price": 80.00
+    },
+    {
+      "code": "punto_luz_nuevo",
+      "name": "Punto de luz nuevo",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "cuadro_electrico",
+      "name": "Cuadro electrico nuevo",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 450.00
+    },
+    {
+      "code": "instalacion_electrica_vivienda",
+      "name": "Instalacion electrica completa vivienda",
+      "category": "electricidad",
+      "tax_class_hint": "standard",
+      "price": 2500.00
+    },
+    {
+      "code": "pintura_lisa_m2",
+      "name": "Pintura lisa (m2)",
+      "category": "pintura",
+      "tax_class_hint": "standard",
+      "price": 8.00
+    },
+    {
+      "code": "pintura_estuco_m2",
+      "name": "Pintura estuco veneciano (m2)",
+      "category": "pintura",
+      "tax_class_hint": "standard",
+      "price": 25.00
+    },
+    {
+      "code": "lacado_puertas_ud",
+      "name": "Lacado puerta (unidad)",
+      "category": "pintura",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "puerta_interior_ud",
+      "name": "Puerta interior (suministro + instalacion)",
+      "category": "carpinteria",
+      "tax_class_hint": "standard",
+      "price": 280.00
+    },
+    {
+      "code": "armario_empotrado_ml",
+      "name": "Armario empotrado (metro lineal)",
+      "category": "carpinteria",
+      "tax_class_hint": "standard",
+      "price": 450.00
+    },
+    {
+      "code": "tarima_flotante_m2",
+      "name": "Tarima flotante (m2, material + instalacion)",
+      "category": "carpinteria",
+      "tax_class_hint": "standard",
+      "price": 38.00
+    },
+    {
+      "code": "demolicion_bano",
+      "name": "Demolicion bano completo",
+      "category": "demolicion",
+      "tax_class_hint": "standard",
+      "price": 600.00
+    },
+    {
+      "code": "demolicion_cocina",
+      "name": "Demolicion cocina completa",
+      "category": "demolicion",
+      "tax_class_hint": "standard",
+      "price": 800.00
+    },
+    {
+      "code": "contenedor_escombro",
+      "name": "Contenedor de escombro (3m3)",
+      "category": "demolicion",
+      "tax_class_hint": "standard",
+      "price": 180.00
+    },
+    {
+      "code": "saco_cemento_25kg",
+      "name": "Saco cemento 25kg",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 4.50
+    },
+    {
+      "code": "saco_yeso_20kg",
+      "name": "Saco yeso 20kg",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 3.80
+    },
+    {
+      "code": "azulejo_m2",
+      "name": "Azulejo estandar (m2)",
+      "category": "materiales",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    }
+  ]
+}

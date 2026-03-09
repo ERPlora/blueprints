@@ -1,0 +1,227 @@
+{
+  "version": "1.0.0",
+  "business_type": "coworking",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "abonos",
+      "name": "Abonos mensuales",
+      "icon": "card-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "pases",
+      "name": "Pases puntuales",
+      "icon": "time-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "salas",
+      "name": "Salas de reuniones",
+      "icon": "people-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "oficinas",
+      "name": "Oficinas privadas",
+      "icon": "business-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "servicios",
+      "name": "Servicios adicionales",
+      "icon": "settings-outline",
+      "tax_class_hint": "standard",
+      "order": 5
+    },
+    {
+      "code": "cafeteria",
+      "name": "Cafeteria",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    },
+    {
+      "code": "eventos",
+      "name": "Eventos y formacion",
+      "icon": "calendar-outline",
+      "tax_class_hint": "standard",
+      "order": 7
+    }
+  ],
+  "products": [
+    {
+      "code": "abono_flex",
+      "name": "Abono Flex (10 dias/mes, puesto variable)",
+      "category": "abonos",
+      "tax_class_hint": "standard",
+      "price": 99.00
+    },
+    {
+      "code": "abono_fijo",
+      "name": "Abono Fijo (puesto asignado, ilimitado)",
+      "category": "abonos",
+      "tax_class_hint": "standard",
+      "price": 179.00
+    },
+    {
+      "code": "abono_premium",
+      "name": "Abono Premium (fijo + 10h sala + taquilla)",
+      "category": "abonos",
+      "tax_class_hint": "standard",
+      "price": 249.00
+    },
+    {
+      "code": "abono_finde",
+      "name": "Abono Weekend (S-D ilimitado)",
+      "category": "abonos",
+      "tax_class_hint": "standard",
+      "price": 59.00
+    },
+    {
+      "code": "pase_dia",
+      "name": "Pase dia completo",
+      "category": "pases",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    },
+    {
+      "code": "pase_medio_dia",
+      "name": "Pase medio dia (4h)",
+      "category": "pases",
+      "tax_class_hint": "standard",
+      "price": 9.00
+    },
+    {
+      "code": "bono_10_dias",
+      "name": "Bono 10 dias (sin caducidad)",
+      "category": "pases",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    },
+    {
+      "code": "sala_reunion_6pax_hora",
+      "name": "Sala reunion 6 pax (hora)",
+      "category": "salas",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    },
+    {
+      "code": "sala_reunion_10pax_hora",
+      "name": "Sala reunion 10 pax (hora)",
+      "category": "salas",
+      "tax_class_hint": "standard",
+      "price": 25.00
+    },
+    {
+      "code": "sala_evento_30pax_hora",
+      "name": "Sala eventos 30 pax (hora)",
+      "category": "salas",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "sala_reunion_medio_dia",
+      "name": "Sala reunion medio dia (4h)",
+      "category": "salas",
+      "tax_class_hint": "standard",
+      "price": 50.00
+    },
+    {
+      "code": "oficina_2pax_mensual",
+      "name": "Oficina privada 2 pax (mensual)",
+      "category": "oficinas",
+      "tax_class_hint": "standard",
+      "price": 450.00
+    },
+    {
+      "code": "oficina_4pax_mensual",
+      "name": "Oficina privada 4 pax (mensual)",
+      "category": "oficinas",
+      "tax_class_hint": "standard",
+      "price": 750.00
+    },
+    {
+      "code": "oficina_6pax_mensual",
+      "name": "Oficina privada 6 pax (mensual)",
+      "category": "oficinas",
+      "tax_class_hint": "standard",
+      "price": 1100.00
+    },
+    {
+      "code": "taquilla_mensual",
+      "name": "Taquilla personal (mensual)",
+      "category": "servicios",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    },
+    {
+      "code": "domiciliacion_fiscal",
+      "name": "Domiciliacion fiscal (mensual)",
+      "category": "servicios",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "impresion_pack_100",
+      "name": "Pack 100 impresiones B/N",
+      "category": "servicios",
+      "tax_class_hint": "standard",
+      "price": 5.00
+    },
+    {
+      "code": "parking_mensual",
+      "name": "Plaza parking (mensual)",
+      "category": "servicios",
+      "tax_class_hint": "standard",
+      "price": 60.00
+    },
+    {
+      "code": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 1.20
+    },
+    {
+      "code": "cafe_con_leche",
+      "name": "Cafe con leche",
+      "category": "cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 1.50
+    },
+    {
+      "code": "agua_botella",
+      "name": "Agua botella 50cl",
+      "category": "cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 1.00
+    },
+    {
+      "code": "refresco",
+      "name": "Refresco",
+      "category": "cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 1.80
+    },
+    {
+      "code": "networking_evento",
+      "name": "Evento networking",
+      "category": "eventos",
+      "tax_class_hint": "standard",
+      "price": 0.00
+    },
+    {
+      "code": "taller_formacion",
+      "name": "Taller de formacion (asistente)",
+      "category": "eventos",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    }
+  ]
+}

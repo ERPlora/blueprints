@@ -1,0 +1,262 @@
+{
+  "version": "1.0.0",
+  "business_type": "sports_club",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cuotas_socio",
+      "name": "Cuotas de socio",
+      "icon": "card-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "alquiler_pistas",
+      "name": "Alquiler de pistas",
+      "icon": "tennisball-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "escuelas",
+      "name": "Escuelas deportivas",
+      "icon": "school-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "clases",
+      "name": "Clases y actividades",
+      "icon": "fitness-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "bar_cafeteria",
+      "name": "Bar / Cafeteria del club",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "tienda",
+      "name": "Tienda del club",
+      "icon": "bag-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    },
+    {
+      "code": "eventos",
+      "name": "Eventos y torneos",
+      "icon": "trophy-outline",
+      "tax_class_hint": "standard",
+      "order": 7
+    }
+  ],
+  "products": [
+    {
+      "code": "cuota_individual_mensual",
+      "name": "Cuota socio individual (mensual)",
+      "category": "cuotas_socio",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "cuota_familiar_mensual",
+      "name": "Cuota socio familiar (mensual)",
+      "category": "cuotas_socio",
+      "tax_class_hint": "standard",
+      "price": 75.00
+    },
+    {
+      "code": "cuota_junior_mensual",
+      "name": "Cuota socio junior (mensual, hasta 18 anos)",
+      "category": "cuotas_socio",
+      "tax_class_hint": "standard",
+      "price": 25.00
+    },
+    {
+      "code": "cuota_senior_mensual",
+      "name": "Cuota socio senior (mensual, +65 anos)",
+      "category": "cuotas_socio",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "matricula_socio",
+      "name": "Matricula de alta socio",
+      "category": "cuotas_socio",
+      "tax_class_hint": "standard",
+      "price": 50.00
+    },
+    {
+      "code": "pista_padel_1_5h",
+      "name": "Pista padel 1.5h",
+      "category": "alquiler_pistas",
+      "tax_class_hint": "standard",
+      "price": 12.00
+    },
+    {
+      "code": "pista_tenis_1h",
+      "name": "Pista tenis 1h",
+      "category": "alquiler_pistas",
+      "tax_class_hint": "standard",
+      "price": 10.00
+    },
+    {
+      "code": "pista_futbol_sala_1h",
+      "name": "Pista futbol sala 1h",
+      "category": "alquiler_pistas",
+      "tax_class_hint": "standard",
+      "price": 40.00
+    },
+    {
+      "code": "pista_padel_luz_suplemento",
+      "name": "Suplemento luz pista (nocturno)",
+      "category": "alquiler_pistas",
+      "tax_class_hint": "standard",
+      "price": 3.00
+    },
+    {
+      "code": "escuela_tenis_infantil_mes",
+      "name": "Escuela tenis infantil (mensual, 2 dias/sem)",
+      "category": "escuelas",
+      "tax_class_hint": "standard",
+      "price": 45.00
+    },
+    {
+      "code": "escuela_padel_infantil_mes",
+      "name": "Escuela padel infantil (mensual, 2 dias/sem)",
+      "category": "escuelas",
+      "tax_class_hint": "standard",
+      "price": 40.00
+    },
+    {
+      "code": "escuela_natacion_infantil_mes",
+      "name": "Escuela natacion infantil (mensual, 2 dias/sem)",
+      "category": "escuelas",
+      "tax_class_hint": "standard",
+      "price": 35.00
+    },
+    {
+      "code": "escuela_futbol_infantil_mes",
+      "name": "Escuela futbol infantil (mensual, 3 dias/sem)",
+      "category": "escuelas",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "clase_particular_tenis_1h",
+      "name": "Clase particular tenis 1h",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 35.00
+    },
+    {
+      "code": "clase_particular_padel_1h",
+      "name": "Clase particular padel 1h",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 30.00
+    },
+    {
+      "code": "clase_yoga_grupal",
+      "name": "Clase yoga grupal",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 8.00
+    },
+    {
+      "code": "clase_pilates_grupal",
+      "name": "Clase pilates grupal",
+      "category": "clases",
+      "tax_class_hint": "standard",
+      "price": 8.00
+    },
+    {
+      "code": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "bar_cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 1.30
+    },
+    {
+      "code": "refresco",
+      "name": "Refresco (Coca-Cola, Fanta, Aquarius)",
+      "category": "bar_cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 2.00
+    },
+    {
+      "code": "cerveza_cana",
+      "name": "Cerveza cana",
+      "category": "bar_cafeteria",
+      "tax_class_hint": "standard",
+      "price": 2.00
+    },
+    {
+      "code": "agua_botella",
+      "name": "Agua botella 50cl",
+      "category": "bar_cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 1.00
+    },
+    {
+      "code": "bocadillo",
+      "name": "Bocadillo (jamon, lomo, tortilla)",
+      "category": "bar_cafeteria",
+      "tax_class_hint": "reduced",
+      "price": 3.50
+    },
+    {
+      "code": "pelotas_padel_bote",
+      "name": "Pelotas padel (bote 3 uds)",
+      "category": "tienda",
+      "tax_class_hint": "standard",
+      "price": 5.50
+    },
+    {
+      "code": "pelotas_tenis_bote",
+      "name": "Pelotas tenis (bote 3 uds)",
+      "category": "tienda",
+      "tax_class_hint": "standard",
+      "price": 6.00
+    },
+    {
+      "code": "grip_pala",
+      "name": "Overgrip pala padel",
+      "category": "tienda",
+      "tax_class_hint": "standard",
+      "price": 3.50
+    },
+    {
+      "code": "camiseta_club",
+      "name": "Camiseta oficial del club",
+      "category": "tienda",
+      "tax_class_hint": "standard",
+      "price": 25.00
+    },
+    {
+      "code": "torneo_padel_inscripcion",
+      "name": "Inscripcion torneo padel",
+      "category": "eventos",
+      "tax_class_hint": "standard",
+      "price": 20.00
+    },
+    {
+      "code": "torneo_tenis_inscripcion",
+      "name": "Inscripcion torneo tenis",
+      "category": "eventos",
+      "tax_class_hint": "standard",
+      "price": 15.00
+    },
+    {
+      "code": "campus_verano_semana",
+      "name": "Campus deportivo verano (semana)",
+      "category": "eventos",
+      "tax_class_hint": "standard",
+      "price": 120.00
+    }
+  ]
+}
