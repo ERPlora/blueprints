@@ -162,7 +162,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/sprite.jpg"
+      "image": "hospitality/sprite.webp"
     },
     {
       "code": "aquarius",
@@ -178,7 +178,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/tonica.jpg"
+      "image": "hospitality/tonica.webp"
     },
     {
       "code": "agua_mineral",
@@ -202,7 +202,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "hospitality/zumo_naranja.jpg"
+      "image": "hospitality/zumo_naranja.webp"
     },
     {
       "code": "zumo_tomate",
@@ -210,7 +210,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "hospitality/zumo_tomate.jpg"
+      "image": "hospitality/zumo_tomate.webp"
     },
     {
       "code": "zumo_pina",
@@ -218,7 +218,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "hospitality/zumo_pina.jpg"
+      "image": "hospitality/zumo_pina.webp"
     },
     {
       "code": "te_negro",
@@ -226,7 +226,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/te_negro.jpg"
+      "image": "hospitality/te_negro.webp"
     },
     {
       "code": "te_verde",
@@ -234,7 +234,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/te_verde.jpg"
+      "image": "hospitality/te_verde.webp"
     },
     {
       "code": "manzanilla",
@@ -242,7 +242,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/manzanilla.jpg"
+      "image": "hospitality/manzanilla.webp"
     },
     {
       "code": "poleo_menta",
@@ -258,7 +258,7 @@
       "category": "helados",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/helado_1_bola.jpg"
+      "image": "hospitality/helado_1_bola.webp"
     },
     {
       "code": "helado_2_bolas",
@@ -266,7 +266,7 @@
       "category": "helados",
       "tax_class_hint": "reduced",
       "price": 4.0,
-      "image": "hospitality/helado_2_bolas.jpg"
+      "image": "hospitality/helado_2_bolas.webp"
     },
     {
       "code": "helado_3_bolas",
@@ -274,7 +274,7 @@
       "category": "helados",
       "tax_class_hint": "reduced",
       "price": 5.5,
-      "image": "hospitality/helado_3_bolas.jpg"
+      "image": "hospitality/helado_3_bolas.webp"
     },
     {
       "code": "copa_helado",
@@ -290,7 +290,7 @@
       "category": "helados",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "hospitality/polo_artesano.jpg"
+      "image": "hospitality/polo_artesano.webp"
     },
     {
       "code": "granizado_limon",
@@ -354,7 +354,7 @@
       "category": "tarrinas",
       "tax_class_hint": "reduced",
       "price": 7.0,
-      "image": "hospitality/tarrina_500ml.jpg"
+      "image": "hospitality/tarrina_500ml.webp"
     },
     {
       "code": "tarrina_1l",
@@ -362,7 +362,7 @@
       "category": "tarrinas",
       "tax_class_hint": "reduced",
       "price": 12.0,
-      "image": "hospitality/tarrina_1l.jpg"
+      "image": "hospitality/tarrina_1l.webp"
     }
   ]
 }

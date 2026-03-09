@@ -1,0 +1,55 @@
+{
+  "code": "bar",
+  "sector": "hospitality",
+  "name": "Bar",
+  "description": "Bar with drinks service, tapas, cocktails, and table management for pubs, taverns, and nightlife venues",
+  "icon": "beer-outline",
+  "color": "#ff6b35",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "tables"
+  ],
+  "sector_features": [
+    "Drink service",
+    "Tapas and snacks",
+    "Cocktail menu",
+    "Table zones"
+  ],
+  "roles": [
+    {
+      "id": "bartender",
+      "name": "Bartender",
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "tables.*",
+        "inventory.view_*"
+      ]
+    },
+    {
+      "id": "waiter",
+      "name": "Waiter",
+      "permissions": [
+        "sales.*",
+        "tables.*",
+        "orders.*"
+      ]
+    }
+  ],
+  "products_file": "products/bar.json"
+}

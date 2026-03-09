@@ -54,7 +54,7 @@
       "category": "cortes",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/corte_caballero.jpg"
+      "image": "personal_services/corte_caballero.webp"
     },
     {
       "code": "corte_senora",
@@ -62,7 +62,7 @@
       "category": "cortes",
       "tax_class_hint": "standard",
       "price": 22.0,
-      "image": "personal_services/corte_senora.jpg"
+      "image": "personal_services/corte_senora.webp"
     },
     {
       "code": "corte_nino",
@@ -70,7 +70,7 @@
       "category": "cortes",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/corte_nino.jpg"
+      "image": "personal_services/corte_nino.webp"
     },
     {
       "code": "corte_puntas",
@@ -78,7 +78,7 @@
       "category": "cortes",
       "tax_class_hint": "standard",
       "price": 12.0,
-      "image": "personal_services/corte_puntas.jpg"
+      "image": "personal_services/corte_puntas.webp"
     },
     {
       "code": "corte_degradado",
@@ -86,7 +86,7 @@
       "category": "cortes",
       "tax_class_hint": "standard",
       "price": 16.0,
-      "image": "personal_services/corte_degradado.jpg"
+      "image": "personal_services/corte_degradado.webp"
     },
     {
       "code": "rapado",
@@ -94,7 +94,7 @@
       "category": "cortes",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/rapado.jpg"
+      "image": "personal_services/rapado.webp"
     },
     {
       "code": "tinte_raiz",
@@ -102,7 +102,7 @@
       "category": "color",
       "tax_class_hint": "standard",
       "price": 30.0,
-      "image": "personal_services/tinte_raiz.jpg"
+      "image": "personal_services/tinte_raiz.webp"
     },
     {
       "code": "tinte_completo",
@@ -111,7 +111,7 @@
       "tax_class_hint": "standard",
       "price": 45.0,
       "unit": "hour",
-      "image": "personal_services/tinte_completo.jpg"
+      "image": "personal_services/tinte_completo.webp"
     },
     {
       "code": "mechas",
@@ -120,7 +120,7 @@
       "tax_class_hint": "standard",
       "price": 55.0,
       "unit": "hour",
-      "image": "personal_services/mechas.jpg"
+      "image": "personal_services/mechas.webp"
     },
     {
       "code": "mechas_balayage",
@@ -129,7 +129,7 @@
       "tax_class_hint": "standard",
       "price": 70.0,
       "unit": "hour",
-      "image": "personal_services/mechas_balayage.jpg"
+      "image": "personal_services/mechas_balayage.webp"
     },
     {
       "code": "decoloracion",
@@ -138,7 +138,7 @@
       "tax_class_hint": "standard",
       "price": 50.0,
       "unit": "hour",
-      "image": "personal_services/decoloracion.jpg"
+      "image": "personal_services/decoloracion.webp"
     },
     {
       "code": "matizador",
@@ -146,7 +146,7 @@
       "category": "color",
       "tax_class_hint": "standard",
       "price": 25.0,
-      "image": "personal_services/matizador.jpg"
+      "image": "personal_services/matizador.webp"
     },
     {
       "code": "canas_cobertura",
@@ -154,7 +154,7 @@
       "category": "color",
       "tax_class_hint": "standard",
       "price": 35.0,
-      "image": "personal_services/canas_cobertura.jpg"
+      "image": "personal_services/canas_cobertura.webp"
     },
     {
       "code": "lavado_secado",
@@ -162,7 +162,7 @@
       "category": "peinados",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/lavado_secado.jpg"
+      "image": "personal_services/lavado_secado.webp"
     },
     {
       "code": "brushing",
@@ -170,7 +170,7 @@
       "category": "peinados",
       "tax_class_hint": "standard",
       "price": 20.0,
-      "image": "personal_services/brushing.jpg"
+      "image": "personal_services/brushing.webp"
     },
     {
       "code": "recogido",
@@ -179,7 +179,7 @@
       "tax_class_hint": "standard",
       "price": 35.0,
       "unit": "hour",
-      "image": "personal_services/recogido.jpg"
+      "image": "personal_services/recogido.webp"
     },
     {
       "code": "recogido_novia",
@@ -188,7 +188,7 @@
       "tax_class_hint": "standard",
       "price": 60.0,
       "unit": "hour",
-      "image": "personal_services/recogido_novia.jpg"
+      "image": "personal_services/recogido_novia.webp"
     },
     {
       "code": "trenzas",
@@ -196,7 +196,7 @@
       "category": "peinados",
       "tax_class_hint": "standard",
       "price": 25.0,
-      "image": "personal_services/trenzas.jpg"
+      "image": "personal_services/trenzas.webp"
     },
     {
       "code": "ondas",
@@ -204,7 +204,7 @@
       "category": "peinados",
       "tax_class_hint": "standard",
       "price": 25.0,
-      "image": "personal_services/ondas.jpg"
+      "image": "personal_services/ondas.webp"
     },
     {
       "code": "alisado_plancha",
@@ -212,7 +212,7 @@
       "category": "peinados",
       "tax_class_hint": "standard",
       "price": 20.0,
-      "image": "personal_services/alisado_plancha.jpg"
+      "image": "personal_services/alisado_plancha.webp"
     },
     {
       "code": "hidratacion",
@@ -221,7 +221,7 @@
       "tax_class_hint": "standard",
       "price": 20.0,
       "unit": "hour",
-      "image": "personal_services/hidratacion.jpg"
+      "image": "personal_services/hidratacion.webp"
     },
     {
       "code": "keratina",
@@ -230,7 +230,7 @@
       "tax_class_hint": "standard",
       "price": 80.0,
       "unit": "hour",
-      "image": "personal_services/keratina.jpg"
+      "image": "personal_services/keratina.webp"
     },
     {
       "code": "botox_capilar",
@@ -239,7 +239,7 @@
       "tax_class_hint": "standard",
       "price": 60.0,
       "unit": "hour",
-      "image": "personal_services/botox_capilar.jpg"
+      "image": "personal_services/botox_capilar.webp"
     },
     {
       "code": "olaplex",
@@ -248,7 +248,7 @@
       "tax_class_hint": "standard",
       "price": 30.0,
       "unit": "hour",
-      "image": "personal_services/olaplex.jpg"
+      "image": "personal_services/olaplex.webp"
     },
     {
       "code": "mascarilla",
@@ -256,7 +256,7 @@
       "category": "tratamientos",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/mascarilla.jpg"
+      "image": "personal_services/mascarilla.webp"
     },
     {
       "code": "tratamiento_anticaida",
@@ -265,7 +265,7 @@
       "tax_class_hint": "standard",
       "price": 25.0,
       "unit": "hour",
-      "image": "personal_services/tratamiento_anticaida.jpg"
+      "image": "personal_services/tratamiento_anticaida.webp"
     },
     {
       "code": "recorte_barba",
@@ -273,7 +273,7 @@
       "category": "barba",
       "tax_class_hint": "standard",
       "price": 8.0,
-      "image": "personal_services/recorte_barba.jpg"
+      "image": "personal_services/recorte_barba.webp"
     },
     {
       "code": "afeitado_navaja",
@@ -281,7 +281,7 @@
       "category": "barba",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/afeitado_navaja.jpg"
+      "image": "personal_services/afeitado_navaja.webp"
     },
     {
       "code": "perfilado_barba",
@@ -289,7 +289,7 @@
       "category": "barba",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/perfilado_barba.jpg"
+      "image": "personal_services/perfilado_barba.webp"
     },
     {
       "code": "champu_profesional",
@@ -297,7 +297,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 18.0,
-      "image": "personal_services/champu_profesional.jpg"
+      "image": "personal_services/champu_profesional.webp"
     },
     {
       "code": "acondicionador",
@@ -305,7 +305,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 16.0,
-      "image": "personal_services/acondicionador.jpg"
+      "image": "personal_services/acondicionador.webp"
     },
     {
       "code": "mascarilla_venta",
@@ -313,7 +313,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 22.0,
-      "image": "personal_services/mascarilla_venta.jpg"
+      "image": "personal_services/mascarilla_venta.webp"
     },
     {
       "code": "aceite_argan",
@@ -321,7 +321,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/aceite_argan.jpg"
+      "image": "personal_services/aceite_argan.webp"
     },
     {
       "code": "cera_moldeadora",
@@ -329,7 +329,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 12.0,
-      "image": "personal_services/cera_moldeadora.jpg"
+      "image": "personal_services/cera_moldeadora.webp"
     },
     {
       "code": "laca_fijacion",
@@ -337,7 +337,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/laca_fijacion.jpg"
+      "image": "personal_services/laca_fijacion.webp"
     },
     {
       "code": "serum_puntas",
@@ -345,7 +345,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 14.0,
-      "image": "personal_services/serum_puntas.jpg"
+      "image": "personal_services/serum_puntas.webp"
     },
     {
       "code": "tinte_domestico",
@@ -353,7 +353,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 12.0,
-      "image": "personal_services/tinte_domestico.jpg"
+      "image": "personal_services/tinte_domestico.webp"
     }
   ]
 }

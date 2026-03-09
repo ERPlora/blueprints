@@ -148,7 +148,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/sprite.jpg"
+      "image": "hospitality/sprite.webp"
     },
     {
       "code": "aquarius",
@@ -164,7 +164,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/tonica.jpg"
+      "image": "hospitality/tonica.webp"
     },
     {
       "code": "agua_mineral",
@@ -188,7 +188,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "hospitality/zumo_naranja.jpg"
+      "image": "hospitality/zumo_naranja.webp"
     },
     {
       "code": "zumo_tomate",
@@ -196,7 +196,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "hospitality/zumo_tomate.jpg"
+      "image": "hospitality/zumo_tomate.webp"
     },
     {
       "code": "zumo_pina",
@@ -204,7 +204,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "hospitality/zumo_pina.jpg"
+      "image": "hospitality/zumo_pina.webp"
     },
     {
       "code": "te_negro",
@@ -212,7 +212,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/te_negro.jpg"
+      "image": "hospitality/te_negro.webp"
     },
     {
       "code": "te_verde",
@@ -220,7 +220,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/te_verde.jpg"
+      "image": "hospitality/te_verde.webp"
     },
     {
       "code": "manzanilla",
@@ -228,7 +228,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/manzanilla.jpg"
+      "image": "hospitality/manzanilla.webp"
     },
     {
       "code": "poleo_menta",
@@ -244,7 +244,7 @@
       "category": "principal",
       "tax_class_hint": "reduced",
       "price": 9.0,
-      "image": "hospitality/hamburguesa_gourmet.jpg"
+      "image": "hospitality/hamburguesa_gourmet.webp"
     },
     {
       "code": "tacos",
@@ -252,7 +252,7 @@
       "category": "principal",
       "tax_class_hint": "reduced",
       "price": 8.5,
-      "image": "hospitality/tacos.jpg"
+      "image": "hospitality/tacos.webp"
     },
     {
       "code": "bocadillo_pulled_pork",
@@ -268,7 +268,7 @@
       "category": "principal",
       "tax_class_hint": "reduced",
       "price": 7.0,
-      "image": "hospitality/wrap_falafel.jpg"
+      "image": "hospitality/wrap_falafel.webp"
     },
     {
       "code": "patatas_fritas",
@@ -276,7 +276,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "hospitality/patatas_fritas.jpg"
+      "image": "hospitality/patatas_fritas.webp"
     },
     {
       "code": "nachos_queso",
@@ -284,7 +284,7 @@
       "category": "acompanamiento",
       "tax_class_hint": "reduced",
       "price": 5.0,
-      "image": "hospitality/nachos_queso.jpg"
+      "image": "hospitality/nachos_queso.webp"
     },
     {
       "code": "churros",

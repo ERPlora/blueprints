@@ -162,7 +162,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/sprite.jpg"
+      "image": "hospitality/sprite.webp"
     },
     {
       "code": "aquarius",
@@ -178,7 +178,7 @@
       "category": "refrescos",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/tonica.jpg"
+      "image": "hospitality/tonica.webp"
     },
     {
       "code": "agua_mineral",
@@ -202,7 +202,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 3.0,
-      "image": "hospitality/zumo_naranja.jpg"
+      "image": "hospitality/zumo_naranja.webp"
     },
     {
       "code": "zumo_tomate",
@@ -210,7 +210,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "hospitality/zumo_tomate.jpg"
+      "image": "hospitality/zumo_tomate.webp"
     },
     {
       "code": "zumo_pina",
@@ -218,7 +218,7 @@
       "category": "zumos",
       "tax_class_hint": "reduced",
       "price": 2.8,
-      "image": "hospitality/zumo_pina.jpg"
+      "image": "hospitality/zumo_pina.webp"
     },
     {
       "code": "te_negro",
@@ -226,7 +226,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/te_negro.jpg"
+      "image": "hospitality/te_negro.webp"
     },
     {
       "code": "te_verde",
@@ -234,7 +234,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/te_verde.jpg"
+      "image": "hospitality/te_verde.webp"
     },
     {
       "code": "manzanilla",
@@ -242,7 +242,7 @@
       "category": "infusiones",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/manzanilla.jpg"
+      "image": "hospitality/manzanilla.webp"
     },
     {
       "code": "poleo_menta",
@@ -266,7 +266,7 @@
       "category": "panes",
       "tax_class_hint": "super_reduced",
       "price": 2.5,
-      "image": "hospitality/hogaza.jpg"
+      "image": "hospitality/hogaza.webp"
     },
     {
       "code": "chapata",
@@ -282,7 +282,7 @@
       "category": "panes",
       "tax_class_hint": "super_reduced",
       "price": 2.2,
-      "image": "hospitality/pan_integral.jpg"
+      "image": "hospitality/pan_integral.webp"
     },
     {
       "code": "pan_centeno",
@@ -290,7 +290,7 @@
       "category": "panes",
       "tax_class_hint": "super_reduced",
       "price": 2.8,
-      "image": "hospitality/pan_centeno.jpg"
+      "image": "hospitality/pan_centeno.webp"
     },
     {
       "code": "pan_semillas",
@@ -298,7 +298,7 @@
       "category": "panes",
       "tax_class_hint": "super_reduced",
       "price": 3.0,
-      "image": "hospitality/pan_semillas.jpg"
+      "image": "hospitality/pan_semillas.webp"
     },
     {
       "code": "croissant",
@@ -314,7 +314,7 @@
       "category": "bolleria",
       "tax_class_hint": "reduced",
       "price": 1.8,
-      "image": "hospitality/napolitana_chocolate.jpg"
+      "image": "hospitality/napolitana_chocolate.webp"
     },
     {
       "code": "ensaimada",
@@ -330,7 +330,7 @@
       "category": "bolleria",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/palmera_chocolate.jpg"
+      "image": "hospitality/palmera_chocolate.webp"
     },
     {
       "code": "magdalena",
@@ -338,7 +338,7 @@
       "category": "bolleria",
       "tax_class_hint": "reduced",
       "price": 1.2,
-      "image": "hospitality/magdalena.jpg"
+      "image": "hospitality/magdalena.webp"
     },
     {
       "code": "tarta_manzana",
@@ -346,7 +346,7 @@
       "category": "tartas",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "hospitality/tarta_manzana.jpg"
+      "image": "hospitality/tarta_manzana.webp"
     },
     {
       "code": "tarta_queso",
@@ -354,7 +354,7 @@
       "category": "tartas",
       "tax_class_hint": "reduced",
       "price": 3.8,
-      "image": "hospitality/tarta_queso.jpg"
+      "image": "hospitality/tarta_queso.webp"
     },
     {
       "code": "tarta_chocolate",
@@ -362,7 +362,7 @@
       "category": "tartas",
       "tax_class_hint": "reduced",
       "price": 3.8,
-      "image": "hospitality/tarta_chocolate.jpg"
+      "image": "hospitality/tarta_chocolate.webp"
     },
     {
       "code": "bocadillo_jamon_queso",

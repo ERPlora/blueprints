@@ -1,0 +1,274 @@
+{
+  "version": "1.0.0",
+  "business_type": "bar",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cervezas",
+      "name": "Cervezas",
+      "icon": "beer-outline",
+      "tax_class_hint": "standard",
+      "order": 1
+    },
+    {
+      "code": "vinos",
+      "name": "Vinos",
+      "icon": "wine-outline",
+      "tax_class_hint": "standard",
+      "order": 2
+    },
+    {
+      "code": "licores",
+      "name": "Licores y Destilados",
+      "icon": "wine-outline",
+      "tax_class_hint": "standard",
+      "order": 3
+    },
+    {
+      "code": "cocktails",
+      "name": "Cocteles",
+      "icon": "wine-outline",
+      "tax_class_hint": "standard",
+      "order": 4
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "aguas",
+      "name": "Aguas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    },
+    {
+      "code": "tapas",
+      "name": "Tapas y Raciones",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 7
+    },
+    {
+      "code": "bocadillos",
+      "name": "Bocadillos",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 8
+    }
+  ],
+  "products": [
+    {
+      "code": "cerveza_cana",
+      "name": "Cana",
+      "category": "cervezas",
+      "tax_class_hint": "standard",
+      "price": 1.8,
+      "image": "hospitality/cerveza_cana.webp"
+    },
+    {
+      "code": "cerveza_jarra",
+      "name": "Jarra de cerveza",
+      "category": "cervezas",
+      "tax_class_hint": "standard",
+      "price": 3.5,
+      "image": "hospitality/cerveza_jarra.webp"
+    },
+    {
+      "code": "cerveza_botella",
+      "name": "Cerveza botella",
+      "category": "cervezas",
+      "tax_class_hint": "standard",
+      "price": 2.5,
+      "image": "hospitality/cerveza_botella.webp"
+    },
+    {
+      "code": "cerveza_sin",
+      "name": "Cerveza sin alcohol",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 2.2,
+      "image": "hospitality/cerveza_sin.webp"
+    },
+    {
+      "code": "clara",
+      "name": "Clara",
+      "category": "cervezas",
+      "tax_class_hint": "standard",
+      "price": 2.0,
+      "image": "hospitality/clara.webp"
+    },
+    {
+      "code": "vino_tinto_copa",
+      "name": "Vino tinto (copa)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vino_tinto_copa.webp"
+    },
+    {
+      "code": "vino_blanco_copa",
+      "name": "Vino blanco (copa)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vino_blanco_copa.webp"
+    },
+    {
+      "code": "vino_rosado_copa",
+      "name": "Vino rosado (copa)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vino_rosado_copa.webp"
+    },
+    {
+      "code": "sangria_jarra",
+      "name": "Sangria (jarra)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 12.0,
+      "image": "hospitality/sangria_jarra.webp"
+    },
+    {
+      "code": "tinto_verano",
+      "name": "Tinto de verano",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 2.5,
+      "image": "hospitality/tinto_verano.webp"
+    },
+    {
+      "code": "vermut",
+      "name": "Vermut",
+      "category": "licores",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vermut.webp"
+    },
+    {
+      "code": "gin_tonic",
+      "name": "Gin tonic",
+      "category": "cocktails",
+      "tax_class_hint": "standard",
+      "price": 8.0,
+      "image": "hospitality/gin_tonic.webp"
+    },
+    {
+      "code": "ron_cola",
+      "name": "Cubata de ron",
+      "category": "cocktails",
+      "tax_class_hint": "standard",
+      "price": 7.0,
+      "image": "hospitality/ron_cola.webp"
+    },
+    {
+      "code": "whisky_cola",
+      "name": "Cubata de whisky",
+      "category": "cocktails",
+      "tax_class_hint": "standard",
+      "price": 7.0,
+      "image": "hospitality/whisky_cola.webp"
+    },
+    {
+      "code": "mojito",
+      "name": "Mojito",
+      "category": "cocktails",
+      "tax_class_hint": "standard",
+      "price": 8.5,
+      "image": "hospitality/mojito.webp"
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/coca_cola.webp"
+    },
+    {
+      "code": "coca_cola_zero",
+      "name": "Coca-Cola Zero",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/coca_cola_zero.webp"
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/fanta_naranja.webp"
+    },
+    {
+      "code": "tonica",
+      "name": "Tonica",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/tonica.webp"
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/agua_mineral.webp"
+    },
+    {
+      "code": "agua_con_gas",
+      "name": "Agua con gas",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "hospitality/agua_con_gas.webp"
+    },
+    {
+      "code": "tapa_tortilla",
+      "name": "Tapa de tortilla",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 3.5,
+      "image": "hospitality/tapa_tortilla.webp"
+    },
+    {
+      "code": "tapa_croquetas",
+      "name": "Tapa de croquetas",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 4.0,
+      "image": "hospitality/tapa_croquetas.webp"
+    },
+    {
+      "code": "tapa_bravas",
+      "name": "Tapa de bravas",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 3.5,
+      "image": "hospitality/tapa_bravas.webp"
+    },
+    {
+      "code": "bocadillo_jamon",
+      "name": "Bocadillo de jamon",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 4.5,
+      "image": "hospitality/bocadillo_jamon.webp"
+    },
+    {
+      "code": "bocadillo_lomo",
+      "name": "Bocadillo de lomo",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 5.0,
+      "image": "hospitality/bocadillo_lomo.webp"
+    }
+  ]
+}

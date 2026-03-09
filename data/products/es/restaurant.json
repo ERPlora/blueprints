@@ -1,0 +1,212 @@
+{
+  "version": "1.0.0",
+  "business_type": "restaurant",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "entrantes",
+      "name": "Entrantes",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "principales",
+      "name": "Platos principales",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "postres",
+      "name": "Postres",
+      "icon": "ice-cream-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "menu_dia",
+      "name": "Menu del dia",
+      "icon": "document-text-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "bebidas",
+      "name": "Bebidas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "vinos",
+      "name": "Vinos",
+      "icon": "wine-outline",
+      "tax_class_hint": "standard",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "code": "ensalada_mixta",
+      "name": "Ensalada mixta",
+      "category": "entrantes",
+      "tax_class_hint": "reduced",
+      "price": 7.5,
+      "image": "hospitality/ensalada_mixta.webp"
+    },
+    {
+      "code": "gazpacho",
+      "name": "Gazpacho",
+      "category": "entrantes",
+      "tax_class_hint": "reduced",
+      "price": 6.0,
+      "image": "hospitality/gazpacho.webp"
+    },
+    {
+      "code": "sopa_dia",
+      "name": "Sopa del dia",
+      "category": "entrantes",
+      "tax_class_hint": "reduced",
+      "price": 5.5,
+      "image": ""
+    },
+    {
+      "code": "croquetas_caseras",
+      "name": "Croquetas caseras",
+      "category": "entrantes",
+      "tax_class_hint": "reduced",
+      "price": 8.0,
+      "image": ""
+    },
+    {
+      "code": "entrecot",
+      "name": "Entrecot de ternera",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 16.0,
+      "image": "hospitality/entrecot.webp"
+    },
+    {
+      "code": "merluza_plancha",
+      "name": "Merluza a la plancha",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 13.0,
+      "image": "hospitality/merluza_plancha.webp"
+    },
+    {
+      "code": "pollo_asado",
+      "name": "Pollo asado",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 11.0,
+      "image": "hospitality/pollo_asado.webp"
+    },
+    {
+      "code": "paella_mixta",
+      "name": "Paella mixta",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 13.0,
+      "image": "hospitality/paella_mixta.webp"
+    },
+    {
+      "code": "chuletas_cordero",
+      "name": "Chuletas de cordero",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 15.0,
+      "image": ""
+    },
+    {
+      "code": "lubina_horno",
+      "name": "Lubina al horno",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 14.0,
+      "image": "hospitality/lubina_horno.webp"
+    },
+    {
+      "code": "flan_casero",
+      "name": "Flan casero",
+      "category": "postres",
+      "tax_class_hint": "reduced",
+      "price": 4.5,
+      "image": "hospitality/flan_casero.webp"
+    },
+    {
+      "code": "tarta_queso",
+      "name": "Tarta de queso",
+      "category": "postres",
+      "tax_class_hint": "reduced",
+      "price": 5.5,
+      "image": "hospitality/tarta_queso.webp"
+    },
+    {
+      "code": "arroz_con_leche",
+      "name": "Arroz con leche",
+      "category": "postres",
+      "tax_class_hint": "reduced",
+      "price": 4.0,
+      "image": ""
+    },
+    {
+      "code": "menu_dia",
+      "name": "Menu del dia",
+      "category": "menu_dia",
+      "tax_class_hint": "reduced",
+      "price": 12.5,
+      "image": "hospitality/menu_dia.webp"
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/agua_mineral.webp"
+    },
+    {
+      "code": "agua_con_gas",
+      "name": "Agua con gas",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "hospitality/agua_con_gas.webp"
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "bebidas",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/coca_cola.webp"
+    },
+    {
+      "code": "vino_tinto_copa",
+      "name": "Vino tinto (copa)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vino_tinto_copa.webp"
+    },
+    {
+      "code": "vino_blanco_copa",
+      "name": "Vino blanco (copa)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vino_blanco_copa.webp"
+    },
+    {
+      "code": "vino_rosado_copa",
+      "name": "Vino rosado (copa)",
+      "category": "vinos",
+      "tax_class_hint": "standard",
+      "price": 3.0,
+      "image": "hospitality/vino_rosado_copa.webp"
+    }
+  ]
+}

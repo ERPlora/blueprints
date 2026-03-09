@@ -1,0 +1,54 @@
+{
+  "code": "cafeteria",
+  "sector": "hospitality",
+  "name": "Cafeteria",
+  "description": "Coffee shop with specialty beverages, pastries, light meals, and relaxed dining atmosphere",
+  "icon": "cafe-outline",
+  "color": "#795548",
+  "inherits_from": [],
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": [
+    "tables"
+  ],
+  "sector_features": [
+    "Specialty coffee",
+    "Pastry display",
+    "Light meals",
+    "Takeaway service"
+  ],
+  "roles": [
+    {
+      "id": "barista",
+      "name": "Barista",
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "inventory.view_*"
+      ]
+    },
+    {
+      "id": "waiter",
+      "name": "Waiter",
+      "permissions": [
+        "sales.*",
+        "tables.*",
+        "orders.*"
+      ]
+    }
+  ],
+  "products_file": "products/cafeteria.json"
+}

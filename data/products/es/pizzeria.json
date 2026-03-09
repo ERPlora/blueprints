@@ -68,7 +68,7 @@
       "price": 8.5,
       "tax_class_hint": "reduced",
       "code": "pizza_margarita",
-      "image": "hospitality/pizza_margarita.jpg"
+      "image": "hospitality/pizza_margarita.webp"
     },
     {
       "name": "Pizza Jamon y Queso",
@@ -76,7 +76,7 @@
       "price": 9.5,
       "tax_class_hint": "reduced",
       "code": "pizza_jamon_queso",
-      "image": "hospitality/pizza_jamon_queso.jpg"
+      "image": "hospitality/pizza_jamon_queso.webp"
     },
     {
       "name": "Pizza Pepperoni",
@@ -84,7 +84,7 @@
       "price": 10.0,
       "tax_class_hint": "reduced",
       "code": "pizza_pepperoni",
-      "image": "hospitality/pizza_pepperoni.jpg"
+      "image": "hospitality/pizza_pepperoni.webp"
     },
     {
       "name": "Pizza 4 Quesos",
@@ -92,7 +92,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_4_quesos",
-      "image": "hospitality/pizza_4_quesos.jpg"
+      "image": "hospitality/pizza_4_quesos.webp"
     },
     {
       "name": "Pizza Barbacoa",
@@ -100,7 +100,7 @@
       "price": 11.0,
       "tax_class_hint": "reduced",
       "code": "pizza_barbacoa",
-      "image": "hospitality/pizza_barbacoa.jpg"
+      "image": "hospitality/pizza_barbacoa.webp"
     },
     {
       "name": "Pizza Vegetal",
@@ -108,7 +108,7 @@
       "price": 9.5,
       "tax_class_hint": "reduced",
       "code": "pizza_vegetal",
-      "image": "hospitality/pizza_vegetal.jpg"
+      "image": "hospitality/pizza_vegetal.webp"
     },
     {
       "name": "Pizza Carbonara",
@@ -116,7 +116,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_carbonara",
-      "image": "hospitality/pizza_carbonara.jpg"
+      "image": "hospitality/pizza_carbonara.webp"
     },
     {
       "name": "Pizza Hawaiana",
@@ -124,7 +124,7 @@
       "price": 10.0,
       "tax_class_hint": "reduced",
       "code": "pizza_hawaiana",
-      "image": "hospitality/pizza_hawaiana.jpg"
+      "image": "hospitality/pizza_hawaiana.webp"
     },
     {
       "name": "Pizza Diavola",
@@ -132,7 +132,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_diavola",
-      "image": "hospitality/pizza_diavola.jpg"
+      "image": "hospitality/pizza_diavola.webp"
     },
     {
       "name": "Pizza Caprichosa",
@@ -140,7 +140,7 @@
       "price": 11.0,
       "tax_class_hint": "reduced",
       "code": "pizza_caprichosa",
-      "image": "hospitality/pizza_caprichosa.jpg"
+      "image": "hospitality/pizza_caprichosa.webp"
     },
     {
       "name": "Calzone",
@@ -148,7 +148,7 @@
       "price": 10.5,
       "tax_class_hint": "reduced",
       "code": "pizza_calzone",
-      "image": "hospitality/pizza_calzone.jpg"
+      "image": "hospitality/pizza_calzone.webp"
     },
     {
       "name": "Pizza familiar",
@@ -156,7 +156,7 @@
       "price": 16.0,
       "tax_class_hint": "reduced",
       "code": "pizza_familiar",
-      "image": "hospitality/pizza_familiar.jpg"
+      "image": "hospitality/pizza_familiar.webp"
     },
     {
       "name": "Pan de ajo",
@@ -164,7 +164,7 @@
       "price": 3.5,
       "tax_class_hint": "reduced",
       "code": "pan_ajo",
-      "image": "hospitality/pan_ajo.jpg"
+      "image": "hospitality/pan_ajo.webp"
     },
     {
       "name": "Bruschetta",
@@ -220,7 +220,7 @@
       "price": 8.5,
       "tax_class_hint": "reduced",
       "code": "pasta_bolonesa",
-      "image": "hospitality/pasta_bolonesa.jpg"
+      "image": "hospitality/pasta_bolonesa.webp"
     },
     {
       "name": "Pasta Carbonara",
@@ -228,7 +228,7 @@
       "price": 8.5,
       "tax_class_hint": "reduced",
       "code": "pasta_carbonara",
-      "image": "hospitality/pasta_carbonara.jpg"
+      "image": "hospitality/pasta_carbonara.webp"
     },
     {
       "name": "Lasana",
@@ -236,7 +236,7 @@
       "price": 9.0,
       "tax_class_hint": "reduced",
       "code": "lasana",
-      "image": "hospitality/lasana.jpg"
+      "image": "hospitality/lasana.webp"
     },
     {
       "name": "Pasta al pesto",
@@ -244,7 +244,7 @@
       "price": 8.0,
       "tax_class_hint": "reduced",
       "code": "pasta_pesto",
-      "image": "hospitality/pasta_pesto.jpg"
+      "image": "hospitality/pasta_pesto.webp"
     },
     {
       "name": "Tiramisu",
@@ -252,7 +252,7 @@
       "price": 5.5,
       "tax_class_hint": "reduced",
       "code": "tiramisu",
-      "image": "hospitality/tiramisu.jpg"
+      "image": "hospitality/tiramisu.webp"
     },
     {
       "name": "Tarta de queso",
@@ -260,7 +260,7 @@
       "price": 5.0,
       "tax_class_hint": "reduced",
       "code": "tarta_queso",
-      "image": "hospitality/tarta_queso.jpg"
+      "image": "hospitality/tarta_queso.webp"
     },
     {
       "name": "Helado 2 bolas",
@@ -268,7 +268,7 @@
       "price": 4.0,
       "tax_class_hint": "reduced",
       "code": "helado_2_bolas",
-      "image": "hospitality/helado_2_bolas.jpg"
+      "image": "hospitality/helado_2_bolas.webp"
     },
     {
       "name": "Panna cotta",
@@ -276,7 +276,7 @@
       "price": 5.0,
       "tax_class_hint": "reduced",
       "code": "panna_cotta",
-      "image": "hospitality/panna_cotta.jpg"
+      "image": "hospitality/panna_cotta.webp"
     },
     {
       "name": "Coca-Cola",
@@ -348,7 +348,7 @@
       "price": 3.5,
       "tax_class_hint": "standard",
       "code": "vino_tinto_copa",
-      "image": "hospitality/vino_tinto_copa.jpg"
+      "image": "hospitality/vino_tinto_copa.webp"
     },
     {
       "name": "Copa de vino blanco",
@@ -356,7 +356,7 @@
       "price": 3.5,
       "tax_class_hint": "standard",
       "code": "vino_blanco_copa",
-      "image": "hospitality/vino_blanco_copa.jpg"
+      "image": "hospitality/vino_blanco_copa.webp"
     }
   ]
 }

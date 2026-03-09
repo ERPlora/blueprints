@@ -68,7 +68,7 @@
       "category": "nigiris",
       "tax_class_hint": "reduced",
       "price": 4.5,
-      "image": "hospitality/nigiri_salmon.jpg"
+      "image": "hospitality/nigiri_salmon.webp"
     },
     {
       "code": "nigiri_atun",
@@ -76,7 +76,7 @@
       "category": "nigiris",
       "tax_class_hint": "reduced",
       "price": 5.0,
-      "image": "hospitality/nigiri_atun.jpg"
+      "image": "hospitality/nigiri_atun.webp"
     },
     {
       "code": "nigiri_gamba",
@@ -84,7 +84,7 @@
       "category": "nigiris",
       "tax_class_hint": "reduced",
       "price": 4.8,
-      "image": "hospitality/nigiri_gamba.jpg"
+      "image": "hospitality/nigiri_gamba.webp"
     },
     {
       "code": "nigiri_pulpo",
@@ -92,7 +92,7 @@
       "category": "nigiris",
       "tax_class_hint": "reduced",
       "price": 5.5,
-      "image": "hospitality/nigiri_pulpo.jpg"
+      "image": "hospitality/nigiri_pulpo.webp"
     },
     {
       "code": "nigiri_anguila",
@@ -100,7 +100,7 @@
       "category": "nigiris",
       "tax_class_hint": "reduced",
       "price": 5.5,
-      "image": "hospitality/nigiri_anguila.jpg"
+      "image": "hospitality/nigiri_anguila.webp"
     },
     {
       "code": "maki_salmon",
@@ -108,7 +108,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 6.5,
-      "image": "hospitality/maki_salmon.jpg"
+      "image": "hospitality/maki_salmon.webp"
     },
     {
       "code": "maki_atun",
@@ -116,7 +116,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 7.0,
-      "image": "hospitality/maki_atun.jpg"
+      "image": "hospitality/maki_atun.webp"
     },
     {
       "code": "california_roll",
@@ -140,7 +140,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 9.5,
-      "image": "hospitality/tempura_roll.jpg"
+      "image": "hospitality/tempura_roll.webp"
     },
     {
       "code": "vegetariano_roll",
@@ -148,7 +148,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 7.5,
-      "image": "hospitality/vegetariano_roll.jpg"
+      "image": "hospitality/vegetariano_roll.webp"
     },
     {
       "code": "spicy_salmon_roll",
@@ -156,7 +156,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 9.0,
-      "image": "hospitality/spicy_salmon_roll.jpg"
+      "image": "hospitality/spicy_salmon_roll.webp"
     },
     {
       "code": "uramaki_aguacate",
@@ -164,7 +164,7 @@
       "category": "makis",
       "tax_class_hint": "reduced",
       "price": 7.0,
-      "image": "hospitality/uramaki_aguacate.jpg"
+      "image": "hospitality/uramaki_aguacate.webp"
     },
     {
       "code": "sashimi_salmon",
@@ -172,7 +172,7 @@
       "category": "sashimi",
       "tax_class_hint": "reduced",
       "price": 9.0,
-      "image": "hospitality/sashimi_salmon.jpg"
+      "image": "hospitality/sashimi_salmon.webp"
     },
     {
       "code": "sashimi_atun",
@@ -180,7 +180,7 @@
       "category": "sashimi",
       "tax_class_hint": "reduced",
       "price": 10.0,
-      "image": "hospitality/sashimi_atun.jpg"
+      "image": "hospitality/sashimi_atun.webp"
     },
     {
       "code": "sashimi_mixto",
@@ -188,7 +188,7 @@
       "category": "sashimi",
       "tax_class_hint": "reduced",
       "price": 14.0,
-      "image": "hospitality/sashimi_mixto.jpg"
+      "image": "hospitality/sashimi_mixto.webp"
     },
     {
       "code": "edamame",
@@ -212,7 +212,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 7.0,
-      "image": "hospitality/tempura_verduras.jpg"
+      "image": "hospitality/tempura_verduras.webp"
     },
     {
       "code": "tempura_gambas",
@@ -220,7 +220,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 8.5,
-      "image": "hospitality/tempura_gambas.jpg"
+      "image": "hospitality/tempura_gambas.webp"
     },
     {
       "code": "sopa_miso",
@@ -228,7 +228,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "hospitality/sopa_miso.jpg"
+      "image": "hospitality/sopa_miso.webp"
     },
     {
       "code": "ensalada_wakame",
@@ -244,7 +244,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 5.5,
-      "image": "hospitality/spring_rolls.jpg"
+      "image": "hospitality/spring_rolls.webp"
     },
     {
       "code": "ramen_cerdo",
@@ -252,7 +252,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 11.0,
-      "image": "hospitality/ramen_cerdo.jpg"
+      "image": "hospitality/ramen_cerdo.webp"
     },
     {
       "code": "ramen_pollo",
@@ -260,7 +260,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 10.5,
-      "image": "hospitality/ramen_pollo.jpg"
+      "image": "hospitality/ramen_pollo.webp"
     },
     {
       "code": "pad_thai",
@@ -268,7 +268,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 10.0,
-      "image": "hospitality/pad_thai.jpg"
+      "image": "hospitality/pad_thai.webp"
     },
     {
       "code": "arroz_wok",
@@ -284,7 +284,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 10.5,
-      "image": "hospitality/pollo_teriyaki.jpg"
+      "image": "hospitality/pollo_teriyaki.webp"
     },
     {
       "code": "salmon_teriyaki",
@@ -292,7 +292,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 12.0,
-      "image": "hospitality/salmon_teriyaki.jpg"
+      "image": "hospitality/salmon_teriyaki.webp"
     },
     {
       "code": "mochi_helado",
@@ -300,7 +300,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 5.5,
-      "image": "hospitality/mochi_helado.jpg"
+      "image": "hospitality/mochi_helado.webp"
     },
     {
       "code": "tarta_matcha",
@@ -308,7 +308,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 5.0,
-      "image": "hospitality/tarta_matcha.jpg"
+      "image": "hospitality/tarta_matcha.webp"
     },
     {
       "code": "tempura_helado",
@@ -316,7 +316,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 6.0,
-      "image": "hospitality/tempura_helado.jpg"
+      "image": "hospitality/tempura_helado.webp"
     },
     {
       "code": "agua_mineral",
@@ -340,7 +340,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 2.5,
-      "image": "hospitality/te_verde_japones.jpg"
+      "image": "hospitality/te_verde_japones.webp"
     },
     {
       "code": "limonada_yuzu",
@@ -348,7 +348,7 @@
       "category": "bebidas",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": "hospitality/limonada_yuzu.jpg"
+      "image": "hospitality/limonada_yuzu.webp"
     },
     {
       "code": "sake_copa",
@@ -356,7 +356,7 @@
       "category": "sake_cerveza",
       "tax_class_hint": "standard",
       "price": 4.5,
-      "image": "hospitality/sake_copa.jpg"
+      "image": "hospitality/sake_copa.webp"
     },
     {
       "code": "sake_botella",

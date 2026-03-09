@@ -1,0 +1,306 @@
+{
+  "version": "1.0.0",
+  "business_type": "cafeteria",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cafes",
+      "name": "Cafes",
+      "icon": "cafe-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "infusiones",
+      "name": "Infusiones y Te",
+      "icon": "leaf-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "zumos",
+      "name": "Zumos y Batidos",
+      "icon": "nutrition-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "bolleria",
+      "name": "Bolleria y Pasteleria",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    },
+    {
+      "code": "bocadillos",
+      "name": "Bocadillos y Sandwiches",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 5
+    },
+    {
+      "code": "tostadas",
+      "name": "Tostadas",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 6
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 7
+    },
+    {
+      "code": "aguas",
+      "name": "Aguas",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 8
+    }
+  ],
+  "products": [
+    {
+      "code": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.3,
+      "image": "hospitality/cafe_solo.webp"
+    },
+    {
+      "code": "cafe_cortado",
+      "name": "Cafe cortado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4,
+      "image": "hospitality/cafe_cortado.webp"
+    },
+    {
+      "code": "cafe_con_leche",
+      "name": "Cafe con leche",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.6,
+      "image": "hospitality/cafe_con_leche.webp"
+    },
+    {
+      "code": "capuchino",
+      "name": "Capuchino",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "hospitality/capuchino.webp"
+    },
+    {
+      "code": "descafeinado",
+      "name": "Descafeinado",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.4,
+      "image": "hospitality/descafeinado.webp"
+    },
+    {
+      "code": "carajillo",
+      "name": "Carajillo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/carajillo.webp"
+    },
+    {
+      "code": "cafe_bombon",
+      "name": "Cafe bombon",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": ""
+    },
+    {
+      "code": "colacao",
+      "name": "Cola Cao",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": ""
+    },
+    {
+      "code": "te_negro",
+      "name": "Te negro",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/te_negro.webp"
+    },
+    {
+      "code": "te_verde",
+      "name": "Te verde",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/te_verde.webp"
+    },
+    {
+      "code": "manzanilla",
+      "name": "Manzanilla",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/manzanilla.webp"
+    },
+    {
+      "code": "poleo_menta",
+      "name": "Poleo menta",
+      "category": "infusiones",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/poleo_menta.webp"
+    },
+    {
+      "code": "zumo_naranja",
+      "name": "Zumo de naranja natural",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 3.0,
+      "image": "hospitality/zumo_naranja.webp"
+    },
+    {
+      "code": "zumo_tomate",
+      "name": "Zumo de tomate",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8,
+      "image": "hospitality/zumo_tomate.webp"
+    },
+    {
+      "code": "zumo_pina",
+      "name": "Zumo de pina",
+      "category": "zumos",
+      "tax_class_hint": "reduced",
+      "price": 2.8,
+      "image": "hospitality/zumo_pina.webp"
+    },
+    {
+      "code": "croissant",
+      "name": "Croissant",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.5,
+      "image": "hospitality/croissant.webp"
+    },
+    {
+      "code": "napolitana_chocolate",
+      "name": "Napolitana de chocolate",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/napolitana_chocolate.webp"
+    },
+    {
+      "code": "palmera",
+      "name": "Palmera",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.5,
+      "image": ""
+    },
+    {
+      "code": "magdalena",
+      "name": "Magdalena",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 1.2,
+      "image": "hospitality/magdalena.webp"
+    },
+    {
+      "code": "tarta_queso",
+      "name": "Porcion tarta de queso",
+      "category": "bolleria",
+      "tax_class_hint": "reduced",
+      "price": 4.0,
+      "image": "hospitality/tarta_queso.webp"
+    },
+    {
+      "code": "bocadillo_jamon",
+      "name": "Bocadillo de jamon",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 4.5,
+      "image": "hospitality/bocadillo_jamon.webp"
+    },
+    {
+      "code": "bocadillo_lomo",
+      "name": "Bocadillo de lomo",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 5.0,
+      "image": "hospitality/bocadillo_lomo.webp"
+    },
+    {
+      "code": "sandwich_mixto",
+      "name": "Sandwich mixto",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 3.5,
+      "image": "hospitality/sandwich_mixto.webp"
+    },
+    {
+      "code": "sandwich_vegetal",
+      "name": "Sandwich vegetal",
+      "category": "bocadillos",
+      "tax_class_hint": "reduced",
+      "price": 4.0,
+      "image": "hospitality/sandwich_vegetal.webp"
+    },
+    {
+      "code": "tostada_tomate",
+      "name": "Tostada con tomate",
+      "category": "tostadas",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/tostada_tomate.webp"
+    },
+    {
+      "code": "tostada_mantequilla",
+      "name": "Tostada con mantequilla",
+      "category": "tostadas",
+      "tax_class_hint": "reduced",
+      "price": 2.0,
+      "image": "hospitality/tostada_mantequilla.webp"
+    },
+    {
+      "code": "tostada_jamon_queso",
+      "name": "Tostada jamon y queso",
+      "category": "tostadas",
+      "tax_class_hint": "reduced",
+      "price": 3.5,
+      "image": ""
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/coca_cola.webp"
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.5,
+      "image": "hospitality/fanta_naranja.webp"
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "aguas",
+      "tax_class_hint": "reduced",
+      "price": 1.8,
+      "image": "hospitality/agua_mineral.webp"
+    }
+  ]
+}
