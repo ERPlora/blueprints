@@ -11,11 +11,29 @@
       "is_combinable": true
     },
     {
-      "code": "bar_restaurant",
+      "code": "bar",
       "sector": "hospitality",
-      "name": "Bar-Restaurant",
-      "icon": "restaurant-outline",
+      "name": "Bar",
+      "icon": "beer-outline",
       "color": "#ff6b35",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "cafeteria",
+      "sector": "hospitality",
+      "name": "Cafeteria",
+      "icon": "cafe-outline",
+      "color": "#795548",
+      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "restaurant",
+      "sector": "hospitality",
+      "name": "Restaurant",
+      "icon": "restaurant-outline",
+      "color": "#e65100",
       "inherits_from": [],
       "is_combinable": true
     },
