@@ -49,6 +49,5 @@
         "staff.view_*"
       ]
     }
-  ],
-  "products_file": "products/catering.json"
+  ]
 }

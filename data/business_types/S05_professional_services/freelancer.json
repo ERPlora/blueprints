@@ -29,6 +29,5 @@
     "Client management",
     "Quotes to invoices"
   ],
-  "roles": [],
-  "products_file": "products/freelancer.json"
+  "roles": []
 }

@@ -38,6 +38,5 @@
         "customers.view_*"
       ]
     }
-  ],
-  "products_file": "products/clothing.json"
+  ]
 }

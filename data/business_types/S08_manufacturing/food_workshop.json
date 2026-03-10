@@ -50,6 +50,5 @@
         "invoicing.view_*"
       ]
     }
-  ],
-  "products_file": "products/food_workshop.json"
+  ]
 }

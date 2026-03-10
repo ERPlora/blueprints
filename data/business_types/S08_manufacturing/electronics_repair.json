@@ -21,9 +21,7 @@
     "PRY": "essential",
     "BI": "recommended"
   },
-  "extra_modules": [
-    "repair_shop"
-  ],
+  "extra_modules": [],
   "sector_features": [
     "Device records",
     "Diagnostics",
@@ -37,6 +35,5 @@
         "*"
       ]
     }
-  ],
-  "products_file": "products/electronics_repair.json"
+  ]
 }
