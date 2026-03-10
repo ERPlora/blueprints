@@ -70,7 +70,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 5.5,
-      "image": ""
+      "image": "hospitality/sopa_miso.webp"
     },
     {
       "code": "croquetas_caseras",
@@ -78,7 +78,7 @@
       "category": "entrantes",
       "tax_class_hint": "reduced",
       "price": 8.0,
-      "image": ""
+      "image": "hospitality/croquetas_jamon.webp"
     },
     {
       "code": "entrecot",
@@ -118,7 +118,7 @@
       "category": "principales",
       "tax_class_hint": "reduced",
       "price": 15.0,
-      "image": ""
+      "image": "hospitality/entrecot.webp"
     },
     {
       "code": "lubina_horno",
@@ -150,7 +150,7 @@
       "category": "postres",
       "tax_class_hint": "reduced",
       "price": 4.0,
-      "image": ""
+      "image": "hospitality/flan_casero.webp"
     },
     {
       "code": "menu_dia",

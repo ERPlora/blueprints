@@ -189,7 +189,8 @@
       "name": "Menu durum (+ patatas + bebida)",
       "category": "menus",
       "tax_class_hint": "reduced",
-      "price": 9.0
+      "price": 9.0,
+      "image": "hospitality/durum_mixto.webp"
     },
     {
       "code": "agua_mineral",

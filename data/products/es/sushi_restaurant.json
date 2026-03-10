@@ -363,7 +363,8 @@
       "name": "Botella de sake",
       "category": "sake_cerveza",
       "tax_class_hint": "reduced",
-      "price": 18.0
+      "price": 18.0,
+      "image": "hospitality/sake_copa.webp"
     },
     {
       "code": "cerveza_japonesa",

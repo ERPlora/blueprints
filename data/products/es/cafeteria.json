@@ -116,7 +116,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": ""
+      "image": "hospitality/cafe_bombom.webp"
     },
     {
       "code": "colacao",
@@ -124,7 +124,7 @@
       "category": "cafes",
       "tax_class_hint": "reduced",
       "price": 2.0,
-      "image": ""
+      "image": "hospitality/cafe_con_leche.webp"
     },
     {
       "code": "te_negro",
@@ -204,7 +204,7 @@
       "category": "bolleria",
       "tax_class_hint": "reduced",
       "price": 1.5,
-      "image": ""
+      "image": "hospitality/palmera_chocolate.webp"
     },
     {
       "code": "magdalena",
@@ -276,7 +276,7 @@
       "category": "tostadas",
       "tax_class_hint": "reduced",
       "price": 3.5,
-      "image": ""
+      "image": "hospitality/tostada_tomate.webp"
     },
     {
       "code": "coca_cola",
