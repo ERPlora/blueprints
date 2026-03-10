@@ -8,20 +8,27 @@
   "inherits_from": [],
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "recommended",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "recommended",
-    "ECO": "recommended",
-    "PRO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "sales",
+    "cash_register",
+    "inventory",
+    "customers",
+    "invoicing",
+    "tax"
+  ],
   "sector_features": [
     "Sale by weight / scoop",
     "Combos",

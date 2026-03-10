@@ -8,21 +8,29 @@
   "inherits_from": [],
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "recommended",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
   "extra_modules": [
-    "tables"
+    "sales",
+    "cash_register",
+    "inventory",
+    "customers",
+    "tables",
+    "orders",
+    "kitchen",
+    "invoicing",
+    "tax"
   ],
   "sector_features": [
     "Drink service",

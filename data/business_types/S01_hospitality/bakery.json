@@ -8,21 +8,26 @@
   "inherits_from": [],
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "recommended",
-    "CRM": "recommended",
-    "ECO": "recommended",
-    "PRO": "essential",
-    "LOG": "recommended",
-    "RRH": "recommended",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
   "extra_modules": [
-    "delivery"
+    "sales",
+    "cash_register",
+    "inventory",
+    "customers",
+    "invoicing",
+    "tax"
   ],
   "sector_features": [
     "BOM / recipes",
