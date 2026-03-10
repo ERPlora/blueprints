@@ -57,7 +57,7 @@
       "code": "sake_cerveza",
       "name": "Sake y cerveza",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 8
     }
   ],
@@ -354,7 +354,7 @@
       "code": "sake_copa",
       "name": "Copa de sake",
       "category": "sake_cerveza",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 4.5,
       "image": "hospitality/sake_copa.webp"
     },
@@ -362,14 +362,14 @@
       "code": "sake_botella",
       "name": "Botella de sake",
       "category": "sake_cerveza",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 18.0
     },
     {
       "code": "cerveza_japonesa",
       "name": "Cerveza japonesa",
       "category": "sake_cerveza",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 4.0,
       "image": "hospitality/cerveza_japonesa.webp"
     },
@@ -377,7 +377,7 @@
       "code": "cerveza_cana",
       "name": "Cana",
       "category": "sake_cerveza",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 2.5,
       "image": "hospitality/cerveza_cana.webp"
     }

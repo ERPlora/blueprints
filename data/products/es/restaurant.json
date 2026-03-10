@@ -43,7 +43,7 @@
       "code": "vinos",
       "name": "Vinos",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 6
     }
   ],

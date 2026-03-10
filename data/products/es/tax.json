@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "country": "ES",
+  "presets": {
+    "es_standard": {
+      "name": "IVA (Peninsula y Baleares)",
+      "tax_included": true,
+      "classes": [
+        {
+          "code": "general",
+          "name": "IVA General",
+          "rate": 21.00,
+          "is_default": true,
+          "order": 1,
+          "description": "Tipo general"
+        },
+        {
+          "code": "reduced",
+          "name": "IVA Reducido",
+          "rate": 10.00,
+          "is_default": false,
+          "order": 2,
+          "description": "Hosteleria, alimentacion preparada, transporte"
+        },
+        {
+          "code": "super_reduced",
+          "name": "IVA Superreducido",
+          "rate": 4.00,
+          "is_default": false,
+          "order": 3,
+          "description": "Alimentos basicos no procesados, libros, medicamentos"
+        },
+        {
+          "code": "exempt",
+          "name": "Exento",
+          "rate": 0.00,
+          "is_default": false,
+          "order": 4,
+          "description": "Operaciones exentas"
+        }
+      ],
+      "sector_overrides": {
+        "hospitality": {
+          "default_class": "reduced",
+          "notes": "En hosteleria todo tributa al 10%. Solo servicios mixtos con entretenimiento (discotecas, casinos) al 21%."
+        }
+      }
+    },
+    "es_canarias": {
+      "name": "IGIC (Canarias)",
+      "tax_included": true,
+      "classes": [
+        {
+          "code": "general",
+          "name": "IGIC General",
+          "rate": 7.00,
+          "is_default": true,
+          "order": 1,
+          "description": "Tipo general"
+        },
+        {
+          "code": "reduced",
+          "name": "IGIC Reducido",
+          "rate": 3.00,
+          "is_default": false,
+          "order": 2,
+          "description": "Hosteleria, alimentacion"
+        },
+        {
+          "code": "zero",
+          "name": "IGIC Tipo Cero",
+          "rate": 0.00,
+          "is_default": false,
+          "order": 3,
+          "description": "Alimentos basicos, agua, medicamentos"
+        },
+        {
+          "code": "exempt",
+          "name": "Exento",
+          "rate": 0.00,
+          "is_default": false,
+          "order": 4,
+          "description": "Operaciones exentas"
+        }
+      ],
+      "sector_overrides": {
+        "hospitality": {
+          "default_class": "reduced"
+        }
+      }
+    }
+  }
+}

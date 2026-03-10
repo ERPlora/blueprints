@@ -8,49 +8,49 @@
       "code": "menus_cocktail",
       "name": "Menus cocktail",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 1
     },
     {
       "code": "menus_sentados",
       "name": "Menus sentados",
       "icon": "restaurant-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 2
     },
     {
       "code": "menus_buffet",
       "name": "Menus buffet",
       "icon": "fast-food-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 3
     },
     {
       "code": "extras",
       "name": "Extras y complementos",
       "icon": "add-circle-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 4
     },
     {
       "code": "bebidas",
       "name": "Bebidas",
       "icon": "beer-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 5
     },
     {
       "code": "personal",
       "name": "Personal eventual",
       "icon": "people-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 6
     },
     {
       "code": "alquiler",
       "name": "Alquiler material",
       "icon": "cube-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 7
     }
   ],
@@ -59,175 +59,175 @@
       "code": "cocktail_basico",
       "name": "Cocktail basico (6 piezas/pax)",
       "category": "menus_cocktail",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 18.00
     },
     {
       "code": "cocktail_premium",
       "name": "Cocktail premium (10 piezas/pax)",
       "category": "menus_cocktail",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 28.00
     },
     {
       "code": "cocktail_lujo",
       "name": "Cocktail lujo (14 piezas/pax + show cooking)",
       "category": "menus_cocktail",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 42.00
     },
     {
       "code": "menu_empresa",
       "name": "Menu empresa (3 platos + postre + cafe)",
       "category": "menus_sentados",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 35.00
     },
     {
       "code": "menu_gala",
       "name": "Menu gala (4 platos + postre + petit fours)",
       "category": "menus_sentados",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 55.00
     },
     {
       "code": "menu_boda",
       "name": "Menu boda (5 platos + tarta + barra libre)",
       "category": "menus_sentados",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 85.00
     },
     {
       "code": "menu_comunion",
       "name": "Menu comunion (3 platos + postre + animacion)",
       "category": "menus_sentados",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 45.00
     },
     {
       "code": "buffet_frio",
       "name": "Buffet frio (ensaladas, embutidos, quesos)",
       "category": "menus_buffet",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 22.00
     },
     {
       "code": "buffet_caliente",
       "name": "Buffet caliente (carnes, pescados, guarniciones)",
       "category": "menus_buffet",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 30.00
     },
     {
       "code": "buffet_completo",
       "name": "Buffet completo (frio + caliente + postres)",
       "category": "menus_buffet",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 38.00
     },
     {
       "code": "mesa_dulce",
       "name": "Mesa dulce (tartas, cupcakes, galletas)",
       "category": "extras",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 8.00
     },
     {
       "code": "candy_bar",
       "name": "Candy bar (chuches, chocolates, frutos secos)",
       "category": "extras",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 6.00
     },
     {
       "code": "show_cooking",
       "name": "Show cooking en vivo",
       "category": "extras",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 350.00
     },
     {
       "code": "decoracion_floral",
       "name": "Decoracion floral centros de mesa",
       "category": "extras",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 12.00
     },
     {
       "code": "barra_libre_3h",
       "name": "Barra libre 3 horas",
       "category": "bebidas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 18.00
     },
     {
       "code": "barra_libre_5h",
       "name": "Barra libre 5 horas",
       "category": "bebidas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 25.00
     },
     {
       "code": "pack_bebidas_basico",
       "name": "Pack bebidas basico (agua + refrescos + vino)",
       "category": "bebidas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 10.00
     },
     {
       "code": "pack_bebidas_premium",
       "name": "Pack bebidas premium (cava + vino reserva + licores)",
       "category": "bebidas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 16.00
     },
     {
       "code": "camarero_evento",
       "name": "Camarero por evento (8h)",
       "category": "personal",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 120.00
     },
     {
       "code": "cocinero_evento",
       "name": "Cocinero auxiliar por evento (8h)",
       "category": "personal",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 150.00
     },
     {
       "code": "maitre_evento",
       "name": "Maitre / coordinador evento",
       "category": "personal",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 200.00
     },
     {
       "code": "alquiler_vajilla",
       "name": "Alquiler vajilla completa (por persona)",
       "category": "alquiler",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 4.50
     },
     {
       "code": "alquiler_cristaleria",
       "name": "Alquiler cristaleria (por persona)",
       "category": "alquiler",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.00
     },
     {
       "code": "alquiler_manteleria",
       "name": "Alquiler manteleria (por mesa)",
       "category": "alquiler",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 15.00
     },
     {
       "code": "alquiler_sillas",
       "name": "Alquiler sillas (por unidad)",
       "category": "alquiler",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.50
     }
   ]

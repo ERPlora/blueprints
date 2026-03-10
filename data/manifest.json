@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "generated": "2026-03-08",
-  "file_count": 615,
+  "file_count": 616,
   "files": [
     {
       "path": "assets/products/hospitality/agua_con_gas.png",
@@ -3057,6 +3057,11 @@
       "path": "products/es/restaurant.json",
       "sha256": "5b9c97b7a6841c4ab2bca16bce3eb40040a8ef7b6cb05c9f4c30bf51d9d6f992",
       "size": 16461
+    },
+    {
+      "path": "products/es/tax.json",
+      "sha256": "a606fe5ee433677b45b3cf17e9256022c0fae91c77cc7af7327c7be79297e464",
+      "size": 2381
     },
     {
       "path": "products/es/spa.json",

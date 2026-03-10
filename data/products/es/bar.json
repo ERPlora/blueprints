@@ -8,28 +8,28 @@
       "code": "cervezas",
       "name": "Cervezas",
       "icon": "beer-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 1
     },
     {
       "code": "vinos",
       "name": "Vinos",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 2
     },
     {
       "code": "licores",
       "name": "Licores y Destilados",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 3
     },
     {
       "code": "cocktails",
       "name": "Cocteles",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 4
     },
     {
@@ -66,7 +66,7 @@
       "code": "cerveza_cana",
       "name": "Cana",
       "category": "cervezas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 1.8,
       "image": "hospitality/cerveza_cana.webp"
     },
@@ -74,7 +74,7 @@
       "code": "cerveza_jarra",
       "name": "Jarra de cerveza",
       "category": "cervezas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.5,
       "image": "hospitality/cerveza_jarra.webp"
     },
@@ -82,7 +82,7 @@
       "code": "cerveza_botella",
       "name": "Cerveza botella",
       "category": "cervezas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 2.5,
       "image": "hospitality/cerveza_botella.webp"
     },
@@ -98,7 +98,7 @@
       "code": "clara",
       "name": "Clara",
       "category": "cervezas",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 2.0,
       "image": "hospitality/clara.webp"
     },
@@ -106,7 +106,7 @@
       "code": "vino_tinto_copa",
       "name": "Vino tinto (copa)",
       "category": "vinos",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.0,
       "image": "hospitality/vino_tinto_copa.webp"
     },
@@ -114,7 +114,7 @@
       "code": "vino_blanco_copa",
       "name": "Vino blanco (copa)",
       "category": "vinos",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.0,
       "image": "hospitality/vino_blanco_copa.webp"
     },
@@ -122,7 +122,7 @@
       "code": "vino_rosado_copa",
       "name": "Vino rosado (copa)",
       "category": "vinos",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.0,
       "image": "hospitality/vino_rosado_copa.webp"
     },
@@ -130,7 +130,7 @@
       "code": "sangria_jarra",
       "name": "Sangria (jarra)",
       "category": "vinos",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 12.0,
       "image": "hospitality/sangria_jarra.webp"
     },
@@ -138,7 +138,7 @@
       "code": "tinto_verano",
       "name": "Tinto de verano",
       "category": "vinos",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 2.5,
       "image": "hospitality/tinto_verano.webp"
     },
@@ -146,7 +146,7 @@
       "code": "vermut",
       "name": "Vermut",
       "category": "licores",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 3.0,
       "image": "hospitality/vermut.webp"
     },
@@ -154,7 +154,7 @@
       "code": "gin_tonic",
       "name": "Gin tonic",
       "category": "cocktails",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 8.0,
       "image": "hospitality/gin_tonic.webp"
     },
@@ -162,7 +162,7 @@
       "code": "ron_cola",
       "name": "Cubata de ron",
       "category": "cocktails",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 7.0,
       "image": "hospitality/ron_cola.webp"
     },
@@ -170,7 +170,7 @@
       "code": "whisky_cola",
       "name": "Cubata de whisky",
       "category": "cocktails",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 7.0,
       "image": "hospitality/whisky_cola.webp"
     },
@@ -178,7 +178,7 @@
       "code": "mojito",
       "name": "Mojito",
       "category": "cocktails",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "price": 8.5,
       "image": "hospitality/mojito.webp"
     },

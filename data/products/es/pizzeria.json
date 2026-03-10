@@ -49,14 +49,14 @@
     {
       "name": "Cervezas",
       "icon": "beer-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 7,
       "code": "cervezas"
     },
     {
       "name": "Vinos",
       "icon": "wine-outline",
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "order": 8,
       "code": "vinos"
     }
@@ -322,7 +322,7 @@
       "name": "Cana",
       "category": "cervezas",
       "price": 2.0,
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "code": "cerveza_cana",
       "image": "hospitality/cerveza_cana.webp"
     },
@@ -330,7 +330,7 @@
       "name": "Cerveza botella",
       "category": "cervezas",
       "price": 2.8,
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "code": "cerveza_botella",
       "image": "hospitality/cerveza_botella.webp"
     },
@@ -338,7 +338,7 @@
       "name": "Cerveza sin alcohol",
       "category": "cervezas",
       "price": 2.5,
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "code": "cerveza_sin",
       "image": "hospitality/cerveza_sin.webp"
     },
@@ -346,7 +346,7 @@
       "name": "Copa de vino tinto",
       "category": "vinos",
       "price": 3.5,
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "code": "vino_tinto_copa",
       "image": "hospitality/vino_tinto_copa.webp"
     },
@@ -354,7 +354,7 @@
       "name": "Copa de vino blanco",
       "category": "vinos",
       "price": 3.5,
-      "tax_class_hint": "standard",
+      "tax_class_hint": "reduced",
       "code": "vino_blanco_copa",
       "image": "hospitality/vino_blanco_copa.webp"
     }
