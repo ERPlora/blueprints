@@ -108,6 +108,15 @@
       "color": "#5856d6",
       "order": 12,
       "type_count": 1
+    },
+    {
+      "code": "compliance",
+      "name": "Compliance & Legal",
+      "description": "Tax compliance, e-invoicing, GDPR, regulatory modules",
+      "icon": "shield-checkmark-outline",
+      "color": "#34c759",
+      "order": 13,
+      "type_count": 0
     }
   ]
 }
