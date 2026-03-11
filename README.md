@@ -8,37 +8,38 @@ For business types not covered by blueprints, the AI assistant dynamically selec
 
 ---
 
-## 57 Business Types across 12 Sectors
+## 58 Business Types across 12 Sectors
 
-### 🍽️ Hospitality & Food (6)
+### 🍽️ Hospitality & Food (7)
 | Code | Name |
 |------|------|
-| `hospitality` | Hospitality (generic) |
 | `restaurant` | Restaurant |
-| `bar_cafe` | Bar / Café |
+| `bar` | Bar |
+| `cafeteria` | Cafeteria |
 | `fast_food` | Fast Food |
+| `food_truck` | Food Truck |
 | `food_delivery` | Food Delivery |
 | `catering` | Catering |
 
 ### 🛍️ Retail & Commerce (6)
 | Code | Name |
 |------|------|
-| `retail` | Retail (generic) |
 | `supermarket` | Supermarket |
 | `fashion_retail` | Fashion Retail |
-| `electronics_retail` | Electronics Retail |
-| `pharmacy_retail` | Pharmacy |
-| `wholesale` | Wholesale |
+| `electronics_retail` | Electronics & IT |
+| `pharmacy` | Pharmacy / Parapharmacy |
+| `pet_shop` | Pet Store |
+| `wholesale_distributor` | Wholesale Distributor |
 
 ### 💇 Personal Services & Wellness (6)
 | Code | Name |
 |------|------|
-| `beauty_salon` | Beauty Salon |
-| `barbershop` | Barbershop |
-| `spa_wellness` | Spa & Wellness |
+| `hair_salon` | Hair Salon |
+| `barber_shop` | Barbershop |
+| `spa` | Spa & Wellness |
 | `massage_therapy` | Massage Therapy |
-| `fitness_gym` | Fitness Gym |
-| `personal_services` | Personal Services (generic) |
+| `gym` | Gym / Sports Center |
+| `beauty_center` | Beauty Center |
 
 ### 🏨 Hotels & Tourism (5)
 | Code | Name |
@@ -52,68 +53,68 @@ For business types not covered by blueprints, the AI assistant dynamically selec
 ### 🏥 Healthcare (5)
 | Code | Name |
 |------|------|
-| `clinic` | Clinic |
+| `clinic` | Clinic / Medical Center |
 | `dental_clinic` | Dental Clinic |
 | `physiotherapy` | Physiotherapy |
-| `psychology` | Psychology |
-| `medical_lab` | Medical Lab |
+| `psychology` | Psychology / Coaching |
+| `medical_lab` | Medical Laboratory |
 
 ### 🏗️ Construction & Field Services (5)
 | Code | Name |
 |------|------|
-| `construction` | Construction |
+| `construction_company` | Construction Company |
 | `home_services` | Home Services |
-| `maintenance_services` | Maintenance Services |
-| `contractors` | Contractors |
-| `field_service` | Field Service |
+| `maintenance_company` | Maintenance & SAT |
+| `installer` | Installer (Plumbing, Electric, HVAC) |
+| `cleaning_company` | Cleaning Company |
 
 ### 🏭 Manufacturing & Industry (4)
 | Code | Name |
 |------|------|
-| `manufacturing` | Manufacturing (generic) |
-| `factory` | Factory |
-| `industrial_production` | Industrial Production |
-| `assembly` | Assembly |
+| `manufacturing` | Manufacturing / Factory |
+| `food_workshop` | Food Workshop / Artisan |
+| `assembly` | Assembly Line |
+| `carpentry` | Carpentry / Workshop |
 
 ### 🚚 Logistics & Transportation (4)
 | Code | Name |
 |------|------|
-| `logistics` | Logistics |
-| `transportation` | Transportation |
+| `logistics_company` | Logistics & Distribution |
+| `transport_company` | Transportation Company |
 | `delivery_services` | Delivery Services |
-| `warehousing` | Warehousing |
+| `warehouse` | Warehousing & Storage |
 
 ### 🏢 Professional Services (5)
 | Code | Name |
 |------|------|
-| `consulting` | Consulting |
+| `consulting` | Consulting / Advisory |
 | `accounting_firm` | Accounting Firm |
-| `legal_services` | Legal Services |
+| `law_firm` | Law Firm |
 | `marketing_agency` | Marketing Agency |
 | `it_services` | IT Services |
 
 ### 🎓 Education (4)
 | Code | Name |
 |------|------|
-| `education` | Education (generic) |
-| `school` | School |
+| `school` | School / Academy |
 | `training_center` | Training Center |
 | `online_courses` | Online Courses |
+| `driving_school` | Driving School |
 
 ### 🏡 Real Estate (3)
 | Code | Name |
 |------|------|
-| `real_estate` | Real Estate (generic) |
-| `property_management` | Property Management |
 | `real_estate_agency` | Real Estate Agency |
+| `property_management` | Property Management |
+| `vacation_rental_mgmt` | Vacation Rental Management |
 
 ### 🚗 Automotive (4)
 | Code | Name |
 |------|------|
-| `car_repair` | Car Repair |
+| `car_repair` | Car Repair / Garage |
 | `car_dealership` | Car Dealership |
 | `car_rental` | Car Rental |
-| `auto_services` | Auto Services |
+| `auto_services` | Auto Services (ITV, Tires, Wash) |
 
 ---
 
@@ -128,9 +129,9 @@ blueprints/
 ├── data/
 │   ├── business_sectors.json        # 12 sector definitions
 │   ├── business_types/
-│   │   ├── index.json               # Master index (57 types)
+│   │   ├── index.json               # Master index (58 types)
 │   │   ├── restaurant.json          # Flat: one JSON per type
-│   │   ├── bar_cafe.json
+│   │   ├── bar.json
 │   │   └── ...
 │   ├── compliance.json              # Country compliance modules
 │   ├── functional_units.json        # 12 UFO functional units
@@ -158,7 +159,7 @@ Each business type JSON file contains:
 
 | Field | Description |
 |-------|-------------|
-| `code` | Unique identifier (`bar_cafe`, `fitness_gym`, etc.) |
+| `code` | Unique identifier (`bar`, `hair_salon`, `car_repair`, etc.) |
 | `sector` | Parent sector (`hospitality`, `retail`, `personal_services`, etc.) |
 | `name` | Display name |
 | `description` | Short description |
