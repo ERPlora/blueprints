@@ -1,0 +1,39 @@
+{
+  "code": "fruit_shop",
+  "sector": "retail",
+  "name": "Fruit & Vegetable Shop",
+  "description": "Fresh produce with scale, weight/unit sales, variable pricing, shrinkage",
+  "icon": "nutrition-outline",
+  "color": "#8bc34a",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Scale",
+    "Weight/unit sales",
+    "Variable pricing"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ],
+  "products_file": "products/fruit_shop.json"
+}

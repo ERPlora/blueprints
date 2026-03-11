@@ -1,122 +1,29 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "sectors": [
     {
       "code": "hospitality",
       "name": "Hospitality & Restaurants",
-      "description": "Bars, restaurants, cafes, bakeries, food trucks",
+      "description": "Bars, restaurants, cafes, bakeries, food trucks, pubs",
       "icon": "restaurant-outline",
       "color": "#ff6b35",
-      "order": 1,
-      "type_count": 11
-    },
-    {
-      "code": "retail",
-      "name": "Retail & Commerce",
-      "description": "Clothing, specialty shops, food shops, health stores",
-      "icon": "storefront-outline",
-      "color": "#3880ff",
-      "order": 2,
-      "type_count": 23
+      "type_count": 13
     },
     {
       "code": "personal_services",
       "name": "Personal Services & Wellness",
-      "description": "Hair salons, beauty centers, gyms, therapy, grooming",
+      "description": "Hair salons, beauty centers, gyms, spas, clinics",
       "icon": "heart-outline",
       "color": "#ff2d55",
-      "order": 3,
-      "type_count": 14
+      "type_count": 8
     },
     {
-      "code": "professional_services",
-      "name": "Professional Services",
-      "description": "Consulting, law firms, agencies, maintenance",
-      "icon": "business-outline",
-      "color": "#5856d6",
-      "order": 4,
-      "type_count": 9
-    },
-    {
-      "code": "education",
-      "name": "Education & Training",
-      "description": "Academies, driving schools, language & music schools",
-      "icon": "school-outline",
-      "color": "#007aff",
-      "order": 5,
+      "code": "retail",
+      "name": "Retail & Commerce",
+      "description": "Butcher shops, grocery, pet shops, tobacconists",
+      "icon": "storefront-outline",
+      "color": "#3880ff",
       "type_count": 5
-    },
-    {
-      "code": "construction",
-      "name": "Construction & Installations",
-      "description": "Builders, renovators, installers, carpenters",
-      "icon": "hammer-outline",
-      "color": "#ff9500",
-      "order": 6,
-      "type_count": 5
-    },
-    {
-      "code": "manufacturing",
-      "name": "Repair & Manufacturing",
-      "description": "Auto repair, electronics repair, printing",
-      "icon": "construct-outline",
-      "color": "#8e8e93",
-      "order": 7,
-      "type_count": 3
-    },
-    {
-      "code": "agriculture",
-      "name": "Agriculture & Garden",
-      "description": "Garden centers, nurseries",
-      "icon": "leaf-outline",
-      "color": "#2dd36f",
-      "order": 8,
-      "type_count": 1
-    },
-    {
-      "code": "entertainment",
-      "name": "Leisure & Entertainment",
-      "description": "Escape rooms, sports clubs, event venues",
-      "icon": "game-controller-outline",
-      "color": "#ff6b35",
-      "order": 9,
-      "type_count": 3
-    },
-    {
-      "code": "media",
-      "name": "Media & Creative",
-      "description": "Photography studios",
-      "icon": "videocam-outline",
-      "color": "#ff2d55",
-      "order": 10,
-      "type_count": 1
-    },
-    {
-      "code": "rental",
-      "name": "Rental",
-      "description": "Bike and scooter rental",
-      "icon": "key-outline",
-      "color": "#ff9500",
-      "order": 11,
-      "type_count": 1
-    },
-    {
-      "code": "coworking",
-      "name": "Spaces & Coworking",
-      "description": "Coworking spaces",
-      "icon": "desktop-outline",
-      "color": "#5856d6",
-      "order": 12,
-      "type_count": 1
-    },
-    {
-      "code": "compliance",
-      "name": "Compliance & Legal",
-      "description": "Tax compliance, e-invoicing, GDPR, regulatory modules",
-      "icon": "shield-checkmark-outline",
-      "color": "#34c759",
-      "order": 13,
-      "type_count": 0
     }
   ]
 }

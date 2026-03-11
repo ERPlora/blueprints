@@ -1,0 +1,62 @@
+{
+  "code": "pizzeria",
+  "sector": "hospitality",
+  "name": "Pizzeria",
+  "description": "Pizza restaurant with wood-fired or electric oven, dough preparation, pizza-by-slice or whole, delivery and takeaway focus",
+  "icon": "pizza-outline",
+  "color": "#e74c3c",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [
+    "sales",
+    "cash_register",
+    "inventory",
+    "customers",
+    "tables",
+    "orders",
+    "kitchen",
+    "invoicing",
+    "tax"
+  ],
+  "sector_features": [
+    "Pizza oven management",
+    "Dough batch tracking",
+    "Delivery integration",
+    "Half-and-half pizzas",
+    "Size variants"
+  ],
+  "roles": [
+    {
+      "id": "pizzaiolo",
+      "name": "Pizzaiolo",
+      "permissions": [
+        "kitchen.*",
+        "orders.view_*",
+        "inventory.view_*"
+      ]
+    },
+    {
+      "id": "cashier",
+      "name": "Cashier",
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "orders.*"
+      ]
+    }
+  ],
+  "products_file": "products/pizzeria.json"
+}

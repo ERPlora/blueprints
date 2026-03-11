@@ -4,136 +4,48 @@ Business type definitions, product catalogs, and configuration data for ERPlora 
 
 When a user creates a new Hub, they select a **business type**. The blueprint for that type pre-configures: functional units (modules), roles, products, tax classes, and sector-specific features.
 
+For business types not covered by blueprints, the AI assistant dynamically selects modules from the full catalog.
+
 ---
 
-## Phase 1 — 79 Business Types across 12 Sectors
+## 25 Business Types across 3 Sectors
 
 ### Hospitality & Restaurants (13)
 | Code | Name |
 |------|------|
-| `bar` | Bar / Pub |
-| `restaurant` | Restaurant |
-| `bar_restaurant` | Bar-Restaurant |
+| `bakery` | Bakery / Pastry Shop |
+| `bar` | Bar |
+| `cafeteria` | Cafeteria |
 | `fast_food` | Fast Food |
 | `food_truck` | Food Truck |
-| `bakery` | Bakery / Pastry Shop |
 | `ice_cream_shop` | Ice Cream Shop |
-| `beach_bar` | Beach Bar / Seasonal Terrace |
-| `wine_bar` | Wine Bar |
-| `pizzeria` | Pizzeria |
-| `coffee_shop` | Coffee Shop |
-| `sushi_restaurant` | Sushi Restaurant |
 | `kebab_shop` | Kebab Shop |
+| `pizzeria` | Pizzeria |
+| `pub` | Pub |
+| `restaurant` | Restaurant |
+| `sushi_restaurant` | Sushi Restaurant |
+| `tapas_bar` | Tapas Bar |
 
-### Retail & Commerce (23)
+### Personal Services & Wellness (8)
 | Code | Name |
 |------|------|
-| `clothing` | Clothing / Fashion Store |
-| `fruit_shop` | Fruit & Vegetable Shop |
-| `butcher_shop` | Butcher Shop |
-| `fish_shop` | Fish Shop |
-| `hardware_store` | Hardware Store |
-| `electronics` | Electronics / IT Store |
-| `bookshop` | Bookstore / Stationery |
-| `jewelry` | Jewelry / Watch Store |
-| `florist` | Florist |
-| `pet_shop` | Pet Store |
-| `sports_shop` | Sports Store |
-| `furniture` | Furniture / Decor |
-| `cosmetics` | Cosmetics / Perfumery |
-| `tobacco_shop` | Tobacconist |
-| `bazaar` | Variety Store / Bazaar |
-| `second_hand` | Second-Hand / Vintage |
-| `toy_shop` | Toy Store |
-| `wine_shop` | Wine Shop (retail) |
-| `bicycle_shop` | Bicycle Shop |
-| `gourmet` | Gourmet / Delicatessen |
-| `street_market` | Market Stall / Street Vendor |
-| `health_store` | Parapharmacy / Health Store |
-| `nutrition_shop` | Dietetics / Sports Nutrition |
-
-### Personal Services & Wellness (14)
-| Code | Name |
-|------|------|
-| `hair_salon` | Hair Salon |
 | `barber_shop` | Barbershop |
 | `beauty_center` | Beauty Center |
-| `spa` | Spa / Massage |
-| `physiotherapy` | Physiotherapy |
-| `podiatry` | Podiatry |
-| `tattoo_studio` | Tattoo / Piercing |
-| `laundry` | Laundry / Dry Cleaner |
 | `gym` | Gym / Sports Center |
-| `psychology` | Psychology / Coaching |
-| `nutrition` | Nutrition / Dietitian |
-| `pilates_yoga` | Pilates / Yoga |
-| `dog_grooming` | Pet Grooming |
-| `laser_hair_removal` | Laser Hair Removal |
+| `hair_salon` | Hair Salon |
+| `physiotherapy` | Physiotherapy |
+| `spa` | Spa / Massage |
+| `tattoo_studio` | Tattoo / Piercing |
+| `vet_clinic` | Veterinary Clinic |
 
-### Professional Services (9)
+### Retail & Commerce (5)
 | Code | Name |
 |------|------|
-| `consulting` | Consulting |
-| `tax_advisory` | Tax / Accounting Advisory |
-| `law_firm` | Law Firm |
-| `marketing` | Marketing Agency |
-| `design_studio` | Design / Architecture Studio |
-| `cleaning_company` | Cleaning Company |
-| `maintenance_company` | Maintenance / Field Service |
-| `admin_agency` | Administrative Agency |
-| `landscaping` | Landscaping |
-
-### Education & Training (5)
-| Code | Name |
-|------|------|
-| `academy` | Academy / Training Center |
-| `driving_school` | Driving School |
-| `music_school` | Music School |
-| `dance_school` | Dance School |
-| `language_school` | Language School |
-
-### Construction & Installations (5)
-| Code | Name |
-|------|------|
-| `construction_company` | Construction Company |
-| `renovation` | Renovation Company |
-| `installer` | Installer (Plumber, Electrician, HVAC) |
-| `carpentry` | Carpentry / Cabinet Making |
-| `locksmith` | Locksmith |
-
-### Repair & Manufacturing (3)
-| Code | Name |
-|------|------|
-| `auto_repair` | Auto Repair Shop |
-| `electronics_repair` | Repair Shop (Electronics) |
-| `printing` | Print Shop |
-
-### Agriculture & Garden (1)
-| Code | Name |
-|------|------|
-| `garden_center` | Nursery / Garden Center |
-
-### Leisure & Entertainment (3)
-| Code | Name |
-|------|------|
-| `escape_room` | Escape Room |
-| `sports_club` | Sports Club |
-| `event_venue` | Event Venue |
-
-### Media & Creative (1)
-| Code | Name |
-|------|------|
-| `photography` | Photography Studio |
-
-### Rental (1)
-| Code | Name |
-|------|------|
-| `bike_rental` | Bike / Scooter Rental |
-
-### Spaces & Coworking (1)
-| Code | Name |
-|------|------|
-| `coworking` | Coworking Space |
+| `butcher_shop` | Butcher Shop |
+| `fruit_shop` | Fruit & Vegetable Shop |
+| `pet_shop` | Pet Store |
+| `tobacco_shop` | Tobacconist |
+| `wholesale_distributor` | Wholesale Distributor |
 
 ---
 
@@ -146,33 +58,30 @@ blueprints/
 │   ├── functional_units.schema.json
 │   └── products.schema.json
 ├── data/
-│   ├── business_sectors.json        # 12 sector definitions
+│   ├── business_sectors.json        # 3 sector definitions
 │   ├── business_types/
-│   │   ├── index.json               # Master index (79 types)
-│   │   ├── S01_hospitality/         # 13 types
-│   │   ├── S02_retail/              # 23 types
-│   │   ├── S04_personal_services/   # 14 types
-│   │   ├── S05_professional_services/ # 9 types
-│   │   ├── S06_education/           # 5 types
-│   │   ├── S07_construction/        # 5 types
-│   │   ├── S08_manufacturing/       # 3 types
-│   │   ├── S10_agriculture/         # 1 type
-│   │   ├── S11_entertainment/       # 3 types
-│   │   ├── S16_media/               # 1 type
-│   │   ├── S17_rental/              # 1 type
-│   │   └── S20_coworking/           # 1 type
-│   ├── compliance.json              # Country compliance modules (legal requirements)
+│   │   ├── index.json               # Master index (25 types)
+│   │   ├── restaurant.json          # Flat: one JSON per type
+│   │   ├── bar.json
+│   │   └── ...
+│   ├── compliance.json              # Country compliance modules
 │   ├── functional_units.json        # 12 UFO functional units
 │   ├── transversal_models.json      # Shared data models
 │   ├── products/
 │   │   └── es/                      # Product catalogs (Spanish)
-│   ├── assets/
-│   │   └── products/                # Product images
+│   ├── assets/                      # Product/service images (WebP 512x512)
+│   │   ├── hospitality/             # 284 images
+│   │   ├── beauty_hair/             # 42 images
+│   │   ├── beauty_body/             # 35 images
+│   │   ├── wellness_spa/            # 18 images
+│   │   ├── fitness/                 # 20 images
+│   │   └── retail/                  # 90 images
 │   ├── i18n/
 │   │   └── es.json                  # Spanish translations
 │   └── manifest.json                # File inventory with SHA256
-├── README.md
-└── ROADMAP.md                       # Future phases & eliminated types
+├── scripts/
+│   └── convert_to_webp.py           # Image conversion utility
+└── README.md
 ```
 
 ## Business Type Schema
@@ -182,12 +91,11 @@ Each business type JSON file contains:
 | Field | Description |
 |-------|-------------|
 | `code` | Unique identifier (`bar`, `hair_salon`, etc.) |
-| `sector` | Parent sector (`hospitality`, `retail`, etc.) |
+| `sector` | Parent sector (`hospitality`, `retail`, `personal_services`) |
 | `name` | Display name |
 | `description` | Short description |
 | `icon` | Ionicon name |
 | `color` | Hex color |
-| `inherits_from` | Array of parent type codes (for combined types like `bar_restaurant`) |
 | `is_combinable` | Whether this type can be combined with others |
 | `ufo_matrix` | 12 functional units with levels: `essential`, `recommended`, `na` |
 | `extra_modules` | Additional module slugs beyond what UFO matrix implies |
@@ -235,12 +143,10 @@ During Setup Wizard:
 - **Step 4 (Tax)** → tax preset loaded from compliance country config
 
 Countries with full module coverage: **ES** (Spain).
-Countries with compliance data but modules pending: PT, FR, IT, DE, MX, CO, AR, CL.
 
-See `todo/11-compliance-auto-activation.md` for implementation details.
+## AI Fallback for Unknown Types
 
----
-
-## Future Phases
-
-See [ROADMAP.md](ROADMAP.md) for eliminated sectors and types planned for future implementation.
+When a business type doesn't match any blueprint (e.g., "coworking space", "auto repair shop"), the AI assistant:
+1. Fetches the full module catalog with `functional_unit`, `sector`, and `business_types` metadata
+2. Selects relevant modules based on the business description
+3. Installs them directly — no blueprint needed

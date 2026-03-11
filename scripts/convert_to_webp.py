@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Convert all PNG and JPG images in data/assets/products/ to WebP format.
+Convert all PNG and JPG images in data/assets/ to WebP format.
 
 Usage:
     python scripts/convert_to_webp.py [--quality 85] [--delete-originals] [--dry-run]
@@ -25,7 +25,7 @@ except ImportError:
     sys.exit(1)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-ASSETS_DIR = REPO_ROOT / "data" / "assets" / "products"
+ASSETS_DIR = REPO_ROOT / "data" / "assets"
 PRODUCTS_DIR = REPO_ROOT / "data" / "products" / "es"
 
 

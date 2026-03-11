@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "country": "IT",
+  "presets": {
+    "it_standard": {
+      "name": "IVA Italia",
+      "tax_included": true,
+      "classes": [
+        {
+          "code": "ordinaria",
+          "name": "IVA Ordinaria",
+          "rate": 22.00,
+          "is_default": true,
+          "order": 1,
+          "description": "Aliquota ordinaria"
+        },
+        {
+          "code": "ridotta",
+          "name": "IVA Ridotta",
+          "rate": 10.00,
+          "is_default": false,
+          "order": 2,
+          "description": "Ristorazione, alimenti preparati, alberghi"
+        },
+        {
+          "code": "super_ridotta",
+          "name": "IVA Super ridotta",
+          "rate": 5.00,
+          "is_default": false,
+          "order": 3,
+          "description": "Erbe aromatiche, spezie, preparazioni alimentari"
+        },
+        {
+          "code": "minima",
+          "name": "IVA Minima",
+          "rate": 4.00,
+          "is_default": false,
+          "order": 4,
+          "description": "Generi alimentari di prima necessita, libri, giornali"
+        },
+        {
+          "code": "esente",
+          "name": "Esente",
+          "rate": 0.00,
+          "is_default": false,
+          "order": 5,
+          "description": "Operazioni esenti"
+        }
+      ],
+      "sector_overrides": {
+        "hospitality": {
+          "default_class": "ridotta",
+          "notes": "Nella ristorazione si applica l'aliquota ridotta del 10%. Le bevande alcoliche restano al 22%."
+        }
+      }
+    }
+  }
+}

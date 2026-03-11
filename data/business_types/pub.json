@@ -1,0 +1,52 @@
+{
+  "code": "pub",
+  "sector": "hospitality",
+  "name": "Pub",
+  "description": "Pub with craft beers, cocktails, and bar snacks",
+  "icon": "beer-outline",
+  "color": "#4e342e",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [
+    "sales",
+    "cash_register",
+    "inventory",
+    "customers",
+    "tables",
+    "orders",
+    "invoicing",
+    "tax"
+  ],
+  "sector_features": [
+    "Craft beer selection",
+    "Cocktail menu",
+    "Bar snacks",
+    "Live events"
+  ],
+  "roles": [
+    {
+      "id": "bartender",
+      "name": "Bartender",
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "tables.*",
+        "inventory.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/pub.json"
+}

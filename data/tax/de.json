@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "country": "DE",
+  "presets": {
+    "de_standard": {
+      "name": "MwSt Deutschland",
+      "tax_included": true,
+      "classes": [
+        {
+          "code": "normal",
+          "name": "Regelsteuersatz",
+          "rate": 19.00,
+          "is_default": true,
+          "order": 1,
+          "description": "Allgemeiner Steuersatz"
+        },
+        {
+          "code": "ermasigt",
+          "name": "Ermassigt",
+          "rate": 7.00,
+          "is_default": false,
+          "order": 2,
+          "description": "Lebensmittel, Bucher, Zeitungen, Nahverkehr"
+        },
+        {
+          "code": "steuerfrei",
+          "name": "Steuerfrei",
+          "rate": 0.00,
+          "is_default": false,
+          "order": 3,
+          "description": "Steuerbefreite Umsatze"
+        }
+      ],
+      "sector_overrides": {
+        "hospitality": {
+          "default_class": "normal",
+          "notes": "Seit 2024 gilt in der Gastronomie wieder der Regelsteuersatz von 19% fuer Speisen vor Ort. Ausser-Haus-Verkauf 7%."
+        }
+      }
+    }
+  }
+}

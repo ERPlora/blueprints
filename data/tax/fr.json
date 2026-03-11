@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "country": "FR",
+  "presets": {
+    "fr_standard": {
+      "name": "TVA France",
+      "tax_included": true,
+      "classes": [
+        {
+          "code": "normal",
+          "name": "TVA Normal",
+          "rate": 20.00,
+          "is_default": true,
+          "order": 1,
+          "description": "Taux normal"
+        },
+        {
+          "code": "intermediaire",
+          "name": "TVA Intermediaire",
+          "rate": 10.00,
+          "is_default": false,
+          "order": 2,
+          "description": "Restauration, alimentation preparee, transports"
+        },
+        {
+          "code": "reduit",
+          "name": "TVA Reduit",
+          "rate": 5.50,
+          "is_default": false,
+          "order": 3,
+          "description": "Produits alimentaires, livres, spectacles"
+        },
+        {
+          "code": "super_reduit",
+          "name": "TVA Super-reduit",
+          "rate": 2.10,
+          "is_default": false,
+          "order": 4,
+          "description": "Medicaments rembourses, presse, spectacles vivants"
+        },
+        {
+          "code": "exonere",
+          "name": "Exonere",
+          "rate": 0.00,
+          "is_default": false,
+          "order": 5,
+          "description": "Operations exonerees"
+        }
+      ],
+      "sector_overrides": {
+        "hospitality": {
+          "default_class": "intermediaire",
+          "notes": "En restauration, le taux intermediaire de 10% s'applique. Les boissons alcoolisees restent a 20%."
+        }
+      }
+    }
+  }
+}

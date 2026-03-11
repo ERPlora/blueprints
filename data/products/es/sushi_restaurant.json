@@ -13,69 +13,48 @@
     },
     {
       "code": "makis",
-      "name": "Makis y rolls",
+      "name": "Makis y Rolls",
       "icon": "fish-outline",
       "tax_class_hint": "reduced",
       "order": 2
     },
     {
-      "code": "sashimi",
-      "name": "Sashimi",
-      "icon": "fish-outline",
+      "code": "principales",
+      "name": "Platos calientes",
+      "icon": "restaurant-outline",
       "tax_class_hint": "reduced",
       "order": 3
-    },
-    {
-      "code": "entrantes",
-      "name": "Entrantes",
-      "icon": "restaurant-outline",
-      "tax_class_hint": "reduced",
-      "order": 4
-    },
-    {
-      "code": "principales",
-      "name": "Principales",
-      "icon": "restaurant-outline",
-      "tax_class_hint": "reduced",
-      "order": 5
     },
     {
       "code": "postres",
       "name": "Postres",
       "icon": "ice-cream-outline",
       "tax_class_hint": "reduced",
-      "order": 6
+      "order": 4
     },
     {
       "code": "bebidas",
       "name": "Bebidas",
       "icon": "water-outline",
       "tax_class_hint": "reduced",
-      "order": 7
-    },
-    {
-      "code": "sake_cerveza",
-      "name": "Sake y cerveza",
-      "icon": "wine-outline",
-      "tax_class_hint": "reduced",
-      "order": 8
+      "order": 5
     }
   ],
   "products": [
     {
       "code": "nigiri_salmon",
-      "name": "Nigiri de salmon (2 uds)",
+      "name": "Nigiri de salm\u00f3n (2 uds)",
       "category": "nigiris",
       "tax_class_hint": "reduced",
-      "price": 4.5,
+      "price": 4.50,
       "image": "hospitality/nigiri_salmon.webp"
     },
     {
       "code": "nigiri_atun",
-      "name": "Nigiri de atun (2 uds)",
+      "name": "Nigiri de at\u00fan (2 uds)",
       "category": "nigiris",
       "tax_class_hint": "reduced",
-      "price": 5.0,
+      "price": 5.00,
       "image": "hospitality/nigiri_atun.webp"
     },
     {
@@ -83,7 +62,7 @@
       "name": "Nigiri de gamba (2 uds)",
       "category": "nigiris",
       "tax_class_hint": "reduced",
-      "price": 4.8,
+      "price": 4.80,
       "image": "hospitality/nigiri_gamba.webp"
     },
     {
@@ -91,7 +70,7 @@
       "name": "Nigiri de pulpo (2 uds)",
       "category": "nigiris",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/nigiri_pulpo.webp"
     },
     {
@@ -99,23 +78,47 @@
       "name": "Nigiri de anguila (2 uds)",
       "category": "nigiris",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/nigiri_anguila.webp"
     },
     {
+      "code": "sashimi_salmon",
+      "name": "Sashimi de salm\u00f3n (6 uds)",
+      "category": "nigiris",
+      "tax_class_hint": "reduced",
+      "price": 9.00,
+      "image": "hospitality/sashimi_salmon.webp"
+    },
+    {
+      "code": "sashimi_atun",
+      "name": "Sashimi de at\u00fan (6 uds)",
+      "category": "nigiris",
+      "tax_class_hint": "reduced",
+      "price": 10.00,
+      "image": "hospitality/sashimi_atun.webp"
+    },
+    {
+      "code": "sashimi_mixto",
+      "name": "Sashimi mixto (10 uds)",
+      "category": "nigiris",
+      "tax_class_hint": "reduced",
+      "price": 14.00,
+      "image": "hospitality/sashimi_mixto.webp"
+    },
+    {
       "code": "maki_salmon",
-      "name": "Maki de salmon (8 uds)",
+      "name": "Maki de salm\u00f3n (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 6.5,
+      "price": 6.50,
       "image": "hospitality/maki_salmon.webp"
     },
     {
       "code": "maki_atun",
-      "name": "Maki de atun (8 uds)",
+      "name": "Maki de at\u00fan (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 7.0,
+      "price": 7.00,
       "image": "hospitality/maki_atun.webp"
     },
     {
@@ -123,7 +126,7 @@
       "name": "California roll (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 8.5,
+      "price": 8.50,
       "image": "hospitality/california_roll.webp"
     },
     {
@@ -131,7 +134,7 @@
       "name": "Dragon roll (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 11.0,
+      "price": 11.00,
       "image": "hospitality/dragon_roll.webp"
     },
     {
@@ -139,23 +142,15 @@
       "name": "Tempura roll (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 9.5,
+      "price": 9.50,
       "image": "hospitality/tempura_roll.webp"
-    },
-    {
-      "code": "vegetariano_roll",
-      "name": "Roll vegetariano (8 uds)",
-      "category": "makis",
-      "tax_class_hint": "reduced",
-      "price": 7.5,
-      "image": "hospitality/vegetariano_roll.webp"
     },
     {
       "code": "spicy_salmon_roll",
       "name": "Spicy salmon roll (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 9.0,
+      "price": 9.00,
       "image": "hospitality/spicy_salmon_roll.webp"
     },
     {
@@ -163,95 +158,71 @@
       "name": "Uramaki de aguacate (8 uds)",
       "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 7.0,
+      "price": 7.00,
       "image": "hospitality/uramaki_aguacate.webp"
     },
     {
-      "code": "sashimi_salmon",
-      "name": "Sashimi de salmon (6 uds)",
-      "category": "sashimi",
+      "code": "vegetariano_roll",
+      "name": "Roll vegetariano (8 uds)",
+      "category": "makis",
       "tax_class_hint": "reduced",
-      "price": 9.0,
-      "image": "hospitality/sashimi_salmon.webp"
-    },
-    {
-      "code": "sashimi_atun",
-      "name": "Sashimi de atun (6 uds)",
-      "category": "sashimi",
-      "tax_class_hint": "reduced",
-      "price": 10.0,
-      "image": "hospitality/sashimi_atun.webp"
-    },
-    {
-      "code": "sashimi_mixto",
-      "name": "Sashimi mixto (10 uds)",
-      "category": "sashimi",
-      "tax_class_hint": "reduced",
-      "price": 14.0,
-      "image": "hospitality/sashimi_mixto.webp"
+      "price": 7.50,
+      "image": "hospitality/vegetariano_roll.webp"
     },
     {
       "code": "edamame",
       "name": "Edamame",
-      "category": "entrantes",
+      "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 4.5,
+      "price": 4.50,
       "image": "hospitality/edamame.webp"
     },
     {
       "code": "gyozas",
       "name": "Gyozas (6 uds)",
-      "category": "entrantes",
+      "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 6.5,
+      "price": 6.50,
       "image": "hospitality/gyozas.webp"
-    },
-    {
-      "code": "tempura_verduras",
-      "name": "Tempura de verduras",
-      "category": "entrantes",
-      "tax_class_hint": "reduced",
-      "price": 7.0,
-      "image": "hospitality/tempura_verduras.webp"
-    },
-    {
-      "code": "tempura_gambas",
-      "name": "Tempura de gambas",
-      "category": "entrantes",
-      "tax_class_hint": "reduced",
-      "price": 8.5,
-      "image": "hospitality/tempura_gambas.webp"
     },
     {
       "code": "sopa_miso",
       "name": "Sopa de miso",
-      "category": "entrantes",
+      "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 3.5,
+      "price": 3.50,
       "image": "hospitality/sopa_miso.webp"
+    },
+    {
+      "code": "tempura_gambas",
+      "name": "Tempura de gambas",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 8.50,
+      "image": "hospitality/tempura_gambas.webp"
+    },
+    {
+      "code": "tempura_verduras",
+      "name": "Tempura de verduras",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 7.00,
+      "image": "hospitality/tempura_verduras.webp"
     },
     {
       "code": "ensalada_wakame",
       "name": "Ensalada de wakame",
-      "category": "entrantes",
+      "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 5.0,
+      "price": 5.00,
       "image": "hospitality/ensalada_wakame.webp"
-    },
-    {
-      "code": "spring_rolls",
-      "name": "Rollitos de primavera (4 uds)",
-      "category": "entrantes",
-      "tax_class_hint": "reduced",
-      "price": 5.5,
-      "image": "hospitality/spring_rolls.webp"
     },
     {
       "code": "ramen_cerdo",
       "name": "Ramen de cerdo",
       "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 11.0,
+      "price": 11.00,
       "image": "hospitality/ramen_cerdo.webp"
     },
     {
@@ -259,47 +230,39 @@
       "name": "Ramen de pollo",
       "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 10.5,
+      "price": 10.50,
       "image": "hospitality/ramen_pollo.webp"
-    },
-    {
-      "code": "pad_thai",
-      "name": "Pad Thai",
-      "category": "principales",
-      "tax_class_hint": "reduced",
-      "price": 10.0,
-      "image": "hospitality/pad_thai.webp"
-    },
-    {
-      "code": "arroz_wok",
-      "name": "Arroz salteado al wok",
-      "category": "principales",
-      "tax_class_hint": "reduced",
-      "price": 9.5,
-      "image": "hospitality/arroz_wok.webp"
     },
     {
       "code": "pollo_teriyaki",
       "name": "Pollo teriyaki",
       "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 10.5,
+      "price": 10.50,
       "image": "hospitality/pollo_teriyaki.webp"
     },
     {
       "code": "salmon_teriyaki",
-      "name": "Salmon teriyaki",
+      "name": "Salm\u00f3n teriyaki",
       "category": "principales",
       "tax_class_hint": "reduced",
-      "price": 12.0,
+      "price": 12.00,
       "image": "hospitality/salmon_teriyaki.webp"
+    },
+    {
+      "code": "arroz_wok",
+      "name": "Arroz salteado al wok",
+      "category": "principales",
+      "tax_class_hint": "reduced",
+      "price": 9.50,
+      "image": "hospitality/arroz_wok.webp"
     },
     {
       "code": "mochi_helado",
       "name": "Mochi helado (3 uds)",
       "category": "postres",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/mochi_helado.webp"
     },
     {
@@ -307,7 +270,7 @@
       "name": "Tarta de matcha",
       "category": "postres",
       "tax_class_hint": "reduced",
-      "price": 5.0,
+      "price": 5.00,
       "image": "hospitality/tarta_matcha.webp"
     },
     {
@@ -315,7 +278,7 @@
       "name": "Tempura de helado",
       "category": "postres",
       "tax_class_hint": "reduced",
-      "price": 6.0,
+      "price": 6.00,
       "image": "hospitality/tempura_helado.webp"
     },
     {
@@ -323,7 +286,7 @@
       "name": "Agua mineral",
       "category": "bebidas",
       "tax_class_hint": "reduced",
-      "price": 1.8,
+      "price": 1.80,
       "image": "hospitality/agua_mineral.webp"
     },
     {
@@ -331,15 +294,15 @@
       "name": "Coca-Cola",
       "category": "bebidas",
       "tax_class_hint": "reduced",
-      "price": 2.5,
+      "price": 2.50,
       "image": "hospitality/coca_cola.webp"
     },
     {
       "code": "te_verde_japones",
-      "name": "Te verde japones",
+      "name": "T\u00e9 verde japon\u00e9s",
       "category": "bebidas",
       "tax_class_hint": "reduced",
-      "price": 2.5,
+      "price": 2.50,
       "image": "hospitality/te_verde_japones.webp"
     },
     {
@@ -347,40 +310,24 @@
       "name": "Limonada de yuzu",
       "category": "bebidas",
       "tax_class_hint": "reduced",
-      "price": 3.5,
+      "price": 3.50,
       "image": "hospitality/limonada_yuzu.webp"
-    },
-    {
-      "code": "sake_copa",
-      "name": "Copa de sake",
-      "category": "sake_cerveza",
-      "tax_class_hint": "reduced",
-      "price": 4.5,
-      "image": "hospitality/sake_copa.webp"
-    },
-    {
-      "code": "sake_botella",
-      "name": "Botella de sake",
-      "category": "sake_cerveza",
-      "tax_class_hint": "reduced",
-      "price": 18.0,
-      "image": "hospitality/sake_copa.webp"
     },
     {
       "code": "cerveza_japonesa",
       "name": "Cerveza japonesa",
-      "category": "sake_cerveza",
+      "category": "bebidas",
       "tax_class_hint": "reduced",
-      "price": 4.0,
+      "price": 4.00,
       "image": "hospitality/cerveza_japonesa.webp"
     },
     {
-      "code": "cerveza_cana",
-      "name": "Cana",
-      "category": "sake_cerveza",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/cerveza_cana.webp"
+      "code": "sake_copa",
+      "name": "Copa de sake",
+      "category": "bebidas",
+      "tax_class_hint": "general",
+      "price": 4.50,
+      "image": "hospitality/sake_copa.webp"
     }
   ]
 }

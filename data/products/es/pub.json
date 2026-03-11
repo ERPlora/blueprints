@@ -1,0 +1,238 @@
+{
+  "version": "1.0.0",
+  "business_type": "pub",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "cervezas",
+      "name": "Cervezas artesanas",
+      "icon": "beer-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "cocteles",
+      "name": "C\u00f3cteles",
+      "icon": "wine-outline",
+      "tax_class_hint": "general",
+      "order": 2
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "snacks",
+      "name": "Snacks",
+      "icon": "fast-food-outline",
+      "tax_class_hint": "reduced",
+      "order": 4
+    }
+  ],
+  "products": [
+    {
+      "code": "cerveza_cana",
+      "name": "Ca\u00f1a",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 2.00,
+      "image": "hospitality/cerveza_cana.webp"
+    },
+    {
+      "code": "cerveza_jarra",
+      "name": "Jarra de cerveza",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 4.00,
+      "image": "hospitality/cerveza_jarra.webp"
+    },
+    {
+      "code": "cerveza_botella",
+      "name": "Cerveza botella",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 3.00,
+      "image": "hospitality/cerveza_botella.webp"
+    },
+    {
+      "code": "ipa_artesana",
+      "name": "IPA artesana",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 4.50,
+      "image": "hospitality/ipa_artesana.webp"
+    },
+    {
+      "code": "pale_ale",
+      "name": "Pale Ale",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 4.50,
+      "image": "hospitality/pale_ale.webp"
+    },
+    {
+      "code": "stout",
+      "name": "Stout",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 4.50,
+      "image": "hospitality/stout.webp"
+    },
+    {
+      "code": "wheat_beer",
+      "name": "Cerveza de trigo",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 4.00,
+      "image": "hospitality/wheat_beer.webp"
+    },
+    {
+      "code": "cerveza_sin",
+      "name": "Cerveza sin alcohol",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 2.50,
+      "image": "hospitality/cerveza_sin.webp"
+    },
+    {
+      "code": "sidra_botella",
+      "name": "Sidra botella",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 3.50,
+      "image": "hospitality/sidra_botella.webp"
+    },
+    {
+      "code": "gin_tonic",
+      "name": "Gin tonic",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 9.00,
+      "image": "hospitality/gin_tonic.webp"
+    },
+    {
+      "code": "mojito",
+      "name": "Mojito",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 8.50,
+      "image": "hospitality/mojito.webp"
+    },
+    {
+      "code": "ron_cola",
+      "name": "Cubata de ron",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 7.50,
+      "image": "hospitality/ron_cola.webp"
+    },
+    {
+      "code": "whisky_cola",
+      "name": "Cubata de whisky",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 7.50,
+      "image": "hospitality/whisky_cola.webp"
+    },
+    {
+      "code": "cuba_libre",
+      "name": "Cuba libre",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 7.50,
+      "image": "hospitality/cuba_libre.webp"
+    },
+    {
+      "code": "chupito_tequila",
+      "name": "Chupito de tequila",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 3.00,
+      "image": "hospitality/chupito_tequila.webp"
+    },
+    {
+      "code": "chupito_jager",
+      "name": "Chupito de J\u00e4germeister",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 3.00,
+      "image": "hospitality/chupito_jager.webp"
+    },
+    {
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.50,
+      "image": "hospitality/coca_cola.webp"
+    },
+    {
+      "code": "coca_cola_zero",
+      "name": "Coca-Cola Zero",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.50,
+      "image": "hospitality/coca_cola_zero.webp"
+    },
+    {
+      "code": "tonica",
+      "name": "T\u00f3nica",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.50,
+      "image": "hospitality/tonica.webp"
+    },
+    {
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 1.80,
+      "image": "hospitality/agua_mineral.webp"
+    },
+    {
+      "code": "zumo_naranja",
+      "name": "Zumo de naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 3.00,
+      "image": "hospitality/zumo_naranja.webp"
+    },
+    {
+      "code": "nachos_queso",
+      "name": "Nachos con queso",
+      "category": "snacks",
+      "tax_class_hint": "reduced",
+      "price": 6.00,
+      "image": "hospitality/nachos_queso.webp"
+    },
+    {
+      "code": "alitas_pollo",
+      "name": "Alitas de pollo",
+      "category": "snacks",
+      "tax_class_hint": "reduced",
+      "price": 7.00,
+      "image": "hospitality/alitas_pollo.webp"
+    },
+    {
+      "code": "patatas_fritas",
+      "name": "Patatas fritas",
+      "category": "snacks",
+      "tax_class_hint": "reduced",
+      "price": 4.00,
+      "image": "hospitality/patatas_fritas.webp"
+    },
+    {
+      "code": "hamburguesa_clasica",
+      "name": "Hamburguesa cl\u00e1sica",
+      "category": "snacks",
+      "tax_class_hint": "reduced",
+      "price": 8.50,
+      "image": "hospitality/hamburguesa_clasica.webp"
+    }
+  ]
+}

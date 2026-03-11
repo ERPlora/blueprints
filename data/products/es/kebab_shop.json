@@ -12,8 +12,8 @@
       "order": 1
     },
     {
-      "code": "durum",
-      "name": "Durum / Wraps",
+      "code": "durums",
+      "name": "Durums",
       "icon": "fast-food-outline",
       "tax_class_hint": "reduced",
       "order": 2
@@ -26,25 +26,18 @@
       "order": 3
     },
     {
-      "code": "acompanamiento",
-      "name": "Acompanamientos",
-      "icon": "restaurant-outline",
+      "code": "extras",
+      "name": "Extras",
+      "icon": "add-circle-outline",
       "tax_class_hint": "reduced",
       "order": 4
     },
     {
-      "code": "menus",
-      "name": "Menus",
-      "icon": "document-text-outline",
-      "tax_class_hint": "reduced",
-      "order": 5
-    },
-    {
-      "code": "bebidas",
-      "name": "Bebidas",
+      "code": "refrescos",
+      "name": "Refrescos",
       "icon": "water-outline",
       "tax_class_hint": "reduced",
-      "order": 6
+      "order": 5
     }
   ],
   "products": [
@@ -53,7 +46,7 @@
       "name": "Kebab de ternera",
       "category": "kebabs",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/kebab_ternera.webp"
     },
     {
@@ -61,7 +54,7 @@
       "name": "Kebab de pollo",
       "category": "kebabs",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/kebab_pollo.webp"
     },
     {
@@ -69,7 +62,7 @@
       "name": "Kebab mixto",
       "category": "kebabs",
       "tax_class_hint": "reduced",
-      "price": 6.0,
+      "price": 6.00,
       "image": "hospitality/kebab_mixto.webp"
     },
     {
@@ -77,31 +70,31 @@
       "name": "Kebab de falafel",
       "category": "kebabs",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/kebab_falafel.webp"
     },
     {
       "code": "durum_ternera",
       "name": "Durum de ternera",
-      "category": "durum",
+      "category": "durums",
       "tax_class_hint": "reduced",
-      "price": 6.0,
+      "price": 6.00,
       "image": "hospitality/durum_ternera.webp"
     },
     {
       "code": "durum_pollo",
       "name": "Durum de pollo",
-      "category": "durum",
+      "category": "durums",
       "tax_class_hint": "reduced",
-      "price": 6.0,
+      "price": 6.00,
       "image": "hospitality/durum_pollo.webp"
     },
     {
       "code": "durum_mixto",
       "name": "Durum mixto",
-      "category": "durum",
+      "category": "durums",
       "tax_class_hint": "reduced",
-      "price": 6.5,
+      "price": 6.50,
       "image": "hospitality/durum_mixto.webp"
     },
     {
@@ -109,7 +102,7 @@
       "name": "Plato kebab",
       "category": "platos",
       "tax_class_hint": "reduced",
-      "price": 8.0,
+      "price": 8.00,
       "image": "hospitality/plato_kebab.webp"
     },
     {
@@ -117,7 +110,7 @@
       "name": "Plato falafel",
       "category": "platos",
       "tax_class_hint": "reduced",
-      "price": 7.5,
+      "price": 7.50,
       "image": "hospitality/plato_falafel.webp"
     },
     {
@@ -125,7 +118,7 @@
       "name": "Plato shawarma",
       "category": "platos",
       "tax_class_hint": "reduced",
-      "price": 8.5,
+      "price": 8.50,
       "image": "hospitality/shawarma_plato.webp"
     },
     {
@@ -133,103 +126,111 @@
       "name": "Lahmacun",
       "category": "platos",
       "tax_class_hint": "reduced",
-      "price": 5.0,
+      "price": 5.00,
       "image": "hospitality/lahmacun.webp"
+    },
+    {
+      "code": "menu_kebab",
+      "name": "Men\u00fa kebab (+ patatas + bebida)",
+      "category": "platos",
+      "tax_class_hint": "reduced",
+      "price": 8.50,
+      "image": "hospitality/menu_kebab.webp"
     },
     {
       "code": "patatas_fritas",
       "name": "Patatas fritas",
-      "category": "acompanamiento",
+      "category": "extras",
       "tax_class_hint": "reduced",
-      "price": 2.5,
+      "price": 2.50,
       "image": "hospitality/patatas_fritas.webp"
     },
     {
       "code": "hummus",
       "name": "Hummus",
-      "category": "acompanamiento",
+      "category": "extras",
       "tax_class_hint": "reduced",
-      "price": 3.5,
+      "price": 3.50,
       "image": "hospitality/hummus.webp"
     },
     {
       "code": "ensalada_turca",
       "name": "Ensalada turca",
-      "category": "acompanamiento",
+      "category": "extras",
       "tax_class_hint": "reduced",
-      "price": 3.0,
+      "price": 3.00,
       "image": "hospitality/ensalada_turca.webp"
     },
     {
       "code": "pan_pita",
       "name": "Pan de pita",
-      "category": "acompanamiento",
+      "category": "extras",
       "tax_class_hint": "reduced",
-      "price": 1.5,
+      "price": 1.50,
       "image": "hospitality/pan_pita.webp"
     },
     {
       "code": "salsa_yogur",
       "name": "Salsa de yogur",
-      "category": "acompanamiento",
+      "category": "extras",
       "tax_class_hint": "reduced",
-      "price": 1.0,
+      "price": 1.00,
       "image": "hospitality/salsa_yogur.webp"
     },
     {
-      "code": "menu_kebab",
-      "name": "Menu kebab (+ patatas + bebida)",
-      "category": "menus",
+      "code": "salsa_extra",
+      "name": "Salsa extra",
+      "category": "extras",
       "tax_class_hint": "reduced",
-      "price": 8.5,
-      "image": "hospitality/menu_kebab.webp"
-    },
-    {
-      "code": "menu_durum",
-      "name": "Menu durum (+ patatas + bebida)",
-      "category": "menus",
-      "tax_class_hint": "reduced",
-      "price": 9.0,
-      "image": "hospitality/durum_mixto.webp"
+      "price": 0.80,
+      "image": "hospitality/salsa_extra.webp"
     },
     {
       "code": "agua_mineral",
       "name": "Agua mineral",
-      "category": "bebidas",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 1.5,
+      "price": 1.50,
       "image": "hospitality/agua_mineral.webp"
     },
     {
       "code": "coca_cola",
       "name": "Coca-Cola",
-      "category": "bebidas",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.0,
+      "price": 2.00,
       "image": "hospitality/coca_cola.webp"
     },
     {
       "code": "fanta_naranja",
       "name": "Fanta naranja",
-      "category": "bebidas",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.0,
+      "price": 2.00,
       "image": "hospitality/fanta_naranja.webp"
+    },
+    {
+      "code": "fanta_limon",
+      "name": "Fanta lim\u00f3n",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.00,
+      "image": "hospitality/fanta_limon.webp"
     },
     {
       "code": "ayran",
       "name": "Ayran",
-      "category": "bebidas",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 2.0,
+      "price": 2.00,
       "image": "hospitality/ayran.webp"
     },
     {
       "code": "te_turco",
-      "name": "Te turco",
-      "category": "bebidas",
+      "name": "T\u00e9 turco",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 1.5,
+      "price": 1.50,
       "image": "hospitality/te_turco.webp"
     }
   ]

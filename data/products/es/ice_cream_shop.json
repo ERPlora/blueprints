@@ -5,41 +5,6 @@
   "currency": "EUR",
   "categories": [
     {
-      "code": "cafes",
-      "name": "Cafes",
-      "icon": "cafe-outline",
-      "tax_class_hint": "reduced",
-      "order": 1
-    },
-    {
-      "code": "refrescos",
-      "name": "Refrescos",
-      "icon": "water-outline",
-      "tax_class_hint": "reduced",
-      "order": 2
-    },
-    {
-      "code": "aguas",
-      "name": "Aguas",
-      "icon": "water-outline",
-      "tax_class_hint": "reduced",
-      "order": 3
-    },
-    {
-      "code": "zumos",
-      "name": "Zumos",
-      "icon": "nutrition-outline",
-      "tax_class_hint": "reduced",
-      "order": 4
-    },
-    {
-      "code": "infusiones",
-      "name": "Infusiones y Te",
-      "icon": "leaf-outline",
-      "tax_class_hint": "reduced",
-      "order": 5
-    },
-    {
       "code": "helados",
       "name": "Helados",
       "icon": "ice-cream-outline",
@@ -47,233 +12,50 @@
       "order": 1
     },
     {
-      "code": "granizados",
-      "name": "Granizados",
-      "icon": "water-outline",
-      "tax_class_hint": "reduced",
-      "order": 2
-    },
-    {
       "code": "batidos",
       "name": "Batidos",
       "icon": "cafe-outline",
       "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "refrescos",
+      "name": "Refrescos",
+      "icon": "water-outline",
+      "tax_class_hint": "reduced",
       "order": 3
     },
     {
-      "code": "gofres",
-      "name": "Gofres y Crepes",
-      "icon": "restaurant-outline",
+      "code": "cafes",
+      "name": "Caf\u00e9s",
+      "icon": "cafe-outline",
       "tax_class_hint": "reduced",
       "order": 4
-    },
-    {
-      "code": "tarrinas",
-      "name": "Tarrinas para llevar",
-      "icon": "ice-cream-outline",
-      "tax_class_hint": "reduced",
-      "order": 5
     }
   ],
   "products": [
     {
-      "code": "cafe_solo",
-      "name": "Cafe solo",
-      "category": "cafes",
-      "tax_class_hint": "reduced",
-      "price": 1.3,
-      "image": "hospitality/cafe_solo.webp"
-    },
-    {
-      "code": "cafe_cortado",
-      "name": "Cafe cortado",
-      "category": "cafes",
-      "tax_class_hint": "reduced",
-      "price": 1.4,
-      "image": "hospitality/cafe_cortado.webp"
-    },
-    {
-      "code": "cafe_con_leche",
-      "name": "Cafe con leche",
-      "category": "cafes",
-      "tax_class_hint": "reduced",
-      "price": 1.6,
-      "image": "hospitality/cafe_con_leche.webp"
-    },
-    {
-      "code": "capuchino",
-      "name": "Capuchino",
-      "category": "cafes",
-      "tax_class_hint": "reduced",
-      "price": 2.0,
-      "image": "hospitality/capuchino.webp"
-    },
-    {
-      "code": "descafeinado",
-      "name": "Descafeinado",
-      "category": "cafes",
-      "tax_class_hint": "reduced",
-      "price": 1.4,
-      "image": "hospitality/descafeinado.webp"
-    },
-    {
-      "code": "carajillo",
-      "name": "Carajillo",
-      "category": "cafes",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/carajillo.webp"
-    },
-    {
-      "code": "coca_cola",
-      "name": "Coca-Cola",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/coca_cola.webp"
-    },
-    {
-      "code": "coca_cola_zero",
-      "name": "Coca-Cola Zero",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/coca_cola_zero.webp"
-    },
-    {
-      "code": "fanta_naranja",
-      "name": "Fanta naranja",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/fanta_naranja.webp"
-    },
-    {
-      "code": "fanta_limon",
-      "name": "Fanta limon",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/fanta_limon.webp"
-    },
-    {
-      "code": "sprite",
-      "name": "Sprite",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/sprite.webp"
-    },
-    {
-      "code": "aquarius",
-      "name": "Aquarius",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/aquarius.webp"
-    },
-    {
-      "code": "tonica",
-      "name": "Tonica",
-      "category": "refrescos",
-      "tax_class_hint": "reduced",
-      "price": 2.5,
-      "image": "hospitality/tonica.webp"
-    },
-    {
-      "code": "agua_mineral",
-      "name": "Agua mineral",
-      "category": "aguas",
-      "tax_class_hint": "reduced",
-      "price": 1.8,
-      "image": "hospitality/agua_mineral.webp"
-    },
-    {
-      "code": "agua_con_gas",
-      "name": "Agua con gas",
-      "category": "aguas",
-      "tax_class_hint": "reduced",
-      "price": 2.0,
-      "image": "hospitality/agua_con_gas.webp"
-    },
-    {
-      "code": "zumo_naranja",
-      "name": "Zumo de naranja",
-      "category": "zumos",
-      "tax_class_hint": "reduced",
-      "price": 3.0,
-      "image": "hospitality/zumo_naranja.webp"
-    },
-    {
-      "code": "zumo_tomate",
-      "name": "Zumo de tomate",
-      "category": "zumos",
-      "tax_class_hint": "reduced",
-      "price": 2.8,
-      "image": "hospitality/zumo_tomate.webp"
-    },
-    {
-      "code": "zumo_pina",
-      "name": "Zumo de pina",
-      "category": "zumos",
-      "tax_class_hint": "reduced",
-      "price": 2.8,
-      "image": "hospitality/zumo_pina.webp"
-    },
-    {
-      "code": "te_negro",
-      "name": "Te negro",
-      "category": "infusiones",
-      "tax_class_hint": "reduced",
-      "price": 1.8,
-      "image": "hospitality/te_negro.webp"
-    },
-    {
-      "code": "te_verde",
-      "name": "Te verde",
-      "category": "infusiones",
-      "tax_class_hint": "reduced",
-      "price": 1.8,
-      "image": "hospitality/te_verde.webp"
-    },
-    {
-      "code": "manzanilla",
-      "name": "Manzanilla",
-      "category": "infusiones",
-      "tax_class_hint": "reduced",
-      "price": 1.8,
-      "image": "hospitality/manzanilla.webp"
-    },
-    {
-      "code": "poleo_menta",
-      "name": "Poleo menta",
-      "category": "infusiones",
-      "tax_class_hint": "reduced",
-      "price": 1.8,
-      "image": "hospitality/poleo_menta.webp"
-    },
-    {
       "code": "helado_1_bola",
-      "name": "1 bola",
+      "name": "Helado 1 bola",
       "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 2.5,
+      "price": 2.50,
       "image": "hospitality/helado_1_bola.webp"
     },
     {
       "code": "helado_2_bolas",
-      "name": "2 bolas",
+      "name": "Helado 2 bolas",
       "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 4.0,
+      "price": 4.00,
       "image": "hospitality/helado_2_bolas.webp"
     },
     {
       "code": "helado_3_bolas",
-      "name": "3 bolas",
+      "name": "Helado 3 bolas",
       "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 5.5,
+      "price": 5.50,
       "image": "hospitality/helado_3_bolas.webp"
     },
     {
@@ -281,39 +63,79 @@
       "name": "Copa de helado",
       "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 6.5,
+      "price": 6.50,
       "image": "hospitality/copa_helado.webp"
+    },
+    {
+      "code": "helado_soft",
+      "name": "Helado soft",
+      "category": "helados",
+      "tax_class_hint": "reduced",
+      "price": 3.00,
+      "image": "hospitality/helado_soft.webp"
     },
     {
       "code": "polo_artesano",
       "name": "Polo artesano",
       "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 3.0,
+      "price": 3.00,
       "image": "hospitality/polo_artesano.webp"
     },
     {
-      "code": "granizado_limon",
-      "name": "Granizado de limon",
-      "category": "granizados",
+      "code": "tarrina_500ml",
+      "name": "Tarrina 500ml",
+      "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 3.0,
+      "price": 7.00,
+      "image": "hospitality/tarrina_500ml.webp"
+    },
+    {
+      "code": "tarrina_1l",
+      "name": "Tarrina 1L",
+      "category": "helados",
+      "tax_class_hint": "reduced",
+      "price": 12.00,
+      "image": "hospitality/tarrina_1l.webp"
+    },
+    {
+      "code": "granizado_limon",
+      "name": "Granizado de lim\u00f3n",
+      "category": "helados",
+      "tax_class_hint": "reduced",
+      "price": 3.00,
       "image": "hospitality/granizado_limon.webp"
     },
     {
       "code": "granizado_cafe",
-      "name": "Granizado de cafe",
-      "category": "granizados",
+      "name": "Granizado de caf\u00e9",
+      "category": "helados",
       "tax_class_hint": "reduced",
-      "price": 3.0,
+      "price": 3.00,
       "image": "hospitality/granizado_cafe.webp"
+    },
+    {
+      "code": "gofre_clasico",
+      "name": "Gofre cl\u00e1sico",
+      "category": "helados",
+      "tax_class_hint": "reduced",
+      "price": 5.00,
+      "image": "hospitality/gofre_clasico.webp"
+    },
+    {
+      "code": "crepe_nutella",
+      "name": "Crepe de Nutella",
+      "category": "helados",
+      "tax_class_hint": "reduced",
+      "price": 5.50,
+      "image": "hospitality/crepe_nutella.webp"
     },
     {
       "code": "batido_chocolate",
       "name": "Batido de chocolate",
       "category": "batidos",
       "tax_class_hint": "reduced",
-      "price": 4.5,
+      "price": 4.50,
       "image": "hospitality/batido_chocolate.webp"
     },
     {
@@ -321,7 +143,7 @@
       "name": "Batido de fresa",
       "category": "batidos",
       "tax_class_hint": "reduced",
-      "price": 4.5,
+      "price": 4.50,
       "image": "hospitality/batido_fresa.webp"
     },
     {
@@ -329,40 +151,64 @@
       "name": "Batido de vainilla",
       "category": "batidos",
       "tax_class_hint": "reduced",
-      "price": 4.5,
+      "price": 4.50,
       "image": "hospitality/batido_vainilla.webp"
     },
     {
-      "code": "gofre_clasico",
-      "name": "Gofre clasico",
-      "category": "gofres",
+      "code": "smoothie_fresa",
+      "name": "Smoothie de fresa",
+      "category": "batidos",
       "tax_class_hint": "reduced",
-      "price": 5.0,
-      "image": "hospitality/gofre_clasico.webp"
+      "price": 4.50,
+      "image": "hospitality/smoothie_fresa.webp"
     },
     {
-      "code": "crepe_nutella",
-      "name": "Crepe de Nutella",
-      "category": "gofres",
+      "code": "smoothie_mango",
+      "name": "Smoothie de mango",
+      "category": "batidos",
       "tax_class_hint": "reduced",
-      "price": 5.5,
-      "image": "hospitality/crepe_nutella.webp"
+      "price": 4.50,
+      "image": "hospitality/smoothie_mango.webp"
     },
     {
-      "code": "tarrina_500ml",
-      "name": "Tarrina 500ml",
-      "category": "tarrinas",
+      "code": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 7.0,
-      "image": "hospitality/tarrina_500ml.webp"
+      "price": 1.80,
+      "image": "hospitality/agua_mineral.webp"
     },
     {
-      "code": "tarrina_1l",
-      "name": "Tarrina 1L",
-      "category": "tarrinas",
+      "code": "coca_cola",
+      "name": "Coca-Cola",
+      "category": "refrescos",
       "tax_class_hint": "reduced",
-      "price": 12.0,
-      "image": "hospitality/tarrina_1l.webp"
+      "price": 2.50,
+      "image": "hospitality/coca_cola.webp"
+    },
+    {
+      "code": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "tax_class_hint": "reduced",
+      "price": 2.50,
+      "image": "hospitality/fanta_naranja.webp"
+    },
+    {
+      "code": "cafe_solo",
+      "name": "Caf\u00e9 solo",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.30,
+      "image": "hospitality/cafe_solo.webp"
+    },
+    {
+      "code": "cafe_con_leche",
+      "name": "Caf\u00e9 con leche",
+      "category": "cafes",
+      "tax_class_hint": "reduced",
+      "price": 1.60,
+      "image": "hospitality/cafe_con_leche.webp"
     }
   ]
 }

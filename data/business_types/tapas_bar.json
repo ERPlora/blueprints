@@ -1,0 +1,62 @@
+{
+  "code": "tapas_bar",
+  "sector": "hospitality",
+  "name": "Tapas Bar",
+  "description": "Tapas bar with shared plates, wine pairing, and casual dining",
+  "icon": "restaurant-outline",
+  "color": "#bf360c",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [
+    "sales",
+    "cash_register",
+    "inventory",
+    "customers",
+    "tables",
+    "orders",
+    "kitchen",
+    "invoicing",
+    "tax"
+  ],
+  "sector_features": [
+    "Tapas and shared plates",
+    "Wine pairing",
+    "Bar counter service",
+    "Table zones"
+  ],
+  "roles": [
+    {
+      "id": "bartender",
+      "name": "Bartender",
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "tables.*",
+        "inventory.view_*"
+      ]
+    },
+    {
+      "id": "waiter",
+      "name": "Waiter",
+      "permissions": [
+        "sales.*",
+        "tables.*",
+        "orders.*"
+      ]
+    }
+  ],
+  "products_file": "products/tapas_bar.json"
+}

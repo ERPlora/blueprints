@@ -54,7 +54,7 @@
       "category": "facial",
       "tax_class_hint": "standard",
       "price": 40.0,
-      "image": "personal_services/limpieza_facial.webp"
+      "image": "beauty_body/limpieza_facial.webp"
     },
     {
       "code": "hidratacion_facial",
@@ -62,7 +62,7 @@
       "category": "facial",
       "tax_class_hint": "standard",
       "price": 45.0,
-      "image": "personal_services/hidratacion_facial.webp"
+      "image": "beauty_body/hidratacion_facial.webp"
     },
     {
       "code": "peeling",
@@ -70,7 +70,7 @@
       "category": "facial",
       "tax_class_hint": "standard",
       "price": 60.0,
-      "image": "personal_services/peeling.webp"
+      "image": "beauty_body/peeling.webp"
     },
     {
       "code": "microdermoabrasion",
@@ -78,7 +78,7 @@
       "category": "facial",
       "tax_class_hint": "standard",
       "price": 55.0,
-      "image": "personal_services/microdermoabrasion.webp"
+      "image": "beauty_body/microdermoabrasion.webp"
     },
     {
       "code": "radiofrecuencia_facial",
@@ -86,7 +86,7 @@
       "category": "facial",
       "tax_class_hint": "standard",
       "price": 70.0,
-      "image": "personal_services/radiofrecuencia_facial.webp"
+      "image": "beauty_body/radiofrecuencia_facial.webp"
     },
     {
       "code": "vitamina_c",
@@ -94,7 +94,7 @@
       "category": "facial",
       "tax_class_hint": "standard",
       "price": 50.0,
-      "image": "personal_services/vitamina_c.webp"
+      "image": "beauty_body/vitamina_c.webp"
     },
     {
       "code": "masaje_relajante",
@@ -102,7 +102,7 @@
       "category": "corporal",
       "tax_class_hint": "standard",
       "price": 50.0,
-      "image": "personal_services/masaje_relajante.webp"
+      "image": "wellness_spa/masaje_relajante.webp"
     },
     {
       "code": "masaje_descontracturante",
@@ -110,7 +110,7 @@
       "category": "corporal",
       "tax_class_hint": "standard",
       "price": 55.0,
-      "image": "personal_services/masaje_descontracturante.webp"
+      "image": "wellness_spa/masaje_descontracturante.webp"
     },
     {
       "code": "presoterapia",
@@ -118,7 +118,7 @@
       "category": "corporal",
       "tax_class_hint": "standard",
       "price": 40.0,
-      "image": "personal_services/presoterapia.webp"
+      "image": "beauty_body/presoterapia.webp"
     },
     {
       "code": "envolvimiento",
@@ -126,7 +126,7 @@
       "category": "corporal",
       "tax_class_hint": "standard",
       "price": 45.0,
-      "image": "personal_services/envolvimiento.webp"
+      "image": "beauty_body/envolvimiento.webp"
     },
     {
       "code": "exfoliacion_corporal",
@@ -134,7 +134,7 @@
       "category": "corporal",
       "tax_class_hint": "standard",
       "price": 35.0,
-      "image": "personal_services/exfoliacion_corporal.webp"
+      "image": "beauty_body/exfoliacion_corporal.webp"
     },
     {
       "code": "drenaje_linfatico",
@@ -142,7 +142,7 @@
       "category": "corporal",
       "tax_class_hint": "standard",
       "price": 55.0,
-      "image": "personal_services/drenaje_linfatico.webp"
+      "image": "beauty_body/drenaje_linfatico.webp"
     },
     {
       "code": "depilacion_piernas",
@@ -150,7 +150,7 @@
       "category": "depilacion",
       "tax_class_hint": "standard",
       "price": 25.0,
-      "image": "personal_services/depilacion_piernas.webp"
+      "image": "beauty_body/depilacion_piernas.webp"
     },
     {
       "code": "depilacion_ingles",
@@ -158,7 +158,7 @@
       "category": "depilacion",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/depilacion_ingles.webp"
+      "image": "beauty_body/depilacion_ingles.webp"
     },
     {
       "code": "depilacion_axilas",
@@ -166,7 +166,7 @@
       "category": "depilacion",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/depilacion_axilas.webp"
+      "image": "beauty_body/depilacion_axilas.webp"
     },
     {
       "code": "depilacion_brazos",
@@ -174,7 +174,7 @@
       "category": "depilacion",
       "tax_class_hint": "standard",
       "price": 15.0,
-      "image": "personal_services/depilacion_brazos.webp"
+      "image": "beauty_body/depilacion_brazos.webp"
     },
     {
       "code": "depilacion_labio",
@@ -182,7 +182,7 @@
       "category": "depilacion",
       "tax_class_hint": "standard",
       "price": 6.0,
-      "image": "personal_services/depilacion_labio.webp"
+      "image": "beauty_body/depilacion_labio.webp"
     },
     {
       "code": "depilacion_laser_sesion",
@@ -190,7 +190,7 @@
       "category": "depilacion",
       "tax_class_hint": "standard",
       "price": 60.0,
-      "image": "personal_services/depilacion_laser_sesion.webp"
+      "image": "beauty_body/depilacion_laser_sesion.webp"
     },
     {
       "code": "manicura_basica",
@@ -198,7 +198,7 @@
       "category": "unas",
       "tax_class_hint": "standard",
       "price": 18.0,
-      "image": "personal_services/manicura_basica.webp"
+      "image": "beauty_body/manicura_basica.webp"
     },
     {
       "code": "manicura_semipermanente",
@@ -206,7 +206,7 @@
       "category": "unas",
       "tax_class_hint": "standard",
       "price": 28.0,
-      "image": "personal_services/manicura_semipermanente.webp"
+      "image": "beauty_body/manicura_semipermanente.webp"
     },
     {
       "code": "pedicura_basica",
@@ -214,7 +214,7 @@
       "category": "unas",
       "tax_class_hint": "standard",
       "price": 22.0,
-      "image": "personal_services/pedicura_basica.webp"
+      "image": "beauty_body/pedicura_basica.webp"
     },
     {
       "code": "pedicura_semipermanente",
@@ -222,7 +222,7 @@
       "category": "unas",
       "tax_class_hint": "standard",
       "price": 32.0,
-      "image": "personal_services/pedicura_semipermanente.webp"
+      "image": "beauty_body/pedicura_semipermanente.webp"
     },
     {
       "code": "unas_gel",
@@ -230,7 +230,7 @@
       "category": "unas",
       "tax_class_hint": "standard",
       "price": 40.0,
-      "image": "personal_services/unas_gel.webp"
+      "image": "beauty_body/unas_gel.webp"
     },
     {
       "code": "unas_acrilicas",
@@ -238,7 +238,7 @@
       "category": "unas",
       "tax_class_hint": "standard",
       "price": 45.0,
-      "image": "personal_services/unas_acrilicas.webp"
+      "image": "beauty_body/unas_acrilicas.webp"
     },
     {
       "code": "maquillaje_dia",
@@ -246,7 +246,7 @@
       "category": "maquillaje",
       "tax_class_hint": "standard",
       "price": 30.0,
-      "image": "personal_services/maquillaje_dia.webp"
+      "image": "beauty_body/maquillaje_dia.webp"
     },
     {
       "code": "maquillaje_noche",
@@ -254,7 +254,7 @@
       "category": "maquillaje",
       "tax_class_hint": "standard",
       "price": 40.0,
-      "image": "personal_services/maquillaje_noche.webp"
+      "image": "beauty_body/maquillaje_noche.webp"
     },
     {
       "code": "maquillaje_novia",
@@ -262,7 +262,7 @@
       "category": "maquillaje",
       "tax_class_hint": "standard",
       "price": 80.0,
-      "image": "personal_services/maquillaje_novia.webp"
+      "image": "beauty_body/maquillaje_novia.webp"
     },
     {
       "code": "extension_pestanas",
@@ -270,7 +270,7 @@
       "category": "maquillaje",
       "tax_class_hint": "standard",
       "price": 55.0,
-      "image": "personal_services/extension_pestanas.webp"
+      "image": "beauty_body/extension_pestanas.webp"
     },
     {
       "code": "tinte_cejas",
@@ -278,7 +278,7 @@
       "category": "maquillaje",
       "tax_class_hint": "standard",
       "price": 12.0,
-      "image": "personal_services/tinte_cejas.webp"
+      "image": "beauty_body/tinte_cejas.webp"
     },
     {
       "code": "lifting_pestanas",
@@ -286,7 +286,7 @@
       "category": "maquillaje",
       "tax_class_hint": "standard",
       "price": 35.0,
-      "image": "personal_services/lifting_pestanas.webp"
+      "image": "beauty_body/lifting_pestanas.webp"
     },
     {
       "code": "crema_hidratante",
@@ -294,7 +294,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 25.0,
-      "image": "personal_services/crema_hidratante.webp"
+      "image": "retail/crema_hidratante.webp"
     },
     {
       "code": "serum_facial",
@@ -302,7 +302,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 30.0,
-      "image": "personal_services/serum_facial.webp"
+      "image": "retail/serum_facial.webp"
     },
     {
       "code": "protector_solar",
@@ -310,7 +310,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 18.0,
-      "image": "personal_services/protector_solar.webp"
+      "image": "retail/protector_solar.webp"
     },
     {
       "code": "contorno_ojos",
@@ -318,7 +318,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 22.0,
-      "image": "personal_services/contorno_ojos.webp"
+      "image": "beauty_body/contorno_ojos.webp"
     },
     {
       "code": "agua_micelar",
@@ -326,7 +326,7 @@
       "category": "productos",
       "tax_class_hint": "standard",
       "price": 12.0,
-      "image": "personal_services/agua_micelar.webp"
+      "image": "retail/agua_micelar.webp"
     }
   ]
 }

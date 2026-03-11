@@ -1,0 +1,41 @@
+{
+  "code": "gym",
+  "sector": "personal_services",
+  "name": "Gym / Sports Center",
+  "description": "Gym with memberships, recurring fees, access control, class booking",
+  "icon": "barbell-outline",
+  "color": "#f57c00",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": [],
+  "sector_features": [
+    "Memberships",
+    "Recurring fees",
+    "Access control",
+    "Class booking"
+  ],
+  "roles": [
+    {
+      "id": "trainer",
+      "name": "Trainer",
+      "permissions": [
+        "appointments.*",
+        "customers.view_*"
+      ]
+    }
+  ],
+  "products_file": "products/gym.json"
+}

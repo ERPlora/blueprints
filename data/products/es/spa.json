@@ -40,7 +40,7 @@
       "category": "circuito",
       "tax_class_hint": "standard",
       "price": 35.0,
-      "image": "personal_services/circuito_spa.webp"
+      "image": "wellness_spa/circuito_spa.webp"
     },
     {
       "code": "circuito_premium",
@@ -48,7 +48,7 @@
       "category": "circuito",
       "tax_class_hint": "standard",
       "price": 50.0,
-      "image": "personal_services/circuito_premium.webp"
+      "image": "wellness_spa/circuito_premium.webp"
     },
     {
       "code": "acceso_piscina",
@@ -56,7 +56,7 @@
       "category": "circuito",
       "tax_class_hint": "standard",
       "price": 20.0,
-      "image": "personal_services/acceso_piscina.webp"
+      "image": "wellness_spa/acceso_piscina.webp"
     },
     {
       "code": "sauna_privada",
@@ -64,7 +64,7 @@
       "category": "circuito",
       "tax_class_hint": "standard",
       "price": 25.0,
-      "image": "personal_services/sauna_privada.webp"
+      "image": "wellness_spa/sauna_privada.webp"
     },
     {
       "code": "masaje_relajante",
@@ -72,7 +72,7 @@
       "category": "masajes",
       "tax_class_hint": "standard",
       "price": 55.0,
-      "image": "personal_services/masaje_relajante.webp"
+      "image": "wellness_spa/masaje_relajante.webp"
     },
     {
       "code": "masaje_piedras",
@@ -80,7 +80,7 @@
       "category": "masajes",
       "tax_class_hint": "standard",
       "price": 65.0,
-      "image": "personal_services/masaje_piedras.webp"
+      "image": "wellness_spa/masaje_piedras.webp"
     },
     {
       "code": "masaje_aromaterapia",
@@ -88,7 +88,7 @@
       "category": "masajes",
       "tax_class_hint": "standard",
       "price": 60.0,
-      "image": "personal_services/masaje_aromaterapia.webp"
+      "image": "wellness_spa/masaje_aromaterapia.webp"
     },
     {
       "code": "masaje_deportivo",
@@ -96,7 +96,7 @@
       "category": "masajes",
       "tax_class_hint": "standard",
       "price": 55.0,
-      "image": "personal_services/masaje_deportivo.webp"
+      "image": "wellness_spa/masaje_deportivo.webp"
     },
     {
       "code": "masaje_parejas",
@@ -104,7 +104,7 @@
       "category": "masajes",
       "tax_class_hint": "standard",
       "price": 100.0,
-      "image": "personal_services/masaje_parejas.webp"
+      "image": "wellness_spa/masaje_parejas.webp"
     },
     {
       "code": "reflexologia",
@@ -112,7 +112,7 @@
       "category": "masajes",
       "tax_class_hint": "standard",
       "price": 40.0,
-      "image": "personal_services/reflexologia.webp"
+      "image": "wellness_spa/reflexologia.webp"
     },
     {
       "code": "facial_spa",
@@ -120,7 +120,7 @@
       "category": "tratamientos",
       "tax_class_hint": "standard",
       "price": 60.0,
-      "image": "personal_services/facial_spa.webp"
+      "image": "beauty_body/facial_spa.webp"
     },
     {
       "code": "envolvimiento_chocolate",
@@ -128,7 +128,7 @@
       "category": "tratamientos",
       "tax_class_hint": "standard",
       "price": 50.0,
-      "image": "personal_services/envolvimiento_chocolate.webp"
+      "image": "beauty_body/envolvimiento_chocolate.webp"
     },
     {
       "code": "ritual_oriental",
@@ -136,7 +136,7 @@
       "category": "tratamientos",
       "tax_class_hint": "standard",
       "price": 80.0,
-      "image": "personal_services/ritual_oriental.webp"
+      "image": "wellness_spa/ritual_oriental.webp"
     },
     {
       "code": "exfoliacion_sal",
@@ -144,7 +144,7 @@
       "category": "tratamientos",
       "tax_class_hint": "standard",
       "price": 40.0,
-      "image": "personal_services/exfoliacion_sal.webp"
+      "image": "beauty_body/exfoliacion_sal.webp"
     },
     {
       "code": "flotacion",
@@ -152,7 +152,7 @@
       "category": "tratamientos",
       "tax_class_hint": "standard",
       "price": 45.0,
-      "image": "personal_services/flotacion.webp"
+      "image": "wellness_spa/flotacion.webp"
     },
     {
       "code": "pack_relax",
@@ -160,7 +160,7 @@
       "category": "packs",
       "tax_class_hint": "standard",
       "price": 75.0,
-      "image": "personal_services/pack_relax.webp"
+      "image": "wellness_spa/pack_relax.webp"
     },
     {
       "code": "pack_parejas",
@@ -168,7 +168,7 @@
       "category": "packs",
       "tax_class_hint": "standard",
       "price": 140.0,
-      "image": "personal_services/pack_parejas.webp"
+      "image": "wellness_spa/pack_parejas.webp"
     },
     {
       "code": "pack_dia_completo",
@@ -176,7 +176,7 @@
       "category": "packs",
       "tax_class_hint": "standard",
       "price": 120.0,
-      "image": "personal_services/pack_dia_completo.webp"
+      "image": "wellness_spa/pack_dia_completo.webp"
     },
     {
       "code": "bono_5_masajes",
@@ -184,7 +184,7 @@
       "category": "packs",
       "tax_class_hint": "standard",
       "price": 230.0,
-      "image": "personal_services/bono_5_masajes.webp"
+      "image": "wellness_spa/bono_5_masajes.webp"
     },
     {
       "code": "tarjeta_regalo",
@@ -192,7 +192,7 @@
       "category": "packs",
       "tax_class_hint": "standard",
       "price": 50.0,
-      "image": "personal_services/tarjeta_regalo.webp"
+      "image": "wellness_spa/tarjeta_regalo.webp"
     }
   ]
 }

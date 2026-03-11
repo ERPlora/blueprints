@@ -1,0 +1,40 @@
+{
+  "code": "tobacco_shop",
+  "sector": "retail",
+  "name": "Tobacconist",
+  "description": "Tobacconist with regulated prices, lottery commission, tobacco stock control",
+  "icon": "storefront-outline",
+  "color": "#6d4c41",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
+  },
+  "extra_modules": [
+    "tobacco"
+  ],
+  "sector_features": [
+    "Regulated prices",
+    "Lottery commission",
+    "Tobacco stock"
+  ],
+  "roles": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": [
+        "*"
+      ]
+    }
+  ]
+}

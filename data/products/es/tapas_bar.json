@@ -1,0 +1,285 @@
+{
+  "version": "1.0.0",
+  "business_type": "tapas_bar",
+  "country": "es",
+  "currency": "EUR",
+  "categories": [
+    {
+      "code": "tapas",
+      "name": "Tapas",
+      "icon": "flame-outline",
+      "tax_class_hint": "reduced",
+      "order": 1
+    },
+    {
+      "code": "raciones",
+      "name": "Raciones",
+      "icon": "restaurant-outline",
+      "tax_class_hint": "reduced",
+      "order": 2
+    },
+    {
+      "code": "cervezas",
+      "name": "Cervezas",
+      "icon": "beer-outline",
+      "tax_class_hint": "reduced",
+      "order": 3
+    },
+    {
+      "code": "vinos",
+      "name": "Vinos",
+      "icon": "wine-outline",
+      "tax_class_hint": "general",
+      "order": 4
+    },
+    {
+      "code": "cocteles",
+      "name": "C\u00f3cteles",
+      "icon": "wine-outline",
+      "tax_class_hint": "general",
+      "order": 5
+    }
+  ],
+  "products": [
+    {
+      "code": "tapa_tortilla",
+      "name": "Tapa de tortilla",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 3.50,
+      "image": "hospitality/tapa_tortilla.webp"
+    },
+    {
+      "code": "tapa_croquetas",
+      "name": "Croquetas caseras",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 4.00,
+      "image": "hospitality/tapa_croquetas.webp"
+    },
+    {
+      "code": "tapa_bravas",
+      "name": "Patatas bravas",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 3.50,
+      "image": "hospitality/tapa_bravas.webp"
+    },
+    {
+      "code": "tapa_aceitunas",
+      "name": "Aceitunas",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 2.00,
+      "image": "hospitality/tapa_aceitunas.webp"
+    },
+    {
+      "code": "tapa_jamon",
+      "name": "Tapa de jam\u00f3n ib\u00e9rico",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 5.00,
+      "image": "hospitality/tapa_jamon.webp"
+    },
+    {
+      "code": "tapa_queso_manchego",
+      "name": "Queso manchego",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 4.00,
+      "image": "hospitality/tapa_queso_manchego.webp"
+    },
+    {
+      "code": "gambas_ajillo",
+      "name": "Gambas al ajillo",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 7.00,
+      "image": "hospitality/gambas_ajillo.webp"
+    },
+    {
+      "code": "pincho_tortilla",
+      "name": "Pincho de tortilla",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 3.00,
+      "image": "hospitality/pincho_tortilla.webp"
+    },
+    {
+      "code": "calamares_romana",
+      "name": "Calamares a la romana",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 5.00,
+      "image": "hospitality/calamares_romana.webp"
+    },
+    {
+      "code": "ensalada_mixta",
+      "name": "Ensalada mixta",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 5.00,
+      "image": "hospitality/ensalada_mixta.webp"
+    },
+    {
+      "code": "gazpacho",
+      "name": "Gazpacho",
+      "category": "tapas",
+      "tax_class_hint": "reduced",
+      "price": 4.50,
+      "image": "hospitality/gazpacho.webp"
+    },
+    {
+      "code": "racion_croquetas",
+      "name": "Raci\u00f3n de croquetas",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 8.00,
+      "image": "hospitality/racion_croquetas.webp"
+    },
+    {
+      "code": "racion_gambas",
+      "name": "Raci\u00f3n de gambas",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 12.00,
+      "image": "hospitality/racion_gambas.webp"
+    },
+    {
+      "code": "tabla_iberica",
+      "name": "Tabla ib\u00e9rica",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 16.00,
+      "image": "hospitality/tabla_iberica.webp"
+    },
+    {
+      "code": "tabla_quesos",
+      "name": "Tabla de quesos",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 12.00,
+      "image": "hospitality/tabla_quesos.webp"
+    },
+    {
+      "code": "racion_rabas",
+      "name": "Rabas",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 9.00,
+      "image": "hospitality/racion_rabas.webp"
+    },
+    {
+      "code": "pulpo_gallega",
+      "name": "Pulpo a la gallega",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 14.00,
+      "image": "hospitality/pulpo_gallega.webp"
+    },
+    {
+      "code": "racion_patatas_bravas",
+      "name": "Raci\u00f3n de patatas bravas",
+      "category": "raciones",
+      "tax_class_hint": "reduced",
+      "price": 6.00,
+      "image": "hospitality/racion_patatas_bravas.webp"
+    },
+    {
+      "code": "cerveza_cana",
+      "name": "Ca\u00f1a",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 1.80,
+      "image": "hospitality/cerveza_cana.webp"
+    },
+    {
+      "code": "cerveza_jarra",
+      "name": "Jarra",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 3.50,
+      "image": "hospitality/cerveza_jarra.webp"
+    },
+    {
+      "code": "cerveza_botella",
+      "name": "Cerveza botella",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 2.50,
+      "image": "hospitality/cerveza_botella.webp"
+    },
+    {
+      "code": "clara",
+      "name": "Clara",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 2.00,
+      "image": "hospitality/clara.webp"
+    },
+    {
+      "code": "cerveza_sin",
+      "name": "Cerveza sin alcohol",
+      "category": "cervezas",
+      "tax_class_hint": "reduced",
+      "price": 2.20,
+      "image": "hospitality/cerveza_sin.webp"
+    },
+    {
+      "code": "vino_tinto_copa",
+      "name": "Vino tinto copa",
+      "category": "vinos",
+      "tax_class_hint": "general",
+      "price": 3.00,
+      "image": "hospitality/vino_tinto_copa.webp"
+    },
+    {
+      "code": "vino_blanco_copa",
+      "name": "Vino blanco copa",
+      "category": "vinos",
+      "tax_class_hint": "general",
+      "price": 3.00,
+      "image": "hospitality/vino_blanco_copa.webp"
+    },
+    {
+      "code": "copa_rioja_crianza",
+      "name": "Copa Rioja crianza",
+      "category": "vinos",
+      "tax_class_hint": "general",
+      "price": 4.50,
+      "image": "hospitality/copa_rioja_crianza.webp"
+    },
+    {
+      "code": "copa_verdejo",
+      "name": "Copa Verdejo",
+      "category": "vinos",
+      "tax_class_hint": "general",
+      "price": 3.50,
+      "image": "hospitality/copa_verdejo.webp"
+    },
+    {
+      "code": "vermut",
+      "name": "Vermut",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 3.00,
+      "image": "hospitality/vermut.webp"
+    },
+    {
+      "code": "tinto_verano",
+      "name": "Tinto de verano",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 2.80,
+      "image": "hospitality/tinto_verano.webp"
+    },
+    {
+      "code": "sangria_jarra",
+      "name": "Sangr\u00eda jarra",
+      "category": "cocteles",
+      "tax_class_hint": "general",
+      "price": 14.00,
+      "image": "hospitality/sangria_jarra.webp"
+    }
+  ]
+}

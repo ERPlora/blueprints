@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "types": [
     {
       "code": "bakery",
@@ -7,7 +7,6 @@
       "name": "Bakery / Pastry Shop",
       "icon": "nutrition-outline",
       "color": "#ff9500",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -16,7 +15,6 @@
       "name": "Bar",
       "icon": "beer-outline",
       "color": "#ff6b35",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -25,25 +23,6 @@
       "name": "Cafeteria",
       "icon": "cafe-outline",
       "color": "#795548",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "restaurant",
-      "sector": "hospitality",
-      "name": "Restaurant",
-      "icon": "restaurant-outline",
-      "color": "#e65100",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "catering",
-      "sector": "hospitality",
-      "name": "Catering / Events",
-      "icon": "restaurant-outline",
-      "color": "#ff7043",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -52,7 +31,6 @@
       "name": "Fast Food",
       "icon": "fast-food-outline",
       "color": "#ff9500",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -61,7 +39,6 @@
       "name": "Food Truck",
       "icon": "car-outline",
       "color": "#ff9500",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -70,7 +47,6 @@
       "name": "Ice Cream Shop",
       "icon": "ice-cream-outline",
       "color": "#5ac8fa",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -79,7 +55,6 @@
       "name": "Kebab Shop",
       "icon": "fast-food-outline",
       "color": "#e67e22",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -88,7 +63,22 @@
       "name": "Pizzeria",
       "icon": "pizza-outline",
       "color": "#e74c3c",
-      "inherits_from": [],
+      "is_combinable": true
+    },
+    {
+      "code": "pub",
+      "sector": "hospitality",
+      "name": "Pub",
+      "icon": "beer-outline",
+      "color": "#4e342e",
+      "is_combinable": true
+    },
+    {
+      "code": "restaurant",
+      "sector": "hospitality",
+      "name": "Restaurant",
+      "icon": "restaurant-outline",
+      "color": "#e65100",
       "is_combinable": true
     },
     {
@@ -97,223 +87,14 @@
       "name": "Sushi Restaurant",
       "icon": "fish-outline",
       "color": "#2ecc71",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
-      "code": "bazaar",
-      "sector": "retail",
-      "name": "Variety Store / Bazaar",
-      "icon": "grid-outline",
-      "color": "#ff5722",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "bicycle_shop",
-      "sector": "retail",
-      "name": "Bicycle Shop",
-      "icon": "bicycle-outline",
-      "color": "#689f38",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "bookshop",
-      "sector": "retail",
-      "name": "Bookstore / Stationery",
-      "icon": "book-outline",
-      "color": "#5d4037",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "butcher_shop",
-      "sector": "retail",
-      "name": "Butcher Shop",
-      "icon": "restaurant-outline",
-      "color": "#b71c1c",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "clothing",
-      "sector": "retail",
-      "name": "Clothing / Fashion Store",
-      "icon": "shirt-outline",
-      "color": "#e91e63",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "cosmetics",
-      "sector": "retail",
-      "name": "Cosmetics / Perfumery",
-      "icon": "color-palette-outline",
-      "color": "#e91e63",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "electronics",
-      "sector": "retail",
-      "name": "Electronics / IT Store",
-      "icon": "laptop-outline",
-      "color": "#37474f",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "fish_shop",
-      "sector": "retail",
-      "name": "Fish Shop",
-      "icon": "fish-outline",
-      "color": "#0277bd",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "florist",
-      "sector": "retail",
-      "name": "Florist",
-      "icon": "flower-outline",
-      "color": "#e91e63",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "fruit_shop",
-      "sector": "retail",
-      "name": "Fruit & Vegetable Shop",
-      "icon": "nutrition-outline",
-      "color": "#8bc34a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "furniture",
-      "sector": "retail",
-      "name": "Furniture / Decor",
-      "icon": "bed-outline",
-      "color": "#8d6e63",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "gourmet",
-      "sector": "retail",
-      "name": "Gourmet / Delicatessen",
+      "code": "tapas_bar",
+      "sector": "hospitality",
+      "name": "Tapas Bar",
       "icon": "restaurant-outline",
       "color": "#bf360c",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "hardware_store",
-      "sector": "retail",
-      "name": "Hardware Store",
-      "icon": "hammer-outline",
-      "color": "#795548",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "health_store",
-      "sector": "retail",
-      "name": "Parapharmacy / Health Store",
-      "icon": "leaf-outline",
-      "color": "#66bb6a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "jewelry",
-      "sector": "retail",
-      "name": "Jewelry / Watch Store",
-      "icon": "diamond-outline",
-      "color": "#ffd700",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "nutrition_shop",
-      "sector": "retail",
-      "name": "Dietetics / Sports Nutrition",
-      "icon": "barbell-outline",
-      "color": "#43a047",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "pet_shop",
-      "sector": "retail",
-      "name": "Pet Store",
-      "icon": "paw-outline",
-      "color": "#ff9800",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "second_hand",
-      "sector": "retail",
-      "name": "Second-Hand / Vintage",
-      "icon": "refresh-outline",
-      "color": "#607d8b",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "sports_shop",
-      "sector": "retail",
-      "name": "Sports Store",
-      "icon": "football-outline",
-      "color": "#2196f3",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "street_market",
-      "sector": "retail",
-      "name": "Market Stall / Street Vendor",
-      "icon": "location-outline",
-      "color": "#ff7043",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "tobacco_shop",
-      "sector": "retail",
-      "name": "Tobacconist",
-      "icon": "storefront-outline",
-      "color": "#6d4c41",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "toy_shop",
-      "sector": "retail",
-      "name": "Toy Store",
-      "icon": "happy-outline",
-      "color": "#ff9800",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "wholesale_distributor",
-      "sector": "retail",
-      "name": "Wholesale Distributor",
-      "icon": "cube-outline",
-      "color": "#455a64",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "wine_shop",
-      "sector": "retail",
-      "name": "Wine Shop (retail)",
-      "icon": "wine-outline",
-      "color": "#880e4f",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -322,7 +103,6 @@
       "name": "Barbershop",
       "icon": "cut-outline",
       "color": "#5d4037",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -331,16 +111,6 @@
       "name": "Beauty Center",
       "icon": "heart-outline",
       "color": "#ad1457",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "dog_grooming",
-      "sector": "personal_services",
-      "name": "Pet Grooming",
-      "icon": "paw-outline",
-      "color": "#d84315",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -349,7 +119,6 @@
       "name": "Gym / Sports Center",
       "icon": "barbell-outline",
       "color": "#f57c00",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -358,34 +127,6 @@
       "name": "Hair Salon",
       "icon": "cut-outline",
       "color": "#e91e63",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "laser_hair_removal",
-      "sector": "personal_services",
-      "name": "Laser Hair Removal",
-      "icon": "flash-outline",
-      "color": "#ec407a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "laundry",
-      "sector": "personal_services",
-      "name": "Laundry / Dry Cleaner",
-      "icon": "shirt-outline",
-      "color": "#42a5f5",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "nutrition",
-      "sector": "personal_services",
-      "name": "Nutrition / Dietitian",
-      "icon": "nutrition-outline",
-      "color": "#558b2f",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -394,34 +135,6 @@
       "name": "Physiotherapy",
       "icon": "body-outline",
       "color": "#0288d1",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "pilates_yoga",
-      "sector": "personal_services",
-      "name": "Pilates / Yoga",
-      "icon": "body-outline",
-      "color": "#6a1b9a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "podiatry",
-      "sector": "personal_services",
-      "name": "Podiatry",
-      "icon": "footsteps-outline",
-      "color": "#5c6bc0",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "psychology",
-      "sector": "personal_services",
-      "name": "Psychology / Coaching",
-      "icon": "chatbox-outline",
-      "color": "#7b1fa2",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -430,7 +143,6 @@
       "name": "Spa / Massage",
       "icon": "water-outline",
       "color": "#0097a7",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -439,7 +151,6 @@
       "name": "Tattoo / Piercing",
       "icon": "brush-outline",
       "color": "#212121",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
@@ -448,286 +159,46 @@
       "name": "Veterinary Clinic",
       "icon": "paw-outline",
       "color": "#2e7d32",
-      "inherits_from": [],
       "is_combinable": true
     },
     {
-      "code": "admin_agency",
-      "sector": "professional_services",
-      "name": "Administrative Agency",
-      "icon": "folder-outline",
-      "color": "#546e7a",
-      "inherits_from": [],
+      "code": "butcher_shop",
+      "sector": "retail",
+      "name": "Butcher Shop",
+      "icon": "restaurant-outline",
+      "color": "#b71c1c",
       "is_combinable": true
     },
     {
-      "code": "cleaning_company",
-      "sector": "professional_services",
-      "name": "Cleaning Company",
-      "icon": "sparkles-outline",
-      "color": "#00acc1",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "consulting",
-      "sector": "professional_services",
-      "name": "Consulting",
-      "icon": "briefcase-outline",
-      "color": "#546e7a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "design_studio",
-      "sector": "professional_services",
-      "name": "Design / Architecture Studio",
-      "icon": "color-palette-outline",
-      "color": "#6d4c41",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "freelancer",
-      "sector": "professional_services",
-      "name": "Freelancer / Self-Employed",
-      "icon": "person-outline",
-      "color": "#5c6bc0",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "landscaping",
-      "sector": "professional_services",
-      "name": "Landscaping",
-      "icon": "leaf-outline",
-      "color": "#2e7d32",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "law_firm",
-      "sector": "professional_services",
-      "name": "Law Firm",
-      "icon": "document-text-outline",
-      "color": "#263238",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "maintenance_company",
-      "sector": "professional_services",
-      "name": "Maintenance / Field Service",
-      "icon": "build-outline",
-      "color": "#e65100",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "marketing",
-      "sector": "professional_services",
-      "name": "Marketing Agency",
-      "icon": "megaphone-outline",
-      "color": "#e65100",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "tax_advisory",
-      "sector": "professional_services",
-      "name": "Tax / Accounting Advisory",
-      "icon": "calculator-outline",
-      "color": "#37474f",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "academy",
-      "sector": "education",
-      "name": "Academy / Training Center",
-      "icon": "school-outline",
-      "color": "#1565c0",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "dance_school",
-      "sector": "education",
-      "name": "Dance School",
-      "icon": "body-outline",
-      "color": "#c62828",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "driving_school",
-      "sector": "education",
-      "name": "Driving School",
-      "icon": "car-outline",
-      "color": "#ef6c00",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "language_school",
-      "sector": "education",
-      "name": "Language School",
-      "icon": "language-outline",
-      "color": "#0277bd",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "music_school",
-      "sector": "education",
-      "name": "Music School",
-      "icon": "musical-notes-outline",
-      "color": "#7b1fa2",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "carpentry",
-      "sector": "construction",
-      "name": "Carpentry / Cabinet Making",
-      "icon": "construct-outline",
-      "color": "#5d4037",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "construction_company",
-      "sector": "construction",
-      "name": "Construction Company",
-      "icon": "business-outline",
-      "color": "#795548",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "installer",
-      "sector": "construction",
-      "name": "Installer (Plumber, Electrician, HVAC)",
-      "icon": "flash-outline",
-      "color": "#e65100",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "locksmith",
-      "sector": "construction",
-      "name": "Locksmith",
-      "icon": "key-outline",
-      "color": "#37474f",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "renovation",
-      "sector": "construction",
-      "name": "Renovation Company",
-      "icon": "hammer-outline",
-      "color": "#8d6e63",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "auto_repair",
-      "sector": "manufacturing",
-      "name": "Auto Repair Shop",
-      "icon": "car-outline",
-      "color": "#d32f2f",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "electronics_repair",
-      "sector": "manufacturing",
-      "name": "Repair Shop (Electronics)",
-      "icon": "phone-portrait-outline",
-      "color": "#616161",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "food_workshop",
-      "sector": "manufacturing",
-      "name": "Food Workshop / Artisan Producer",
+      "code": "fruit_shop",
+      "sector": "retail",
+      "name": "Fruit & Vegetable Shop",
       "icon": "nutrition-outline",
-      "color": "#bf360c",
-      "inherits_from": [],
+      "color": "#8bc34a",
       "is_combinable": true
     },
     {
-      "code": "printing",
-      "sector": "manufacturing",
-      "name": "Print Shop",
-      "icon": "print-outline",
-      "color": "#424242",
-      "inherits_from": [],
+      "code": "pet_shop",
+      "sector": "retail",
+      "name": "Pet Store",
+      "icon": "paw-outline",
+      "color": "#ff9800",
       "is_combinable": true
     },
     {
-      "code": "garden_center",
-      "sector": "agriculture",
-      "name": "Nursery / Garden Center",
-      "icon": "flower-outline",
-      "color": "#689f38",
-      "inherits_from": [],
+      "code": "tobacco_shop",
+      "sector": "retail",
+      "name": "Tobacconist",
+      "icon": "storefront-outline",
+      "color": "#6d4c41",
       "is_combinable": true
     },
     {
-      "code": "escape_room",
-      "sector": "entertainment",
-      "name": "Escape Room",
-      "icon": "game-controller-outline",
-      "color": "#6a1b9a",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "event_venue",
-      "sector": "entertainment",
-      "name": "Event Venue",
-      "icon": "sparkles-outline",
-      "color": "#c62828",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "sports_club",
-      "sector": "entertainment",
-      "name": "Sports Club",
-      "icon": "football-outline",
-      "color": "#1b5e20",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "photography",
-      "sector": "media",
-      "name": "Photography Studio",
-      "icon": "camera-outline",
-      "color": "#424242",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "bike_rental",
-      "sector": "rental",
-      "name": "Bike / Scooter Rental",
-      "icon": "bicycle-outline",
-      "color": "#2e7d32",
-      "inherits_from": [],
-      "is_combinable": true
-    },
-    {
-      "code": "coworking",
-      "sector": "coworking",
-      "name": "Coworking Space",
-      "icon": "desktop-outline",
-      "color": "#1565c0",
-      "inherits_from": [],
+      "code": "wholesale_distributor",
+      "sector": "retail",
+      "name": "Wholesale Distributor",
+      "icon": "cube-outline",
+      "color": "#455a64",
       "is_combinable": true
     }
   ]

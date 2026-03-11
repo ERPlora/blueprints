@@ -40,7 +40,7 @@
       "category": "cuotas",
       "tax_class_hint": "standard",
       "price": 39.9,
-      "image": "personal_services/cuota_mensual.webp"
+      "image": "fitness/cuota_mensual.webp"
     },
     {
       "code": "cuota_trimestral",
@@ -48,7 +48,7 @@
       "category": "cuotas",
       "tax_class_hint": "standard",
       "price": 99.0,
-      "image": "personal_services/cuota_trimestral.webp"
+      "image": "fitness/cuota_trimestral.webp"
     },
     {
       "code": "cuota_anual",
@@ -56,7 +56,7 @@
       "category": "cuotas",
       "tax_class_hint": "standard",
       "price": 349.0,
-      "image": "personal_services/cuota_anual.webp"
+      "image": "fitness/cuota_anual.webp"
     },
     {
       "code": "matricula",
@@ -64,7 +64,7 @@
       "category": "cuotas",
       "tax_class_hint": "standard",
       "price": 30.0,
-      "image": "personal_services/matricula.webp"
+      "image": "fitness/matricula.webp"
     },
     {
       "code": "pase_dia",
@@ -72,7 +72,7 @@
       "category": "cuotas",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/pase_dia.webp"
+      "image": "fitness/pase_dia.webp"
     },
     {
       "code": "clase_spinning",
@@ -80,7 +80,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 8.0,
-      "image": "personal_services/clase_spinning.webp"
+      "image": "fitness/clase_spinning.webp"
     },
     {
       "code": "clase_yoga",
@@ -88,7 +88,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/clase_yoga.webp"
+      "image": "fitness/clase_yoga.webp"
     },
     {
       "code": "clase_pilates",
@@ -96,7 +96,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/clase_pilates.webp"
+      "image": "fitness/clase_pilates.webp"
     },
     {
       "code": "clase_crossfit",
@@ -104,7 +104,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 12.0,
-      "image": "personal_services/clase_crossfit.webp"
+      "image": "fitness/clase_crossfit.webp"
     },
     {
       "code": "clase_boxeo",
@@ -112,7 +112,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 10.0,
-      "image": "personal_services/clase_boxeo.webp"
+      "image": "fitness/clase_boxeo.webp"
     },
     {
       "code": "clase_zumba",
@@ -120,7 +120,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 8.0,
-      "image": "personal_services/clase_zumba.webp"
+      "image": "fitness/clase_zumba.webp"
     },
     {
       "code": "bono_10_clases",
@@ -128,7 +128,7 @@
       "category": "clases",
       "tax_class_hint": "standard",
       "price": 70.0,
-      "image": "personal_services/bono_10_clases.webp"
+      "image": "fitness/bono_10_clases.webp"
     },
     {
       "code": "sesion_personal",
@@ -136,7 +136,7 @@
       "category": "entrenamiento",
       "tax_class_hint": "standard",
       "price": 35.0,
-      "image": "personal_services/sesion_personal.webp"
+      "image": "fitness/sesion_personal.webp"
     },
     {
       "code": "bono_10_personal",
@@ -144,7 +144,7 @@
       "category": "entrenamiento",
       "tax_class_hint": "standard",
       "price": 280.0,
-      "image": "personal_services/bono_10_personal.webp"
+      "image": "fitness/bono_10_personal.webp"
     },
     {
       "code": "plan_nutricional",
@@ -152,7 +152,7 @@
       "category": "entrenamiento",
       "tax_class_hint": "standard",
       "price": 50.0,
-      "image": "personal_services/plan_nutricional.webp"
+      "image": "fitness/plan_nutricional.webp"
     },
     {
       "code": "valoracion_corporal",
@@ -160,7 +160,7 @@
       "category": "entrenamiento",
       "tax_class_hint": "standard",
       "price": 20.0,
-      "image": "personal_services/valoracion_corporal.webp"
+      "image": "beauty_body/valoracion_corporal.webp"
     },
     {
       "code": "toalla_alquiler",
@@ -168,7 +168,7 @@
       "category": "complementos",
       "tax_class_hint": "standard",
       "price": 2.0,
-      "image": "personal_services/toalla_alquiler.webp"
+      "image": "fitness/toalla_alquiler.webp"
     },
     {
       "code": "taquilla_mensual",
@@ -176,7 +176,7 @@
       "category": "complementos",
       "tax_class_hint": "standard",
       "price": 5.0,
-      "image": "personal_services/taquilla_mensual.webp"
+      "image": "fitness/taquilla_mensual.webp"
     },
     {
       "code": "batido_proteinas",
@@ -184,7 +184,7 @@
       "category": "complementos",
       "tax_class_hint": "standard",
       "price": 4.0,
-      "image": "personal_services/batido_proteinas.webp"
+      "image": "fitness/batido_proteinas.webp"
     },
     {
       "code": "barrita_energetica",
@@ -192,7 +192,7 @@
       "category": "complementos",
       "tax_class_hint": "standard",
       "price": 2.5,
-      "image": "personal_services/barrita_energetica.webp"
+      "image": "fitness/barrita_energetica.webp"
     },
     {
       "code": "agua_gym",
@@ -200,7 +200,7 @@
       "category": "complementos",
       "tax_class_hint": "standard",
       "price": 1.5,
-      "image": "personal_services/agua_gym.webp"
+      "image": "fitness/agua_gym.webp"
     }
   ]
 }

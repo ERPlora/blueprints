@@ -57,40 +57,36 @@ jobs:
               except ValidationError as e:
                   errors.append(f'{fu_path}: Schema error - {e.message}')
 
-          # --- 3. Validate business type files ---
+          # --- 3. Validate business type files (flat structure) ---
           ufo_codes = {'FIN','COM','ALM','TPV','VEN','CRM','ECO','PRO','LOG','RRH','PRY','BI'}
           bt_dir = 'data/business_types'
           known_bt_codes = set()
 
-          for sector_dir in sorted(os.listdir(bt_dir)):
-              sector_path = os.path.join(bt_dir, sector_dir)
-              if not os.path.isdir(sector_path) or sector_dir.startswith('.'): continue
-              if sector_dir == 'index.json': continue
-              for f in sorted(os.listdir(sector_path)):
-                  if not f.endswith('.json'): continue
-                  path = os.path.join(sector_path, f)
-                  if path not in all_json: continue
-                  d = all_json[path]
+          for f in sorted(os.listdir(bt_dir)):
+              if not f.endswith('.json') or f == 'index.json': continue
+              path = os.path.join(bt_dir, f)
+              if path not in all_json: continue
+              d = all_json[path]
 
-                  # Schema validation
-                  try:
-                      validate(instance=d, schema=bt_schema)
-                  except ValidationError as e:
-                      errors.append(f'{path}: Schema error - {e.message}')
-                      continue
+              # Schema validation
+              try:
+                  validate(instance=d, schema=bt_schema)
+              except ValidationError as e:
+                  errors.append(f'{path}: Schema error - {e.message}')
+                  continue
 
-                  known_bt_codes.add(d.get('code', ''))
+              known_bt_codes.add(d.get('code', ''))
 
-                  # LocalizedString check: en key always present
-                  for field in ['name', 'description']:
-                      val = d.get(field, {})
-                      if isinstance(val, dict) and 'en' not in val:
-                          errors.append(f'{path}: {field} missing \"en\" key')
+              # LocalizedString check: en key always present
+              for field in ['name', 'description']:
+                  val = d.get(field, {})
+                  if isinstance(val, dict) and 'en' not in val:
+                      errors.append(f'{path}: {field} missing \"en\" key')
 
-                  # sector_features LocalizedString check
-                  for i, feat in enumerate(d.get('sector_features', [])):
-                      if isinstance(feat, dict) and 'en' not in feat:
-                          errors.append(f'{path}: sector_features[{i}] missing \"en\" key')
+              # sector_features LocalizedString check
+              for i, feat in enumerate(d.get('sector_features', [])):
+                  if isinstance(feat, dict) and 'en' not in feat:
+                      errors.append(f'{path}: sector_features[{i}] missing \"en\" key')
 
           # --- 4. Validate product files ---
           product_dirs = ['data/products/es', 'data/products/mx', 'data/products/generic', 'data/products/_shared']
@@ -128,7 +124,7 @@ jobs:
                   for prod in d.get('products', []):
                       img = prod.get('image')
                       if img:
-                          img_path = f'data/assets/products/{img}'
+                          img_path = f'data/assets/{img}'
                           if not os.path.isfile(img_path):
                               errors.append(f'{path}: Product \"{prod[\"code\"]}\" image \"{img}\" not found at {img_path}')
 
