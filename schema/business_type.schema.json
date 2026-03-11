@@ -4,7 +4,7 @@
   "title": "Business Type",
   "description": "Schema for a business type definition. All text fields are plain English strings; translations are in separate i18n files.",
   "type": "object",
-  "required": ["code", "sector", "name", "description", "icon", "color", "inherits_from", "is_combinable", "ufo_matrix", "extra_modules", "sector_features", "roles", "products_file"],
+  "required": ["code", "sector", "name", "description", "icon", "color", "is_combinable", "ufo_matrix", "extra_modules", "sector_features", "roles"],
   "additionalProperties": false,
   "properties": {
     "code": {
@@ -26,10 +26,6 @@
     "color": {
       "type": "string",
       "pattern": "^#[0-9a-fA-F]{6}$"
-    },
-    "inherits_from": {
-      "type": "array",
-      "items": { "type": "string" }
     },
     "is_combinable": { "type": "boolean" },
     "ufo_matrix": {

@@ -98,7 +98,6 @@ These sectors were removed entirely. They require deep integrations, heavy regul
 
 ### Personal Services
 - `dental_clinic` — Dental Clinic (clinical records, insurance integration)
-- `vet_clinic` — Veterinary Clinic (clinical records, REGIVET)
 - `medical_clinic` — Medical Clinic (health regulation, clinical records)
 - `speech_therapy` — Speech Therapy (very small niche, health data)
 
