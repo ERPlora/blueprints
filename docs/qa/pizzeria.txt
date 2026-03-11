@@ -1,0 +1,38 @@
+# La Piazza — Pizzería
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una pizzería en Valencia, España
+
+---
+
+Se llama La Piazza, estamos en Calle Colón 28, Valencia 46004
+
+---
+
+Instala el catálogo de productos de pizzería
+
+---
+
+Crea las zonas: Comedor (12 mesas para 4), Terraza (6 mesas para 4), Barra (4 taburetes)
+
+---
+
+Estaciones de cocina: Horno de Leña, Preparación, Ensaladas, Bebidas
+
+---
+
+Empleados:
+- Giuseppe Rossi, pizzaiolo jefe, PIN 1111
+- Carmen Vidal, camarera, PIN 2222
+- Javier Muñoz, ayudante cocina, PIN 3333
+- Elena Navarro, cajera, PIN 4444
+
+---
+
+Horario: Martes a Domingo de 13:00 a 16:00 y de 20:00 a 23:30. Lunes cerrado
+
+---
+
+Muéstrame un resumen de todo

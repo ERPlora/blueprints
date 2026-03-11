@@ -1,0 +1,43 @@
+# La Terraza — Restaurant + Bar
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo un restaurante con bar en Madrid, España
+
+---
+
+Se llama La Terraza, estamos en Calle Gran Vía 42, Madrid 28013
+
+---
+
+Instala el catálogo de productos de restaurante y también el de bar
+
+---
+
+Crea las zonas y mesas: Terraza (8 mesas para 4 personas), Comedor (10 mesas para 4), Sala privada (2 mesas para 8), Barra (6 taburetes)
+
+---
+
+Crea las estaciones de cocina: Cocina Caliente, Cocina Fría, Plancha, Barra de Bebidas, Postres
+
+---
+
+Crea estos empleados:
+- Carlos García, jefe de cocina, PIN 1111
+- Ana López, camarera, PIN 2222
+- Pedro Martín, barman, PIN 3333
+- Laura Sánchez, cajera, PIN 4444
+- Miguel Torres, ayudante de cocina, PIN 5555
+
+---
+
+Configura el horario: Lunes a Jueves de 12:00 a 16:00 y de 20:00 a 00:00, Viernes y Sábado de 12:00 a 16:30 y de 20:00 a 01:00, Domingo de 12:00 a 17:00
+
+---
+
+Crea un par de clientes: Empresa Eventos Madrid SL, CIF B12345678. Y también María González como clienta habitual
+
+---
+
+Muéstrame un resumen de cómo ha quedado todo configurado

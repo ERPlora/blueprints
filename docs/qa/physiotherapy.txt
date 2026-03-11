@@ -1,0 +1,29 @@
+# Clínica Fisio — Physiotherapy
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una clínica de fisioterapia en San Sebastián, España
+
+---
+
+Se llama Clínica Fisio, estamos en Avenida de la Libertad 20, San Sebastián 20004
+
+---
+
+Instala el catálogo de servicios de fisioterapia
+
+---
+
+Empleados:
+- Ander Zubieta, fisioterapeuta y director, PIN 1111
+- Irati Etxebarria, fisioterapeuta, PIN 2222
+- Leire Arana, recepcionista, PIN 3333
+
+---
+
+Horario: Lunes a Viernes de 9:00 a 13:00 y de 16:00 a 20:00
+
+---
+
+Muéstrame cómo ha quedado

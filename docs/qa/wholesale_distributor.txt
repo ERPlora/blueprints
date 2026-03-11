@@ -1,0 +1,30 @@
+# Distribuciones Iberia — Wholesale Distributor
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una empresa de distribución mayorista en Madrid, España
+
+---
+
+Se llama Distribuciones Iberia SL, CIF B87654321, estamos en Polígono Industrial Las Mercedes, nave 14, Madrid 28022
+
+---
+
+Instala el catálogo de productos de distribuidor mayorista
+
+---
+
+Empleados:
+- Roberto Blanco, gerente, PIN 1111
+- Silvia Marcos, comercial, PIN 2222
+- Enrique Peña, almacenero, PIN 3333
+- Patricia Solís, administrativa, PIN 4444
+
+---
+
+Horario: Lunes a Viernes de 8:00 a 17:00
+
+---
+
+Muéstrame el resumen de todo

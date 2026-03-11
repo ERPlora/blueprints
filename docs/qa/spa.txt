@@ -1,0 +1,30 @@
+# Spa Zen — Spa
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo un spa en Marbella, España
+
+---
+
+Se llama Spa Zen, estamos en Avenida Bulevar Príncipe Alfonso de Hohenlohe 12, Marbella 29602
+
+---
+
+Instala el catálogo de servicios de spa
+
+---
+
+Empleados:
+- Silvia Prado, directora, PIN 1111
+- Yuki Yamamoto, terapeuta, PIN 2222
+- Lorena Ríos, terapeuta, PIN 3333
+- Marcos Peña, recepcionista, PIN 4444
+
+---
+
+Horario: todos los días de 10:00 a 21:00
+
+---
+
+Muéstrame cómo ha quedado todo

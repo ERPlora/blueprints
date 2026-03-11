@@ -1,0 +1,29 @@
+# Mascotas Feliz — Pet Shop
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una tienda de mascotas en Palma de Mallorca, España
+
+---
+
+Se llama Mascotas Feliz, estamos en Calle Sant Miquel 40, Palma 07002
+
+---
+
+Instala el catálogo de productos de tienda de mascotas
+
+---
+
+Empleados:
+- Lucía Ramírez, dueña, PIN 1111
+- Tomás Pons, dependiente, PIN 2222
+- Eva Lladó, dependienta, PIN 3333
+
+---
+
+Horario: Lunes a Viernes de 10:00 a 13:30 y de 17:00 a 20:00. Sábado de 10:00 a 14:00
+
+---
+
+Muéstrame cómo ha quedado todo

@@ -1,0 +1,29 @@
+# Tattoo Art — Tattoo Studio
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo un estudio de tatuajes en Barcelona, España
+
+---
+
+Se llama Tattoo Art, estamos en Calle del Rec 25, Barcelona 08003
+
+---
+
+Instala el catálogo de servicios de estudio de tatuajes
+
+---
+
+Empleados:
+- Darío Cruz, tatuador y dueño, PIN 1111
+- Valeria Ortiz, tatuadora, PIN 2222
+- Iván Soto, piercer, PIN 3333
+
+---
+
+Horario: Martes a Sábado de 11:00 a 14:00 y de 16:00 a 20:00. Domingo y Lunes cerrado
+
+---
+
+Muéstrame cómo ha quedado

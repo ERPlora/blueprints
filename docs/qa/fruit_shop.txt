@@ -1,0 +1,28 @@
+# Frutería Sol — Fruit Shop
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una frutería en Murcia, España
+
+---
+
+Se llama Frutería Sol, estamos en Calle Trapería 8, Murcia 30001
+
+---
+
+Instala el catálogo de productos de frutería
+
+---
+
+Empleados:
+- Paco Hernández, dueño, PIN 1111
+- María José Ortega, dependienta, PIN 2222
+
+---
+
+Horario: Lunes a Viernes de 8:00 a 14:00 y de 17:00 a 20:30. Sábado de 8:00 a 14:30
+
+---
+
+Muéstrame el resumen

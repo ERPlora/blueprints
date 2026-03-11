@@ -1,0 +1,37 @@
+# El Café — Cafetería
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una cafetería en Bilbao, España
+
+---
+
+Se llama El Café, estamos en Gran Vía de Don Diego López de Haro 18, Bilbao 48001
+
+---
+
+Instala el catálogo de productos de cafetería
+
+---
+
+Zonas: Barra (6 taburetes), Sala (8 mesas para 2), Terraza (5 mesas para 4)
+
+---
+
+Estaciones: Cocina, Barra de Café
+
+---
+
+Empleados:
+- Iñaki Etxeberría, barista jefe, PIN 1111
+- Amaia Goicoechea, camarera, PIN 2222
+- Jon Aguirre, cocina, PIN 3333
+
+---
+
+Horario: Lunes a Viernes de 7:30 a 20:00. Sábado y Domingo de 8:30 a 20:00
+
+---
+
+Muéstrame cómo ha quedado

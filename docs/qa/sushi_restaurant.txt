@@ -1,0 +1,38 @@
+# Sakura — Sushi Restaurant
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo un restaurante japonés de sushi en Madrid
+
+---
+
+Se llama Sakura, la dirección es Calle Serrano 85, Madrid 28006
+
+---
+
+Instala el catálogo de productos de restaurante de sushi
+
+---
+
+Zonas: Barra de Sushi (8 sitios), Comedor (10 mesas para 4), Privado (2 mesas para 6)
+
+---
+
+Estaciones: Sushi Bar, Cocina Caliente, Tempura, Bebidas
+
+---
+
+Empleados:
+- Kenji Tanaka, sushi chef, PIN 1111
+- Sofía Herrera, camarera, PIN 2222
+- Pablo Reyes, ayudante cocina, PIN 3333
+- Marta Gil, cajera, PIN 4444
+
+---
+
+Horario: Martes a Sábado de 13:00 a 15:30 y de 20:00 a 23:00. Domingo de 13:00 a 16:00. Lunes cerrado
+
+---
+
+Muéstrame cómo ha quedado

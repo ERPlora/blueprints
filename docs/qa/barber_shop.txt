@@ -1,0 +1,28 @@
+# Barbería Don Juan — Barber Shop
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una barbería en Córdoba, España
+
+---
+
+Se llama Barbería Don Juan, estamos en Calle Cruz Conde 10, Córdoba 14001
+
+---
+
+Instala el catálogo de servicios de barbería
+
+---
+
+Empleados:
+- Juan Parejo, barbero jefe, PIN 1111
+- Adrián Molina, barbero, PIN 2222
+
+---
+
+Horario: Lunes a Viernes de 10:00 a 14:00 y de 17:00 a 21:00. Sábado de 9:30 a 14:00
+
+---
+
+Muéstrame cómo ha quedado

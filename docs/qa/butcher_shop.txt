@@ -1,0 +1,29 @@
+# Carnicería López — Butcher Shop
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo una carnicería en Valladolid, España
+
+---
+
+Se llama Carnicería López, estamos en Mercado del Val, puesto 12, Valladolid 47001
+
+---
+
+Instala el catálogo de productos de carnicería
+
+---
+
+Empleados:
+- Fernando López, carnicero jefe, PIN 1111
+- Jorge López, carnicero, PIN 2222
+- Beatriz Soto, dependienta, PIN 3333
+
+---
+
+Horario: Lunes a Viernes de 8:00 a 14:30 y de 17:30 a 20:30. Sábado de 8:00 a 14:30
+
+---
+
+Muéstrame cómo ha quedado

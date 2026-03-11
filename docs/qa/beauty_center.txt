@@ -1,0 +1,30 @@
+# Centro Belleza Lux — Beauty Center
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo un centro de estética en Madrid, España
+
+---
+
+Se llama Centro Belleza Lux, la dirección es Calle Velázquez 52, Madrid 28001
+
+---
+
+Instala el catálogo de servicios de centro de belleza
+
+---
+
+Empleados:
+- Cristina Lux, directora, PIN 1111
+- Sara Montes, esteticista, PIN 2222
+- Verónica Paz, esteticista, PIN 3333
+- Diana Flores, recepcionista, PIN 4444
+
+---
+
+Horario: Lunes a Viernes de 10:00 a 14:00 y de 16:00 a 20:00. Sábado de 10:00 a 14:00
+
+---
+
+Muéstrame el resumen

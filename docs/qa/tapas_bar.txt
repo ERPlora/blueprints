@@ -1,0 +1,38 @@
+# La Barra — Bar de Tapas
+# Enviar cada bloque como un mensaje separado al asistente
+
+---
+
+Hola, tengo un bar de tapas en Sevilla
+
+---
+
+Se llama La Barra, estamos en Calle Betis 14, Sevilla 41010
+
+---
+
+Instala el catálogo de tapas
+
+---
+
+Zonas: Barra (10 taburetes), Comedor (8 mesas para 4), Terraza (10 mesas para 4)
+
+---
+
+Estaciones de cocina: Plancha, Fritura, Montaje, Barra
+
+---
+
+Empleados:
+- Antonio Reyes, cocinero jefe, PIN 1111
+- Isabel Campos, camarera, PIN 2222
+- Francisco Ruiz, barman, PIN 3333
+- Rocío Jiménez, camarera, PIN 4444
+
+---
+
+Horario: Martes a Domingo de 12:00 a 16:30 y de 19:30 a 00:00. Lunes cerrado
+
+---
+
+Muéstrame todo lo configurado
