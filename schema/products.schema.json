@@ -50,7 +50,7 @@
         "icon": { "type": "string" },
         "tax_class_hint": {
           "type": "string",
-          "enum": ["super_reduced", "reduced", "standard", "exempt"]
+          "enum": ["general", "super_reduced", "reduced", "standard", "exempt"]
         },
         "order": {
           "type": "integer",
@@ -78,7 +78,7 @@
         },
         "tax_class_hint": {
           "type": "string",
-          "enum": ["super_reduced", "reduced", "standard", "exempt"]
+          "enum": ["general", "super_reduced", "reduced", "standard", "exempt"]
         },
         "unit": {
           "type": "string",
