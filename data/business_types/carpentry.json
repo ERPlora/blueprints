@@ -1,0 +1,44 @@
+{
+  "code": "carpentry",
+  "sector": "manufacturing",
+  "name": "Carpentry / Workshop",
+  "description": "Carpentry or woodworking workshop with custom quotes, BOM/cutting lists, production orders, finishing tracking, and delivery",
+  "icon": "hammer-outline",
+  "color": "#4e342e",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "recommended",
+    "ECO": "na",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "na"
+  },
+  "extra_modules": ["manufacturing", "quotes", "projects", "invoicing", "purchase_orders"],
+  "sector_features": [
+    "Custom quotes",
+    "BOM / cutting lists",
+    "Production orders",
+    "Finishing tracking",
+    "Delivery coordination"
+  ],
+  "roles": [
+    {
+      "id": "master_craftsman",
+      "name": "Master Craftsman",
+      "permissions": ["manufacturing.*", "projects.*", "inventory.*"]
+    },
+    {
+      "id": "sales_rep",
+      "name": "Sales Representative",
+      "permissions": ["quotes.*", "customers.*", "invoicing.view_*"]
+    }
+  ],
+  "products_file": "products/carpentry.json"
+}

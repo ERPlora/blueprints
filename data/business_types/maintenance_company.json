@@ -1,0 +1,44 @@
+{
+  "code": "maintenance_company",
+  "sector": "construction",
+  "name": "Maintenance & SAT",
+  "description": "Maintenance and technical service company with SLA contracts, tickets, technician dispatch, van inventory, and work reports",
+  "icon": "build-outline",
+  "color": "#4e342e",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["maintenance", "field_service", "tasks", "contracts", "invoicing", "customers"],
+  "sector_features": [
+    "SLA contracts",
+    "Ticket / incident management",
+    "Technician dispatch",
+    "Van inventory",
+    "Work reports"
+  ],
+  "roles": [
+    {
+      "id": "technician",
+      "name": "Technician",
+      "permissions": ["maintenance.*", "field_service.*", "tasks.*", "inventory.view_*"]
+    },
+    {
+      "id": "dispatcher",
+      "name": "Dispatcher",
+      "permissions": ["maintenance.*", "tasks.*", "schedules.*", "customers.*"]
+    }
+  ],
+  "products_file": "products/maintenance_company.json"
+}

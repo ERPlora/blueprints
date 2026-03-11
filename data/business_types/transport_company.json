@@ -1,0 +1,44 @@
+{
+  "code": "transport_company",
+  "sector": "logistics",
+  "name": "Transportation Company",
+  "description": "Transportation company with vehicle fleet management, driver scheduling, route planning, fuel tracking, and client invoicing",
+  "icon": "bus-outline",
+  "color": "#1a237e",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["fleet", "schedules", "invoicing", "customers", "expenses"],
+  "sector_features": [
+    "Vehicle fleet management",
+    "Driver scheduling",
+    "Route planning",
+    "Fuel tracking",
+    "Client invoicing"
+  ],
+  "roles": [
+    {
+      "id": "driver",
+      "name": "Driver",
+      "permissions": ["schedules.view_*", "tasks.*"]
+    },
+    {
+      "id": "fleet_manager",
+      "name": "Fleet Manager",
+      "permissions": ["fleet.*", "schedules.*", "staff.view_*"]
+    }
+  ],
+  "products_file": "products/transport_company.json"
+}

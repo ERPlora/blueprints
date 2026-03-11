@@ -1,0 +1,44 @@
+{
+  "code": "food_delivery",
+  "sector": "hospitality",
+  "name": "Food Delivery",
+  "description": "Ghost kitchen or delivery-only food business with online ordering, delivery routes, and multi-platform integration",
+  "icon": "bicycle-outline",
+  "color": "#e91e63",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "recommended",
+    "LOG": "essential",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["orders", "kitchen", "shipping", "online_payments", "online_booking"],
+  "sector_features": [
+    "Online ordering",
+    "Delivery route optimization",
+    "Multi-platform integration",
+    "Ghost kitchen support",
+    "Real-time order tracking"
+  ],
+  "roles": [
+    {
+      "id": "kitchen_manager",
+      "name": "Kitchen Manager",
+      "permissions": ["kitchen.*", "orders.*", "inventory.view_*"]
+    },
+    {
+      "id": "delivery_driver",
+      "name": "Delivery Driver",
+      "permissions": ["orders.view_*", "shipping.*"]
+    }
+  ],
+  "products_file": "products/food_delivery.json"
+}

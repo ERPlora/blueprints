@@ -1,0 +1,44 @@
+{
+  "code": "massage_therapy",
+  "sector": "personal_services",
+  "name": "Massage Therapy",
+  "description": "Massage therapy center with appointment scheduling, therapist management, session packages, and client health records",
+  "icon": "body-outline",
+  "color": "#006064",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["appointments", "customers", "sales", "cash_register", "online_booking"],
+  "sector_features": [
+    "Appointment scheduling",
+    "Session packages",
+    "Client health records",
+    "Therapist management",
+    "Online booking"
+  ],
+  "roles": [
+    {
+      "id": "therapist",
+      "name": "Therapist",
+      "permissions": ["appointments.*", "customers.view_*", "sales.view_*"]
+    },
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": ["appointments.*", "customers.*", "sales.*", "cash_register.*"]
+    }
+  ],
+  "products_file": "products/massage_therapy.json"
+}

@@ -1,0 +1,44 @@
+{
+  "code": "online_courses",
+  "sector": "education",
+  "name": "Online Courses",
+  "description": "Online learning platform with course creation, student management, subscriptions, certifications, and live sessions",
+  "icon": "desktop-outline",
+  "color": "#4a148c",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "recommended",
+    "BI": "essential"
+  },
+  "extra_modules": ["course_mgmt", "student_mgmt", "online_payments", "subscriptions", "ecommerce"],
+  "sector_features": [
+    "Course creation",
+    "Student management",
+    "Subscription plans",
+    "Certifications",
+    "Live sessions"
+  ],
+  "roles": [
+    {
+      "id": "instructor",
+      "name": "Instructor",
+      "permissions": ["course_mgmt.*", "student_mgmt.view_*"]
+    },
+    {
+      "id": "admin",
+      "name": "Admin",
+      "permissions": ["student_mgmt.*", "course_mgmt.*", "invoicing.*", "analytics.view_*"]
+    }
+  ],
+  "products_file": "products/online_courses.json"
+}

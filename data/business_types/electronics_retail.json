@@ -1,0 +1,44 @@
+{
+  "code": "electronics_retail",
+  "sector": "retail",
+  "name": "Electronics & IT",
+  "description": "Electronics or IT store with serial number tracking, warranties, technical service, trade-in, and financing",
+  "icon": "phone-portrait-outline",
+  "color": "#0d47a1",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "recommended",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "recommended",
+    "BI": "recommended"
+  },
+  "extra_modules": ["inventory", "sales", "cash_register", "maintenance", "invoicing"],
+  "sector_features": [
+    "Serial number tracking",
+    "Warranty management",
+    "Technical service",
+    "Trade-in",
+    "Financing"
+  ],
+  "roles": [
+    {
+      "id": "sales_assistant",
+      "name": "Sales Assistant",
+      "permissions": ["sales.*", "cash_register.*", "customers.view_*"]
+    },
+    {
+      "id": "technician",
+      "name": "Technician",
+      "permissions": ["maintenance.*", "inventory.view_*"]
+    }
+  ],
+  "products_file": "products/electronics_retail.json"
+}

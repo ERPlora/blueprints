@@ -1,0 +1,49 @@
+{
+  "code": "car_dealership",
+  "sector": "automotive",
+  "name": "Car Dealership",
+  "description": "Car dealership with vehicle inventory, financing management, test drives, trade-ins, after-sales service, and manufacturer reporting",
+  "icon": "car-sport-outline",
+  "color": "#1a237e",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "recommended",
+    "BI": "essential"
+  },
+  "extra_modules": ["inventory", "sales", "customers", "invoicing", "maintenance", "quotes", "contracts"],
+  "sector_features": [
+    "Vehicle inventory",
+    "Financing management",
+    "Test drives",
+    "Trade-ins",
+    "Manufacturer reporting"
+  ],
+  "roles": [
+    {
+      "id": "sales_rep",
+      "name": "Sales Representative",
+      "permissions": ["sales.*", "customers.*", "quotes.*", "inventory.view_*"]
+    },
+    {
+      "id": "mechanic",
+      "name": "Mechanic",
+      "permissions": ["maintenance.*", "inventory.view_*"]
+    },
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": ["sales.*", "customers.*", "invoicing.*", "inventory.*", "reports.view_*"]
+    }
+  ],
+  "products_file": "products/car_dealership.json"
+}

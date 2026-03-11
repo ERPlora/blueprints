@@ -1,0 +1,44 @@
+{
+  "code": "cleaning_company",
+  "sector": "construction",
+  "name": "Cleaning Company",
+  "description": "Cleaning company with recurring contracts, team routes, material consumption tracking, checklists, and client satisfaction",
+  "icon": "sparkles-outline",
+  "color": "#006064",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "recommended",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["contracts", "tasks", "schedules", "invoicing", "customers", "field_service"],
+  "sector_features": [
+    "Recurring contracts",
+    "Team routes",
+    "Material tracking",
+    "Checklists",
+    "Client satisfaction"
+  ],
+  "roles": [
+    {
+      "id": "cleaning_team_leader",
+      "name": "Team Leader",
+      "permissions": ["tasks.*", "schedules.view_*", "field_service.*"]
+    },
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": ["contracts.*", "customers.*", "invoicing.*", "staff.view_*", "schedules.*"]
+    }
+  ],
+  "products_file": "products/cleaning_company.json"
+}

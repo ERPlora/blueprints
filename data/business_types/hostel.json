@@ -1,0 +1,39 @@
+{
+  "code": "hostel",
+  "sector": "hotels_tourism",
+  "name": "Hostel",
+  "description": "Hostel with dormitory beds and private rooms, online booking, shared facilities management, and budget travelers focus",
+  "icon": "home-outline",
+  "color": "#311b92",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["reservations", "customers", "online_booking", "online_payments", "sales"],
+  "sector_features": [
+    "Dormitory bed management",
+    "Private room management",
+    "Online booking",
+    "Shared facilities",
+    "Budget pricing"
+  ],
+  "roles": [
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": ["reservations.*", "customers.*", "sales.*", "cash_register.*"]
+    }
+  ],
+  "products_file": "products/hostel.json"
+}

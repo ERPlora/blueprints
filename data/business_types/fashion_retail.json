@@ -1,0 +1,44 @@
+{
+  "code": "fashion_retail",
+  "sector": "retail",
+  "name": "Fashion Retail",
+  "description": "Fashion or clothing store with size/color variants, season collections, markdowns, and loyalty programs",
+  "icon": "shirt-outline",
+  "color": "#880e4f",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["inventory", "sales", "cash_register", "loyalty", "discounts", "ecommerce"],
+  "sector_features": [
+    "Size / color variants",
+    "Season collections",
+    "Bulk markdowns",
+    "Loyalty programs",
+    "Ecommerce integration"
+  ],
+  "roles": [
+    {
+      "id": "sales_assistant",
+      "name": "Sales Assistant",
+      "permissions": ["sales.*", "cash_register.*", "customers.view_*"]
+    },
+    {
+      "id": "stock_clerk",
+      "name": "Stock Clerk",
+      "permissions": ["inventory.*"]
+    }
+  ],
+  "products_file": "products/fashion_retail.json"
+}

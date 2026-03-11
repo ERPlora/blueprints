@@ -1,8 +1,8 @@
 {
-  "version": "2.0.0",
-  "schema_version": "2",
-  "last_updated": "2026-03-10T23:37:21Z",
-  "file_count": 549,
+  "version": "3.0.0",
+  "schema_version": "3",
+  "last_updated": "2026-03-11T16:29:49Z",
+  "file_count": 640,
   "files": [
     {
       "path": "assets/beauty_body/black_mask.webp",
@@ -1962,7 +1962,19 @@
     },
     {
       "path": "business_sectors.json",
-      "checksum": "sha256:40b6a4a6219ea147c91bbf8c3090b7b8f94475df16a694e364d00e1595355846"
+      "checksum": "sha256:d75a57c5b04c0ed04b82d6813af71534876881fd610ab8ff4b83ec58efa31a09"
+    },
+    {
+      "path": "business_types/accounting_firm.json",
+      "checksum": "sha256:7be06e6fb00346b015f589b81d73e4211f596ddba7686c7affdbc22f91f57838"
+    },
+    {
+      "path": "business_types/assembly.json",
+      "checksum": "sha256:f1bd8722698000822d778eae47c62faee12e2f267e4036abd3053c211a03d2c0"
+    },
+    {
+      "path": "business_types/auto_services.json",
+      "checksum": "sha256:118b3f959e3f986a68fd34af64ff1dc0f21e6152001ae3b9011b30227b885d76"
     },
     {
       "path": "business_types/bakery.json",
@@ -1989,12 +2001,76 @@
       "checksum": "sha256:6627028a66e49c182fd54464cf7e5613fd7587a64b65ce5449ed3a7a88633967"
     },
     {
+      "path": "business_types/car_dealership.json",
+      "checksum": "sha256:3bd8d4486661c3c7664f1369817f932c9f154fca16432fcf274a8615aabbc9f8"
+    },
+    {
+      "path": "business_types/car_rental.json",
+      "checksum": "sha256:1efcccca515363391c14edd26323ae6a8991b354ed2c63ff2260acdb1110f8b3"
+    },
+    {
+      "path": "business_types/car_repair.json",
+      "checksum": "sha256:6ed45be91adcea114c99fa83fdbe35de187c5821ea5dd9dbe8cee2fc0fd4e578"
+    },
+    {
+      "path": "business_types/carpentry.json",
+      "checksum": "sha256:7950f93e62397987d46d92b2c28aec6e3fc4180a934867b7b010c68aeadc3527"
+    },
+    {
+      "path": "business_types/catering.json",
+      "checksum": "sha256:0e39135e83ad437acf042472814a0ca311f939be7c040a04a2fc0f3080bb4b1d"
+    },
+    {
+      "path": "business_types/cleaning_company.json",
+      "checksum": "sha256:c8fc2e140ae26200cac598ae119b1b4b4dbb6006a1a3d4f3f6412c01244fc2ed"
+    },
+    {
+      "path": "business_types/clinic.json",
+      "checksum": "sha256:8b153880b0b5425c413956cb9ddda5ea06727f56a09d4bac6c49aa20055d1bb0"
+    },
+    {
+      "path": "business_types/construction_company.json",
+      "checksum": "sha256:f46f2920031a90286ce665e6ea307d92698f0205fe178a50ee076b8cfa61306a"
+    },
+    {
+      "path": "business_types/consulting.json",
+      "checksum": "sha256:eecad60b914a26dceae48c3158ed207c426149a6339bdc3807c49f49fd89cb02"
+    },
+    {
+      "path": "business_types/delivery_services.json",
+      "checksum": "sha256:bb0f3679c941511e2d56aa6390e3de9bac876e2520eaa2e44e4e1a7995894a06"
+    },
+    {
+      "path": "business_types/dental_clinic.json",
+      "checksum": "sha256:c3432ad5385bf42c3ed1586c5d7387abaefc864e24420b2a1e740f3d788633f5"
+    },
+    {
+      "path": "business_types/driving_school.json",
+      "checksum": "sha256:e6f668ae6f5d27860898d75bfe2dbf0fb878423be68928316cc1dbbe9a4a233c"
+    },
+    {
+      "path": "business_types/electronics_retail.json",
+      "checksum": "sha256:0d3337bccf593e07e06411cbcf839a1bf6d33321ddd35770e9b79f3a7947c2d5"
+    },
+    {
+      "path": "business_types/fashion_retail.json",
+      "checksum": "sha256:1cf4b496af57bf5e592df34597b1fd205870318bcc82474c7df96c7377641ce2"
+    },
+    {
       "path": "business_types/fast_food.json",
       "checksum": "sha256:078b69669482b9fabe015d863efebb504689aee25dd3ef940d1564b66b0edab0"
     },
     {
+      "path": "business_types/food_delivery.json",
+      "checksum": "sha256:0853cd3371d3a2bffb00b2c8210a5262247c2c51832098437ce191b8098120c0"
+    },
+    {
       "path": "business_types/food_truck.json",
       "checksum": "sha256:2bcc42eebc59fe2bf178d2f35cf925134cae1b8d22d6c6fa18613da5bb1413a6"
+    },
+    {
+      "path": "business_types/food_workshop.json",
+      "checksum": "sha256:42ad78d15d409061e29d6db843be98290ea86c0b398c2f1c9691fc78311af312"
     },
     {
       "path": "business_types/fruit_shop.json",
@@ -2009,20 +2085,76 @@
       "checksum": "sha256:4a63ed7156494f72230671ca789d96bbdf7826f917fde9591a32272d55d291da"
     },
     {
+      "path": "business_types/home_services.json",
+      "checksum": "sha256:3a9a737c701fe210bb4aa3e36aff27db6d6f4ce8bd5467c8b5f105f771c9febd"
+    },
+    {
+      "path": "business_types/hostel.json",
+      "checksum": "sha256:9a8b8254bda0b191b6ea4d8ef44ac3e7d3cfdc6f64c94212c7a1610c74618bc1"
+    },
+    {
+      "path": "business_types/hotel.json",
+      "checksum": "sha256:a624a498eb04a2b5e4f7fb56e6d7f5cf4451220cada7a1ce0e4c374751934133"
+    },
+    {
       "path": "business_types/ice_cream_shop.json",
       "checksum": "sha256:b8203fbd192cd4f275943ce4071116039625bf02c40662ade4d6651db1cb18a0"
     },
     {
       "path": "business_types/index.json",
-      "checksum": "sha256:8593d52a97a0546a2227101d37db40c7a7c35a77f2c3d6d7b2f1ac0432bcb0d6"
+      "checksum": "sha256:0e37fc2cba6b655508396274cb031547b4d7d9c7c03d3b7ee261908c2cac5719"
+    },
+    {
+      "path": "business_types/installer.json",
+      "checksum": "sha256:467cab77a473f3a34e3dbb80fa50efc409f91b7019ec81cfb50924a042833274"
+    },
+    {
+      "path": "business_types/it_services.json",
+      "checksum": "sha256:f7002b4dd552b4597e91b7c5c6e3d926ed0a798b4e706d47cffd89da5675791e"
     },
     {
       "path": "business_types/kebab_shop.json",
       "checksum": "sha256:53468a49548a57b209662cc194a04cbba68ce0b229f6c76577b5eb529f8ebfca"
     },
     {
+      "path": "business_types/law_firm.json",
+      "checksum": "sha256:f15fc40197c703a88397b59c9a682f672a4b6b1f5f322b4d93908435fe29c9a5"
+    },
+    {
+      "path": "business_types/logistics_company.json",
+      "checksum": "sha256:2ac721c41199309226eb5fb782dedf13beda615f0ebacbeec9b6cd2a9fde75eb"
+    },
+    {
+      "path": "business_types/maintenance_company.json",
+      "checksum": "sha256:a01481f5c9a756309a27a0ff206ee7c58acb466a9478861218621eb5127144da"
+    },
+    {
+      "path": "business_types/manufacturing.json",
+      "checksum": "sha256:eb9f044945cc4ad4ae8f7604b787c9e006d7cafcf00a71302c41ee6d885455ab"
+    },
+    {
+      "path": "business_types/marketing_agency.json",
+      "checksum": "sha256:01ff3bef26b3dca3ff4d9c2856bc0f387875d9df076b96644154915ade7df501"
+    },
+    {
+      "path": "business_types/massage_therapy.json",
+      "checksum": "sha256:7f9869e8e4eb88a9efbd68ee551794ee3c4324abb67d6d47664b068da350e3b3"
+    },
+    {
+      "path": "business_types/medical_lab.json",
+      "checksum": "sha256:b527f3f8e0f6f0cf82d73c099fc6350b477d94aced91e3e042822fb5ada91ac3"
+    },
+    {
+      "path": "business_types/online_courses.json",
+      "checksum": "sha256:daf90c3d46e373b7d6c1363faf46fa526712de34f0ac2cd2d6baa856526d64ab"
+    },
+    {
       "path": "business_types/pet_shop.json",
       "checksum": "sha256:116cb6e2fc52b2739c49ef7294a7d463af0831c7c59793d99364da061ed56371"
+    },
+    {
+      "path": "business_types/pharmacy.json",
+      "checksum": "sha256:ee007f61312222eceee6f02625c8397bba8b8cde6b9e698ac649ba53465d5ef1"
     },
     {
       "path": "business_types/physiotherapy.json",
@@ -2033,16 +2165,36 @@
       "checksum": "sha256:ae3e44d3efd1a834562450b7765947d616959ff781e9d441aabd3bffbec99df8"
     },
     {
+      "path": "business_types/property_management.json",
+      "checksum": "sha256:595a9629ba798497b78416ac9b6ab8baa21d640b3136b7ea6ae7796c6ff6bdb3"
+    },
+    {
+      "path": "business_types/psychology.json",
+      "checksum": "sha256:710ec396b0f0861e06f28c4530a7e0f983171296de1955284b06068aa072f9d8"
+    },
+    {
       "path": "business_types/pub.json",
       "checksum": "sha256:34d6bc47aff7713747552720c746e35d03661377802ab5a85598e628ba989935"
+    },
+    {
+      "path": "business_types/real_estate_agency.json",
+      "checksum": "sha256:731597b79493bb5fc9842b04e30d9b374c3825596545d8da95f521f22ecae8ea"
     },
     {
       "path": "business_types/restaurant.json",
       "checksum": "sha256:7bc2c5443f470da3fc74e621abd7fd821e6d5fe49fd3147a534d57de4c2335bd"
     },
     {
+      "path": "business_types/school.json",
+      "checksum": "sha256:012af061ea0cbc4484e839dbf8e34a03ed75e6f20e0f6c75e5d7cb7ff7386bfd"
+    },
+    {
       "path": "business_types/spa.json",
       "checksum": "sha256:ed87cf36083a74f1bef666133139ed4cf4a790ec7faf42159e4d8964d43606c4"
+    },
+    {
+      "path": "business_types/supermarket.json",
+      "checksum": "sha256:3eb21517d759e26843ecebcb5584f09d62915cf81aaef6cc14399e57830821d9"
     },
     {
       "path": "business_types/sushi_restaurant.json",
@@ -2061,8 +2213,36 @@
       "checksum": "sha256:eb05fd94b0406eb52bce775b2400998a59e2f700ad44eb0cfc73b94541d855cd"
     },
     {
+      "path": "business_types/tour_operator.json",
+      "checksum": "sha256:7c684aaeedee57b85924a11e62875ed74bf879a8ea5d026db08c90e19afe0175"
+    },
+    {
+      "path": "business_types/training_center.json",
+      "checksum": "sha256:9c3a6cf0fec65582839420dd879b46680ebc6c7ea1f53e7727f76e5d1a2d3a64"
+    },
+    {
+      "path": "business_types/transport_company.json",
+      "checksum": "sha256:3145a946e079e8cf786911e6695d4bdb998e6dc36aed9f4f40d513e7db82a640"
+    },
+    {
+      "path": "business_types/travel_agency.json",
+      "checksum": "sha256:34896efdba71afcd0330c2d2dbc26f68d717d8a0c43a155512a541afc87ff198"
+    },
+    {
+      "path": "business_types/vacation_rental.json",
+      "checksum": "sha256:f573604c6341174e60bf68c4c5cc1a703e7c152ec82757857f7e121fb9268e72"
+    },
+    {
+      "path": "business_types/vacation_rental_mgmt.json",
+      "checksum": "sha256:d95f160c1c01ac92ea7c3ed5be99ecd2d46722cc3bfe123e2cffe01b613cbea1"
+    },
+    {
       "path": "business_types/vet_clinic.json",
       "checksum": "sha256:1258cc1ecfa79c47eaf6e6f4435f181d73cb0efc74ef0dafaa9939726b0ec8e8"
+    },
+    {
+      "path": "business_types/warehouse.json",
+      "checksum": "sha256:bc9c0c9b0ba31aa6888a4b6b04a0a61031ccfea9c1ceea7a88134d70d4bd11d7"
     },
     {
       "path": "business_types/wholesale_distributor.json",
@@ -2078,7 +2258,23 @@
     },
     {
       "path": "i18n/es.json",
-      "checksum": "sha256:ae15eb02cfea7e8a4a1da93045f3725ed03b6d589e6495ab9b836722c20836fc"
+      "checksum": "sha256:c4e08ef775ed7a5a41217615dc5866221da56486613b6493d6f7ad561c19853d"
+    },
+    {
+      "path": "manifest.json",
+      "checksum": "sha256:22accaf27b57d1916906ad445eebeff92ad7cf14e53852397263baec2b1c2dd8"
+    },
+    {
+      "path": "products/es/accounting_firm.json",
+      "checksum": "sha256:c6b50a6241b04de272f331120dfbfeba0d7f24a228a24213cf5a3901311b3d3f"
+    },
+    {
+      "path": "products/es/assembly.json",
+      "checksum": "sha256:f2af855fd676f1ab400f2824c55ba73484fff4cb112adde85866cf0896c3dc46"
+    },
+    {
+      "path": "products/es/auto_services.json",
+      "checksum": "sha256:2495b3ad49e4b5be2834f95c3ff210db9a8eb900a87d63b851aba9b034d18539"
     },
     {
       "path": "products/es/bakery.json",
@@ -2105,12 +2301,76 @@
       "checksum": "sha256:7192913af858670688e88bc2dc57c81df4836806181bea836c363c70fe7607ff"
     },
     {
+      "path": "products/es/car_dealership.json",
+      "checksum": "sha256:3fb693af3b79a41a5b7ea22b6c88bdce6e33a7472663821c1aa8da0efe467750"
+    },
+    {
+      "path": "products/es/car_rental.json",
+      "checksum": "sha256:87ff7388a4bac1fafa55e1fe966aab6a282e0ddca1ad3ab80410bb384cdd4bd2"
+    },
+    {
+      "path": "products/es/car_repair.json",
+      "checksum": "sha256:25061d7fb61e3bbaa20eca99be050282f22e73d8b4699d0684d3e2ff2dee5aa2"
+    },
+    {
+      "path": "products/es/carpentry.json",
+      "checksum": "sha256:a2052801c11e6d78d4e666d92e8462c2bcb213c93e319cffd41dbaaac674fc92"
+    },
+    {
+      "path": "products/es/catering.json",
+      "checksum": "sha256:08a29ee6d9690f9580bb7c9672c7c0ab6542ee0bcd9770c0ee22ec0868aac7ed"
+    },
+    {
+      "path": "products/es/cleaning_company.json",
+      "checksum": "sha256:cff71a2d31f673470400af6b866d30dcc920ac2ed659ecf1a0566d2d1d7c688e"
+    },
+    {
+      "path": "products/es/clinic.json",
+      "checksum": "sha256:be10371752a7b28e2d4ce02a7be2bc98154b7d2071f50520297840b2b9788e9d"
+    },
+    {
+      "path": "products/es/construction_company.json",
+      "checksum": "sha256:39177d53f839623740d6e448f7c5afd10000266d35df1af3b81a9e813e1551a3"
+    },
+    {
+      "path": "products/es/consulting.json",
+      "checksum": "sha256:2b511e5b0f316d044d6bac6fcdd1b80cd50712fccad3cf7a5ee30ffa5ed5950a"
+    },
+    {
+      "path": "products/es/delivery_services.json",
+      "checksum": "sha256:8752c982503e3f88547a755da56ab5605cba804894a9fe0a35d5651ce53d542a"
+    },
+    {
+      "path": "products/es/dental_clinic.json",
+      "checksum": "sha256:0ebffb203392d023cc2296daddba3362d32a084ea7a795954375829ba4a8fd8d"
+    },
+    {
+      "path": "products/es/driving_school.json",
+      "checksum": "sha256:e6769943cad084900001d5c41bbc25068dfe8255b650516e14f2083dd4e986e0"
+    },
+    {
+      "path": "products/es/electronics_retail.json",
+      "checksum": "sha256:a13dcf72bfe34ca6d769bfe8f56bdff1ee91786e98e7c5779e38ea121d60eb5b"
+    },
+    {
+      "path": "products/es/fashion_retail.json",
+      "checksum": "sha256:0701da2602fd4889264dbdedc811fc6503574f62f3c71517644a91e4b24b21cc"
+    },
+    {
       "path": "products/es/fast_food.json",
       "checksum": "sha256:90389f014f8bc3f6e8cf8c6d58e2a748990fc056d34d6837d2b89d4c9cb18f52"
     },
     {
+      "path": "products/es/food_delivery.json",
+      "checksum": "sha256:5d687d753cb28197cdfa90c1caa7a2545803b59906275db0d1fb4b97dc41bb49"
+    },
+    {
       "path": "products/es/food_truck.json",
       "checksum": "sha256:d55781e55069a4e1e20c64753486532ad0cda2535de70f80ebb0a9bc579f0d7d"
+    },
+    {
+      "path": "products/es/food_workshop.json",
+      "checksum": "sha256:383afb4f9db14116fc0732804ff69cad9e31de7d9ddd39467e5f9828bccde2da"
     },
     {
       "path": "products/es/fruit_shop.json",
@@ -2125,16 +2385,72 @@
       "checksum": "sha256:24b412a63cbb5e1b57e119029f7294c219db6f05a5d2b5aa46d8c268700c2ef4"
     },
     {
+      "path": "products/es/home_services.json",
+      "checksum": "sha256:226d87649818bcdb2336b5898e382e03107a03e5efead352e37165faec07c69d"
+    },
+    {
+      "path": "products/es/hostel.json",
+      "checksum": "sha256:3e2b4afc5f9ab3727f52649ab75cda29fdca2da7e2d9eecd3fda9dc2274889d9"
+    },
+    {
+      "path": "products/es/hotel.json",
+      "checksum": "sha256:638288434371730139f53463625611ae3d9371a1f11466bf3af046a4aa99aae0"
+    },
+    {
       "path": "products/es/ice_cream_shop.json",
       "checksum": "sha256:3154b73874e511fe216962184d008548122ffee26f94d8b3979cc77183586295"
+    },
+    {
+      "path": "products/es/installer.json",
+      "checksum": "sha256:ede8311d637e6f5f923931119e1d5515015729e83946b5a38a9c5cbd757d10ae"
+    },
+    {
+      "path": "products/es/it_services.json",
+      "checksum": "sha256:e8d70a8fd0b82272938b93c14e5d019eff7b4078d75b8392d60fc25fac7cb4f4"
     },
     {
       "path": "products/es/kebab_shop.json",
       "checksum": "sha256:80aa1dc4159289124da3cbcacefccf31740e181c0fae30644f598bd0ec06804e"
     },
     {
+      "path": "products/es/law_firm.json",
+      "checksum": "sha256:d6f5fd22e03901bd705d77276057580b660c261fda1fdeab55b4894f3f832253"
+    },
+    {
+      "path": "products/es/logistics_company.json",
+      "checksum": "sha256:a20f4b1035adbcbc60afde6b9c3aabba4510ba4408c8f5478b694339255973f4"
+    },
+    {
+      "path": "products/es/maintenance_company.json",
+      "checksum": "sha256:ffb9d577a6e12468a496aa3b8491b2151f5b9b04f39efa5275bf65c34411718c"
+    },
+    {
+      "path": "products/es/manufacturing.json",
+      "checksum": "sha256:5262bed2bc3ad5f6241f86ace278e97d8d2abfca39293946533bd247a0bd3c79"
+    },
+    {
+      "path": "products/es/marketing_agency.json",
+      "checksum": "sha256:3bed53db07a8a4e64174d3f2504920d3ed8fc9aa59678faf7538cd77d43b48c1"
+    },
+    {
+      "path": "products/es/massage_therapy.json",
+      "checksum": "sha256:9c055fe31af7dbd616683d0d8fb4aa915aa0e31c1791e519b8533eb92a371e69"
+    },
+    {
+      "path": "products/es/medical_lab.json",
+      "checksum": "sha256:0056edbb89cfffd4cc67d7df9e8c20a1f030fce8340a97dd35e23b0b5f460041"
+    },
+    {
+      "path": "products/es/online_courses.json",
+      "checksum": "sha256:4425afd408f9273655d808b11b2a645c9b260e32801103c0698a404cd0c29b3c"
+    },
+    {
       "path": "products/es/pet_shop.json",
       "checksum": "sha256:73e02a21061a517950891e3e4acac16cc1554c5ffdeb39dcc8978b47cf1c12a1"
+    },
+    {
+      "path": "products/es/pharmacy.json",
+      "checksum": "sha256:a9fcb83a8b7b3cf8999a3c4802aa5473a7576ebe05cf6427d51d36301f084164"
     },
     {
       "path": "products/es/physiotherapy.json",
@@ -2145,16 +2461,36 @@
       "checksum": "sha256:8879a26204c371b96c6f294fc22ce2fe8748778b527f11e006fff1f12e4c5492"
     },
     {
+      "path": "products/es/property_management.json",
+      "checksum": "sha256:004021663d3465e9e78f852dc4fa3146fd556ea649032f23fa9f550da8b9f199"
+    },
+    {
+      "path": "products/es/psychology.json",
+      "checksum": "sha256:6fd213cfa12202b38dca01d6701dea48bdeb27d75ebdc13f21965e94a46a5b01"
+    },
+    {
       "path": "products/es/pub.json",
       "checksum": "sha256:52ecf85ce4bdca5730c72b48521a47adeb9cdf1b5abeec0d5d4ef56319b6a6ec"
+    },
+    {
+      "path": "products/es/real_estate_agency.json",
+      "checksum": "sha256:3cc815255cac8e39110a917faa5dce357a10a33fd6ececd85f2bd132271b7b36"
     },
     {
       "path": "products/es/restaurant.json",
       "checksum": "sha256:15649f4ebe38cf039eca7f4ca6434ce3e8f7534ac069ebd51394e8ae6b9442b8"
     },
     {
+      "path": "products/es/school.json",
+      "checksum": "sha256:1b074c6fba27b4ac201f3d7a3ba20a740b49cfd2b1d668832940ba17165d144f"
+    },
+    {
       "path": "products/es/spa.json",
       "checksum": "sha256:116efd07354d1b0186d95f0ebf418714a4b157577e877e23b3eb2f6ee274c398"
+    },
+    {
+      "path": "products/es/supermarket.json",
+      "checksum": "sha256:a6193d3133b805852b9dde79dbd4c078c32e2b52149799dcbd09327f2d553141"
     },
     {
       "path": "products/es/sushi_restaurant.json",
@@ -2169,8 +2505,36 @@
       "checksum": "sha256:2118feb4b8a174e8ba4006405309a9aec2dbfc66a4e6e21080bae89df1471fea"
     },
     {
+      "path": "products/es/tour_operator.json",
+      "checksum": "sha256:987d9e4baa177eec918db2b5167c9143b2fb4c89b73bac3b2b8d8d0c021e4f0f"
+    },
+    {
+      "path": "products/es/training_center.json",
+      "checksum": "sha256:77fded1631bfcc73884f847f16d6a0a643d380a18ac7af0e403949c79913baf0"
+    },
+    {
+      "path": "products/es/transport_company.json",
+      "checksum": "sha256:951c2e2cc7c1f71f5f3034cb3ac47f42851096c84698e68039accf689b6dc811"
+    },
+    {
+      "path": "products/es/travel_agency.json",
+      "checksum": "sha256:f793fbd44414e70d69026b55659e7a9bf2a579f604f44e08c095c5dfb6b4d741"
+    },
+    {
+      "path": "products/es/vacation_rental.json",
+      "checksum": "sha256:f4bc27692190a89e8ee15f6c878f1454e817ad2b1382bcb2070c431b309b8c21"
+    },
+    {
+      "path": "products/es/vacation_rental_mgmt.json",
+      "checksum": "sha256:e5487df0b4321c93731d7fd04ceddba3a40fac898fccbe5839bd064acc4b9b53"
+    },
+    {
       "path": "products/es/vet_clinic.json",
       "checksum": "sha256:502218a434d9997024a0187af20edafd895a8050598955c2c1afed6a8a8112a7"
+    },
+    {
+      "path": "products/es/warehouse.json",
+      "checksum": "sha256:15f55dd98bd082603f9820a9a690cf22dec9dd01e69de4049af0e1e743d2aaa2"
     },
     {
       "path": "products/es/wholesale_distributor.json",

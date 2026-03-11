@@ -1,0 +1,44 @@
+{
+  "code": "assembly",
+  "sector": "manufacturing",
+  "name": "Assembly Line",
+  "description": "Assembly line operation with multi-level BOM, work orders, serial number tracking, quality inspections, and production scheduling",
+  "icon": "layers-outline",
+  "color": "#455a64",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "essential",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "recommended",
+    "BI": "essential"
+  },
+  "extra_modules": ["manufacturing", "quality", "inventory", "warehouse", "purchase_orders"],
+  "sector_features": [
+    "Multi-level BOM",
+    "Work orders",
+    "Serial number tracking",
+    "Quality inspections",
+    "Production scheduling"
+  ],
+  "roles": [
+    {
+      "id": "production_manager",
+      "name": "Production Manager",
+      "permissions": ["manufacturing.*", "quality.*", "inventory.*"]
+    },
+    {
+      "id": "warehouse_worker",
+      "name": "Warehouse Worker",
+      "permissions": ["inventory.*", "warehouse.*"]
+    }
+  ],
+  "products_file": "products/assembly.json"
+}

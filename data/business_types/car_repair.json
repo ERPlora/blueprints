@@ -1,0 +1,44 @@
+{
+  "code": "car_repair",
+  "sector": "automotive",
+  "name": "Car Repair / Garage",
+  "description": "Car repair garage with vehicle records, repair orders, parts inventory, ITV reminders, and customer notification",
+  "icon": "car-outline",
+  "color": "#37474f",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["maintenance", "inventory", "invoicing", "customers", "sales", "purchase_orders"],
+  "sector_features": [
+    "Vehicle records",
+    "Repair orders",
+    "Parts inventory",
+    "ITV / inspection reminders",
+    "Customer notifications"
+  ],
+  "roles": [
+    {
+      "id": "mechanic",
+      "name": "Mechanic",
+      "permissions": ["maintenance.*", "inventory.view_*", "tasks.*"]
+    },
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": ["customers.*", "sales.*", "cash_register.*", "maintenance.view_*"]
+    }
+  ],
+  "products_file": "products/car_repair.json"
+}

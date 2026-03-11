@@ -1,0 +1,44 @@
+{
+  "code": "marketing_agency",
+  "sector": "professional_services",
+  "name": "Marketing Agency",
+  "description": "Marketing or advertising agency with creative project management, briefings, timesheet, freelancer management, and client reporting",
+  "icon": "megaphone-outline",
+  "color": "#ff6b35",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": ["projects", "tasks", "time_control", "invoicing", "customers", "campaigns"],
+  "sector_features": [
+    "Creative project management",
+    "Briefings",
+    "Timesheet",
+    "Freelancer management",
+    "Client reporting"
+  ],
+  "roles": [
+    {
+      "id": "account_manager",
+      "name": "Account Manager",
+      "permissions": ["projects.*", "customers.*", "tasks.*", "campaigns.view_*"]
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "permissions": ["projects.view_*", "tasks.*", "time_control.*"]
+    }
+  ],
+  "products_file": "products/marketing_agency.json"
+}

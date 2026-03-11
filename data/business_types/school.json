@@ -1,0 +1,44 @@
+{
+  "code": "school",
+  "sector": "education",
+  "name": "School / Academy",
+  "description": "School or academy with student enrollment, class schedules, teacher management, attendance tracking, and parent portal",
+  "icon": "school-outline",
+  "color": "#1a237e",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["student_mgmt", "course_mgmt", "schedules", "attendance", "invoicing", "online_payments"],
+  "sector_features": [
+    "Student enrollment",
+    "Class schedules",
+    "Teacher management",
+    "Attendance tracking",
+    "Parent portal"
+  ],
+  "roles": [
+    {
+      "id": "teacher",
+      "name": "Teacher",
+      "permissions": ["course_mgmt.view_*", "student_mgmt.view_*", "attendance.*", "schedules.view_*"]
+    },
+    {
+      "id": "admin",
+      "name": "Admin",
+      "permissions": ["student_mgmt.*", "course_mgmt.*", "schedules.*", "invoicing.*", "attendance.*"]
+    }
+  ],
+  "products_file": "products/school.json"
+}

@@ -1,0 +1,39 @@
+{
+  "code": "vacation_rental",
+  "sector": "hotels_tourism",
+  "name": "Vacation Rental",
+  "description": "Vacation rental property with availability calendar, channel manager, cleaning coordination, owner reporting, and guest communications",
+  "icon": "key-outline",
+  "color": "#4a148c",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "recommended",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["reservations", "customers", "online_booking", "online_payments", "invoicing"],
+  "sector_features": [
+    "Availability calendar",
+    "Channel manager",
+    "Cleaning coordination",
+    "Owner reporting",
+    "Guest communications"
+  ],
+  "roles": [
+    {
+      "id": "property_manager",
+      "name": "Property Manager",
+      "permissions": ["reservations.*", "customers.*", "invoicing.*", "tasks.*"]
+    }
+  ],
+  "products_file": "products/vacation_rental.json"
+}

@@ -1,52 +1,52 @@
 {
   "sectors": {
     "hospitality": {
-      "name": "Hosteleria y Restauracion",
-      "description": "Bares, restaurantes, cafeterias, hoteles, catering, discotecas"
+      "name": "Hosteleria y Alimentacion",
+      "description": "Restaurantes, bares, cafeterias, comida rapida, food trucks, catering"
     },
     "retail": {
       "name": "Comercio / Retail",
-      "description": "Ropa, supermercados, tiendas especializadas, mayoristas"
+      "description": "Supermercados, moda, electronica, farmacia, mayoristas"
     },
     "personal_services": {
       "name": "Servicios Personales y Bienestar",
-      "description": "Peluquerias, clinicas, gimnasios, centros de belleza, terapias"
+      "description": "Peluquerias, barberas, spas, gimnasios, masajes"
     },
-    "professional_services": {
-      "name": "Servicios Profesionales",
-      "description": "Consultorias, despachos, inmobiliarias, agencias"
+    "hotels_tourism": {
+      "name": "Hoteles y Turismo",
+      "description": "Hoteles, hostales, apartamentos turisticos, operadores turisticos, agencias de viaje"
     },
-    "education": {
-      "name": "Educacion y Formacion",
-      "description": "Academias, autoescuelas, guarderias, escuelas de idiomas"
+    "healthcare": {
+      "name": "Salud y Clinicas",
+      "description": "Clinicas, dentistas, fisioterapia, psicologia, laboratorios"
     },
     "construction": {
-      "name": "Construccion e Instalaciones",
-      "description": "Constructoras, reformas, instaladores, energia solar"
+      "name": "Construccion y Servicios",
+      "description": "Constructoras, reformas, mantenimiento, instaladores, limpieza"
     },
     "manufacturing": {
       "name": "Manufactura e Industria",
-      "description": "Fabricas, talleres, bodegas, procesado de alimentos"
+      "description": "Fabricas, obradores artesanos, lineas de montaje, talleres"
     },
-    "agriculture": {
-      "name": "Agricultura y Sector Primario",
-      "description": "Explotaciones, cooperativas, viveros, ganaderia, apicultura"
+    "logistics": {
+      "name": "Logistica y Transporte",
+      "description": "Logistica, transporte, mensajeria, almacenamiento"
     },
-    "entertainment": {
-      "name": "Ocio y Entretenimiento",
-      "description": "Escape rooms, recreativos, clubs deportivos, cines, parques tematicos"
+    "professional_services": {
+      "name": "Servicios Profesionales",
+      "description": "Consultorias, asesorias, despachos, agencias, IT"
     },
-    "media": {
-      "name": "Media / Produccion / Creativos",
-      "description": "Fotografia, produccion video, estudios grabacion, editoriales, galerias de arte"
+    "education": {
+      "name": "Educacion y Formacion",
+      "description": "Escuelas, centros de formacion, cursos online, autoescuelas"
     },
-    "rental": {
-      "name": "Alquiler y Rental",
-      "description": "Maquinaria, equipos eventos, trasteros, embarcaciones, bicicletas, disfraces"
+    "real_estate": {
+      "name": "Inmobiliaria",
+      "description": "Inmobiliarias, administracion de fincas, gestion de alquileres"
     },
-    "coworking": {
-      "name": "Espacios y Coworking",
-      "description": "Espacios de coworking, centros de negocios, estudios compartidos"
+    "automotive": {
+      "name": "Automocion",
+      "description": "Talleres, concesionarios, alquiler de vehiculos, ITV, lavaderos"
     }
   },
   "types": {
@@ -782,6 +782,369 @@
         "Integracion con delivery",
         "Horario nocturno",
         "Menus combo"
+      ]
+    },
+    "food_delivery": {
+      "name": "Delivery / Dark Kitchen",
+      "description": "Cocina fantasma o servicio de comida a domicilio con pedidos online, rutas de entrega e integracion multi-plataforma",
+      "sector_features": [
+        "Pedidos online",
+        "Optimizacion rutas",
+        "Integracion plataformas",
+        "Cocina fantasma",
+        "Seguimiento en tiempo real"
+      ]
+    },
+    "supermarket": {
+      "name": "Supermercado / Alimentacion",
+      "description": "Supermercado o tienda de alimentacion con gran catalogo, lectura de codigos de barras, balanza, control de caducidad y fidelizacion",
+      "sector_features": [
+        "Escaner codigo barras",
+        "Integracion balanza",
+        "Control caducidad",
+        "Fidelizacion",
+        "Precios por volumen"
+      ]
+    },
+    "fashion_retail": {
+      "name": "Moda / Tienda de Ropa",
+      "description": "Tienda de moda con variantes talla/color, temporadas/colecciones, rebajas masivas y fidelizacion",
+      "sector_features": [
+        "Variantes talla/color",
+        "Temporadas/colecciones",
+        "Rebajas masivas",
+        "Fidelizacion",
+        "Integracion ecommerce"
+      ]
+    },
+    "electronics_retail": {
+      "name": "Electronica / Informatica",
+      "description": "Tienda de electronica o informatica con numero de serie, garantias, servicio tecnico, trade-in y financiacion",
+      "sector_features": [
+        "Numero de serie",
+        "Gestion garantias",
+        "Servicio tecnico",
+        "Trade-in",
+        "Financiacion"
+      ]
+    },
+    "pharmacy": {
+      "name": "Farmacia / Parafarmacia",
+      "description": "Farmacia o parafarmacia con trazabilidad lotes, control caducidad, ficha paciente, fidelizacion y cumplimiento normativo",
+      "sector_features": [
+        "Trazabilidad lotes",
+        "Control caducidad",
+        "Ficha paciente",
+        "Fidelizacion",
+        "Cumplimiento normativo"
+      ]
+    },
+    "massage_therapy": {
+      "name": "Masajes / Terapias",
+      "description": "Centro de masajes o terapias con agenda de citas, gestion de terapeutas, bonos de sesiones e historial del cliente",
+      "sector_features": [
+        "Agenda de citas",
+        "Bonos sesiones",
+        "Historial cliente",
+        "Gestion terapeutas",
+        "Reserva online"
+      ]
+    },
+    "hotel": {
+      "name": "Hotel",
+      "description": "Hotel con gestion de habitaciones, reservas, check-in/out, housekeeping, restaurante y facturacion",
+      "sector_features": [
+        "Gestion habitaciones",
+        "Check-in/out",
+        "Housekeeping",
+        "Integracion channel manager",
+        "TPV restaurante"
+      ]
+    },
+    "hostel": {
+      "name": "Hostel / Albergue",
+      "description": "Hostel con camas en dormitorio y habitaciones privadas, reserva online, instalaciones compartidas y precio economico",
+      "sector_features": [
+        "Gestion camas dormitorio",
+        "Habitaciones privadas",
+        "Reserva online",
+        "Instalaciones compartidas",
+        "Precio economico"
+      ]
+    },
+    "vacation_rental": {
+      "name": "Apartamento Turistico",
+      "description": "Apartamento turistico con calendario de disponibilidad, channel manager, coordinacion limpieza, informe propietario y comunicacion con huespedes",
+      "sector_features": [
+        "Calendario disponibilidad",
+        "Channel manager",
+        "Coordinacion limpieza",
+        "Informe propietario",
+        "Comunicacion huespedes"
+      ]
+    },
+    "tour_operator": {
+      "name": "Operador Turistico",
+      "description": "Operador turistico con catalogo de actividades, reservas grupales, gestion de guias, coordinacion transporte y multiidioma",
+      "sector_features": [
+        "Catalogo actividades",
+        "Reservas grupales",
+        "Gestion guias",
+        "Coordinacion transporte",
+        "Reserva online"
+      ]
+    },
+    "travel_agency": {
+      "name": "Agencia de Viajes",
+      "description": "Agencia de viajes con gestion de paquetes, reservas proveedor, itinerarios cliente, gestion comisiones y ventas online",
+      "sector_features": [
+        "Gestion paquetes",
+        "Reservas proveedor",
+        "Itinerarios cliente",
+        "Gestion comisiones",
+        "Ventas online"
+      ]
+    },
+    "clinic": {
+      "name": "Clinica / Centro Medico",
+      "description": "Clinica medica con historial clinico, agenda de citas, gestion de medicos, recetas y facturacion aseguradora",
+      "sector_features": [
+        "Historial clinico (EHR)",
+        "Agenda de citas",
+        "Gestion medicos",
+        "Seguimiento recetas",
+        "Facturacion aseguradora"
+      ]
+    },
+    "dental_clinic": {
+      "name": "Clinica Dental",
+      "description": "Clinica dental con odontograma, planes de tratamiento, agenda de citas, consentimientos y facturacion aseguradora",
+      "sector_features": [
+        "Odontograma",
+        "Planes de tratamiento",
+        "Consentimientos",
+        "Agenda de citas",
+        "Facturacion aseguradora"
+      ]
+    },
+    "medical_lab": {
+      "name": "Laboratorio Clinico",
+      "description": "Laboratorio clinico con seguimiento de muestras, catalogo de pruebas, informe de resultados, notificaciones y facturacion",
+      "sector_features": [
+        "Seguimiento muestras",
+        "Catalogo pruebas",
+        "Informe resultados",
+        "Notificaciones paciente",
+        "Facturacion aseguradora"
+      ]
+    },
+    "home_services": {
+      "name": "Servicios del Hogar",
+      "description": "Empresa de servicios del hogar (fontaneria, electricidad, pintura) con partes de trabajo, tecnicos en campo, stock movil y agenda",
+      "sector_features": [
+        "Partes de trabajo",
+        "Tecnicos campo",
+        "Stock movil",
+        "Agenda cliente",
+        "Facturacion en campo"
+      ]
+    },
+    "assembly": {
+      "name": "Linea de Montaje",
+      "description": "Linea de montaje con BOM multi-nivel, ordenes de trabajo, trazabilidad por numero de serie, inspecciones de calidad y planificacion",
+      "sector_features": [
+        "BOM multi-nivel",
+        "Ordenes de trabajo",
+        "N. serie trazabilidad",
+        "Inspecciones calidad",
+        "Planificacion produccion"
+      ]
+    },
+    "logistics_company": {
+      "name": "Empresa Logistica",
+      "description": "Empresa de logistica y distribucion con seguimiento de envios, optimizacion de rutas, gestion de flota, almacen y facturacion",
+      "sector_features": [
+        "Seguimiento envios",
+        "Optimizacion rutas",
+        "Gestion flota",
+        "Operaciones almacen",
+        "Facturacion clientes"
+      ]
+    },
+    "transport_company": {
+      "name": "Empresa de Transporte",
+      "description": "Empresa de transporte con gestion de flota, asignacion de conductores, planificacion de rutas, control de combustible y facturacion",
+      "sector_features": [
+        "Gestion flota",
+        "Asignacion conductores",
+        "Planificacion rutas",
+        "Control combustible",
+        "Facturacion"
+      ]
+    },
+    "delivery_services": {
+      "name": "Mensajeria / Ultima Milla",
+      "description": "Servicio de mensajeria de ultima milla con seguimiento de pedidos, gestion de repartidores, confirmacion de entrega y devolucion",
+      "sector_features": [
+        "Seguimiento pedidos",
+        "Gestion repartidores",
+        "Confirmacion entrega",
+        "Gestion devoluciones",
+        "Portal cliente"
+      ]
+    },
+    "warehouse": {
+      "name": "Almacen / Logistica",
+      "description": "Almacen con gestion de ubicaciones, control de stock, operaciones de entrada/salida, trazabilidad y facturacion a clientes",
+      "sector_features": [
+        "Gestion ubicaciones",
+        "Control stock",
+        "Entrada/salida",
+        "Facturacion clientes",
+        "Trazabilidad"
+      ]
+    },
+    "accounting_firm": {
+      "name": "Asesoria Fiscal / Contable",
+      "description": "Asesoria fiscal y contable con calendario fiscal, gestion multi-cliente, portal cliente, gestion documental y cumplimiento normativo",
+      "sector_features": [
+        "Calendario fiscal",
+        "Multi-cliente",
+        "Portal cliente",
+        "Gestion documental",
+        "Cumplimiento normativo"
+      ]
+    },
+    "marketing_agency": {
+      "name": "Agencia de Marketing",
+      "description": "Agencia de marketing o publicidad con gestion de proyectos creativos, briefings, control horario, freelancers e informes a clientes",
+      "sector_features": [
+        "Proyectos creativos",
+        "Briefings",
+        "Control horario",
+        "Freelancers",
+        "Informes cliente"
+      ]
+    },
+    "it_services": {
+      "name": "Servicios IT",
+      "description": "Empresa de servicios IT con helpdesk, contratos SLA, gestion de proyectos, seguimiento licencias y facturacion recurrente",
+      "sector_features": [
+        "Helpdesk tickets",
+        "Contratos SLA",
+        "Gestion proyectos",
+        "Seguimiento licencias",
+        "Facturacion recurrente"
+      ]
+    },
+    "school": {
+      "name": "Colegio / Academia",
+      "description": "Colegio o academia con matriculacion de alumnos, horarios de clases, gestion de profesores, control asistencia y portal padres",
+      "sector_features": [
+        "Matriculacion alumnos",
+        "Horarios clases",
+        "Gestion profesores",
+        "Control asistencia",
+        "Portal padres"
+      ]
+    },
+    "training_center": {
+      "name": "Centro de Formacion",
+      "description": "Centro de formacion con catalogo de cursos, matriculacion, certificaciones, modalidad mixta y facturacion a empresas",
+      "sector_features": [
+        "Catalogo cursos",
+        "Matriculacion",
+        "Certificaciones",
+        "Formacion mixta",
+        "Facturacion empresas"
+      ]
+    },
+    "online_courses": {
+      "name": "Cursos Online / eLearning",
+      "description": "Plataforma de cursos online con creacion de cursos, gestion de alumnos, suscripciones, certificaciones y sesiones en directo",
+      "sector_features": [
+        "Creacion cursos",
+        "Gestion alumnos",
+        "Suscripciones",
+        "Certificaciones",
+        "Sesiones en directo"
+      ]
+    },
+    "real_estate_agency": {
+      "name": "Agencia Inmobiliaria",
+      "description": "Agencia inmobiliaria con catalogo de propiedades, matching de clientes, agenda de visitas, gestion de contratos y comisiones",
+      "sector_features": [
+        "Catalogo propiedades",
+        "Matching clientes",
+        "Agenda visitas",
+        "Gestion contratos",
+        "Seguimiento comisiones"
+      ]
+    },
+    "property_management": {
+      "name": "Administracion de Fincas",
+      "description": "Administracion de fincas con gestion de inquilinos, cobro de alquileres, seguimiento de incidencias, informe propietario y contratos",
+      "sector_features": [
+        "Gestion inquilinos",
+        "Cobro alquileres",
+        "Incidencias",
+        "Informe propietario",
+        "Gestion contratos"
+      ]
+    },
+    "vacation_rental_mgmt": {
+      "name": "Gestion Apartamentos Turisticos",
+      "description": "Empresa de gestion de apartamentos turisticos con multi-propiedad, channel manager, coordinacion limpieza y liquidacion propietarios",
+      "sector_features": [
+        "Multi-propiedad",
+        "Channel manager",
+        "Coordinacion limpieza",
+        "Liquidacion propietarios",
+        "Servicios al huesped"
+      ]
+    },
+    "car_repair": {
+      "name": "Taller Mecanico",
+      "description": "Taller mecanico con ficha de vehiculo, ordenes de reparacion, inventario de recambios, recordatorio ITV y notificaciones al cliente",
+      "sector_features": [
+        "Ficha vehiculo",
+        "Ordenes reparacion",
+        "Inventario recambios",
+        "Recordatorio ITV",
+        "Notificaciones cliente"
+      ]
+    },
+    "car_dealership": {
+      "name": "Concesionario",
+      "description": "Concesionario con inventario de vehiculos, gestion de financiacion, pruebas de conduccion, vehiculos de intercambio e informes fabricante",
+      "sector_features": [
+        "Inventario vehiculos",
+        "Gestion financiacion",
+        "Prueba de conduccion",
+        "Vehiculo de intercambio",
+        "Informes fabricante"
+      ]
+    },
+    "car_rental": {
+      "name": "Alquiler de Vehiculos",
+      "description": "Empresa de alquiler de vehiculos con gestion de flota, sistema de reservas, seguimiento de danios, seguros y reserva online",
+      "sector_features": [
+        "Gestion flota",
+        "Sistema reservas",
+        "Seguimiento danios",
+        "Gestion seguros",
+        "Reserva online"
+      ]
+    },
+    "auto_services": {
+      "name": "Servicios de Automocion (ITV, Neumaticos, Lavado)",
+      "description": "Centro de servicios de automocion para inspecciones, cambio de neumaticos, lavado de coches con citas y flujo de trabajo rapido",
+      "sector_features": [
+        "Agenda de citas",
+        "Historial vehiculo",
+        "Flujo servicio rapido",
+        "Inventario recambios",
+        "Notificaciones cliente"
       ]
     }
   },

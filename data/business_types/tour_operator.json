@@ -1,0 +1,44 @@
+{
+  "code": "tour_operator",
+  "sector": "hotels_tourism",
+  "name": "Tour Operator",
+  "description": "Tour operator with activity catalog, group bookings, guides management, transport coordination, and multi-language support",
+  "icon": "map-outline",
+  "color": "#880e4f",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "recommended",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "recommended",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["reservations", "customers", "online_booking", "online_payments", "quotes", "invoicing"],
+  "sector_features": [
+    "Activity catalog",
+    "Group bookings",
+    "Guide management",
+    "Transport coordination",
+    "Online booking"
+  ],
+  "roles": [
+    {
+      "id": "sales_rep",
+      "name": "Sales Representative",
+      "permissions": ["quotes.*", "customers.*", "reservations.*", "invoicing.view_*"]
+    },
+    {
+      "id": "guide",
+      "name": "Tour Guide",
+      "permissions": ["reservations.view_*", "customers.view_*", "tasks.*"]
+    }
+  ],
+  "products_file": "products/tour_operator.json"
+}

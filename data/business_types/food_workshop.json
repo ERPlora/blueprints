@@ -1,0 +1,44 @@
+{
+  "code": "food_workshop",
+  "sector": "manufacturing",
+  "name": "Food Workshop / Artisan",
+  "description": "Artisan food production workshop with recipes BOM, production orders, quality control, lot traceability, and B2B distribution",
+  "icon": "nutrition-outline",
+  "color": "#6d4c41",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "recommended",
+    "VEN": "essential",
+    "CRM": "recommended",
+    "ECO": "recommended",
+    "PRO": "essential",
+    "LOG": "recommended",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["manufacturing", "inventory", "quality", "invoicing", "purchase_orders"],
+  "sector_features": [
+    "Recipes BOM",
+    "Production orders",
+    "Quality control",
+    "Lot traceability",
+    "B2B distribution routes"
+  ],
+  "roles": [
+    {
+      "id": "production_manager",
+      "name": "Production Manager",
+      "permissions": ["manufacturing.*", "quality.*", "inventory.*"]
+    },
+    {
+      "id": "delivery_driver",
+      "name": "Delivery Driver",
+      "permissions": ["orders.view_*", "shipping.*"]
+    }
+  ],
+  "products_file": "products/food_workshop.json"
+}

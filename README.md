@@ -8,44 +8,112 @@ For business types not covered by blueprints, the AI assistant dynamically selec
 
 ---
 
-## 25 Business Types across 3 Sectors
+## 57 Business Types across 12 Sectors
 
-### Hospitality & Restaurants (13)
+### 🍽️ Hospitality & Food (6)
 | Code | Name |
 |------|------|
-| `bakery` | Bakery / Pastry Shop |
-| `bar` | Bar |
-| `cafeteria` | Cafeteria |
-| `fast_food` | Fast Food |
-| `food_truck` | Food Truck |
-| `ice_cream_shop` | Ice Cream Shop |
-| `kebab_shop` | Kebab Shop |
-| `pizzeria` | Pizzeria |
-| `pub` | Pub |
+| `hospitality` | Hospitality (generic) |
 | `restaurant` | Restaurant |
-| `sushi_restaurant` | Sushi Restaurant |
-| `tapas_bar` | Tapas Bar |
+| `bar_cafe` | Bar / Café |
+| `fast_food` | Fast Food |
+| `food_delivery` | Food Delivery |
+| `catering` | Catering |
 
-### Personal Services & Wellness (8)
+### 🛍️ Retail & Commerce (6)
 | Code | Name |
 |------|------|
-| `barber_shop` | Barbershop |
-| `beauty_center` | Beauty Center |
-| `gym` | Gym / Sports Center |
-| `hair_salon` | Hair Salon |
+| `retail` | Retail (generic) |
+| `supermarket` | Supermarket |
+| `fashion_retail` | Fashion Retail |
+| `electronics_retail` | Electronics Retail |
+| `pharmacy_retail` | Pharmacy |
+| `wholesale` | Wholesale |
+
+### 💇 Personal Services & Wellness (6)
+| Code | Name |
+|------|------|
+| `beauty_salon` | Beauty Salon |
+| `barbershop` | Barbershop |
+| `spa_wellness` | Spa & Wellness |
+| `massage_therapy` | Massage Therapy |
+| `fitness_gym` | Fitness Gym |
+| `personal_services` | Personal Services (generic) |
+
+### 🏨 Hotels & Tourism (5)
+| Code | Name |
+|------|------|
+| `hotel` | Hotel |
+| `hostel` | Hostel |
+| `vacation_rental` | Vacation Rental |
+| `tour_operator` | Tour Operator |
+| `travel_agency` | Travel Agency |
+
+### 🏥 Healthcare (5)
+| Code | Name |
+|------|------|
+| `clinic` | Clinic |
+| `dental_clinic` | Dental Clinic |
 | `physiotherapy` | Physiotherapy |
-| `spa` | Spa / Massage |
-| `tattoo_studio` | Tattoo / Piercing |
-| `vet_clinic` | Veterinary Clinic |
+| `psychology` | Psychology |
+| `medical_lab` | Medical Lab |
 
-### Retail & Commerce (5)
+### 🏗️ Construction & Field Services (5)
 | Code | Name |
 |------|------|
-| `butcher_shop` | Butcher Shop |
-| `fruit_shop` | Fruit & Vegetable Shop |
-| `pet_shop` | Pet Store |
-| `tobacco_shop` | Tobacconist |
-| `wholesale_distributor` | Wholesale Distributor |
+| `construction` | Construction |
+| `home_services` | Home Services |
+| `maintenance_services` | Maintenance Services |
+| `contractors` | Contractors |
+| `field_service` | Field Service |
+
+### 🏭 Manufacturing & Industry (4)
+| Code | Name |
+|------|------|
+| `manufacturing` | Manufacturing (generic) |
+| `factory` | Factory |
+| `industrial_production` | Industrial Production |
+| `assembly` | Assembly |
+
+### 🚚 Logistics & Transportation (4)
+| Code | Name |
+|------|------|
+| `logistics` | Logistics |
+| `transportation` | Transportation |
+| `delivery_services` | Delivery Services |
+| `warehousing` | Warehousing |
+
+### 🏢 Professional Services (5)
+| Code | Name |
+|------|------|
+| `consulting` | Consulting |
+| `accounting_firm` | Accounting Firm |
+| `legal_services` | Legal Services |
+| `marketing_agency` | Marketing Agency |
+| `it_services` | IT Services |
+
+### 🎓 Education (4)
+| Code | Name |
+|------|------|
+| `education` | Education (generic) |
+| `school` | School |
+| `training_center` | Training Center |
+| `online_courses` | Online Courses |
+
+### 🏡 Real Estate (3)
+| Code | Name |
+|------|------|
+| `real_estate` | Real Estate (generic) |
+| `property_management` | Property Management |
+| `real_estate_agency` | Real Estate Agency |
+
+### 🚗 Automotive (4)
+| Code | Name |
+|------|------|
+| `car_repair` | Car Repair |
+| `car_dealership` | Car Dealership |
+| `car_rental` | Car Rental |
+| `auto_services` | Auto Services |
 
 ---
 
@@ -58,11 +126,11 @@ blueprints/
 │   ├── functional_units.schema.json
 │   └── products.schema.json
 ├── data/
-│   ├── business_sectors.json        # 3 sector definitions
+│   ├── business_sectors.json        # 12 sector definitions
 │   ├── business_types/
-│   │   ├── index.json               # Master index (25 types)
+│   │   ├── index.json               # Master index (57 types)
 │   │   ├── restaurant.json          # Flat: one JSON per type
-│   │   ├── bar.json
+│   │   ├── bar_cafe.json
 │   │   └── ...
 │   ├── compliance.json              # Country compliance modules
 │   ├── functional_units.json        # 12 UFO functional units
@@ -70,12 +138,12 @@ blueprints/
 │   ├── products/
 │   │   └── es/                      # Product catalogs (Spanish)
 │   ├── assets/                      # Product/service images (WebP 512x512)
-│   │   ├── hospitality/             # 284 images
-│   │   ├── beauty_hair/             # 42 images
-│   │   ├── beauty_body/             # 35 images
-│   │   ├── wellness_spa/            # 18 images
-│   │   ├── fitness/                 # 20 images
-│   │   └── retail/                  # 90 images
+│   │   ├── hospitality/             # Food & beverage images
+│   │   ├── beauty_hair/             # Hair salon images
+│   │   ├── beauty_body/             # Beauty body images
+│   │   ├── wellness_spa/            # Spa & wellness images
+│   │   ├── fitness/                 # Fitness images
+│   │   └── retail/                  # Retail images
 │   ├── i18n/
 │   │   └── es.json                  # Spanish translations
 │   └── manifest.json                # File inventory with SHA256
@@ -90,8 +158,8 @@ Each business type JSON file contains:
 
 | Field | Description |
 |-------|-------------|
-| `code` | Unique identifier (`bar`, `hair_salon`, etc.) |
-| `sector` | Parent sector (`hospitality`, `retail`, `personal_services`) |
+| `code` | Unique identifier (`bar_cafe`, `fitness_gym`, etc.) |
+| `sector` | Parent sector (`hospitality`, `retail`, `personal_services`, etc.) |
 | `name` | Display name |
 | `description` | Short description |
 | `icon` | Ionicon name |
@@ -137,16 +205,11 @@ Each business type marks every unit as `essential`, `recommended`, or `na`.
 }
 ```
 
-During Setup Wizard:
-- **Step 1 (Region)** → sets `country_code` → loads compliance requirements
-- **Step 2 (Modules)** → compliance modules shown pre-checked (required = locked)
-- **Step 4 (Tax)** → tax preset loaded from compliance country config
-
 Countries with full module coverage: **ES** (Spain).
 
 ## AI Fallback for Unknown Types
 
-When a business type doesn't match any blueprint (e.g., "coworking space", "auto repair shop"), the AI assistant:
+When a business type doesn't match any blueprint, the AI assistant:
 1. Fetches the full module catalog with `functional_unit`, `sector`, and `business_types` metadata
 2. Selects relevant modules based on the business description
 3. Installs them directly — no blueprint needed

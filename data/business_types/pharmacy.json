@@ -1,0 +1,44 @@
+{
+  "code": "pharmacy",
+  "sector": "retail",
+  "name": "Pharmacy / Parapharmacy",
+  "description": "Pharmacy or parapharmacy with controlled substance tracking, batch/lot control, expiry dates, patient records, and compliance",
+  "icon": "medkit-outline",
+  "color": "#2e7d32",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["inventory", "sales", "cash_register", "customers", "tax"],
+  "sector_features": [
+    "Batch / lot tracking",
+    "Expiry date control",
+    "Patient records",
+    "Loyalty programs",
+    "Regulatory compliance"
+  ],
+  "roles": [
+    {
+      "id": "pharmacist",
+      "name": "Pharmacist",
+      "permissions": ["sales.*", "cash_register.*", "inventory.*", "customers.*"]
+    },
+    {
+      "id": "sales_assistant",
+      "name": "Sales Assistant",
+      "permissions": ["sales.*", "cash_register.*"]
+    }
+  ],
+  "products_file": "products/pharmacy.json"
+}

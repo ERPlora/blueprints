@@ -1,0 +1,44 @@
+{
+  "code": "training_center",
+  "sector": "education",
+  "name": "Training Center",
+  "description": "Training or vocational center with course catalog, student enrollment, certifications, blended learning, and company billing",
+  "icon": "book-outline",
+  "color": "#311b92",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["course_mgmt", "student_mgmt", "schedules", "invoicing", "online_payments", "online_booking"],
+  "sector_features": [
+    "Course catalog",
+    "Student enrollment",
+    "Certifications",
+    "Blended learning",
+    "Company billing"
+  ],
+  "roles": [
+    {
+      "id": "instructor",
+      "name": "Instructor",
+      "permissions": ["course_mgmt.view_*", "student_mgmt.view_*", "attendance.*"]
+    },
+    {
+      "id": "admin",
+      "name": "Admin",
+      "permissions": ["student_mgmt.*", "course_mgmt.*", "schedules.*", "invoicing.*"]
+    }
+  ],
+  "products_file": "products/training_center.json"
+}

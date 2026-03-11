@@ -1,0 +1,44 @@
+{
+  "code": "car_rental",
+  "sector": "automotive",
+  "name": "Car Rental",
+  "description": "Car rental company with fleet management, reservation system, damage tracking, insurance management, and online booking",
+  "icon": "key-outline",
+  "color": "#e65100",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "recommended",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["fleet", "reservations", "customers", "invoicing", "online_booking", "online_payments"],
+  "sector_features": [
+    "Fleet management",
+    "Reservation system",
+    "Damage tracking",
+    "Insurance management",
+    "Online booking"
+  ],
+  "roles": [
+    {
+      "id": "agent",
+      "name": "Rental Agent",
+      "permissions": ["reservations.*", "customers.*", "sales.*", "cash_register.*", "fleet.view_*"]
+    },
+    {
+      "id": "fleet_manager",
+      "name": "Fleet Manager",
+      "permissions": ["fleet.*", "maintenance.*"]
+    }
+  ],
+  "products_file": "products/car_rental.json"
+}

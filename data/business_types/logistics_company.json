@@ -1,0 +1,49 @@
+{
+  "code": "logistics_company",
+  "sector": "logistics",
+  "name": "Logistics & Distribution",
+  "description": "Logistics and distribution company with shipment tracking, route optimization, fleet management, warehouse operations, and client billing",
+  "icon": "car-outline",
+  "color": "#37474f",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": ["shipping", "fleet", "warehouse", "invoicing", "customers"],
+  "sector_features": [
+    "Shipment tracking",
+    "Route optimization",
+    "Fleet management",
+    "Warehouse operations",
+    "Client billing"
+  ],
+  "roles": [
+    {
+      "id": "dispatcher",
+      "name": "Dispatcher",
+      "permissions": ["shipping.*", "fleet.view_*", "tasks.*"]
+    },
+    {
+      "id": "delivery_driver",
+      "name": "Delivery Driver",
+      "permissions": ["shipping.view_*", "tasks.*"]
+    },
+    {
+      "id": "warehouse_worker",
+      "name": "Warehouse Worker",
+      "permissions": ["warehouse.*", "inventory.*"]
+    }
+  ],
+  "products_file": "products/logistics_company.json"
+}

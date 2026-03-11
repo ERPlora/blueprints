@@ -1,0 +1,44 @@
+{
+  "code": "real_estate_agency",
+  "sector": "real_estate",
+  "name": "Real Estate Agency",
+  "description": "Real estate agency with property listings, client matching, visit scheduling, contract management, and commission tracking",
+  "icon": "home-outline",
+  "color": "#1b5e20",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "essential"
+  },
+  "extra_modules": ["customers", "leads", "contracts", "invoicing", "doc_templates", "esign"],
+  "sector_features": [
+    "Property listings",
+    "Client matching",
+    "Visit scheduling",
+    "Contract management",
+    "Commission tracking"
+  ],
+  "roles": [
+    {
+      "id": "agent",
+      "name": "Real Estate Agent",
+      "permissions": ["leads.*", "customers.*", "contracts.view_*"]
+    },
+    {
+      "id": "manager",
+      "name": "Manager",
+      "permissions": ["leads.*", "customers.*", "contracts.*", "invoicing.*", "reports.view_*"]
+    }
+  ],
+  "products_file": "products/real_estate_agency.json"
+}

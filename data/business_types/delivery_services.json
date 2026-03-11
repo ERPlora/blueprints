@@ -1,0 +1,44 @@
+{
+  "code": "delivery_services",
+  "sector": "logistics",
+  "name": "Delivery Services",
+  "description": "Last-mile delivery service with order tracking, courier management, proof of delivery, returns handling, and client portal",
+  "icon": "bicycle-outline",
+  "color": "#e91e63",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "recommended",
+    "TPV": "essential",
+    "VEN": "essential",
+    "CRM": "essential",
+    "ECO": "essential",
+    "PRO": "na",
+    "LOG": "essential",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "recommended"
+  },
+  "extra_modules": ["shipping", "orders", "customers", "invoicing", "online_payments"],
+  "sector_features": [
+    "Order tracking",
+    "Courier management",
+    "Proof of delivery",
+    "Returns handling",
+    "Client portal"
+  ],
+  "roles": [
+    {
+      "id": "courier",
+      "name": "Courier",
+      "permissions": ["shipping.view_*", "orders.view_*", "tasks.*"]
+    },
+    {
+      "id": "dispatcher",
+      "name": "Dispatcher",
+      "permissions": ["shipping.*", "orders.*", "customers.view_*"]
+    }
+  ],
+  "products_file": "products/delivery_services.json"
+}

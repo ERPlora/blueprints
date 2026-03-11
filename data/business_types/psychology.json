@@ -1,0 +1,39 @@
+{
+  "code": "psychology",
+  "sector": "healthcare",
+  "name": "Psychology / Coaching",
+  "description": "Psychology practice or coaching center with encrypted session notes, session packages, video consultation, and progress tracking",
+  "icon": "brain-outline",
+  "color": "#6a1b9a",
+  "is_combinable": true,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "recommended",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["appointments", "patient_records", "customers", "invoicing", "online_booking"],
+  "sector_features": [
+    "Encrypted session notes",
+    "Session packages",
+    "Progress tracking",
+    "Video consultation",
+    "Online booking"
+  ],
+  "roles": [
+    {
+      "id": "psychologist",
+      "name": "Psychologist",
+      "permissions": ["patient_records.*", "appointments.*", "customers.view_*", "invoicing.view_*"]
+    }
+  ],
+  "products_file": "products/psychology.json"
+}

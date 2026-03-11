@@ -1,0 +1,44 @@
+{
+  "code": "medical_lab",
+  "sector": "healthcare",
+  "name": "Medical Laboratory",
+  "description": "Medical laboratory with sample tracking, test catalog, results reporting, patient notifications, and insurance billing",
+  "icon": "flask-outline",
+  "color": "#37474f",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "na",
+    "BI": "essential"
+  },
+  "extra_modules": ["patient_records", "customers", "invoicing", "online_payments"],
+  "sector_features": [
+    "Sample tracking",
+    "Test catalog",
+    "Results reporting",
+    "Patient notifications",
+    "Insurance billing"
+  ],
+  "roles": [
+    {
+      "id": "lab_technician",
+      "name": "Lab Technician",
+      "permissions": ["patient_records.*", "inventory.*"]
+    },
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": ["customers.*", "sales.*", "cash_register.*"]
+    }
+  ],
+  "products_file": "products/medical_lab.json"
+}

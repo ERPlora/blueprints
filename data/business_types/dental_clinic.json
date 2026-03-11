@@ -1,0 +1,49 @@
+{
+  "code": "dental_clinic",
+  "sector": "healthcare",
+  "name": "Dental Clinic",
+  "description": "Dental clinic with patient odontogram, treatment plans, appointment scheduling, consent forms, and insurance billing",
+  "icon": "happy-outline",
+  "color": "#006064",
+  "is_combinable": false,
+  "ufo_matrix": {
+    "FIN": "essential",
+    "COM": "essential",
+    "ALM": "essential",
+    "TPV": "essential",
+    "VEN": "na",
+    "CRM": "essential",
+    "ECO": "recommended",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "essential",
+    "PRY": "essential",
+    "BI": "recommended"
+  },
+  "extra_modules": ["appointments", "patient_records", "customers", "invoicing", "online_booking"],
+  "sector_features": [
+    "Odontogram",
+    "Treatment plans",
+    "Consent forms",
+    "Appointment scheduling",
+    "Insurance billing"
+  ],
+  "roles": [
+    {
+      "id": "dentist",
+      "name": "Dentist",
+      "permissions": ["patient_records.*", "appointments.*", "customers.view_*"]
+    },
+    {
+      "id": "hygienist",
+      "name": "Hygienist",
+      "permissions": ["appointments.*", "patient_records.view_*"]
+    },
+    {
+      "id": "receptionist",
+      "name": "Receptionist",
+      "permissions": ["appointments.*", "customers.*", "sales.*", "cash_register.*"]
+    }
+  ],
+  "products_file": "products/dental_clinic.json"
+}
