@@ -172,19 +172,17 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: eu-west-1
         run: |
           pip install awscli
           # Data files (1h cache)
-          aws s3 sync data/ s3://erplora/blueprints/v1/ \
-            --endpoint-url https://fsn1.your-objectstorage.com \
+          aws s3 sync data/ s3://erplora-storage/blueprints/v1/ \
             --cache-control "max-age=3600" \
             --delete
           # Assets with longer cache (24h)
-          aws s3 sync data/assets/ s3://erplora/blueprints/v1/assets/ \
-            --endpoint-url https://fsn1.your-objectstorage.com \
+          aws s3 sync data/assets/ s3://erplora-storage/blueprints/v1/assets/ \
             --cache-control "max-age=86400"
           # Manifest with short cache (5min)
-          aws s3 cp data/manifest.json s3://erplora/blueprints/v1/manifest.json \
-            --endpoint-url https://fsn1.your-objectstorage.com \
+          aws s3 cp data/manifest.json s3://erplora-storage/blueprints/v1/manifest.json \
             --cache-control "max-age=300"
-          echo "Published to s3://erplora/blueprints/v1/"
+          echo "Published to s3://erplora-storage/blueprints/v1/"
