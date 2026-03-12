@@ -6,6 +6,7 @@ on:
     paths:
       - 'data/**'
       - 'schema/**'
+  workflow_dispatch:
 
 jobs:
   validate-and-publish:
