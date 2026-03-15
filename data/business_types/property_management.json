@@ -7,20 +7,27 @@
   "color": "#004d40",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
+    "FIN": "na",
+    "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "essential",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["property_mgmt", "customers", "invoicing", "online_payments", "contracts", "maintenance"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "maintenance",
+    "property_mgmt",
+    "tax"
+  ],
   "sector_features": [
     "Tenant management",
     "Rent collection",
@@ -32,7 +39,13 @@
     {
       "id": "property_manager",
       "name": "Property Manager",
-      "permissions": ["property_mgmt.*", "customers.*", "invoicing.*", "maintenance.*", "contracts.*"]
+      "permissions": [
+        "property_mgmt.*",
+        "customers.*",
+        "invoicing.*",
+        "maintenance.*",
+        "contracts.*"
+      ]
     }
   ],
   "products_file": "products/property_management.json"

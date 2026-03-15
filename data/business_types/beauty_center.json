@@ -7,23 +7,29 @@
   "color": "#ad1457",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
   "extra_modules": [
     "appointments",
+    "cash_register",
     "commissions",
-    "services"
+    "customers",
+    "invoicing",
+    "sales",
+    "services",
+    "staff",
+    "tax"
   ],
   "sector_features": [
     "Cabin scheduling",

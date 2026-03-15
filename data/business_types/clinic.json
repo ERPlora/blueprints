@@ -7,20 +7,29 @@
   "color": "#01579b",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["appointments", "patient_records", "customers", "invoicing", "online_booking", "online_payments"],
+  "extra_modules": [
+    "appointments",
+    "cash_register",
+    "customers",
+    "invoicing",
+    "online_booking",
+    "patient_records",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Patient records (EHR)",
     "Appointment scheduling",
@@ -32,17 +41,30 @@
     {
       "id": "doctor",
       "name": "Doctor",
-      "permissions": ["patient_records.*", "appointments.*", "customers.view_*"]
+      "permissions": [
+        "patient_records.*",
+        "appointments.*",
+        "customers.view_*"
+      ]
     },
     {
       "id": "receptionist",
       "name": "Receptionist",
-      "permissions": ["appointments.*", "customers.*", "sales.*", "cash_register.*"]
+      "permissions": [
+        "appointments.*",
+        "customers.*",
+        "sales.*",
+        "cash_register.*"
+      ]
     },
     {
       "id": "nurse",
       "name": "Nurse",
-      "permissions": ["patient_records.view_*", "appointments.*", "inventory.view_*"]
+      "permissions": [
+        "patient_records.view_*",
+        "appointments.*",
+        "inventory.view_*"
+      ]
     }
   ],
   "products_file": "products/clinic.json"

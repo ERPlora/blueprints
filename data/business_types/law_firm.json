@@ -7,20 +7,29 @@
   "color": "#212121",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "essential",
+    "RRH": "na",
+    "PRY": "na",
     "BI": "na"
   },
-  "extra_modules": ["projects", "tasks", "time_control", "invoicing", "customers", "contracts", "doc_templates", "esign"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "doc_templates",
+    "invoicing",
+    "projects",
+    "tasks",
+    "tax",
+    "time_control"
+  ],
   "sector_features": [
     "Case management",
     "Legal timesheet",
@@ -32,12 +41,24 @@
     {
       "id": "lawyer",
       "name": "Lawyer",
-      "permissions": ["projects.*", "tasks.*", "time_control.*", "customers.view_*", "doc_templates.*"]
+      "permissions": [
+        "projects.*",
+        "tasks.*",
+        "time_control.*",
+        "customers.view_*",
+        "doc_templates.*"
+      ]
     },
     {
       "id": "partner",
       "name": "Partner",
-      "permissions": ["projects.*", "customers.*", "invoicing.*", "contracts.*", "reports.view_*"]
+      "permissions": [
+        "projects.*",
+        "customers.*",
+        "invoicing.*",
+        "contracts.*",
+        "reports.view_*"
+      ]
     }
   ],
   "products_file": "products/law_firm.json"

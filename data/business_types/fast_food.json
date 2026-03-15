@@ -21,13 +21,13 @@
     "BI": "na"
   },
   "extra_modules": [
-    "sales",
     "cash_register",
-    "inventory",
     "customers",
-    "orders",
-    "kitchen",
+    "inventory",
     "invoicing",
+    "kitchen",
+    "orders",
+    "sales",
     "tax"
   ],
   "sector_features": [

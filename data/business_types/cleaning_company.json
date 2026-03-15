@@ -7,20 +7,27 @@
   "color": "#006064",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "recommended",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["contracts", "tasks", "schedules", "invoicing", "customers", "field_service"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "schedules",
+    "staff",
+    "tax"
+  ],
   "sector_features": [
     "Recurring contracts",
     "Team routes",
@@ -32,12 +39,22 @@
     {
       "id": "cleaning_team_leader",
       "name": "Team Leader",
-      "permissions": ["tasks.*", "schedules.view_*", "field_service.*"]
+      "permissions": [
+        "tasks.*",
+        "schedules.view_*",
+        "field_service.*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["contracts.*", "customers.*", "invoicing.*", "staff.view_*", "schedules.*"]
+      "permissions": [
+        "contracts.*",
+        "customers.*",
+        "invoicing.*",
+        "staff.view_*",
+        "schedules.*"
+      ]
     }
   ],
   "products_file": "products/cleaning_company.json"

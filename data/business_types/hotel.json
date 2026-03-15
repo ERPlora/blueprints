@@ -7,20 +7,29 @@
   "color": "#1a237e",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "recommended",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["reservations", "customers", "invoicing", "online_booking", "online_payments", "sales", "cash_register"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "reservations",
+    "sales",
+    "staff",
+    "tax"
+  ],
   "sector_features": [
     "Room management",
     "Check-in / check-out",
@@ -32,17 +41,31 @@
     {
       "id": "receptionist",
       "name": "Receptionist",
-      "permissions": ["reservations.*", "customers.*", "sales.*", "cash_register.*"]
+      "permissions": [
+        "reservations.*",
+        "customers.*",
+        "sales.*",
+        "cash_register.*"
+      ]
     },
     {
       "id": "housekeeper",
       "name": "Housekeeper",
-      "permissions": ["reservations.view_*", "tasks.*"]
+      "permissions": [
+        "reservations.view_*",
+        "tasks.*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["reservations.*", "customers.*", "sales.*", "reports.view_*", "staff.view_*"]
+      "permissions": [
+        "reservations.*",
+        "customers.*",
+        "sales.*",
+        "reports.view_*",
+        "staff.view_*"
+      ]
     }
   ],
   "products_file": "products/hotel.json"

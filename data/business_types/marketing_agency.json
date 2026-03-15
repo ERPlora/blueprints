@@ -7,20 +7,27 @@
   "color": "#ff6b35",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["projects", "tasks", "time_control", "invoicing", "customers", "campaigns"],
+  "extra_modules": [
+    "customers",
+    "invoicing",
+    "projects",
+    "tasks",
+    "tax",
+    "time_control"
+  ],
   "sector_features": [
     "Creative project management",
     "Briefings",
@@ -32,12 +39,21 @@
     {
       "id": "account_manager",
       "name": "Account Manager",
-      "permissions": ["projects.*", "customers.*", "tasks.*", "campaigns.view_*"]
+      "permissions": [
+        "projects.*",
+        "customers.*",
+        "tasks.*",
+        "campaigns.view_*"
+      ]
     },
     {
       "id": "creative",
       "name": "Creative",
-      "permissions": ["projects.view_*", "tasks.*", "time_control.*"]
+      "permissions": [
+        "projects.view_*",
+        "tasks.*",
+        "time_control.*"
+      ]
     }
   ],
   "products_file": "products/marketing_agency.json"

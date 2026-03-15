@@ -7,20 +7,27 @@
   "color": "#0d47a1",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "recommended",
-    "CRM": "essential",
-    "ECO": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "recommended",
-    "RRH": "recommended",
-    "PRY": "recommended",
-    "BI": "recommended"
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["inventory", "sales", "cash_register", "maintenance", "invoicing"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Serial number tracking",
     "Warranty management",
@@ -32,12 +39,19 @@
     {
       "id": "sales_assistant",
       "name": "Sales Assistant",
-      "permissions": ["sales.*", "cash_register.*", "customers.view_*"]
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "customers.view_*"
+      ]
     },
     {
       "id": "technician",
       "name": "Technician",
-      "permissions": ["maintenance.*", "inventory.view_*"]
+      "permissions": [
+        "maintenance.*",
+        "inventory.view_*"
+      ]
     }
   ],
   "products_file": "products/electronics_retail.json"

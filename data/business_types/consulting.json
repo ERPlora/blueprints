@@ -7,20 +7,28 @@
   "color": "#1a237e",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["projects", "tasks", "time_control", "invoicing", "customers", "contracts"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "projects",
+    "tasks",
+    "tax",
+    "time_control"
+  ],
   "sector_features": [
     "Timesheet",
     "Hourly billing",
@@ -32,12 +40,23 @@
     {
       "id": "consultant",
       "name": "Consultant",
-      "permissions": ["projects.*", "tasks.*", "time_control.*", "customers.view_*"]
+      "permissions": [
+        "projects.*",
+        "tasks.*",
+        "time_control.*",
+        "customers.view_*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["projects.*", "customers.*", "invoicing.*", "contracts.*", "reports.view_*"]
+      "permissions": [
+        "projects.*",
+        "customers.*",
+        "invoicing.*",
+        "contracts.*",
+        "reports.view_*"
+      ]
     }
   ],
   "products_file": "products/consulting.json"

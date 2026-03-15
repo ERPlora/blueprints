@@ -7,20 +7,27 @@
   "color": "#e65100",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "essential",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "recommended",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": ["fleet", "reservations", "customers", "invoicing", "online_booking", "online_payments"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "fleet",
+    "invoicing",
+    "reservations",
+    "tax"
+  ],
   "sector_features": [
     "Fleet management",
     "Reservation system",
@@ -32,12 +39,21 @@
     {
       "id": "agent",
       "name": "Rental Agent",
-      "permissions": ["reservations.*", "customers.*", "sales.*", "cash_register.*", "fleet.view_*"]
+      "permissions": [
+        "reservations.*",
+        "customers.*",
+        "sales.*",
+        "cash_register.*",
+        "fleet.view_*"
+      ]
     },
     {
       "id": "fleet_manager",
       "name": "Fleet Manager",
-      "permissions": ["fleet.*", "maintenance.*"]
+      "permissions": [
+        "fleet.*",
+        "maintenance.*"
+      ]
     }
   ],
   "products_file": "products/car_rental.json"

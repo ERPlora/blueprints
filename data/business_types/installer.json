@@ -7,20 +7,28 @@
   "color": "#f57f17",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "recommended",
-    "PRY": "essential",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
     "BI": "na"
   },
-  "extra_modules": ["field_service", "tasks", "quotes", "invoicing", "inventory", "contracts"],
+  "extra_modules": [
+    "customers",
+    "inventory",
+    "invoicing",
+    "quotes",
+    "staff",
+    "tasks",
+    "tax"
+  ],
   "sector_features": [
     "Work orders",
     "Mobile stock",
@@ -32,12 +40,21 @@
     {
       "id": "installer",
       "name": "Installer",
-      "permissions": ["tasks.*", "field_service.*", "inventory.view_*"]
+      "permissions": [
+        "tasks.*",
+        "field_service.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["quotes.*", "customers.*", "invoicing.*", "staff.view_*"]
+      "permissions": [
+        "quotes.*",
+        "customers.*",
+        "invoicing.*",
+        "staff.view_*"
+      ]
     }
   ],
   "products_file": "products/installer.json"

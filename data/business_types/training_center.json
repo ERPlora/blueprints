@@ -7,20 +7,27 @@
   "color": "#311b92",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["course_mgmt", "student_mgmt", "schedules", "invoicing", "online_payments", "online_booking"],
+  "extra_modules": [
+    "course_mgmt",
+    "invoicing",
+    "schedules",
+    "staff",
+    "student_mgmt",
+    "tax"
+  ],
   "sector_features": [
     "Course catalog",
     "Student enrollment",
@@ -32,12 +39,21 @@
     {
       "id": "instructor",
       "name": "Instructor",
-      "permissions": ["course_mgmt.view_*", "student_mgmt.view_*", "attendance.*"]
+      "permissions": [
+        "course_mgmt.view_*",
+        "student_mgmt.view_*",
+        "attendance.*"
+      ]
     },
     {
       "id": "admin",
       "name": "Admin",
-      "permissions": ["student_mgmt.*", "course_mgmt.*", "schedules.*", "invoicing.*"]
+      "permissions": [
+        "student_mgmt.*",
+        "course_mgmt.*",
+        "schedules.*",
+        "invoicing.*"
+      ]
     }
   ],
   "products_file": "products/training_center.json"

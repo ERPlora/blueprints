@@ -7,20 +7,28 @@
   "color": "#1b5e20",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["projects", "tasks", "time_control", "invoicing", "customers", "contracts", "doc_templates"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "projects",
+    "tasks",
+    "tax",
+    "time_control"
+  ],
   "sector_features": [
     "Fiscal calendar",
     "Multi-client management",
@@ -32,12 +40,24 @@
     {
       "id": "accountant",
       "name": "Accountant",
-      "permissions": ["projects.*", "tasks.*", "time_control.*", "customers.view_*", "doc_templates.*"]
+      "permissions": [
+        "projects.*",
+        "tasks.*",
+        "time_control.*",
+        "customers.view_*",
+        "doc_templates.*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["projects.*", "customers.*", "invoicing.*", "contracts.*", "reports.view_*"]
+      "permissions": [
+        "projects.*",
+        "customers.*",
+        "invoicing.*",
+        "contracts.*",
+        "reports.view_*"
+      ]
     }
   ],
   "products_file": "products/accounting_firm.json"

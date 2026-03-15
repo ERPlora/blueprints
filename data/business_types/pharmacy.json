@@ -7,20 +7,27 @@
   "color": "#2e7d32",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": ["inventory", "sales", "cash_register", "customers", "tax"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Batch / lot tracking",
     "Expiry date control",
@@ -32,12 +39,20 @@
     {
       "id": "pharmacist",
       "name": "Pharmacist",
-      "permissions": ["sales.*", "cash_register.*", "inventory.*", "customers.*"]
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "inventory.*",
+        "customers.*"
+      ]
     },
     {
       "id": "sales_assistant",
       "name": "Sales Assistant",
-      "permissions": ["sales.*", "cash_register.*"]
+      "permissions": [
+        "sales.*",
+        "cash_register.*"
+      ]
     }
   ],
   "products_file": "products/pharmacy.json"

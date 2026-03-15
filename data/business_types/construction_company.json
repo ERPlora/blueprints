@@ -7,20 +7,30 @@
   "color": "#e65100",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
-    "PRO": "recommended",
-    "LOG": "essential",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["projects", "tasks", "quotes", "invoicing", "purchase_orders", "expenses"],
+  "extra_modules": [
+    "customers",
+    "expenses",
+    "invoicing",
+    "projects",
+    "purchase_orders",
+    "quotes",
+    "staff",
+    "tasks",
+    "tax"
+  ],
   "sector_features": [
     "Project budgets",
     "Certifications",
@@ -32,17 +42,31 @@
     {
       "id": "project_manager",
       "name": "Project Manager",
-      "permissions": ["projects.*", "tasks.*", "quotes.*", "purchase_orders.view_*"]
+      "permissions": [
+        "projects.*",
+        "tasks.*",
+        "quotes.*",
+        "purchase_orders.view_*"
+      ]
     },
     {
       "id": "site_manager",
       "name": "Site Manager",
-      "permissions": ["projects.view_*", "tasks.*", "inventory.view_*", "staff.view_*"]
+      "permissions": [
+        "projects.view_*",
+        "tasks.*",
+        "inventory.view_*",
+        "staff.view_*"
+      ]
     },
     {
       "id": "sales_rep",
       "name": "Sales Representative",
-      "permissions": ["quotes.*", "customers.*", "invoicing.view_*"]
+      "permissions": [
+        "quotes.*",
+        "customers.*",
+        "invoicing.view_*"
+      ]
     }
   ],
   "products_file": "products/construction_company.json"

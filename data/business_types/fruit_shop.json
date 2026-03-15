@@ -7,10 +7,10 @@
   "color": "#8bc34a",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "recommended",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
     "CRM": "na",
     "ECO": "na",
@@ -20,7 +20,13 @@
     "PRY": "na",
     "BI": "na"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "cash_register",
+    "inventory",
+    "invoicing",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Scale",
     "Weight/unit sales",

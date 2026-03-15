@@ -7,20 +7,28 @@
   "color": "#880e4f",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
+    "FIN": "na",
+    "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "essential",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "recommended",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["reservations", "customers", "online_booking", "online_payments", "quotes", "invoicing"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "invoicing",
+    "online_booking",
+    "reservations",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Activity catalog",
     "Group bookings",
@@ -32,12 +40,21 @@
     {
       "id": "sales_rep",
       "name": "Sales Representative",
-      "permissions": ["quotes.*", "customers.*", "reservations.*", "invoicing.view_*"]
+      "permissions": [
+        "quotes.*",
+        "customers.*",
+        "reservations.*",
+        "invoicing.view_*"
+      ]
     },
     {
       "id": "guide",
       "name": "Tour Guide",
-      "permissions": ["reservations.view_*", "customers.view_*", "tasks.*"]
+      "permissions": [
+        "reservations.view_*",
+        "customers.view_*",
+        "tasks.*"
+      ]
     }
   ],
   "products_file": "products/tour_operator.json"

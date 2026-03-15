@@ -7,20 +7,27 @@
   "color": "#546e7a",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "essential"
+    "BI": "na"
   },
-  "extra_modules": ["warehouse", "inventory", "purchase_orders", "invoicing", "customers"],
+  "extra_modules": [
+    "customers",
+    "inventory",
+    "invoicing",
+    "purchase_orders",
+    "tax",
+    "warehouse"
+  ],
   "sector_features": [
     "Location management",
     "Stock control",
@@ -32,12 +39,19 @@
     {
       "id": "warehouse_manager",
       "name": "Warehouse Manager",
-      "permissions": ["warehouse.*", "inventory.*", "purchase_orders.*"]
+      "permissions": [
+        "warehouse.*",
+        "inventory.*",
+        "purchase_orders.*"
+      ]
     },
     {
       "id": "warehouse_worker",
       "name": "Warehouse Worker",
-      "permissions": ["warehouse.*", "inventory.view_*"]
+      "permissions": [
+        "warehouse.*",
+        "inventory.view_*"
+      ]
     }
   ],
   "products_file": "products/warehouse.json"

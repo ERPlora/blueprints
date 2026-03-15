@@ -7,21 +7,28 @@
   "color": "#f57c00",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "recommended",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "essential",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "essential"
+    "BI": "na"
   },
   "extra_modules": [
-    "services"
+    "cash_register",
+    "customers",
+    "invoicing",
+    "sales",
+    "services",
+    "staff",
+    "subscriptions",
+    "tax"
   ],
   "sector_features": [
     "Memberships",

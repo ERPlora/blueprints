@@ -7,22 +7,28 @@
   "color": "#0097a7",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "recommended",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "essential",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
   "extra_modules": [
     "appointments",
-    "services"
+    "cash_register",
+    "customers",
+    "invoicing",
+    "online_booking",
+    "sales",
+    "services",
+    "tax"
   ],
   "sector_features": [
     "Circuits",

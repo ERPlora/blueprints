@@ -7,20 +7,27 @@
   "color": "#880e4f",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "essential",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "recommended",
-    "RRH": "recommended",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": ["inventory", "sales", "cash_register", "loyalty", "discounts", "ecommerce"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Size / color variants",
     "Season collections",
@@ -32,12 +39,18 @@
     {
       "id": "sales_assistant",
       "name": "Sales Assistant",
-      "permissions": ["sales.*", "cash_register.*", "customers.view_*"]
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "customers.view_*"
+      ]
     },
     {
       "id": "stock_clerk",
       "name": "Stock Clerk",
-      "permissions": ["inventory.*"]
+      "permissions": [
+        "inventory.*"
+      ]
     }
   ],
   "products_file": "products/fashion_retail.json"

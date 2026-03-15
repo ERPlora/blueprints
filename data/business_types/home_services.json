@@ -7,20 +7,28 @@
   "color": "#bf360c",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["field_service", "tasks", "quotes", "invoicing", "customers", "schedules"],
+  "extra_modules": [
+    "customers",
+    "invoicing",
+    "quotes",
+    "schedules",
+    "staff",
+    "tasks",
+    "tax"
+  ],
   "sector_features": [
     "Work orders",
     "Field technicians",
@@ -32,12 +40,21 @@
     {
       "id": "technician",
       "name": "Technician",
-      "permissions": ["tasks.*", "field_service.*", "inventory.view_*"]
+      "permissions": [
+        "tasks.*",
+        "field_service.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "dispatcher",
       "name": "Dispatcher",
-      "permissions": ["tasks.*", "schedules.*", "customers.*", "quotes.*"]
+      "permissions": [
+        "tasks.*",
+        "schedules.*",
+        "customers.*",
+        "quotes.*"
+      ]
     }
   ],
   "products_file": "products/home_services.json"

@@ -7,20 +7,27 @@
   "color": "#37474f",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "essential"
+    "BI": "na"
   },
-  "extra_modules": ["patient_records", "customers", "invoicing", "online_payments"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "invoicing",
+    "patient_records",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Sample tracking",
     "Test catalog",
@@ -32,12 +39,19 @@
     {
       "id": "lab_technician",
       "name": "Lab Technician",
-      "permissions": ["patient_records.*", "inventory.*"]
+      "permissions": [
+        "patient_records.*",
+        "inventory.*"
+      ]
     },
     {
       "id": "receptionist",
       "name": "Receptionist",
-      "permissions": ["customers.*", "sales.*", "cash_register.*"]
+      "permissions": [
+        "customers.*",
+        "sales.*",
+        "cash_register.*"
+      ]
     }
   ],
   "products_file": "products/medical_lab.json"

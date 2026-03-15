@@ -7,20 +7,29 @@
   "color": "#006064",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["appointments", "patient_records", "customers", "invoicing", "online_booking"],
+  "extra_modules": [
+    "appointments",
+    "cash_register",
+    "customers",
+    "invoicing",
+    "online_booking",
+    "patient_records",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Odontogram",
     "Treatment plans",
@@ -32,17 +41,29 @@
     {
       "id": "dentist",
       "name": "Dentist",
-      "permissions": ["patient_records.*", "appointments.*", "customers.view_*"]
+      "permissions": [
+        "patient_records.*",
+        "appointments.*",
+        "customers.view_*"
+      ]
     },
     {
       "id": "hygienist",
       "name": "Hygienist",
-      "permissions": ["appointments.*", "patient_records.view_*"]
+      "permissions": [
+        "appointments.*",
+        "patient_records.view_*"
+      ]
     },
     {
       "id": "receptionist",
       "name": "Receptionist",
-      "permissions": ["appointments.*", "customers.*", "sales.*", "cash_register.*"]
+      "permissions": [
+        "appointments.*",
+        "customers.*",
+        "sales.*",
+        "cash_register.*"
+      ]
     }
   ],
   "products_file": "products/dental_clinic.json"

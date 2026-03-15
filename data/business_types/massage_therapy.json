@@ -7,20 +7,29 @@
   "color": "#006064",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
-    "ALM": "recommended",
-    "TPV": "essential",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["appointments", "customers", "sales", "cash_register", "online_booking", "services"],
+  "extra_modules": [
+    "appointments",
+    "cash_register",
+    "customers",
+    "invoicing",
+    "online_booking",
+    "sales",
+    "services",
+    "tax"
+  ],
   "sector_features": [
     "Appointment scheduling",
     "Session packages",
@@ -32,12 +41,21 @@
     {
       "id": "therapist",
       "name": "Therapist",
-      "permissions": ["appointments.*", "customers.view_*", "sales.view_*"]
+      "permissions": [
+        "appointments.*",
+        "customers.view_*",
+        "sales.view_*"
+      ]
     },
     {
       "id": "receptionist",
       "name": "Receptionist",
-      "permissions": ["appointments.*", "customers.*", "sales.*", "cash_register.*"]
+      "permissions": [
+        "appointments.*",
+        "customers.*",
+        "sales.*",
+        "cash_register.*"
+      ]
     }
   ],
   "products_file": "products/massage_therapy.json"

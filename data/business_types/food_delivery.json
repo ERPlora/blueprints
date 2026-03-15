@@ -7,20 +7,29 @@
   "color": "#e91e63",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "recommended",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "essential",
-    "PRO": "recommended",
-    "LOG": "essential",
-    "RRH": "recommended",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": ["orders", "kitchen", "shipping", "online_payments", "online_booking"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "kitchen",
+    "orders",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Online ordering",
     "Delivery route optimization",
@@ -32,12 +41,19 @@
     {
       "id": "kitchen_manager",
       "name": "Kitchen Manager",
-      "permissions": ["kitchen.*", "orders.*", "inventory.view_*"]
+      "permissions": [
+        "kitchen.*",
+        "orders.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "delivery_driver",
       "name": "Delivery Driver",
-      "permissions": ["orders.view_*", "shipping.*"]
+      "permissions": [
+        "orders.view_*",
+        "shipping.*"
+      ]
     }
   ],
   "products_file": "products/food_delivery.json"

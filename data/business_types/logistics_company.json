@@ -7,20 +7,28 @@
   "color": "#37474f",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "essential"
+    "BI": "na"
   },
-  "extra_modules": ["shipping", "fleet", "warehouse", "invoicing", "customers"],
+  "extra_modules": [
+    "customers",
+    "fleet",
+    "inventory",
+    "invoicing",
+    "shipping",
+    "tax",
+    "warehouse"
+  ],
   "sector_features": [
     "Shipment tracking",
     "Route optimization",
@@ -32,17 +40,27 @@
     {
       "id": "dispatcher",
       "name": "Dispatcher",
-      "permissions": ["shipping.*", "fleet.view_*", "tasks.*"]
+      "permissions": [
+        "shipping.*",
+        "fleet.view_*",
+        "tasks.*"
+      ]
     },
     {
       "id": "delivery_driver",
       "name": "Delivery Driver",
-      "permissions": ["shipping.view_*", "tasks.*"]
+      "permissions": [
+        "shipping.view_*",
+        "tasks.*"
+      ]
     },
     {
       "id": "warehouse_worker",
       "name": "Warehouse Worker",
-      "permissions": ["warehouse.*", "inventory.*"]
+      "permissions": [
+        "warehouse.*",
+        "inventory.*"
+      ]
     }
   ],
   "products_file": "products/logistics_company.json"

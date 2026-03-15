@@ -7,20 +7,29 @@
   "color": "#37474f",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "recommended",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
-    "PRO": "essential",
-    "LOG": "essential",
-    "RRH": "essential",
-    "PRY": "recommended",
-    "BI": "essential"
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["manufacturing", "quality", "purchase_orders", "inventory", "warehouse", "invoicing"],
+  "extra_modules": [
+    "customers",
+    "inventory",
+    "invoicing",
+    "manufacturing",
+    "purchase_orders",
+    "quality",
+    "tax",
+    "warehouse"
+  ],
   "sector_features": [
     "Bills of materials (BOM)",
     "Work orders",
@@ -32,17 +41,29 @@
     {
       "id": "production_manager",
       "name": "Production Manager",
-      "permissions": ["manufacturing.*", "quality.*", "inventory.*", "purchase_orders.view_*"]
+      "permissions": [
+        "manufacturing.*",
+        "quality.*",
+        "inventory.*",
+        "purchase_orders.view_*"
+      ]
     },
     {
       "id": "warehouse_worker",
       "name": "Warehouse Worker",
-      "permissions": ["inventory.*", "warehouse.*"]
+      "permissions": [
+        "inventory.*",
+        "warehouse.*"
+      ]
     },
     {
       "id": "sales_rep",
       "name": "Sales Representative",
-      "permissions": ["quotes.*", "customers.*", "invoicing.*"]
+      "permissions": [
+        "quotes.*",
+        "customers.*",
+        "invoicing.*"
+      ]
     }
   ],
   "products_file": "products/manufacturing.json"

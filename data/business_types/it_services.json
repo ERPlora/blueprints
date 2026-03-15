@@ -7,20 +7,29 @@
   "color": "#0d47a1",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "recommended",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["support", "projects", "tasks", "time_control", "contracts", "invoicing", "customers", "subscriptions"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "projects",
+    "support",
+    "tasks",
+    "tax",
+    "time_control"
+  ],
   "sector_features": [
     "Helpdesk tickets",
     "SLA contracts",
@@ -32,17 +41,31 @@
     {
       "id": "technician",
       "name": "Technician",
-      "permissions": ["support.*", "tasks.*", "time_control.*"]
+      "permissions": [
+        "support.*",
+        "tasks.*",
+        "time_control.*"
+      ]
     },
     {
       "id": "project_manager",
       "name": "Project Manager",
-      "permissions": ["projects.*", "tasks.*", "customers.view_*", "time_control.*"]
+      "permissions": [
+        "projects.*",
+        "tasks.*",
+        "customers.view_*",
+        "time_control.*"
+      ]
     },
     {
       "id": "sales_rep",
       "name": "Sales Representative",
-      "permissions": ["quotes.*", "customers.*", "contracts.*", "invoicing.view_*"]
+      "permissions": [
+        "quotes.*",
+        "customers.*",
+        "contracts.*",
+        "invoicing.view_*"
+      ]
     }
   ],
   "products_file": "products/it_services.json"

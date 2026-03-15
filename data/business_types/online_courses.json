@@ -7,20 +7,26 @@
   "color": "#4a148c",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
-    "VEN": "recommended",
-    "CRM": "essential",
-    "ECO": "essential",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "recommended",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["course_mgmt", "student_mgmt", "online_payments", "subscriptions", "ecommerce"],
+  "extra_modules": [
+    "course_mgmt",
+    "invoicing",
+    "student_mgmt",
+    "subscriptions",
+    "tax"
+  ],
   "sector_features": [
     "Course creation",
     "Student management",
@@ -32,12 +38,20 @@
     {
       "id": "instructor",
       "name": "Instructor",
-      "permissions": ["course_mgmt.*", "student_mgmt.view_*"]
+      "permissions": [
+        "course_mgmt.*",
+        "student_mgmt.view_*"
+      ]
     },
     {
       "id": "admin",
       "name": "Admin",
-      "permissions": ["student_mgmt.*", "course_mgmt.*", "invoicing.*", "analytics.view_*"]
+      "permissions": [
+        "student_mgmt.*",
+        "course_mgmt.*",
+        "invoicing.*",
+        "analytics.view_*"
+      ]
     }
   ],
   "products_file": "products/online_courses.json"

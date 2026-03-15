@@ -7,20 +7,28 @@
   "color": "#9c27b0",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "recommended",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "recommended",
-    "PRO": "essential",
-    "LOG": "recommended",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
+    "PRO": "na",
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["projects", "tasks", "orders", "online_payments", "invoicing"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "orders",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Per-event budgets",
     "BOM recipes",
@@ -32,17 +40,30 @@
     {
       "id": "event_coordinator",
       "name": "Event Coordinator",
-      "permissions": ["projects.*", "tasks.*", "customers.*", "orders.*"]
+      "permissions": [
+        "projects.*",
+        "tasks.*",
+        "customers.*",
+        "orders.*"
+      ]
     },
     {
       "id": "chef",
       "name": "Chef",
-      "permissions": ["kitchen.*", "orders.*", "inventory.view_*"]
+      "permissions": [
+        "kitchen.*",
+        "orders.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "sales_rep",
       "name": "Sales Representative",
-      "permissions": ["quotes.*", "customers.*", "invoicing.view_*"]
+      "permissions": [
+        "quotes.*",
+        "customers.*",
+        "invoicing.view_*"
+      ]
     }
   ],
   "products_file": "products/catering.json"

@@ -7,20 +7,28 @@
   "color": "#4e342e",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "essential",
-    "TPV": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "recommended",
+    "RRH": "na",
+    "PRY": "na",
     "BI": "na"
   },
-  "extra_modules": ["appointments", "sales", "cash_register", "inventory", "customers", "invoicing"],
+  "extra_modules": [
+    "appointments",
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Appointment scheduling",
     "Vehicle records",
@@ -32,12 +40,20 @@
     {
       "id": "technician",
       "name": "Technician",
-      "permissions": ["appointments.*", "tasks.*", "inventory.view_*"]
+      "permissions": [
+        "appointments.*",
+        "tasks.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "cashier",
       "name": "Cashier",
-      "permissions": ["sales.*", "cash_register.*", "appointments.view_*"]
+      "permissions": [
+        "sales.*",
+        "cash_register.*",
+        "appointments.view_*"
+      ]
     }
   ],
   "products_file": "products/auto_services.json"

@@ -7,20 +7,26 @@
   "color": "#e91e63",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
-    "ALM": "recommended",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "essential",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": ["shipping", "orders", "customers", "invoicing", "online_payments"],
+  "extra_modules": [
+    "customers",
+    "invoicing",
+    "orders",
+    "shipping",
+    "tax"
+  ],
   "sector_features": [
     "Order tracking",
     "Courier management",
@@ -32,12 +38,20 @@
     {
       "id": "courier",
       "name": "Courier",
-      "permissions": ["shipping.view_*", "orders.view_*", "tasks.*"]
+      "permissions": [
+        "shipping.view_*",
+        "orders.view_*",
+        "tasks.*"
+      ]
     },
     {
       "id": "dispatcher",
       "name": "Dispatcher",
-      "permissions": ["shipping.*", "orders.*", "customers.view_*"]
+      "permissions": [
+        "shipping.*",
+        "orders.*",
+        "customers.view_*"
+      ]
     }
   ],
   "products_file": "products/delivery_services.json"

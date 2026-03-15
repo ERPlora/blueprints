@@ -7,20 +7,28 @@
   "color": "#455a64",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
+    "LOG": "na",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "essential"
+    "BI": "na"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "customers",
+    "inventory",
+    "invoicing",
+    "purchase_orders",
+    "sales",
+    "tax",
+    "warehouse"
+  ],
   "sector_features": [
     "Customer price lists",
     "Delivery routes",

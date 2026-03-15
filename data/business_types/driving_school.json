@@ -7,20 +7,27 @@
   "color": "#e65100",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["student_mgmt", "schedules", "appointments", "fleet", "invoicing", "online_payments"],
+  "extra_modules": [
+    "appointments",
+    "fleet",
+    "invoicing",
+    "schedules",
+    "student_mgmt",
+    "tax"
+  ],
   "sector_features": [
     "Practical lesson scheduling",
     "Theory management",
@@ -32,12 +39,22 @@
     {
       "id": "instructor",
       "name": "Driving Instructor",
-      "permissions": ["schedules.view_*", "student_mgmt.view_*", "appointments.*", "fleet.view_*"]
+      "permissions": [
+        "schedules.view_*",
+        "student_mgmt.view_*",
+        "appointments.*",
+        "fleet.view_*"
+      ]
     },
     {
       "id": "admin",
       "name": "Admin",
-      "permissions": ["student_mgmt.*", "schedules.*", "fleet.*", "invoicing.*"]
+      "permissions": [
+        "student_mgmt.*",
+        "schedules.*",
+        "fleet.*",
+        "invoicing.*"
+      ]
     }
   ],
   "products_file": "products/driving_school.json"

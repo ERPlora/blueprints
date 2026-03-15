@@ -7,20 +7,28 @@
   "color": "#4e342e",
   "is_combinable": true,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "recommended",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
     "ECO": "na",
     "PRO": "na",
-    "LOG": "essential",
-    "RRH": "essential",
-    "PRY": "essential",
-    "BI": "recommended"
+    "LOG": "na",
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["maintenance", "field_service", "tasks", "contracts", "invoicing", "customers"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "maintenance",
+    "staff",
+    "tasks",
+    "tax"
+  ],
   "sector_features": [
     "SLA contracts",
     "Ticket / incident management",
@@ -32,12 +40,22 @@
     {
       "id": "technician",
       "name": "Technician",
-      "permissions": ["maintenance.*", "field_service.*", "tasks.*", "inventory.view_*"]
+      "permissions": [
+        "maintenance.*",
+        "field_service.*",
+        "tasks.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "dispatcher",
       "name": "Dispatcher",
-      "permissions": ["maintenance.*", "tasks.*", "schedules.*", "customers.*"]
+      "permissions": [
+        "maintenance.*",
+        "tasks.*",
+        "schedules.*",
+        "customers.*"
+      ]
     }
   ],
   "products_file": "products/maintenance_company.json"

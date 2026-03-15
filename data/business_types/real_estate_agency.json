@@ -7,20 +7,26 @@
   "color": "#1b5e20",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
     "TPV": "na",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "essential",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "essential",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["customers", "leads", "contracts", "invoicing", "doc_templates", "esign"],
+  "extra_modules": [
+    "contracts",
+    "customers",
+    "invoicing",
+    "leads",
+    "tax"
+  ],
   "sector_features": [
     "Property listings",
     "Client matching",
@@ -32,12 +38,22 @@
     {
       "id": "agent",
       "name": "Real Estate Agent",
-      "permissions": ["leads.*", "customers.*", "contracts.view_*"]
+      "permissions": [
+        "leads.*",
+        "customers.*",
+        "contracts.view_*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["leads.*", "customers.*", "contracts.*", "invoicing.*", "reports.view_*"]
+      "permissions": [
+        "leads.*",
+        "customers.*",
+        "contracts.*",
+        "invoicing.*",
+        "reports.view_*"
+      ]
     }
   ],
   "products_file": "products/real_estate_agency.json"

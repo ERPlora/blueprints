@@ -7,20 +7,27 @@
   "color": "#006064",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "essential",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
-    "PRY": "recommended",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["property_mgmt", "reservations", "customers", "invoicing", "online_payments", "online_booking"],
+  "extra_modules": [
+    "customers",
+    "invoicing",
+    "online_booking",
+    "property_mgmt",
+    "reservations",
+    "tax"
+  ],
   "sector_features": [
     "Multi-property management",
     "Channel manager",
@@ -32,12 +39,20 @@
     {
       "id": "property_manager",
       "name": "Property Manager",
-      "permissions": ["property_mgmt.*", "reservations.*", "customers.*", "invoicing.*"]
+      "permissions": [
+        "property_mgmt.*",
+        "reservations.*",
+        "customers.*",
+        "invoicing.*"
+      ]
     },
     {
       "id": "cleaner",
       "name": "Cleaner",
-      "permissions": ["tasks.*", "reservations.view_*"]
+      "permissions": [
+        "tasks.*",
+        "reservations.view_*"
+      ]
     }
   ],
   "products_file": "products/vacation_rental_mgmt.json"

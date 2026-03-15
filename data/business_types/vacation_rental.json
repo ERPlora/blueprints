@@ -7,20 +7,26 @@
   "color": "#4a148c",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
+    "FIN": "na",
     "COM": "na",
     "ALM": "na",
-    "TPV": "recommended",
+    "TPV": "na",
     "VEN": "na",
-    "CRM": "essential",
-    "ECO": "essential",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "recommended",
+    "RRH": "na",
     "PRY": "na",
-    "BI": "recommended"
+    "BI": "na"
   },
-  "extra_modules": ["reservations", "customers", "online_booking", "online_payments", "invoicing"],
+  "extra_modules": [
+    "customers",
+    "invoicing",
+    "online_booking",
+    "reservations",
+    "tax"
+  ],
   "sector_features": [
     "Availability calendar",
     "Channel manager",
@@ -32,7 +38,12 @@
     {
       "id": "property_manager",
       "name": "Property Manager",
-      "permissions": ["reservations.*", "customers.*", "invoicing.*", "tasks.*"]
+      "permissions": [
+        "reservations.*",
+        "customers.*",
+        "invoicing.*",
+        "tasks.*"
+      ]
     }
   ],
   "products_file": "products/vacation_rental.json"

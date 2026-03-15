@@ -7,20 +7,28 @@
   "color": "#1a237e",
   "is_combinable": false,
   "ufo_matrix": {
-    "FIN": "essential",
-    "COM": "essential",
-    "ALM": "essential",
-    "TPV": "essential",
-    "VEN": "essential",
-    "CRM": "essential",
-    "ECO": "recommended",
+    "FIN": "na",
+    "COM": "na",
+    "ALM": "na",
+    "TPV": "na",
+    "VEN": "na",
+    "CRM": "na",
+    "ECO": "na",
     "PRO": "na",
     "LOG": "na",
-    "RRH": "essential",
-    "PRY": "recommended",
-    "BI": "essential"
+    "RRH": "na",
+    "PRY": "na",
+    "BI": "na"
   },
-  "extra_modules": ["inventory", "sales", "customers", "invoicing", "maintenance", "quotes", "contracts"],
+  "extra_modules": [
+    "cash_register",
+    "customers",
+    "inventory",
+    "invoicing",
+    "quotes",
+    "sales",
+    "tax"
+  ],
   "sector_features": [
     "Vehicle inventory",
     "Financing management",
@@ -32,17 +40,31 @@
     {
       "id": "sales_rep",
       "name": "Sales Representative",
-      "permissions": ["sales.*", "customers.*", "quotes.*", "inventory.view_*"]
+      "permissions": [
+        "sales.*",
+        "customers.*",
+        "quotes.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "mechanic",
       "name": "Mechanic",
-      "permissions": ["maintenance.*", "inventory.view_*"]
+      "permissions": [
+        "maintenance.*",
+        "inventory.view_*"
+      ]
     },
     {
       "id": "manager",
       "name": "Manager",
-      "permissions": ["sales.*", "customers.*", "invoicing.*", "inventory.*", "reports.view_*"]
+      "permissions": [
+        "sales.*",
+        "customers.*",
+        "invoicing.*",
+        "inventory.*",
+        "reports.view_*"
+      ]
     }
   ],
   "products_file": "products/car_dealership.json"
