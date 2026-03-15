@@ -20,7 +20,10 @@
     "PRY": "na",
     "BI": "recommended"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "appointments",
+    "services"
+  ],
   "sector_features": [
     "Artist portfolio",
     "Mandatory consent",

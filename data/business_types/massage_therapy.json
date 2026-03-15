@@ -20,7 +20,7 @@
     "PRY": "essential",
     "BI": "recommended"
   },
-  "extra_modules": ["appointments", "customers", "sales", "cash_register", "online_booking"],
+  "extra_modules": ["appointments", "customers", "sales", "cash_register", "online_booking", "services"],
   "sector_features": [
     "Appointment scheduling",
     "Session packages",

@@ -20,7 +20,11 @@
     "PRY": "na",
     "BI": "recommended"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "appointments",
+    "commissions",
+    "services"
+  ],
   "sector_features": [
     "Cabin scheduling",
     "Session packages",

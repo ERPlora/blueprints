@@ -21,7 +21,8 @@
     "BI": "recommended"
   },
   "extra_modules": [
-    "appointments"
+    "appointments",
+    "services"
   ],
   "sector_features": [
     "Walk-in queue",

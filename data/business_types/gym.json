@@ -20,7 +20,9 @@
     "PRY": "na",
     "BI": "essential"
   },
-  "extra_modules": [],
+  "extra_modules": [
+    "services"
+  ],
   "sector_features": [
     "Memberships",
     "Recurring fees",

@@ -22,7 +22,8 @@
   },
   "extra_modules": [
     "appointments",
-    "commissions"
+    "commissions",
+    "services"
   ],
   "sector_features": [
     "Appointments",
