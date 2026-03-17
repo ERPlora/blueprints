@@ -24,6 +24,7 @@
     "appointments",
     "cash_register",
     "customers",
+    "inventory",
     "invoicing",
     "sales",
     "services",

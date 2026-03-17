@@ -23,6 +23,7 @@
   "extra_modules": [
     "cash_register",
     "customers",
+    "inventory",
     "invoicing",
     "quotes",
     "sales",

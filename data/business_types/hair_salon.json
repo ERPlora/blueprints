@@ -25,6 +25,7 @@
     "cash_register",
     "commissions",
     "customers",
+    "inventory",
     "invoicing",
     "sales",
     "services",
