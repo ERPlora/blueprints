@@ -1,25 +1,25 @@
-# Setup Guide: School / Academy
+# Guía de configuración: School / Academy
 
-> Configure your School / Academy hub from scratch using the ERPlora AI Assistant.
-> All commands below are sent to the Assistant at `/m/assistant/`.
+> Configura tu School / Academy desde cero con el Asistente IA de ERPlora.
+> Todos los comandos se envían al Asistente en `/m/assistant/`.
 
 ---
 
-## Step 1 — Describe your business
+## Paso 1 — Describe tu negocio
 
-Send this as your first message to the AI Assistant:
+Envía este mensaje como primero al Asistente IA:
 
 ```
 Hola! Tengo una academia de idiomas en Granada. Se llama "Academia Oxford Languages". Impartimos inglés, francés y alemán en grupos y clases particulares. Tenemos alumnos de diferentes edades y varios profesores. Necesito configurar todo el sistema.
 ```
 
-The assistant will detect your business type and install the right modules. The hub will restart (1-2 min).
+El asistente detectará tu tipo de negocio e instalará los módulos adecuados. El hub se reiniciará (1-2 min).
 
 ---
 
-## Step 2 — Configure everything
+## Paso 2 — Configura todo
 
-After restart, send this complete configuration message:
+Tras el reinicio, envía este mensaje de configuración completo:
 
 ```
 Perfecto, ya están los módulos. Configura todo esto:
