@@ -1,0 +1,73 @@
+# Setup Guide: Maintenance & SAT
+
+> Configure your Maintenance & SAT hub from scratch using the ERPlora AI Assistant.
+> All commands below are sent to the Assistant at `/m/assistant/`.
+
+---
+
+## Step 1 — Describe your business
+
+Send this as your first message to the AI Assistant:
+
+```
+Hola! Tengo una empresa de mantenimiento y servicio técnico en Valencia. Se llama "TecniService Valencia S.L.". Hacemos mantenimiento preventivo y correctivo de instalaciones industriales y de hostelería. Tenemos técnicos con furgoneta y contratos SLA con clientes. Necesito configurar todo el sistema.
+```
+
+The assistant will detect your business type and install the right modules. The hub will restart (1-2 min).
+
+---
+
+## Step 2 — Configure everything
+
+After restart, send this complete configuration message:
+
+```
+Perfecto, ya están los módulos. Configura todo esto:
+
+- Datos del negocio: nombre "TecniService Valencia S.L.", dirección "Calle Denia 34, 46006 Valencia", CIF B46890123, teléfono 963 890 123, email sat@tecniservice.es
+- IVA: 21% no incluido en precios. Clases: IVA general (21%) para servicios de mantenimiento
+- Métodos de pago: transferencia bancaria, domiciliación para contratos
+- Empleados:
+  - Álvaro Miró (Technician, PIN 1234)
+  - Lucía Ferrer (Dispatcher, PIN 5678)
+
+Ejecuta todo sin más preguntas.
+```
+
+---
+
+## Modules installed
+
+| Module | Purpose |
+|--------|---------|
+| contracts | SLA maintenance contracts with response times and scope |
+| customers | Client database with installation history |
+| invoicing | Ticket and contract invoicing |
+| maintenance | Maintenance orders, repair tickets, and work reports |
+| staff | Technician management and scheduling |
+| tasks | Task assignment per incident and technician |
+| tax | Tax configuration — 21% for maintenance services |
+
+---
+
+## Roles
+
+| Role | Key permissions |
+|------|----------------|
+| Technician | maintenance, field service, tasks, view-only inventory |
+| Dispatcher | maintenance, tasks, schedules, customers |
+
+---
+
+## Typical use cases
+
+- Recibir y gestionar tickets de avería con asignación prioritaria a técnico
+- Controlar el tiempo de respuesta y resolución según el SLA del contrato
+- Planificar mantenimientos preventivos periódicos con notificación automática
+- Registrar el informe de trabajo del técnico para facturar la intervención
+
+---
+
+## Notes
+
+Sector servicios — IVA al 21% para servicios de mantenimiento industrial y técnico. Los contratos SLA establecen los niveles de servicio garantizados (tiempo de respuesta, tiempo de resolución) con penalizaciones por incumplimiento. Los informes de trabajo firmados por el cliente son la base para la facturación y sirven como evidencia ante reclamaciones. El stock de furgoneta permite al técnico resolver la mayoría de averías en primera visita.
