@@ -3,7 +3,7 @@
   "sector": "logistics",
   "name": "Logistics & Distribution",
   "description": "Logistics and distribution company with shipment tracking, route optimization, fleet management, warehouse operations, and client billing",
-  "icon": "car-outline",
+  "icon": "material:local_shipping",
   "color": "#37474f",
   "is_combinable": false,
   "ufo_matrix": {

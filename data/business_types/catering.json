@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Catering",
   "description": "Catering and event services with per-event budgets, BOM recipes, production orders, temporary staff, and event tracking",
-  "icon": "people-outline",
+  "icon": "material:dinner_dining",
   "color": "#9c27b0",
   "is_combinable": true,
   "ufo_matrix": {

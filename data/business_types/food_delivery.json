@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Food Delivery",
   "description": "Ghost kitchen or delivery-only food business with online ordering, delivery routes, and multi-platform integration",
-  "icon": "bicycle-outline",
+  "icon": "material:delivery_dining",
   "color": "#e91e63",
   "is_combinable": true,
   "ufo_matrix": {

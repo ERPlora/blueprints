@@ -3,7 +3,7 @@
   "sector": "retail",
   "name": "Supermarket",
   "description": "Supermarket or grocery store with large catalog, barcode scanning, scale integration, expiry tracking, and loyalty programs",
-  "icon": "cart-outline",
+  "icon": "material:local_grocery_store",
   "color": "#1565c0",
   "is_combinable": false,
   "ufo_matrix": {

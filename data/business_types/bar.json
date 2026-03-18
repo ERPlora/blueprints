@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Bar",
   "description": "Bar with drinks service, tapas, cocktails, and table management for pubs, taverns, and nightlife venues",
-  "icon": "beer-outline",
+  "icon": "material:local_bar",
   "color": "#ff6b35",
   "is_combinable": true,
   "ufo_matrix": {

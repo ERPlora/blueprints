@@ -3,7 +3,7 @@
   "sector": "logistics",
   "name": "Transportation Company",
   "description": "Transportation company with vehicle fleet management, driver scheduling, route planning, fuel tracking, and client invoicing",
-  "icon": "bus-outline",
+  "icon": "material:directions_bus",
   "color": "#1a237e",
   "is_combinable": false,
   "ufo_matrix": {

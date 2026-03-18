@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Pub",
   "description": "Pub with craft beers, cocktails, and bar snacks",
-  "icon": "beer-outline",
+  "icon": "material:sports_bar",
   "color": "#4e342e",
   "is_combinable": true,
   "ufo_matrix": {

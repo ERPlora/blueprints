@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Kebab Shop",
   "description": "Doner kebab shop with vertical rotisserie, wraps, plates, and fast-casual service",
-  "icon": "fast-food-outline",
+  "icon": "material:kebab_dining",
   "color": "#e67e22",
   "is_combinable": true,
   "ufo_matrix": {

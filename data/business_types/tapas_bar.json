@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Tapas Bar",
   "description": "Tapas bar with shared plates, wine pairing, and casual dining",
-  "icon": "restaurant-outline",
+  "icon": "material:tapas",
   "color": "#bf360c",
   "is_combinable": true,
   "ufo_matrix": {

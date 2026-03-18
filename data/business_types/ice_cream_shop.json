@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Ice Cream Shop",
   "description": "Ice cream shop with sales by weight or scoop, combo offers, and seasonal flavor management",
-  "icon": "ice-cream-outline",
+  "icon": "material:icecream",
   "color": "#5ac8fa",
   "is_combinable": true,
   "ufo_matrix": {

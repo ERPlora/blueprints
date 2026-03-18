@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Sushi Restaurant",
   "description": "Japanese sushi restaurant with sushi bar, maki rolls, sashimi, tempura, and Asian cuisine",
-  "icon": "fish-outline",
+  "icon": "material:set_meal",
   "color": "#2ecc71",
   "is_combinable": true,
   "ufo_matrix": {

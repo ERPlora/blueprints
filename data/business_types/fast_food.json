@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Fast Food",
   "description": "Fast food restaurant with self-order kiosk, kitchen display system, order-by-number workflow, delivery integration, and combo meals",
-  "icon": "fast-food-outline",
+  "icon": "material:fastfood",
   "color": "#ff9500",
   "is_combinable": true,
   "ufo_matrix": {

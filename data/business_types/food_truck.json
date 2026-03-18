@@ -3,7 +3,7 @@
   "sector": "hospitality",
   "name": "Food Truck",
   "description": "Mobile food truck with reduced menu, mobile payments, and offline-priority operation",
-  "icon": "car-outline",
+  "icon": "material:delivery_dining",
   "color": "#ff9500",
   "is_combinable": true,
   "ufo_matrix": {
