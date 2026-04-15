@@ -1,55 +1,45 @@
-# ERPlora Blueprints
+# ERPlora Blueprints — Product Image Library
 
-Image library for ERPlora product catalogs. Repo: `git@github:ERPlora/blueprints.git` (branch: main).
+Open WebP product image library for [ERPlora](https://erplora.com). Used by the Hub to generate starter catalogs.
 
-> **Nota (2026-04-14):** los datos estructurales (sectores, tipos de negocio, unidades funcionales, compliance, productos seed, traducciones) se migraron a Cloud DB (app `catalog/`), editables desde Django admin con i18n. Este repo ahora solo contiene `data/assets/` — imágenes WebP subidas a S3.
+All images are flat vector icons, 512×512, white background — ideal as product thumbnails in a POS / invoicing system.
 
----
-
-## Estructura actual
+## Structure
 
 ```
-blueprints/
-├── data/
-│   └── assets/                     # WebP 512x512, organizadas por sector
-│       ├── hospitality/
-│       ├── beauty_hair/
-│       ├── beauty_body/
-│       ├── wellness_spa/
-│       ├── fitness/
-│       ├── retail/
-│       └── tobacco/
-└── scripts/
-    └── convert_to_webp.py          # Utilidad de conversión de imágenes
+assets/
+├── beauty_body/
+├── beauty_hair/
+├── fitness/
+├── hospitality/
+├── retail/
+├── tobacco/
+└── wellness_spa/
 ```
 
-> Los subdirectorios `data/business_types/`, `data/products/`, `data/i18n/`, `data/*.json` y `schema/` son **legacy** — se borrarán tras confirmar la migración a Cloud DB en producción.
+Each folder contains images named descriptively (e.g. `coffee_espresso.webp`, `hair_cut_female.webp`) so they can be matched to product names by the Assistant.
 
----
+## Conventions
 
-## Convenciones de imágenes
+- **Format**: WebP, 512×512, quality 85
+- **Style**: flat vector, bold outlines, solid colors, white background, no text
+- **Naming**: `snake_case.webp` in English or native language (no prefixes)
 
-- Formato: WebP, 512x512, quality 85
-- Estilo: flat vector, bold outlines, colores sólidos, fondo blanco, sin texto
-- Nombres descriptivos (ej. `coffee_espresso.webp`, `hair_cut_female.webp`) — el asistente los usa para matching por nombre
+## Contribute
 
----
-
-## Subida a S3
-
-Las imágenes se suben a `s3://erplora-storage/assets/{sector}/{filename}.webp` mediante:
+New images are welcome. To convert PNGs to the expected format:
 
 ```bash
-cd cloud
-python manage.py migrate_blueprints --blueprints-path=/ruta/a/blueprints --upload-assets
+pip install pillow
+python scripts/convert_to_webp.py path/to/image.png
 ```
 
-Cloud expone el listado en `/api/v1/catalog/assets/?sector=X` (consumido por el Hub).
+Then submit a PR with the file placed under the correct sector folder.
 
-**Bucket:** `erplora-storage` (no `erplora-main`).
+## Served via CDN
 
----
+On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/assets/` and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
-## Datos de catálogo
+## License
 
-Los datos estructurales (13 sectores, 71 tipos de negocio, 14 UFOs, compliance) están en **Cloud DB** (`catalog/`) y se administran desde el Django admin.
+MIT

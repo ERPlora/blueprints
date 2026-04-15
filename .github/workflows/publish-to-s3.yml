@@ -1,18 +1,17 @@
-name: Publish Blueprints to S3
+name: Sync assets to S3
 
 on:
   push:
     branches: [main]
     paths:
-      - 'data/**'
-      - 'schema/**'
+      - 'assets/**'
   workflow_dispatch:
 
 jobs:
-  validate-and-publish:
+  sync:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write   # Required for OIDC
+      id-token: write
       contents: read
     steps:
       - uses: actions/checkout@v4
@@ -23,173 +22,12 @@ jobs:
           role-to-assume: arn:aws:iam::363427305647:role/github-actions-deploy
           aws-region: eu-west-1
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: pip install jsonschema
-
-      - name: Validate JSON files
-        continue-on-error: true
+      - name: Sync WebP assets to S3
         run: |
-          python3 -c "
-          import json, os, sys
-          from jsonschema import validate, ValidationError
-
-          errors = []
-
-          # --- Load schemas ---
-          with open('schema/business_type.schema.json') as f:
-              bt_schema = json.load(f)
-          with open('schema/products.schema.json') as f:
-              products_schema = json.load(f)
-          with open('schema/functional_units.schema.json') as f:
-              fu_schema = json.load(f)
-
-          # --- 1. All JSON files parseable ---
-          all_json = {}
-          for root, dirs, files in os.walk('data'):
-              for f in sorted(files):
-                  if not f.endswith('.json'): continue
-                  path = os.path.join(root, f)
-                  try:
-                      with open(path) as fh:
-                          all_json[path] = json.load(fh)
-                  except json.JSONDecodeError as e:
-                      errors.append(f'{path}: Invalid JSON - {e}')
-
-          # --- 2. Validate functional_units.json ---
-          fu_path = 'data/functional_units.json'
-          if fu_path in all_json:
-              try:
-                  validate(instance=all_json[fu_path], schema=fu_schema)
-              except ValidationError as e:
-                  errors.append(f'{fu_path}: Schema error - {e.message}')
-
-          # --- 3. Validate business type files (flat structure) ---
-          ufo_codes = {'FIN','COM','ALM','TPV','VEN','CRM','ECO','PRO','LOG','RRH','PRY','BI'}
-          bt_dir = 'data/business_types'
-          known_bt_codes = set()
-
-          for f in sorted(os.listdir(bt_dir)):
-              if not f.endswith('.json') or f == 'index.json': continue
-              path = os.path.join(bt_dir, f)
-              if path not in all_json: continue
-              d = all_json[path]
-
-              # Schema validation
-              try:
-                  validate(instance=d, schema=bt_schema)
-              except ValidationError as e:
-                  errors.append(f'{path}: Schema error - {e.message}')
-                  continue
-
-              known_bt_codes.add(d.get('code', ''))
-
-              # LocalizedString check: en key always present
-              for field in ['name', 'description']:
-                  val = d.get(field, {})
-                  if isinstance(val, dict) and 'en' not in val:
-                      errors.append(f'{path}: {field} missing \"en\" key')
-
-              # sector_features LocalizedString check
-              for i, feat in enumerate(d.get('sector_features', [])):
-                  if isinstance(feat, dict) and 'en' not in feat:
-                      errors.append(f'{path}: sector_features[{i}] missing \"en\" key')
-
-          # --- 4. Validate product files ---
-          product_dirs = ['data/products/es', 'data/products/mx', 'data/products/generic', 'data/products/_shared']
-          for pdir in product_dirs:
-              if not os.path.isdir(pdir): continue
-              for f in sorted(os.listdir(pdir)):
-                  if not f.endswith('.json'): continue
-                  path = os.path.join(pdir, f)
-                  if path not in all_json: continue
-                  d = all_json[path]
-
-                  # Schema validation
-                  try:
-                      validate(instance=d, schema=products_schema)
-                  except ValidationError as e:
-                      errors.append(f'{path}: Schema error - {e.message}')
-                      continue
-
-                  # Category codes defined in this file
-                  local_cats = {c['code'] for c in d.get('categories', [])}
-
-                  # Products must reference valid categories
-                  for prod in d.get('products', []):
-                      cat = prod.get('category', '')
-                      if cat not in local_cats:
-                          errors.append(f'{path}: Product \"{prod.get(\"code\",\"?\")}\" references unknown category \"{cat}\"')
-
-                  # includes must resolve to existing files
-                  for inc in d.get('includes', []):
-                      inc_path = f'data/products/{inc}.json'
-                      if not os.path.isfile(inc_path):
-                          errors.append(f'{path}: Include \"{inc}\" not found (expected {inc_path})')
-
-                  # image references must exist
-                  for prod in d.get('products', []):
-                      img = prod.get('image')
-                      if img:
-                          img_path = f'data/assets/{img}'
-                          if not os.path.isfile(img_path):
-                              errors.append(f'{path}: Product \"{prod[\"code\"]}\" image \"{img}\" not found at {img_path}')
-
-          # --- 5. LocalizedString: en key always present in all name fields ---
-          # (Already covered by JSON Schema, but extra safety for nested structures)
-
-          # --- Report ---
-          if errors:
-              print(f'Found {len(errors)} validation errors:', file=sys.stderr)
-              for e in errors: print(f'  ERROR: {e}', file=sys.stderr)
-              sys.exit(1)
-          else:
-              print(f'All JSON files validated successfully ({len(all_json)} files)')
-          "
-
-      - name: Regenerate manifest with checksums
-        run: |
-          python3 -c "
-          import json, hashlib, os
-          from datetime import datetime, timezone
-
-          checksums = {}
-          for root, dirs, files in os.walk('data'):
-              for f in sorted(files):
-                  if not f.endswith('.json') or f == 'manifest.json': continue
-                  path = os.path.join(root, f)
-                  with open(path, 'rb') as fh:
-                      sha = hashlib.sha256(fh.read()).hexdigest()
-                  checksums[path] = f'sha256:{sha}'
-
-          manifest = {
-              'version': '1.0.0',
-              'schema_version': '1',
-              'last_updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-              'file_count': len(checksums),
-              'checksums': checksums
-          }
-
-          with open('data/manifest.json', 'w') as f:
-              json.dump(manifest, f, indent=2)
-          print(f'Manifest updated with {len(checksums)} files')
-          "
-
-      - name: Upload to S3
-        run: |
-          pip install awscli
-          # Data files (1h cache)
-          aws s3 sync data/ s3://erplora-storage/blueprints/v1/ \
-            --cache-control "max-age=3600" \
-            --delete
-          # Assets with longer cache (24h)
-          aws s3 sync data/assets/ s3://erplora-storage/blueprints/v1/assets/ \
-            --cache-control "max-age=86400"
-          # Manifest with short cache (5min)
-          aws s3 cp data/manifest.json s3://erplora-storage/blueprints/v1/manifest.json \
-            --cache-control "max-age=300"
-          echo "Published to s3://erplora-storage/blueprints/v1/"
+          aws s3 sync assets/ s3://erplora-storage/assets/ \
+            --delete \
+            --exclude "*" \
+            --include "*.webp" \
+            --cache-control "max-age=86400" \
+            --content-type "image/webp"
+          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-storage/assets/"
