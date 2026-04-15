@@ -11,8 +11,17 @@ on:
 jobs:
   validate-and-publish:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # Required for OIDC
+      contents: read
     steps:
       - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::363427305647:role/github-actions-deploy
+          aws-region: eu-west-1
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -171,10 +180,6 @@ jobs:
           "
 
       - name: Upload to S3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: eu-west-1
         run: |
           pip install awscli
           # Data files (1h cache)
