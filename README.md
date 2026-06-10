@@ -13,7 +13,6 @@ assets/
 ├── fitness/
 ├── hospitality/
 ├── retail/
-├── tobacco/
 └── wellness_spa/
 ```
 
@@ -27,12 +26,15 @@ Each folder contains images named descriptively (e.g. `coffee_espresso.webp`, `h
 
 ## Contribute
 
-New images are welcome. To convert PNGs to the expected format:
+New images are welcome. To convert PNGs/JPGs to the expected format:
 
 ```bash
 pip install pillow
-python scripts/convert_to_webp.py path/to/image.png
+python scripts/convert_to_webp.py path/to/image.png   # single file or directory
+python scripts/convert_to_webp.py                     # whole assets/ tree
 ```
+
+Options: `--quality N` (default 85), `--delete-originals`, `--dry-run`.
 
 Then submit a PR with the file placed under the correct sector folder.
 
