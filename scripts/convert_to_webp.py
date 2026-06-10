@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """
-Convert all PNG and JPG images in data/assets/ to WebP format.
+Convert PNG and JPG images under assets/ to WebP format (512x512, quality 85).
 
 Usage:
-    python scripts/convert_to_webp.py [--quality 85] [--delete-originals] [--dry-run]
+    python scripts/convert_to_webp.py [paths ...] [--quality 85] [--delete-originals] [--dry-run]
+
+Arguments:
+    paths               Optional image files or directories to convert.
+                        Defaults to the whole assets/ tree.
 
 Options:
     --quality N         WebP quality (1-100, default 85)
     --delete-originals  Delete original PNG/JPG files after conversion
     --dry-run           Show what would be done without converting
-    --update-json       Update image references in data/products/es/*.json
 """
 
 import argparse
-import json
-import os
 import sys
 from pathlib import Path
 
@@ -25,11 +26,12 @@ except ImportError:
     sys.exit(1)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-ASSETS_DIR = REPO_ROOT / "data" / "assets"
-PRODUCTS_DIR = REPO_ROOT / "data" / "products" / "es"
-
+ASSETS_DIR = REPO_ROOT / "assets"
+# Legacy layout (pre-73295d7); kept as fallback for old checkouts.
+LEGACY_ASSETS_DIR = REPO_ROOT / "data" / "assets"
 
 TARGET_SIZE = (512, 512)
+SOURCE_SUFFIXES = (".png", ".jpg", ".jpeg")
 
 
 def convert_image(src: Path, quality: int, dry_run: bool) -> bool:
@@ -66,44 +68,61 @@ def convert_image(src: Path, quality: int, dry_run: bool) -> bool:
         return False
 
 
-def update_json_refs(ext: str, dry_run: bool) -> int:
-    """Update .png/.jpg references to .webp in all JSON catalogs."""
-    if not PRODUCTS_DIR.exists():
-        return 0
+def collect_sources(paths: list[str]) -> list[Path]:
+    """Resolve CLI paths (or the assets/ tree) into a list of source images."""
+    if paths:
+        files: list[Path] = []
+        for raw in paths:
+            p = Path(raw)
+            if not p.exists():
+                print(f"Error: path not found: {p}")
+                sys.exit(1)
+            if p.is_dir():
+                files.extend(
+                    f
+                    for suffix in SOURCE_SUFFIXES
+                    for f in sorted(p.rglob(f"*{suffix}"))
+                )
+            elif p.suffix.lower() in SOURCE_SUFFIXES:
+                files.append(p)
+            else:
+                print(f"Error: unsupported file type (expected PNG/JPG): {p}")
+                sys.exit(1)
+        return files
 
-    total = 0
-    for json_file in sorted(PRODUCTS_DIR.glob("*.json")):
-        text = json_file.read_text(encoding="utf-8")
-        new_text = text.replace(f".{ext}\"", '.webp"')
-
-        changes = text.count(f".{ext}\"") - new_text.count(f".{ext}\"")
-        if changes > 0:
-            if not dry_run:
-                json_file.write_text(new_text, encoding="utf-8")
-            print(f"  {json_file.name}: {changes} refs .{ext} -> .webp")
-            total += changes
-
-    return total
-
-
-def main():
-    parser = argparse.ArgumentParser(description="Convert images to WebP")
-    parser.add_argument("--quality", type=int, default=85, help="WebP quality (default 85)")
-    parser.add_argument("--delete-originals", action="store_true", help="Delete originals after conversion")
-    parser.add_argument("--dry-run", action="store_true", help="Show what would be done")
-    parser.add_argument("--update-json", action="store_true", help="Update JSON catalog refs")
-    args = parser.parse_args()
-
-    if not ASSETS_DIR.exists():
+    assets_dir = ASSETS_DIR if ASSETS_DIR.exists() else LEGACY_ASSETS_DIR
+    if not assets_dir.exists():
         print(f"Error: Assets directory not found: {ASSETS_DIR}")
         sys.exit(1)
 
-    # Collect all PNG and JPG files
-    png_files = sorted(ASSETS_DIR.rglob("*.png"))
-    jpg_files = sorted(ASSETS_DIR.rglob("*.jpg"))
-    all_files = png_files + jpg_files
+    return [
+        f for suffix in SOURCE_SUFFIXES for f in sorted(assets_dir.rglob(f"*{suffix}"))
+    ]
 
-    print(f"Found {len(png_files)} PNG + {len(jpg_files)} JPG = {len(all_files)} images")
+
+def main():
+    parser = argparse.ArgumentParser(description="Convert images to WebP (512x512)")
+    parser.add_argument(
+        "paths",
+        nargs="*",
+        help="Image files or directories to convert (default: whole assets/ tree)",
+    )
+    parser.add_argument(
+        "--quality", type=int, default=85, help="WebP quality (default 85)"
+    )
+    parser.add_argument(
+        "--delete-originals",
+        action="store_true",
+        help="Delete originals after conversion",
+    )
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Show what would be done"
+    )
+    args = parser.parse_args()
+
+    all_files = collect_sources(args.paths)
+
+    print(f"Found {len(all_files)} PNG/JPG images")
     print(f"Quality: {args.quality}, Delete originals: {args.delete_originals}")
     if args.dry_run:
         print("** DRY RUN — no files will be modified **")
@@ -114,17 +133,15 @@ def main():
     errors = 0
     saved_bytes = 0
 
-    for sector_dir in sorted(ASSETS_DIR.iterdir()):
-        if not sector_dir.is_dir():
-            continue
+    by_dir: dict[Path, list[Path]] = {}
+    for f in all_files:
+        by_dir.setdefault(f.parent, []).append(f)
 
-        sector_files = [f for f in all_files if f.parent == sector_dir]
-        if not sector_files:
-            continue
+    for parent in sorted(by_dir):
+        files = by_dir[parent]
+        print(f"[{parent.name}] {len(files)} images")
 
-        print(f"[{sector_dir.name}] {len(sector_files)} images")
-
-        for src in sector_files:
+        for src in files:
             original_size = src.stat().st_size
             if convert_image(src, args.quality, args.dry_run):
                 converted += 1
@@ -148,15 +165,6 @@ def main():
     if saved_bytes and not args.dry_run:
         mb = saved_bytes / (1024 * 1024)
         print(f"Space saved: {mb:.1f} MB")
-
-    if args.update_json:
-        print()
-        print("Updating JSON references...")
-        total_refs = 0
-        for ext in ("png", "jpg"):
-            refs = update_json_refs(ext, args.dry_run)
-            total_refs += refs
-        print(f"Total refs updated: {total_refs}")
 
     print()
     print("Done.")
