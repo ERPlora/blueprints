@@ -1,0 +1,31 @@
+name: Validate assets
+
+on:
+  pull_request:
+    paths:
+      - 'assets/**'
+      - 'scripts/validate_assets.py'
+      - '.github/workflows/validate-assets.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/**'
+      - 'scripts/validate_assets.py'
+      - '.github/workflows/validate-assets.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Validate assets (WebP 512x512, snake_case, solo WebP)
+        run: python scripts/validate_assets.py assets

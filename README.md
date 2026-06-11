@@ -38,6 +38,14 @@ Options: `--quality N` (default 85), `--delete-originals`, `--dry-run`.
 
 Then submit a PR with the file placed under the correct sector folder.
 
+PRs touching `assets/` are gated by CI (`validate-assets.yml`): only real `.webp` files,
+exactly 512×512, `snake_case.webp` names. You can run the same check locally:
+
+```bash
+pip install pillow
+python scripts/validate_assets.py
+```
+
 ## Served via CDN
 
 On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/assets/` and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
