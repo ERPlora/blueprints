@@ -1,0 +1,2363 @@
+{
+  "sector": "hospitality",
+  "currency": "EUR",
+  "tax_rate": 10,
+  "categories": [
+    {
+      "key": "cafes",
+      "name": "Cafés e infusiones",
+      "icon": "cafe-outline",
+      "order": 0
+    },
+    {
+      "key": "refrescos",
+      "name": "Refrescos y zumos",
+      "icon": "nutrition-outline",
+      "order": 1
+    },
+    {
+      "key": "cervezas",
+      "name": "Cervezas",
+      "icon": "beer-outline",
+      "order": 2
+    },
+    {
+      "key": "vinos",
+      "name": "Vinos y vermut",
+      "icon": "wine-outline",
+      "order": 3
+    },
+    {
+      "key": "cocteles",
+      "name": "Cócteles y copas",
+      "icon": "wine-outline",
+      "order": 4
+    },
+    {
+      "key": "desayunos",
+      "name": "Desayunos y tostadas",
+      "icon": "sunny-outline",
+      "order": 5
+    },
+    {
+      "key": "tapas",
+      "name": "Tapas y raciones",
+      "icon": "restaurant-outline",
+      "order": 6
+    },
+    {
+      "key": "ensaladas",
+      "name": "Ensaladas",
+      "icon": "leaf-outline",
+      "order": 7
+    },
+    {
+      "key": "arroces",
+      "name": "Arroces y pastas",
+      "icon": "restaurant-outline",
+      "order": 8
+    },
+    {
+      "key": "pizzas",
+      "name": "Pizzas",
+      "icon": "pizza-outline",
+      "order": 9
+    },
+    {
+      "key": "kebabs",
+      "name": "Kebabs y durum",
+      "icon": "fast-food-outline",
+      "order": 10
+    },
+    {
+      "key": "bocadillos",
+      "name": "Bocadillos y wraps",
+      "icon": "fast-food-outline",
+      "order": 11
+    },
+    {
+      "key": "japones",
+      "name": "Sushi y cocina asiática",
+      "icon": "fish-outline",
+      "order": 12
+    },
+    {
+      "key": "carnes",
+      "name": "Carnes",
+      "icon": "restaurant-outline",
+      "order": 13
+    },
+    {
+      "key": "pescados",
+      "name": "Pescados",
+      "icon": "fish-outline",
+      "order": 14
+    },
+    {
+      "key": "menus",
+      "name": "Menús",
+      "icon": "list-outline",
+      "order": 15
+    },
+    {
+      "key": "postres",
+      "name": "Postres y helados",
+      "icon": "ice-cream-outline",
+      "order": 16
+    },
+    {
+      "key": "panes",
+      "name": "Panadería",
+      "icon": "pizza-outline",
+      "order": 17
+    },
+    {
+      "key": "extras",
+      "name": "Extras y complementos",
+      "icon": "add-circle-outline",
+      "order": 18
+    }
+  ],
+  "products": [
+    {
+      "sku": "agua_con_gas",
+      "name": "Agua con gas",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/agua_con_gas.webp"
+    },
+    {
+      "sku": "agua_mineral",
+      "name": "Agua mineral",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/agua_mineral.webp"
+    },
+    {
+      "sku": "alitas_pollo",
+      "name": "Alitas pollo",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/alitas_pollo.webp"
+    },
+    {
+      "sku": "americano",
+      "name": "Americano",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/americano.webp"
+    },
+    {
+      "sku": "aquarius",
+      "name": "Aquarius",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/aquarius.webp"
+    },
+    {
+      "sku": "aros_cebolla",
+      "name": "Aros cebolla",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/aros_cebolla.webp"
+    },
+    {
+      "sku": "arroz_banda",
+      "name": "Arroz banda",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/arroz_banda.webp"
+    },
+    {
+      "sku": "arroz_extra",
+      "name": "Arroz extra",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/arroz_extra.webp"
+    },
+    {
+      "sku": "arroz_negro",
+      "name": "Arroz negro",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/arroz_negro.webp"
+    },
+    {
+      "sku": "arroz_wok",
+      "name": "Arroz wok",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/arroz_wok.webp"
+    },
+    {
+      "sku": "ayran",
+      "name": "Ayran",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ayran.webp"
+    },
+    {
+      "sku": "bagel_salmon",
+      "name": "Bagel salmon",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bagel_salmon.webp"
+    },
+    {
+      "sku": "barra_pan",
+      "name": "Barra pan",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/barra_pan.webp"
+    },
+    {
+      "sku": "batido_chocolate",
+      "name": "Batido chocolate",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/batido_chocolate.webp"
+    },
+    {
+      "sku": "batido_fresa",
+      "name": "Batido fresa",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/batido_fresa.webp"
+    },
+    {
+      "sku": "batido_vainilla",
+      "name": "Batido vainilla",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/batido_vainilla.webp"
+    },
+    {
+      "sku": "bocadillo_calamares",
+      "name": "Bocadillo calamares",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_calamares.webp"
+    },
+    {
+      "sku": "bocadillo_jamon",
+      "name": "Bocadillo jamon",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_jamon.webp"
+    },
+    {
+      "sku": "bocadillo_jamon_queso",
+      "name": "Bocadillo jamon queso",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_jamon_queso.webp"
+    },
+    {
+      "sku": "bocadillo_lomo",
+      "name": "Bocadillo lomo",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_lomo.webp"
+    },
+    {
+      "sku": "bocadillo_pulled_pork",
+      "name": "Bocadillo pulled pork",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_pulled_pork.webp"
+    },
+    {
+      "sku": "bocadillo_tortilla",
+      "name": "Bocadillo tortilla",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_tortilla.webp"
+    },
+    {
+      "sku": "bocadillo_vegetal",
+      "name": "Bocadillo vegetal",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bocadillo_vegetal.webp"
+    },
+    {
+      "sku": "botella_albarino",
+      "name": "Botella albarino",
+      "category": "vinos",
+      "price": 18.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/botella_albarino.webp"
+    },
+    {
+      "sku": "botella_champagne",
+      "name": "Botella champagne",
+      "category": "vinos",
+      "price": 45.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/botella_champagne.webp"
+    },
+    {
+      "sku": "botella_ribera_duero",
+      "name": "Botella ribera duero",
+      "category": "vinos",
+      "price": 22.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/botella_ribera_duero.webp"
+    },
+    {
+      "sku": "botella_rioja_crianza",
+      "name": "Botella rioja crianza",
+      "category": "vinos",
+      "price": 19.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/botella_rioja_crianza.webp"
+    },
+    {
+      "sku": "bowl_pollo",
+      "name": "Bowl pollo",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bowl_pollo.webp"
+    },
+    {
+      "sku": "brownie",
+      "name": "Brownie",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/brownie.webp"
+    },
+    {
+      "sku": "brownie_chocolate",
+      "name": "Brownie chocolate",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/brownie_chocolate.webp"
+    },
+    {
+      "sku": "bruschetta",
+      "name": "Bruschetta",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/bruschetta.webp"
+    },
+    {
+      "sku": "cafe_bombom",
+      "name": "Cafe bombom",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cafe_bombom.webp"
+    },
+    {
+      "sku": "cafe_con_leche",
+      "name": "Cafe con leche",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cafe_con_leche.webp"
+    },
+    {
+      "sku": "cafe_cortado",
+      "name": "Cafe cortado",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cafe_cortado.webp"
+    },
+    {
+      "sku": "cafe_helado",
+      "name": "Cafe helado",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cafe_helado.webp"
+    },
+    {
+      "sku": "cafe_solo",
+      "name": "Cafe solo",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cafe_solo.webp"
+    },
+    {
+      "sku": "calamares_romana",
+      "name": "Calamares romana",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/calamares_romana.webp"
+    },
+    {
+      "sku": "california_roll",
+      "name": "California roll",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/california_roll.webp"
+    },
+    {
+      "sku": "capuchino",
+      "name": "Capuchino",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/capuchino.webp"
+    },
+    {
+      "sku": "carajillo",
+      "name": "Carajillo",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/carajillo.webp"
+    },
+    {
+      "sku": "cerveza_botella",
+      "name": "Cerveza botella",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cerveza_botella.webp"
+    },
+    {
+      "sku": "cerveza_cana",
+      "name": "Cerveza cana",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cerveza_cana.webp"
+    },
+    {
+      "sku": "cerveza_japonesa",
+      "name": "Cerveza japonesa",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cerveza_japonesa.webp"
+    },
+    {
+      "sku": "cerveza_jarra",
+      "name": "Cerveza jarra",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cerveza_jarra.webp"
+    },
+    {
+      "sku": "cerveza_sin",
+      "name": "Cerveza sin",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cerveza_sin.webp"
+    },
+    {
+      "sku": "chai_latte",
+      "name": "Chai latte",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/chai_latte.webp"
+    },
+    {
+      "sku": "chapata",
+      "name": "Chapata",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/chapata.webp"
+    },
+    {
+      "sku": "cheesecake",
+      "name": "Cheesecake",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cheesecake.webp"
+    },
+    {
+      "sku": "chupito_jager",
+      "name": "Chupito jager",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/chupito_jager.webp"
+    },
+    {
+      "sku": "chupito_sambuca",
+      "name": "Chupito sambuca",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/chupito_sambuca.webp"
+    },
+    {
+      "sku": "chupito_tequila",
+      "name": "Chupito tequila",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/chupito_tequila.webp"
+    },
+    {
+      "sku": "churros",
+      "name": "Churros",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/churros.webp"
+    },
+    {
+      "sku": "clara",
+      "name": "Clara",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/clara.webp"
+    },
+    {
+      "sku": "coca_cola",
+      "name": "Coca cola",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/coca_cola.webp"
+    },
+    {
+      "sku": "coca_cola_zero",
+      "name": "Coca cola zero",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/coca_cola_zero.webp"
+    },
+    {
+      "sku": "cookie",
+      "name": "Cookie",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cookie.webp"
+    },
+    {
+      "sku": "copa_albarino",
+      "name": "Copa albarino",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/copa_albarino.webp"
+    },
+    {
+      "sku": "copa_cava",
+      "name": "Copa cava",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/copa_cava.webp"
+    },
+    {
+      "sku": "copa_helado",
+      "name": "Copa helado",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/copa_helado.webp"
+    },
+    {
+      "sku": "copa_ribera_duero",
+      "name": "Copa ribera duero",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/copa_ribera_duero.webp"
+    },
+    {
+      "sku": "copa_rioja_crianza",
+      "name": "Copa rioja crianza",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/copa_rioja_crianza.webp"
+    },
+    {
+      "sku": "copa_verdejo",
+      "name": "Copa verdejo",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/copa_verdejo.webp"
+    },
+    {
+      "sku": "crema_catalana",
+      "name": "Crema catalana",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/crema_catalana.webp"
+    },
+    {
+      "sku": "crepe_nutella",
+      "name": "Crepe nutella",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/crepe_nutella.webp"
+    },
+    {
+      "sku": "croissant",
+      "name": "Croissant",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/croissant.webp"
+    },
+    {
+      "sku": "croissant_chocolate",
+      "name": "Croissant chocolate",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/croissant_chocolate.webp"
+    },
+    {
+      "sku": "croquetas_jamon",
+      "name": "Croquetas jamon",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/croquetas_jamon.webp"
+    },
+    {
+      "sku": "cuba_libre",
+      "name": "Cuba libre",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cuba_libre.webp"
+    },
+    {
+      "sku": "cubata_ron",
+      "name": "Cubata ron",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cubata_ron.webp"
+    },
+    {
+      "sku": "cubata_vodka",
+      "name": "Cubata vodka",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/cubata_vodka.webp"
+    },
+    {
+      "sku": "culin_sidra",
+      "name": "Culin sidra",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/culin_sidra.webp"
+    },
+    {
+      "sku": "desayuno_buffet",
+      "name": "Desayuno buffet",
+      "category": "menus",
+      "price": 14.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/desayuno_buffet.webp"
+    },
+    {
+      "sku": "desayuno_continental",
+      "name": "Desayuno continental",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/desayuno_continental.webp"
+    },
+    {
+      "sku": "descafeinado",
+      "name": "Descafeinado",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/descafeinado.webp"
+    },
+    {
+      "sku": "doble_espresso",
+      "name": "Doble espresso",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/doble_espresso.webp"
+    },
+    {
+      "sku": "dragon_roll",
+      "name": "Dragon roll",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/dragon_roll.webp"
+    },
+    {
+      "sku": "durum_mixto",
+      "name": "Durum mixto",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/durum_mixto.webp"
+    },
+    {
+      "sku": "durum_pollo",
+      "name": "Durum pollo",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/durum_pollo.webp"
+    },
+    {
+      "sku": "durum_ternera",
+      "name": "Durum ternera",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/durum_ternera.webp"
+    },
+    {
+      "sku": "edamame",
+      "name": "Edamame",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/edamame.webp"
+    },
+    {
+      "sku": "ensaimada",
+      "name": "Ensaimada",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensaimada.webp"
+    },
+    {
+      "sku": "ensalada_acomp",
+      "name": "Ensalada acomp",
+      "category": "ensaladas",
+      "price": 7.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensalada_acomp.webp"
+    },
+    {
+      "sku": "ensalada_caprese",
+      "name": "Ensalada caprese",
+      "category": "ensaladas",
+      "price": 7.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensalada_caprese.webp"
+    },
+    {
+      "sku": "ensalada_cesar",
+      "name": "Ensalada cesar",
+      "category": "ensaladas",
+      "price": 7.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensalada_cesar.webp"
+    },
+    {
+      "sku": "ensalada_mixta",
+      "name": "Ensalada mixta",
+      "category": "ensaladas",
+      "price": 7.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensalada_mixta.webp"
+    },
+    {
+      "sku": "ensalada_turca",
+      "name": "Ensalada turca",
+      "category": "ensaladas",
+      "price": 7.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensalada_turca.webp"
+    },
+    {
+      "sku": "ensalada_wakame",
+      "name": "Ensalada wakame",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ensalada_wakame.webp"
+    },
+    {
+      "sku": "entrecot",
+      "name": "Entrecot",
+      "category": "carnes",
+      "price": 18.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/entrecot.webp"
+    },
+    {
+      "sku": "espeto_sardinas",
+      "name": "Espeto sardinas",
+      "category": "pescados",
+      "price": 9.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/espeto_sardinas.webp"
+    },
+    {
+      "sku": "espresso",
+      "name": "Espresso",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/espresso.webp"
+    },
+    {
+      "sku": "fanta_limon",
+      "name": "Fanta limon",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/fanta_limon.webp"
+    },
+    {
+      "sku": "fanta_naranja",
+      "name": "Fanta naranja",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/fanta_naranja.webp"
+    },
+    {
+      "sku": "fideua",
+      "name": "Fideua",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/fideua.webp"
+    },
+    {
+      "sku": "flan_casero",
+      "name": "Flan casero",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/flan_casero.webp"
+    },
+    {
+      "sku": "flat_white",
+      "name": "Flat white",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/flat_white.webp"
+    },
+    {
+      "sku": "focaccia",
+      "name": "Focaccia",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/focaccia.webp"
+    },
+    {
+      "sku": "frappuccino",
+      "name": "Frappuccino",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/frappuccino.webp"
+    },
+    {
+      "sku": "galleta_chocolate",
+      "name": "Galleta chocolate",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/galleta_chocolate.webp"
+    },
+    {
+      "sku": "galleta_mantequilla",
+      "name": "Galleta mantequilla",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/galleta_mantequilla.webp"
+    },
+    {
+      "sku": "gambas_ajillo",
+      "name": "Gambas ajillo",
+      "category": "tapas",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/gambas_ajillo.webp"
+    },
+    {
+      "sku": "gambas_plancha",
+      "name": "Gambas plancha",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/gambas_plancha.webp"
+    },
+    {
+      "sku": "gazpacho",
+      "name": "Gazpacho",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/gazpacho.webp"
+    },
+    {
+      "sku": "gin_tonic",
+      "name": "Gin tonic",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/gin_tonic.webp"
+    },
+    {
+      "sku": "gofre_clasico",
+      "name": "Gofre clasico",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/gofre_clasico.webp"
+    },
+    {
+      "sku": "granizado_cafe",
+      "name": "Granizado cafe",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/granizado_cafe.webp"
+    },
+    {
+      "sku": "granizado_limon",
+      "name": "Granizado limon",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/granizado_limon.webp"
+    },
+    {
+      "sku": "gyozas",
+      "name": "Gyozas",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/gyozas.webp"
+    },
+    {
+      "sku": "hamburguesa_clasica",
+      "name": "Hamburguesa clasica",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hamburguesa_clasica.webp"
+    },
+    {
+      "sku": "hamburguesa_doble",
+      "name": "Hamburguesa doble",
+      "category": "carnes",
+      "price": 11.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hamburguesa_doble.webp"
+    },
+    {
+      "sku": "hamburguesa_gourmet",
+      "name": "Hamburguesa gourmet",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hamburguesa_gourmet.webp"
+    },
+    {
+      "sku": "hamburguesa_pollo",
+      "name": "Hamburguesa pollo",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hamburguesa_pollo.webp"
+    },
+    {
+      "sku": "hamburguesa_queso",
+      "name": "Hamburguesa queso",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hamburguesa_queso.webp"
+    },
+    {
+      "sku": "hamburguesa_smash",
+      "name": "Hamburguesa smash",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hamburguesa_smash.webp"
+    },
+    {
+      "sku": "helado_1_bola",
+      "name": "Helado 1 bola",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/helado_1_bola.webp"
+    },
+    {
+      "sku": "helado_2_bolas",
+      "name": "Helado 2 bolas",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/helado_2_bolas.webp"
+    },
+    {
+      "sku": "helado_3_bolas",
+      "name": "Helado 3 bolas",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/helado_3_bolas.webp"
+    },
+    {
+      "sku": "helado_bola",
+      "name": "Helado bola",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/helado_bola.webp"
+    },
+    {
+      "sku": "helado_soft",
+      "name": "Helado soft",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/helado_soft.webp"
+    },
+    {
+      "sku": "hielo",
+      "name": "Hielo",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hielo.webp"
+    },
+    {
+      "sku": "hogaza",
+      "name": "Hogaza",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hogaza.webp"
+    },
+    {
+      "sku": "hummus",
+      "name": "Hummus",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/hummus.webp"
+    },
+    {
+      "sku": "ipa_artesana",
+      "name": "Ipa artesana",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ipa_artesana.webp"
+    },
+    {
+      "sku": "jamon_iberico",
+      "name": "Jamon iberico",
+      "category": "tapas",
+      "price": 18.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/jamon_iberico.webp"
+    },
+    {
+      "sku": "kebab_falafel",
+      "name": "Kebab falafel",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/kebab_falafel.webp"
+    },
+    {
+      "sku": "kebab_mixto",
+      "name": "Kebab mixto",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/kebab_mixto.webp"
+    },
+    {
+      "sku": "kebab_pollo",
+      "name": "Kebab pollo",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/kebab_pollo.webp"
+    },
+    {
+      "sku": "kebab_ternera",
+      "name": "Kebab ternera",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/kebab_ternera.webp"
+    },
+    {
+      "sku": "lahmacun",
+      "name": "Lahmacun",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/lahmacun.webp"
+    },
+    {
+      "sku": "lasana",
+      "name": "Lasana",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/lasana.webp"
+    },
+    {
+      "sku": "latte",
+      "name": "Latte",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/latte.webp"
+    },
+    {
+      "sku": "latte_caramelo",
+      "name": "Latte caramelo",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/latte_caramelo.webp"
+    },
+    {
+      "sku": "latte_vainilla",
+      "name": "Latte vainilla",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/latte_vainilla.webp"
+    },
+    {
+      "sku": "limonada",
+      "name": "Limonada",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/limonada.webp"
+    },
+    {
+      "sku": "limonada_yuzu",
+      "name": "Limonada yuzu",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/limonada_yuzu.webp"
+    },
+    {
+      "sku": "lubina_horno",
+      "name": "Lubina horno",
+      "category": "pescados",
+      "price": 16.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/lubina_horno.webp"
+    },
+    {
+      "sku": "magdalena",
+      "name": "Magdalena",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/magdalena.webp"
+    },
+    {
+      "sku": "maki_atun",
+      "name": "Maki atun",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/maki_atun.webp"
+    },
+    {
+      "sku": "maki_salmon",
+      "name": "Maki salmon",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/maki_salmon.webp"
+    },
+    {
+      "sku": "manzanilla",
+      "name": "Manzanilla",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/manzanilla.webp"
+    },
+    {
+      "sku": "matcha_latte",
+      "name": "Matcha latte",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/matcha_latte.webp"
+    },
+    {
+      "sku": "menu_dia",
+      "name": "Menu dia",
+      "category": "menus",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/menu_dia.webp"
+    },
+    {
+      "sku": "menu_hamburguesa",
+      "name": "Menu hamburguesa",
+      "category": "menus",
+      "price": 12.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/menu_hamburguesa.webp"
+    },
+    {
+      "sku": "menu_infantil",
+      "name": "Menu infantil",
+      "category": "menus",
+      "price": 8.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/menu_infantil.webp"
+    },
+    {
+      "sku": "menu_kebab",
+      "name": "Menu kebab",
+      "category": "menus",
+      "price": 12.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/menu_kebab.webp"
+    },
+    {
+      "sku": "merluza_plancha",
+      "name": "Merluza plancha",
+      "category": "pescados",
+      "price": 14.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/merluza_plancha.webp"
+    },
+    {
+      "sku": "mesa_dulce",
+      "name": "Mesa dulce",
+      "category": "menus",
+      "price": 12.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/mesa_dulce.webp"
+    },
+    {
+      "sku": "mocha",
+      "name": "Mocha",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/mocha.webp"
+    },
+    {
+      "sku": "mochi_helado",
+      "name": "Mochi helado",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/mochi_helado.webp"
+    },
+    {
+      "sku": "mojito",
+      "name": "Mojito",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/mojito.webp"
+    },
+    {
+      "sku": "muffin_arandanos",
+      "name": "Muffin arandanos",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/muffin_arandanos.webp"
+    },
+    {
+      "sku": "muffin_chocolate",
+      "name": "Muffin chocolate",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/muffin_chocolate.webp"
+    },
+    {
+      "sku": "nachos_queso",
+      "name": "Nachos queso",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nachos_queso.webp"
+    },
+    {
+      "sku": "napolitana_chocolate",
+      "name": "Napolitana chocolate",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/napolitana_chocolate.webp"
+    },
+    {
+      "sku": "nigiri_anguila",
+      "name": "Nigiri anguila",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nigiri_anguila.webp"
+    },
+    {
+      "sku": "nigiri_atun",
+      "name": "Nigiri atun",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nigiri_atun.webp"
+    },
+    {
+      "sku": "nigiri_gamba",
+      "name": "Nigiri gamba",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nigiri_gamba.webp"
+    },
+    {
+      "sku": "nigiri_pulpo",
+      "name": "Nigiri pulpo",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nigiri_pulpo.webp"
+    },
+    {
+      "sku": "nigiri_salmon",
+      "name": "Nigiri salmon",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nigiri_salmon.webp"
+    },
+    {
+      "sku": "nuggets",
+      "name": "Nuggets",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/nuggets.webp"
+    },
+    {
+      "sku": "pad_thai",
+      "name": "Pad thai",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pad_thai.webp"
+    },
+    {
+      "sku": "paella_marisco",
+      "name": "Paella marisco",
+      "category": "arroces",
+      "price": 16.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/paella_marisco.webp"
+    },
+    {
+      "sku": "paella_mixta",
+      "name": "Paella mixta",
+      "category": "arroces",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/paella_mixta.webp"
+    },
+    {
+      "sku": "paella_valenciana",
+      "name": "Paella valenciana",
+      "category": "arroces",
+      "price": 13.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/paella_valenciana.webp"
+    },
+    {
+      "sku": "pale_ale",
+      "name": "Pale ale",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pale_ale.webp"
+    },
+    {
+      "sku": "palmera_chocolate",
+      "name": "Palmera chocolate",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/palmera_chocolate.webp"
+    },
+    {
+      "sku": "pan_ajo",
+      "name": "Pan ajo",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pan_ajo.webp"
+    },
+    {
+      "sku": "pan_centeno",
+      "name": "Pan centeno",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pan_centeno.webp"
+    },
+    {
+      "sku": "pan_integral",
+      "name": "Pan integral",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pan_integral.webp"
+    },
+    {
+      "sku": "pan_pita",
+      "name": "Pan pita",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pan_pita.webp"
+    },
+    {
+      "sku": "pan_semillas",
+      "name": "Pan semillas",
+      "category": "panes",
+      "price": 1.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pan_semillas.webp"
+    },
+    {
+      "sku": "panna_cotta",
+      "name": "Panna cotta",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/panna_cotta.webp"
+    },
+    {
+      "sku": "pasta_bolonesa",
+      "name": "Pasta bolonesa",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pasta_bolonesa.webp"
+    },
+    {
+      "sku": "pasta_carbonara",
+      "name": "Pasta carbonara",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pasta_carbonara.webp"
+    },
+    {
+      "sku": "pasta_pesto",
+      "name": "Pasta pesto",
+      "category": "arroces",
+      "price": 11.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pasta_pesto.webp"
+    },
+    {
+      "sku": "patatas_bravas",
+      "name": "Patatas bravas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/patatas_bravas.webp"
+    },
+    {
+      "sku": "patatas_fritas",
+      "name": "Patatas fritas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/patatas_fritas.webp"
+    },
+    {
+      "sku": "perrito_clasico",
+      "name": "Perrito clasico",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/perrito_clasico.webp"
+    },
+    {
+      "sku": "pescaito_frito",
+      "name": "Pescaito frito",
+      "category": "pescados",
+      "price": 14.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pescaito_frito.webp"
+    },
+    {
+      "sku": "pincho_tortilla",
+      "name": "Pincho tortilla",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pincho_tortilla.webp"
+    },
+    {
+      "sku": "pizza_4_quesos",
+      "name": "Pizza 4 quesos",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_4_quesos.webp"
+    },
+    {
+      "sku": "pizza_barbacoa",
+      "name": "Pizza barbacoa",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_barbacoa.webp"
+    },
+    {
+      "sku": "pizza_calzone",
+      "name": "Pizza calzone",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_calzone.webp"
+    },
+    {
+      "sku": "pizza_caprichosa",
+      "name": "Pizza caprichosa",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_caprichosa.webp"
+    },
+    {
+      "sku": "pizza_carbonara",
+      "name": "Pizza carbonara",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_carbonara.webp"
+    },
+    {
+      "sku": "pizza_diavola",
+      "name": "Pizza diavola",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_diavola.webp"
+    },
+    {
+      "sku": "pizza_familiar",
+      "name": "Pizza familiar",
+      "category": "pizzas",
+      "price": 14.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_familiar.webp"
+    },
+    {
+      "sku": "pizza_hawaiana",
+      "name": "Pizza hawaiana",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_hawaiana.webp"
+    },
+    {
+      "sku": "pizza_jamon_queso",
+      "name": "Pizza jamon queso",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_jamon_queso.webp"
+    },
+    {
+      "sku": "pizza_margarita",
+      "name": "Pizza margarita",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_margarita.webp"
+    },
+    {
+      "sku": "pizza_pepperoni",
+      "name": "Pizza pepperoni",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_pepperoni.webp"
+    },
+    {
+      "sku": "pizza_vegetal",
+      "name": "Pizza vegetal",
+      "category": "pizzas",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pizza_vegetal.webp"
+    },
+    {
+      "sku": "plato_falafel",
+      "name": "Plato falafel",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/plato_falafel.webp"
+    },
+    {
+      "sku": "plato_kebab",
+      "name": "Plato kebab",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/plato_kebab.webp"
+    },
+    {
+      "sku": "poke_atun",
+      "name": "Poke atun",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/poke_atun.webp"
+    },
+    {
+      "sku": "poke_salmon",
+      "name": "Poke salmon",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/poke_salmon.webp"
+    },
+    {
+      "sku": "poleo_menta",
+      "name": "Poleo menta",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/poleo_menta.webp"
+    },
+    {
+      "sku": "pollo_asado",
+      "name": "Pollo asado",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pollo_asado.webp"
+    },
+    {
+      "sku": "pollo_teriyaki",
+      "name": "Pollo teriyaki",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pollo_teriyaki.webp"
+    },
+    {
+      "sku": "pulpo_gallega",
+      "name": "Pulpo gallega",
+      "category": "pescados",
+      "price": 16.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/pulpo_gallega.webp"
+    },
+    {
+      "sku": "racion_cachopo",
+      "name": "Racion cachopo",
+      "category": "carnes",
+      "price": 16.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/racion_cachopo.webp"
+    },
+    {
+      "sku": "racion_croquetas",
+      "name": "Racion croquetas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/racion_croquetas.webp"
+    },
+    {
+      "sku": "racion_gambas",
+      "name": "Racion gambas",
+      "category": "tapas",
+      "price": 12.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/racion_gambas.webp"
+    },
+    {
+      "sku": "racion_patatas_bravas",
+      "name": "Racion patatas bravas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/racion_patatas_bravas.webp"
+    },
+    {
+      "sku": "racion_rabas",
+      "name": "Racion rabas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/racion_rabas.webp"
+    },
+    {
+      "sku": "ramen_cerdo",
+      "name": "Ramen cerdo",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ramen_cerdo.webp"
+    },
+    {
+      "sku": "ramen_pollo",
+      "name": "Ramen pollo",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ramen_pollo.webp"
+    },
+    {
+      "sku": "ron_cola",
+      "name": "Ron cola",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/ron_cola.webp"
+    },
+    {
+      "sku": "sake_copa",
+      "name": "Sake copa",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sake_copa.webp"
+    },
+    {
+      "sku": "salmon_teriyaki",
+      "name": "Salmon teriyaki",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/salmon_teriyaki.webp"
+    },
+    {
+      "sku": "salmorejo",
+      "name": "Salmorejo",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/salmorejo.webp"
+    },
+    {
+      "sku": "salsa_extra",
+      "name": "Salsa extra",
+      "category": "extras",
+      "price": 1.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/salsa_extra.webp"
+    },
+    {
+      "sku": "salsa_yogur",
+      "name": "Salsa yogur",
+      "category": "extras",
+      "price": 1.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/salsa_yogur.webp"
+    },
+    {
+      "sku": "sandwich_mixto",
+      "name": "Sandwich mixto",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sandwich_mixto.webp"
+    },
+    {
+      "sku": "sandwich_vegetal",
+      "name": "Sandwich vegetal",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sandwich_vegetal.webp"
+    },
+    {
+      "sku": "sangria_jarra",
+      "name": "Sangria jarra",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sangria_jarra.webp"
+    },
+    {
+      "sku": "sashimi_atun",
+      "name": "Sashimi atun",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sashimi_atun.webp"
+    },
+    {
+      "sku": "sashimi_mixto",
+      "name": "Sashimi mixto",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sashimi_mixto.webp"
+    },
+    {
+      "sku": "sashimi_salmon",
+      "name": "Sashimi salmon",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sashimi_salmon.webp"
+    },
+    {
+      "sku": "secreto_iberico",
+      "name": "Secreto iberico",
+      "category": "carnes",
+      "price": 15.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/secreto_iberico.webp"
+    },
+    {
+      "sku": "shawarma_plato",
+      "name": "Shawarma plato",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/shawarma_plato.webp"
+    },
+    {
+      "sku": "sidra_botella",
+      "name": "Sidra botella",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sidra_botella.webp"
+    },
+    {
+      "sku": "sidra_natural",
+      "name": "Sidra natural",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sidra_natural.webp"
+    },
+    {
+      "sku": "smoothie_fresa",
+      "name": "Smoothie fresa",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/smoothie_fresa.webp"
+    },
+    {
+      "sku": "smoothie_mango",
+      "name": "Smoothie mango",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/smoothie_mango.webp"
+    },
+    {
+      "sku": "solomillo",
+      "name": "Solomillo",
+      "category": "carnes",
+      "price": 19.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/solomillo.webp"
+    },
+    {
+      "sku": "sopa_miso",
+      "name": "Sopa miso",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sopa_miso.webp"
+    },
+    {
+      "sku": "spicy_salmon_roll",
+      "name": "Spicy salmon roll",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/spicy_salmon_roll.webp"
+    },
+    {
+      "sku": "spring_rolls",
+      "name": "Spring rolls",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/spring_rolls.webp"
+    },
+    {
+      "sku": "sprite",
+      "name": "Sprite",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/sprite.webp"
+    },
+    {
+      "sku": "stout",
+      "name": "Stout",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/stout.webp"
+    },
+    {
+      "sku": "tabla_embutidos",
+      "name": "Tabla embutidos",
+      "category": "tapas",
+      "price": 14.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tabla_embutidos.webp"
+    },
+    {
+      "sku": "tabla_iberica",
+      "name": "Tabla iberica",
+      "category": "tapas",
+      "price": 16.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tabla_iberica.webp"
+    },
+    {
+      "sku": "tabla_mixta",
+      "name": "Tabla mixta",
+      "category": "tapas",
+      "price": 15.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tabla_mixta.webp"
+    },
+    {
+      "sku": "tabla_quesos",
+      "name": "Tabla quesos",
+      "category": "tapas",
+      "price": 13.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tabla_quesos.webp"
+    },
+    {
+      "sku": "tacos",
+      "name": "Tacos",
+      "category": "carnes",
+      "price": 13.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tacos.webp"
+    },
+    {
+      "sku": "tapa_aceitunas",
+      "name": "Tapa aceitunas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_aceitunas.webp"
+    },
+    {
+      "sku": "tapa_bravas",
+      "name": "Tapa bravas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_bravas.webp"
+    },
+    {
+      "sku": "tapa_croquetas",
+      "name": "Tapa croquetas",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_croquetas.webp"
+    },
+    {
+      "sku": "tapa_jamon",
+      "name": "Tapa jamon",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_jamon.webp"
+    },
+    {
+      "sku": "tapa_queso",
+      "name": "Tapa queso",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_queso.webp"
+    },
+    {
+      "sku": "tapa_queso_manchego",
+      "name": "Tapa queso manchego",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_queso_manchego.webp"
+    },
+    {
+      "sku": "tapa_tortilla",
+      "name": "Tapa tortilla",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tapa_tortilla.webp"
+    },
+    {
+      "sku": "tarrina_1l",
+      "name": "Tarrina 1l",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarrina_1l.webp"
+    },
+    {
+      "sku": "tarrina_500ml",
+      "name": "Tarrina 500ml",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarrina_500ml.webp"
+    },
+    {
+      "sku": "tarta_chocolate",
+      "name": "Tarta chocolate",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarta_chocolate.webp"
+    },
+    {
+      "sku": "tarta_manzana",
+      "name": "Tarta manzana",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarta_manzana.webp"
+    },
+    {
+      "sku": "tarta_matcha",
+      "name": "Tarta matcha",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarta_matcha.webp"
+    },
+    {
+      "sku": "tarta_queso",
+      "name": "Tarta queso",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarta_queso.webp"
+    },
+    {
+      "sku": "tarta_zanahoria",
+      "name": "Tarta zanahoria",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tarta_zanahoria.webp"
+    },
+    {
+      "sku": "te_negro",
+      "name": "Te negro",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/te_negro.webp"
+    },
+    {
+      "sku": "te_rojo",
+      "name": "Te rojo",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/te_rojo.webp"
+    },
+    {
+      "sku": "te_turco",
+      "name": "Te turco",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/te_turco.webp"
+    },
+    {
+      "sku": "te_verde",
+      "name": "Te verde",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/te_verde.webp"
+    },
+    {
+      "sku": "te_verde_japones",
+      "name": "Te verde japones",
+      "category": "cafes",
+      "price": 1.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/te_verde_japones.webp"
+    },
+    {
+      "sku": "tempura_gambas",
+      "name": "Tempura gambas",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tempura_gambas.webp"
+    },
+    {
+      "sku": "tempura_helado",
+      "name": "Tempura helado",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tempura_helado.webp"
+    },
+    {
+      "sku": "tempura_roll",
+      "name": "Tempura roll",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tempura_roll.webp"
+    },
+    {
+      "sku": "tempura_verduras",
+      "name": "Tempura verduras",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tempura_verduras.webp"
+    },
+    {
+      "sku": "tinto_verano",
+      "name": "Tinto verano",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tinto_verano.webp"
+    },
+    {
+      "sku": "tiramisu",
+      "name": "Tiramisu",
+      "category": "postres",
+      "price": 4.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tiramisu.webp"
+    },
+    {
+      "sku": "tonica",
+      "name": "Tonica",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tonica.webp"
+    },
+    {
+      "sku": "tortilla_espanola",
+      "name": "Tortilla espanola",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tortilla_espanola.webp"
+    },
+    {
+      "sku": "tostada_aguacate",
+      "name": "Tostada aguacate",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tostada_aguacate.webp"
+    },
+    {
+      "sku": "tostada_mantequilla",
+      "name": "Tostada mantequilla",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tostada_mantequilla.webp"
+    },
+    {
+      "sku": "tostada_tomate",
+      "name": "Tostada tomate",
+      "category": "desayunos",
+      "price": 2.8,
+      "tax_rate": 10,
+      "image": "assets/hospitality/tostada_tomate.webp"
+    },
+    {
+      "sku": "uramaki_aguacate",
+      "name": "Uramaki aguacate",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/uramaki_aguacate.webp"
+    },
+    {
+      "sku": "vegetariano_roll",
+      "name": "Vegetariano roll",
+      "category": "japones",
+      "price": 9.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/vegetariano_roll.webp"
+    },
+    {
+      "sku": "verduras_plancha",
+      "name": "Verduras plancha",
+      "category": "tapas",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/verduras_plancha.webp"
+    },
+    {
+      "sku": "vermut",
+      "name": "Vermut",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/vermut.webp"
+    },
+    {
+      "sku": "vino_blanco_copa",
+      "name": "Vino blanco copa",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/vino_blanco_copa.webp"
+    },
+    {
+      "sku": "vino_rosado_copa",
+      "name": "Vino rosado copa",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/vino_rosado_copa.webp"
+    },
+    {
+      "sku": "vino_tinto_copa",
+      "name": "Vino tinto copa",
+      "category": "vinos",
+      "price": 3.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/vino_tinto_copa.webp"
+    },
+    {
+      "sku": "wheat_beer",
+      "name": "Wheat beer",
+      "category": "cervezas",
+      "price": 2.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/wheat_beer.webp"
+    },
+    {
+      "sku": "whisky_cola",
+      "name": "Whisky cola",
+      "category": "cocteles",
+      "price": 6.5,
+      "tax_rate": 10,
+      "image": "assets/hospitality/whisky_cola.webp"
+    },
+    {
+      "sku": "wrap_falafel",
+      "name": "Wrap falafel",
+      "category": "kebabs",
+      "price": 7.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/wrap_falafel.webp"
+    },
+    {
+      "sku": "wrap_pollo",
+      "name": "Wrap pollo",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/wrap_pollo.webp"
+    },
+    {
+      "sku": "wrap_vegetal",
+      "name": "Wrap vegetal",
+      "category": "bocadillos",
+      "price": 5.0,
+      "tax_rate": 10,
+      "image": "assets/hospitality/wrap_vegetal.webp"
+    },
+    {
+      "sku": "zumo_naranja",
+      "name": "Zumo naranja",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/zumo_naranja.webp"
+    },
+    {
+      "sku": "zumo_pina",
+      "name": "Zumo pina",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/zumo_pina.webp"
+    },
+    {
+      "sku": "zumo_tomate",
+      "name": "Zumo tomate",
+      "category": "refrescos",
+      "price": 2.2,
+      "tax_rate": 10,
+      "image": "assets/hospitality/zumo_tomate.webp"
+    }
+  ]
+}
