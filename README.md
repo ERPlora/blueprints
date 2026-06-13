@@ -65,7 +65,15 @@ python scripts/build_starter_catalog.py              # todos los sectores con re
 python scripts/build_starter_catalog.py hospitality  # solo uno
 ```
 
-Al añadir imágenes nuevas, re-ejecuta el generador para regenerar el JSON (idempotente).
+Genera dos artefactos por sector:
+- `starter_catalogs/<sector>.json` — el menú en JSON (para consumir por API/onboarding).
+- `starter_catalogs/<sector>.sql` — **SQL idempotente** que siembra `inventory_category` +
+  `inventory_product` (+ M2M) del Hub, mismo estilo que `hub/crates/server/seeds/demo.sql`.
+  Se inyecta vía `HUB_SEED_SQL`/`HUB_SEED_SQL_PATH`; por defecto usa el `hub_id` del demo
+  (`aws/terraform/ecs_demo.tf`), o pásalo con `--hub-id <uuid>`. Requiere que el módulo
+  `inventory` ya esté instalado (sus tablas existan) antes de aplicarse.
+
+Al añadir imágenes nuevas, re-ejecuta el generador para regenerar JSON+SQL (idempotente).
 Hoy hay reglas para `hospitality` (restaurante/bar/cafetería, 280 productos en 19 categorías).
 
 ## License
