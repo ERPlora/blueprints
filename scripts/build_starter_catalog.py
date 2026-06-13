@@ -380,21 +380,108 @@ def build_sector(sector: str) -> dict:
     }
 
 
+# hub_id del despliegue DEMO (aws/terraform/ecs_demo.tf: env HUB_ID). El seed del demo se inyecta
+# vía HUB_SEED_SQL con este hub_id literal. Para hubs por-tenant se pasa --hub-id.
+DEMO_HUB_ID = "00000000-0000-0000-0000-000000000001"
+SEED_TS = "2026-01-01T00:00:00+00:00"
+
+
+def _sql(value: str) -> str:
+    """Literal SQL string con comillas simples escapadas (doblar `'`)."""
+    return "'" + value.replace("'", "''") + "'"
+
+
+def emit_sql(data: dict, hub_id: str) -> str:
+    """Emite SQL idempotente que siembra `inventory_category` + `inventory_product` (+ M2M).
+
+    Mismo estilo que `hub/crates/server/seeds/demo.sql`: `INSERT ... SELECT ... WHERE NOT EXISTS`
+    (re-arrancable sin duplicar). Portable SQLite/Postgres. Asume que el módulo `inventory` ya
+    creó sus tablas (su migración 001_init) — este seed solo aporta DATOS, no DDL.
+
+    El `image` es la s3_key relativa (igual que el JSON y que `/api/v1/catalog/assets/`).
+    """
+    sector = data["sector"]
+    h = _sql(hub_id)
+    ts = _sql(SEED_TS)
+    lines: list[str] = [
+        f"-- Catálogo starter '{sector}' generado por scripts/build_starter_catalog.py — NO editar a mano.",
+        f"-- {len(data['products'])} productos en {len(data['categories'])} categorías. hub_id = {hub_id}.",
+        "-- Idempotente (WHERE NOT EXISTS). Requiere que el módulo 'inventory' esté instalado",
+        "-- (sus tablas inventory_category / inventory_product existan) ANTES de aplicar este seed.",
+        "",
+    ]
+
+    # Categorías.
+    for cat in data["categories"]:
+        cat_id = f"cat-{sector}-{cat['key']}"
+        lines.append(
+            "INSERT INTO inventory_category "
+            '(id, hub_id, name, slug, icon, "order", created_at, updated_at)\n'
+            f"SELECT {_sql(cat_id)}, {h}, {_sql(cat['name'])}, {_sql(cat['key'])}, "
+            f"{_sql(cat['icon'])}, {cat['order']}, {ts}, {ts}\n"
+            "WHERE NOT EXISTS (SELECT 1 FROM inventory_category "
+            f"WHERE hub_id = {h} AND name = {_sql(cat['name'])});"
+        )
+    lines.append("")
+
+    # Productos + relación producto↔categoría (M2M).
+    for p in data["products"]:
+        prod_id = f"prod-{sector}-{p['sku']}"
+        cat_id = f"cat-{sector}-{p['category']}"
+        lines.append(
+            "INSERT INTO inventory_product "
+            "(id, hub_id, name, sku, description, product_type, price, cost, stock, "
+            "low_stock_threshold, image, created_at, updated_at)\n"
+            f"SELECT {_sql(prod_id)}, {h}, {_sql(p['name'])}, {_sql(p['sku'])}, '', 'physical', "
+            f"{p['price']:.2f}, 0, 1000, 0, {_sql(p['image'])}, {ts}, {ts}\n"
+            "WHERE NOT EXISTS (SELECT 1 FROM inventory_product "
+            f"WHERE hub_id = {h} AND sku = {_sql(p['sku'])});"
+        )
+        lines.append(
+            "INSERT INTO inventory_product_categories (product_id, category_id)\n"
+            f"SELECT {_sql(prod_id)}, {_sql(cat_id)}\n"
+            "WHERE NOT EXISTS (SELECT 1 FROM inventory_product_categories "
+            f"WHERE product_id = {_sql(prod_id)} AND category_id = {_sql(cat_id)});"
+        )
+
+    return "\n".join(lines) + "\n"
+
+
 def main(argv: list[str]) -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Genera catálogos starter por sector (JSON + SQL)."
+    )
+    parser.add_argument(
+        "sectors", nargs="*", help="sectores a generar (vacío = todos con reglas)"
+    )
+    parser.add_argument(
+        "--hub-id",
+        default=DEMO_HUB_ID,
+        help=f"hub_id literal para el SQL de seed (def. demo {DEMO_HUB_ID})",
+    )
+    args = parser.parse_args(argv[1:])
+
     OUT_DIR.mkdir(exist_ok=True)
-    targets = argv[1:] or list(SECTORS)
+    targets = args.sectors or list(SECTORS)
     for sector in targets:
         if sector not in SECTORS:
             print(f"[skip] sin reglas para sector '{sector}'", file=sys.stderr)
             continue
         data = build_sector(sector)
-        out = OUT_DIR / f"{sector}.json"
-        out.write_text(
+
+        out_json = OUT_DIR / f"{sector}.json"
+        out_json.write_text(
             json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
+        out_sql = OUT_DIR / f"{sector}.sql"
+        out_sql.write_text(emit_sql(data, args.hub_id), encoding="utf-8")
+
         print(
             f"[ok] {sector}: {len(data['products'])} productos en "
-            f"{len(data['categories'])} categorías → {out.relative_to(ROOT)}"
+            f"{len(data['categories'])} categorías → {out_json.relative_to(ROOT)}, "
+            f"{out_sql.relative_to(ROOT)}"
         )
     return 0
 
