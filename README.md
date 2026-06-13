@@ -50,6 +50,24 @@ python scripts/validate_assets.py
 
 On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/assets/` and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
+## Starter catalogs (menús por sector)
+
+`starter_catalogs/<sector>.json` es un **menú pre-construido** por sector: categorías + productos
+(con precio, IVA e imagen) listos para sembrar el catálogo inicial de un hub nuevo de ese sector.
+Cada producto referencia su imagen por la **misma `s3_key`** que devuelve
+`GET /api/v1/catalog/assets/?sector=<sector>` (`assets/<sector>/<name>.webp`), así el consumidor
+(Hub/Cloud) construye la URL del CDN (`erplora-storage`) sin lógica extra.
+
+Se generan de forma determinista desde `assets/` con reglas por palabra clave:
+
+```bash
+python scripts/build_starter_catalog.py              # todos los sectores con reglas
+python scripts/build_starter_catalog.py hospitality  # solo uno
+```
+
+Al añadir imágenes nuevas, re-ejecuta el generador para regenerar el JSON (idempotente).
+Hoy hay reglas para `hospitality` (restaurante/bar/cafetería, 280 productos en 19 categorías).
+
 ## License
 
 MIT
