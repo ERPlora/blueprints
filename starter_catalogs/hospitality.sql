@@ -1757,16 +1757,16 @@ INSERT INTO inventory_product_categories (product_id, category_id)
 SELECT 'prod-hospitality-zumo_tomate', 'cat-hospitality-refrescos'
 WHERE NOT EXISTS (SELECT 1 FROM inventory_product_categories WHERE product_id = 'prod-hospitality-zumo_tomate' AND category_id = 'cat-hospitality-refrescos');
 
--- Cajeros demo (login por PIN). FLAG(humano): PINs de DEMO (cambiar antes de prod) y el
--- modelo final del cajero (rol 'cashier' ↔ staff_member + permisos por module.json) es columna humano.
+-- Cajeros demo (login por PIN). rol='employee' (rol de operador YA existente en los 27 módulos:
+-- vender, abrir/cerrar caja, facturar). PINs 1111/2222 NO rotan — los protege el device-trust.
 INSERT INTO hub_user (id, name, pin_hash, role, cloud_user_id, is_active, created_at)
-SELECT 'user-hospitality-cashier1', 'Cajero 1', 'cashier1-seed-salt:9d81582af594e1cc780151726e43aceb5da668e780bf455ca41b6bfc0a7074ca', 'cashier', NULL, 1, '2026-01-01T00:00:00+00:00'
+SELECT 'user-hospitality-cashier1', 'Cajero 1', 'cashier1-seed-salt:9d81582af594e1cc780151726e43aceb5da668e780bf455ca41b6bfc0a7074ca', 'employee', NULL, 1, '2026-01-01T00:00:00+00:00'
 WHERE NOT EXISTS (SELECT 1 FROM hub_user WHERE name = 'Cajero 1');
 INSERT INTO staff_member (id, hub_id, first_name, last_name, user_id, status, is_bookable, created_at, updated_at)
 SELECT 'staff-hospitality-cashier1', '00000000-0000-0000-0000-000000000001', 'Cajero', 'Uno', 'user-hospitality-cashier1', 'active', 0, '2026-01-01T00:00:00+00:00', '2026-01-01T00:00:00+00:00'
 WHERE NOT EXISTS (SELECT 1 FROM staff_member WHERE id = 'staff-hospitality-cashier1');
 INSERT INTO hub_user (id, name, pin_hash, role, cloud_user_id, is_active, created_at)
-SELECT 'user-hospitality-cashier2', 'Cajero 2', 'cashier2-seed-salt:fe8ab1c960ef7d0abbbd1c7598ed2036f7aabc2408571edfdaff16d6bc1bdb0f', 'cashier', NULL, 1, '2026-01-01T00:00:00+00:00'
+SELECT 'user-hospitality-cashier2', 'Cajero 2', 'cashier2-seed-salt:fe8ab1c960ef7d0abbbd1c7598ed2036f7aabc2408571edfdaff16d6bc1bdb0f', 'employee', NULL, 1, '2026-01-01T00:00:00+00:00'
 WHERE NOT EXISTS (SELECT 1 FROM hub_user WHERE name = 'Cajero 2');
 INSERT INTO staff_member (id, hub_id, first_name, last_name, user_id, status, is_bookable, created_at, updated_at)
 SELECT 'staff-hospitality-cashier2', '00000000-0000-0000-0000-000000000001', 'Cajero', 'Dos', 'user-hospitality-cashier2', 'active', 0, '2026-01-01T00:00:00+00:00', '2026-01-01T00:00:00+00:00'

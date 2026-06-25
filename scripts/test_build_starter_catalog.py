@@ -8,8 +8,8 @@ Garantías que cubre — y que antes fallaban (bug de céntimos / IVA fantasma):
   - Se siembran los 4 tipos de IVA (taxes_rate) ANTES de los productos, y CADA producto
     referencia un `tax_rate_id` que existe en ese bloque (no un id fantasma) (ADR-0066).
   - El alcohol tributa al 21 % y el resto de hostelería al 10 %.
-  - Se siembran 2 cajeros (`hub_user` rol 'cashier') enlazados a `staff_member.user_id`, con
-    un pin_hash legacy `salt:sha256("{salt}:{pin}")` que verifica los PINs 1111/2222.
+  - Se siembran 2 cajeros (`hub_user` rol 'employee', el rol de operador ya existente) enlazados
+    a `staff_member.user_id`, con pin_hash legacy `salt:sha256("{salt}:{pin}")` que verifica 1111/2222.
   - El SQL es idempotente (cada sentencia lleva `WHERE NOT EXISTS`).
 
 Uso:  python scripts/test_build_starter_catalog.py   (sale 1 si algo falla)
@@ -82,7 +82,10 @@ def test_two_cashiers_with_verifying_pins():
         assert _check_pin_legacy(pin_hash, pin), f"PIN {pin} no verifica contra su hash"
     # El enlace hub_user ↔ staff_member usa user_id.
     assert "user-hospitality-cashier1" in sql and "staff-hospitality-cashier1" in sql
-    assert "'cashier'" in sql
+    # El cajero REUTILIZA el rol de operador 'employee' (que ya existe en los module.json);
+    # NO se crea un rol 'cashier'.
+    assert all(role == "employee" for _n, _p, role, _h, _f, _l in g.CASHIERS)
+    assert "'employee'" in sql
 
 
 def test_idempotent_guards():

@@ -319,15 +319,22 @@ SPAIN_IVA_RATES = [
 # 2 cajeros por seed: una fila `hub_user` (login por PIN) enlazada a su ficha `staff_member`
 # (vía `staff_member.user_id`). pin_hash en formato LEGACY `salt:sha256("{salt}:{pin}")` que
 # `identity.rs::check_pin` acepta y rehashea perezosamente a argon2id en el primer login (igual
-# que el seed del demo). FLAG(humano, seguridad): PINs 1111/2222 son de DEMO → cambiar antes de
-# prod. FLAG(humano): el modelo final del cajero (rol 'cashier' ↔ staff_member y, sobre todo,
-# qué permisos da el rol vía `role_permissions.cashier` en cada module.json) es columna humano.
+# que el seed del demo).
+#
+# ROL = 'employee' (NO 'cashier'). El cajero ES el rol de operador que YA existe en los 27
+# module.json (role_permissions: admin/manager/employee). 'employee' concede justo lo que un
+# cajero necesita —vender (sales.add_sale), abrir/cerrar caja (cash_register.*_session),
+# facturar (invoice.add_invoice)— sin ajustes/borrados (manage_settings/delete = manager+).
+# Reutilizar el rol existente evita crear/duplicar 'cashier' en 27 módulos (componer, no duplicar).
+#
+# PIN: los PINs 1111/2222 NO rotan — la seguridad la da el **device-trust** (solo dispositivos de
+# confianza pueden hacer login por PIN, §2.9). Son credenciales de demo estables a propósito.
 CASHIERS = [
-    # name        pin     role        pin_hash (salt:sha256_hex("{salt}:{pin}"))                                                first      last
+    # name        pin     role         pin_hash (salt:sha256_hex("{salt}:{pin}"))                                                first      last
     (
         "Cajero 1",
         "1111",
-        "cashier",
+        "employee",
         "cashier1-seed-salt:9d81582af594e1cc780151726e43aceb5da668e780bf455ca41b6bfc0a7074ca",
         "Cajero",
         "Uno",
@@ -335,7 +342,7 @@ CASHIERS = [
     (
         "Cajero 2",
         "2222",
-        "cashier",
+        "employee",
         "cashier2-seed-salt:fe8ab1c960ef7d0abbbd1c7598ed2036f7aabc2408571edfdaff16d6bc1bdb0f",
         "Cajero",
         "Dos",
@@ -533,10 +540,10 @@ def emit_sql(data: dict, hub_id: str) -> str:
     # 4) Cajeros demo: login local por PIN (`hub_user`) enlazado a su ficha de staff
     #    (`staff_member.user_id`). Ver constante CASHIERS para los flags de seguridad/modelo.
     lines.append(
-        "-- Cajeros demo (login por PIN). FLAG(humano): PINs de DEMO (cambiar antes de prod) y el"
+        "-- Cajeros demo (login por PIN). rol='employee' (rol de operador YA existente en los 27 módulos:"
     )
     lines.append(
-        "-- modelo final del cajero (rol 'cashier' ↔ staff_member + permisos por module.json) es columna humano."
+        "-- vender, abrir/cerrar caja, facturar). PINs 1111/2222 NO rotan — los protege el device-trust."
     )
     for i, (name, _pin, role, pin_hash, first, last) in enumerate(CASHIERS, start=1):
         uid = f"user-{sector}-cashier{i}"
