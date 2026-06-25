@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'assets/**'
+      - 'starter_catalogs/**'
   workflow_dispatch:
 
 jobs:
@@ -40,3 +41,31 @@ jobs:
             --cache-control "max-age=86400" \
             --content-type "image/webp"
           echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-storage/assets/"
+
+      # Starter seeds (ADR-0072): bundles `starter_catalogs/<país>/<sector>/{seed.sql,seed.sha256,seed.json}`
+      # → S3 `starter-seeds/<país>/<sector>/`. El Hub los descarga, verifica el SHA256 y aplica el seed.
+      - name: Verify seed.sha256 integrity (no drift) before publishing
+        run: |
+          fail=0
+          for seed in starter_catalogs/*/*/seed.sql; do
+            dir=$(dirname "$seed")
+            expected=$(cat "$dir/seed.sha256" | tr -d '[:space:]')
+            actual=$(sha256sum "$seed" | cut -d' ' -f1)
+            if [ "$expected" != "$actual" ]; then
+              echo "::error::sha256 drift en $seed ($actual != $expected) — regenera el bundle"
+              fail=1
+            fi
+          done
+          [ "$fail" = 0 ] && echo "All seed.sha256 match their seed.sql."
+          exit $fail
+
+      - name: Sync starter seeds to S3
+        run: |
+          # Imágenes NO van aquí (libería compartida en assets/, §7.3); solo seed.{sql,sha256,json}.
+          aws s3 sync starter_catalogs/ s3://erplora-storage/starter-seeds/ \
+            --delete \
+            --exclude "*" \
+            --include "*/*/seed.sql" \
+            --include "*/*/seed.sha256" \
+            --include "*/*/seed.json"
+          echo "Synced $(find starter_catalogs -name 'seed.sql' | wc -l) starter seed bundles to s3://erplora-storage/starter-seeds/"

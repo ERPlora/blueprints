@@ -50,31 +50,46 @@ python scripts/validate_assets.py
 
 On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/assets/` and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
-## Starter catalogs (menús por sector)
+## Starter seeds (catálogo inicial por país/sector — ADR-0072)
 
-`starter_catalogs/<sector>.json` es un **menú pre-construido** por sector: categorías + productos
-(con precio, IVA e imagen) listos para sembrar el catálogo inicial de un hub nuevo de ese sector.
-Cada producto referencia su imagen por la **misma `s3_key`** que devuelve
-`GET /api/v1/catalog/assets/?sector=<sector>` (`assets/<sector>/<name>.webp`), así el consumidor
-(Hub/Cloud) construye la URL del CDN (`erplora-storage`) sin lógica extra.
+Cada hub nuevo arranca con un catálogo real (restaurante o peluquería) **importado** desde S3. El
+seed vive estático en `s3://erplora-storage/starter-seeds/<país>/<sector>/`, mirror del directorio
+local `starter_catalogs/<país>/<sector>/`:
 
-Se generan de forma determinista desde `assets/` con reglas por palabra clave:
-
-```bash
-python scripts/build_starter_catalog.py              # todos los sectores con reglas
-python scripts/build_starter_catalog.py hospitality  # solo uno
+```text
+starter_catalogs/es/restaurant/seed.sql      # IVA ES + 280 productos + cajeros (inventory/taxes/staff)
+starter_catalogs/es/restaurant/seed.json     # los mismos datos, estructurados (UI/preview)
+starter_catalogs/es/restaurant/seed.sha256   # SHA256 de seed.sql (verificación, patrón module.zip)
+starter_catalogs/es/beauty/seed.sql          # IVA ES + servicios + staff + horarios + cajeros
+starter_catalogs/es/beauty/seed.sha256
 ```
 
-Genera dos artefactos por sector:
-- `starter_catalogs/<sector>.json` — el menú en JSON (para consumir por API/onboarding).
-- `starter_catalogs/<sector>.sql` — **SQL idempotente** que siembra `inventory_category` +
-  `inventory_product` (+ M2M) del Hub, mismo estilo que `hub/crates/server/seeds/demo.sql`.
-  Se inyecta vía `HUB_SEED_SQL`/`HUB_SEED_SQL_PATH`; por defecto usa el `hub_id` del demo
-  (`aws/terraform/ecs_demo.tf`), o pásalo con `--hub-id <uuid>`. Requiere que el módulo
-  `inventory` ya esté instalado (sus tablas existan) antes de aplicarse.
+- **País** = ISO 3166-1 alpha-2. **Fase 1: solo `es/`** (datos en español, IVA de España).
+- **Imágenes COMPARTIDAS** (no se duplican en el bundle): cada producto/servicio referencia su
+  imagen por la `s3_key` de la librería común `assets/<sector>/<name>.webp` (la misma que devuelve
+  `GET /api/v1/catalog/assets/`). Restaurante reusa las imágenes de `assets/hospitality/`.
+- **`seed.sql`** es **SQL idempotente** (`WHERE NOT EXISTS`), portable SQLite/Postgres (céntimos
+  enteros ADR-0007), mismo estilo que `hub/crates/server/seeds/demo.sql`. El Hub lo descarga,
+  **verifica el SHA256**, **sustituye el `hub_id`** demo (`00000000-…-001`) por el real y lo aplica
+  vía `runtime/src/seed.rs::apply`. Requiere los módulos del seed (`inventory`/`taxes`/`staff` para
+  restaurante; `services`/`staff`/`schedules`/`pricing` para beauty) instalados antes de aplicar.
 
-Al añadir imágenes nuevas, re-ejecuta el generador para regenerar JSON+SQL (idempotente).
-Hoy hay reglas para `hospitality` (restaurante/bar/cafetería, 280 productos en 19 categorías).
+`restaurant` se **genera** de forma determinista desde `assets/hospitality/` con reglas por
+palabra clave; `beauty` está **escrito a mano** (`es/beauty/seed.sql`):
+
+```bash
+python scripts/build_starter_catalog.py                 # todos los generables (país es)
+python scripts/build_starter_catalog.py restaurant      # solo restaurant
+python scripts/build_starter_catalog.py --country es restaurant
+```
+
+Al añadir imágenes o cambiar reglas, re-ejecuta el generador (regenera `seed.{sql,json,sha256}`,
+idempotente). Si editas un `seed.sql` a mano, regenera su `seed.sha256` (un test y la GitHub
+Action lo verifican). Publicación: `publish-to-s3.yml` sincroniza `starter_catalogs/` →
+`starter-seeds/` en cada push a `main` (tras validar que los SHA256 cuadran).
+
+> Diseño completo del import (endpoint/stepper del Hub = core, columna humano):
+> [`starter_catalogs/IMPORT-SPEC.md`](starter_catalogs/IMPORT-SPEC.md) (ADR-0072).
 
 ## License
 

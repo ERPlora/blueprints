@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
-"""Genera un catálogo starter (menú) por sector a partir de la librería de imágenes.
+"""Genera el bundle starter (seed) por país/sector a partir de la librería de imágenes (ADR-0072).
 
-Mapea cada `assets/<sector>/<nombre>.webp` a una categoría de menú y le asigna un precio
-por defecto (con overrides para platos premium), y escribe `starter_catalogs/<sector>.json`.
+Mapea cada `assets/<assets_dir>/<nombre>.webp` a una categoría de menú y le asigna un precio por
+defecto (con overrides para platos premium), y escribe el bundle en el layout país/sector:
 
-El JSON resultante es la **fuente de datos** que el Hub/Cloud usa para sembrar el catálogo
-inicial de un hub nuevo de ese sector (productos + categorías de `inventory`). El `image` de
-cada producto es la **s3_key** relativa (`assets/<sector>/<file>.webp`), igual que devuelve
-`GET /api/v1/catalog/assets/?sector=<sector>` en Cloud, para que el consumidor construya la URL
-del CDN (`erplora-storage`).
+    starter_catalogs/<país>/<sector>/seed.sql      # el seed (IVA + productos + cajeros)
+    starter_catalogs/<país>/<sector>/seed.json     # los mismos datos, estructurados (UI/preview)
+    starter_catalogs/<país>/<sector>/seed.sha256   # SHA256 de seed.sql (verificación, patrón module.zip)
+
+Es el mirror local del prefijo S3 `starter-seeds/<país>/<sector>/` (lo sincroniza
+`.github/workflows/publish-to-s3.yml`). El Hub lo descarga, verifica el SHA256, sustituye el
+`hub_id` demo por el real y aplica `seed.sql` vía `runtime/src/seed.rs::apply` (ADR-0072 §3).
+
+Imágenes COMPARTIDAS (§7.3 opción "shared"): el `image` de cada producto es la **s3_key** de la
+librería común (`assets/<assets_dir>/<file>.webp`), igual que devuelve
+`GET /api/v1/catalog/assets/?sector=<assets_dir>`; no se duplican imágenes dentro del bundle.
 
 Uso:
-    python scripts/build_starter_catalog.py                 # todos los sectores con reglas
-    python scripts/build_starter_catalog.py hospitality     # solo un sector
+    python scripts/build_starter_catalog.py                       # todos los sectores (país es)
+    python scripts/build_starter_catalog.py restaurant            # solo un sector
+    python scripts/build_starter_catalog.py --country es restaurant
 
-Es determinista e idempotente: misma entrada → mismo JSON (orden estable, sin timestamps).
+Determinista e idempotente: misma entrada → mismos ficheros (orden estable, sin timestamps).
 """
 
 from __future__ import annotations
@@ -349,8 +356,14 @@ CASHIERS = [
     ),
 ]
 
+# La CLAVE del dict es el **seed-key canónico del sector** (ADR-0072 §7.2): el nombre con el que
+# el seed se publica en S3 (`starter-seeds/{país}/{sector}/`) y que prefija sus ids
+# (`cat-{sector}-`, `prod-{sector}-`, `tax-{sector}-`). `assets_dir` es la carpeta de imágenes
+# COMPARTIDA (`assets/<assets_dir>/`, ADR-0072 §7.3 opción "shared"): no se duplican imágenes, el
+# seed referencia la librería común. Aquí seed-key=`restaurant` reusa las imágenes de `hospitality`.
 SECTORS = {
-    "hospitality": {
+    "restaurant": {
+        "assets_dir": "hospitality",
         "categories": HOSPITALITY_CATEGORIES,
         "rules": HOSPITALITY_RULES,
         "price_overrides": HOSPITALITY_PRICE_OVERRIDES,
@@ -382,7 +395,10 @@ def classify(stem: str, rules: list[tuple[str, list[str]]]) -> str | None:
 
 def build_sector(sector: str) -> dict:
     cfg = SECTORS[sector]
-    folder = ASSETS / sector
+    # Imágenes COMPARTIDAS (ADR-0072 §7.3): se leen de `assets/<assets_dir>/`, no de una carpeta
+    # con el nombre del seed-key. Así `restaurant` reusa las webp de `hospitality` sin duplicar.
+    assets_dir = cfg.get("assets_dir", sector)
+    folder = ASSETS / assets_dir
     if not folder.is_dir():
         raise SystemExit(f"sector sin carpeta de assets: {folder}")
 
@@ -414,7 +430,7 @@ def build_sector(sector: str) -> dict:
                 "category": category,
                 "price": price_cents,  # céntimos (ADR-0007)
                 "tax_code": tax_code,  # → tax_rate_id resuelto en emit_sql
-                "image": f"assets/{sector}/{stem}.webp",
+                "image": f"assets/{assets_dir}/{stem}.webp",
             }
         )
 
@@ -565,12 +581,18 @@ def emit_sql(data: dict, hub_id: str) -> str:
 
 def main(argv: list[str]) -> int:
     import argparse
+    import hashlib
 
     parser = argparse.ArgumentParser(
-        description="Genera catálogos starter por sector (JSON + SQL)."
+        description="Genera catálogos starter por sector con layout país/sector (ADR-0072)."
     )
     parser.add_argument(
         "sectors", nargs="*", help="sectores a generar (vacío = todos con reglas)"
+    )
+    parser.add_argument(
+        "--country",
+        default="es",
+        help="país ISO 3166-1 alpha-2 del seed (def. 'es'; fase 1 solo ES, ADR-0072).",
     )
     parser.add_argument(
         "--hub-id",
@@ -579,7 +601,6 @@ def main(argv: list[str]) -> int:
     )
     args = parser.parse_args(argv[1:])
 
-    OUT_DIR.mkdir(exist_ok=True)
     targets = args.sectors or list(SECTORS)
     for sector in targets:
         if sector not in SECTORS:
@@ -587,17 +608,25 @@ def main(argv: list[str]) -> int:
             continue
         data = build_sector(sector)
 
-        out_json = OUT_DIR / f"{sector}.json"
-        out_json.write_text(
+        # Layout ADR-0072: starter_catalogs/<país>/<sector>/{seed.sql, seed.json, seed.sha256}.
+        # (Local mirror del prefijo S3 `starter-seeds/<país>/<sector>/`; lo mapea publish-to-s3.yml.)
+        bundle_dir = OUT_DIR / args.country / sector
+        bundle_dir.mkdir(parents=True, exist_ok=True)
+
+        (bundle_dir / "seed.json").write_text(
             json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
-        out_sql = OUT_DIR / f"{sector}.sql"
-        out_sql.write_text(emit_sql(data, args.hub_id), encoding="utf-8")
+        sql = emit_sql(data, args.hub_id)
+        (bundle_dir / "seed.sql").write_text(sql, encoding="utf-8")
+        # seed.sha256: hash del seed.sql (verificación de integridad, patrón module.zip). Se
+        # commitea junto al seed para que coincida byte a byte; un test lo re-verifica.
+        digest = hashlib.sha256(sql.encode("utf-8")).hexdigest()
+        (bundle_dir / "seed.sha256").write_text(digest + "\n", encoding="utf-8")
 
         print(
-            f"[ok] {sector}: {len(data['products'])} productos en "
-            f"{len(data['categories'])} categorías → {out_json.relative_to(ROOT)}, "
-            f"{out_sql.relative_to(ROOT)}"
+            f"[ok] {args.country}/{sector}: {len(data['products'])} productos en "
+            f"{len(data['categories'])} categorías → {bundle_dir.relative_to(ROOT)}/ "
+            f"(seed.sql sha256={digest[:12]}…)"
         )
     return 0
 

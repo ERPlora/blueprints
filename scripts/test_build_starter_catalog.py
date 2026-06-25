@@ -24,14 +24,14 @@ import sys
 import build_starter_catalog as g
 
 
-def _hospitality():
-    data = g.build_sector("hospitality")
+def _restaurant():
+    data = g.build_sector("restaurant")
     sql = g.emit_sql(data, g.DEMO_HUB_ID)
     return data, sql
 
 
 def test_prices_are_integer_cents():
-    data, sql = _hospitality()
+    data, sql = _restaurant()
     # En el dict: todos los precios son int (céntimos), nunca float.
     assert data["products"], "el sector debe producir productos"
     assert all(isinstance(p["price"], int) for p in data["products"]), (
@@ -45,9 +45,9 @@ def test_prices_are_integer_cents():
 
 
 def test_every_product_references_a_seeded_tax_rate():
-    data, sql = _hospitality()
+    data, sql = _restaurant()
     seeded_ids = {
-        f"tax-hospitality-{code.lower()}" for code, _n, _r in g.SPAIN_IVA_RATES
+        f"tax-restaurant-{code.lower()}" for code, _n, _r in g.SPAIN_IVA_RATES
     }
     assert len(seeded_ids) == 4
     # Cada bloque de IVA aparece como INSERT en el SQL, antes que cualquier producto.
@@ -57,12 +57,12 @@ def test_every_product_references_a_seeded_tax_rate():
         assert idx < first_product, f"{tid} debe sembrarse antes de los productos"
     # Todo producto referencia un tax id sembrado.
     for p in data["products"]:
-        tid = f"tax-hospitality-{p['tax_code'].lower()}"
+        tid = f"tax-restaurant-{p['tax_code'].lower()}"
         assert tid in seeded_ids, f"{p['sku']} referencia un IVA no sembrado: {tid}"
 
 
 def test_alcohol_21_rest_10():
-    data, _ = _hospitality()
+    data, _ = _restaurant()
     by_sku = {p["sku"]: p["tax_code"] for p in data["products"]}
     assert by_sku.get("cerveza_jarra") == "IVA21"
     assert by_sku.get("americano") == "IVA10"
@@ -74,14 +74,14 @@ def _check_pin_legacy(stored: str, pin: str) -> bool:
 
 
 def test_two_cashiers_with_verifying_pins():
-    _data, sql = _hospitality()
+    _data, sql = _restaurant()
     assert sql.count("INSERT INTO hub_user ") == 2, "2 cajeros hub_user"
     assert sql.count("INSERT INTO staff_member ") == 2, "2 staff_member enlazados"
     # Los PINs declarados verifican contra su hash legacy.
     for _name, pin, _role, pin_hash, _f, _l in g.CASHIERS:
         assert _check_pin_legacy(pin_hash, pin), f"PIN {pin} no verifica contra su hash"
     # El enlace hub_user ↔ staff_member usa user_id.
-    assert "user-hospitality-cashier1" in sql and "staff-hospitality-cashier1" in sql
+    assert "user-restaurant-cashier1" in sql and "staff-restaurant-cashier1" in sql
     # El cajero REUTILIZA el rol de operador 'employee' (que ya existe en los module.json);
     # NO se crea un rol 'cashier'.
     assert all(role == "employee" for _n, _p, role, _h, _f, _l in g.CASHIERS)
@@ -89,7 +89,7 @@ def test_two_cashiers_with_verifying_pins():
 
 
 def test_idempotent_guards():
-    _data, sql = _hospitality()
+    _data, sql = _restaurant()
     # Cuenta sobre las líneas NO comentario (igual que el runtime: seed.rs descarta `--`),
     # para no contar el `WHERE NOT EXISTS` que aparece dentro de un comentario de cabecera.
     code = "\n".join(l for l in sql.splitlines() if not l.lstrip().startswith("--"))
@@ -98,6 +98,27 @@ def test_idempotent_guards():
     assert inserts == guards, (
         f"cada INSERT debe llevar WHERE NOT EXISTS ({inserts} vs {guards})"
     )
+
+
+def test_disk_bundles_have_matching_sha256():
+    """Layout ADR-0072: cada `starter_catalogs/<país>/<sector>/seed.sql` tiene un `seed.sha256`
+    que coincide byte a byte (la verificación de integridad que aplica el runtime al importar).
+    Cubre el seed generado (restaurant) Y el escrito a mano (beauty), atrapando drift del hash.
+    """
+    import hashlib
+    from pathlib import Path
+
+    seeds_root = Path(g.OUT_DIR)
+    seed_files = sorted(seeds_root.glob("*/*/seed.sql"))
+    assert seed_files, "no hay bundles starter_catalogs/<país>/<sector>/seed.sql"
+    for seed in seed_files:
+        sha_file = seed.with_name("seed.sha256")
+        assert sha_file.exists(), f"falta seed.sha256 junto a {seed}"
+        expected = sha_file.read_text(encoding="utf-8").strip()
+        actual = hashlib.sha256(seed.read_bytes()).hexdigest()
+        assert actual == expected, (
+            f"sha256 no cuadra para {seed} (drift): {actual} != {expected}"
+        )
 
 
 def main() -> int:
