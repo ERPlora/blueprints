@@ -305,3 +305,27 @@ WHERE NOT EXISTS (SELECT 1 FROM pricing_price_list_item WHERE hub_id = '00000000
 INSERT INTO pricing_price_list_item (id, hub_id, price_list_id, product_ref, price, min_quantity, max_quantity, is_deleted, created_by, updated_by, created_at, updated_at)
 SELECT 'pli-beauty-manicura', '00000000-0000-0000-0000-000000000001', 'pl-beauty-general', 'svc-beauty-manicura', 1500, 1, NULL, 0, NULL, NULL, '2026-01-01T00:00:00+00:00', '2026-01-01T00:00:00+00:00'
 WHERE NOT EXISTS (SELECT 1 FROM pricing_price_list_item WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND price_list_id = 'pl-beauty-general' AND product_ref = 'svc-beauty-manicura');
+
+-- ════════════════════════════════════════════════════════════════════════════════════════════
+-- 9) Cajeros demo (login local). Cada cajero = una fila `hub_user` (login por PIN) ENLAZADA a su
+--    ficha `staff_member` vía `staff_member.user_id` (hub_user es identidad/login; staff_member es
+--    catálogo de personal y no da login por sí mismo). pin_hash en formato LEGACY
+--    `salt:sha256_hex("{salt}:{pin}")` que `identity.rs::check_pin` acepta y rehashea perezosamente
+--    a argon2id en el primer login (igual que `hub/crates/server/seeds/demo.sql`).
+--    FLAG(humano, seguridad): PINs 1111/2222 son de DEMO → cambiar antes de prod.
+--    FLAG(humano): el modelo final del cajero (rol 'cashier' ↔ staff_member y qué permisos da el
+--    rol vía `role_permissions.cashier` en cada module.json) es columna humano.
+-- ════════════════════════════════════════════════════════════════════════════════════════════
+
+INSERT INTO hub_user (id, name, pin_hash, role, cloud_user_id, is_active, created_at)
+SELECT 'user-beauty-cashier1', 'Cajero 1', 'cashier1-seed-salt:9d81582af594e1cc780151726e43aceb5da668e780bf455ca41b6bfc0a7074ca', 'cashier', NULL, 1, '2026-01-01T00:00:00+00:00'
+WHERE NOT EXISTS (SELECT 1 FROM hub_user WHERE name = 'Cajero 1');
+INSERT INTO staff_member (id, hub_id, first_name, last_name, user_id, status, is_bookable, created_at, updated_at)
+SELECT 'staff-beauty-cashier1', '00000000-0000-0000-0000-000000000001', 'Cajero', 'Uno', 'user-beauty-cashier1', 'active', 0, '2026-01-01T00:00:00+00:00', '2026-01-01T00:00:00+00:00'
+WHERE NOT EXISTS (SELECT 1 FROM staff_member WHERE id = 'staff-beauty-cashier1');
+INSERT INTO hub_user (id, name, pin_hash, role, cloud_user_id, is_active, created_at)
+SELECT 'user-beauty-cashier2', 'Cajero 2', 'cashier2-seed-salt:fe8ab1c960ef7d0abbbd1c7598ed2036f7aabc2408571edfdaff16d6bc1bdb0f', 'cashier', NULL, 1, '2026-01-01T00:00:00+00:00'
+WHERE NOT EXISTS (SELECT 1 FROM hub_user WHERE name = 'Cajero 2');
+INSERT INTO staff_member (id, hub_id, first_name, last_name, user_id, status, is_bookable, created_at, updated_at)
+SELECT 'staff-beauty-cashier2', '00000000-0000-0000-0000-000000000001', 'Cajero', 'Dos', 'user-beauty-cashier2', 'active', 0, '2026-01-01T00:00:00+00:00', '2026-01-01T00:00:00+00:00'
+WHERE NOT EXISTS (SELECT 1 FROM staff_member WHERE id = 'staff-beauty-cashier2');
