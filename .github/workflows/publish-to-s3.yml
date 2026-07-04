@@ -1,4 +1,9 @@
-name: Sync assets to S3
+# Almacenamiento: Hetzner Object Storage (S3-compatible, `fsn1.your-objectstorage.com`),
+# bucket `erplora-saas` (privado, layout por prefijos — ADR-0099 / infra/OBJECT-STORAGE.md):
+#   assets/  librería WebP compartida (la lista el SaaS: /api/v1/catalog/assets/)
+# Sustituye a AWS S3/OIDC (AWS apagado). Credenciales estáticas en secrets del repo:
+# HETZNER_S3_ACCESS_KEY · HETZNER_S3_SECRET_KEY · HETZNER_S3_ENDPOINT.
+name: Sync assets to Object Storage
 
 on:
   push:
@@ -11,8 +16,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
       contents: read
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.HETZNER_S3_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.HETZNER_S3_SECRET_KEY }}
+      AWS_DEFAULT_REGION: fsn1
+      S3_ENDPOINT: ${{ secrets.HETZNER_S3_ENDPOINT }}
     steps:
       - uses: actions/checkout@v4
 
@@ -25,18 +34,13 @@ jobs:
           pip install pillow
           python scripts/validate_assets.py assets
 
-      - name: Configure AWS credentials (OIDC)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: arn:aws:iam::363427305647:role/github-actions-deploy
-          aws-region: eu-west-1
-
-      - name: Sync WebP assets to S3
+      - name: Sync WebP assets to Object Storage
         run: |
-          aws s3 sync assets/ s3://erplora-storage/assets/ \
+          aws s3 sync assets/ s3://erplora-saas/assets/ \
+            --endpoint-url "$S3_ENDPOINT" \
             --delete \
             --exclude "*" \
             --include "*.webp" \
             --cache-control "max-age=86400" \
             --content-type "image/webp"
-          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-storage/assets/"
+          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-saas/assets/"

@@ -48,7 +48,7 @@ python scripts/validate_assets.py
 
 ## Served via CDN
 
-On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/assets/` and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
+On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-saas/assets/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
 ## Starter catalogs (menús por sector)
 
@@ -56,7 +56,7 @@ On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/asse
 (con precio, IVA e imagen) listos para sembrar el catálogo inicial de un hub nuevo de ese sector.
 Cada producto referencia su imagen por la **misma `s3_key`** que devuelve
 `GET /api/v1/catalog/assets/?sector=<sector>` (`assets/<sector>/<name>.webp`), así el consumidor
-(Hub/Cloud) construye la URL del CDN (`erplora-storage`) sin lógica extra.
+(Hub/Cloud) resuelve la imagen desde el bucket (`erplora-saas`, privado + presign) sin lógica extra.
 
 Se generan de forma determinista desde `assets/` con reglas por palabra clave:
 
