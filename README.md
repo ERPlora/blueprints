@@ -48,12 +48,12 @@ python scripts/validate_assets.py
 
 ## Served via CDN
 
-On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-storage/assets/` and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
+On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-saas/assets/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
 ## Starter seeds (catálogo inicial por país/sector — ADR-0072)
 
 Cada hub nuevo arranca con un catálogo real (restaurante o peluquería) **importado** desde S3. El
-seed vive estático en `s3://erplora-storage/starter-seeds/<país>/<sector>/`, mirror del directorio
+seed vive estático en `s3://erplora-saas/starter-seeds/<país>/<sector>/`, mirror del directorio
 local `starter_catalogs/<país>/<sector>/`:
 
 ```text
