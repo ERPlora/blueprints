@@ -89,7 +89,7 @@ Action lo verifican). Publicación: `publish-to-s3.yml` sincroniza `starter_cata
 `starter-seeds/` en cada push a `main` (tras validar que los SHA256 cuadran).
 
 > Diseño completo del import (endpoint/stepper del Hub = core, columna humano):
-> [`starter_catalogs/IMPORT-SPEC.md`](starter_catalogs/IMPORT-SPEC.md) (ADR-0072).
+> `starter_catalogs/IMPORT-SPEC.md` (pendiente de redactar) — ver ADR-0072 en el decision-log.
 
 ## License
 
