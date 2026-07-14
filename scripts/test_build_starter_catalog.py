@@ -121,6 +121,39 @@ def test_disk_bundles_have_matching_sha256():
         )
 
 
+def test_image_is_a_media_ref_with_origin_and_type():
+    """El `image` es una ref LÓGICA `media:<origen>/<tipo>/<path>`, no una s3_key cruda.
+
+    El origen (`public`) dice quién sirve los bytes (proxy del SaaS, solo-lectura: a la librería
+    pública solo se escribe por PR a este repo) y lo distingue de `media:hub/...` (bucket del
+    cliente, donde el usuario sí sube). El tipo (`img`) deja hueco a `docs/` sin cambiar el
+    formato luego — cambiarlo más tarde sería migrar filas de clientes.
+    """
+    data, _ = _restaurant()
+    for p in data["products"]:
+        img = p["image"]
+        assert img.startswith("media:public/img/"), (
+            f"{p['sku']}: image debe ser una ref media:public/img/…, no {img!r}"
+        )
+        assert not img.startswith("assets/"), (
+            f"{p['sku']}: s3_key cruda legacy: {img!r}"
+        )
+
+
+def test_no_raw_assets_prefix_left_in_disk_seeds():
+    """Ni un `assets/…` crudo en los seeds del disco: si queda uno, ese producto se pinta
+    contra un prefijo que ya no existe en el bucket (el sync usa --delete) y no se ve.
+    Cubre el seed generado (restaurant) y el escrito a mano (beauty).
+    """
+    from pathlib import Path
+
+    for seed in sorted(Path(g.OUT_DIR).glob("*/*/seed.*")):
+        if seed.suffix not in (".sql", ".json"):
+            continue
+        body = seed.read_text(encoding="utf-8")
+        assert "assets/" not in body, f"{seed} aún hornea el prefijo legacy 'assets/'"
+
+
 def main() -> int:
     tests = [
         v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)

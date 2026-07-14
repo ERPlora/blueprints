@@ -7,7 +7,7 @@ All images are flat vector icons, 512×512, white background — ideal as produc
 ## Structure
 
 ```
-assets/
+img/
 ├── beauty_body/
 ├── beauty_hair/
 ├── fitness/
@@ -31,14 +31,14 @@ New images are welcome. To convert PNGs/JPGs to the expected format:
 ```bash
 pip install pillow
 python scripts/convert_to_webp.py path/to/image.png   # single file or directory
-python scripts/convert_to_webp.py                     # whole assets/ tree
+python scripts/convert_to_webp.py                     # whole img/ tree
 ```
 
 Options: `--quality N` (default 85), `--delete-originals`, `--dry-run`.
 
 Then submit a PR with the file placed under the correct sector folder.
 
-PRs touching `assets/` are gated by CI (`validate-assets.yml`): only real `.webp` files,
+PRs touching `img/` are gated by CI (`validate-assets.yml`): only real `.webp` files,
 exactly 512×512, `snake_case.webp` names. You can run the same check locally:
 
 ```bash
@@ -48,7 +48,7 @@ python scripts/validate_assets.py
 
 ## Served via CDN
 
-On push to `main`, a GitHub Action syncs `assets/` to `s3://erplora-saas/assets/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
+On push to `main`, a GitHub Action syncs `img/` to `s3://erplora-saas/img/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/img/?sector=<sector>`.
 
 ## Starter seeds (catálogo inicial por país/sector — ADR-0072)
 
@@ -66,15 +66,15 @@ starter_catalogs/es/beauty/seed.sha256
 
 - **País** = ISO 3166-1 alpha-2. **Fase 1: solo `es/`** (datos en español, IVA de España).
 - **Imágenes COMPARTIDAS** (no se duplican en el bundle): cada producto/servicio referencia su
-  imagen por la `s3_key` de la librería común `assets/<sector>/<name>.webp` (la misma que devuelve
-  `GET /api/v1/catalog/assets/`). Restaurante reusa las imágenes de `assets/hospitality/`.
+  imagen por la `s3_key` de la librería común `img/<sector>/<name>.webp` (la misma que devuelve
+  `GET /api/v1/catalog/img/`). Restaurante reusa las imágenes de `img/hospitality/`.
 - **`seed.sql`** es **SQL idempotente** (`WHERE NOT EXISTS`), portable SQLite/Postgres (céntimos
   enteros ADR-0007), mismo estilo que `hub/crates/server/seeds/demo.sql`. El Hub lo descarga,
   **verifica el SHA256**, **sustituye el `hub_id`** demo (`00000000-…-001`) por el real y lo aplica
   vía `runtime/src/seed.rs::apply`. Requiere los módulos del seed (`inventory`/`taxes`/`staff` para
   restaurante; `services`/`staff`/`schedules`/`pricing` para beauty) instalados antes de aplicar.
 
-`restaurant` se **genera** de forma determinista desde `assets/hospitality/` con reglas por
+`restaurant` se **genera** de forma determinista desde `img/hospitality/` con reglas por
 palabra clave; `beauty` está **escrito a mano** (`es/beauty/seed.sql`):
 
 ```bash

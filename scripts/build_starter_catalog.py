@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera el bundle starter (seed) por país/sector a partir de la librería de imágenes (ADR-0072).
 
-Mapea cada `assets/<assets_dir>/<nombre>.webp` a una categoría de menú y le asigna un precio por
+Mapea cada `img/<assets_dir>/<nombre>.webp` a una categoría de menú y le asigna un precio por
 defecto (con overrides para platos premium), y escribe el bundle en el layout país/sector:
 
     starter_catalogs/<país>/<sector>/seed.sql      # el seed (IVA + productos + cajeros)
@@ -12,9 +12,9 @@ Es el mirror local del prefijo S3 `starter-seeds/<país>/<sector>/` (lo sincroni
 `.github/workflows/publish-to-s3.yml`). El Hub lo descarga, verifica el SHA256, sustituye el
 `hub_id` demo por el real y aplica `seed.sql` vía `runtime/src/seed.rs::apply` (ADR-0072 §3).
 
-Imágenes COMPARTIDAS (§7.3 opción "shared"): el `image` de cada producto es la **s3_key** de la
-librería común (`assets/<assets_dir>/<file>.webp`), igual que devuelve
-`GET /api/v1/catalog/assets/?sector=<assets_dir>`; no se duplican imágenes dentro del bundle.
+Imágenes COMPARTIDAS (§7.3 opción "shared"): el `image` de cada producto es una **ref lógica**
+`media:public/img/<assets_dir>/<file>.webp` — el origen `public` la resuelve el proxy del SaaS
+(solo-lectura); no se duplican imágenes dentro del bundle.
 
 Uso:
     python scripts/build_starter_catalog.py                       # todos los sectores (país es)
@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSETS = ROOT / "assets"
+ASSETS = ROOT / "img"
 OUT_DIR = ROOT / "starter_catalogs"
 
 # --- Definición de categorías por sector ----------------------------------------------------
@@ -359,7 +359,7 @@ CASHIERS = [
 # La CLAVE del dict es el **seed-key canónico del sector** (ADR-0072 §7.2): el nombre con el que
 # el seed se publica en S3 (`starter-seeds/{país}/{sector}/`) y que prefija sus ids
 # (`cat-{sector}-`, `prod-{sector}-`, `tax-{sector}-`). `assets_dir` es la carpeta de imágenes
-# COMPARTIDA (`assets/<assets_dir>/`, ADR-0072 §7.3 opción "shared"): no se duplican imágenes, el
+# COMPARTIDA (`img/<assets_dir>/`, ADR-0072 §7.3 opción "shared"): no se duplican imágenes, el
 # seed referencia la librería común. Aquí seed-key=`restaurant` reusa las imágenes de `hospitality`.
 SECTORS = {
     "restaurant": {
@@ -395,7 +395,7 @@ def classify(stem: str, rules: list[tuple[str, list[str]]]) -> str | None:
 
 def build_sector(sector: str) -> dict:
     cfg = SECTORS[sector]
-    # Imágenes COMPARTIDAS (ADR-0072 §7.3): se leen de `assets/<assets_dir>/`, no de una carpeta
+    # Imágenes COMPARTIDAS (ADR-0072 §7.3): se leen de `img/<assets_dir>/`, no de una carpeta
     # con el nombre del seed-key. Así `restaurant` reusa las webp de `hospitality` sin duplicar.
     assets_dir = cfg.get("assets_dir", sector)
     folder = ASSETS / assets_dir
@@ -430,7 +430,7 @@ def build_sector(sector: str) -> dict:
                 "category": category,
                 "price": price_cents,  # céntimos (ADR-0007)
                 "tax_code": tax_code,  # → tax_rate_id resuelto en emit_sql
-                "image": f"assets/{assets_dir}/{stem}.webp",
+                "image": f"media:public/img/{assets_dir}/{stem}.webp",
             }
         )
 
@@ -485,7 +485,7 @@ def emit_sql(data: dict, hub_id: str) -> str:
     `inventory` y `staff` ya crearon sus tablas (sus migraciones) ANTES de aplicar este seed; el
     seed solo aporta DATOS, no DDL. Dinero en CÉNTIMOS ENTEROS (ADR-0007).
 
-    El `image` es la s3_key relativa (igual que el JSON y que `/api/v1/catalog/assets/`).
+    El `image` es la ref lógica `media:public/img/…` (igual que el JSON).
     """
     sector = data["sector"]
     h = _sql(hub_id)

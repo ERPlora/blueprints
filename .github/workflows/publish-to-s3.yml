@@ -1,6 +1,6 @@
 # Almacenamiento: Hetzner Object Storage (S3-compatible, `fsn1.your-objectstorage.com`),
 # bucket `erplora-saas` (privado, layout por prefijos — ADR-0099 / infra/OBJECT-STORAGE.md):
-#   assets/         librería WebP compartida (la lista el SaaS: /api/v1/catalog/assets/)
+#   img/         librería WebP compartida (la lista el SaaS: /api/v1/catalog/img/)
 #   starter-seeds/  bundles seed por <país>/<sector> (ADR-0072)
 # Sustituye a AWS S3/OIDC (AWS apagado). Credenciales estáticas en secrets del repo:
 # HETZNER_S3_ACCESS_KEY · HETZNER_S3_SECRET_KEY · HETZNER_S3_ENDPOINT.
@@ -10,7 +10,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'assets/**'
+      - 'img/**'
       - 'starter_catalogs/**'
   workflow_dispatch:
 
@@ -38,14 +38,14 @@ jobs:
 
       - name: Sync WebP assets to Object Storage
         run: |
-          aws s3 sync assets/ s3://erplora-saas/assets/ \
+          aws s3 sync img/ s3://erplora-saas/img/ \
             --endpoint-url "$S3_ENDPOINT" \
             --delete \
             --exclude "*" \
             --include "*.webp" \
             --cache-control "max-age=86400" \
             --content-type "image/webp"
-          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-saas/assets/"
+          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-saas/img/"
 
       # Starter seeds (ADR-0072): bundles `starter_catalogs/<país>/<sector>/{seed.sql,seed.sha256,seed.json}`
       # → S3 `starter-seeds/<país>/<sector>/`. El Hub los descarga, verifica el SHA256 y aplica el seed.
@@ -66,7 +66,7 @@ jobs:
 
       - name: Sync starter seeds to Object Storage
         run: |
-          # Imágenes NO van aquí (libería compartida en assets/, §7.3); solo seed.{sql,sha256,json}.
+          # Imágenes NO van aquí (libería compartida en img/, §7.3); solo seed.{sql,sha256,json}.
           aws s3 sync starter_catalogs/ s3://erplora-saas/starter-seeds/ \
             --endpoint-url "$S3_ENDPOINT" \
             --delete \

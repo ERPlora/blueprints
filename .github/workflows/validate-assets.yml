@@ -3,13 +3,13 @@ name: Validate assets
 on:
   pull_request:
     paths:
-      - 'assets/**'
+      - 'img/**'
       - 'scripts/validate_assets.py'
       - '.github/workflows/validate-assets.yml'
   push:
     branches: [main]
     paths:
-      - 'assets/**'
+      - 'img/**'
       - 'scripts/validate_assets.py'
       - '.github/workflows/validate-assets.yml'
   workflow_dispatch:
