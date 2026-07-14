@@ -48,7 +48,7 @@ python scripts/validate_assets.py
 
 ## Served via CDN
 
-On push to `main`, a GitHub Action syncs `img/` to `s3://erplora-saas/img/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/img/?sector=<sector>`.
+On push to `main`, a GitHub Action syncs `img/` to `s3://erplora-saas/img/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
 ## Starter seeds (catálogo inicial por país/sector — ADR-0072)
 
@@ -66,8 +66,10 @@ starter_catalogs/es/beauty/seed.sha256
 
 - **País** = ISO 3166-1 alpha-2. **Fase 1: solo `es/`** (datos en español, IVA de España).
 - **Imágenes COMPARTIDAS** (no se duplican en el bundle): cada producto/servicio referencia su
-  imagen por la `s3_key` de la librería común `img/<sector>/<name>.webp` (la misma que devuelve
-  `GET /api/v1/catalog/img/`). Restaurante reusa las imágenes de `img/hospitality/`.
+  imagen por la **ref lógica** `media:public/img/<sector>/<name>.webp` (ADR-0134), no por la s3_key
+  desnuda. El origen `public` la resuelve el **proxy del SaaS** (`GET /api/v1/catalog/media/<key>`);
+  la librería es solo-lectura: se entra por PR a este repo. El listado sigue en
+  `GET /api/v1/catalog/assets/?sector=&q=`. Restaurante reusa las imágenes de `img/hospitality/`.
 - **`seed.sql`** es **SQL idempotente** (`WHERE NOT EXISTS`), portable SQLite/Postgres (céntimos
   enteros ADR-0007), mismo estilo que `hub/crates/server/seeds/demo.sql`. El Hub lo descarga,
   **verifica el SHA256**, **sustituye el `hub_id`** demo (`00000000-…-001`) por el real y lo aplica
