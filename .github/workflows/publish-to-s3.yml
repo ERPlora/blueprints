@@ -34,7 +34,7 @@ jobs:
       - name: Validate assets before sync
         run: |
           pip install pillow
-          python scripts/validate_assets.py assets
+          python scripts/validate_assets.py img
 
       - name: Sync WebP assets to Object Storage
         run: |
@@ -45,7 +45,7 @@ jobs:
             --include "*.webp" \
             --cache-control "max-age=86400" \
             --content-type "image/webp"
-          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-saas/img/"
+          echo "Synced $(find img -name '*.webp' | wc -l) WebP files to s3://erplora-saas/img/"
 
       # Starter seeds (ADR-0072): bundles `starter_catalogs/<país>/<sector>/{seed.sql,seed.sha256,seed.json}`
       # → S3 `starter-seeds/<país>/<sector>/`. El Hub los descarga, verifica el SHA256 y aplica el seed.
