@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Convert PNG and JPG images under assets/ to WebP format (512x512, quality 85).
+Convert PNG and JPG images under img/ to WebP format (512x512, quality 85).
 
 Usage:
     python scripts/convert_to_webp.py [paths ...] [--quality 85] [--delete-originals] [--dry-run]
 
 Arguments:
     paths               Optional image files or directories to convert.
-                        Defaults to the whole assets/ tree.
+                        Defaults to the whole img/ tree.
 
 Options:
     --quality N         WebP quality (1-100, default 85)
@@ -26,9 +26,9 @@ except ImportError:
     sys.exit(1)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-ASSETS_DIR = REPO_ROOT / "assets"
+ASSETS_DIR = REPO_ROOT / "img"
 # Legacy layout (pre-73295d7); kept as fallback for old checkouts.
-LEGACY_ASSETS_DIR = REPO_ROOT / "data" / "assets"
+LEGACY_ASSETS_DIR = REPO_ROOT / "data" / "img"
 
 TARGET_SIZE = (512, 512)
 SOURCE_SUFFIXES = (".png", ".jpg", ".jpeg")
@@ -69,7 +69,7 @@ def convert_image(src: Path, quality: int, dry_run: bool) -> bool:
 
 
 def collect_sources(paths: list[str]) -> list[Path]:
-    """Resolve CLI paths (or the assets/ tree) into a list of source images."""
+    """Resolve CLI paths (or the img/ tree) into a list of source images."""
     if paths:
         files: list[Path] = []
         for raw in paths:
@@ -105,7 +105,7 @@ def main():
     parser.add_argument(
         "paths",
         nargs="*",
-        help="Image files or directories to convert (default: whole assets/ tree)",
+        help="Image files or directories to convert (default: whole img/ tree)",
     )
     parser.add_argument(
         "--quality", type=int, default=85, help="WebP quality (default 85)"

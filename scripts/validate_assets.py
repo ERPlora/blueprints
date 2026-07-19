@@ -2,7 +2,7 @@
 """Gate de validación de la librería de assets.
 
 Reglas (ver architecture/blueprints/README.md §1):
-- Bajo ``assets/`` solo puede haber ficheros ``.webp``.
+- Bajo ``img/`` solo puede haber ficheros ``.webp``.
 - Nombre de fichero ``snake_case.webp`` ([a-z0-9] separados por ``_``).
 - Carpetas de sector también en snake_case.
 - Cada WebP debe ser un WebP real (no un .jpg renombrado) de exactamente 512x512.
@@ -69,7 +69,7 @@ def validate(assets_dir: Path) -> list[str]:
 
 
 def main() -> int:
-    assets_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("assets")
+    assets_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("img")
     errors = validate(assets_dir)
 
     total = sum(1 for _ in assets_dir.rglob("*.webp")) if assets_dir.is_dir() else 0
