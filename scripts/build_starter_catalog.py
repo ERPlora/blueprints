@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
-"""Genera un catálogo starter (menú) por sector a partir de la librería de imágenes.
+"""Genera el bundle starter (seed) por país/sector a partir de la librería de imágenes (ADR-0072).
 
-Mapea cada `assets/<sector>/<nombre>.webp` a una categoría de menú y le asigna un precio
-por defecto (con overrides para platos premium), y escribe `starter_catalogs/<sector>.json`.
+Mapea cada `img/<assets_dir>/<nombre>.webp` a una categoría de menú y le asigna un precio por
+defecto (con overrides para platos premium), y escribe el bundle en el layout país/sector:
 
-El JSON resultante es la **fuente de datos** que el Hub/Cloud usa para sembrar el catálogo
-inicial de un hub nuevo de ese sector (productos + categorías de `inventory`). El `image` de
-cada producto es la **s3_key** relativa (`assets/<sector>/<file>.webp`), igual que devuelve
-`GET /api/v1/catalog/assets/?sector=<sector>` en Cloud, para que el consumidor construya la URL
-del CDN (`erplora-storage`).
+    starter_catalogs/<país>/<sector>/seed.sql      # el seed (IVA + productos + cajeros)
+    starter_catalogs/<país>/<sector>/seed.json     # los mismos datos, estructurados (UI/preview)
+    starter_catalogs/<país>/<sector>/seed.sha256   # SHA256 de seed.sql (verificación, patrón module.zip)
+
+Es el mirror local del prefijo S3 `starter-seeds/<país>/<sector>/` (lo sincroniza
+`.github/workflows/publish-to-s3.yml`). El Hub lo descarga, verifica el SHA256, sustituye el
+`hub_id` demo por el real y aplica `seed.sql` vía `runtime/src/seed.rs::apply` (ADR-0072 §3).
+
+Imágenes COMPARTIDAS (§7.3 opción "shared"): el `image` de cada producto es una **ref lógica**
+`media:public/img/<assets_dir>/<file>.webp` — el origen `public` la resuelve el proxy del SaaS
+(solo-lectura); no se duplican imágenes dentro del bundle.
 
 Uso:
-    python scripts/build_starter_catalog.py                 # todos los sectores con reglas
-    python scripts/build_starter_catalog.py hospitality     # solo un sector
+    python scripts/build_starter_catalog.py                       # todos los sectores (país es)
+    python scripts/build_starter_catalog.py restaurant            # solo un sector
+    python scripts/build_starter_catalog.py --country es restaurant
 
-Es determinista e idempotente: misma entrada → mismo JSON (orden estable, sin timestamps).
+Determinista e idempotente: misma entrada → mismos ficheros (orden estable, sin timestamps).
 """
 
 from __future__ import annotations
@@ -24,7 +31,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSETS = ROOT / "assets"
+ASSETS = ROOT / "img"
 OUT_DIR = ROOT / "starter_catalogs"
 
 # --- Definición de categorías por sector ----------------------------------------------------
@@ -302,13 +309,74 @@ HOSPITALITY_PRICE_OVERRIDES = {
 # Sectores que no son comida y se excluyen del catálogo de restaurante (servicios de hotel, etc.).
 HOSPITALITY_EXCLUDE = {"lavanderia", "lena", "suite", "polo_artesano"}
 
+# ── IVA por defecto (módulo `taxes`, ADR-0066) ───────────────────────────────────────────────
+# Tipos de IVA de España sembrados en CADA catálogo starter ANTES de los productos, para que
+# `inventory_product.tax_rate_id` apunte a una fila EXISTENTE (antes faltaba → apuntaba a un id
+# fantasma). `rate_pct` es un porcentaje REAL (no es dinero, no va en céntimos). country=ES,
+# `code` único por (hub, country_code).
+SPAIN_IVA_RATES = [
+    # code     nombre                    rate_pct (%)
+    ("IVA21", "IVA general 21%", 21.0),
+    ("IVA10", "IVA reducido 10%", 10.0),
+    ("IVA4", "IVA superreducido 4%", 4.0),
+    ("IVA0", "IVA exento 0%", 0.0),
+]
+
+# ── Cajeros demo (login local) ───────────────────────────────────────────────────────────────
+# 2 cajeros por seed: una fila `hub_user` (login por PIN) enlazada a su ficha `staff_member`
+# (vía `staff_member.user_id`). pin_hash en formato LEGACY `salt:sha256("{salt}:{pin}")` que
+# `identity.rs::check_pin` acepta y rehashea perezosamente a argon2id en el primer login (igual
+# que el seed del demo).
+#
+# ROL = 'employee' (NO 'cashier'). El cajero ES el rol de operador que YA existe en los 27
+# module.json (role_permissions: admin/manager/employee). 'employee' concede justo lo que un
+# cajero necesita —vender (sales.add_sale), abrir/cerrar caja (cash_register.*_session),
+# facturar (invoice.add_invoice)— sin ajustes/borrados (manage_settings/delete = manager+).
+# Reutilizar el rol existente evita crear/duplicar 'cashier' en 27 módulos (componer, no duplicar).
+#
+# PIN: los PINs 1111/2222 NO rotan — la seguridad la da el **device-trust** (solo dispositivos de
+# confianza pueden hacer login por PIN, §2.9). Son credenciales de demo estables a propósito.
+CASHIERS = [
+    # name        pin     role         pin_hash (salt:sha256_hex("{salt}:{pin}"))                                                first      last
+    (
+        "Cajero 1",
+        "1111",
+        "employee",
+        "cashier1-seed-salt:9d81582af594e1cc780151726e43aceb5da668e780bf455ca41b6bfc0a7074ca",
+        "Cajero",
+        "Uno",
+    ),
+    (
+        "Cajero 2",
+        "2222",
+        "employee",
+        "cashier2-seed-salt:fe8ab1c960ef7d0abbbd1c7598ed2036f7aabc2408571edfdaff16d6bc1bdb0f",
+        "Cajero",
+        "Dos",
+    ),
+]
+
+# La CLAVE del dict es el **seed-key canónico del sector** (ADR-0072 §7.2): el nombre con el que
+# el seed se publica en S3 (`starter-seeds/{país}/{sector}/`) y que prefija sus ids
+# (`cat-{sector}-`, `prod-{sector}-`, `tax-{sector}-`). `assets_dir` es la carpeta de imágenes
+# COMPARTIDA (`img/<assets_dir>/`, ADR-0072 §7.3 opción "shared"): no se duplican imágenes, el
+# seed referencia la librería común. Aquí seed-key=`restaurant` reusa las imágenes de `hospitality`.
 SECTORS = {
-    "hospitality": {
+    "restaurant": {
+        "assets_dir": "hospitality",
         "categories": HOSPITALITY_CATEGORIES,
         "rules": HOSPITALITY_RULES,
         "price_overrides": HOSPITALITY_PRICE_OVERRIDES,
         "exclude": HOSPITALITY_EXCLUDE,
-        "tax_rate": 10,  # IVA reducido hostelería (España).
+        # IVA del sector (ASUNCIÓN, flag humano): la hostelería tributa al 10 % (comida y bebida
+        # sin alcohol); el alcohol al 21 %. Cada producto referenciará el `tax_rate_id` resuelto
+        # de su categoría.
+        "default_tax_code": "IVA10",
+        "tax_code_by_category": {
+            "cervezas": "IVA21",
+            "vinos": "IVA21",
+            "cocteles": "IVA21",
+        },
     },
 }
 
@@ -327,7 +395,10 @@ def classify(stem: str, rules: list[tuple[str, list[str]]]) -> str | None:
 
 def build_sector(sector: str) -> dict:
     cfg = SECTORS[sector]
-    folder = ASSETS / sector
+    # Imágenes COMPARTIDAS (ADR-0072 §7.3): se leen de `img/<assets_dir>/`, no de una carpeta
+    # con el nombre del seed-key. Así `restaurant` reusa las webp de `hospitality` sin duplicar.
+    assets_dir = cfg.get("assets_dir", sector)
+    folder = ASSETS / assets_dir
     if not folder.is_dir():
         raise SystemExit(f"sector sin carpeta de assets: {folder}")
 
@@ -345,15 +416,21 @@ def build_sector(sector: str) -> dict:
         if category is None:
             unclassified.append(stem)
             continue
-        price = cfg["price_overrides"].get(stem, cat_meta[category][2])
+        price_eur = cfg["price_overrides"].get(stem, cat_meta[category][2])
+        # ADR-0007: el dinero va en CÉNTIMOS ENTEROS, nunca en float. Las reglas declaran el
+        # precio en euros por comodidad de autoría; se convierte aquí una sola vez (× 100).
+        price_cents = int(round(float(price_eur) * 100))
+        tax_code = cfg.get("tax_code_by_category", {}).get(
+            category, cfg["default_tax_code"]
+        )
         products.append(
             {
                 "sku": stem,
                 "name": humanize(stem),
                 "category": category,
-                "price": round(float(price), 2),
-                "tax_rate": cfg["tax_rate"],
-                "image": f"assets/{sector}/{stem}.webp",
+                "price": price_cents,  # céntimos (ADR-0007)
+                "tax_code": tax_code,  # → tax_rate_id resuelto en emit_sql
+                "image": f"media:public/img/{assets_dir}/{stem}.webp",
             }
         )
 
@@ -374,7 +451,12 @@ def build_sector(sector: str) -> dict:
     return {
         "sector": sector,
         "currency": "EUR",
-        "tax_rate": cfg["tax_rate"],
+        "price_unit": "cents",  # ADR-0007: `price` en céntimos enteros (no euros, no float).
+        "default_tax_code": cfg["default_tax_code"],
+        "taxes": [
+            {"code": code, "name": name, "rate_pct": rate}
+            for code, name, rate in SPAIN_IVA_RATES
+        ],
         "categories": categories,
         "products": products,
     }
@@ -392,26 +474,48 @@ def _sql(value: str) -> str:
 
 
 def emit_sql(data: dict, hub_id: str) -> str:
-    """Emite SQL idempotente que siembra `inventory_category` + `inventory_product` (+ M2M).
+    """Emite SQL idempotente que siembra IVA + catálogo + cajeros para un sector.
+
+    Bloques (en orden): (1) `taxes_rate` (IVA ES, ADR-0066) — primero, para que los productos
+    referencien un `tax_rate_id` existente; (2) `inventory_category`; (3) `inventory_product`
+    (+ M2M `inventory_product_categories`); (4) cajeros demo (`hub_user` + `staff_member`).
 
     Mismo estilo que `hub/crates/server/seeds/demo.sql`: `INSERT ... SELECT ... WHERE NOT EXISTS`
-    (re-arrancable sin duplicar). Portable SQLite/Postgres. Asume que el módulo `inventory` ya
-    creó sus tablas (su migración 001_init) — este seed solo aporta DATOS, no DDL.
+    (re-arrancable sin duplicar). Portable SQLite/Postgres. Asume que los módulos `taxes`,
+    `inventory` y `staff` ya crearon sus tablas (sus migraciones) ANTES de aplicar este seed; el
+    seed solo aporta DATOS, no DDL. Dinero en CÉNTIMOS ENTEROS (ADR-0007).
 
-    El `image` es la s3_key relativa (igual que el JSON y que `/api/v1/catalog/assets/`).
+    El `image` es la ref lógica `media:public/img/…` (igual que el JSON).
     """
     sector = data["sector"]
     h = _sql(hub_id)
     ts = _sql(SEED_TS)
     lines: list[str] = [
         f"-- Catálogo starter '{sector}' generado por scripts/build_starter_catalog.py — NO editar a mano.",
-        f"-- {len(data['products'])} productos en {len(data['categories'])} categorías. hub_id = {hub_id}.",
-        "-- Idempotente (WHERE NOT EXISTS). Requiere que el módulo 'inventory' esté instalado",
-        "-- (sus tablas inventory_category / inventory_product existan) ANTES de aplicar este seed.",
+        f"-- {len(data['products'])} productos en {len(data['categories'])} categorías + {len(data['taxes'])} tipos de IVA + {len(CASHIERS)} cajeros.",
+        f"-- hub_id = {hub_id}. Importes en CÉNTIMOS enteros (ADR-0007). Idempotente (WHERE NOT EXISTS).",
+        "-- Requiere los módulos 'taxes', 'inventory' y 'staff' instalados (sus tablas existen) ANTES de aplicar.",
         "",
     ]
 
-    # Categorías.
+    # 1) IVA por defecto (taxes_rate). PRIMERO: los productos referencian estos tax_rate_id.
+    lines.append(
+        "-- IVA por defecto (módulo taxes, ADR-0066). rate_pct es % REAL (no es dinero). country=ES."
+    )
+    for code, name, rate in SPAIN_IVA_RATES:
+        tax_id = f"tax-{sector}-{code.lower()}"
+        lines.append(
+            "INSERT INTO taxes_rate "
+            "(id, hub_id, code, name, category_id, parent_id, country_code, region_code, rate_pct, "
+            "tax_type, applies_from, applies_until, is_active, is_deleted, created_by, updated_by, created_at, updated_at)\n"
+            f"SELECT {_sql(tax_id)}, {h}, {_sql(code)}, {_sql(name)}, NULL, NULL, 'ES', '', {rate}, "
+            f"'vat', '2026-01-01', NULL, 1, 0, NULL, NULL, {ts}, {ts}\n"
+            "WHERE NOT EXISTS (SELECT 1 FROM taxes_rate "
+            f"WHERE hub_id = {h} AND country_code = 'ES' AND code = {_sql(code)});"
+        )
+    lines.append("")
+
+    # 2) Categorías.
     for cat in data["categories"]:
         cat_id = f"cat-{sector}-{cat['key']}"
         lines.append(
@@ -424,16 +528,20 @@ def emit_sql(data: dict, hub_id: str) -> str:
         )
     lines.append("")
 
-    # Productos + relación producto↔categoría (M2M).
+    lines.append("")
+
+    # 3) Productos + relación producto↔categoría (M2M). price = CÉNTIMOS (ADR-0007); tax_rate_id
+    #    → la fila taxes_rate sembrada arriba (resuelta por categoría: alcohol 21 %, resto 10 %).
     for p in data["products"]:
         prod_id = f"prod-{sector}-{p['sku']}"
         cat_id = f"cat-{sector}-{p['category']}"
+        tax_id = f"tax-{sector}-{p['tax_code'].lower()}"
         lines.append(
             "INSERT INTO inventory_product "
             "(id, hub_id, name, sku, description, product_type, price, cost, stock, "
-            "low_stock_threshold, image, created_at, updated_at)\n"
+            "low_stock_threshold, tax_rate_id, image, created_at, updated_at)\n"
             f"SELECT {_sql(prod_id)}, {h}, {_sql(p['name'])}, {_sql(p['sku'])}, '', 'physical', "
-            f"{p['price']:.2f}, 0, 1000, 0, {_sql(p['image'])}, {ts}, {ts}\n"
+            f"{p['price']}, 0, 1000, 0, {_sql(tax_id)}, {_sql(p['image'])}, {ts}, {ts}\n"
             "WHERE NOT EXISTS (SELECT 1 FROM inventory_product "
             f"WHERE hub_id = {h} AND sku = {_sql(p['sku'])});"
         )
@@ -443,18 +551,48 @@ def emit_sql(data: dict, hub_id: str) -> str:
             "WHERE NOT EXISTS (SELECT 1 FROM inventory_product_categories "
             f"WHERE product_id = {_sql(prod_id)} AND category_id = {_sql(cat_id)});"
         )
+    lines.append("")
+
+    # 4) Cajeros demo: login local por PIN (`hub_user`) enlazado a su ficha de staff
+    #    (`staff_member.user_id`). Ver constante CASHIERS para los flags de seguridad/modelo.
+    lines.append(
+        "-- Cajeros demo (login por PIN). rol='employee' (rol de operador YA existente en los 27 módulos:"
+    )
+    lines.append(
+        "-- vender, abrir/cerrar caja, facturar). PINs 1111/2222 NO rotan — los protege el device-trust."
+    )
+    for i, (name, _pin, role, pin_hash, first, last) in enumerate(CASHIERS, start=1):
+        uid = f"user-{sector}-cashier{i}"
+        sid = f"staff-{sector}-cashier{i}"
+        lines.append(
+            "INSERT INTO hub_user (id, name, pin_hash, role, cloud_user_id, is_active, created_at)\n"
+            f"SELECT {_sql(uid)}, {_sql(name)}, {_sql(pin_hash)}, {_sql(role)}, NULL, 1, {ts}\n"
+            f"WHERE NOT EXISTS (SELECT 1 FROM hub_user WHERE name = {_sql(name)});"
+        )
+        lines.append(
+            "INSERT INTO staff_member "
+            "(id, hub_id, first_name, last_name, user_id, status, is_bookable, created_at, updated_at)\n"
+            f"SELECT {_sql(sid)}, {h}, {_sql(first)}, {_sql(last)}, {_sql(uid)}, 'active', 0, {ts}, {ts}\n"
+            f"WHERE NOT EXISTS (SELECT 1 FROM staff_member WHERE id = {_sql(sid)});"
+        )
 
     return "\n".join(lines) + "\n"
 
 
 def main(argv: list[str]) -> int:
     import argparse
+    import hashlib
 
     parser = argparse.ArgumentParser(
-        description="Genera catálogos starter por sector (JSON + SQL)."
+        description="Genera catálogos starter por sector con layout país/sector (ADR-0072)."
     )
     parser.add_argument(
         "sectors", nargs="*", help="sectores a generar (vacío = todos con reglas)"
+    )
+    parser.add_argument(
+        "--country",
+        default="es",
+        help="país ISO 3166-1 alpha-2 del seed (def. 'es'; fase 1 solo ES, ADR-0072).",
     )
     parser.add_argument(
         "--hub-id",
@@ -463,7 +601,6 @@ def main(argv: list[str]) -> int:
     )
     args = parser.parse_args(argv[1:])
 
-    OUT_DIR.mkdir(exist_ok=True)
     targets = args.sectors or list(SECTORS)
     for sector in targets:
         if sector not in SECTORS:
@@ -471,17 +608,25 @@ def main(argv: list[str]) -> int:
             continue
         data = build_sector(sector)
 
-        out_json = OUT_DIR / f"{sector}.json"
-        out_json.write_text(
+        # Layout ADR-0072: starter_catalogs/<país>/<sector>/{seed.sql, seed.json, seed.sha256}.
+        # (Local mirror del prefijo S3 `starter-seeds/<país>/<sector>/`; lo mapea publish-to-s3.yml.)
+        bundle_dir = OUT_DIR / args.country / sector
+        bundle_dir.mkdir(parents=True, exist_ok=True)
+
+        (bundle_dir / "seed.json").write_text(
             json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
-        out_sql = OUT_DIR / f"{sector}.sql"
-        out_sql.write_text(emit_sql(data, args.hub_id), encoding="utf-8")
+        sql = emit_sql(data, args.hub_id)
+        (bundle_dir / "seed.sql").write_text(sql, encoding="utf-8")
+        # seed.sha256: hash del seed.sql (verificación de integridad, patrón module.zip). Se
+        # commitea junto al seed para que coincida byte a byte; un test lo re-verifica.
+        digest = hashlib.sha256(sql.encode("utf-8")).hexdigest()
+        (bundle_dir / "seed.sha256").write_text(digest + "\n", encoding="utf-8")
 
         print(
-            f"[ok] {sector}: {len(data['products'])} productos en "
-            f"{len(data['categories'])} categorías → {out_json.relative_to(ROOT)}, "
-            f"{out_sql.relative_to(ROOT)}"
+            f"[ok] {args.country}/{sector}: {len(data['products'])} productos en "
+            f"{len(data['categories'])} categorías → {bundle_dir.relative_to(ROOT)}/ "
+            f"(seed.sql sha256={digest[:12]}…)"
         )
     return 0
 

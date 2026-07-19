@@ -3,13 +3,13 @@ name: Validate assets
 on:
   pull_request:
     paths:
-      - 'assets/**'
+      - 'img/**'
       - 'scripts/validate_assets.py'
       - '.github/workflows/validate-assets.yml'
   push:
     branches: [main]
     paths:
-      - 'assets/**'
+      - 'img/**'
       - 'scripts/validate_assets.py'
       - '.github/workflows/validate-assets.yml'
   workflow_dispatch:
@@ -28,4 +28,4 @@ jobs:
         run: pip install pillow
 
       - name: Validate assets (WebP 512x512, snake_case, solo WebP)
-        run: python scripts/validate_assets.py assets
+        run: python scripts/validate_assets.py img

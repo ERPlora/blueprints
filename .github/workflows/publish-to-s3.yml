@@ -1,6 +1,7 @@
 # Almacenamiento: Hetzner Object Storage (S3-compatible, `fsn1.your-objectstorage.com`),
 # bucket `erplora-saas` (privado, layout por prefijos — ADR-0099 / infra/OBJECT-STORAGE.md):
-#   assets/  librería WebP compartida (la lista el SaaS: /api/v1/catalog/assets/)
+#   img/         librería WebP compartida (la lista el SaaS: /api/v1/catalog/assets/)
+#   starter-seeds/  bundles seed por <país>/<sector> (ADR-0072)
 # Sustituye a AWS S3/OIDC (AWS apagado). Credenciales estáticas en secrets del repo:
 # HETZNER_S3_ACCESS_KEY · HETZNER_S3_SECRET_KEY · HETZNER_S3_ENDPOINT.
 name: Sync assets to Object Storage
@@ -9,7 +10,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'assets/**'
+      - 'img/**'
+      - 'starter_catalogs/**'
   workflow_dispatch:
 
 jobs:
@@ -32,15 +34,44 @@ jobs:
       - name: Validate assets before sync
         run: |
           pip install pillow
-          python scripts/validate_assets.py assets
+          python scripts/validate_assets.py img
 
       - name: Sync WebP assets to Object Storage
         run: |
-          aws s3 sync assets/ s3://erplora-saas/assets/ \
+          aws s3 sync img/ s3://erplora-saas/img/ \
             --endpoint-url "$S3_ENDPOINT" \
             --delete \
             --exclude "*" \
             --include "*.webp" \
             --cache-control "max-age=86400" \
             --content-type "image/webp"
-          echo "Synced $(find assets -name '*.webp' | wc -l) WebP files to s3://erplora-saas/assets/"
+          echo "Synced $(find img -name '*.webp' | wc -l) WebP files to s3://erplora-saas/img/"
+
+      # Starter seeds (ADR-0072): bundles `starter_catalogs/<país>/<sector>/{seed.sql,seed.sha256,seed.json}`
+      # → S3 `starter-seeds/<país>/<sector>/`. El Hub los descarga, verifica el SHA256 y aplica el seed.
+      - name: Verify seed.sha256 integrity (no drift) before publishing
+        run: |
+          fail=0
+          for seed in starter_catalogs/*/*/seed.sql; do
+            dir=$(dirname "$seed")
+            expected=$(cat "$dir/seed.sha256" | tr -d '[:space:]')
+            actual=$(sha256sum "$seed" | cut -d' ' -f1)
+            if [ "$expected" != "$actual" ]; then
+              echo "::error::sha256 drift en $seed ($actual != $expected) — regenera el bundle"
+              fail=1
+            fi
+          done
+          [ "$fail" = 0 ] && echo "All seed.sha256 match their seed.sql."
+          exit $fail
+
+      - name: Sync starter seeds to Object Storage
+        run: |
+          # Imágenes NO van aquí (libería compartida en img/, §7.3); solo seed.{sql,sha256,json}.
+          aws s3 sync starter_catalogs/ s3://erplora-saas/starter-seeds/ \
+            --endpoint-url "$S3_ENDPOINT" \
+            --delete \
+            --exclude "*" \
+            --include "*/*/seed.sql" \
+            --include "*/*/seed.sha256" \
+            --include "*/*/seed.json"
+          echo "Synced $(find starter_catalogs -name 'seed.sql' | wc -l) starter seed bundles to s3://erplora-saas/starter-seeds/"
