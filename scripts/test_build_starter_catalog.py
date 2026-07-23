@@ -44,28 +44,35 @@ def test_prices_are_integer_cents():
     )
 
 
-def test_every_product_references_a_seeded_tax_rate():
+def test_blueprint_does_not_seed_taxes_and_uses_canonical_categories():
+    """ADR-0085: el IVA lo siembra el MÓDULO `taxes` (categorías canónicas + reglas ES). El
+    blueprint ya NO inserta `taxes_rate` (tabla eliminada) ni liga por `tax_rate_id`: cada
+    producto declara un `tax_category_key` canónico que la categoría/regla del módulo resuelve
+    al tipo (food/drink 10 %, alcohol 21 %)."""
     data, sql = _restaurant()
-    seeded_ids = {
-        f"tax-restaurant-{code.lower()}" for code, _n, _r in g.SPAIN_IVA_RATES
-    }
-    assert len(seeded_ids) == 4
-    # Cada bloque de IVA aparece como INSERT en el SQL, antes que cualquier producto.
-    first_product = sql.index("INSERT INTO inventory_product ")
-    for tid in seeded_ids:
-        idx = sql.index(f"'{tid}'")
-        assert idx < first_product, f"{tid} debe sembrarse antes de los productos"
-    # Todo producto referencia un tax id sembrado.
+    assert "taxes_rate" not in sql, (
+        "el blueprint ya no siembra taxes_rate (lo hace el módulo taxes)"
+    )
+    assert "tax_rate_id" not in sql, (
+        "inventory_product usa tax_category_key, no tax_rate_id (ADR-0085)"
+    )
+    canonical = {"restaurant.food", "restaurant.drink", "restaurant.alcohol"}
     for p in data["products"]:
-        tid = f"tax-restaurant-{p['tax_code'].lower()}"
-        assert tid in seeded_ids, f"{p['sku']} referencia un IVA no sembrado: {tid}"
+        assert p["tax_category_key"] in canonical, (
+            f"{p['sku']} usa una categoría fiscal no canónica: {p['tax_category_key']}"
+        )
+        assert f"'{p['tax_category_key']}'" in sql, (
+            f"{p['sku']}: la key {p['tax_category_key']} debe aparecer en el SQL"
+        )
 
 
-def test_alcohol_21_rest_10():
+def test_alcohol_vs_food_drink_tax_category():
     data, _ = _restaurant()
-    by_sku = {p["sku"]: p["tax_code"] for p in data["products"]}
-    assert by_sku.get("cerveza_jarra") == "IVA21"
-    assert by_sku.get("americano") == "IVA10"
+    by_sku = {p["sku"]: p["tax_category_key"] for p in data["products"]}
+    assert (
+        by_sku.get("cerveza_jarra") == "restaurant.alcohol"
+    )  # alcohol → 21 % (regla ES del módulo taxes)
+    assert by_sku.get("americano") == "restaurant.drink"  # café → bebida → 10 %
 
 
 def _check_pin_legacy(stored: str, pin: str) -> bool:
