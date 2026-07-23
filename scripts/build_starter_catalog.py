@@ -309,18 +309,11 @@ HOSPITALITY_PRICE_OVERRIDES = {
 # Sectores que no son comida y se excluyen del catálogo de restaurante (servicios de hotel, etc.).
 HOSPITALITY_EXCLUDE = {"lavanderia", "lena", "suite", "polo_artesano"}
 
-# ── IVA por defecto (módulo `taxes`, ADR-0066) ───────────────────────────────────────────────
-# Tipos de IVA de España sembrados en CADA catálogo starter ANTES de los productos, para que
-# `inventory_product.tax_rate_id` apunte a una fila EXISTENTE (antes faltaba → apuntaba a un id
-# fantasma). `rate_pct` es un porcentaje REAL (no es dinero, no va en céntimos). country=ES,
-# `code` único por (hub, country_code).
-SPAIN_IVA_RATES = [
-    # code     nombre                    rate_pct (%)
-    ("IVA21", "IVA general 21%", 21.0),
-    ("IVA10", "IVA reducido 10%", 10.0),
-    ("IVA4", "IVA superreducido 4%", 4.0),
-    ("IVA0", "IVA exento 0%", 0.0),
-]
+# ── IVA (módulo `taxes`, ADR-0085) ───────────────────────────────────────────────────────────
+# El blueprint YA NO siembra tipos de IVA. El módulo `taxes` siembra al instalarse las categorías
+# canónicas (`restaurant.food`/`.drink`/`.alcohol`, `service.generic`, `product.generic`) + las
+# reglas ES (food/drink 10 %, alcohol/servicio/producto 21 %). Cada producto solo declara su
+# `tax_category_key` y el módulo resuelve el tipo. (Antes: `taxes_rate` + `tax_rate_id`, eliminados.)
 
 # ── Cajeros demo (login local) ───────────────────────────────────────────────────────────────
 # 2 cajeros por seed: una fila `hub_user` (login por PIN) enlazada a su ficha `staff_member`
@@ -368,14 +361,16 @@ SECTORS = {
         "rules": HOSPITALITY_RULES,
         "price_overrides": HOSPITALITY_PRICE_OVERRIDES,
         "exclude": HOSPITALITY_EXCLUDE,
-        # IVA del sector (ASUNCIÓN, flag humano): la hostelería tributa al 10 % (comida y bebida
-        # sin alcohol); el alcohol al 21 %. Cada producto referenciará el `tax_rate_id` resuelto
-        # de su categoría.
-        "default_tax_code": "IVA10",
-        "tax_code_by_category": {
-            "cervezas": "IVA21",
-            "vinos": "IVA21",
-            "cocteles": "IVA21",
+        # IVA del sector (ADR-0085): el TIPO lo resuelve el MÓDULO `taxes` por `tax_category_key`
+        # (categoría canónica + regla ES: food/drink 10 %, alcohol 21 %). El blueprint solo asigna
+        # la categoría fiscal canónica por menú-categoría; ya NO siembra `taxes_rate` ni liga por id.
+        "default_tax_category": "restaurant.food",
+        "tax_category_by_category": {
+            "cafes": "restaurant.drink",
+            "refrescos": "restaurant.drink",
+            "cervezas": "restaurant.alcohol",
+            "vinos": "restaurant.alcohol",
+            "cocteles": "restaurant.alcohol",
         },
     },
 }
@@ -420,8 +415,8 @@ def build_sector(sector: str) -> dict:
         # ADR-0007: el dinero va en CÉNTIMOS ENTEROS, nunca en float. Las reglas declaran el
         # precio en euros por comodidad de autoría; se convierte aquí una sola vez (× 100).
         price_cents = int(round(float(price_eur) * 100))
-        tax_code = cfg.get("tax_code_by_category", {}).get(
-            category, cfg["default_tax_code"]
+        tax_category_key = cfg.get("tax_category_by_category", {}).get(
+            category, cfg["default_tax_category"]
         )
         products.append(
             {
@@ -429,7 +424,7 @@ def build_sector(sector: str) -> dict:
                 "name": humanize(stem),
                 "category": category,
                 "price": price_cents,  # céntimos (ADR-0007)
-                "tax_code": tax_code,  # → tax_rate_id resuelto en emit_sql
+                "tax_category_key": tax_category_key,  # ADR-0085: categoría canónica (regla ES en módulo taxes)
                 "image": f"media:public/img/{assets_dir}/{stem}.webp",
             }
         )
@@ -452,11 +447,9 @@ def build_sector(sector: str) -> dict:
         "sector": sector,
         "currency": "EUR",
         "price_unit": "cents",  # ADR-0007: `price` en céntimos enteros (no euros, no float).
-        "default_tax_code": cfg["default_tax_code"],
-        "taxes": [
-            {"code": code, "name": name, "rate_pct": rate}
-            for code, name, rate in SPAIN_IVA_RATES
-        ],
+        # ADR-0085: el IVA lo siembra el módulo `taxes` (categorías canónicas + reglas ES); el
+        # blueprint no declara tipos — cada producto lleva su `tax_category_key` canónico.
+        "default_tax_category": cfg["default_tax_category"],
         "categories": categories,
         "products": products,
     }
@@ -474,11 +467,14 @@ def _sql(value: str) -> str:
 
 
 def emit_sql(data: dict, hub_id: str) -> str:
-    """Emite SQL idempotente que siembra IVA + catálogo + cajeros para un sector.
+    """Emite SQL idempotente que siembra catálogo + cajeros para un sector.
 
-    Bloques (en orden): (1) `taxes_rate` (IVA ES, ADR-0066) — primero, para que los productos
-    referencien un `tax_rate_id` existente; (2) `inventory_category`; (3) `inventory_product`
-    (+ M2M `inventory_product_categories`); (4) cajeros demo (`hub_user` + `staff_member`).
+    Bloques (en orden): (1) `inventory_category`; (2) `inventory_product` (+ M2M
+    `inventory_product_categories`), cada producto con su `tax_category_key` canónico
+    (ADR-0085); (3) cajeros demo (`hub_user` + `staff_member`).
+
+    El IVA NO se siembra aquí: lo aporta el módulo `taxes` al instalarse (categorías canónicas +
+    reglas ES). El seed solo referencia `tax_category_key`; el módulo resuelve el tipo.
 
     Mismo estilo que `hub/crates/server/seeds/demo.sql`: `INSERT ... SELECT ... WHERE NOT EXISTS`
     (re-arrancable sin duplicar). Portable SQLite/Postgres. Asume que los módulos `taxes`,
@@ -492,30 +488,13 @@ def emit_sql(data: dict, hub_id: str) -> str:
     ts = _sql(SEED_TS)
     lines: list[str] = [
         f"-- Catálogo starter '{sector}' generado por scripts/build_starter_catalog.py — NO editar a mano.",
-        f"-- {len(data['products'])} productos en {len(data['categories'])} categorías + {len(data['taxes'])} tipos de IVA + {len(CASHIERS)} cajeros.",
+        f"-- {len(data['products'])} productos en {len(data['categories'])} categorías + {len(CASHIERS)} cajeros. IVA vía módulo taxes (ADR-0085).",
         f"-- hub_id = {hub_id}. Importes en CÉNTIMOS enteros (ADR-0007). Idempotente (WHERE NOT EXISTS).",
         "-- Requiere los módulos 'taxes', 'inventory' y 'staff' instalados (sus tablas existen) ANTES de aplicar.",
         "",
     ]
 
-    # 1) IVA por defecto (taxes_rate). PRIMERO: los productos referencian estos tax_rate_id.
-    lines.append(
-        "-- IVA por defecto (módulo taxes, ADR-0066). rate_pct es % REAL (no es dinero). country=ES."
-    )
-    for code, name, rate in SPAIN_IVA_RATES:
-        tax_id = f"tax-{sector}-{code.lower()}"
-        lines.append(
-            "INSERT INTO taxes_rate "
-            "(id, hub_id, code, name, category_id, parent_id, country_code, region_code, rate_pct, "
-            "tax_type, applies_from, applies_until, is_active, is_deleted, created_by, updated_by, created_at, updated_at)\n"
-            f"SELECT {_sql(tax_id)}, {h}, {_sql(code)}, {_sql(name)}, NULL, NULL, 'ES', '', {rate}, "
-            f"'vat', '2026-01-01', NULL, 1, 0, NULL, NULL, {ts}, {ts}\n"
-            "WHERE NOT EXISTS (SELECT 1 FROM taxes_rate "
-            f"WHERE hub_id = {h} AND country_code = 'ES' AND code = {_sql(code)});"
-        )
-    lines.append("")
-
-    # 2) Categorías.
+    # 1) Categorías.
     for cat in data["categories"]:
         cat_id = f"cat-{sector}-{cat['key']}"
         lines.append(
@@ -530,18 +509,18 @@ def emit_sql(data: dict, hub_id: str) -> str:
 
     lines.append("")
 
-    # 3) Productos + relación producto↔categoría (M2M). price = CÉNTIMOS (ADR-0007); tax_rate_id
-    #    → la fila taxes_rate sembrada arriba (resuelta por categoría: alcohol 21 %, resto 10 %).
+    # 2) Productos + relación producto↔categoría (M2M). price = CÉNTIMOS (ADR-0007);
+    #    tax_category_key → categoría canónica del módulo taxes (ADR-0085: food/drink 10 %,
+    #    alcohol 21 %; la regla ES resuelve el tipo — el blueprint no siembra tipos).
     for p in data["products"]:
         prod_id = f"prod-{sector}-{p['sku']}"
         cat_id = f"cat-{sector}-{p['category']}"
-        tax_id = f"tax-{sector}-{p['tax_code'].lower()}"
         lines.append(
             "INSERT INTO inventory_product "
             "(id, hub_id, name, sku, description, product_type, price, cost, stock, "
-            "low_stock_threshold, tax_rate_id, image, created_at, updated_at)\n"
+            "low_stock_threshold, tax_category_key, image, created_at, updated_at)\n"
             f"SELECT {_sql(prod_id)}, {h}, {_sql(p['name'])}, {_sql(p['sku'])}, '', 'physical', "
-            f"{p['price']}, 0, 1000, 0, {_sql(tax_id)}, {_sql(p['image'])}, {ts}, {ts}\n"
+            f"{p['price']}, 0, 1000, 0, {_sql(p['tax_category_key'])}, {_sql(p['image'])}, {ts}, {ts}\n"
             "WHERE NOT EXISTS (SELECT 1 FROM inventory_product "
             f"WHERE hub_id = {h} AND sku = {_sql(p['sku'])});"
         )
