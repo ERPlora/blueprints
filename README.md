@@ -90,7 +90,7 @@ idempotente). Si editas un `seed.sql` a mano, regenera su `seed.sha256` (un test
 Action lo verifican). Publicación: `publish-to-s3.yml` sincroniza `starter_catalogs/` →
 `starter-seeds/` en cada push a `main` (tras validar que los SHA256 cuadran).
 
-> Diseño completo del import (endpoint/stepper del Hub = core, columna humano):
+> Diseño completo del import (endpoint/stepper del Hub = core, pendiente de decidir e implementar):
 > `starter_catalogs/IMPORT-SPEC.md` (pendiente de redactar) — ver ADR-0072 en el decision-log.
 
 ## License
