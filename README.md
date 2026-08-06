@@ -50,48 +50,20 @@ python scripts/validate_assets.py
 
 On push to `main`, a GitHub Action syncs `img/` to `s3://erplora-saas/img/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
 
-## Starter seeds (catálogo inicial por país/sector — ADR-0072)
+**Imágenes COMPARTIDAS** (no se duplican en cada plantilla): cada producto/servicio referencia su
+imagen por la **ref lógica** `media:public/img/<sector>/<name>.webp` (ADR-0134), no por la s3_key
+desnuda. El origen `public` la resuelve el **proxy del SaaS** (`GET /api/v1/catalog/media/<key>`);
+la librería es solo-lectura: se entra por PR a este repo. El listado:
+`GET /api/v1/catalog/assets/?sector=&q=`. Restaurante reusa las imágenes de `img/hospitality/`.
 
-Cada hub nuevo arranca con un catálogo real (restaurante o peluquería) **importado** desde S3. El
-seed vive estático en `s3://erplora-saas/starter-seeds/<país>/<sector>/`, mirror del directorio
-local `starter_catalogs/<país>/<sector>/`:
+## 🪦 Starter seeds — RETIRADOS (ADR-0121)
 
-```text
-starter_catalogs/es/restaurant/seed.sql      # IVA ES + 280 productos + cajeros (inventory/taxes/staff)
-starter_catalogs/es/restaurant/seed.json     # los mismos datos, estructurados (UI/preview)
-starter_catalogs/es/restaurant/seed.sha256   # SHA256 de seed.sql (verificación, patrón module.zip)
-starter_catalogs/es/beauty/seed.sql          # IVA ES + servicios + staff + horarios + cajeros
-starter_catalogs/es/beauty/seed.sha256
-```
-
-- **País** = ISO 3166-1 alpha-2. **Fase 1: solo `es/`** (datos en español, IVA de España).
-- **Imágenes COMPARTIDAS** (no se duplican en el bundle): cada producto/servicio referencia su
-  imagen por la **ref lógica** `media:public/img/<sector>/<name>.webp` (ADR-0134), no por la s3_key
-  desnuda. El origen `public` la resuelve el **proxy del SaaS** (`GET /api/v1/catalog/media/<key>`);
-  la librería es solo-lectura: se entra por PR a este repo. El listado sigue en
-  `GET /api/v1/catalog/assets/?sector=&q=`. Restaurante reusa las imágenes de `img/hospitality/`.
-- **`seed.sql`** es **SQL idempotente** (`WHERE NOT EXISTS`), portable SQLite/Postgres (céntimos
-  enteros ADR-0007), mismo estilo que `hub/crates/server/seeds/demo.sql`. El Hub lo descarga,
-  **verifica el SHA256**, **sustituye el `hub_id`** demo (`00000000-…-001`) por el real y lo aplica
-  vía `runtime/src/seed.rs::apply`. Requiere los módulos del seed (`inventory`/`taxes`/`staff` para
-  restaurante; `services`/`staff`/`schedules`/`pricing` para beauty) instalados antes de aplicar.
-
-`restaurant` se **genera** de forma determinista desde `img/hospitality/` con reglas por
-palabra clave; `beauty` está **escrito a mano** (`es/beauty/seed.sql`):
-
-```bash
-python scripts/build_starter_catalog.py                 # todos los generables (país es)
-python scripts/build_starter_catalog.py restaurant      # solo restaurant
-python scripts/build_starter_catalog.py --country es restaurant
-```
-
-Al añadir imágenes o cambiar reglas, re-ejecuta el generador (regenera `seed.{sql,json,sha256}`,
-idempotente). Si editas un `seed.sql` a mano, regenera su `seed.sha256` (un test y la GitHub
-Action lo verifican). Publicación: `publish-to-s3.yml` sincroniza `starter_catalogs/` →
-`starter-seeds/` en cada push a `main` (tras validar que los SHA256 cuadran).
-
-> Diseño completo del import (endpoint/stepper del Hub = core, columna humano):
-> `starter_catalogs/IMPORT-SPEC.md` (pendiente de redactar) — ver ADR-0072 en el decision-log.
+Los starter seeds SQL se retiraron (**ADR-0121**, 2026-07-12; supersede la parte SQL de ADR-0072):
+el SQL de siembra ya no se escribe a mano — las plantillas salen del **EXPORT de un hub
+configurado** (`.blueprint.zip`). El diseño vivo: `architecture/saas/blueprints.md`. Este repo
+queda **solo como librería de imágenes WebP**. Los directorios `starter_catalogs/` y el workflow
+`publish-to-s3.yml` siguen en el repo como legado pendiente de limpiar — **no construir sobre
+ellos**.
 
 ## License
 
