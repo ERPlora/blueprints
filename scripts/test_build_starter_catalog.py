@@ -161,6 +161,76 @@ def test_no_raw_assets_prefix_left_in_disk_seeds():
         assert "assets/" not in body, f"{seed} aún hornea el prefijo legacy 'assets/'"
 
 
+#: Tablas sembradas por cada vertical. Un seed de sector X sólo puede tocar las tablas de X
+#: (más las compartidas `hub_user` / `staff_member`, comunes a cualquier negocio con cajeros).
+#: Refleja el defecto de blueprints#14: el `.blueprint.zip` Peluquería publicado arrastraba
+#: 280 `inventory_product` de Restaurante porque se exportó desde un hub contaminado. Aquí no
+#: hay `.blueprint.zip` (lo publica el SaaS), pero el isomorfo en seeds sería que un seed de
+#: belleza sembrara `inventory_*`; este test lo atrapa en el disco antes de llegar a S3.
+SECTOR_TABLES = {
+    "restaurant": {
+        "inventory_category",
+        "inventory_product",
+        "inventory_product_categories",
+    },
+    "beauty": {
+        "services_category",
+        "services_service",
+        "services_settings",
+        "staff_role",
+        "staff_service",
+        "staff_settings",
+        "staff_schedule",
+        "staff_working_hours",
+        "schedules_business_hours",
+        "schedules_settings",
+        "pricing_price_list",
+        "pricing_price_list_item",
+    },
+}
+#: Comunes a cualquier sector (cajeros + personal que cobra).
+SHARED_TABLES = {"hub_user", "staff_member"}
+
+
+def _seed_tables(sql: str) -> set[str]:
+    """Tablas que un `seed.sql` siembra (sólo líneas `INSERT INTO`, como hace el runtime)."""
+    return {
+        m.group(1).lower()
+        for line in sql.splitlines()
+        if not line.lstrip().startswith("--")
+        for m in [re.match(r"\s*INSERT\s+INTO\s+([a-z_]+)", line, re.IGNORECASE)]
+        if m
+    }
+
+
+def test_disk_seeds_do_not_leak_other_sector_tables():
+    """Coherencia sectorial de los seeds (regresión de blueprints#14).
+
+    Un seed de sector X no puede sembrar tablas de un sector Y: el seed de belleza no debe
+    tocar `inventory_*` (que es lo que arrastraba el bundle Peluquería publicado). El modelo
+    publicable (`.blueprint.zip`) vive en el SaaS; aquí se vigila el isomorfo en los seeds del
+    disco, que son la única fuente de verdad de este repo.
+    """
+    from pathlib import Path
+
+    seeds = sorted(Path(g.OUT_DIR).glob("*/*/seed.sql"))
+    assert seeds, "no hay bundles starter_catalogs/<país>/<sector>/seed.sql"
+    known_sectors = set(SECTOR_TABLES)
+    for seed in seeds:
+        sector = seed.parent.name
+        # Sectores nuevos (p. ej. tobacco/retail) no se inventan la lista aquí: el test pasa a
+        # ser ruido verde hasta que alguien los añada a SECTOR_TABLES. Mejor que fallar a ciegas.
+        if sector not in known_sectors:
+            continue
+        own = SECTOR_TABLES[sector] | SHARED_TABLES
+        foreign = _seed_tables(seed.read_text(encoding="utf-8")) - own
+        assert not foreign, (
+            f"{seed} siembra tablas de otro vertical: {sorted(foreign)}. "
+            f"Un seed de «{sector}» sólo puede tocar {sorted(own)}. "
+            f"(blueprints#14: el bundle Peluquería contaminado mezclaba restaurant.* en belleza.)"
+        )
+
+
 def main() -> int:
     tests = [
         v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)
