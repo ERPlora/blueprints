@@ -231,6 +231,230 @@ def test_disk_seeds_do_not_leak_other_sector_tables():
         )
 
 
+# ── Cantidades: punto fijo entero a escala 10⁶ (ADR-0147) ────────────────────────────────────
+# El dinero (céntimos, ADR-0007) y la cantidad (escala 10⁶, ADR-0147) son DOS contratos distintos
+# y conviven en la misma fila: `price`/`cost` en céntimos, `stock`/`low_stock_threshold` a 10⁶.
+QUANTITY_SCALE = 1_000_000
+
+# Fila emitida para `inventory_product`, por posición:
+#   id, hub_id, name, sku, description, product_type, price, cost, stock, low_stock_threshold,
+#   tax_category_key, image, created_at, updated_at
+# Se ancla en `'physical', ` (el `product_type`) porque es el único literal fijo antes de los
+# números: así el test no depende de cómo se escapen el nombre o la descripción.
+PRODUCT_ROW_RE = re.compile(
+    r"'physical', (?P<price>\d+), (?P<cost>\d+), (?P<stock>\d+), (?P<threshold>\d+), "
+    r"'(?P<tax_category_key>[^']*)', '(?P<image>[^']*)'"
+)
+
+# Ref lógica de imagen `media:public/img/<carpeta>/<fichero>.webp` (ADR-0134).
+IMAGE_REF_RE = re.compile(
+    r"media:public/img/(?P<folder>[^/'\"]+)/(?P<filename>[^'\"\s]+\.webp)"
+)
+
+
+def _product_rows(sql: str) -> list[dict[str, int | str]]:
+    rows = [m.groupdict() for m in PRODUCT_ROW_RE.finditer(sql)]
+    for r in rows:
+        for k in ("price", "cost", "stock", "threshold"):
+            r[k] = int(r[k])
+    return rows
+
+
+def test_stock_quantities_are_micro_scaled():
+    """ADR-0147: `stock` y `low_stock_threshold` son CANTIDADES en punto fijo a escala 10⁶.
+
+    El import del blueprint escribe el SQL del bundle **tal cual** (`import_sql.rs::apply` →
+    `execute_batch`, sin aritmética), y la columna es `BIGINT` a escala 10⁶ desde
+    `inventory/migrations/postgres/006_quantity_fixed_point.sql`. Un `stock` de `1000` plano NO
+    son 1000 unidades: la UI hace `fromMicro` y pinta **0.001**. Es el modo de fallo de
+    ERPlora/blueprints#18 (allí `20` → `0.00002`).
+    """
+    _data, sql = _restaurant()
+    rows = _product_rows(sql)
+    assert rows, "el SQL debe emitir filas de inventory_product"
+    for r in rows:
+        assert r["stock"] % QUANTITY_SCALE == 0, (
+            f"stock={r['stock']} no es múltiplo de 10⁶: llegaría como "
+            f"{r['stock'] / QUANTITY_SCALE} unidades (ADR-0147)"
+        )
+        assert r["stock"] >= QUANTITY_SCALE, (
+            f"stock={r['stock']} es menos de UNA unidad lógica (ADR-0147)"
+        )
+        assert r["threshold"] % QUANTITY_SCALE == 0, (
+            f"low_stock_threshold={r['threshold']} no es múltiplo de 10⁶ (ADR-0147)"
+        )
+
+
+def test_money_and_quantity_scales_do_not_get_mixed_up():
+    """El precio NO se escala a 10⁶ (sigue en céntimos, ADR-0007/0123).
+
+    Guarda el arreglo de #18 por el otro lado: multiplicar «todos los números» por 10⁶ rompería
+    la frontera fiscal. `price` es céntimos y se queda en céntimos.
+    """
+    data, sql = _restaurant()
+    by_sku = {p["sku"]: p["price"] for p in data["products"]}
+    rows = _product_rows(sql)
+    prices_in_sql = sorted(r["price"] for r in rows)
+    assert prices_in_sql == sorted(by_sku.values()), (
+        "el precio del SQL debe ser el mismo entero de céntimos que el del JSON"
+    )
+    assert max(prices_in_sql) < 1_000_000, (
+        "un precio ≥ 10⁶ céntimos (10 000 €) en hostelería = alguien escaló el dinero como cantidad"
+    )
+
+
+def test_seed_json_declares_the_quantity_scale():
+    """El JSON declara sus unidades igual que ya declara `price_unit: cents`.
+
+    Sin esto, quien lea el bundle no puede saber si un `stock` es unidades o micro-unidades — y
+    ese es exactamente el dato que se perdió en #18.
+    """
+    data, _sql = _restaurant()
+    assert data.get("quantity_scale") == QUANTITY_SCALE, (
+        "el seed.json debe declarar quantity_scale = 1_000_000 (ADR-0147)"
+    )
+    assert data["products"], "el sector debe producir productos"
+    for p in data["products"]:
+        assert isinstance(p.get("stock"), int), (
+            f"{p['sku']}: falta stock (int) en el JSON"
+        )
+        assert p["stock"] % QUANTITY_SCALE == 0, (
+            f"{p['sku']}: stock={p['stock']} no es múltiplo de quantity_scale"
+        )
+
+
+def test_disk_seeds_store_quantities_in_micro_units():
+    """Lo mismo, sobre los bundles YA ESCRITOS en disco (no solo sobre la salida en memoria).
+
+    Es el test que atrapa un `seed.sql` que se quedó sin regenerar tras arreglar el generador:
+    lo que se publica a S3 y lo que aplica el e2e del Hub
+    (`hub/crates/runtime/tests/sector_packs_pg_e2e.rs`) es el FICHERO, no la función.
+    """
+    from pathlib import Path
+
+    seeds = sorted(Path(g.OUT_DIR).glob("*/*/seed.sql"))
+    assert seeds, "no hay bundles starter_catalogs/<país>/<sector>/seed.sql"
+    checked = 0
+    for seed in seeds:
+        for r in _product_rows(seed.read_text(encoding="utf-8")):
+            checked += 1
+            assert r["stock"] % QUANTITY_SCALE == 0, (
+                f"{seed}: stock={r['stock']} sin escalar a 10⁶ (ADR-0147)"
+            )
+            assert r["threshold"] % QUANTITY_SCALE == 0, (
+                f"{seed}: low_stock_threshold={r['threshold']} sin escalar a 10⁶ (ADR-0147)"
+            )
+    assert checked, (
+        "ningún seed del disco trae filas de inventory_product que comprobar"
+    )
+
+
+# ── Imágenes: la ref lógica tiene que apuntar a un fichero que EXISTA ────────────────────────
+
+
+def test_every_image_ref_in_the_disk_seeds_exists_in_the_library():
+    """Cada `media:public/img/<carpeta>/<fichero>.webp` de los seeds resuelve a un fichero REAL.
+
+    El prefijo `media:` es una promesa a un resolvedor (ADR-0134); hoy nadie la cumple
+    (ERPlora/blueprints#17). Cuando se cumpla, una ref que apunte a un fichero inexistente será
+    un 404 por producto **en el mostrador del cliente**, y el bundle ya estará publicado e
+    INMUTABLE (ADR-0121): no se corrige, se sustituye. Por eso se comprueba aquí, en el único
+    punto donde las refs y los bytes están juntos.
+    """
+    from pathlib import Path
+
+    library = Path(g.ASSETS)
+    seeds = [
+        s
+        for s in sorted(Path(g.OUT_DIR).glob("*/*/seed.*"))
+        if s.suffix in (".sql", ".json")
+    ]
+    assert seeds, "no hay seeds que comprobar"
+    missing: list[str] = []
+    total = 0
+    for seed in seeds:
+        for m in IMAGE_REF_RE.finditer(seed.read_text(encoding="utf-8")):
+            folder, filename = m.group("folder"), m.group("filename")
+            if (
+                "<" in folder or "*" in filename
+            ):  # el comentario de cabecera, no una fila
+                continue
+            total += 1
+            if not (library / folder / filename).is_file():
+                missing.append(f"{seed.name} → img/{folder}/{filename}")
+    assert total, "ningún seed referencia imágenes (¿se perdieron las refs?)"
+    assert not missing, (
+        f"{len(missing)} ref(s) de imagen apuntan a ficheros que NO existen en img/:\n  "
+        + "\n  ".join(sorted(set(missing))[:20])
+    )
+
+
+def test_no_product_is_left_without_an_image_ref():
+    """Un producto sin imagen sale con el marco vacío en el TPV (#17). Si el generador tiene el
+    fichero, el producto tiene que llevarlo: el hueco vacío se ve como «se ha roto algo»."""
+    data, _sql = _restaurant()
+    sin_imagen = [p["sku"] for p in data["products"] if not p.get("image")]
+    assert not sin_imagen, f"productos sin ref de imagen: {sin_imagen[:10]}"
+
+
+# ── Texto visible: español correcto (el cliente final lo lee) ────────────────────────────────
+# Los nombres se derivan del nombre de FICHERO de la imagen (`cafe_con_leche.webp`), que es
+# `snake_case` ASCII por el gate de assets — así que sin un mapa de visualización el catálogo
+# entero sale sin tildes. La lista es CERRADA (formas concretas), no una heurística: aquí un
+# falso positivo bloquearía la generación.
+KNOWN_MISSPELLINGS = {
+    "cafe": "café",
+    "te": "té",
+    "jamon": "jamón",
+    "salmon": "salmón",
+    "atun": "atún",
+    "limon": "limón",
+    "pina": "piña",
+    "cana": "caña",
+    "menu": "menú",
+    "racion": "ración",
+    "espanola": "española",
+    "sandwich": "sándwich",
+    "sangria": "sangría",
+    "tonica": "tónica",
+    "tiramisu": "tiramisú",
+    "fideua": "fideuá",
+    "lasana": "lasaña",
+    "albarino": "albariño",
+    "iberico": "ibérico",
+    "iberica": "ibérica",
+    "clasico": "clásico",
+    "clasica": "clásica",
+    "arandanos": "arándanos",
+    "japones": "japonés",
+    "bombom": "bombón",
+    "culin": "culín",
+    "lahmacun": "lahmacún",
+    "cesar": "césar",
+}
+
+
+def test_visible_names_are_written_in_correct_spanish():
+    """Ni un nombre de producto con una palabra española sin tilde (ERPlora/blueprints#17).
+
+    Es texto que lee el cliente final en el TPV. La UI se traduce (inglés fuente + `es`), pero el
+    NOMBRE de un artículo es dato del catálogo: si nace mal escrito, nace mal escrito en la BD de
+    cada hub que importe la plantilla.
+    """
+    data, sql = _restaurant()
+    offenders: dict[str, list[str]] = {}
+    for p in data["products"]:
+        for word in p["name"].lower().split():
+            if word in KNOWN_MISSPELLINGS:
+                offenders.setdefault(word, []).append(p["name"])
+    assert not offenders, "nombres sin tilde: " + "; ".join(
+        f"{w}→{KNOWN_MISSPELLINGS[w]} ({len(n)}×, p.ej. {n[0]!r})"
+        for w, n in sorted(offenders.items())
+    )
+    # Y la forma correcta sí aparece: si no, el mapa se aplicó «borrando» en vez de corrigiendo.
+    assert "café" in sql.lower(), "ningún nombre lleva la tilde de «café»"
+
+
 def main() -> int:
     tests = [
         v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)

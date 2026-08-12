@@ -1,0 +1,40 @@
+# Corre la regresión del generador de starter catalogs.
+#
+# Por qué existe: `scripts/test_build_starter_catalog.py` llevaba desde su primer commit SIN QUE
+# NADIE LO EJECUTARA — los dos workflows del repo se disparan solo con `img/**` y
+# `scripts/validate_assets.py`. Un test que no corre no es un guardarraíl, es documentación: el
+# `stock` sin escalar de ERPlora/blueprints#18 y las refs `media:` viven precisamente en la parte
+# del repo que ninguna Action miraba.
+name: Test starter catalogs
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - 'starter_catalogs/**'
+      - '.github/workflows/test-starter-catalogs.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'starter_catalogs/**'
+      - '.github/workflows/test-starter-catalogs.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    # Mismo patrón que el resto del repo: `ci-runner-1` (Hetzner, self-hosted) si la Variable de
+    # org `CI_RUNNER_LABEL` está puesta, y los runners de GitHub si no. Sin esto, un mes con el
+    # presupuesto de Actions agotado deja el job rojo en 2 s y sin una línea de log.
+    runs-on: ${{ vars.CI_RUNNER_LABEL || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Sin dependencias: el test valida la SALIDA del generador (SQL/JSON) y las refs de imagen
+      # contra los ficheros del propio repo. No necesita Pillow ni pytest.
+      - name: Regresión del generador (cantidades ADR-0147, refs de imagen, ortografía, sha256)
+        run: python scripts/test_build_starter_catalog.py
