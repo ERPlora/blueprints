@@ -23,10 +23,20 @@ on:
 
 jobs:
   test:
-    # Mismo patrón que el resto del repo: `ci-runner-1` (Hetzner, self-hosted) si la Variable de
-    # org `CI_RUNNER_LABEL` está puesta, y los runners de GitHub si no. Sin esto, un mes con el
-    # presupuesto de Actions agotado deja el job rojo en 2 s y sin una línea de log.
-    runs-on: ${{ vars.CI_RUNNER_LABEL || 'ubuntu-latest' }}
+    # 🔴 `ubuntu-latest` A PROPÓSITO, y NO el `vars.CI_RUNNER_LABEL` que usa el resto de la org.
+    #
+    # Este repo es PÚBLICO, y el único runner-group de la org (`Default`) tiene
+    # `allows_public_repositories=false` → un job con `runs-on: self-hosted` **no lo recoge nadie y
+    # se queda en `queued` para siempre**. Comprobado: el run de `ci/self-hosted-runner` llevaba
+    # ~12 h encolado con `labels=self-hosted`, y los dos runners (`ci-runner-1`, `ci-runner-1b`)
+    # estaban `online` y `busy=false`. Un check que nunca termina es peor que uno rojo: bloquea
+    # `merge-pr.sh`, que espera a los checks.
+    #
+    # Y no hace falta: en un repo **público** los runners de GitHub son **gratis**, así que aquí el
+    # presupuesto agotado de Actions no aplica (por eso los runs verdes de este repo son todos
+    # anteriores al cambio a self-hosted). Tampoco conviene abrirlos: dar runners self-hosted a un
+    # repo público deja que el PR de cualquier fork ejecute código en la máquina de la org.
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
