@@ -2,6 +2,7 @@
   "sector": "restaurant",
   "currency": "EUR",
   "price_unit": "cents",
+  "quantity_scale": 1000000,
   "default_tax_category": "restaurant.food",
   "categories": [
     {
@@ -125,6 +126,8 @@
       "name": "Agua con gas",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/agua_con_gas.webp"
     },
@@ -133,6 +136,8 @@
       "name": "Agua mineral",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/agua_mineral.webp"
     },
@@ -141,6 +146,8 @@
       "name": "Alitas pollo",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/alitas_pollo.webp"
     },
@@ -149,6 +156,8 @@
       "name": "Americano",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/americano.webp"
     },
@@ -157,6 +166,8 @@
       "name": "Aquarius",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/aquarius.webp"
     },
@@ -165,6 +176,8 @@
       "name": "Aros cebolla",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/aros_cebolla.webp"
     },
@@ -173,6 +186,8 @@
       "name": "Arroz banda",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/arroz_banda.webp"
     },
@@ -181,6 +196,8 @@
       "name": "Arroz extra",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/arroz_extra.webp"
     },
@@ -189,6 +206,8 @@
       "name": "Arroz negro",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/arroz_negro.webp"
     },
@@ -197,6 +216,8 @@
       "name": "Arroz wok",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/arroz_wok.webp"
     },
@@ -205,14 +226,18 @@
       "name": "Ayran",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/ayran.webp"
     },
     {
       "sku": "bagel_salmon",
-      "name": "Bagel salmon",
+      "name": "Bagel salmón",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bagel_salmon.webp"
     },
@@ -221,6 +246,8 @@
       "name": "Barra pan",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/barra_pan.webp"
     },
@@ -229,6 +256,8 @@
       "name": "Batido chocolate",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/batido_chocolate.webp"
     },
@@ -237,6 +266,8 @@
       "name": "Batido fresa",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/batido_fresa.webp"
     },
@@ -245,6 +276,8 @@
       "name": "Batido vainilla",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/batido_vainilla.webp"
     },
@@ -253,22 +286,28 @@
       "name": "Bocadillo calamares",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_calamares.webp"
     },
     {
       "sku": "bocadillo_jamon",
-      "name": "Bocadillo jamon",
+      "name": "Bocadillo jamón",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_jamon.webp"
     },
     {
       "sku": "bocadillo_jamon_queso",
-      "name": "Bocadillo jamon queso",
+      "name": "Bocadillo jamón queso",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_jamon_queso.webp"
     },
@@ -277,6 +316,8 @@
       "name": "Bocadillo lomo",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_lomo.webp"
     },
@@ -285,6 +326,8 @@
       "name": "Bocadillo pulled pork",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_pulled_pork.webp"
     },
@@ -293,6 +336,8 @@
       "name": "Bocadillo tortilla",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_tortilla.webp"
     },
@@ -301,14 +346,18 @@
       "name": "Bocadillo vegetal",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bocadillo_vegetal.webp"
     },
     {
       "sku": "botella_albarino",
-      "name": "Botella albarino",
+      "name": "Botella albariño",
       "category": "vinos",
       "price": 1800,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/botella_albarino.webp"
     },
@@ -317,6 +366,8 @@
       "name": "Botella champagne",
       "category": "vinos",
       "price": 4500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/botella_champagne.webp"
     },
@@ -325,6 +376,8 @@
       "name": "Botella ribera duero",
       "category": "vinos",
       "price": 2200,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/botella_ribera_duero.webp"
     },
@@ -333,6 +386,8 @@
       "name": "Botella rioja crianza",
       "category": "vinos",
       "price": 1900,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/botella_rioja_crianza.webp"
     },
@@ -341,6 +396,8 @@
       "name": "Bowl pollo",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bowl_pollo.webp"
     },
@@ -349,6 +406,8 @@
       "name": "Brownie",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/brownie.webp"
     },
@@ -357,6 +416,8 @@
       "name": "Brownie chocolate",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/brownie_chocolate.webp"
     },
@@ -365,46 +426,58 @@
       "name": "Bruschetta",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/bruschetta.webp"
     },
     {
       "sku": "cafe_bombom",
-      "name": "Cafe bombom",
+      "name": "Café bombón",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/cafe_bombom.webp"
     },
     {
       "sku": "cafe_con_leche",
-      "name": "Cafe con leche",
+      "name": "Café con leche",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/cafe_con_leche.webp"
     },
     {
       "sku": "cafe_cortado",
-      "name": "Cafe cortado",
+      "name": "Café cortado",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/cafe_cortado.webp"
     },
     {
       "sku": "cafe_helado",
-      "name": "Cafe helado",
+      "name": "Café helado",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/cafe_helado.webp"
     },
     {
       "sku": "cafe_solo",
-      "name": "Cafe solo",
+      "name": "Café solo",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/cafe_solo.webp"
     },
@@ -413,6 +486,8 @@
       "name": "Calamares romana",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/calamares_romana.webp"
     },
@@ -421,6 +496,8 @@
       "name": "California roll",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/california_roll.webp"
     },
@@ -429,6 +506,8 @@
       "name": "Capuchino",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/capuchino.webp"
     },
@@ -437,6 +516,8 @@
       "name": "Carajillo",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/carajillo.webp"
     },
@@ -445,14 +526,18 @@
       "name": "Cerveza botella",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cerveza_botella.webp"
     },
     {
       "sku": "cerveza_cana",
-      "name": "Cerveza cana",
+      "name": "Cerveza caña",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cerveza_cana.webp"
     },
@@ -461,6 +546,8 @@
       "name": "Cerveza japonesa",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cerveza_japonesa.webp"
     },
@@ -469,6 +556,8 @@
       "name": "Cerveza jarra",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cerveza_jarra.webp"
     },
@@ -477,6 +566,8 @@
       "name": "Cerveza sin",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cerveza_sin.webp"
     },
@@ -485,6 +576,8 @@
       "name": "Chai latte",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/chai_latte.webp"
     },
@@ -493,6 +586,8 @@
       "name": "Chapata",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/chapata.webp"
     },
@@ -501,6 +596,8 @@
       "name": "Cheesecake",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/cheesecake.webp"
     },
@@ -509,6 +606,8 @@
       "name": "Chupito jager",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/chupito_jager.webp"
     },
@@ -517,6 +616,8 @@
       "name": "Chupito sambuca",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/chupito_sambuca.webp"
     },
@@ -525,6 +626,8 @@
       "name": "Chupito tequila",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/chupito_tequila.webp"
     },
@@ -533,6 +636,8 @@
       "name": "Churros",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/churros.webp"
     },
@@ -541,6 +646,8 @@
       "name": "Clara",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/clara.webp"
     },
@@ -549,6 +656,8 @@
       "name": "Coca cola",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/coca_cola.webp"
     },
@@ -557,6 +666,8 @@
       "name": "Coca cola zero",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/coca_cola_zero.webp"
     },
@@ -565,14 +676,18 @@
       "name": "Cookie",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/cookie.webp"
     },
     {
       "sku": "copa_albarino",
-      "name": "Copa albarino",
+      "name": "Copa albariño",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/copa_albarino.webp"
     },
@@ -581,6 +696,8 @@
       "name": "Copa cava",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/copa_cava.webp"
     },
@@ -589,6 +706,8 @@
       "name": "Copa helado",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/copa_helado.webp"
     },
@@ -597,6 +716,8 @@
       "name": "Copa ribera duero",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/copa_ribera_duero.webp"
     },
@@ -605,6 +726,8 @@
       "name": "Copa rioja crianza",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/copa_rioja_crianza.webp"
     },
@@ -613,6 +736,8 @@
       "name": "Copa verdejo",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/copa_verdejo.webp"
     },
@@ -621,14 +746,18 @@
       "name": "Crema catalana",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/crema_catalana.webp"
     },
     {
       "sku": "crepe_nutella",
-      "name": "Crepe nutella",
+      "name": "Crepe Nutella",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/crepe_nutella.webp"
     },
@@ -637,6 +766,8 @@
       "name": "Croissant",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/croissant.webp"
     },
@@ -645,14 +776,18 @@
       "name": "Croissant chocolate",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/croissant_chocolate.webp"
     },
     {
       "sku": "croquetas_jamon",
-      "name": "Croquetas jamon",
+      "name": "Croquetas jamón",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/croquetas_jamon.webp"
     },
@@ -661,6 +796,8 @@
       "name": "Cuba libre",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cuba_libre.webp"
     },
@@ -669,6 +806,8 @@
       "name": "Cubata ron",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cubata_ron.webp"
     },
@@ -677,14 +816,18 @@
       "name": "Cubata vodka",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/cubata_vodka.webp"
     },
     {
       "sku": "culin_sidra",
-      "name": "Culin sidra",
+      "name": "Culín sidra",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/culin_sidra.webp"
     },
@@ -693,6 +836,8 @@
       "name": "Desayuno buffet",
       "category": "menus",
       "price": 1400,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/desayuno_buffet.webp"
     },
@@ -701,6 +846,8 @@
       "name": "Desayuno continental",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/desayuno_continental.webp"
     },
@@ -709,6 +856,8 @@
       "name": "Descafeinado",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/descafeinado.webp"
     },
@@ -717,6 +866,8 @@
       "name": "Doble espresso",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/doble_espresso.webp"
     },
@@ -725,6 +876,8 @@
       "name": "Dragon roll",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/dragon_roll.webp"
     },
@@ -733,6 +886,8 @@
       "name": "Durum mixto",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/durum_mixto.webp"
     },
@@ -741,6 +896,8 @@
       "name": "Durum pollo",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/durum_pollo.webp"
     },
@@ -749,6 +906,8 @@
       "name": "Durum ternera",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/durum_ternera.webp"
     },
@@ -757,6 +916,8 @@
       "name": "Edamame",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/edamame.webp"
     },
@@ -765,6 +926,8 @@
       "name": "Ensaimada",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensaimada.webp"
     },
@@ -773,6 +936,8 @@
       "name": "Ensalada acomp",
       "category": "ensaladas",
       "price": 750,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensalada_acomp.webp"
     },
@@ -781,14 +946,18 @@
       "name": "Ensalada caprese",
       "category": "ensaladas",
       "price": 750,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensalada_caprese.webp"
     },
     {
       "sku": "ensalada_cesar",
-      "name": "Ensalada cesar",
+      "name": "Ensalada césar",
       "category": "ensaladas",
       "price": 750,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensalada_cesar.webp"
     },
@@ -797,6 +966,8 @@
       "name": "Ensalada mixta",
       "category": "ensaladas",
       "price": 750,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensalada_mixta.webp"
     },
@@ -805,6 +976,8 @@
       "name": "Ensalada turca",
       "category": "ensaladas",
       "price": 750,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensalada_turca.webp"
     },
@@ -813,6 +986,8 @@
       "name": "Ensalada wakame",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ensalada_wakame.webp"
     },
@@ -821,6 +996,8 @@
       "name": "Entrecot",
       "category": "carnes",
       "price": 1800,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/entrecot.webp"
     },
@@ -829,6 +1006,8 @@
       "name": "Espeto sardinas",
       "category": "pescados",
       "price": 900,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/espeto_sardinas.webp"
     },
@@ -837,14 +1016,18 @@
       "name": "Espresso",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/espresso.webp"
     },
     {
       "sku": "fanta_limon",
-      "name": "Fanta limon",
+      "name": "Fanta limón",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/fanta_limon.webp"
     },
@@ -853,14 +1036,18 @@
       "name": "Fanta naranja",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/fanta_naranja.webp"
     },
     {
       "sku": "fideua",
-      "name": "Fideua",
+      "name": "Fideuá",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/fideua.webp"
     },
@@ -869,6 +1056,8 @@
       "name": "Flan casero",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/flan_casero.webp"
     },
@@ -877,6 +1066,8 @@
       "name": "Flat white",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/flat_white.webp"
     },
@@ -885,6 +1076,8 @@
       "name": "Focaccia",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/focaccia.webp"
     },
@@ -893,6 +1086,8 @@
       "name": "Frappuccino",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/frappuccino.webp"
     },
@@ -901,6 +1096,8 @@
       "name": "Galleta chocolate",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/galleta_chocolate.webp"
     },
@@ -909,6 +1106,8 @@
       "name": "Galleta mantequilla",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/galleta_mantequilla.webp"
     },
@@ -917,6 +1116,8 @@
       "name": "Gambas ajillo",
       "category": "tapas",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/gambas_ajillo.webp"
     },
@@ -925,6 +1126,8 @@
       "name": "Gambas plancha",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/gambas_plancha.webp"
     },
@@ -933,6 +1136,8 @@
       "name": "Gazpacho",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/gazpacho.webp"
     },
@@ -941,30 +1146,38 @@
       "name": "Gin tonic",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/gin_tonic.webp"
     },
     {
       "sku": "gofre_clasico",
-      "name": "Gofre clasico",
+      "name": "Gofre clásico",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/gofre_clasico.webp"
     },
     {
       "sku": "granizado_cafe",
-      "name": "Granizado cafe",
+      "name": "Granizado café",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/granizado_cafe.webp"
     },
     {
       "sku": "granizado_limon",
-      "name": "Granizado limon",
+      "name": "Granizado limón",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/granizado_limon.webp"
     },
@@ -973,14 +1186,18 @@
       "name": "Gyozas",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/gyozas.webp"
     },
     {
       "sku": "hamburguesa_clasica",
-      "name": "Hamburguesa clasica",
+      "name": "Hamburguesa clásica",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hamburguesa_clasica.webp"
     },
@@ -989,6 +1206,8 @@
       "name": "Hamburguesa doble",
       "category": "carnes",
       "price": 1150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hamburguesa_doble.webp"
     },
@@ -997,6 +1216,8 @@
       "name": "Hamburguesa gourmet",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hamburguesa_gourmet.webp"
     },
@@ -1005,6 +1226,8 @@
       "name": "Hamburguesa pollo",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hamburguesa_pollo.webp"
     },
@@ -1013,6 +1236,8 @@
       "name": "Hamburguesa queso",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hamburguesa_queso.webp"
     },
@@ -1021,6 +1246,8 @@
       "name": "Hamburguesa smash",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hamburguesa_smash.webp"
     },
@@ -1029,6 +1256,8 @@
       "name": "Helado 1 bola",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/helado_1_bola.webp"
     },
@@ -1037,6 +1266,8 @@
       "name": "Helado 2 bolas",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/helado_2_bolas.webp"
     },
@@ -1045,6 +1276,8 @@
       "name": "Helado 3 bolas",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/helado_3_bolas.webp"
     },
@@ -1053,6 +1286,8 @@
       "name": "Helado bola",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/helado_bola.webp"
     },
@@ -1061,6 +1296,8 @@
       "name": "Helado soft",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/helado_soft.webp"
     },
@@ -1069,6 +1306,8 @@
       "name": "Hielo",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/hielo.webp"
     },
@@ -1077,6 +1316,8 @@
       "name": "Hogaza",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hogaza.webp"
     },
@@ -1085,22 +1326,28 @@
       "name": "Hummus",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/hummus.webp"
     },
     {
       "sku": "ipa_artesana",
-      "name": "Ipa artesana",
+      "name": "IPA artesana",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/ipa_artesana.webp"
     },
     {
       "sku": "jamon_iberico",
-      "name": "Jamon iberico",
+      "name": "Jamón ibérico",
       "category": "tapas",
       "price": 1800,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/jamon_iberico.webp"
     },
@@ -1109,6 +1356,8 @@
       "name": "Kebab falafel",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/kebab_falafel.webp"
     },
@@ -1117,6 +1366,8 @@
       "name": "Kebab mixto",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/kebab_mixto.webp"
     },
@@ -1125,6 +1376,8 @@
       "name": "Kebab pollo",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/kebab_pollo.webp"
     },
@@ -1133,22 +1386,28 @@
       "name": "Kebab ternera",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/kebab_ternera.webp"
     },
     {
       "sku": "lahmacun",
-      "name": "Lahmacun",
+      "name": "Lahmacún",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/lahmacun.webp"
     },
     {
       "sku": "lasana",
-      "name": "Lasana",
+      "name": "Lasaña",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/lasana.webp"
     },
@@ -1157,6 +1416,8 @@
       "name": "Latte",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/latte.webp"
     },
@@ -1165,6 +1426,8 @@
       "name": "Latte caramelo",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/latte_caramelo.webp"
     },
@@ -1173,6 +1436,8 @@
       "name": "Latte vainilla",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/latte_vainilla.webp"
     },
@@ -1181,6 +1446,8 @@
       "name": "Limonada",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/limonada.webp"
     },
@@ -1189,6 +1456,8 @@
       "name": "Limonada yuzu",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/limonada_yuzu.webp"
     },
@@ -1197,6 +1466,8 @@
       "name": "Lubina horno",
       "category": "pescados",
       "price": 1600,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/lubina_horno.webp"
     },
@@ -1205,22 +1476,28 @@
       "name": "Magdalena",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/magdalena.webp"
     },
     {
       "sku": "maki_atun",
-      "name": "Maki atun",
+      "name": "Maki atún",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/maki_atun.webp"
     },
     {
       "sku": "maki_salmon",
-      "name": "Maki salmon",
+      "name": "Maki salmón",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/maki_salmon.webp"
     },
@@ -1229,6 +1506,8 @@
       "name": "Manzanilla",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/manzanilla.webp"
     },
@@ -1237,38 +1516,48 @@
       "name": "Matcha latte",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/matcha_latte.webp"
     },
     {
       "sku": "menu_dia",
-      "name": "Menu dia",
+      "name": "Menú dia",
       "category": "menus",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/menu_dia.webp"
     },
     {
       "sku": "menu_hamburguesa",
-      "name": "Menu hamburguesa",
+      "name": "Menú hamburguesa",
       "category": "menus",
       "price": 1200,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/menu_hamburguesa.webp"
     },
     {
       "sku": "menu_infantil",
-      "name": "Menu infantil",
+      "name": "Menú infantil",
       "category": "menus",
       "price": 850,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/menu_infantil.webp"
     },
     {
       "sku": "menu_kebab",
-      "name": "Menu kebab",
+      "name": "Menú kebab",
       "category": "menus",
       "price": 1200,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/menu_kebab.webp"
     },
@@ -1277,6 +1566,8 @@
       "name": "Merluza plancha",
       "category": "pescados",
       "price": 1400,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/merluza_plancha.webp"
     },
@@ -1285,6 +1576,8 @@
       "name": "Mesa dulce",
       "category": "menus",
       "price": 1200,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/mesa_dulce.webp"
     },
@@ -1293,6 +1586,8 @@
       "name": "Mocha",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/mocha.webp"
     },
@@ -1301,6 +1596,8 @@
       "name": "Mochi helado",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/mochi_helado.webp"
     },
@@ -1309,14 +1606,18 @@
       "name": "Mojito",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/mojito.webp"
     },
     {
       "sku": "muffin_arandanos",
-      "name": "Muffin arandanos",
+      "name": "Muffin arándanos",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/muffin_arandanos.webp"
     },
@@ -1325,6 +1626,8 @@
       "name": "Muffin chocolate",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/muffin_chocolate.webp"
     },
@@ -1333,6 +1636,8 @@
       "name": "Nachos queso",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nachos_queso.webp"
     },
@@ -1341,6 +1646,8 @@
       "name": "Napolitana chocolate",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/napolitana_chocolate.webp"
     },
@@ -1349,14 +1656,18 @@
       "name": "Nigiri anguila",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nigiri_anguila.webp"
     },
     {
       "sku": "nigiri_atun",
-      "name": "Nigiri atun",
+      "name": "Nigiri atún",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nigiri_atun.webp"
     },
@@ -1365,6 +1676,8 @@
       "name": "Nigiri gamba",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nigiri_gamba.webp"
     },
@@ -1373,14 +1686,18 @@
       "name": "Nigiri pulpo",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nigiri_pulpo.webp"
     },
     {
       "sku": "nigiri_salmon",
-      "name": "Nigiri salmon",
+      "name": "Nigiri salmón",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nigiri_salmon.webp"
     },
@@ -1389,6 +1706,8 @@
       "name": "Nuggets",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/nuggets.webp"
     },
@@ -1397,6 +1716,8 @@
       "name": "Pad thai",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pad_thai.webp"
     },
@@ -1405,6 +1726,8 @@
       "name": "Paella marisco",
       "category": "arroces",
       "price": 1600,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/paella_marisco.webp"
     },
@@ -1413,6 +1736,8 @@
       "name": "Paella mixta",
       "category": "arroces",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/paella_mixta.webp"
     },
@@ -1421,6 +1746,8 @@
       "name": "Paella valenciana",
       "category": "arroces",
       "price": 1300,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/paella_valenciana.webp"
     },
@@ -1429,6 +1756,8 @@
       "name": "Pale ale",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/pale_ale.webp"
     },
@@ -1437,6 +1766,8 @@
       "name": "Palmera chocolate",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/palmera_chocolate.webp"
     },
@@ -1445,6 +1776,8 @@
       "name": "Pan ajo",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pan_ajo.webp"
     },
@@ -1453,6 +1786,8 @@
       "name": "Pan centeno",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pan_centeno.webp"
     },
@@ -1461,6 +1796,8 @@
       "name": "Pan integral",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pan_integral.webp"
     },
@@ -1469,6 +1806,8 @@
       "name": "Pan pita",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pan_pita.webp"
     },
@@ -1477,6 +1816,8 @@
       "name": "Pan semillas",
       "category": "panes",
       "price": 150,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pan_semillas.webp"
     },
@@ -1485,6 +1826,8 @@
       "name": "Panna cotta",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/panna_cotta.webp"
     },
@@ -1493,6 +1836,8 @@
       "name": "Pasta bolonesa",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pasta_bolonesa.webp"
     },
@@ -1501,6 +1846,8 @@
       "name": "Pasta carbonara",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pasta_carbonara.webp"
     },
@@ -1509,6 +1856,8 @@
       "name": "Pasta pesto",
       "category": "arroces",
       "price": 1100,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pasta_pesto.webp"
     },
@@ -1517,6 +1866,8 @@
       "name": "Patatas bravas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/patatas_bravas.webp"
     },
@@ -1525,14 +1876,18 @@
       "name": "Patatas fritas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/patatas_fritas.webp"
     },
     {
       "sku": "perrito_clasico",
-      "name": "Perrito clasico",
+      "name": "Perrito clásico",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/perrito_clasico.webp"
     },
@@ -1541,6 +1896,8 @@
       "name": "Pescaito frito",
       "category": "pescados",
       "price": 1400,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pescaito_frito.webp"
     },
@@ -1549,6 +1906,8 @@
       "name": "Pincho tortilla",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pincho_tortilla.webp"
     },
@@ -1557,6 +1916,8 @@
       "name": "Pizza 4 quesos",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_4_quesos.webp"
     },
@@ -1565,6 +1926,8 @@
       "name": "Pizza barbacoa",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_barbacoa.webp"
     },
@@ -1573,6 +1936,8 @@
       "name": "Pizza calzone",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_calzone.webp"
     },
@@ -1581,6 +1946,8 @@
       "name": "Pizza caprichosa",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_caprichosa.webp"
     },
@@ -1589,6 +1956,8 @@
       "name": "Pizza carbonara",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_carbonara.webp"
     },
@@ -1597,6 +1966,8 @@
       "name": "Pizza diavola",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_diavola.webp"
     },
@@ -1605,6 +1976,8 @@
       "name": "Pizza familiar",
       "category": "pizzas",
       "price": 1400,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_familiar.webp"
     },
@@ -1613,14 +1986,18 @@
       "name": "Pizza hawaiana",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_hawaiana.webp"
     },
     {
       "sku": "pizza_jamon_queso",
-      "name": "Pizza jamon queso",
+      "name": "Pizza jamón queso",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_jamon_queso.webp"
     },
@@ -1629,6 +2006,8 @@
       "name": "Pizza margarita",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_margarita.webp"
     },
@@ -1637,6 +2016,8 @@
       "name": "Pizza pepperoni",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_pepperoni.webp"
     },
@@ -1645,6 +2026,8 @@
       "name": "Pizza vegetal",
       "category": "pizzas",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pizza_vegetal.webp"
     },
@@ -1653,6 +2036,8 @@
       "name": "Plato falafel",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/plato_falafel.webp"
     },
@@ -1661,22 +2046,28 @@
       "name": "Plato kebab",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/plato_kebab.webp"
     },
     {
       "sku": "poke_atun",
-      "name": "Poke atun",
+      "name": "Poke atún",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/poke_atun.webp"
     },
     {
       "sku": "poke_salmon",
-      "name": "Poke salmon",
+      "name": "Poke salmón",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/poke_salmon.webp"
     },
@@ -1685,6 +2076,8 @@
       "name": "Poleo menta",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/poleo_menta.webp"
     },
@@ -1693,6 +2086,8 @@
       "name": "Pollo asado",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pollo_asado.webp"
     },
@@ -1701,6 +2096,8 @@
       "name": "Pollo teriyaki",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pollo_teriyaki.webp"
     },
@@ -1709,46 +2106,58 @@
       "name": "Pulpo gallega",
       "category": "pescados",
       "price": 1600,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/pulpo_gallega.webp"
     },
     {
       "sku": "racion_cachopo",
-      "name": "Racion cachopo",
+      "name": "Ración cachopo",
       "category": "carnes",
       "price": 1600,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/racion_cachopo.webp"
     },
     {
       "sku": "racion_croquetas",
-      "name": "Racion croquetas",
+      "name": "Ración croquetas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/racion_croquetas.webp"
     },
     {
       "sku": "racion_gambas",
-      "name": "Racion gambas",
+      "name": "Ración gambas",
       "category": "tapas",
       "price": 1200,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/racion_gambas.webp"
     },
     {
       "sku": "racion_patatas_bravas",
-      "name": "Racion patatas bravas",
+      "name": "Ración patatas bravas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/racion_patatas_bravas.webp"
     },
     {
       "sku": "racion_rabas",
-      "name": "Racion rabas",
+      "name": "Ración rabas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/racion_rabas.webp"
     },
@@ -1757,6 +2166,8 @@
       "name": "Ramen cerdo",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ramen_cerdo.webp"
     },
@@ -1765,6 +2176,8 @@
       "name": "Ramen pollo",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/ramen_pollo.webp"
     },
@@ -1773,6 +2186,8 @@
       "name": "Ron cola",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/ron_cola.webp"
     },
@@ -1781,14 +2196,18 @@
       "name": "Sake copa",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/sake_copa.webp"
     },
     {
       "sku": "salmon_teriyaki",
-      "name": "Salmon teriyaki",
+      "name": "Salmón teriyaki",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/salmon_teriyaki.webp"
     },
@@ -1797,6 +2216,8 @@
       "name": "Salmorejo",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/salmorejo.webp"
     },
@@ -1805,6 +2226,8 @@
       "name": "Salsa extra",
       "category": "extras",
       "price": 120,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/salsa_extra.webp"
     },
@@ -1813,38 +2236,48 @@
       "name": "Salsa yogur",
       "category": "extras",
       "price": 120,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/salsa_yogur.webp"
     },
     {
       "sku": "sandwich_mixto",
-      "name": "Sandwich mixto",
+      "name": "Sándwich mixto",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/sandwich_mixto.webp"
     },
     {
       "sku": "sandwich_vegetal",
-      "name": "Sandwich vegetal",
+      "name": "Sándwich vegetal",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/sandwich_vegetal.webp"
     },
     {
       "sku": "sangria_jarra",
-      "name": "Sangria jarra",
+      "name": "Sangría jarra",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/sangria_jarra.webp"
     },
     {
       "sku": "sashimi_atun",
-      "name": "Sashimi atun",
+      "name": "Sashimi atún",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/sashimi_atun.webp"
     },
@@ -1853,22 +2286,28 @@
       "name": "Sashimi mixto",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/sashimi_mixto.webp"
     },
     {
       "sku": "sashimi_salmon",
-      "name": "Sashimi salmon",
+      "name": "Sashimi salmón",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/sashimi_salmon.webp"
     },
     {
       "sku": "secreto_iberico",
-      "name": "Secreto iberico",
+      "name": "Secreto ibérico",
       "category": "carnes",
       "price": 1500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/secreto_iberico.webp"
     },
@@ -1877,6 +2316,8 @@
       "name": "Shawarma plato",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/shawarma_plato.webp"
     },
@@ -1885,6 +2326,8 @@
       "name": "Sidra botella",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/sidra_botella.webp"
     },
@@ -1893,6 +2336,8 @@
       "name": "Sidra natural",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/sidra_natural.webp"
     },
@@ -1901,6 +2346,8 @@
       "name": "Smoothie fresa",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/smoothie_fresa.webp"
     },
@@ -1909,6 +2356,8 @@
       "name": "Smoothie mango",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/smoothie_mango.webp"
     },
@@ -1917,6 +2366,8 @@
       "name": "Solomillo",
       "category": "carnes",
       "price": 1950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/solomillo.webp"
     },
@@ -1925,14 +2376,18 @@
       "name": "Sopa miso",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/sopa_miso.webp"
     },
     {
       "sku": "spicy_salmon_roll",
-      "name": "Spicy salmon roll",
+      "name": "Spicy salmón roll",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/spicy_salmon_roll.webp"
     },
@@ -1941,6 +2396,8 @@
       "name": "Spring rolls",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/spring_rolls.webp"
     },
@@ -1949,6 +2406,8 @@
       "name": "Sprite",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/sprite.webp"
     },
@@ -1957,6 +2416,8 @@
       "name": "Stout",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/stout.webp"
     },
@@ -1965,14 +2426,18 @@
       "name": "Tabla embutidos",
       "category": "tapas",
       "price": 1400,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tabla_embutidos.webp"
     },
     {
       "sku": "tabla_iberica",
-      "name": "Tabla iberica",
+      "name": "Tabla ibérica",
       "category": "tapas",
       "price": 1650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tabla_iberica.webp"
     },
@@ -1981,6 +2446,8 @@
       "name": "Tabla mixta",
       "category": "tapas",
       "price": 1500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tabla_mixta.webp"
     },
@@ -1989,6 +2456,8 @@
       "name": "Tabla quesos",
       "category": "tapas",
       "price": 1300,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tabla_quesos.webp"
     },
@@ -1997,6 +2466,8 @@
       "name": "Tacos",
       "category": "carnes",
       "price": 1350,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tacos.webp"
     },
@@ -2005,6 +2476,8 @@
       "name": "Tapa aceitunas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_aceitunas.webp"
     },
@@ -2013,6 +2486,8 @@
       "name": "Tapa bravas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_bravas.webp"
     },
@@ -2021,14 +2496,18 @@
       "name": "Tapa croquetas",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_croquetas.webp"
     },
     {
       "sku": "tapa_jamon",
-      "name": "Tapa jamon",
+      "name": "Tapa jamón",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_jamon.webp"
     },
@@ -2037,6 +2516,8 @@
       "name": "Tapa queso",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_queso.webp"
     },
@@ -2045,6 +2526,8 @@
       "name": "Tapa queso manchego",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_queso_manchego.webp"
     },
@@ -2053,6 +2536,8 @@
       "name": "Tapa tortilla",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tapa_tortilla.webp"
     },
@@ -2061,6 +2546,8 @@
       "name": "Tarrina 1l",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tarrina_1l.webp"
     },
@@ -2069,6 +2556,8 @@
       "name": "Tarrina 500ml",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tarrina_500ml.webp"
     },
@@ -2077,6 +2566,8 @@
       "name": "Tarta chocolate",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tarta_chocolate.webp"
     },
@@ -2085,6 +2576,8 @@
       "name": "Tarta manzana",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tarta_manzana.webp"
     },
@@ -2093,6 +2586,8 @@
       "name": "Tarta matcha",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/tarta_matcha.webp"
     },
@@ -2101,6 +2596,8 @@
       "name": "Tarta queso",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tarta_queso.webp"
     },
@@ -2109,46 +2606,58 @@
       "name": "Tarta zanahoria",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tarta_zanahoria.webp"
     },
     {
       "sku": "te_negro",
-      "name": "Te negro",
+      "name": "Té negro",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/te_negro.webp"
     },
     {
       "sku": "te_rojo",
-      "name": "Te rojo",
+      "name": "Té rojo",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/te_rojo.webp"
     },
     {
       "sku": "te_turco",
-      "name": "Te turco",
+      "name": "Té turco",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/te_turco.webp"
     },
     {
       "sku": "te_verde",
-      "name": "Te verde",
+      "name": "Té verde",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/te_verde.webp"
     },
     {
       "sku": "te_verde_japones",
-      "name": "Te verde japones",
+      "name": "Té verde japonés",
       "category": "cafes",
       "price": 180,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/te_verde_japones.webp"
     },
@@ -2157,6 +2666,8 @@
       "name": "Tempura gambas",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tempura_gambas.webp"
     },
@@ -2165,6 +2676,8 @@
       "name": "Tempura helado",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tempura_helado.webp"
     },
@@ -2173,6 +2686,8 @@
       "name": "Tempura roll",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tempura_roll.webp"
     },
@@ -2181,6 +2696,8 @@
       "name": "Tempura verduras",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tempura_verduras.webp"
     },
@@ -2189,30 +2706,38 @@
       "name": "Tinto verano",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/tinto_verano.webp"
     },
     {
       "sku": "tiramisu",
-      "name": "Tiramisu",
+      "name": "Tiramisú",
       "category": "postres",
       "price": 450,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tiramisu.webp"
     },
     {
       "sku": "tonica",
-      "name": "Tonica",
+      "name": "Tónica",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/tonica.webp"
     },
     {
       "sku": "tortilla_espanola",
-      "name": "Tortilla espanola",
+      "name": "Tortilla española",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tortilla_espanola.webp"
     },
@@ -2221,6 +2746,8 @@
       "name": "Tostada aguacate",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tostada_aguacate.webp"
     },
@@ -2229,6 +2756,8 @@
       "name": "Tostada mantequilla",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tostada_mantequilla.webp"
     },
@@ -2237,6 +2766,8 @@
       "name": "Tostada tomate",
       "category": "desayunos",
       "price": 280,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/tostada_tomate.webp"
     },
@@ -2245,6 +2776,8 @@
       "name": "Uramaki aguacate",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/uramaki_aguacate.webp"
     },
@@ -2253,6 +2786,8 @@
       "name": "Vegetariano roll",
       "category": "japones",
       "price": 950,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/vegetariano_roll.webp"
     },
@@ -2261,6 +2796,8 @@
       "name": "Verduras plancha",
       "category": "tapas",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/verduras_plancha.webp"
     },
@@ -2269,6 +2806,8 @@
       "name": "Vermut",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/vermut.webp"
     },
@@ -2277,6 +2816,8 @@
       "name": "Vino blanco copa",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/vino_blanco_copa.webp"
     },
@@ -2285,6 +2826,8 @@
       "name": "Vino rosado copa",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/vino_rosado_copa.webp"
     },
@@ -2293,6 +2836,8 @@
       "name": "Vino tinto copa",
       "category": "vinos",
       "price": 320,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/vino_tinto_copa.webp"
     },
@@ -2301,6 +2846,8 @@
       "name": "Wheat beer",
       "category": "cervezas",
       "price": 250,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/wheat_beer.webp"
     },
@@ -2309,6 +2856,8 @@
       "name": "Whisky cola",
       "category": "cocteles",
       "price": 650,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
       "image": "media:public/img/hospitality/whisky_cola.webp"
     },
@@ -2317,6 +2866,8 @@
       "name": "Wrap falafel",
       "category": "kebabs",
       "price": 700,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/wrap_falafel.webp"
     },
@@ -2325,6 +2876,8 @@
       "name": "Wrap pollo",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/wrap_pollo.webp"
     },
@@ -2333,6 +2886,8 @@
       "name": "Wrap vegetal",
       "category": "bocadillos",
       "price": 500,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
       "image": "media:public/img/hospitality/wrap_vegetal.webp"
     },
@@ -2341,14 +2896,18 @@
       "name": "Zumo naranja",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/zumo_naranja.webp"
     },
     {
       "sku": "zumo_pina",
-      "name": "Zumo pina",
+      "name": "Zumo piña",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/zumo_pina.webp"
     },
@@ -2357,6 +2916,8 @@
       "name": "Zumo tomate",
       "category": "refrescos",
       "price": 220,
+      "stock": 1000000000,
+      "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
       "image": "media:public/img/hospitality/zumo_tomate.webp"
     }
