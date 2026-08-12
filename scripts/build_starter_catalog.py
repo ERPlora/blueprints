@@ -309,6 +309,62 @@ HOSPITALITY_PRICE_OVERRIDES = {
 # Sectores que no son comida y se excluyen del catálogo de restaurante (servicios de hotel, etc.).
 HOSPITALITY_EXCLUDE = {"lavanderia", "lena", "suite", "polo_artesano"}
 
+# ── Nombres visibles: español correcto (ERPlora/blueprints#17) ────────────────────────────────
+# El nombre sale del nombre de FICHERO de la imagen, que es `snake_case` ASCII por contrato del
+# gate de assets (`validate_assets.py`) — así que sin este mapa el catálogo entero nace sin
+# tildes y el cliente final lee «Cafe con leche» en el TPV. El mapa es palabra→palabra y CERRADO
+# (formas concretas, no heurística de acentuación): un falso positivo aquí renombraría un
+# producto sin querer. Valores en minúscula salvo acrónimos/nombres propios; la mayúscula inicial
+# la pone `humanize` al final.
+DISPLAY_WORDS = {
+    "albarino": "albariño",
+    "arandanos": "arándanos",
+    "atun": "atún",
+    "bombom": "bombón",
+    "cafe": "café",
+    "cana": "caña",
+    "cesar": "césar",
+    "clasica": "clásica",
+    "clasico": "clásico",
+    "culin": "culín",
+    "espanola": "española",
+    "fideua": "fideuá",
+    "iberica": "ibérica",
+    "iberico": "ibérico",
+    "ipa": "IPA",
+    "jamon": "jamón",
+    "japones": "japonés",
+    "lahmacun": "lahmacún",
+    "lasana": "lasaña",
+    "limon": "limón",
+    "menu": "menú",
+    "nutella": "Nutella",
+    "pina": "piña",
+    "racion": "ración",
+    "salmon": "salmón",
+    "sandwich": "sándwich",
+    "sangria": "sangría",
+    "te": "té",
+    "tiramisu": "tiramisú",
+    "tonica": "tónica",
+}
+
+# ── Cantidades: punto fijo entero a escala 10⁶ (ADR-0147) ─────────────────────────────────────
+# `stock` y `low_stock_threshold` son CANTIDADES, no dinero: viven en `BIGINT` a escala 10⁶
+# (`inventory/migrations/postgres/006_quantity_fixed_point.sql`). El seed se aplica como SQL CRUDO
+# (`runtime/src/import_sql.rs::apply` → `execute_batch`, sin aritmética), así que el número que se
+# escribe aquí es EXACTAMENTE el que acaba en la columna: sembrar `1000` no son 1000 unidades,
+# son 0,001 — y la UI lo pinta así (ERPlora/blueprints#18). Escalar es obligación del emisor.
+#
+# El DINERO no entra aquí: `price`/`cost` siguen en céntimos enteros (ADR-0007/0123).
+QUANTITY_SCALE = 1_000_000
+# Existencias iniciales de un catálogo de muestra: «hay de sobra», no un inventario real.
+DEFAULT_STOCK_UNITS = 1000
+# 0 = sin aviso de stock bajo (el catálogo de muestra no vigila existencias). Se escala igual: el
+# 0 es invariante de escala HOY, y dejar el `* QUANTITY_SCALE` evita que un futuro valor ≠ 0
+# reintroduzca el bug de #18 en silencio.
+DEFAULT_LOW_STOCK_THRESHOLD_UNITS = 0
+
 # ── IVA (módulo `taxes`, ADR-0085) ───────────────────────────────────────────────────────────
 # El blueprint YA NO siembra tipos de IVA. El módulo `taxes` siembra al instalarse las categorías
 # canónicas (`restaurant.food`/`.drink`/`.alcohol`, `service.generic`, `product.generic`) + las
@@ -377,8 +433,16 @@ SECTORS = {
 
 
 def humanize(stem: str) -> str:
-    """`durum_ternera` → `Durum ternera`. Snake_case a etiqueta legible."""
-    return stem.replace("_", " ").strip().capitalize()
+    """`durum_ternera` → `Durum ternera`; `cafe_con_leche` → `Café con leche`.
+
+    Snake_case a etiqueta legible, corrigiendo la ortografía española palabra a palabra con
+    `DISPLAY_WORDS` (el nombre de fichero es ASCII sin tildes por contrato del gate de assets).
+    No usa `str.capitalize()`: eso arrasaría los acrónimos y nombres propios del mapa (`IPA`,
+    `Nutella`); solo se pone en mayúscula la primera letra de la etiqueta.
+    """
+    words = [DISPLAY_WORDS.get(w, w) for w in stem.replace("_", " ").split()]
+    label = " ".join(words)
+    return label[:1].upper() + label[1:]
 
 
 def classify(stem: str, rules: list[tuple[str, list[str]]]) -> str | None:
@@ -424,6 +488,10 @@ def build_sector(sector: str) -> dict:
                 "name": humanize(stem),
                 "category": category,
                 "price": price_cents,  # céntimos (ADR-0007)
+                # CANTIDAD a escala 10⁶ (ADR-0147) — otro contrato distinto del dinero.
+                "stock": DEFAULT_STOCK_UNITS * QUANTITY_SCALE,
+                "low_stock_threshold": DEFAULT_LOW_STOCK_THRESHOLD_UNITS
+                * QUANTITY_SCALE,
                 "tax_category_key": tax_category_key,  # ADR-0085: categoría canónica (regla ES en módulo taxes)
                 "image": f"media:public/img/{assets_dir}/{stem}.webp",
             }
@@ -447,6 +515,10 @@ def build_sector(sector: str) -> dict:
         "sector": sector,
         "currency": "EUR",
         "price_unit": "cents",  # ADR-0007: `price` en céntimos enteros (no euros, no float).
+        # ADR-0147: `stock`/`low_stock_threshold` son punto fijo entero a escala 10⁶. Se DECLARA
+        # (como `price_unit`) para que quien lea el bundle no tenga que adivinar la unidad — es el
+        # dato cuya ausencia dejó pasar el stock sin escalar de #18.
+        "quantity_scale": QUANTITY_SCALE,
         # ADR-0085: el IVA lo siembra el módulo `taxes` (categorías canónicas + reglas ES); el
         # blueprint no declara tipos — cada producto lleva su `tax_category_key` canónico.
         "default_tax_category": cfg["default_tax_category"],
@@ -479,7 +551,9 @@ def emit_sql(data: dict, hub_id: str) -> str:
     Mismo estilo que `hub/crates/server/seeds/demo.sql`: `INSERT ... SELECT ... WHERE NOT EXISTS`
     (re-arrancable sin duplicar). Portable SQLite/Postgres. Asume que los módulos `taxes`,
     `inventory` y `staff` ya crearon sus tablas (sus migraciones) ANTES de aplicar este seed; el
-    seed solo aporta DATOS, no DDL. Dinero en CÉNTIMOS ENTEROS (ADR-0007).
+    seed solo aporta DATOS, no DDL. Dinero en CÉNTIMOS ENTEROS (ADR-0007); cantidades (`stock`,
+    `low_stock_threshold`) en punto fijo entero a escala 10⁶ (ADR-0147) — el import aplica este SQL
+    tal cual, sin convertir nada.
 
     El `image` es la ref lógica `media:public/img/…` (igual que el JSON).
     """
@@ -489,7 +563,8 @@ def emit_sql(data: dict, hub_id: str) -> str:
     lines: list[str] = [
         f"-- Catálogo starter '{sector}' generado por scripts/build_starter_catalog.py — NO editar a mano.",
         f"-- {len(data['products'])} productos en {len(data['categories'])} categorías + {len(CASHIERS)} cajeros. IVA vía módulo taxes (ADR-0085).",
-        f"-- hub_id = {hub_id}. Importes en CÉNTIMOS enteros (ADR-0007). Idempotente (WHERE NOT EXISTS).",
+        f"-- hub_id = {hub_id}. Importes en CÉNTIMOS enteros (ADR-0007); cantidades a escala 10⁶ (ADR-0147).",
+        "-- Idempotente (WHERE NOT EXISTS).",
         "-- Requiere los módulos 'taxes', 'inventory' y 'staff' instalados (sus tablas existen) ANTES de aplicar.",
         "",
     ]
@@ -509,9 +584,10 @@ def emit_sql(data: dict, hub_id: str) -> str:
 
     lines.append("")
 
-    # 2) Productos + relación producto↔categoría (M2M). price = CÉNTIMOS (ADR-0007);
-    #    tax_category_key → categoría canónica del módulo taxes (ADR-0085: food/drink 10 %,
-    #    alcohol 21 %; la regla ES resuelve el tipo — el blueprint no siembra tipos).
+    # 2) Productos + relación producto↔categoría (M2M). Dos escalas distintas en la MISMA fila:
+    #    price/cost = CÉNTIMOS enteros (ADR-0007) · stock/low_stock_threshold = CANTIDAD a escala
+    #    10⁶ (ADR-0147, ya escalada en `build_sector`). tax_category_key → categoría canónica del
+    #    módulo taxes (ADR-0085: food/drink 10 %, alcohol 21 %; la regla ES resuelve el tipo).
     for p in data["products"]:
         prod_id = f"prod-{sector}-{p['sku']}"
         cat_id = f"cat-{sector}-{p['category']}"
@@ -520,7 +596,8 @@ def emit_sql(data: dict, hub_id: str) -> str:
             "(id, hub_id, name, sku, description, product_type, price, cost, stock, "
             "low_stock_threshold, tax_category_key, image, created_at, updated_at)\n"
             f"SELECT {_sql(prod_id)}, {h}, {_sql(p['name'])}, {_sql(p['sku'])}, '', 'physical', "
-            f"{p['price']}, 0, 1000, 0, {_sql(p['tax_category_key'])}, {_sql(p['image'])}, {ts}, {ts}\n"
+            f"{p['price']}, 0, {p['stock']}, {p['low_stock_threshold']}, "
+            f"{_sql(p['tax_category_key'])}, {_sql(p['image'])}, {ts}, {ts}\n"
             "WHERE NOT EXISTS (SELECT 1 FROM inventory_product "
             f"WHERE hub_id = {h} AND sku = {_sql(p['sku'])});"
         )

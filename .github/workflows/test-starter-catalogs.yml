@@ -1,0 +1,50 @@
+# Corre la regresión del generador de starter catalogs.
+#
+# Por qué existe: `scripts/test_build_starter_catalog.py` llevaba desde su primer commit SIN QUE
+# NADIE LO EJECUTARA — los dos workflows del repo se disparan solo con `img/**` y
+# `scripts/validate_assets.py`. Un test que no corre no es un guardarraíl, es documentación: el
+# `stock` sin escalar de ERPlora/blueprints#18 y las refs `media:` viven precisamente en la parte
+# del repo que ninguna Action miraba.
+name: Test starter catalogs
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - 'starter_catalogs/**'
+      - '.github/workflows/test-starter-catalogs.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'starter_catalogs/**'
+      - '.github/workflows/test-starter-catalogs.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    # 🔴 `ubuntu-latest` A PROPÓSITO, y NO el `vars.CI_RUNNER_LABEL` que usa el resto de la org.
+    #
+    # Este repo es PÚBLICO, y el único runner-group de la org (`Default`) tiene
+    # `allows_public_repositories=false` → un job con `runs-on: self-hosted` **no lo recoge nadie y
+    # se queda en `queued` para siempre**. Comprobado: el run de `ci/self-hosted-runner` llevaba
+    # ~12 h encolado con `labels=self-hosted`, y los dos runners (`ci-runner-1`, `ci-runner-1b`)
+    # estaban `online` y `busy=false`. Un check que nunca termina es peor que uno rojo: bloquea
+    # `merge-pr.sh`, que espera a los checks.
+    #
+    # Y no hace falta: en un repo **público** los runners de GitHub son **gratis**, así que aquí el
+    # presupuesto agotado de Actions no aplica (por eso los runs verdes de este repo son todos
+    # anteriores al cambio a self-hosted). Tampoco conviene abrirlos: dar runners self-hosted a un
+    # repo público deja que el PR de cualquier fork ejecute código en la máquina de la org.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Sin dependencias: el test valida la SALIDA del generador (SQL/JSON) y las refs de imagen
+      # contra los ficheros del propio repo. No necesita Pillow ni pytest.
+      - name: Regresión del generador (cantidades ADR-0147, refs de imagen, ortografía, sha256)
+        run: python scripts/test_build_starter_catalog.py
