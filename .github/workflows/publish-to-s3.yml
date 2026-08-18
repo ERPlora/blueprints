@@ -1,9 +1,17 @@
 # Almacenamiento: Hetzner Object Storage (S3-compatible, `fsn1.your-objectstorage.com`),
 # bucket `erplora-saas` (privado, layout por prefijos — ADR-0099 / infra/OBJECT-STORAGE.md):
 #   img/         librería WebP compartida (la lista el SaaS: /api/v1/catalog/assets/)
-#   starter-seeds/  bundles seed por <país>/<sector> (ADR-0072)
+# Los starter seeds (`starter-seeds/`) van en su PROPIO workflow (`publish-seeds.yml`): así un merge
+# de `starter_catalogs/**` NUNCA ejecuta un sync sobre la librería compartida (blueprints#21).
 # Sustituye a AWS S3/OIDC (AWS apagado). Credenciales estáticas en secrets del repo:
 # HETZNER_S3_ACCESS_KEY · HETZNER_S3_SECRET_KEY · HETZNER_S3_ENDPOINT.
+#
+# 🔴 SIN `--delete` a propósito (blueprints#21, ADR-0134). Los starter catalogs y los blueprints
+# referencian estas rutas por nombre y el SaaS las sirve en /api/v1/catalog/assets/: un asset que
+# falte en el checkout (renombrado, subido por otra vía, borrado por accidente) NO debe desaparecer
+# del bucket por un push. Este workflow solo AÑADE/ACTUALIZA. La poda es una operación manual y
+# explícita (`workflow_dispatch` con `prune=true`), que primero enseña qué borraría y aborta si
+# supera el umbral.
 name: Sync assets to Object Storage
 
 on:
@@ -11,8 +19,17 @@ on:
     branches: [main]
     paths:
       - 'img/**'
-      - 'starter_catalogs/**'
+      - '.github/workflows/publish-to-s3.yml'
   workflow_dispatch:
+    inputs:
+      prune:
+        description: 'Prune bucket objects that no longer exist under img/ (destructive, dry-run + threshold first)'
+        type: boolean
+        default: false
+      max_prune:
+        description: 'Abort the prune if it would delete more than this many objects'
+        type: number
+        default: 5
 
 jobs:
   sync:
@@ -36,8 +53,37 @@ jobs:
           pip install pillow
           python scripts/validate_assets.py img
 
-      - name: Sync WebP assets to Object Storage
+      - name: Sync WebP assets to Object Storage (add/update only, never delete)
         run: |
+          aws s3 sync img/ s3://erplora-saas/img/ \
+            --endpoint-url "$S3_ENDPOINT" \
+            --exclude "*" \
+            --include "*.webp" \
+            --cache-control "max-age=86400" \
+            --content-type "image/webp"
+          echo "Synced $(find img -name '*.webp' | wc -l) WebP files to s3://erplora-saas/img/"
+
+      - name: Prune orphan assets (explicit, dry-run + threshold)
+        if: github.event_name == 'workflow_dispatch' && inputs.prune
+        env:
+          MAX_PRUNE: ${{ inputs.max_prune }}
+        run: |
+          plan=$(aws s3 sync img/ s3://erplora-saas/img/ \
+            --endpoint-url "$S3_ENDPOINT" \
+            --delete --dryrun \
+            --exclude "*" \
+            --include "*.webp" | grep -E '^\(dryrun\) delete:' || true)
+          count=$(printf '%s' "$plan" | grep -c . || true)
+          echo "Objects that would be deleted: $count"
+          printf '%s\n' "$plan"
+          if [ "$count" -eq 0 ]; then
+            echo "Nothing to prune."
+            exit 0
+          fi
+          if [ "$count" -gt "${MAX_PRUNE:-5}" ]; then
+            echo "::error::Prune would delete $count objects (> max_prune=${MAX_PRUNE:-5}). Aborting."
+            exit 1
+          fi
           aws s3 sync img/ s3://erplora-saas/img/ \
             --endpoint-url "$S3_ENDPOINT" \
             --delete \
@@ -45,33 +91,4 @@ jobs:
             --include "*.webp" \
             --cache-control "max-age=86400" \
             --content-type "image/webp"
-          echo "Synced $(find img -name '*.webp' | wc -l) WebP files to s3://erplora-saas/img/"
-
-      # Starter seeds (ADR-0072): bundles `starter_catalogs/<país>/<sector>/{seed.sql,seed.sha256,seed.json}`
-      # → S3 `starter-seeds/<país>/<sector>/`. El Hub los descarga, verifica el SHA256 y aplica el seed.
-      - name: Verify seed.sha256 integrity (no drift) before publishing
-        run: |
-          fail=0
-          for seed in starter_catalogs/*/*/seed.sql; do
-            dir=$(dirname "$seed")
-            expected=$(cat "$dir/seed.sha256" | tr -d '[:space:]')
-            actual=$(sha256sum "$seed" | cut -d' ' -f1)
-            if [ "$expected" != "$actual" ]; then
-              echo "::error::sha256 drift en $seed ($actual != $expected) — regenera el bundle"
-              fail=1
-            fi
-          done
-          [ "$fail" = 0 ] && echo "All seed.sha256 match their seed.sql."
-          exit $fail
-
-      - name: Sync starter seeds to Object Storage
-        run: |
-          # Imágenes NO van aquí (libería compartida en img/, §7.3); solo seed.{sql,sha256,json}.
-          aws s3 sync starter_catalogs/ s3://erplora-saas/starter-seeds/ \
-            --endpoint-url "$S3_ENDPOINT" \
-            --delete \
-            --exclude "*" \
-            --include "*/*/seed.sql" \
-            --include "*/*/seed.sha256" \
-            --include "*/*/seed.json"
-          echo "Synced $(find starter_catalogs -name 'seed.sql' | wc -l) starter seed bundles to s3://erplora-saas/starter-seeds/"
+          echo "Pruned $count orphan objects from s3://erplora-saas/img/"

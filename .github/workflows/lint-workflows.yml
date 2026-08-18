@@ -1,0 +1,31 @@
+# Lint de los propios workflows (actionlint + shellcheck de los bloques `run:`).
+#
+# Por qué existe: los workflows de publicación (`publish-to-s3.yml`, `publish-seeds.yml`) tocan
+# el bucket de producción y NINGÚN otro workflow del repo se dispara cuando cambian — un PR que
+# solo edite `.github/workflows/**` llegaba a `main` sin un solo check (blueprints#21/#22), y el
+# `merge-pr.sh` de pm se niega a mergear un PR sin checks en un repo con workflows.
+name: Lint workflows
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  actionlint:
+    # `ubuntu-latest` a propósito: repo PÚBLICO, el runner-group self-hosted de la org no recoge
+    # jobs de repos públicos (ver test-starter-catalogs.yml).
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: actionlint (+ shellcheck)
+        run: |
+          docker run --rm -v "$PWD:/repo" --workdir /repo rhysd/actionlint:latest -color

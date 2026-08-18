@@ -1,0 +1,83 @@
+# Starter seeds (ADR-0072): bundles `starter_catalogs/<país>/<sector>/{seed.sql,seed.sha256,seed.json}`
+# → Hetzner Object Storage `s3://erplora-saas/starter-seeds/<país>/<sector>/`. El Hub los descarga,
+# verifica el SHA256 y aplica el seed.
+#
+# Workflow SEPARADO de `publish-to-s3.yml` a propósito (blueprints#21): un merge de
+# `starter_catalogs/**` no debe ejecutar ningún sync sobre la librería WebP compartida `img/`.
+# Aquí el repo SÍ es la autoridad del prefijo `starter-seeds/` (nadie más escribe ahí), así que se
+# conserva `--delete` — pero primero un `--dryrun`: si el plan borra algo, se aborta salvo que sea
+# un `workflow_dispatch` con `allow_prune=true`. Borrar un bundle es una decisión, no un efecto
+# lateral de un push.
+# Credenciales: HETZNER_S3_ACCESS_KEY · HETZNER_S3_SECRET_KEY · HETZNER_S3_ENDPOINT.
+name: Sync starter seeds to Object Storage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'starter_catalogs/**'
+      - '.github/workflows/publish-seeds.yml'
+  workflow_dispatch:
+    inputs:
+      allow_prune:
+        description: 'Allow the sync to delete bundles that no longer exist under starter_catalogs/'
+        type: boolean
+        default: false
+
+jobs:
+  sync-seeds:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.HETZNER_S3_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.HETZNER_S3_SECRET_KEY }}
+      AWS_DEFAULT_REGION: fsn1
+      S3_ENDPOINT: ${{ secrets.HETZNER_S3_ENDPOINT }}
+      ALLOW_PRUNE: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_prune }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify seed.sha256 integrity (no drift) before publishing
+        run: |
+          fail=0
+          for seed in starter_catalogs/*/*/seed.sql; do
+            dir=$(dirname "$seed")
+            expected=$(cat "$dir/seed.sha256" | tr -d '[:space:]')
+            actual=$(sha256sum "$seed" | cut -d' ' -f1)
+            if [ "$expected" != "$actual" ]; then
+              echo "::error::sha256 drift en $seed ($actual != $expected) — regenera el bundle"
+              fail=1
+            fi
+          done
+          [ "$fail" = 0 ] && echo "All seed.sha256 match their seed.sql."
+          exit $fail
+
+      - name: Plan the sync (dry-run) and refuse unexpected deletions
+        run: |
+          # Imágenes NO van aquí (librería compartida en img/, §7.3); solo seed.{sql,sha256,json}.
+          plan=$(aws s3 sync starter_catalogs/ s3://erplora-saas/starter-seeds/ \
+            --endpoint-url "$S3_ENDPOINT" \
+            --delete --dryrun \
+            --exclude "*" \
+            --include "*/*/seed.sql" \
+            --include "*/*/seed.sha256" \
+            --include "*/*/seed.json" | grep -E '^\(dryrun\) delete:' || true)
+          count=$(printf '%s' "$plan" | grep -c . || true)
+          echo "Bundles/objects that would be deleted: $count"
+          printf '%s\n' "$plan"
+          if [ "$count" -gt 0 ] && [ "$ALLOW_PRUNE" != "true" ]; then
+            echo "::error::The sync would delete $count object(s) from s3://erplora-saas/starter-seeds/. Re-run via workflow_dispatch with allow_prune=true if that is intended."
+            exit 1
+          fi
+
+      - name: Sync starter seeds to Object Storage
+        run: |
+          aws s3 sync starter_catalogs/ s3://erplora-saas/starter-seeds/ \
+            --endpoint-url "$S3_ENDPOINT" \
+            --delete \
+            --exclude "*" \
+            --include "*/*/seed.sql" \
+            --include "*/*/seed.sha256" \
+            --include "*/*/seed.json"
+          echo "Synced $(find starter_catalogs -name 'seed.sql' | wc -l) starter seed bundles to s3://erplora-saas/starter-seeds/"
