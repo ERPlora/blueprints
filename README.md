@@ -81,13 +81,15 @@ Los starter seeds SQL se retiraron (**ADR-0121**, 2026-07-12; supersede la parte
 el SQL de siembra ya no se escribe a mano — las plantillas salen del **EXPORT de un hub
 configurado** (`.blueprint.zip`). El diseño vivo: `architecture/saas/blueprints.md`. Este repo
 queda **solo como librería de imágenes WebP**. Los directorios `starter_catalogs/` y el workflow
-`publish-to-s3.yml` siguen en el repo como legado pendiente de limpiar (`#8`) — **no construir
+`publish-seeds.yml` siguen en el repo como legado pendiente de limpiar (`#8`) — **no construir
 sobre ellos**.
 
 **Retirado ≠ inerte** — mientras `#8` no se ejecute, lo que hay en `starter_catalogs/` sigue
 teniendo efectos, y por eso se sigue arreglando:
 
-- `publish-to-s3.yml` lo **sincroniza a Object Storage en cada push a `main`**;
+- `publish-seeds.yml` lo **sincroniza a Object Storage en cada push a `main`** (workflow propio
+  desde `#21`: un merge de seeds ya no ejecuta ningún sync sobre la librería `img/`, y el sync de
+  `img/` en `publish-to-s3.yml` ya no lleva `--delete`);
 - el e2e del Hub lo **aplica a un Postgres real**
   (`hub/crates/runtime/tests/sector_packs_pg_e2e.rs` → `starter_catalogs/es/<sector>/seed.sql`);
 - el gate de coherencia del SaaS depende de los **ids namespaced por vertical** que genera
