@@ -128,19 +128,27 @@ def test_disk_bundles_have_matching_sha256():
         )
 
 
-def test_image_is_a_media_ref_with_origin_and_type():
-    """El `image` es una ref LÓGICA `media:<origen>/<tipo>/<path>`, no una s3_key cruda.
+def test_image_is_a_media_path_inside_the_bundle():
+    """El `image` es una RUTA DE MEDIA (`catalog/<carpeta>/<fichero>.webp`), no un esquema lógico.
 
-    El origen (`public`) dice quién sirve los bytes (proxy del SaaS, solo-lectura: a la librería
-    pública solo se escribe por PR a este repo) y lo distingue de `media:hub/...` (bucket del
-    cliente, donde el usuario sí sube). El tipo (`img`) deja hueco a `docs/` sin cambiar el
-    formato luego — cambiarlo más tarde sería migrar filas de clientes.
+    `media:public/...` se retiró (ERPlora/hub#1006, supersede la opción «shared» de ADR-0072 §7.3 y
+    la parte de ADR-0134 que definía `media:<origen>/<tipo>/<path>`): **nadie lo resolvía**, ni en el
+    hub, ni en el SaaS, ni en los 25 módulos. Un esquema que solo emite el generador es una promesa
+    a un resolvedor que no existe, y el resultado en el mostrador es la baldosa vacía.
+
+    Lo que gana es lo que ya hacen Odoo, Shopify, WooCommerce, Business Central, Lightspeed, Toast,
+    Square y Fresha: **una copia por tenant**. Las imágenes viajan en el bundle (`media/`) y el
+    producto guarda la ruta con la que el gestor de media del hub las sirve — el mismo contrato que
+    el export/import de blueprints (`media/catalogo/cafe.webp`, hub#1008).
     """
     data, _ = _restaurant()
     for p in data["products"]:
         img = p["image"]
-        assert img.startswith("media:public/img/"), (
-            f"{p['sku']}: image debe ser una ref media:public/img/…, no {img!r}"
+        assert img.startswith(f"{g.MEDIA_FOLDER}/"), (
+            f"{p['sku']}: image debe ser una ruta de media `{g.MEDIA_FOLDER}/…`, no {img!r}"
+        )
+        assert ":" not in img, (
+            f"{p['sku']}: un esquema lógico volvió a colarse ({img!r}); nadie lo resuelve"
         )
         assert not img.startswith("assets/"), (
             f"{p['sku']}: s3_key cruda legacy: {img!r}"
@@ -246,9 +254,9 @@ PRODUCT_ROW_RE = re.compile(
     r"'(?P<tax_category_key>[^']*)', '(?P<image>[^']*)'"
 )
 
-# Ref lógica de imagen `media:public/img/<carpeta>/<fichero>.webp` (ADR-0134).
+# Ruta de media `catalog/<carpeta>/<fichero>.webp` — el formato tras retirar `media:` (hub#1006).
 IMAGE_REF_RE = re.compile(
-    r"media:public/img/(?P<folder>[^/'\"]+)/(?P<filename>[^'\"\s]+\.webp)"
+    r"catalog/(?P<folder>[^/'\"]+)/(?P<filename>[^'\"\s]+\.webp)"
 )
 
 
@@ -353,13 +361,11 @@ def test_disk_seeds_store_quantities_in_micro_units():
 
 
 def test_every_image_ref_in_the_disk_seeds_exists_in_the_library():
-    """Cada `media:public/img/<carpeta>/<fichero>.webp` de los seeds resuelve a un fichero REAL.
+    """Cada `catalog/<carpeta>/<fichero>.webp` de los seeds resuelve a un fichero REAL de `img/`.
 
-    El prefijo `media:` es una promesa a un resolvedor (ADR-0134); hoy nadie la cumple
-    (ERPlora/blueprints#17). Cuando se cumpla, una ref que apunte a un fichero inexistente será
-    un 404 por producto **en el mostrador del cliente**, y el bundle ya estará publicado e
-    INMUTABLE (ADR-0121): no se corrige, se sustituye. Por eso se comprueba aquí, en el único
-    punto donde las refs y los bytes están juntos.
+    Una ruta que apunta a un fichero inexistente es un producto sin foto **en el mostrador del
+    cliente**, y el bundle ya estará publicado e INMUTABLE (ADR-0121): no se corrige, se sustituye.
+    Por eso se comprueba aquí, en el único punto donde las rutas y los bytes están juntos.
     """
     from pathlib import Path
 
@@ -453,6 +459,58 @@ def test_visible_names_are_written_in_correct_spanish():
     )
     # Y la forma correcta sí aparece: si no, el mapa se aplicó «borrando» en vez de corrigiendo.
     assert "café" in sql.lower(), "ningún nombre lleva la tilde de «café»"
+
+
+# ── Las imágenes VIAJAN en el bundle (hub#1006) ──────────────────────────────────────────────
+
+
+def test_every_image_of_a_bundle_travels_inside_it():
+    """Lo que el producto referencia tiene que estar DENTRO del bundle, no en un CDN compartido.
+
+    Es la mitad que hacía inútil el esquema retirado: la ruta sola no entrega bytes a nadie. Con la
+    copia por tenant, el vertical se lleva sus webp y el hub las sirve por su propio gestor de media
+    — sin depender del S3 del SaaS ni de una URL firmada que caduca (el aviso explícito de Shopify).
+    """
+    from pathlib import Path
+
+    # La copia es DERIVADA y no se commitea (8 MB duplicados de `img/`): se materializa aquí, que
+    # es lo mismo que hace el workflow antes de publicar. Sin esto el test pasaría o fallaría según
+    # lo que hubiera quedado en el disco de quien lo corre, que es lo contrario de una regresión.
+    g.materialize_all_media()
+    bundles = sorted(p.parent for p in Path(g.OUT_DIR).glob("*/*/seed.sql"))
+    assert bundles, "no hay bundles que comprobar"
+    faltan: list[str] = []
+    total = 0
+    for bundle in bundles:
+        body = (bundle / "seed.sql").read_text(encoding="utf-8")
+        for m in IMAGE_REF_RE.finditer(body):
+            folder, filename = m.group("folder"), m.group("filename")
+            if "<" in folder or "*" in filename:
+                continue
+            total += 1
+            if not (bundle / "media" / g.MEDIA_FOLDER / folder / filename).is_file():
+                faltan.append(f"{bundle.name} → media/{g.MEDIA_FOLDER}/{folder}/{filename}")
+    assert total, "ningún seed referencia imágenes (¿se perdieron las rutas?)"
+    assert not faltan, (
+        f"{len(faltan)} imagen(es) referenciadas que NO viajan en el bundle:\n  "
+        + "\n  ".join(sorted(set(faltan))[:20])
+    )
+
+
+def test_no_media_scheme_survives_anywhere_in_the_bundles():
+    """El control de la retirada: ni un `media:` en ningún fichero publicado.
+
+    Sin esto, arreglar el generador y dejar un seed escrito a mano con el esquema viejo pasaría
+    desapercibido — y es exactamente lo que había: `beauty/seed.sql` está escrito a mano.
+    """
+    from pathlib import Path
+
+    supervivientes = [
+        f"{p.parent.parent.name}/{p.parent.name}/{p.name}"
+        for p in sorted(Path(g.OUT_DIR).glob("*/*/*"))
+        if p.suffix in (".sql", ".json") and "media:" in p.read_text(encoding="utf-8")
+    ]
+    assert not supervivientes, f"el esquema retirado sigue en: {supervivientes}"
 
 
 def main() -> int:

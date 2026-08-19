@@ -3,3 +3,8 @@ node_modules/
 __pycache__/
 *.pyc
 .env
+
+# Copia DERIVADA de la librería `img/` dentro de cada bundle (hub#1006): la materializa
+# `build_starter_catalog.py --materialize-media` al publicar y los tests. No se commitea:
+# serían 8 MB de webp duplicados byte a byte de `img/`.
+starter_catalogs/*/*/media/

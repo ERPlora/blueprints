@@ -53,16 +53,29 @@ jobs:
           [ "$fail" = 0 ] && echo "All seed.sha256 match their seed.sql."
           exit $fail
 
+      # Las fotos del catálogo VIAJAN con el bundle (ERPlora/hub#1006): el esquema `media:public`
+      # no lo resolvía nadie, así que un producto quedaba sin foto en el mostrador. La copia es
+      # DERIVADA de `img/` y no se commitea (serían 8 MB duplicados byte a byte), así que se
+      # materializa aquí, justo antes de sincronizar. Falla si una ruta no resuelve: mejor no
+      # publicar que publicar un bundle cojo, porque lo publicado es INMUTABLE (ADR-0121).
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Materialise the bundle media (derived from img/)
+        run: python scripts/build_starter_catalog.py --materialize-media
+
       - name: Plan the sync (dry-run) and refuse unexpected deletions
         run: |
-          # Imágenes NO van aquí (librería compartida en img/, §7.3); solo seed.{sql,sha256,json}.
+          # Solo seed.{sql,sha256,json} + las fotos del propio bundle (media/catalog/**).
           plan=$(aws s3 sync starter_catalogs/ s3://erplora-saas/starter-seeds/ \
             --endpoint-url "$S3_ENDPOINT" \
             --delete --dryrun \
             --exclude "*" \
             --include "*/*/seed.sql" \
             --include "*/*/seed.sha256" \
-            --include "*/*/seed.json" | grep -E '^\(dryrun\) delete:' || true)
+            --include "*/*/seed.json" \
+            --include "*/*/media/*" | grep -E '^\(dryrun\) delete:' || true)
           count=$(printf '%s' "$plan" | grep -c . || true)
           echo "Bundles/objects that would be deleted: $count"
           printf '%s\n' "$plan"
@@ -79,5 +92,6 @@ jobs:
             --exclude "*" \
             --include "*/*/seed.sql" \
             --include "*/*/seed.sha256" \
-            --include "*/*/seed.json"
+            --include "*/*/seed.json" \
+            --include "*/*/media/*"
           echo "Synced $(find starter_catalogs -name 'seed.sql' | wc -l) starter seed bundles to s3://erplora-saas/starter-seeds/"

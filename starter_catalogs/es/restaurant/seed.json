@@ -129,7 +129,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/agua_con_gas.webp"
+      "image": "catalog/hospitality/agua_con_gas.webp"
     },
     {
       "sku": "agua_mineral",
@@ -139,7 +139,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/agua_mineral.webp"
+      "image": "catalog/hospitality/agua_mineral.webp"
     },
     {
       "sku": "alitas_pollo",
@@ -149,7 +149,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/alitas_pollo.webp"
+      "image": "catalog/hospitality/alitas_pollo.webp"
     },
     {
       "sku": "americano",
@@ -159,7 +159,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/americano.webp"
+      "image": "catalog/hospitality/americano.webp"
     },
     {
       "sku": "aquarius",
@@ -169,7 +169,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/aquarius.webp"
+      "image": "catalog/hospitality/aquarius.webp"
     },
     {
       "sku": "aros_cebolla",
@@ -179,7 +179,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/aros_cebolla.webp"
+      "image": "catalog/hospitality/aros_cebolla.webp"
     },
     {
       "sku": "arroz_banda",
@@ -189,7 +189,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/arroz_banda.webp"
+      "image": "catalog/hospitality/arroz_banda.webp"
     },
     {
       "sku": "arroz_extra",
@@ -199,7 +199,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/arroz_extra.webp"
+      "image": "catalog/hospitality/arroz_extra.webp"
     },
     {
       "sku": "arroz_negro",
@@ -209,7 +209,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/arroz_negro.webp"
+      "image": "catalog/hospitality/arroz_negro.webp"
     },
     {
       "sku": "arroz_wok",
@@ -219,7 +219,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/arroz_wok.webp"
+      "image": "catalog/hospitality/arroz_wok.webp"
     },
     {
       "sku": "ayran",
@@ -229,7 +229,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/ayran.webp"
+      "image": "catalog/hospitality/ayran.webp"
     },
     {
       "sku": "bagel_salmon",
@@ -239,7 +239,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bagel_salmon.webp"
+      "image": "catalog/hospitality/bagel_salmon.webp"
     },
     {
       "sku": "barra_pan",
@@ -249,7 +249,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/barra_pan.webp"
+      "image": "catalog/hospitality/barra_pan.webp"
     },
     {
       "sku": "batido_chocolate",
@@ -259,7 +259,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/batido_chocolate.webp"
+      "image": "catalog/hospitality/batido_chocolate.webp"
     },
     {
       "sku": "batido_fresa",
@@ -269,7 +269,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/batido_fresa.webp"
+      "image": "catalog/hospitality/batido_fresa.webp"
     },
     {
       "sku": "batido_vainilla",
@@ -279,7 +279,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/batido_vainilla.webp"
+      "image": "catalog/hospitality/batido_vainilla.webp"
     },
     {
       "sku": "bocadillo_calamares",
@@ -289,7 +289,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_calamares.webp"
+      "image": "catalog/hospitality/bocadillo_calamares.webp"
     },
     {
       "sku": "bocadillo_jamon",
@@ -299,7 +299,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_jamon.webp"
+      "image": "catalog/hospitality/bocadillo_jamon.webp"
     },
     {
       "sku": "bocadillo_jamon_queso",
@@ -309,7 +309,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_jamon_queso.webp"
+      "image": "catalog/hospitality/bocadillo_jamon_queso.webp"
     },
     {
       "sku": "bocadillo_lomo",
@@ -319,7 +319,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_lomo.webp"
+      "image": "catalog/hospitality/bocadillo_lomo.webp"
     },
     {
       "sku": "bocadillo_pulled_pork",
@@ -329,7 +329,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_pulled_pork.webp"
+      "image": "catalog/hospitality/bocadillo_pulled_pork.webp"
     },
     {
       "sku": "bocadillo_tortilla",
@@ -339,7 +339,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_tortilla.webp"
+      "image": "catalog/hospitality/bocadillo_tortilla.webp"
     },
     {
       "sku": "bocadillo_vegetal",
@@ -349,7 +349,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bocadillo_vegetal.webp"
+      "image": "catalog/hospitality/bocadillo_vegetal.webp"
     },
     {
       "sku": "botella_albarino",
@@ -359,7 +359,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/botella_albarino.webp"
+      "image": "catalog/hospitality/botella_albarino.webp"
     },
     {
       "sku": "botella_champagne",
@@ -369,7 +369,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/botella_champagne.webp"
+      "image": "catalog/hospitality/botella_champagne.webp"
     },
     {
       "sku": "botella_ribera_duero",
@@ -379,7 +379,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/botella_ribera_duero.webp"
+      "image": "catalog/hospitality/botella_ribera_duero.webp"
     },
     {
       "sku": "botella_rioja_crianza",
@@ -389,7 +389,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/botella_rioja_crianza.webp"
+      "image": "catalog/hospitality/botella_rioja_crianza.webp"
     },
     {
       "sku": "bowl_pollo",
@@ -399,7 +399,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bowl_pollo.webp"
+      "image": "catalog/hospitality/bowl_pollo.webp"
     },
     {
       "sku": "brownie",
@@ -409,7 +409,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/brownie.webp"
+      "image": "catalog/hospitality/brownie.webp"
     },
     {
       "sku": "brownie_chocolate",
@@ -419,7 +419,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/brownie_chocolate.webp"
+      "image": "catalog/hospitality/brownie_chocolate.webp"
     },
     {
       "sku": "bruschetta",
@@ -429,7 +429,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/bruschetta.webp"
+      "image": "catalog/hospitality/bruschetta.webp"
     },
     {
       "sku": "cafe_bombom",
@@ -439,7 +439,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/cafe_bombom.webp"
+      "image": "catalog/hospitality/cafe_bombom.webp"
     },
     {
       "sku": "cafe_con_leche",
@@ -449,7 +449,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/cafe_con_leche.webp"
+      "image": "catalog/hospitality/cafe_con_leche.webp"
     },
     {
       "sku": "cafe_cortado",
@@ -459,7 +459,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/cafe_cortado.webp"
+      "image": "catalog/hospitality/cafe_cortado.webp"
     },
     {
       "sku": "cafe_helado",
@@ -469,7 +469,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/cafe_helado.webp"
+      "image": "catalog/hospitality/cafe_helado.webp"
     },
     {
       "sku": "cafe_solo",
@@ -479,7 +479,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/cafe_solo.webp"
+      "image": "catalog/hospitality/cafe_solo.webp"
     },
     {
       "sku": "calamares_romana",
@@ -489,7 +489,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/calamares_romana.webp"
+      "image": "catalog/hospitality/calamares_romana.webp"
     },
     {
       "sku": "california_roll",
@@ -499,7 +499,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/california_roll.webp"
+      "image": "catalog/hospitality/california_roll.webp"
     },
     {
       "sku": "capuchino",
@@ -509,7 +509,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/capuchino.webp"
+      "image": "catalog/hospitality/capuchino.webp"
     },
     {
       "sku": "carajillo",
@@ -519,7 +519,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/carajillo.webp"
+      "image": "catalog/hospitality/carajillo.webp"
     },
     {
       "sku": "cerveza_botella",
@@ -529,7 +529,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cerveza_botella.webp"
+      "image": "catalog/hospitality/cerveza_botella.webp"
     },
     {
       "sku": "cerveza_cana",
@@ -539,7 +539,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cerveza_cana.webp"
+      "image": "catalog/hospitality/cerveza_cana.webp"
     },
     {
       "sku": "cerveza_japonesa",
@@ -549,7 +549,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cerveza_japonesa.webp"
+      "image": "catalog/hospitality/cerveza_japonesa.webp"
     },
     {
       "sku": "cerveza_jarra",
@@ -559,7 +559,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cerveza_jarra.webp"
+      "image": "catalog/hospitality/cerveza_jarra.webp"
     },
     {
       "sku": "cerveza_sin",
@@ -569,7 +569,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cerveza_sin.webp"
+      "image": "catalog/hospitality/cerveza_sin.webp"
     },
     {
       "sku": "chai_latte",
@@ -579,7 +579,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/chai_latte.webp"
+      "image": "catalog/hospitality/chai_latte.webp"
     },
     {
       "sku": "chapata",
@@ -589,7 +589,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/chapata.webp"
+      "image": "catalog/hospitality/chapata.webp"
     },
     {
       "sku": "cheesecake",
@@ -599,7 +599,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/cheesecake.webp"
+      "image": "catalog/hospitality/cheesecake.webp"
     },
     {
       "sku": "chupito_jager",
@@ -609,7 +609,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/chupito_jager.webp"
+      "image": "catalog/hospitality/chupito_jager.webp"
     },
     {
       "sku": "chupito_sambuca",
@@ -619,7 +619,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/chupito_sambuca.webp"
+      "image": "catalog/hospitality/chupito_sambuca.webp"
     },
     {
       "sku": "chupito_tequila",
@@ -629,7 +629,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/chupito_tequila.webp"
+      "image": "catalog/hospitality/chupito_tequila.webp"
     },
     {
       "sku": "churros",
@@ -639,7 +639,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/churros.webp"
+      "image": "catalog/hospitality/churros.webp"
     },
     {
       "sku": "clara",
@@ -649,7 +649,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/clara.webp"
+      "image": "catalog/hospitality/clara.webp"
     },
     {
       "sku": "coca_cola",
@@ -659,7 +659,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/coca_cola.webp"
+      "image": "catalog/hospitality/coca_cola.webp"
     },
     {
       "sku": "coca_cola_zero",
@@ -669,7 +669,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/coca_cola_zero.webp"
+      "image": "catalog/hospitality/coca_cola_zero.webp"
     },
     {
       "sku": "cookie",
@@ -679,7 +679,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/cookie.webp"
+      "image": "catalog/hospitality/cookie.webp"
     },
     {
       "sku": "copa_albarino",
@@ -689,7 +689,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/copa_albarino.webp"
+      "image": "catalog/hospitality/copa_albarino.webp"
     },
     {
       "sku": "copa_cava",
@@ -699,7 +699,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/copa_cava.webp"
+      "image": "catalog/hospitality/copa_cava.webp"
     },
     {
       "sku": "copa_helado",
@@ -709,7 +709,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/copa_helado.webp"
+      "image": "catalog/hospitality/copa_helado.webp"
     },
     {
       "sku": "copa_ribera_duero",
@@ -719,7 +719,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/copa_ribera_duero.webp"
+      "image": "catalog/hospitality/copa_ribera_duero.webp"
     },
     {
       "sku": "copa_rioja_crianza",
@@ -729,7 +729,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/copa_rioja_crianza.webp"
+      "image": "catalog/hospitality/copa_rioja_crianza.webp"
     },
     {
       "sku": "copa_verdejo",
@@ -739,7 +739,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/copa_verdejo.webp"
+      "image": "catalog/hospitality/copa_verdejo.webp"
     },
     {
       "sku": "crema_catalana",
@@ -749,7 +749,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/crema_catalana.webp"
+      "image": "catalog/hospitality/crema_catalana.webp"
     },
     {
       "sku": "crepe_nutella",
@@ -759,7 +759,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/crepe_nutella.webp"
+      "image": "catalog/hospitality/crepe_nutella.webp"
     },
     {
       "sku": "croissant",
@@ -769,7 +769,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/croissant.webp"
+      "image": "catalog/hospitality/croissant.webp"
     },
     {
       "sku": "croissant_chocolate",
@@ -779,7 +779,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/croissant_chocolate.webp"
+      "image": "catalog/hospitality/croissant_chocolate.webp"
     },
     {
       "sku": "croquetas_jamon",
@@ -789,7 +789,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/croquetas_jamon.webp"
+      "image": "catalog/hospitality/croquetas_jamon.webp"
     },
     {
       "sku": "cuba_libre",
@@ -799,7 +799,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cuba_libre.webp"
+      "image": "catalog/hospitality/cuba_libre.webp"
     },
     {
       "sku": "cubata_ron",
@@ -809,7 +809,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cubata_ron.webp"
+      "image": "catalog/hospitality/cubata_ron.webp"
     },
     {
       "sku": "cubata_vodka",
@@ -819,7 +819,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/cubata_vodka.webp"
+      "image": "catalog/hospitality/cubata_vodka.webp"
     },
     {
       "sku": "culin_sidra",
@@ -829,7 +829,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/culin_sidra.webp"
+      "image": "catalog/hospitality/culin_sidra.webp"
     },
     {
       "sku": "desayuno_buffet",
@@ -839,7 +839,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/desayuno_buffet.webp"
+      "image": "catalog/hospitality/desayuno_buffet.webp"
     },
     {
       "sku": "desayuno_continental",
@@ -849,7 +849,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/desayuno_continental.webp"
+      "image": "catalog/hospitality/desayuno_continental.webp"
     },
     {
       "sku": "descafeinado",
@@ -859,7 +859,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/descafeinado.webp"
+      "image": "catalog/hospitality/descafeinado.webp"
     },
     {
       "sku": "doble_espresso",
@@ -869,7 +869,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/doble_espresso.webp"
+      "image": "catalog/hospitality/doble_espresso.webp"
     },
     {
       "sku": "dragon_roll",
@@ -879,7 +879,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/dragon_roll.webp"
+      "image": "catalog/hospitality/dragon_roll.webp"
     },
     {
       "sku": "durum_mixto",
@@ -889,7 +889,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/durum_mixto.webp"
+      "image": "catalog/hospitality/durum_mixto.webp"
     },
     {
       "sku": "durum_pollo",
@@ -899,7 +899,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/durum_pollo.webp"
+      "image": "catalog/hospitality/durum_pollo.webp"
     },
     {
       "sku": "durum_ternera",
@@ -909,7 +909,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/durum_ternera.webp"
+      "image": "catalog/hospitality/durum_ternera.webp"
     },
     {
       "sku": "edamame",
@@ -919,7 +919,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/edamame.webp"
+      "image": "catalog/hospitality/edamame.webp"
     },
     {
       "sku": "ensaimada",
@@ -929,7 +929,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensaimada.webp"
+      "image": "catalog/hospitality/ensaimada.webp"
     },
     {
       "sku": "ensalada_acomp",
@@ -939,7 +939,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensalada_acomp.webp"
+      "image": "catalog/hospitality/ensalada_acomp.webp"
     },
     {
       "sku": "ensalada_caprese",
@@ -949,7 +949,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensalada_caprese.webp"
+      "image": "catalog/hospitality/ensalada_caprese.webp"
     },
     {
       "sku": "ensalada_cesar",
@@ -959,7 +959,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensalada_cesar.webp"
+      "image": "catalog/hospitality/ensalada_cesar.webp"
     },
     {
       "sku": "ensalada_mixta",
@@ -969,7 +969,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensalada_mixta.webp"
+      "image": "catalog/hospitality/ensalada_mixta.webp"
     },
     {
       "sku": "ensalada_turca",
@@ -979,7 +979,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensalada_turca.webp"
+      "image": "catalog/hospitality/ensalada_turca.webp"
     },
     {
       "sku": "ensalada_wakame",
@@ -989,7 +989,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ensalada_wakame.webp"
+      "image": "catalog/hospitality/ensalada_wakame.webp"
     },
     {
       "sku": "entrecot",
@@ -999,7 +999,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/entrecot.webp"
+      "image": "catalog/hospitality/entrecot.webp"
     },
     {
       "sku": "espeto_sardinas",
@@ -1009,7 +1009,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/espeto_sardinas.webp"
+      "image": "catalog/hospitality/espeto_sardinas.webp"
     },
     {
       "sku": "espresso",
@@ -1019,7 +1019,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/espresso.webp"
+      "image": "catalog/hospitality/espresso.webp"
     },
     {
       "sku": "fanta_limon",
@@ -1029,7 +1029,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/fanta_limon.webp"
+      "image": "catalog/hospitality/fanta_limon.webp"
     },
     {
       "sku": "fanta_naranja",
@@ -1039,7 +1039,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/fanta_naranja.webp"
+      "image": "catalog/hospitality/fanta_naranja.webp"
     },
     {
       "sku": "fideua",
@@ -1049,7 +1049,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/fideua.webp"
+      "image": "catalog/hospitality/fideua.webp"
     },
     {
       "sku": "flan_casero",
@@ -1059,7 +1059,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/flan_casero.webp"
+      "image": "catalog/hospitality/flan_casero.webp"
     },
     {
       "sku": "flat_white",
@@ -1069,7 +1069,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/flat_white.webp"
+      "image": "catalog/hospitality/flat_white.webp"
     },
     {
       "sku": "focaccia",
@@ -1079,7 +1079,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/focaccia.webp"
+      "image": "catalog/hospitality/focaccia.webp"
     },
     {
       "sku": "frappuccino",
@@ -1089,7 +1089,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/frappuccino.webp"
+      "image": "catalog/hospitality/frappuccino.webp"
     },
     {
       "sku": "galleta_chocolate",
@@ -1099,7 +1099,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/galleta_chocolate.webp"
+      "image": "catalog/hospitality/galleta_chocolate.webp"
     },
     {
       "sku": "galleta_mantequilla",
@@ -1109,7 +1109,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/galleta_mantequilla.webp"
+      "image": "catalog/hospitality/galleta_mantequilla.webp"
     },
     {
       "sku": "gambas_ajillo",
@@ -1119,7 +1119,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/gambas_ajillo.webp"
+      "image": "catalog/hospitality/gambas_ajillo.webp"
     },
     {
       "sku": "gambas_plancha",
@@ -1129,7 +1129,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/gambas_plancha.webp"
+      "image": "catalog/hospitality/gambas_plancha.webp"
     },
     {
       "sku": "gazpacho",
@@ -1139,7 +1139,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/gazpacho.webp"
+      "image": "catalog/hospitality/gazpacho.webp"
     },
     {
       "sku": "gin_tonic",
@@ -1149,7 +1149,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/gin_tonic.webp"
+      "image": "catalog/hospitality/gin_tonic.webp"
     },
     {
       "sku": "gofre_clasico",
@@ -1159,7 +1159,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/gofre_clasico.webp"
+      "image": "catalog/hospitality/gofre_clasico.webp"
     },
     {
       "sku": "granizado_cafe",
@@ -1169,7 +1169,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/granizado_cafe.webp"
+      "image": "catalog/hospitality/granizado_cafe.webp"
     },
     {
       "sku": "granizado_limon",
@@ -1179,7 +1179,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/granizado_limon.webp"
+      "image": "catalog/hospitality/granizado_limon.webp"
     },
     {
       "sku": "gyozas",
@@ -1189,7 +1189,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/gyozas.webp"
+      "image": "catalog/hospitality/gyozas.webp"
     },
     {
       "sku": "hamburguesa_clasica",
@@ -1199,7 +1199,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hamburguesa_clasica.webp"
+      "image": "catalog/hospitality/hamburguesa_clasica.webp"
     },
     {
       "sku": "hamburguesa_doble",
@@ -1209,7 +1209,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hamburguesa_doble.webp"
+      "image": "catalog/hospitality/hamburguesa_doble.webp"
     },
     {
       "sku": "hamburguesa_gourmet",
@@ -1219,7 +1219,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hamburguesa_gourmet.webp"
+      "image": "catalog/hospitality/hamburguesa_gourmet.webp"
     },
     {
       "sku": "hamburguesa_pollo",
@@ -1229,7 +1229,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hamburguesa_pollo.webp"
+      "image": "catalog/hospitality/hamburguesa_pollo.webp"
     },
     {
       "sku": "hamburguesa_queso",
@@ -1239,7 +1239,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hamburguesa_queso.webp"
+      "image": "catalog/hospitality/hamburguesa_queso.webp"
     },
     {
       "sku": "hamburguesa_smash",
@@ -1249,7 +1249,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hamburguesa_smash.webp"
+      "image": "catalog/hospitality/hamburguesa_smash.webp"
     },
     {
       "sku": "helado_1_bola",
@@ -1259,7 +1259,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/helado_1_bola.webp"
+      "image": "catalog/hospitality/helado_1_bola.webp"
     },
     {
       "sku": "helado_2_bolas",
@@ -1269,7 +1269,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/helado_2_bolas.webp"
+      "image": "catalog/hospitality/helado_2_bolas.webp"
     },
     {
       "sku": "helado_3_bolas",
@@ -1279,7 +1279,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/helado_3_bolas.webp"
+      "image": "catalog/hospitality/helado_3_bolas.webp"
     },
     {
       "sku": "helado_bola",
@@ -1289,7 +1289,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/helado_bola.webp"
+      "image": "catalog/hospitality/helado_bola.webp"
     },
     {
       "sku": "helado_soft",
@@ -1299,7 +1299,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/helado_soft.webp"
+      "image": "catalog/hospitality/helado_soft.webp"
     },
     {
       "sku": "hielo",
@@ -1309,7 +1309,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/hielo.webp"
+      "image": "catalog/hospitality/hielo.webp"
     },
     {
       "sku": "hogaza",
@@ -1319,7 +1319,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hogaza.webp"
+      "image": "catalog/hospitality/hogaza.webp"
     },
     {
       "sku": "hummus",
@@ -1329,7 +1329,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/hummus.webp"
+      "image": "catalog/hospitality/hummus.webp"
     },
     {
       "sku": "ipa_artesana",
@@ -1339,7 +1339,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/ipa_artesana.webp"
+      "image": "catalog/hospitality/ipa_artesana.webp"
     },
     {
       "sku": "jamon_iberico",
@@ -1349,7 +1349,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/jamon_iberico.webp"
+      "image": "catalog/hospitality/jamon_iberico.webp"
     },
     {
       "sku": "kebab_falafel",
@@ -1359,7 +1359,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/kebab_falafel.webp"
+      "image": "catalog/hospitality/kebab_falafel.webp"
     },
     {
       "sku": "kebab_mixto",
@@ -1369,7 +1369,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/kebab_mixto.webp"
+      "image": "catalog/hospitality/kebab_mixto.webp"
     },
     {
       "sku": "kebab_pollo",
@@ -1379,7 +1379,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/kebab_pollo.webp"
+      "image": "catalog/hospitality/kebab_pollo.webp"
     },
     {
       "sku": "kebab_ternera",
@@ -1389,7 +1389,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/kebab_ternera.webp"
+      "image": "catalog/hospitality/kebab_ternera.webp"
     },
     {
       "sku": "lahmacun",
@@ -1399,7 +1399,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/lahmacun.webp"
+      "image": "catalog/hospitality/lahmacun.webp"
     },
     {
       "sku": "lasana",
@@ -1409,7 +1409,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/lasana.webp"
+      "image": "catalog/hospitality/lasana.webp"
     },
     {
       "sku": "latte",
@@ -1419,7 +1419,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/latte.webp"
+      "image": "catalog/hospitality/latte.webp"
     },
     {
       "sku": "latte_caramelo",
@@ -1429,7 +1429,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/latte_caramelo.webp"
+      "image": "catalog/hospitality/latte_caramelo.webp"
     },
     {
       "sku": "latte_vainilla",
@@ -1439,7 +1439,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/latte_vainilla.webp"
+      "image": "catalog/hospitality/latte_vainilla.webp"
     },
     {
       "sku": "limonada",
@@ -1449,7 +1449,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/limonada.webp"
+      "image": "catalog/hospitality/limonada.webp"
     },
     {
       "sku": "limonada_yuzu",
@@ -1459,7 +1459,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/limonada_yuzu.webp"
+      "image": "catalog/hospitality/limonada_yuzu.webp"
     },
     {
       "sku": "lubina_horno",
@@ -1469,7 +1469,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/lubina_horno.webp"
+      "image": "catalog/hospitality/lubina_horno.webp"
     },
     {
       "sku": "magdalena",
@@ -1479,7 +1479,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/magdalena.webp"
+      "image": "catalog/hospitality/magdalena.webp"
     },
     {
       "sku": "maki_atun",
@@ -1489,7 +1489,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/maki_atun.webp"
+      "image": "catalog/hospitality/maki_atun.webp"
     },
     {
       "sku": "maki_salmon",
@@ -1499,7 +1499,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/maki_salmon.webp"
+      "image": "catalog/hospitality/maki_salmon.webp"
     },
     {
       "sku": "manzanilla",
@@ -1509,7 +1509,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/manzanilla.webp"
+      "image": "catalog/hospitality/manzanilla.webp"
     },
     {
       "sku": "matcha_latte",
@@ -1519,7 +1519,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/matcha_latte.webp"
+      "image": "catalog/hospitality/matcha_latte.webp"
     },
     {
       "sku": "menu_dia",
@@ -1529,7 +1529,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/menu_dia.webp"
+      "image": "catalog/hospitality/menu_dia.webp"
     },
     {
       "sku": "menu_hamburguesa",
@@ -1539,7 +1539,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/menu_hamburguesa.webp"
+      "image": "catalog/hospitality/menu_hamburguesa.webp"
     },
     {
       "sku": "menu_infantil",
@@ -1549,7 +1549,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/menu_infantil.webp"
+      "image": "catalog/hospitality/menu_infantil.webp"
     },
     {
       "sku": "menu_kebab",
@@ -1559,7 +1559,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/menu_kebab.webp"
+      "image": "catalog/hospitality/menu_kebab.webp"
     },
     {
       "sku": "merluza_plancha",
@@ -1569,7 +1569,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/merluza_plancha.webp"
+      "image": "catalog/hospitality/merluza_plancha.webp"
     },
     {
       "sku": "mesa_dulce",
@@ -1579,7 +1579,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/mesa_dulce.webp"
+      "image": "catalog/hospitality/mesa_dulce.webp"
     },
     {
       "sku": "mocha",
@@ -1589,7 +1589,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/mocha.webp"
+      "image": "catalog/hospitality/mocha.webp"
     },
     {
       "sku": "mochi_helado",
@@ -1599,7 +1599,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/mochi_helado.webp"
+      "image": "catalog/hospitality/mochi_helado.webp"
     },
     {
       "sku": "mojito",
@@ -1609,7 +1609,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/mojito.webp"
+      "image": "catalog/hospitality/mojito.webp"
     },
     {
       "sku": "muffin_arandanos",
@@ -1619,7 +1619,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/muffin_arandanos.webp"
+      "image": "catalog/hospitality/muffin_arandanos.webp"
     },
     {
       "sku": "muffin_chocolate",
@@ -1629,7 +1629,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/muffin_chocolate.webp"
+      "image": "catalog/hospitality/muffin_chocolate.webp"
     },
     {
       "sku": "nachos_queso",
@@ -1639,7 +1639,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nachos_queso.webp"
+      "image": "catalog/hospitality/nachos_queso.webp"
     },
     {
       "sku": "napolitana_chocolate",
@@ -1649,7 +1649,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/napolitana_chocolate.webp"
+      "image": "catalog/hospitality/napolitana_chocolate.webp"
     },
     {
       "sku": "nigiri_anguila",
@@ -1659,7 +1659,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nigiri_anguila.webp"
+      "image": "catalog/hospitality/nigiri_anguila.webp"
     },
     {
       "sku": "nigiri_atun",
@@ -1669,7 +1669,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nigiri_atun.webp"
+      "image": "catalog/hospitality/nigiri_atun.webp"
     },
     {
       "sku": "nigiri_gamba",
@@ -1679,7 +1679,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nigiri_gamba.webp"
+      "image": "catalog/hospitality/nigiri_gamba.webp"
     },
     {
       "sku": "nigiri_pulpo",
@@ -1689,7 +1689,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nigiri_pulpo.webp"
+      "image": "catalog/hospitality/nigiri_pulpo.webp"
     },
     {
       "sku": "nigiri_salmon",
@@ -1699,7 +1699,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nigiri_salmon.webp"
+      "image": "catalog/hospitality/nigiri_salmon.webp"
     },
     {
       "sku": "nuggets",
@@ -1709,7 +1709,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/nuggets.webp"
+      "image": "catalog/hospitality/nuggets.webp"
     },
     {
       "sku": "pad_thai",
@@ -1719,7 +1719,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pad_thai.webp"
+      "image": "catalog/hospitality/pad_thai.webp"
     },
     {
       "sku": "paella_marisco",
@@ -1729,7 +1729,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/paella_marisco.webp"
+      "image": "catalog/hospitality/paella_marisco.webp"
     },
     {
       "sku": "paella_mixta",
@@ -1739,7 +1739,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/paella_mixta.webp"
+      "image": "catalog/hospitality/paella_mixta.webp"
     },
     {
       "sku": "paella_valenciana",
@@ -1749,7 +1749,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/paella_valenciana.webp"
+      "image": "catalog/hospitality/paella_valenciana.webp"
     },
     {
       "sku": "pale_ale",
@@ -1759,7 +1759,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/pale_ale.webp"
+      "image": "catalog/hospitality/pale_ale.webp"
     },
     {
       "sku": "palmera_chocolate",
@@ -1769,7 +1769,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/palmera_chocolate.webp"
+      "image": "catalog/hospitality/palmera_chocolate.webp"
     },
     {
       "sku": "pan_ajo",
@@ -1779,7 +1779,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pan_ajo.webp"
+      "image": "catalog/hospitality/pan_ajo.webp"
     },
     {
       "sku": "pan_centeno",
@@ -1789,7 +1789,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pan_centeno.webp"
+      "image": "catalog/hospitality/pan_centeno.webp"
     },
     {
       "sku": "pan_integral",
@@ -1799,7 +1799,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pan_integral.webp"
+      "image": "catalog/hospitality/pan_integral.webp"
     },
     {
       "sku": "pan_pita",
@@ -1809,7 +1809,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pan_pita.webp"
+      "image": "catalog/hospitality/pan_pita.webp"
     },
     {
       "sku": "pan_semillas",
@@ -1819,7 +1819,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pan_semillas.webp"
+      "image": "catalog/hospitality/pan_semillas.webp"
     },
     {
       "sku": "panna_cotta",
@@ -1829,7 +1829,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/panna_cotta.webp"
+      "image": "catalog/hospitality/panna_cotta.webp"
     },
     {
       "sku": "pasta_bolonesa",
@@ -1839,7 +1839,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pasta_bolonesa.webp"
+      "image": "catalog/hospitality/pasta_bolonesa.webp"
     },
     {
       "sku": "pasta_carbonara",
@@ -1849,7 +1849,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pasta_carbonara.webp"
+      "image": "catalog/hospitality/pasta_carbonara.webp"
     },
     {
       "sku": "pasta_pesto",
@@ -1859,7 +1859,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pasta_pesto.webp"
+      "image": "catalog/hospitality/pasta_pesto.webp"
     },
     {
       "sku": "patatas_bravas",
@@ -1869,7 +1869,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/patatas_bravas.webp"
+      "image": "catalog/hospitality/patatas_bravas.webp"
     },
     {
       "sku": "patatas_fritas",
@@ -1879,7 +1879,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/patatas_fritas.webp"
+      "image": "catalog/hospitality/patatas_fritas.webp"
     },
     {
       "sku": "perrito_clasico",
@@ -1889,7 +1889,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/perrito_clasico.webp"
+      "image": "catalog/hospitality/perrito_clasico.webp"
     },
     {
       "sku": "pescaito_frito",
@@ -1899,7 +1899,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pescaito_frito.webp"
+      "image": "catalog/hospitality/pescaito_frito.webp"
     },
     {
       "sku": "pincho_tortilla",
@@ -1909,7 +1909,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pincho_tortilla.webp"
+      "image": "catalog/hospitality/pincho_tortilla.webp"
     },
     {
       "sku": "pizza_4_quesos",
@@ -1919,7 +1919,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_4_quesos.webp"
+      "image": "catalog/hospitality/pizza_4_quesos.webp"
     },
     {
       "sku": "pizza_barbacoa",
@@ -1929,7 +1929,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_barbacoa.webp"
+      "image": "catalog/hospitality/pizza_barbacoa.webp"
     },
     {
       "sku": "pizza_calzone",
@@ -1939,7 +1939,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_calzone.webp"
+      "image": "catalog/hospitality/pizza_calzone.webp"
     },
     {
       "sku": "pizza_caprichosa",
@@ -1949,7 +1949,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_caprichosa.webp"
+      "image": "catalog/hospitality/pizza_caprichosa.webp"
     },
     {
       "sku": "pizza_carbonara",
@@ -1959,7 +1959,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_carbonara.webp"
+      "image": "catalog/hospitality/pizza_carbonara.webp"
     },
     {
       "sku": "pizza_diavola",
@@ -1969,7 +1969,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_diavola.webp"
+      "image": "catalog/hospitality/pizza_diavola.webp"
     },
     {
       "sku": "pizza_familiar",
@@ -1979,7 +1979,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_familiar.webp"
+      "image": "catalog/hospitality/pizza_familiar.webp"
     },
     {
       "sku": "pizza_hawaiana",
@@ -1989,7 +1989,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_hawaiana.webp"
+      "image": "catalog/hospitality/pizza_hawaiana.webp"
     },
     {
       "sku": "pizza_jamon_queso",
@@ -1999,7 +1999,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_jamon_queso.webp"
+      "image": "catalog/hospitality/pizza_jamon_queso.webp"
     },
     {
       "sku": "pizza_margarita",
@@ -2009,7 +2009,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_margarita.webp"
+      "image": "catalog/hospitality/pizza_margarita.webp"
     },
     {
       "sku": "pizza_pepperoni",
@@ -2019,7 +2019,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_pepperoni.webp"
+      "image": "catalog/hospitality/pizza_pepperoni.webp"
     },
     {
       "sku": "pizza_vegetal",
@@ -2029,7 +2029,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pizza_vegetal.webp"
+      "image": "catalog/hospitality/pizza_vegetal.webp"
     },
     {
       "sku": "plato_falafel",
@@ -2039,7 +2039,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/plato_falafel.webp"
+      "image": "catalog/hospitality/plato_falafel.webp"
     },
     {
       "sku": "plato_kebab",
@@ -2049,7 +2049,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/plato_kebab.webp"
+      "image": "catalog/hospitality/plato_kebab.webp"
     },
     {
       "sku": "poke_atun",
@@ -2059,7 +2059,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/poke_atun.webp"
+      "image": "catalog/hospitality/poke_atun.webp"
     },
     {
       "sku": "poke_salmon",
@@ -2069,7 +2069,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/poke_salmon.webp"
+      "image": "catalog/hospitality/poke_salmon.webp"
     },
     {
       "sku": "poleo_menta",
@@ -2079,7 +2079,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/poleo_menta.webp"
+      "image": "catalog/hospitality/poleo_menta.webp"
     },
     {
       "sku": "pollo_asado",
@@ -2089,7 +2089,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pollo_asado.webp"
+      "image": "catalog/hospitality/pollo_asado.webp"
     },
     {
       "sku": "pollo_teriyaki",
@@ -2099,7 +2099,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pollo_teriyaki.webp"
+      "image": "catalog/hospitality/pollo_teriyaki.webp"
     },
     {
       "sku": "pulpo_gallega",
@@ -2109,7 +2109,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/pulpo_gallega.webp"
+      "image": "catalog/hospitality/pulpo_gallega.webp"
     },
     {
       "sku": "racion_cachopo",
@@ -2119,7 +2119,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/racion_cachopo.webp"
+      "image": "catalog/hospitality/racion_cachopo.webp"
     },
     {
       "sku": "racion_croquetas",
@@ -2129,7 +2129,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/racion_croquetas.webp"
+      "image": "catalog/hospitality/racion_croquetas.webp"
     },
     {
       "sku": "racion_gambas",
@@ -2139,7 +2139,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/racion_gambas.webp"
+      "image": "catalog/hospitality/racion_gambas.webp"
     },
     {
       "sku": "racion_patatas_bravas",
@@ -2149,7 +2149,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/racion_patatas_bravas.webp"
+      "image": "catalog/hospitality/racion_patatas_bravas.webp"
     },
     {
       "sku": "racion_rabas",
@@ -2159,7 +2159,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/racion_rabas.webp"
+      "image": "catalog/hospitality/racion_rabas.webp"
     },
     {
       "sku": "ramen_cerdo",
@@ -2169,7 +2169,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ramen_cerdo.webp"
+      "image": "catalog/hospitality/ramen_cerdo.webp"
     },
     {
       "sku": "ramen_pollo",
@@ -2179,7 +2179,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/ramen_pollo.webp"
+      "image": "catalog/hospitality/ramen_pollo.webp"
     },
     {
       "sku": "ron_cola",
@@ -2189,7 +2189,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/ron_cola.webp"
+      "image": "catalog/hospitality/ron_cola.webp"
     },
     {
       "sku": "sake_copa",
@@ -2199,7 +2199,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/sake_copa.webp"
+      "image": "catalog/hospitality/sake_copa.webp"
     },
     {
       "sku": "salmon_teriyaki",
@@ -2209,7 +2209,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/salmon_teriyaki.webp"
+      "image": "catalog/hospitality/salmon_teriyaki.webp"
     },
     {
       "sku": "salmorejo",
@@ -2219,7 +2219,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/salmorejo.webp"
+      "image": "catalog/hospitality/salmorejo.webp"
     },
     {
       "sku": "salsa_extra",
@@ -2229,7 +2229,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/salsa_extra.webp"
+      "image": "catalog/hospitality/salsa_extra.webp"
     },
     {
       "sku": "salsa_yogur",
@@ -2239,7 +2239,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/salsa_yogur.webp"
+      "image": "catalog/hospitality/salsa_yogur.webp"
     },
     {
       "sku": "sandwich_mixto",
@@ -2249,7 +2249,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/sandwich_mixto.webp"
+      "image": "catalog/hospitality/sandwich_mixto.webp"
     },
     {
       "sku": "sandwich_vegetal",
@@ -2259,7 +2259,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/sandwich_vegetal.webp"
+      "image": "catalog/hospitality/sandwich_vegetal.webp"
     },
     {
       "sku": "sangria_jarra",
@@ -2269,7 +2269,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/sangria_jarra.webp"
+      "image": "catalog/hospitality/sangria_jarra.webp"
     },
     {
       "sku": "sashimi_atun",
@@ -2279,7 +2279,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/sashimi_atun.webp"
+      "image": "catalog/hospitality/sashimi_atun.webp"
     },
     {
       "sku": "sashimi_mixto",
@@ -2289,7 +2289,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/sashimi_mixto.webp"
+      "image": "catalog/hospitality/sashimi_mixto.webp"
     },
     {
       "sku": "sashimi_salmon",
@@ -2299,7 +2299,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/sashimi_salmon.webp"
+      "image": "catalog/hospitality/sashimi_salmon.webp"
     },
     {
       "sku": "secreto_iberico",
@@ -2309,7 +2309,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/secreto_iberico.webp"
+      "image": "catalog/hospitality/secreto_iberico.webp"
     },
     {
       "sku": "shawarma_plato",
@@ -2319,7 +2319,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/shawarma_plato.webp"
+      "image": "catalog/hospitality/shawarma_plato.webp"
     },
     {
       "sku": "sidra_botella",
@@ -2329,7 +2329,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/sidra_botella.webp"
+      "image": "catalog/hospitality/sidra_botella.webp"
     },
     {
       "sku": "sidra_natural",
@@ -2339,7 +2339,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/sidra_natural.webp"
+      "image": "catalog/hospitality/sidra_natural.webp"
     },
     {
       "sku": "smoothie_fresa",
@@ -2349,7 +2349,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/smoothie_fresa.webp"
+      "image": "catalog/hospitality/smoothie_fresa.webp"
     },
     {
       "sku": "smoothie_mango",
@@ -2359,7 +2359,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/smoothie_mango.webp"
+      "image": "catalog/hospitality/smoothie_mango.webp"
     },
     {
       "sku": "solomillo",
@@ -2369,7 +2369,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/solomillo.webp"
+      "image": "catalog/hospitality/solomillo.webp"
     },
     {
       "sku": "sopa_miso",
@@ -2379,7 +2379,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/sopa_miso.webp"
+      "image": "catalog/hospitality/sopa_miso.webp"
     },
     {
       "sku": "spicy_salmon_roll",
@@ -2389,7 +2389,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/spicy_salmon_roll.webp"
+      "image": "catalog/hospitality/spicy_salmon_roll.webp"
     },
     {
       "sku": "spring_rolls",
@@ -2399,7 +2399,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/spring_rolls.webp"
+      "image": "catalog/hospitality/spring_rolls.webp"
     },
     {
       "sku": "sprite",
@@ -2409,7 +2409,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/sprite.webp"
+      "image": "catalog/hospitality/sprite.webp"
     },
     {
       "sku": "stout",
@@ -2419,7 +2419,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/stout.webp"
+      "image": "catalog/hospitality/stout.webp"
     },
     {
       "sku": "tabla_embutidos",
@@ -2429,7 +2429,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tabla_embutidos.webp"
+      "image": "catalog/hospitality/tabla_embutidos.webp"
     },
     {
       "sku": "tabla_iberica",
@@ -2439,7 +2439,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tabla_iberica.webp"
+      "image": "catalog/hospitality/tabla_iberica.webp"
     },
     {
       "sku": "tabla_mixta",
@@ -2449,7 +2449,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tabla_mixta.webp"
+      "image": "catalog/hospitality/tabla_mixta.webp"
     },
     {
       "sku": "tabla_quesos",
@@ -2459,7 +2459,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tabla_quesos.webp"
+      "image": "catalog/hospitality/tabla_quesos.webp"
     },
     {
       "sku": "tacos",
@@ -2469,7 +2469,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tacos.webp"
+      "image": "catalog/hospitality/tacos.webp"
     },
     {
       "sku": "tapa_aceitunas",
@@ -2479,7 +2479,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_aceitunas.webp"
+      "image": "catalog/hospitality/tapa_aceitunas.webp"
     },
     {
       "sku": "tapa_bravas",
@@ -2489,7 +2489,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_bravas.webp"
+      "image": "catalog/hospitality/tapa_bravas.webp"
     },
     {
       "sku": "tapa_croquetas",
@@ -2499,7 +2499,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_croquetas.webp"
+      "image": "catalog/hospitality/tapa_croquetas.webp"
     },
     {
       "sku": "tapa_jamon",
@@ -2509,7 +2509,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_jamon.webp"
+      "image": "catalog/hospitality/tapa_jamon.webp"
     },
     {
       "sku": "tapa_queso",
@@ -2519,7 +2519,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_queso.webp"
+      "image": "catalog/hospitality/tapa_queso.webp"
     },
     {
       "sku": "tapa_queso_manchego",
@@ -2529,7 +2529,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_queso_manchego.webp"
+      "image": "catalog/hospitality/tapa_queso_manchego.webp"
     },
     {
       "sku": "tapa_tortilla",
@@ -2539,7 +2539,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tapa_tortilla.webp"
+      "image": "catalog/hospitality/tapa_tortilla.webp"
     },
     {
       "sku": "tarrina_1l",
@@ -2549,7 +2549,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tarrina_1l.webp"
+      "image": "catalog/hospitality/tarrina_1l.webp"
     },
     {
       "sku": "tarrina_500ml",
@@ -2559,7 +2559,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tarrina_500ml.webp"
+      "image": "catalog/hospitality/tarrina_500ml.webp"
     },
     {
       "sku": "tarta_chocolate",
@@ -2569,7 +2569,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tarta_chocolate.webp"
+      "image": "catalog/hospitality/tarta_chocolate.webp"
     },
     {
       "sku": "tarta_manzana",
@@ -2579,7 +2579,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tarta_manzana.webp"
+      "image": "catalog/hospitality/tarta_manzana.webp"
     },
     {
       "sku": "tarta_matcha",
@@ -2589,7 +2589,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/tarta_matcha.webp"
+      "image": "catalog/hospitality/tarta_matcha.webp"
     },
     {
       "sku": "tarta_queso",
@@ -2599,7 +2599,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tarta_queso.webp"
+      "image": "catalog/hospitality/tarta_queso.webp"
     },
     {
       "sku": "tarta_zanahoria",
@@ -2609,7 +2609,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tarta_zanahoria.webp"
+      "image": "catalog/hospitality/tarta_zanahoria.webp"
     },
     {
       "sku": "te_negro",
@@ -2619,7 +2619,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/te_negro.webp"
+      "image": "catalog/hospitality/te_negro.webp"
     },
     {
       "sku": "te_rojo",
@@ -2629,7 +2629,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/te_rojo.webp"
+      "image": "catalog/hospitality/te_rojo.webp"
     },
     {
       "sku": "te_turco",
@@ -2639,7 +2639,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/te_turco.webp"
+      "image": "catalog/hospitality/te_turco.webp"
     },
     {
       "sku": "te_verde",
@@ -2649,7 +2649,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/te_verde.webp"
+      "image": "catalog/hospitality/te_verde.webp"
     },
     {
       "sku": "te_verde_japones",
@@ -2659,7 +2659,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/te_verde_japones.webp"
+      "image": "catalog/hospitality/te_verde_japones.webp"
     },
     {
       "sku": "tempura_gambas",
@@ -2669,7 +2669,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tempura_gambas.webp"
+      "image": "catalog/hospitality/tempura_gambas.webp"
     },
     {
       "sku": "tempura_helado",
@@ -2679,7 +2679,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tempura_helado.webp"
+      "image": "catalog/hospitality/tempura_helado.webp"
     },
     {
       "sku": "tempura_roll",
@@ -2689,7 +2689,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tempura_roll.webp"
+      "image": "catalog/hospitality/tempura_roll.webp"
     },
     {
       "sku": "tempura_verduras",
@@ -2699,7 +2699,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tempura_verduras.webp"
+      "image": "catalog/hospitality/tempura_verduras.webp"
     },
     {
       "sku": "tinto_verano",
@@ -2709,7 +2709,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/tinto_verano.webp"
+      "image": "catalog/hospitality/tinto_verano.webp"
     },
     {
       "sku": "tiramisu",
@@ -2719,7 +2719,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tiramisu.webp"
+      "image": "catalog/hospitality/tiramisu.webp"
     },
     {
       "sku": "tonica",
@@ -2729,7 +2729,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/tonica.webp"
+      "image": "catalog/hospitality/tonica.webp"
     },
     {
       "sku": "tortilla_espanola",
@@ -2739,7 +2739,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tortilla_espanola.webp"
+      "image": "catalog/hospitality/tortilla_espanola.webp"
     },
     {
       "sku": "tostada_aguacate",
@@ -2749,7 +2749,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tostada_aguacate.webp"
+      "image": "catalog/hospitality/tostada_aguacate.webp"
     },
     {
       "sku": "tostada_mantequilla",
@@ -2759,7 +2759,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tostada_mantequilla.webp"
+      "image": "catalog/hospitality/tostada_mantequilla.webp"
     },
     {
       "sku": "tostada_tomate",
@@ -2769,7 +2769,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/tostada_tomate.webp"
+      "image": "catalog/hospitality/tostada_tomate.webp"
     },
     {
       "sku": "uramaki_aguacate",
@@ -2779,7 +2779,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/uramaki_aguacate.webp"
+      "image": "catalog/hospitality/uramaki_aguacate.webp"
     },
     {
       "sku": "vegetariano_roll",
@@ -2789,7 +2789,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/vegetariano_roll.webp"
+      "image": "catalog/hospitality/vegetariano_roll.webp"
     },
     {
       "sku": "verduras_plancha",
@@ -2799,7 +2799,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/verduras_plancha.webp"
+      "image": "catalog/hospitality/verduras_plancha.webp"
     },
     {
       "sku": "vermut",
@@ -2809,7 +2809,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/vermut.webp"
+      "image": "catalog/hospitality/vermut.webp"
     },
     {
       "sku": "vino_blanco_copa",
@@ -2819,7 +2819,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/vino_blanco_copa.webp"
+      "image": "catalog/hospitality/vino_blanco_copa.webp"
     },
     {
       "sku": "vino_rosado_copa",
@@ -2829,7 +2829,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/vino_rosado_copa.webp"
+      "image": "catalog/hospitality/vino_rosado_copa.webp"
     },
     {
       "sku": "vino_tinto_copa",
@@ -2839,7 +2839,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/vino_tinto_copa.webp"
+      "image": "catalog/hospitality/vino_tinto_copa.webp"
     },
     {
       "sku": "wheat_beer",
@@ -2849,7 +2849,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/wheat_beer.webp"
+      "image": "catalog/hospitality/wheat_beer.webp"
     },
     {
       "sku": "whisky_cola",
@@ -2859,7 +2859,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.alcohol",
-      "image": "media:public/img/hospitality/whisky_cola.webp"
+      "image": "catalog/hospitality/whisky_cola.webp"
     },
     {
       "sku": "wrap_falafel",
@@ -2869,7 +2869,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/wrap_falafel.webp"
+      "image": "catalog/hospitality/wrap_falafel.webp"
     },
     {
       "sku": "wrap_pollo",
@@ -2879,7 +2879,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/wrap_pollo.webp"
+      "image": "catalog/hospitality/wrap_pollo.webp"
     },
     {
       "sku": "wrap_vegetal",
@@ -2889,7 +2889,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.food",
-      "image": "media:public/img/hospitality/wrap_vegetal.webp"
+      "image": "catalog/hospitality/wrap_vegetal.webp"
     },
     {
       "sku": "zumo_naranja",
@@ -2899,7 +2899,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/zumo_naranja.webp"
+      "image": "catalog/hospitality/zumo_naranja.webp"
     },
     {
       "sku": "zumo_pina",
@@ -2909,7 +2909,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/zumo_pina.webp"
+      "image": "catalog/hospitality/zumo_pina.webp"
     },
     {
       "sku": "zumo_tomate",
@@ -2919,7 +2919,7 @@
       "stock": 1000000000,
       "low_stock_threshold": 0,
       "tax_category_key": "restaurant.drink",
-      "image": "media:public/img/hospitality/zumo_tomate.webp"
+      "image": "catalog/hospitality/zumo_tomate.webp"
     }
   ]
 }
