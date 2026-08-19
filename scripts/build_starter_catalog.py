@@ -12,9 +12,17 @@ Es el mirror local del prefijo S3 `starter-seeds/<país>/<sector>/` (lo sincroni
 `.github/workflows/publish-to-s3.yml`). El Hub lo descarga, verifica el SHA256, sustituye el
 `hub_id` demo por el real y aplica `seed.sql` vía `runtime/src/seed.rs::apply` (ADR-0072 §3).
 
-Imágenes COMPARTIDAS (§7.3 opción "shared"): el `image` de cada producto es una **ref lógica**
-`media:public/img/<assets_dir>/<file>.webp` — el origen `public` la resuelve el proxy del SaaS
-(solo-lectura); no se duplican imágenes dentro del bundle.
+Imágenes: **una copia por bundle** (ERPlora/hub#1006, supersede la opción "shared" de ADR-0072 §7.3
+y el esquema `media:<origen>/<tipo>/<path>` de ADR-0134). El `image` de cada producto es la **ruta
+de media** `catalog/<assets_dir>/<file>.webp` y la `.webp` viaja dentro del bundle, en
+`media/catalog/<assets_dir>/<file>.webp` — el mismo contrato que el export/import de blueprints
+(hub#1008), donde el import copia `media/` al gestor de media del hub.
+
+El esquema lógico anterior no lo resolvía NADIE (ni hub, ni SaaS, ni los 25 módulos): era una
+promesa a un resolvedor inexistente, y en el mostrador se veía como la baldosa vacía. Es además lo
+que hace el mercado — Odoo, Shopify, WooCommerce, Business Central, Lightspeed, Toast, Square y
+Fresha materializan una copia por tenant; donde aparece una URL es transporte del import, nunca
+almacenamiento.
 
 Uso:
     python scripts/build_starter_catalog.py                       # todos los sectores (país es)
@@ -27,11 +35,16 @@ Determinista e idempotente: misma entrada → mismos ficheros (orden estable, si
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "img"
+# Carpeta del gestor de media del hub donde aterrizan las fotos del catálogo. Es la primera mitad
+# de la ruta que guarda el producto (`catalog/<assets_dir>/<file>.webp`) y la de dentro del bundle
+# (`media/catalog/…`), para que import y ruta digan lo mismo sin traducción por medio.
+MEDIA_FOLDER = "catalog"
 OUT_DIR = ROOT / "starter_catalogs"
 
 # --- Definición de categorías por sector ----------------------------------------------------
@@ -493,7 +506,7 @@ def build_sector(sector: str) -> dict:
                 "low_stock_threshold": DEFAULT_LOW_STOCK_THRESHOLD_UNITS
                 * QUANTITY_SCALE,
                 "tax_category_key": tax_category_key,  # ADR-0085: categoría canónica (regla ES en módulo taxes)
-                "image": f"media:public/img/{assets_dir}/{stem}.webp",
+                "image": f"{MEDIA_FOLDER}/{assets_dir}/{stem}.webp",
             }
         )
 
@@ -555,7 +568,8 @@ def emit_sql(data: dict, hub_id: str) -> str:
     `low_stock_threshold`) en punto fijo entero a escala 10⁶ (ADR-0147) — el import aplica este SQL
     tal cual, sin convertir nada.
 
-    El `image` es la ref lógica `media:public/img/…` (igual que el JSON).
+    El `image` es la RUTA DE MEDIA `catalog/…` (igual que el JSON): los bytes viajan en el propio
+    bundle, bajo `media/catalog/…` (hub#1006).
     """
     sector = data["sector"]
     h = _sql(hub_id)
@@ -635,6 +649,74 @@ def emit_sql(data: dict, hub_id: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+# Ruta de media dentro de un seed: `catalog/<carpeta>/<fichero>.webp` (hub#1006).
+MEDIA_REF_RE = re.compile(
+    rf"{MEDIA_FOLDER}/(?P<folder>[^/'\"]+)/(?P<filename>[^'\"\s]+\.webp)"
+)
+
+
+def materialize_bundle_media(bundle_dir) -> int:
+    """Copia dentro del bundle las `.webp` que su `seed.sql` referencia. Devuelve cuántas.
+
+    **Derivado, no fuente.** Los bytes canónicos son los de `img/`; esto es la copia que viaja con
+    el bundle (hub#1006: una copia por tenant, como Odoo/Shopify/Square). Por eso NO se commitea —
+    duplicar 8 MB de webp en git sería guardar dos veces lo mismo — y se materializa en dos sitios:
+    al publicar (`publish-seeds.yml`, justo antes del `aws s3 sync`) y en los tests, que es donde se
+    comprueba que cada ruta resuelve a un fichero real.
+
+    Lee las refs del SQL y no de la estructura en memoria a propósito: así vale igual para el seed
+    GENERADO (restaurant) y para el escrito a mano (beauty), que es justo donde se coló el esquema
+    viejo sin que nadie lo viera.
+    """
+    import shutil
+
+    seed = bundle_dir / "seed.sql"
+    if not seed.is_file():
+        return 0
+    quiere: dict[str, object] = {}
+    faltan: list[str] = []
+    for m in MEDIA_REF_RE.finditer(seed.read_text(encoding="utf-8")):
+        folder, filename = m.group("folder"), m.group("filename")
+        if "<" in folder or "*" in filename:  # el comentario de cabecera, no una fila
+            continue
+        origen = ASSETS / folder / filename
+        if not origen.is_file():
+            faltan.append(f"img/{folder}/{filename}")
+            continue
+        quiere[f"{folder}/{filename}"] = origen
+    if faltan:
+        raise SystemExit(
+            f"[error] {bundle_dir.name}: {len(faltan)} imagen(es) referenciadas que no existen "
+            "en img/ (un producto sin foto en el mostrador, y el bundle publicado es INMUTABLE — "
+            f"ADR-0121):\n  " + "\n  ".join(sorted(set(faltan))[:20])
+        )
+
+    destino = bundle_dir / "media" / MEDIA_FOLDER
+    destino.mkdir(parents=True, exist_ok=True)
+    for relativa, origen in sorted(quiere.items()):
+        final = destino / relativa
+        final.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(origen, final)
+    # Lo que sobra: rematerializar tras quitar un producto no puede dejar su foto en el bundle.
+    for existente in sorted(destino.rglob("*.webp")):
+        if str(existente.relative_to(destino)) not in quiere:
+            existente.unlink()
+    for carpeta in sorted(destino.rglob("*"), reverse=True):
+        if carpeta.is_dir() and not any(carpeta.iterdir()):
+            carpeta.rmdir()
+    return len(quiere)
+
+
+def materialize_all_media() -> int:
+    """Materializa la media de TODOS los bundles del disco. Lo que corre el workflow al publicar."""
+    total = 0
+    for seed in sorted(OUT_DIR.glob("*/*/seed.sql")):
+        n = materialize_bundle_media(seed.parent)
+        total += n
+        print(f"[media] {seed.parent.relative_to(ROOT)}: {n} imagen(es)")
+    return total
+
+
 def main(argv: list[str]) -> int:
     import argparse
     import hashlib
@@ -655,7 +737,18 @@ def main(argv: list[str]) -> int:
         default=DEMO_HUB_ID,
         help=f"hub_id literal para el SQL de seed (def. demo {DEMO_HUB_ID})",
     )
+    parser.add_argument(
+        "--materialize-media",
+        action="store_true",
+        help="solo copiar dentro de cada bundle las .webp que su seed referencia (derivado: no se "
+        "commitea; lo corre publish-seeds.yml antes del sync)",
+    )
     args = parser.parse_args(argv[1:])
+
+    if args.materialize_media:
+        # Solo la copia derivada: lo que corre el workflow de publicación antes del `aws s3 sync`.
+        materialize_all_media()
+        return 0
 
     targets = args.sectors or list(SECTORS)
     for sector in targets:
@@ -679,10 +772,16 @@ def main(argv: list[str]) -> int:
         digest = hashlib.sha256(sql.encode("utf-8")).hexdigest()
         (bundle_dir / "seed.sha256").write_text(digest + "\n", encoding="utf-8")
 
+        # Las fotos VIAJAN con el bundle (hub#1006): una ruta sola no entrega bytes a nadie, y ese
+        # fue justo el fallo del esquema retirado. Se copian solo las referenciadas — el bundle de
+        # un vertical no arrastra la librería entera — y se limpia lo que sobra, para que
+        # regenerar tras quitar un producto no deje su foto huérfana dentro del zip publicado.
+        copiadas = materialize_bundle_media(bundle_dir)
+
         print(
             f"[ok] {args.country}/{sector}: {len(data['products'])} productos en "
-            f"{len(data['categories'])} categorías → {bundle_dir.relative_to(ROOT)}/ "
-            f"(seed.sql sha256={digest[:12]}…)"
+            f"{len(data['categories'])} categorías, {copiadas} imagen(es) → "
+            f"{bundle_dir.relative_to(ROOT)}/ (seed.sql sha256={digest[:12]}…)"
         )
     return 0
 
