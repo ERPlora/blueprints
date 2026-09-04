@@ -255,9 +255,7 @@ PRODUCT_ROW_RE = re.compile(
 )
 
 # Ruta de media `catalog/<carpeta>/<fichero>.webp` — el formato tras retirar `media:` (hub#1006).
-IMAGE_REF_RE = re.compile(
-    r"catalog/(?P<folder>[^/'\"]+)/(?P<filename>[^'\"\s]+\.webp)"
-)
+IMAGE_REF_RE = re.compile(r"catalog/(?P<folder>[^/'\"]+)/(?P<filename>[^'\"\s]+\.webp)")
 
 
 def _product_rows(sql: str) -> list[dict[str, int | str]]:
@@ -489,7 +487,9 @@ def test_every_image_of_a_bundle_travels_inside_it():
                 continue
             total += 1
             if not (bundle / "media" / g.MEDIA_FOLDER / folder / filename).is_file():
-                faltan.append(f"{bundle.name} → media/{g.MEDIA_FOLDER}/{folder}/{filename}")
+                faltan.append(
+                    f"{bundle.name} → media/{g.MEDIA_FOLDER}/{folder}/{filename}"
+                )
     assert total, "ningún seed referencia imágenes (¿se perdieron las rutas?)"
     assert not faltan, (
         f"{len(faltan)} imagen(es) referenciadas que NO viajan en el bundle:\n  "
@@ -511,6 +511,72 @@ def test_no_media_scheme_survives_anywhere_in_the_bundles():
         if p.suffix in (".sql", ".json") and "media:" in p.read_text(encoding="utf-8")
     ]
     assert not supervivientes, f"el esquema retirado sigue en: {supervivientes}"
+
+
+# ── El horario del negocio: la semilla genérica del módulo no puede ganarle al catálogo ──────
+
+
+def test_a_catalog_that_writes_opening_hours_takes_over_the_seeded_week():
+    """Un catálogo que siembra horario TIENE que apropiarse del que puso el módulo `schedules`.
+
+    Desde ERPlora/schedules#36 el módulo siembra al instalarse una semana GENÉRICA (L–V
+    09:00–18:00, fin de semana cerrado) para que «sin horario configurado» deje de ser un estado
+    alcanzable. Es un marcador de posición, firmado por el instalador (`created_by = 'system'`),
+    y llega ANTES que este catálogo — los módulos se instalan primero, porque el catálogo necesita
+    sus tablas.
+
+    El problema: nuestras sentencias se guardan por día (`WHERE NOT EXISTS (… AND day_of_week =
+    N)`), una guarda escrita cuando nadie más podía haber escrito ese día. Con el marcador delante,
+    esa guarda cambia de significado y **descarta EN SILENCIO** el horario real del negocio: la
+    peluquería, que abre los sábados de 09:30 a 14:00, se queda CERRADA los sábados con un
+    09:00–18:00 que nadie eligió. No falla nada, no avisa nadie, y el dueño se entera cuando una
+    reserva del sábado se rechaza.
+
+    Por eso cada día que el catálogo inserta lleva además un UPDATE que se apropia del marcador.
+    Este test es el guardarraíl: el próximo catálogo que siembre horario no puede olvidarlo en
+    silencio, que es exactamente como se coló la primera vez.
+    """
+    from pathlib import Path
+
+    ofensores = []
+    revisados = 0
+    for seed in sorted(Path(g.OUT_DIR).glob("*/*/seed.sql")):
+        sql = seed.read_text(encoding="utf-8")
+        dias_insertados = set(
+            int(d)
+            for d in re.findall(
+                r"INSERT INTO schedules_business_hours\b[^;]*?\bday_of_week\b[^;]*?"
+                r"WHERE NOT EXISTS[^;]*?day_of_week\s*=\s*(\d)",
+                sql,
+                re.S,
+            )
+        )
+        if not dias_insertados:
+            continue
+        revisados += 1
+        dias_apropiados = set(
+            int(d)
+            for d in re.findall(
+                r"UPDATE schedules_business_hours\b[^;]*?day_of_week\s*=\s*(\d)"
+                r"[^;]*?created_by\s*=\s*'system'",
+                sql,
+                re.S,
+            )
+        )
+        huerfanos = sorted(dias_insertados - dias_apropiados)
+        if huerfanos:
+            ofensores.append(
+                f"{seed.parent.parent.name}/{seed.parent.name}: siembra los días {huerfanos} "
+                "sin apropiarse antes del marcador de `schedules` "
+                "(UPDATE … day_of_week = N … created_by = 'system'), así que ese horario se "
+                "descartará en silencio y el negocio se quedará con el genérico"
+            )
+
+    assert revisados, (
+        "ningún catálogo siembra `schedules_business_hours` — si eso es cierto, este guardarraíl "
+        "ya no protege nada; si no lo es, el patrón que busca dejó de reconocerse"
+    )
+    assert not ofensores, "\n".join(ofensores)
 
 
 def main() -> int:
