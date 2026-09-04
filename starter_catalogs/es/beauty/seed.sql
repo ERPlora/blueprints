@@ -257,6 +257,34 @@ INSERT INTO schedules_settings (id, hub_id, timezone, week_starts_on, slot_durat
 SELECT 'schedset-beauty', '00000000-0000-0000-0000-000000000001', 'Europe/Madrid', 1, 30, 0, 0, NULL, '2026-01-01T00:00:00+00:00', NULL, '2026-01-01T00:00:00+00:00'
 WHERE NOT EXISTS (SELECT 1 FROM schedules_settings WHERE hub_id = '00000000-0000-0000-0000-000000000001');
 
+-- 🔴 PRIMERO SE APROPIA DEL HORARIO GENÉRICO QUE PUSO EL MÓDULO, y solo después inserta.
+--    Desde ERPlora/schedules#36 el módulo `schedules` siembra al instalarse una semana genérica
+--    (L-V 09:00-18:00, fin de semana cerrado) para que «sin horario configurado» deje de ser un
+--    estado alcanzable. Es un MARCADOR DE POSICIÓN, firmado por el instalador
+--    (`created_by = 'system'`), y llega antes que este catálogo.
+--    Sin estos UPDATE, la guarda por día de los INSERT de abajo -escrita cuando nadie más podía
+--    haber escrito ese día- ve el marcador y DESCARTA EN SILENCIO el horario real del salón: la
+--    peluquería se quedaría CERRADA los sábados con un 09:00-18:00 que nadie eligió, sin un solo
+--    error por medio. Los INSERT siguen ahí para el hub que no tenga el marcador (uno anterior a
+--    schedules#36), y ambos son idempotentes: al repetirse no queda marcador que apropiarse y la
+--    guarda ve la fila viva. El guardarraíl que impide olvidarlo en el próximo catálogo es
+--    `scripts/test_build_starter_catalog.py::test_a_catalog_that_writes_opening_hours_takes_over_the_seeded_week`.
+
+UPDATE schedules_business_hours SET open_time = '09:30', close_time = '20:00', is_closed = 0, break_start = '14:00', break_end = '16:00', created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 0 AND is_deleted = 0 AND created_by = 'system';
+UPDATE schedules_business_hours SET open_time = '09:30', close_time = '20:00', is_closed = 0, break_start = '14:00', break_end = '16:00', created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 1 AND is_deleted = 0 AND created_by = 'system';
+UPDATE schedules_business_hours SET open_time = '09:30', close_time = '20:00', is_closed = 0, break_start = '14:00', break_end = '16:00', created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 2 AND is_deleted = 0 AND created_by = 'system';
+UPDATE schedules_business_hours SET open_time = '09:30', close_time = '20:00', is_closed = 0, break_start = '14:00', break_end = '16:00', created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 3 AND is_deleted = 0 AND created_by = 'system';
+UPDATE schedules_business_hours SET open_time = '09:30', close_time = '20:00', is_closed = 0, break_start = '14:00', break_end = '16:00', created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 4 AND is_deleted = 0 AND created_by = 'system';
+UPDATE schedules_business_hours SET open_time = '09:30', close_time = '14:00', is_closed = 0, break_start = NULL, break_end = NULL, created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 5 AND is_deleted = 0 AND created_by = 'system';
+UPDATE schedules_business_hours SET open_time = '00:00', close_time = '00:00', is_closed = 1, break_start = NULL, break_end = NULL, created_by = NULL, updated_by = NULL, updated_at = '2026-01-01T00:00:00+00:00'
+WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 6 AND is_deleted = 0 AND created_by = 'system';
+
 INSERT INTO schedules_business_hours (id, hub_id, day_of_week, open_time, close_time, is_closed, break_start, break_end, is_deleted, created_by, created_at, updated_by, updated_at)
 SELECT 'bh-beauty-0', '00000000-0000-0000-0000-000000000001', 0, '09:30', '20:00', 0, '14:00', '16:00', 0, NULL, '2026-01-01T00:00:00+00:00', NULL, '2026-01-01T00:00:00+00:00'
 WHERE NOT EXISTS (SELECT 1 FROM schedules_business_hours WHERE hub_id = '00000000-0000-0000-0000-000000000001' AND day_of_week = 0);
