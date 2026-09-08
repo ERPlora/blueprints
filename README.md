@@ -46,34 +46,47 @@ pip install pillow
 python scripts/validate_assets.py
 ```
 
-## Served via CDN
+## Publicación en Object Storage
 
-On push to `main`, a GitHub Action syncs `img/` to `s3://erplora-saas/img/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
+En cada push a `main`, una GitHub Action (`publish-to-s3.yml`) sincroniza `img/` con
+`s3://erplora-saas/img/` (Hetzner Object Storage, bucket **privado** — ADR-0099), sin `--delete`
+(`#21`). El SaaS lista esa copia en `GET /api/v1/catalog/assets/?sector=<carpeta>` (público,
+**solo metadatos**: `s3_key`, `filename`, `name`, `sector`, `size` — ni bytes ni URL firmada). El
+generador de bundles no pasa por ahí: lee `img/` del propio repo. La librería es **solo-lectura**:
+se entra por PR a este repo.
 
-**Imágenes COMPARTIDAS** (no se duplican en cada plantilla): cada producto/servicio referencia su
-imagen por la **ref lógica** `media:public/img/<sector>/<name>.webp` (ADR-0134), no por la s3_key
-desnuda. El origen `public` la resuelve el **proxy del SaaS** (`GET /api/v1/catalog/media/<key>`);
-la librería es solo-lectura: se entra por PR a este repo. El listado:
-`GET /api/v1/catalog/assets/?sector=&q=`. Restaurante reusa las imágenes de `img/hospitality/`.
+**Las fotos VIAJAN con el bundle.** Cada producto/servicio referencia su imagen por una **ruta
+relativa dentro del propio artefacto** — `catalog/<carpeta de img/>/<name>.webp`, p. ej.
+`catalog/hospitality/agua_mineral.webp` o `catalog/beauty_hair/corte_senora.webp`; la carpeta es la
+de `img/`, no el sector (restaurante reusa `img/hospitality/`) —, y el fichero va en la carpeta
+`media/catalog/…` del bundle. Esa copia es **derivada** y no se commitea (`.gitignore`): la
+materializa `build_starter_catalog.py --materialize-media`, que `publish-seeds.yml` corre justo
+antes de sincronizar, igual que los tests.
 
-> 🔴 **Ese proxy NO EXISTE todavía** (`ERPlora/blueprints#17`, verificado 2026-08-12). `media:` se
-> **escribe** aquí y **no lo lee nadie**: `GET /api/v1/catalog/media/<key>` no tiene código en el
-> SaaS (solo prosa en ADR-0134), y el consumidor final hace
-> `background-image:url(media:public/img/…)` — un esquema de URL que el navegador descarta, así
-> que la ficha del TPV sale con el **marco vacío**. `GET /api/v1/catalog/assets/` sí existe y es
-> `AllowAny`, pero devuelve **solo metadatos** (`s3_key`, `filename`, `size`): ni bytes ni URL
-> firmada. Y el bucket es privado de verdad —
-> `https://erplora-saas.fsn1.your-objectstorage.com/img/...` → **403**.
+> 🪦 **El esquema `media:public/…` está RETIRADO** (ADR-0371, que supersede ADR-0134;
+> `ERPlora/hub#1006`, cerrada el 2026-08-19). En este repo lo ejecutó `#23` («las fotos VIAJAN con
+> el bundle»); la incidencia del marco vacío era `#17`.
 >
-> **La ref lógica se mantiene a propósito** (no se sustituye por una URL absoluta): el valor viaja
-> a la columna `image` de la BD de **cada hub cliente** dentro de un `.blueprint.zip` que es
-> **inmutable** (ADR-0121 — una corrección es una versión nueva, nunca un overwrite). Una URL
-> horneada en un artefacto inmutable no se puede repuntar el día que cambie el dominio, el bucket
-> o el CDN: se podriría en todos los bundles publicados a la vez, que es la forma exacta del fallo
-> que ya se pagó cuando la poda del marketplace borró los zips que los blueprints clavaban. Lo que
-> falta es **el resolvedor**, no otro formato de dato. Mientras no exista, este repo garantiza al
-> menos que **toda ref apunta a un fichero que existe**
-> (`test_every_image_ref_in_the_disk_seeds_exists_in_the_library`).
+> Este párrafo describía hasta el 2026-09-08 el modelo anterior —ref lógica `media:public/…`
+> resuelta por un `GET /api/v1/catalog/media/<key>` del SaaS— **y advertía en rojo de que ese proxy
+> no existía**, con la conclusión de que la ficha del TPV salía con el marco vacío. Las dos mitades
+> eran ciertas cuando se escribieron y ninguna lo es hoy: no hay proxy porque **ya no hace falta**.
+> Se deja la lápida porque la advertencia vieja seguía induciendo a error semanas después de que el
+> esquema muriera — el 2026-09-08 hizo que se declarase un bloqueo inexistente en ERPlora/pm#293.
+>
+> Lo que motivó el cambio sigue vigente y explica por qué NO se horneó una URL absoluta: el valor
+> viaja a la columna `image` de la BD de **cada hub cliente** dentro de un `.blueprint.zip`
+> **inmutable** (ADR-0121 — una corrección es una versión nueva, nunca un overwrite), y una URL
+> horneada ahí no se puede repuntar el día que cambie el dominio, el bucket o el CDN: se pudriría en
+> todos los bundles publicados a la vez. Ese fallo ya se pagó por el otro lado, cuando la poda del
+> marketplace borró los zips de módulo que las plantillas clavaban (ADR-0303). Una ruta relativa al
+> propio artefacto no tiene ese problema: se resuelve dentro del zip que la contiene.
+>
+> Lo guardan cuatro tests de `scripts/test_build_starter_catalog.py`, y entre los cuatro cubren las
+> dos mitades: que la ref tenga la forma nueva (`test_image_is_a_media_path_inside_the_bundle`), que
+> el fichero **viaje de verdad** dentro del bundle (`test_every_image_of_a_bundle_travels_inside_it`),
+> que exista en esta librería (`test_every_image_ref_in_the_disk_seeds_exists_in_the_library`) y que
+> ningún producto se quede sin foto (`test_no_product_is_left_without_an_image_ref`).
 
 ## 🪦 Starter seeds — RETIRADOS (ADR-0121)
 
@@ -122,7 +135,7 @@ Si tocas el generador, **regenera** y corre la regresión (la corre también CI,
 
 ```bash
 python scripts/build_starter_catalog.py       # regenera seed.{sql,json,sha256}
-python scripts/test_build_starter_catalog.py  # 16 tests, sin dependencias
+python scripts/test_build_starter_catalog.py  # la regresión, sin dependencias
 ```
 
 ## License
