@@ -46,17 +46,26 @@ pip install pillow
 python scripts/validate_assets.py
 ```
 
-## Served via CDN
+## Publicación en Object Storage
 
-On push to `main`, a GitHub Action syncs `img/` to `s3://erplora-saas/img/` (Hetzner Object Storage, bucket privado — ADR-0099) and the Hub consumes the listing via `https://erplora.com/api/v1/catalog/assets/?sector=<sector>`.
+En cada push a `main`, una GitHub Action (`publish-to-s3.yml`) sincroniza `img/` con
+`s3://erplora-saas/img/` (Hetzner Object Storage, bucket **privado** — ADR-0099), sin `--delete`
+(`#21`). El SaaS lista esa copia en `GET /api/v1/catalog/assets/?sector=<carpeta>` (público,
+**solo metadatos**: `s3_key`, `filename`, `name`, `sector`, `size` — ni bytes ni URL firmada). El
+generador de bundles no pasa por ahí: lee `img/` del propio repo. La librería es **solo-lectura**:
+se entra por PR a este repo.
 
 **Las fotos VIAJAN con el bundle.** Cada producto/servicio referencia su imagen por una **ruta
-relativa dentro del propio artefacto** — `catalog/<sector>/<name>.webp` —, y el fichero va en la
-carpeta `media/` del bundle. El generador copia ahí lo que necesita de esta librería. El listado de
-la librería sigue en `GET /api/v1/catalog/assets/?sector=&q=`; restaurante reusa `img/hospitality/`.
+relativa dentro del propio artefacto** — `catalog/<carpeta de img/>/<name>.webp`, p. ej.
+`catalog/hospitality/agua_mineral.webp` o `catalog/beauty_hair/corte_senora.webp`; la carpeta es la
+de `img/`, no el sector (restaurante reusa `img/hospitality/`) —, y el fichero va en la carpeta
+`media/catalog/…` del bundle. Esa copia es **derivada** y no se commitea (`.gitignore`): la
+materializa `build_starter_catalog.py --materialize-media`, que `publish-seeds.yml` corre justo
+antes de sincronizar, igual que los tests.
 
-> 🪦 **El esquema `media:public/…` está RETIRADO** (`ERPlora/hub#1006`, cerrada el 2026-08-19;
-> supersede ADR-0134). En este repo lo ejecutó `#23` («las fotos VIAJAN con el bundle»).
+> 🪦 **El esquema `media:public/…` está RETIRADO** (ADR-0371, que supersede ADR-0134;
+> `ERPlora/hub#1006`, cerrada el 2026-08-19). En este repo lo ejecutó `#23` («las fotos VIAJAN con
+> el bundle»); la incidencia del marco vacío era `#17`.
 >
 > Este párrafo describía hasta el 2026-09-08 el modelo anterior —ref lógica `media:public/…`
 > resuelta por un `GET /api/v1/catalog/media/<key>` del SaaS— **y advertía en rojo de que ese proxy
@@ -68,8 +77,10 @@ la librería sigue en `GET /api/v1/catalog/assets/?sector=&q=`; restaurante reus
 > Lo que motivó el cambio sigue vigente y explica por qué NO se horneó una URL absoluta: el valor
 > viaja a la columna `image` de la BD de **cada hub cliente** dentro de un `.blueprint.zip`
 > **inmutable** (ADR-0121 — una corrección es una versión nueva, nunca un overwrite), y una URL
-> horneada ahí no se puede repuntar el día que cambie el dominio, el bucket o el CDN. Una ruta
-> relativa al propio artefacto no tiene ese problema: se resuelve dentro del zip que la contiene.
+> horneada ahí no se puede repuntar el día que cambie el dominio, el bucket o el CDN: se pudriría en
+> todos los bundles publicados a la vez. Ese fallo ya se pagó por el otro lado, cuando la poda del
+> marketplace borró los zips de módulo que las plantillas clavaban (ADR-0303). Una ruta relativa al
+> propio artefacto no tiene ese problema: se resuelve dentro del zip que la contiene.
 >
 > Lo guardan cuatro tests de `scripts/test_build_starter_catalog.py`, y entre los cuatro cubren las
 > dos mitades: que la ref tenga la forma nueva (`test_image_is_a_media_path_inside_the_bundle`), que
@@ -124,7 +135,7 @@ Si tocas el generador, **regenera** y corre la regresión (la corre también CI,
 
 ```bash
 python scripts/build_starter_catalog.py       # regenera seed.{sql,json,sha256}
-python scripts/test_build_starter_catalog.py  # 16 tests, sin dependencias
+python scripts/test_build_starter_catalog.py  # la regresión, sin dependencias
 ```
 
 ## License
