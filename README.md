@@ -1,6 +1,8 @@
 # ERPlora Blueprints — Product Image Library
 
-Open WebP product image library for [ERPlora](https://erplora.com). Used by the Hub to generate starter catalogs.
+Open WebP product image library for [ERPlora](https://erplora.com). The photos travel inside the
+hub templates (`.blueprint.zip`), and the SaaS lists the published copy of this library at
+`/api/v1/catalog/assets/`.
 
 All images are flat vector icons, 512×512, white background — ideal as product thumbnails in a POS / invoicing system.
 
@@ -102,21 +104,51 @@ teniendo efectos, y por eso se sigue arreglando:
 
 - `publish-seeds.yml` lo **sincroniza a Object Storage en cada push a `main`** (workflow propio
   desde `#21`: un merge de seeds ya no ejecuta ningún sync sobre la librería `img/`, y el sync de
-  `img/` en `publish-to-s3.yml` ya no lleva `--delete`);
-- el e2e del Hub lo **aplica a un Postgres real**
-  (`hub/crates/runtime/tests/sector_packs_pg_e2e.rs` → `starter_catalogs/es/<sector>/seed.sql`);
+  `img/` en `publish-to-s3.yml` ya no lleva `--delete`). El sync sigue corriendo, pero hoy **no
+  queda código en `hub` ni en `saas` que lea el prefijo `starter-seeds/`**: publica para nadie;
 - el gate de coherencia del SaaS depende de los **ids namespaced por vertical** que genera
   `build_starter_catalog.py` (`prod-<sector>-…`, lista cerrada `STARTER_CATALOG_VERTICALS`,
   ADR-0324): un starter catalog nuevo hay que añadirlo a esa lista o sus filas son invisibles para
-  el gate.
+  el gate;
+- son el **ancestro de contenido** de las plantillas publicadas (ver el aviso de abajo), así que un
+  fallo aquí se hereda en el hub del que luego se exporta. El último: la peluquería se quedaba
+  **cerrada los sábados** —abre de 09:30 a 14:00— porque el módulo `schedules` siembra al
+  instalarse una semana genérica y la guarda por día del catálogo descartaba en silencio el horario
+  real; desde `#24` cada día se **apropia** de ese marcador antes de su `INSERT`.
+
+> 🪦 **El e2e del Hub ya NO lee este directorio.** Hasta `ERPlora/hub#1050` (cerrada el 2026-08-24),
+> `hub/crates/runtime/tests/sector_packs_pg_e2e.rs` aplicaba `starter_catalogs/es/<sector>/seed.sql`
+> del checkout hermano a un Postgres real, y era el último consumidor VIVO del modelo muerto: `#8`
+> no podía borrarlo sin dejar esa suite en rojo. Hoy la suite lleva **fixture propia**
+> (`crates/runtime/tests/fixtures/sector_pack_es/<sector>/seed.sql`, resuelta desde
+> `CARGO_MANIFEST_DIR`), así que ese freno ya no existe.
 
 ⚠️ **Lo que se publica al catálogo NO sale de aquí.** El `.blueprint.zip` que instala un hub es el
-**EXPORT de un hub configurado**, subido al vendor portal y guardado inmutable en
+**EXPORT de un hub configurado**, subido por el vendor portal **o por la API**
+(`POST /api/v1/developer/blueprints/`, JWT de vendor: el formulario del portal es solo otra vía a
+lo mismo) y guardado inmutable en
 `s3://erplora-saas/media/blueprints/{locale}/{slug}/v{version}.blueprint.zip`; los metadatos viven
 en la BD del SaaS (`Blueprint`/`BlueprintVersion`). Ningún código lee `starter_catalogs/` para
 construir un bundle. Estos seeds son **ancestro de contenido** (se aplican al hub del que luego se
 exporta), no el artefacto: arreglar un seed **no arregla un bundle ya publicado** — eso solo se
 corrige publicando una versión nueva desde un hub de origen limpio.
+
+**Prevalidar y moderar son llamadas a la API, no un paseo por el admin.** Al subir, el SaaS
+**abre el bundle y lo rechaza entero si no cuadra** (`apps/public/blueprints/manifest.py`):
+manifest contra `hub/schemas/blueprint.schema.json`, nada de identidades ni de fiscal dentro
+(ADR-0195), coherencia sectorial por los ids namespaced (ADR-0324) y, cuando el `locale` es `es`,
+que la ficha lleve **sus tildes** — «Peluquería», no «Peluqueria» (`diacritics.py`, `ERPlora/saas#1973`
+y `#2017`; `ERPlora/architecture#772`). El bundle queda **pendiente** —salvo que el vendor sea de la
+casa, miembro del publisher oficial (ADR-0161), que entra directo—, y aprobarlo o rechazarlo tienen
+endpoint propio y **un scope por veredicto** —`POST /api/v1/developer/blueprints/<slug>/approve/`
+y `…/reject/`, con `?locale=` si el slug vive en varios idiomas (`ERPlora/saas#2026`, `#2029`)—:
+ya no hace falta entrar al admin de Django, que es lo que dejaba una plantilla subida a PRE
+pendiente para siempre.
+
+**El catálogo de plantillas es de CADA entorno.** PRE reenvía a producción el plano de hub del
+**marketplace de módulos** (`/api/v1/marketplace/*`, `ERPlora/saas#1637`), pero **no** el catálogo
+de plantillas: lo publicado en producción no se ve desde PRE, así que una plantilla que se quiera
+ensayar allí se publica allí.
 
 ### Dos escalas en la misma fila (no confundirlas)
 
