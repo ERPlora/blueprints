@@ -1,0 +1,53 @@
+name: validate
+
+# Gate of the library on every pull request and every push to main: the workflows (actionlint),
+# the script tests, the images (real WebP, exactly 512x512, snake_case, WebP only) and the
+# bilingual manifest img/catalog.json. Public repo and no secret: pull_request, never
+# pull_request_target. No paths filter: "validate" is a required check on main, and a pull
+# request without its run could not be merged.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+# One run per ref: a new push to a pull request cancels its previous run; runs on main finish.
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Lint the workflows (actionlint)
+        env:
+          ACTIONLINT_VERSION: 1.7.12
+          ACTIONLINT_SHA256: 8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8
+        run: |
+          curl --fail --silent --show-error --location --output "$RUNNER_TEMP/actionlint.tar.gz" \
+            "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz"
+          echo "$ACTIONLINT_SHA256  $RUNNER_TEMP/actionlint.tar.gz" | sha256sum --check --strict -
+          tar -xzf "$RUNNER_TEMP/actionlint.tar.gz" -C "$RUNNER_TEMP" actionlint
+          "$RUNNER_TEMP/actionlint" -color
+
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      # --locked: uv.lock must match pyproject.toml (no separate `uv lock --check`).
+      - run: uv sync --locked
+
+      - name: Script tests
+        run: uv run --locked pytest -q
+
+      - name: Images (real WebP, 512x512, snake_case, WebP only)
+        run: uv run --locked python scripts/validate_assets.py img
+
+      - name: Bilingual manifest (img/catalog.json)
+        run: uv run --locked python scripts/catalog.py validate
