@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""Gate de validación de la librería de assets.
+"""Validation gate for the image library.
 
-Reglas (ver architecture/blueprints/README.md §1):
-- Bajo ``img/`` solo puede haber ficheros ``.webp``.
-- Nombre de fichero ``snake_case.webp`` ([a-z0-9] separados por ``_``).
-- Carpetas de sector también en snake_case.
-- Cada WebP debe ser un WebP real (no un .jpg renombrado) de exactamente 512x512.
+Rules (see README.md, «Convenciones»):
+- Only ``.webp`` files may live under ``img/``, plus the manifest ``img/catalog.json``
+  (its contract is checked by ``scripts/catalog.py validate``).
+- File names are ``snake_case.webp`` ([a-z0-9] joined by ``_``).
+- Sector folders are snake_case too.
+- Every WebP must be a real WebP (not a renamed .jpg) of exactly 512x512.
 
-Uso:
-    python scripts/validate_assets.py [ruta_assets]
+Usage:
+    python scripts/validate_assets.py [assets_dir]
 
-Sale con código 0 si todo es válido; 1 si hay violaciones (las lista todas).
-Requiere Pillow para la comprobación de formato/dimensiones.
+Exits 0 when everything is valid, 1 when there are violations (it lists all of them).
+Needs Pillow to check the format and the size.
 """
 
 from __future__ import annotations
@@ -25,45 +26,47 @@ from PIL import Image
 SNAKE_CASE_FILE = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*\.webp$")
 SNAKE_CASE_DIR = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*$")
 EXPECTED_SIZE = (512, 512)
+MANIFEST_NAME = "catalog.json"
 
 
 def validate(assets_dir: Path) -> list[str]:
     errors: list[str] = []
 
     if not assets_dir.is_dir():
-        return [f"No existe el directorio de assets: {assets_dir}"]
+        return [f"Assets directory not found: {assets_dir}"]
 
     for path in sorted(assets_dir.rglob("*")):
         rel = path.relative_to(assets_dir.parent)
 
         if path.is_dir():
             if not SNAKE_CASE_DIR.match(path.name):
-                errors.append(f"{rel}: carpeta no snake_case")
+                errors.append(f"{rel}: folder is not snake_case")
             continue
 
         if path.name == ".gitkeep":
             continue
 
+        if path.name == MANIFEST_NAME and path.parent == assets_dir:
+            continue
+
         if path.suffix.lower() != ".webp":
-            errors.append(f"{rel}: fichero no-WebP (solo se permiten .webp)")
+            errors.append(f"{rel}: not a WebP file (only .webp is allowed)")
             continue
 
         if not SNAKE_CASE_FILE.match(path.name):
-            errors.append(f"{rel}: nombre no snake_case.webp")
+            errors.append(f"{rel}: name is not snake_case.webp")
 
         try:
             with Image.open(path) as im:
                 if im.format != "WEBP":
-                    errors.append(
-                        f"{rel}: extensión .webp pero formato real {im.format}"
-                    )
+                    errors.append(f"{rel}: .webp extension but actual format {im.format}")
                 if im.size != EXPECTED_SIZE:
                     errors.append(
-                        f"{rel}: dimensiones {im.size[0]}x{im.size[1]} "
-                        f"(esperado {EXPECTED_SIZE[0]}x{EXPECTED_SIZE[1]})"
+                        f"{rel}: size {im.size[0]}x{im.size[1]} "
+                        f"(expected {EXPECTED_SIZE[0]}x{EXPECTED_SIZE[1]})"
                     )
-        except Exception as exc:  # noqa: BLE001 — fichero corrupto/no imagen
-            errors.append(f"{rel}: no se puede abrir como imagen ({exc})")
+        except Exception as exc:  # noqa: BLE001 — corrupt file or not an image: reported, not raised
+            errors.append(f"{rel}: cannot be opened as an image ({exc})")
 
     return errors
 
@@ -74,14 +77,12 @@ def main() -> int:
 
     total = sum(1 for _ in assets_dir.rglob("*.webp")) if assets_dir.is_dir() else 0
     if errors:
-        print(f"FALLO: {len(errors)} violacion(es) en {assets_dir}/:\n")
+        print(f"FAILED: {len(errors)} violation(s) in {assets_dir}/:\n")
         for err in errors:
             print(f"  - {err}")
         return 1
 
-    print(
-        f"OK: {total} WebP validados en {assets_dir}/ (512x512, snake_case, solo WebP)"
-    )
+    print(f"OK: {total} WebP files validated in {assets_dir}/ (512x512, snake_case, WebP only)")
     return 0
 
 
