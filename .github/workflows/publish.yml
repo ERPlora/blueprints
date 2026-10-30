@@ -1,0 +1,116 @@
+name: publish
+
+# Publishes the library to the shared prefix of the hubs bucket of every environment,
+# s3://erplora-<env>-hubs/shared/catalog/: one copy for all the hubs. Hubs reference an image as
+# `catalog:<folder>/<name>` and the Hub serves it from that prefix; the bucket stays private.
+#
+# NEVER `--delete` on a normal run (blueprints#21, ADR-0134 of the old product): seeds and exported
+# blueprints reference these keys by name, so an image missing from the checkout (renamed, deleted
+# by mistake) must not vanish from the bucket because of a push. This workflow only adds and
+# updates. Pruning is an explicit manual run (workflow_dispatch with prune=true) that first prints
+# what it would delete and aborts above max_prune.
+#
+# Credentials: GitHub OIDC, one role for both buckets, its ARN in the repository variable
+# AWS_PUBLISH_ROLE_ARN (created in ERPlora/aws). While that variable is empty the job is skipped,
+# never failed.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'img/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+    inputs:
+      prune:
+        description: 'Prune bucket images that no longer exist under img/ (destructive: dry-run and threshold first)'
+        type: boolean
+        default: false
+      max_prune:
+        description: 'Abort the prune if it would delete more than this many objects per environment'
+        type: number
+        default: 5
+
+permissions:
+  contents: read
+
+# Publications never overlap and never cancel each other.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: vars.AWS_PUBLISH_ROLE_ARN != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      # pre first: a failure there leaves prod untouched.
+      ENVIRONMENTS: pre prod
+      CATALOG_PREFIX: shared/catalog
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - run: uv sync --locked
+
+      - name: Validate before publishing
+        run: |
+          uv run --locked python scripts/validate_assets.py img
+          uv run --locked python scripts/catalog.py validate
+
+      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_PUBLISH_ROLE_ARN }}
+          role-session-name: blueprints-publish
+          aws-region: eu-west-1
+
+      # Images first, manifest last: the manifest never names an image that is not there yet.
+      - name: Publish images and manifest (add and update only, never delete)
+        run: |
+          for env in $ENVIRONMENTS; do
+            dest="s3://erplora-${env}-hubs/${CATALOG_PREFIX}/"
+            aws s3 sync img/ "$dest" \
+              --exclude "*" \
+              --include "*.webp" \
+              --content-type "image/webp" \
+              --cache-control "public, max-age=31536000, immutable" \
+              --no-progress
+            aws s3 cp img/catalog.json "${dest}catalog.json" \
+              --content-type "application/json" \
+              --cache-control "public, max-age=600" \
+              --no-progress
+            echo "Published $(find img -name '*.webp' | wc -l) WebP files and catalog.json to $dest"
+          done
+
+      - name: Prune orphan images (explicit, dry-run and threshold first)
+        if: github.event_name == 'workflow_dispatch' && inputs.prune
+        env:
+          MAX_PRUNE: ${{ inputs.max_prune }}
+        run: |
+          for env in $ENVIRONMENTS; do
+            dest="s3://erplora-${env}-hubs/${CATALOG_PREFIX}/"
+            plan=$(aws s3 sync img/ "$dest" --delete --dryrun --exclude "*" --include "*.webp" \
+              | grep -E '^\(dryrun\) delete:' || true)
+            count=$(printf '%s' "$plan" | grep -c . || true)
+            echo "$env: objects that would be deleted: $count"
+            printf '%s\n' "$plan"
+            if [ "$count" -eq 0 ]; then
+              echo "$env: nothing to prune."
+              continue
+            fi
+            if [ "$count" -gt "${MAX_PRUNE:-5}" ]; then
+              echo "::error::$env: prune would delete $count objects (> max_prune=${MAX_PRUNE:-5}). Aborting."
+              exit 1
+            fi
+            aws s3 sync img/ "$dest" --delete --exclude "*" --include "*.webp" \
+              --content-type "image/webp" \
+              --cache-control "public, max-age=31536000, immutable" \
+              --no-progress
+            echo "$env: pruned $count orphan objects from $dest"
+          done

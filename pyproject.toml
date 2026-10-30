@@ -1,0 +1,19 @@
+[project]
+name = "erplora-blueprints"
+version = "1.0.0"
+description = "ERPlora product image library and its bilingual manifest"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = ["pillow>=11"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+# Scripts only: nothing to build or install.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["scripts"]
+addopts = "-ra"
