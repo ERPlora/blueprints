@@ -4,7 +4,8 @@ Librería abierta de imágenes de producto de [ERPlora](https://erplora.com) que
 y su manifiesto bilingüe `img/catalog.json`, con el que el Hub y su asistente encuentran la imagen de un
 producto por cómo lo llama la gente, en español o en inglés.
 
-Son iconos planos de 512×512 sobre fondo blanco, pensados como miniatura de producto en un TPV o una factura.
+Son miniaturas de 512×512 sobre fondo blanco para la ficha del producto en el TPV o en una factura: ilustraciones
+planas en belleza, fitness y spa, y fotos recortadas en hostelería y comercio.
 
 ## Carpetas
 
@@ -22,8 +23,7 @@ La carpeta es la de `img/`, no el sector del negocio: el restaurante usa `hospit
 
 ## Convenciones
 
-- **Formato**: WebP real (no un PNG renombrado), exactamente 512×512, calidad 85. Estilo plano, contornos
-  marcados, colores sólidos, fondo blanco y sin texto.
+- **Formato**: WebP real (no un PNG renombrado), exactamente 512×512, calidad 85, fondo blanco y sin texto.
 - **Nombres**: `snake_case.webp`, y las carpetas también en snake_case. Los nombres mezclan español e inglés
   (`aceite_argan.webp`, `coffee_espresso.webp`) y **no se renombran nunca**: son el contrato de las semillas
   del Hub y de los blueprints ya exportados. El nombre «bueno», el que usa la gente, va en el manifiesto.
@@ -59,6 +59,20 @@ alguno):
 
 El manifiesto describe lo que **se ve** en la imagen, no lo que dice su nombre de fichero: si el nombre
 engaña, manda el dibujo.
+
+### Dibujos compartidos y marcadores
+
+La librería heredada reutiliza el mismo dibujo con varios nombres (la misma bañera de hidromasaje para
+`masaje_piedras` y `sauna_privada`, el mismo batido rosa para `batido_fresa` y `zumo_naranja`). La regla:
+
+- si el dibujo es del **mismo tipo de producto** y solo cambia algo que no se ve (otro tamaño, otra variedad,
+  otro número de bolas), el título es el del fichero: `helado_2_bolas` es «Helado de dos bolas»;
+- si el dibujo es de **otro producto**, el título describe el dibujo: `zumo_naranja` es «Batido de fresa» y
+  `masaje_piedras`, «Jacuzzi». Así el asistente no propone un batido rosa para un zumo de naranja; el producto
+  que se queda sin imagen pide una imagen nueva.
+
+En `retail/` hay imágenes que son un **marcador** (un cuadrado de color con el nombre del producto escrito en
+español, como `agenda.webp` o `zapatos.webp`): su título es el texto que se lee.
 
 ## Añadir una imagen
 
