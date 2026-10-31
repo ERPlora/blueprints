@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -31,6 +32,31 @@ VERSION = 1
 LANGUAGES = ("en", "es")
 ENTRY_KEYS = ("name", "folder", "title", "tags")
 TOP_LEVEL_KEYS = ("version", "images")
+# Third-party brands a title or a tag must never name: the library is published under MIT and holds
+# only generic products (README, «Convenciones»). Matched as whole words, whatever the case.
+BLOCKED_BRANDS = (
+    "aquarius",
+    "coca cola",
+    "coca-cola",
+    "dabur",
+    "fanta",
+    "frappuccino",
+    "jager",
+    "jagermeister",
+    "jäger",
+    "jägermeister",
+    "maminat",
+    "nutella",
+    "pastoret",
+    "sprite",
+    "unox",
+)
+BRAND_PATTERN = re.compile(
+    r"(?<!\w)(?:"
+    + "|".join(re.escape(brand) for brand in BLOCKED_BRANDS)
+    + r")(?!\w)",
+    re.IGNORECASE,
+)
 
 
 class UnreadableManifest(Exception):
@@ -69,6 +95,12 @@ def load(img: Path) -> tuple[dict, list[str]]:
     return document, problems
 
 
+def brand_in(text: str) -> str | None:
+    """The first blocked brand named in ``text``, as written there, or None."""
+    match = BRAND_PATTERN.search(text)
+    return match.group(0) if match else None
+
+
 def entry_key(entry: object) -> tuple[str, str] | None:
     """(folder, name) of an entry, or None when it cannot be named that way."""
     if isinstance(entry, dict):
@@ -103,6 +135,9 @@ def check_title(title: object) -> list[str]:
             first = text.strip()[0]
             if first.isalpha() and not first.isupper():
                 problems.append(f"{field} must start with a capital letter")
+            brand = brand_in(text)
+            if brand:
+                problems.append(f"{field} names a third-party brand «{brand}»")
     return problems
 
 
@@ -138,6 +173,8 @@ def check_tags(tags: object, title: object) -> list[str]:
                 problems.append(f"{field} «{value}» is not lowercase")
             if value != value.strip():
                 problems.append(f"{field} «{value}» has surrounding spaces")
+            if brand_in(value):
+                problems.append(f"{field} «{value}» names a third-party brand")
             if value in seen:
                 problems.append(f"{field} repeats «{value}»")
             seen.add(value)
