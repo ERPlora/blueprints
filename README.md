@@ -11,12 +11,16 @@ planas en belleza, fitness y spa, y fotos recortadas en hostelería y comercio.
 
 | Carpeta | Imágenes | Para qué |
 |---|---:|---|
-| `beauty_body/` | 35 | estética corporal y facial |
-| `beauty_hair/` | 43 | peluquería |
-| `fitness/` | 20 | gimnasio |
-| `hospitality/` | 277 | hostelería: restaurante, bar, cafetería |
-| `retail/` | 83 | comercio |
-| `wellness_spa/` | 18 | spa y bienestar |
+| `beauty_body/` | 22 | estética corporal y facial |
+| `beauty_hair/` | 39 | peluquería |
+| `fitness/` | 1 | gimnasio |
+| `hospitality/` | 128 | hostelería: restaurante, bar, cafetería |
+| `retail/` | 79 | comercio |
+| `wellness_spa/` | 9 | spa y bienestar |
+
+278 imágenes, 278 dibujos distintos: cada fichero es un dibujo y cada dibujo tiene un solo nombre. Los productos
+que se quedaron sin imagen al quitar las copias (2026-10-31) están en
+[`docs/DEDUP-2026-10-31.md`](docs/DEDUP-2026-10-31.md).
 
 La carpeta es la de `img/`, no el sector del negocio: el restaurante usa `hospitality/` y la peluquería,
 `beauty_hair/` y `beauty_body/`.
@@ -25,8 +29,8 @@ La carpeta es la de `img/`, no el sector del negocio: el restaurante usa `hospit
 
 - **Formato**: WebP real (no un PNG renombrado), exactamente 512×512, calidad 85, fondo blanco y sin texto.
 - **Nombres**: `snake_case.webp`, y las carpetas también en snake_case. Los nombres mezclan español e inglés
-  (`aceite_argan.webp`, `coffee_espresso.webp`) y **no se renombran nunca**: son el contrato de las semillas
-  del Hub y de los blueprints ya exportados. El nombre «bueno», el que usa la gente, va en el manifiesto.
+  (`aceite_argan.webp`, `coffee_espresso.webp`) y **describen lo que se ve** (ver «Un dibujo, un nombre»). El
+  nombre «bueno», el que usa la gente, va en el manifiesto.
 - Bajo `img/` solo hay WebP y el manifiesto `img/catalog.json`.
 - Una imagen publicada **no cambia de dibujo**: se sirve con caché inmutable de un año, así que el navegador
   que ya la tiene no vería el cambio. Si una imagen hay que rehacerla, entra con un nombre nuevo.
@@ -60,6 +64,7 @@ alguno):
 - `version` es `1`; `images` va ordenado por `folder` y después por `name`, una línea por imagen.
 - `name` es el nombre del fichero sin `.webp` y `folder`, su carpeta; la pareja existe en `img/` y no se repite.
 - Toda imagen de `img/` tiene su entrada.
+- Dos ficheros de `img/` nunca son idénticos byte a byte: un dibujo, un nombre (ver «Un dibujo, un nombre»).
 - `title.en` y `title.es`: lo que diría el dueño del negocio, en lenguaje natural, con mayúscula inicial y
   sin guiones bajos («Café solo», «Corte de señora»).
 - `tags.en` y `tags.es`: al menos un sinónimo por idioma, en minúsculas, de los que escribiría una persona o
@@ -70,16 +75,26 @@ alguno):
 El manifiesto describe lo que **se ve** en la imagen, no lo que dice su nombre de fichero: si el nombre
 engaña, manda el dibujo.
 
-### Dibujos compartidos y marcadores
+### Un dibujo, un nombre
 
-La librería heredada reutiliza el mismo dibujo con varios nombres (la misma bañera de hidromasaje para
-`masaje_piedras` y `sauna_privada`, el mismo batido rosa para `batido_fresa` y `zumo_naranja`). La regla:
+La IA del Hub busca una imagen por su nombre, su título y sus tags: un nombre que engaña le hace proponer el
+dibujo equivocado (una tarjeta de socio para «Clase de yoga»). Por eso (decisión de Ioan, 2026-10-31):
 
-- si el dibujo es del **mismo tipo de producto** y solo cambia algo que no se ve (otro tamaño, otra variedad,
-  otro número de bolas), el título es el del fichero: `helado_2_bolas` es «Helado de dos bolas»;
-- si el dibujo es de **otro producto**, el título describe el dibujo: `zumo_naranja` es «Batido de fresa» y
-  `masaje_piedras`, «Jacuzzi». Así el asistente no propone un batido rosa para un zumo de naranja; el producto
-  que se queda sin imagen pide una imagen nueva.
+- **un dibujo, un fichero**: el mismo dibujo no se guarda con dos nombres, ni en la misma carpeta ni en otra.
+  `scripts/catalog.py validate` falla si dos WebP de `img/` son idénticos byte a byte y lista cada grupo; lo
+  corre la CI en cada PR;
+- **el nombre describe el dibujo**, igual que el título: `batido_fresa` es un batido rosa, no un zumo de naranja.
+  Si el dibujo vale para varios productos parecidos (un helado de una bola, una copa de vino tinto), el nombre es
+  el del producto más genérico y los demás se buscan por los tags;
+- un producto **sin dibujo propio** se queda sin imagen hasta que entre la suya, nunca con la de otro producto;
+- un nombre que engaña se **renombra**: el nombre nuevo es otra imagen para el bucket y la caché, y el viejo
+  sigue servido en el bucket hasta la poda. Un nombre retirado **no vuelve** con otro dibujo: la imagen nueva
+  de ese producto entra con un nombre que no se haya usado nunca en `img/` (`git log --all -- img/`).
+
+Lo que se quitó y renombró el 2026-10-31, y la lista de productos que esperan su imagen, está en
+[`docs/DEDUP-2026-10-31.md`](docs/DEDUP-2026-10-31.md).
+
+### Marcadores
 
 En `retail/` hay imágenes que son un **marcador** (un cuadrado de color con el nombre del producto escrito en
 español, como `agenda.webp` o `zapatos.webp`): su título es el texto que se lee.

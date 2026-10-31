@@ -16,11 +16,16 @@ Usage:
 
 ``build`` never removes an entry and never invents a title: the skeleton it writes fails
 ``validate`` until a person fills the titles and tags.
+
+One drawing, one name: ``validate`` also fails when two WebP files of the library are byte for byte the
+same, because the Hub's assistant picks an image by its name and title, and a copy saved under the name of
+another product (a gym card as «yoga class») makes it offer the wrong picture.
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -66,6 +71,15 @@ class UnreadableManifest(Exception):
 def library_images(img: Path) -> list[tuple[str, str]]:
     """(folder, name) of every WebP in the library, sorted."""
     return sorted((path.parent.name, path.stem) for path in img.glob("*/*.webp"))
+
+
+def duplicate_drawings(img: Path) -> list[list[tuple[str, str]]]:
+    """Groups of (folder, name) whose files are byte for byte the same; each group and the list sorted."""
+    by_digest: dict[str, list[tuple[str, str]]] = {}
+    for folder, name in library_images(img):
+        digest = hashlib.sha256((img / folder / f"{name}.webp").read_bytes()).hexdigest()
+        by_digest.setdefault(digest, []).append((folder, name))
+    return sorted(group for group in by_digest.values() if len(group) > 1)
 
 
 def load(img: Path) -> tuple[dict, list[str]]:
@@ -230,6 +244,13 @@ def validate(img: Path) -> list[str]:
 
     for folder, name in sorted(files - seen):
         problems.append(f"{folder}/{name}: image has no entry in the manifest")
+
+    for group in duplicate_drawings(img):
+        names = ", ".join(f"{folder}/{name}" for folder, name in group)
+        problems.append(
+            f"same drawing under {len(group)} names: {names} "
+            "(one drawing, one file: keep the name that describes it)"
+        )
 
     out_of_place = next((keys[i] for i in range(1, len(keys)) if keys[i] < keys[i - 1]), None)
     if out_of_place:
