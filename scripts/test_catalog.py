@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
+import shutil
 from pathlib import Path
 
 import pytest
@@ -14,8 +16,16 @@ REPO_IMG = Path(__file__).resolve().parent.parent / "img"
 
 
 def make_image(img: Path, folder: str, name: str) -> None:
+    """A tiny WebP whose colour comes from its name, so two images are never the same file by chance."""
     (img / folder).mkdir(parents=True, exist_ok=True)
-    Image.new("RGB", (8, 8), "white").save(img / folder / f"{name}.webp", "WEBP")
+    colour = tuple(hashlib.sha1(f"{folder}/{name}".encode()).digest()[:3])
+    Image.new("RGB", (8, 8), colour).save(img / folder / f"{name}.webp", "WEBP", lossless=True)
+
+
+def copy_image(img: Path, source: str, target: str) -> None:
+    """Save the file of ``source`` again as ``target`` (both ``<folder>/<name>``), byte for byte."""
+    (img / target).parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(img / f"{source}.webp", img / f"{target}.webp")
 
 
 def entry(folder: str, name: str, **overrides) -> dict:
@@ -269,6 +279,42 @@ def test_a_duplicate_entry_is_a_problem(valid: Path) -> None:
     images.append(images[1])
 
     assert problems_of(valid, *images) == ["hospitality/coffee_espresso: duplicate entry"]
+
+
+def test_one_drawing_under_two_names_is_a_problem(valid: Path) -> None:
+    copy_image(valid, "hospitality/coffee_espresso", "hospitality/coffee_latte")
+    images = json.loads((valid / "catalog.json").read_text())["images"]
+    images.append(entry("hospitality", "coffee_latte"))
+
+    assert problems_of(valid, *images) == [
+        "same drawing under 2 names: hospitality/coffee_espresso, hospitality/coffee_latte "
+        "(one drawing, one file: keep the name that describes it)"
+    ]
+
+
+def test_every_group_of_copies_is_listed_even_without_entries(valid: Path) -> None:
+    copy_image(valid, "hospitality/coffee_espresso", "fitness/water")
+    copy_image(valid, "hospitality/coffee_espresso", "beauty_hair/zz_copy")
+    copy_image(valid, "beauty_hair/corte_senora", "beauty_hair/corte_tijera")
+
+    copies = [problem for problem in catalog.validate(valid) if problem.startswith("same drawing")]
+
+    assert copies == [
+        "same drawing under 2 names: beauty_hair/corte_senora, beauty_hair/corte_tijera "
+        "(one drawing, one file: keep the name that describes it)",
+        "same drawing under 3 names: beauty_hair/zz_copy, fitness/water, hospitality/coffee_espresso "
+        "(one drawing, one file: keep the name that describes it)",
+    ]
+
+
+def test_images_that_differ_by_one_byte_are_two_drawings(valid: Path) -> None:
+    copy_image(valid, "hospitality/coffee_espresso", "hospitality/coffee_latte")
+    path = valid / "hospitality" / "coffee_latte.webp"
+    path.write_bytes(path.read_bytes() + b"\0")
+    images = json.loads((valid / "catalog.json").read_text())["images"]
+    images.append(entry("hospitality", "coffee_latte"))
+
+    assert problems_of(valid, *images) == []
 
 
 def test_entries_must_be_sorted_by_folder_then_name(valid: Path) -> None:
