@@ -14,8 +14,8 @@ planas en belleza, fitness y spa, y fotos recortadas en hostelería y comercio.
 | `beauty_body/` | 35 | estética corporal y facial |
 | `beauty_hair/` | 43 | peluquería |
 | `fitness/` | 20 | gimnasio |
-| `hospitality/` | 284 | hostelería: restaurante, bar, cafetería |
-| `retail/` | 91 | comercio |
+| `hospitality/` | 277 | hostelería: restaurante, bar, cafetería |
+| `retail/` | 83 | comercio |
 | `wellness_spa/` | 18 | spa y bienestar |
 
 La carpeta es la de `img/`, no el sector del negocio: el restaurante usa `hospitality/` y la peluquería,
@@ -32,6 +32,14 @@ La carpeta es la de `img/`, no el sector del negocio: el restaurante usa `hospit
   que ya la tiene no vería el cambio. Si una imagen hay que rehacerla, entra con un nombre nuevo.
 
 Lo comprueba `scripts/validate_assets.py` (lo corre la CI en cada PR).
+
+**Sin marcas de terceros.** La librería se publica con licencia MIT, así que solo entran iconos planos propios
+o fotos propias o generadas de **productos genéricos**: ni marcas, ni logotipos, ni envases o etiquetas
+reconocibles, ni carteles o rótulos de un comercio, ni personas reconocibles. El manifiesto tampoco nombra
+marcas: `scripts/catalog.py validate` rechaza un título o un tag con una palabra de su lista de marcas
+bloqueadas (`BLOCKED_BRANDS`: «Coca-Cola», «Fanta», «Jäger», «Nutella», «Frappuccino»…), así que lo genérico
+manda («Refresco de cola», «Chupito de hierbas», «Café frappé»). Lo que se retiró por este motivo, y por qué,
+está en [`docs/REMOVED-2026-10-31.md`](docs/REMOVED-2026-10-31.md).
 
 ## El manifiesto `img/catalog.json`
 
@@ -56,6 +64,8 @@ alguno):
   sin guiones bajos («Café solo», «Corte de señora»).
 - `tags.en` y `tags.es`: al menos un sinónimo por idioma, en minúsculas, de los que escribiría una persona o
   el asistente («café con leche», «latte»), sin repetir el título.
+- Ni el título ni los tags nombran una marca de terceros (`BLOCKED_BRANDS`, palabra entera, sin distinguir
+  mayúsculas).
 
 El manifiesto describe lo que **se ve** en la imagen, no lo que dice su nombre de fichero: si el nombre
 engaña, manda el dibujo.

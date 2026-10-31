@@ -176,6 +176,62 @@ def test_tags_are_checked(img: Path, tags, problem: str) -> None:
     assert f"hospitality/coffee_espresso: {problem}" in problems
 
 
+# The library is published under MIT: no third-party brand may come back through a title or a tag.
+BLOCKED_BRANDS = (
+    "coca-cola",
+    "coca cola",
+    "fanta",
+    "sprite",
+    "aquarius",
+    "jäger",
+    "jager",
+    "jägermeister",
+    "jagermeister",
+    "nutella",
+    "frappuccino",
+    "pastoret",
+    "dabur",
+    "unox",
+    "maminat",
+)
+
+
+@pytest.mark.parametrize("brand", BLOCKED_BRANDS)
+def test_a_title_naming_a_brand_is_a_problem(img: Path, brand: str) -> None:
+    title = {"en": "Espresso", "es": f"Vaso de {brand}"}
+
+    problems = problems_of(img, entry("hospitality", "coffee_espresso", title=title))
+
+    assert f"hospitality/coffee_espresso: title.es names a third-party brand «{brand}»" in problems
+
+
+@pytest.mark.parametrize("brand", BLOCKED_BRANDS)
+def test_a_tag_naming_a_brand_is_a_problem(img: Path, brand: str) -> None:
+    tags = {"en": ["coffee", f"{brand} drink"], "es": ["café"]}
+
+    problems = problems_of(img, entry("hospitality", "coffee_espresso", tags=tags))
+
+    assert f"hospitality/coffee_espresso: tags.en «{brand} drink» names a third-party brand" in problems
+
+
+def test_a_brand_is_found_whatever_its_case(img: Path) -> None:
+    title = {"en": "Coca-Cola Zero", "es": "Chupito de JÄGER"}
+
+    problems = problems_of(img, entry("hospitality", "coffee_espresso", title=title))
+
+    assert "hospitality/coffee_espresso: title.en names a third-party brand «Coca-Cola»" in problems
+    assert "hospitality/coffee_espresso: title.es names a third-party brand «JÄGER»" in problems
+
+
+def test_a_brand_inside_another_word_is_not_a_brand(img: Path) -> None:
+    title = {"en": "Fantasy earrings", "es": "Pendientes de fantasía"}
+    tags = {"en": ["costume jewellery", "spritely", "aquariums"], "es": ["bisutería", "fantasía", "infanta"]}
+
+    problems = problems_of(img, entry("hospitality", "coffee_espresso", title=title, tags=tags))
+
+    assert not [p for p in problems if "brand" in p]
+
+
 def test_an_entry_whose_file_does_not_exist_is_a_problem(valid: Path) -> None:
     images = json.loads((valid / "catalog.json").read_text())["images"]
     images.append(entry("hospitality", "coffee_latte", title={"en": "Latte", "es": "Café con leche"}))
