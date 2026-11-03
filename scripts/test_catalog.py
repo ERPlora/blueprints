@@ -578,6 +578,134 @@ def test_an_unreadable_manifest_is_a_problem(img: Path, tmp_path: Path) -> None:
     assert catalog.missing_references(img, [seed]) == ["catalog.json not found"]
 
 
+# -- references: the Hub's e2e tests (ERPlora/blueprints#8) ----------------------------------
+#
+# The Hub's e2e tests (tests/e2e/*.ts of ERPlora/hub) pick an image of this library and expect it back, both as the
+# reference the product keeps ('catalog:<folder>/<name>') and as the URL the Hub serves it at
+# ('/p/catalog/<folder>/<name>.webp'). They do not run in the Hub's CI, so a drawing they use that leaves the
+# manifest breaks them silently (ERPlora/hub#706): the check reads them too, as whole string literals only.
+
+
+def write_spec(path: Path, *lines: str) -> Path:
+    """A TypeScript file like the Hub's e2e tests, made of the given lines."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(("import { expect, test } from '@playwright/test';", *lines)) + "\n", encoding="utf-8")
+    return path
+
+
+def test_an_e2e_test_naming_a_missing_drawing_names_the_file_and_the_reference(valid: Path, tmp_path: Path) -> None:
+    spec = write_spec(
+        tmp_path / "e2e" / "combo-photo.spec.ts",
+        "  expect(await detail(page, daily.id)).toMatchObject({ image: 'catalog:hospitality/menu_dia' });",
+    )
+
+    assert catalog.missing_references(valid, [spec]) == [
+        f"{spec}: catalog:hospitality/menu_dia is not in the manifest"
+    ]
+
+
+def test_the_url_an_e2e_test_loads_names_its_drawing(valid: Path, tmp_path: Path) -> None:
+    spec = write_spec(
+        tmp_path / "e2e" / "inventory-photo.spec.ts", "const LIBRARY_URL = '/p/catalog/hospitality/tonica.webp';"
+    )
+
+    assert catalog.missing_references(valid, [spec]) == [
+        f"{spec}: catalog:hospitality/tonica is not in the manifest"
+    ]
+
+
+def test_drawings_of_the_manifest_named_by_an_e2e_test_have_no_problems(valid: Path, tmp_path: Path) -> None:
+    spec = write_spec(
+        tmp_path / "e2e" / "service-photo.spec.ts",
+        "const LIBRARY_URL = '/p/catalog/beauty_hair/corte_senora.webp';",
+        "  expect(saved).toMatchObject({ image: 'catalog:beauty_hair/corte_senora', image_url: LIBRARY_URL });",
+    )
+
+    assert catalog.missing_references(valid, [spec]) == []
+
+
+def test_every_quote_of_typescript_holds_a_reference(valid: Path, tmp_path: Path) -> None:
+    spec = write_spec(
+        tmp_path / "e2e" / "photo.spec.ts",
+        'const DOUBLE = "catalog:hospitality/tonica";',
+        "const TEMPLATE = `/p/catalog/beauty_hair/mechas.webp`;",
+        "const SINGLE = 'catalog:hospitality/agua_mineral';",
+    )
+
+    assert catalog.missing_references(valid, [spec]) == [
+        f"{spec}: catalog:beauty_hair/mechas is not in the manifest",
+        f"{spec}: catalog:hospitality/agua_mineral is not in the manifest",
+        f"{spec}: catalog:hospitality/tonica is not in the manifest",
+    ]
+
+
+def test_only_a_whole_string_literal_is_a_reference_in_an_e2e_test(valid: Path, tmp_path: Path) -> None:
+    # Strict on purpose: a guard that reads prose or patterns as references would turn the library red for nothing.
+    spec = write_spec(
+        tmp_path / "e2e" / "photo.spec.ts",
+        "const KEPT = 'catalog:hospitality/coffee_espresso';",
+        "// the library's tray (catalog:hospitality/tonica) and its URL /p/catalog/hospitality/tonica.webp",
+        "const PROSE = 'Photo: catalog:hospitality/tonica';",
+        "const UPPER = 'catalog:Hospitality/tonica';",
+        "const WITH_EXTENSION = 'catalog:hospitality/tonica.webp';",
+        "const NO_EXTENSION = '/p/catalog/hospitality/tonica';",
+        "const PNG = '/p/catalog/hospitality/tonica.png';",
+        "const ABSOLUTE = 'https://hub.erplora.com/p/catalog/hospitality/tonica.webp';",
+        "const MIXED = 'catalog:hospitality/tonica\";",
+        "const BUILT = `/p/catalog/${folder}/tonica.webp`;",
+        "const TESTID = '[data-testid=combo-menu-form-image-library-modal-image-hospitality-tonica]';",
+        r"expect(saved.image).toMatch(/^file:combo\/combos\/[0-9a-f]+\.webp$/);",
+    )
+
+    assert catalog.missing_references(valid, [spec]) == []
+
+
+def test_a_reference_missing_twice_in_an_e2e_test_is_listed_once(valid: Path, tmp_path: Path) -> None:
+    spec = write_spec(
+        tmp_path / "e2e" / "combo-photo.spec.ts",
+        "const LIBRARY_URL = '/p/catalog/hospitality/menu_dia.webp';",
+        "  expect(saved).toMatchObject({ image: 'catalog:hospitality/menu_dia', image_url: LIBRARY_URL });",
+    )
+
+    assert catalog.missing_references(valid, [spec]) == [
+        f"{spec}: catalog:hospitality/menu_dia is not in the manifest"
+    ]
+
+
+def test_templates_and_e2e_tests_are_checked_together(valid: Path, tmp_path: Path) -> None:
+    seeds = tmp_path / "hub" / "base" / "seeds"
+    seed = write_seed(seeds / "restaurant.es.json", "catalog:hospitality/tonica")
+    e2e = tmp_path / "hub" / "tests" / "e2e"
+    combo = write_spec(e2e / "combo-photo.spec.ts", "const I = 'catalog:hospitality/menu_dia';")
+    helpers = write_spec(e2e / "helpers.ts", "export const A = 'catalog:hospitality/coffee_espresso';")
+
+    assert catalog.missing_references(valid, [seeds, combo, helpers]) == [
+        f"{seed}: catalog:hospitality/tonica is not in the manifest",
+        f"{combo}: catalog:hospitality/menu_dia is not in the manifest",
+    ]
+
+
+def test_e2e_tests_without_any_reference_are_a_problem(valid: Path, tmp_path: Path) -> None:
+    # The Hub dropping or moving its photo tests must not leave the check green forever.
+    spec = write_spec(tmp_path / "e2e" / "helpers.ts", "export const A = 1;")
+
+    assert catalog.missing_references(valid, [spec]) == [
+        f"no catalog:<folder>/<name> reference in {spec}: nothing was checked"
+    ]
+
+
+def test_an_e2e_test_that_is_not_utf8_is_a_problem(valid: Path, tmp_path: Path) -> None:
+    broken = tmp_path / "e2e" / "broken.spec.ts"
+    broken.parent.mkdir(parents=True)
+    broken.write_bytes(b"const A = '\xff';\n")
+    other = write_spec(tmp_path / "e2e" / "photo.spec.ts", "const A = 'catalog:hospitality/coffee_espresso';")
+
+    problems = catalog.missing_references(valid, [broken, other])
+
+    assert len(problems) == 1
+    assert problems[0].startswith(f"{broken}: not valid UTF-8 (")
+
+
 # -- command line -----------------------------------------------------------------------------
 
 
@@ -618,7 +746,21 @@ def test_references_command_exits_zero_and_counts_what_it_checked(
 
     assert catalog.main(["references", str(seeds), "--img", str(valid)]) == 0
     assert capsys.readouterr().out == (
-        f"OK: the 2 images named by 3 templates are in {valid}/catalog.json\n"
+        f"OK: the 2 images named by 3 files of the Hub are in {valid}/catalog.json\n"
+    )
+
+
+def test_references_command_counts_the_e2e_tests_it_checked(
+    valid: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    e2e = tmp_path / "e2e"
+    combo = write_spec(e2e / "combo-photo.spec.ts", "const I = 'catalog:hospitality/coffee_espresso';")
+    service = write_spec(e2e / "service-photo.spec.ts", "const U = '/p/catalog/beauty_hair/corte_senora.webp';")
+    helpers = write_spec(e2e / "helpers.ts", "export const A = 1;")
+
+    assert catalog.main(["references", str(combo), str(service), str(helpers), "--img", str(valid)]) == 0
+    assert capsys.readouterr().out == (
+        f"OK: the 2 images named by 3 files of the Hub are in {valid}/catalog.json\n"
     )
 
 
@@ -629,10 +771,26 @@ def test_references_command_exits_one_and_says_how_to_retire_a_drawing(
 
     assert catalog.main(["references", str(seed), "--img", str(valid)]) == 1
     assert capsys.readouterr().out == (
-        f"FAILED: 1 problem(s) with the templates' images and {valid}/catalog.json:\n"
+        f"FAILED: 1 problem(s) with the images the Hub names and {valid}/catalog.json:\n"
         f"  - {seed}: catalog:hospitality/tonica is not in the manifest\n"
-        "A drawing a template uses is never retired or renamed in one step: add the new name here, "
-        "move the template in ERPlora/hub, then retire the old name.\n"
+        "A drawing a template or an e2e test of the Hub uses is never retired or renamed in one step: "
+        "add the new name here, move the template or the test in ERPlora/hub, then retire the old name.\n"
+    )
+
+
+def test_references_command_fails_on_an_e2e_test_naming_a_missing_drawing(
+    valid: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    spec = write_spec(
+        tmp_path / "e2e" / "combo-photo.spec.ts", "const LIBRARY_URL = '/p/catalog/hospitality/menu_dia.webp';"
+    )
+
+    assert catalog.main(["references", str(spec), "--img", str(valid)]) == 1
+    assert capsys.readouterr().out == (
+        f"FAILED: 1 problem(s) with the images the Hub names and {valid}/catalog.json:\n"
+        f"  - {spec}: catalog:hospitality/menu_dia is not in the manifest\n"
+        "A drawing a template or an e2e test of the Hub uses is never retired or renamed in one step: "
+        "add the new name here, move the template or the test in ERPlora/hub, then retire the old name.\n"
     )
 
 
@@ -643,7 +801,7 @@ def test_references_command_gives_the_retire_steps_only_for_a_missing_reference(
 
     assert catalog.main(["references", str(gone), "--img", str(valid)]) == 1
     assert capsys.readouterr().out == (
-        f"FAILED: 1 problem(s) with the templates' images and {valid}/catalog.json:\n"
+        f"FAILED: 1 problem(s) with the images the Hub names and {valid}/catalog.json:\n"
         f"  - {gone}: not found\n"
     )
 
@@ -681,3 +839,13 @@ def test_the_ci_checks_the_hubs_templates_on_every_pull_request() -> None:
     assert "https://github.com/ERPlora/hub.git ../hub" in workflow
     assert "sparse-checkout set base/seeds" in workflow
     assert "python scripts/catalog.py references ../hub/base/seeds" in workflow
+
+
+def test_the_ci_checks_the_hubs_e2e_tests_on_every_pull_request() -> None:
+    # The Hub's e2e tests (tests/e2e/*.ts) do not run in the Hub's CI: a renamed drawing they expect breaks them
+    # silently (ERPlora/hub#706). The validate workflow fetches them with the templates and checks every TypeScript
+    # file of the folder; a glob that matches nothing reaches the command as a path that is not found, and fails.
+    workflow = (REPO_IMG.parent / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+
+    assert "sparse-checkout set base/seeds tests/e2e" in workflow
+    assert "python scripts/catalog.py references ../hub/tests/e2e/*.ts" in workflow
