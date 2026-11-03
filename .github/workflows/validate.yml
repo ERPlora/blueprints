@@ -1,8 +1,8 @@
 name: validate
 
 # Gate of the library on every pull request and every push to main: the workflows (actionlint),
-# the script tests, the images (real WebP, exactly 512x512, snake_case, WebP only) and the
-# bilingual manifest img/catalog.json. Public repo and no secret: pull_request, never
+# the script tests, the images (real WebP, exactly 512x512, snake_case, WebP only), the
+# bilingual manifest img/catalog.json and the images the Hub's templates name. Public repo and no secret: pull_request, never
 # pull_request_target. No paths filter: "validate" is a required check on main, and a pull
 # request without its run could not be merged.
 
@@ -51,3 +51,12 @@ jobs:
 
       - name: Bilingual manifest (img/catalog.json)
         run: uv run --locked python scripts/catalog.py validate
+
+      # The Hub's templates (base/seeds/*.json of ERPlora/hub) name images of this library, and the Hub's CI loads
+      # them against this repository's main: a drawing they use that leaves the manifest turns the whole Hub red
+      # (ERPlora/blueprints#5). ERPlora/hub is public: its main is fetched beside this repository, no token.
+      - name: The Hub's templates name only images of the manifest
+        run: |
+          git clone --quiet --depth 1 --filter=blob:none --sparse https://github.com/ERPlora/hub.git ../hub
+          git -C ../hub sparse-checkout set base/seeds
+          uv run --locked python scripts/catalog.py references ../hub/base/seeds

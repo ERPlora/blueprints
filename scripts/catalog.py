@@ -13,6 +13,9 @@ contract the Hub depends on:
 Usage:
     python scripts/catalog.py build [--img DIR]     add an empty entry for every image without one
     python scripts/catalog.py validate [--img DIR]  check the whole contract (exit 1 lists every problem)
+    python scripts/catalog.py references PATH... [--img DIR]
+                                                    every catalog:<folder>/<name> of the Hub's templates (JSON
+                                                    files, or folders of them) is in the manifest
 
 ``build`` never removes an entry and never invents a title: the skeleton it writes fails
 ``validate`` until a person fills the titles and tags.
@@ -20,6 +23,10 @@ Usage:
 One drawing, one name: ``validate`` also fails when two WebP files of the library are byte for byte the
 same, because the Hub's assistant picks an image by its name and title, and a copy saved under the name of
 another product (a gym card as «yoga class») makes it offer the wrong picture.
+
+The Hub's templates (``base/seeds/*.json`` of ERPlora/hub) name images of this library, and the Hub's CI loads
+them against this repository's main: ``references`` fails here, in the pull request that retires or renames a
+drawing a template uses, before it can turn the whole Hub red.
 """
 
 from __future__ import annotations
@@ -37,6 +44,13 @@ VERSION = 1
 LANGUAGES = ("en", "es")
 ENTRY_KEYS = ("name", "folder", "title", "tags")
 TOP_LEVEL_KEYS = ("version", "images")
+# A reference of the Hub to an image of this library, as the Hub reads it (base/image_catalog.py, REFERENCE_RE).
+REFERENCE_RE = re.compile(r"^catalog:([a-z][a-z0-9_]*)/([a-z0-9][a-z0-9_]*)$")
+MISSING = "is not in the manifest"
+RETIRE_IN_STEPS = (
+    "A drawing a template uses is never retired or renamed in one step: add the new name here, "
+    "move the template in ERPlora/hub, then retire the old name."
+)
 # Third-party brands a title or a tag must never name: the library is published under MIT and holds
 # only generic products (README, «Convenciones»). Matched as whole words, whatever the case.
 BLOCKED_BRANDS = (
@@ -261,6 +275,65 @@ def validate(img: Path) -> list[str]:
     return problems
 
 
+def references_in(value: object) -> set[tuple[str, str]]:
+    """(folder, name) of every ``catalog:<folder>/<name>`` value anywhere in a template's JSON."""
+    if isinstance(value, dict):
+        return set().union(*map(references_in, value.values()))
+    if isinstance(value, list):
+        return set().union(*map(references_in, value))
+    match = REFERENCE_RE.match(value) if isinstance(value, str) else None
+    return {(match.group(1), match.group(2))} if match else set()
+
+
+def templates(paths: list[Path]) -> tuple[list[Path], list[str]]:
+    """The JSON templates ``paths`` name (a file, or the ``*.json`` of a folder), and what is wrong with them."""
+    files: list[Path] = []
+    problems: list[str] = []
+    for path in paths:
+        if path.is_dir():
+            found = sorted(path.glob("*.json"))
+            if not found:
+                problems.append(f"{path}: no JSON template in it")
+            files.extend(found)
+        elif path.is_file():
+            files.append(path)
+        else:
+            problems.append(f"{path}: not found")
+    return files, problems
+
+
+def template_references(paths: list[Path]) -> tuple[dict[Path, set[tuple[str, str]]], list[str]]:
+    """The references of every template ``paths`` name, by file, and what could not be read."""
+    files, problems = templates(paths)
+    found: dict[Path, set[tuple[str, str]]] = {}
+    for path in files:
+        try:
+            found[path] = references_in(json.loads(path.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+            problems.append(f"{path}: not valid JSON ({exc})")
+    return found, problems
+
+
+def missing_references(img: Path, paths: list[Path]) -> list[str]:
+    """Every ``catalog:`` reference of the templates ``paths`` name that the manifest of ``img`` lacks."""
+    try:
+        document, _ = load(img)
+    except UnreadableManifest as exc:
+        return str(exc).split("\n")
+    known = {key for key in map(entry_key, document["images"]) if key}
+
+    found, problems = template_references(paths)
+    if not problems and not any(found.values()):
+        listed = ", ".join(str(path) for path in paths)
+        return [f"no catalog:<folder>/<name> reference in {listed}: nothing was checked"]
+    for path in sorted(found):
+        problems.extend(
+            f"{path}: catalog:{folder}/{name} {MISSING}"
+            for folder, name in sorted(found[path] - known)
+        )
+    return problems
+
+
 def skeleton(folder: str, name: str) -> dict:
     return {
         "name": name,
@@ -317,10 +390,29 @@ def build(img: Path) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Bilingual manifest of the image library")
-    parser.add_argument("command", choices=("build", "validate"))
+    parser.add_argument("command", choices=("build", "validate", "references"))
+    parser.add_argument(
+        "paths", nargs="*", type=Path, help="references only: the Hub's templates (JSON files or folders of them)"
+    )
     parser.add_argument("--img", type=Path, default=DEFAULT_IMG, help="library folder (default: img/)")
     args = parser.parse_args(argv)
     path = args.img / MANIFEST_NAME
+    if (args.command == "references") != bool(args.paths):
+        parser.error("references needs the templates to check; build and validate take no path")
+
+    if args.command == "references":
+        problems = missing_references(args.img, args.paths)
+        if problems:
+            print(f"FAILED: {len(problems)} problem(s) with the templates' images and {path}:")
+            for problem in problems:
+                print(f"  - {problem}")
+            if any(problem.endswith(MISSING) for problem in problems):
+                print(RETIRE_IN_STEPS)
+            return 1
+        found, _ = template_references(args.paths)
+        images = set().union(*found.values())
+        print(f"OK: the {len(images)} images named by {len(found)} templates are in {path}")
+        return 0
 
     if args.command == "build":
         added = build(args.img)
