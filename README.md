@@ -89,7 +89,8 @@ dibujo equivocado (una tarjeta de socio para «Clase de yoga»). Por eso (decisi
 - un producto **sin dibujo propio** se queda sin imagen hasta que entre la suya, nunca con la de otro producto;
 - un nombre que engaña se **renombra**: el nombre nuevo es otra imagen para el bucket y la caché, y el viejo
   sigue servido en el bucket hasta la poda. Un nombre retirado **no vuelve** con otro dibujo: la imagen nueva
-  de ese producto entra con un nombre que no se haya usado nunca en `img/` (`git log --all -- img/`).
+  de ese producto entra con un nombre que no se haya usado nunca en `img/` (`git log --all -- img/`). Si una
+  plantilla del Hub usa el dibujo, el cambio va en tres pasos (ver «Las plantillas del Hub»).
 
 Lo que se quitó y renombró el 2026-10-31, y la lista de productos que esperan su imagen, está en
 [`docs/DEDUP-2026-10-31.md`](docs/DEDUP-2026-10-31.md).
@@ -128,6 +129,30 @@ Decisión del 2026-10-30 (ronda de `PLAN-HUB.md` en `erplora-next`; la implement
   negocio), no por el nombre de fichero.
 - Las fotos propias de cada hub no viven aquí: van a la carpeta del hub y se referencian como `file:<nombre>`.
 
+### Las plantillas del Hub
+
+Las plantillas del Hub (`base/seeds/<vertical>.<idioma>.json` de `ERPlora/hub`: restaurante y peluquería) nombran
+imágenes de esta librería, y la CI del Hub las carga contra el `main` de este repo. Un dibujo que usa una plantilla
+y sale del manifiesto deja **toda** la CI del Hub en rojo hasta que alguien corrige la plantilla (pasó con la poda
+de #4: ERPlora/hub#553). Por eso la CI de aquí lo para antes del merge (#5):
+
+```bash
+git clone --depth 1 --filter=blob:none --sparse https://github.com/ERPlora/hub.git ../hub
+git -C ../hub sparse-checkout set base/seeds
+uv run python scripts/catalog.py references ../hub/base/seeds
+```
+
+`catalog.py references` lee las plantillas (ficheros JSON o carpetas con ellos) y falla, nombrando la plantilla y
+la referencia, si alguna `catalog:<carpeta>/<nombre>` no está en `img/catalog.json`; también falla si no encuentra
+ninguna referencia, para no pasar en verde sin haber comprobado nada. `ERPlora/hub` es público: no hace falta token.
+
+Retirar o renombrar un dibujo que usa una plantilla va en **tres pasos**, cada uno con su CI en verde:
+
+1. aquí entra el nombre nuevo **sin quitar el viejo**;
+2. en `ERPlora/hub`, la plantilla pasa al nombre nuevo (o se queda sin imagen, si la librería no tiene un dibujo
+   honesto del producto);
+3. aquí se quita el viejo.
+
 ## Publicación
 
 `.github/workflows/publish.yml`, en cada push a `main` que toca `img/**` (y a mano con `workflow_dispatch`):
@@ -153,7 +178,7 @@ uv run pytest -q         # tests de scripts/ y el manifiesto real completo
 ```
 
 La CI (`validate.yml`) corre en cada PR y en cada push a `main`: actionlint de los workflows, los tests,
-`validate_assets.py img` y `catalog.py validate`.
+`validate_assets.py img`, `catalog.py validate` y `catalog.py references` contra las plantillas del Hub.
 
 ## Una sola copia compartida
 

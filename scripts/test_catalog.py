@@ -441,6 +441,143 @@ def test_build_refuses_a_manifest_it_cannot_read(img: Path, text: str) -> None:
     assert (img / "catalog.json").read_text() == text
 
 
+# -- references: the Hub's templates (ERPlora/blueprints#5) -----------------------------------
+#
+# The Hub's templates (base/seeds/<vertical>.<language>.json of ERPlora/hub) name images of this library as
+# catalog:<folder>/<name>, and the Hub's CI loads them against this repository's main: a drawing a template uses
+# that leaves the manifest turns the whole Hub red. The check fails here, in the library's pull request, first.
+
+
+def write_seed(path: Path, *references: str, extra: dict | None = None) -> Path:
+    """A template like the Hub's: rows of datasets, each naming its image wherever the seed puts it."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    rows = [{"name": f"Row {index}", "image": reference} for index, reference in enumerate(references)]
+    document = {"vertical": "restaurant", "data": {"inventory.product": rows, **(extra or {})}}
+    path.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
+    return path
+
+
+def test_references_in_the_manifest_have_no_problems(valid: Path, tmp_path: Path) -> None:
+    seed = write_seed(tmp_path / "restaurant.es.json", "catalog:hospitality/coffee_espresso")
+
+    assert catalog.missing_references(valid, [seed]) == []
+
+
+def test_a_reference_missing_from_the_manifest_names_the_template_and_the_reference(
+    valid: Path, tmp_path: Path
+) -> None:
+    seed = write_seed(
+        tmp_path / "restaurant.es.json", "catalog:hospitality/coffee_espresso", "catalog:hospitality/tonica"
+    )
+
+    assert catalog.missing_references(valid, [seed]) == [
+        f"{seed}: catalog:hospitality/tonica is not in the manifest"
+    ]
+
+
+def test_the_manifest_decides_not_the_files(valid: Path, tmp_path: Path) -> None:
+    # The Hub serves and offers only what the manifest names: a file without its entry is gone for it.
+    make_image(valid, "hospitality", "tonica")
+    seed = write_seed(tmp_path / "restaurant.es.json", "catalog:hospitality/tonica")
+
+    assert catalog.missing_references(valid, [seed]) == [
+        f"{seed}: catalog:hospitality/tonica is not in the manifest"
+    ]
+
+
+def test_a_reference_anywhere_in_the_template_is_checked(valid: Path, tmp_path: Path) -> None:
+    services = [{"name": "Corte", "photo": {"main": "catalog:beauty_hair/mechas"}}]
+    seed = write_seed(tmp_path / "hair_salon.es.json", extra={"service.service": services})
+
+    assert catalog.missing_references(valid, [seed]) == [
+        f"{seed}: catalog:beauty_hair/mechas is not in the manifest"
+    ]
+
+
+def test_only_a_whole_value_is_a_reference(valid: Path, tmp_path: Path) -> None:
+    # As the Hub reads it (base/image_catalog.py, REFERENCE_RE): the whole string, nothing else.
+    seed = write_seed(
+        tmp_path / "restaurant.es.json",
+        "catalog:hospitality/coffee_espresso",
+        "Photo: catalog:hospitality/tonica",
+        "catalog:Hospitality/tonica",
+        "file:inventory/products/0193.webp",
+        extra={"catalog:hospitality/tonica": []},
+    )
+
+    assert catalog.missing_references(valid, [seed]) == []
+
+
+def test_a_reference_missing_twice_in_a_template_is_listed_once(valid: Path, tmp_path: Path) -> None:
+    seed = write_seed(
+        tmp_path / "restaurant.es.json",
+        "catalog:hospitality/tonica",
+        "catalog:hospitality/coffee_espresso",
+        "catalog:hospitality/tonica",
+        "catalog:hospitality/agua_mineral",
+    )
+
+    assert catalog.missing_references(valid, [seed]) == [
+        f"{seed}: catalog:hospitality/agua_mineral is not in the manifest",
+        f"{seed}: catalog:hospitality/tonica is not in the manifest",
+    ]
+
+
+def test_a_folder_checks_every_template_in_it(valid: Path, tmp_path: Path) -> None:
+    seeds = tmp_path / "seeds"
+    restaurant = write_seed(seeds / "restaurant.es.json", "catalog:hospitality/tonica")
+    write_seed(seeds / "hair_salon.es.json", "catalog:beauty_hair/corte_senora")
+    hair_en = write_seed(seeds / "hair_salon.en.json", "catalog:beauty_hair/mechas")
+    (seeds / "README.md").write_text("catalog:hospitality/not_a_template\n", encoding="utf-8")
+
+    assert catalog.missing_references(valid, [seeds]) == [
+        f"{hair_en}: catalog:beauty_hair/mechas is not in the manifest",
+        f"{restaurant}: catalog:hospitality/tonica is not in the manifest",
+    ]
+
+
+def test_templates_without_any_reference_are_a_problem(valid: Path, tmp_path: Path) -> None:
+    # A check that finds nothing to check must not pass: the Hub moving its templates would turn it green forever.
+    seeds = tmp_path / "seeds"
+    write_seed(seeds / "restaurant.es.json")
+
+    assert catalog.missing_references(valid, [seeds]) == [
+        f"no catalog:<folder>/<name> reference in {seeds}: nothing was checked"
+    ]
+
+
+def test_a_folder_without_templates_is_a_problem(valid: Path, tmp_path: Path) -> None:
+    seeds = tmp_path / "seeds"
+    seeds.mkdir()
+    other = write_seed(tmp_path / "restaurant.es.json", "catalog:hospitality/coffee_espresso")
+
+    assert catalog.missing_references(valid, [seeds, other]) == [f"{seeds}: no JSON template in it"]
+
+
+def test_a_path_that_does_not_exist_is_a_problem(valid: Path, tmp_path: Path) -> None:
+    gone = tmp_path / "hub" / "base" / "seeds"
+    other = write_seed(tmp_path / "restaurant.es.json", "catalog:hospitality/coffee_espresso")
+
+    assert catalog.missing_references(valid, [gone, other]) == [f"{gone}: not found"]
+
+
+def test_a_template_that_is_not_json_is_a_problem(valid: Path, tmp_path: Path) -> None:
+    broken = tmp_path / "restaurant.es.json"
+    broken.write_text("{not json", encoding="utf-8")
+    other = write_seed(tmp_path / "hair_salon.es.json", "catalog:hospitality/coffee_espresso")
+
+    problems = catalog.missing_references(valid, [broken, other])
+
+    assert len(problems) == 1
+    assert problems[0].startswith(f"{broken}: not valid JSON (")
+
+
+def test_an_unreadable_manifest_is_a_problem(img: Path, tmp_path: Path) -> None:
+    seed = write_seed(tmp_path / "restaurant.es.json", "catalog:hospitality/coffee_espresso")
+
+    assert catalog.missing_references(img, [seed]) == ["catalog.json not found"]
+
+
 # -- command line -----------------------------------------------------------------------------
 
 
@@ -471,6 +608,59 @@ def test_build_command_reports_what_it_added(img: Path, capsys: pytest.CaptureFi
     )
 
 
+def test_references_command_exits_zero_and_counts_what_it_checked(
+    valid: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    seeds = tmp_path / "seeds"
+    write_seed(seeds / "restaurant.es.json", "catalog:hospitality/coffee_espresso")
+    write_seed(seeds / "restaurant.en.json", "catalog:hospitality/coffee_espresso")
+    write_seed(seeds / "hair_salon.es.json", "catalog:beauty_hair/corte_senora")
+
+    assert catalog.main(["references", str(seeds), "--img", str(valid)]) == 0
+    assert capsys.readouterr().out == (
+        f"OK: the 2 images named by 3 templates are in {valid}/catalog.json\n"
+    )
+
+
+def test_references_command_exits_one_and_says_how_to_retire_a_drawing(
+    valid: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    seed = write_seed(tmp_path / "restaurant.es.json", "catalog:hospitality/tonica")
+
+    assert catalog.main(["references", str(seed), "--img", str(valid)]) == 1
+    assert capsys.readouterr().out == (
+        f"FAILED: 1 problem(s) with the templates' images and {valid}/catalog.json:\n"
+        f"  - {seed}: catalog:hospitality/tonica is not in the manifest\n"
+        "A drawing a template uses is never retired or renamed in one step: add the new name here, "
+        "move the template in ERPlora/hub, then retire the old name.\n"
+    )
+
+
+def test_references_command_gives_the_retire_steps_only_for_a_missing_reference(
+    valid: Path, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    gone = tmp_path / "hub" / "base" / "seeds"
+
+    assert catalog.main(["references", str(gone), "--img", str(valid)]) == 1
+    assert capsys.readouterr().out == (
+        f"FAILED: 1 problem(s) with the templates' images and {valid}/catalog.json:\n"
+        f"  - {gone}: not found\n"
+    )
+
+
+def test_references_command_needs_a_path(valid: Path) -> None:
+    with pytest.raises(SystemExit) as exit_info:
+        catalog.main(["references", "--img", str(valid)])
+    assert exit_info.value.code == 2
+
+
+@pytest.mark.parametrize("command", ["build", "validate"])
+def test_build_and_validate_take_no_path(valid: Path, tmp_path: Path, command: str) -> None:
+    with pytest.raises(SystemExit) as exit_info:
+        catalog.main([command, str(tmp_path), "--img", str(valid)])
+    assert exit_info.value.code == 2
+
+
 def test_the_default_library_is_the_repository_img_folder() -> None:
     assert catalog.DEFAULT_IMG == REPO_IMG
 
@@ -481,3 +671,13 @@ def test_the_default_library_is_the_repository_img_folder() -> None:
 def test_the_library_manifest_is_complete() -> None:
     assert catalog.validate(REPO_IMG) == []
     assert len(read(REPO_IMG)["images"]) == len(list(REPO_IMG.glob("*/*.webp")))
+
+
+def test_the_ci_checks_the_hubs_templates_on_every_pull_request() -> None:
+    # The Hub's templates live in ERPlora/hub (public, no token): the validate workflow fetches them from its main
+    # beside this repository and runs the check, so a pull request that retires a drawing they use goes red here.
+    workflow = (REPO_IMG.parent / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+
+    assert "https://github.com/ERPlora/hub.git ../hub" in workflow
+    assert "sparse-checkout set base/seeds" in workflow
+    assert "python scripts/catalog.py references ../hub/base/seeds" in workflow
