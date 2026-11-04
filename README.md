@@ -90,7 +90,8 @@ dibujo equivocado (una tarjeta de socio para «Clase de yoga»). Por eso (decisi
 - un nombre que engaña se **renombra**: el nombre nuevo es otra imagen para el bucket y la caché, y el viejo
   sigue servido en el bucket hasta la poda. Un nombre retirado **no vuelve** con otro dibujo: la imagen nueva
   de ese producto entra con un nombre que no se haya usado nunca en `img/` (`git log --all -- img/`). Si una
-  plantilla del Hub usa el dibujo, el cambio va en tres pasos (ver «Las plantillas del Hub»).
+  plantilla o una prueba e2e del Hub usa el dibujo, el cambio va en tres pasos (ver «Las plantillas y las
+  pruebas e2e del Hub»).
 
 Lo que se quitó y renombró el 2026-10-31, y la lista de productos que esperan su imagen, está en
 [`docs/DEDUP-2026-10-31.md`](docs/DEDUP-2026-10-31.md).
@@ -129,28 +130,47 @@ Decisión del 2026-10-30 (ronda de `PLAN-HUB.md` en `erplora-next`; la implement
   negocio), no por el nombre de fichero.
 - Las fotos propias de cada hub no viven aquí: van a la carpeta del hub y se referencian como `file:<nombre>`.
 
-### Las plantillas del Hub
+### Las plantillas y las pruebas e2e del Hub
 
 Las plantillas del Hub (`base/seeds/<vertical>.<idioma>.json` de `ERPlora/hub`: restaurante y peluquería) nombran
 imágenes de esta librería, y la CI del Hub las carga contra el `main` de este repo. Un dibujo que usa una plantilla
 y sale del manifiesto deja **toda** la CI del Hub en rojo hasta que alguien corrige la plantilla (pasó con la poda
-de #4: ERPlora/hub#553). Por eso la CI de aquí lo para antes del merge (#5):
+de #4: ERPlora/hub#553). Por eso la CI de aquí lo para antes del merge (#5).
+
+Las pruebas de punta a punta del Hub (`tests/e2e/*.ts`) también eligen un dibujo de la librería y lo esperan de
+vuelta, y esas pruebas **no corren** en la CI del Hub: un renombre las rompe sin que nadie lo vea (pasó con
+`hospitality/menu_dia`, renombrado en #4: ERPlora/hub#706). La CI de aquí las mira igual (#8):
 
 ```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/ERPlora/hub.git ../hub
-git -C ../hub sparse-checkout set base/seeds
+git -C ../hub sparse-checkout set base/seeds tests/e2e
 uv run python scripts/catalog.py references ../hub/base/seeds
+uv run python scripts/catalog.py references ../hub/tests/e2e/*.ts
 ```
 
-`catalog.py references` lee las plantillas (ficheros JSON o carpetas con ellos) y falla, nombrando la plantilla y
-la referencia, si alguna `catalog:<carpeta>/<nombre>` no está en `img/catalog.json`; también falla si no encuentra
-ninguna referencia, para no pasar en verde sin haber comprobado nada. `ERPlora/hub` es público: no hace falta token.
+`catalog.py references` lee las plantillas (ficheros JSON o carpetas con ellos) y las pruebas e2e (ficheros `.ts`;
+una carpeta solo aporta sus `*.json`, porque `tests/e2e` también guarda JSON que no son plantillas, como su
+`tsconfig.json`). Falla, nombrando el fichero y la referencia, si alguna imagen que nombran no está en
+`img/catalog.json`; también falla si no encuentra ninguna referencia, para no pasar en verde sin haber comprobado
+nada, y si el glob de las pruebas no encuentra ningún fichero (llega como ruta que no existe). `ERPlora/hub` es
+público: no hace falta token.
 
-Retirar o renombrar un dibujo que usa una plantilla va en **tres pasos**, cada uno con su CI en verde:
+Qué cuenta como referencia:
+
+- en una plantilla, un valor JSON que es entero `catalog:<carpeta>/<nombre>`, como lo lee el Hub;
+- en una prueba `.ts`, un literal de cadena entero (con `'`, `"` o `` ` ``) que es la referencia,
+  `'catalog:<carpeta>/<nombre>'`, o la URL con la que el Hub sirve la imagen, `'/p/catalog/<carpeta>/<nombre>.webp'`.
+  No cuentan el texto suelto de un comentario (sin comillas), un `data-testid` (`…-image-<carpeta>-<nombre>`), una
+  URL con dominio ni un literal construido con `${…}`: el control es estricto a propósito, para no poner la librería
+  en rojo por prosa.
+  Una prueba que nombra un dibujo de otra forma debe llevar también uno de esos dos literales.
+
+Retirar o renombrar un dibujo que usa una plantilla o una prueba e2e va en **tres pasos**, cada uno con su CI en
+verde:
 
 1. aquí entra el nombre nuevo **sin quitar el viejo**;
-2. en `ERPlora/hub`, la plantilla pasa al nombre nuevo (o se queda sin imagen, si la librería no tiene un dibujo
-   honesto del producto);
+2. en `ERPlora/hub`, la plantilla o la prueba pasa al nombre nuevo (la plantilla también puede quedarse sin
+   imagen, si la librería no tiene un dibujo honesto del producto);
 3. aquí se quita el viejo.
 
 ## Publicación
@@ -178,7 +198,8 @@ uv run pytest -q         # tests de scripts/ y el manifiesto real completo
 ```
 
 La CI (`validate.yml`) corre en cada PR y en cada push a `main`: actionlint de los workflows, los tests,
-`validate_assets.py img`, `catalog.py validate` y `catalog.py references` contra las plantillas del Hub.
+`validate_assets.py img`, `catalog.py validate` y `catalog.py references` contra las plantillas y las pruebas e2e
+del Hub.
 
 ## Una sola copia compartida
 

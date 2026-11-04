@@ -14,8 +14,8 @@ Usage:
     python scripts/catalog.py build [--img DIR]     add an empty entry for every image without one
     python scripts/catalog.py validate [--img DIR]  check the whole contract (exit 1 lists every problem)
     python scripts/catalog.py references PATH... [--img DIR]
-                                                    every catalog:<folder>/<name> of the Hub's templates (JSON
-                                                    files, or folders of them) is in the manifest
+                                                    every image the Hub's templates (JSON files, or folders of
+                                                    them) and e2e tests (.ts files) name is in the manifest
 
 ``build`` never removes an entry and never invents a title: the skeleton it writes fails
 ``validate`` until a person fills the titles and tags.
@@ -27,6 +27,12 @@ another product (a gym card as «yoga class») makes it offer the wrong picture.
 The Hub's templates (``base/seeds/*.json`` of ERPlora/hub) name images of this library, and the Hub's CI loads
 them against this repository's main: ``references`` fails here, in the pull request that retires or renames a
 drawing a template uses, before it can turn the whole Hub red.
+
+The Hub's e2e tests (``tests/e2e/*.ts``) pick an image of this library and expect it back, and they do not run in
+the Hub's CI: a drawing they use that leaves the manifest breaks them silently (ERPlora/hub#706). ``references``
+reads a ``.ts`` file too, strictly: only a whole string literal (any quote) that is the reference
+(``'catalog:<folder>/<name>'``) or the URL the Hub serves it at (``'/p/catalog/<folder>/<name>.webp'``). Prose
+(a comment's unquoted words included), test ids, URLs with a host and literals built with ``${…}`` are not.
 """
 
 from __future__ import annotations
@@ -44,12 +50,21 @@ VERSION = 1
 LANGUAGES = ("en", "es")
 ENTRY_KEYS = ("name", "folder", "title", "tags")
 TOP_LEVEL_KEYS = ("version", "images")
+FOLDER_PATTERN = r"[a-z][a-z0-9_]*"
+NAME_PATTERN = r"[a-z0-9][a-z0-9_]*"
 # A reference of the Hub to an image of this library, as the Hub reads it (base/image_catalog.py, REFERENCE_RE).
-REFERENCE_RE = re.compile(r"^catalog:([a-z][a-z0-9_]*)/([a-z0-9][a-z0-9_]*)$")
+REFERENCE_RE = re.compile(rf"^catalog:({FOLDER_PATTERN})/({NAME_PATTERN})$")
+# The same image in a TypeScript file (the Hub's e2e tests): a whole string literal, in any of the three quotes,
+# that is the reference or the URL the Hub serves the image at (base/image_catalog.py, /p/catalog/<folder>/<name>.webp).
+SOURCE_REFERENCE_RE = re.compile(
+    rf"""(['"`])(?:catalog:({FOLDER_PATTERN})/({NAME_PATTERN})"""
+    rf"""|/p/catalog/({FOLDER_PATTERN})/({NAME_PATTERN})\.webp)\1"""
+)
+SOURCE_SUFFIX = ".ts"
 MISSING = "is not in the manifest"
 RETIRE_IN_STEPS = (
-    "A drawing a template uses is never retired or renamed in one step: add the new name here, "
-    "move the template in ERPlora/hub, then retire the old name."
+    "A drawing a template or an e2e test of the Hub uses is never retired or renamed in one step: "
+    "add the new name here, move the template or the test in ERPlora/hub, then retire the old name."
 )
 # Third-party brands a title or a tag must never name: the library is published under MIT and holds
 # only generic products (README, «Convenciones»). Matched as whole words, whatever the case.
@@ -285,8 +300,16 @@ def references_in(value: object) -> set[tuple[str, str]]:
     return {(match.group(1), match.group(2))} if match else set()
 
 
+def source_references(text: str) -> set[tuple[str, str]]:
+    """(folder, name) of every image a TypeScript file names as a whole string literal (SOURCE_REFERENCE_RE)."""
+    return {
+        (match.group(2) or match.group(4), match.group(3) or match.group(5))
+        for match in SOURCE_REFERENCE_RE.finditer(text)
+    }
+
+
 def templates(paths: list[Path]) -> tuple[list[Path], list[str]]:
-    """The JSON templates ``paths`` name (a file, or the ``*.json`` of a folder), and what is wrong with them."""
+    """The files ``paths`` name (a file as is, or the ``*.json`` templates of a folder), and what is wrong with them."""
     files: list[Path] = []
     problems: list[str] = []
     for path in paths:
@@ -303,10 +326,19 @@ def templates(paths: list[Path]) -> tuple[list[Path], list[str]]:
 
 
 def template_references(paths: list[Path]) -> tuple[dict[Path, set[tuple[str, str]]], list[str]]:
-    """The references of every template ``paths`` name, by file, and what could not be read."""
+    """The references of every file ``paths`` name, by file, and what could not be read.
+
+    A ``.ts`` file is an e2e test of the Hub (string literals, SOURCE_REFERENCE_RE); any other is a JSON template.
+    """
     files, problems = templates(paths)
     found: dict[Path, set[tuple[str, str]]] = {}
     for path in files:
+        if path.suffix == SOURCE_SUFFIX:
+            try:
+                found[path] = source_references(path.read_text(encoding="utf-8"))
+            except UnicodeDecodeError as exc:
+                problems.append(f"{path}: not valid UTF-8 ({exc})")
+            continue
         try:
             found[path] = references_in(json.loads(path.read_text(encoding="utf-8")))
         except (json.JSONDecodeError, UnicodeDecodeError) as exc:
@@ -315,7 +347,7 @@ def template_references(paths: list[Path]) -> tuple[dict[Path, set[tuple[str, st
 
 
 def missing_references(img: Path, paths: list[Path]) -> list[str]:
-    """Every ``catalog:`` reference of the templates ``paths`` name that the manifest of ``img`` lacks."""
+    """Every image the templates and e2e tests ``paths`` name that the manifest of ``img`` lacks."""
     try:
         document, _ = load(img)
     except UnreadableManifest as exc:
@@ -392,18 +424,21 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Bilingual manifest of the image library")
     parser.add_argument("command", choices=("build", "validate", "references"))
     parser.add_argument(
-        "paths", nargs="*", type=Path, help="references only: the Hub's templates (JSON files or folders of them)"
+        "paths",
+        nargs="*",
+        type=Path,
+        help="references only: the Hub's templates (JSON files or folders of them) and e2e tests (.ts files)",
     )
     parser.add_argument("--img", type=Path, default=DEFAULT_IMG, help="library folder (default: img/)")
     args = parser.parse_args(argv)
     path = args.img / MANIFEST_NAME
     if (args.command == "references") != bool(args.paths):
-        parser.error("references needs the templates to check; build and validate take no path")
+        parser.error("references needs the Hub's files to check; build and validate take no path")
 
     if args.command == "references":
         problems = missing_references(args.img, args.paths)
         if problems:
-            print(f"FAILED: {len(problems)} problem(s) with the templates' images and {path}:")
+            print(f"FAILED: {len(problems)} problem(s) with the images the Hub names and {path}:")
             for problem in problems:
                 print(f"  - {problem}")
             if any(problem.endswith(MISSING) for problem in problems):
@@ -411,7 +446,7 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         found, _ = template_references(args.paths)
         images = set().union(*found.values())
-        print(f"OK: the {len(images)} images named by {len(found)} templates are in {path}")
+        print(f"OK: the {len(images)} images named by {len(found)} files of the Hub are in {path}")
         return 0
 
     if args.command == "build":
