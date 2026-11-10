@@ -35,7 +35,7 @@ La carpeta es la de `img/`, no el sector del negocio: el restaurante usa `hospit
 - Una imagen publicada **no cambia de dibujo**: se sirve con caché inmutable de un año, así que el navegador
   que ya la tiene no vería el cambio. Si una imagen hay que rehacerla, entra con un nombre nuevo.
 
-Lo comprueba `scripts/validate_assets.py` (lo corre la CI en cada PR).
+Lo comprueba `scripts/validate_assets.py` (lo corre el hook `pre-push` antes de cada push).
 
 **Sin marcas de terceros.** La librería se publica con licencia MIT, así que solo entran iconos planos propios
 o fotos propias o generadas de **productos genéricos**: ni marcas, ni logotipos, ni envases o etiquetas
@@ -82,7 +82,7 @@ dibujo equivocado (una tarjeta de socio para «Clase de yoga»). Por eso (decisi
 
 - **un dibujo, un fichero**: el mismo dibujo no se guarda con dos nombres, ni en la misma carpeta ni en otra.
   `scripts/catalog.py validate` falla si dos WebP de `img/` son idénticos byte a byte y lista cada grupo; lo
-  corre la CI en cada PR;
+  corre el hook `pre-push` antes de cada push;
 - **el nombre describe el dibujo**, igual que el título: `batido_fresa` es un batido rosa, no un zumo de naranja.
   Si el dibujo vale para varios productos parecidos (un helado de una bola, una copa de vino tinto), el nombre es
   el del producto más genérico y los demás se buscan por los tags;
@@ -114,7 +114,8 @@ uv run python scripts/validate_assets.py img
 uv run python scripts/catalog.py validate
 ```
 
-Después, un PR con el fichero y su entrada. El check `validate` es obligatorio para mergear en `main`.
+Después, un PR con el fichero y su entrada. El push de la rama pasa antes por el hook `pre-push` (ver «Comprobaciones
+antes del push»), que lo para si falla cualquiera de estas comprobaciones.
 `catalog.py build` nunca borra una entrada ni se inventa un título: el esqueleto que escribe deja la
 validación en rojo hasta que alguien lo completa.
 
@@ -135,11 +136,11 @@ Decisión del 2026-10-30 (ronda de `PLAN-HUB.md` en `erplora-next`; la implement
 Las plantillas del Hub (`base/seeds/<vertical>.<idioma>.json` de `ERPlora/hub`: restaurante y peluquería) nombran
 imágenes de esta librería, y la CI del Hub las carga contra el `main` de este repo. Un dibujo que usa una plantilla
 y sale del manifiesto deja **toda** la CI del Hub en rojo hasta que alguien corrige la plantilla (pasó con la poda
-de #4: ERPlora/hub#553). Por eso la CI de aquí lo para antes del merge (#5).
+de #4: ERPlora/hub#553). Por eso el hook `pre-push` de aquí lo para antes de subir la rama (#5).
 
 Las pruebas de punta a punta del Hub (`tests/e2e/*.ts`) también eligen un dibujo de la librería y lo esperan de
 vuelta, y esas pruebas **no corren** en la CI del Hub: un renombre las rompe sin que nadie lo vea (pasó con
-`hospitality/menu_dia`, renombrado en #4: ERPlora/hub#706). La CI de aquí las mira igual (#8):
+`hospitality/menu_dia`, renombrado en #4: ERPlora/hub#706). El hook las mira igual (#8):
 
 ```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/ERPlora/hub.git ../hub
@@ -165,8 +166,8 @@ Qué cuenta como referencia:
   en rojo por prosa.
   Una prueba que nombra un dibujo de otra forma debe llevar también uno de esos dos literales.
 
-Retirar o renombrar un dibujo que usa una plantilla o una prueba e2e va en **tres pasos**, cada uno con su CI en
-verde:
+Retirar o renombrar un dibujo que usa una plantilla o una prueba e2e va en **tres pasos**, cada uno con sus comprobaciones
+en verde:
 
 1. aquí entra el nombre nuevo **sin quitar el viejo**;
 2. en `ERPlora/hub`, la plantilla o la prueba pasa al nombre nuevo (la plantilla también puede quedarse sin
@@ -197,9 +198,40 @@ uv sync                  # Python ≥ 3.12, Pillow y pytest
 uv run pytest -q         # tests de scripts/ y el manifiesto real completo
 ```
 
-La CI (`validate.yml`) corre en cada PR y en cada push a `main`: actionlint de los workflows, los tests,
-`validate_assets.py img`, `catalog.py validate` y `catalog.py references` contra las plantillas y las pruebas e2e
-del Hub.
+Antes de cada push, el hook `.githooks/pre-push` corre todo esto y lo demás que comprobaba la CI (ver abajo).
+
+## Comprobaciones antes del push (sin CI)
+
+El repositorio no comprueba nada en GitHub Actions (Ioan, 2026-11-10: solo `ERPlora/aws` las usa; `publish.yml` sigue
+allí mientras se decide cómo publicar en local). Lo que corría el workflow `validate` en cada PR y en cada push a `main`
+lo corre el hook versionado `.githooks/pre-push` en la máquina que empuja, y un rojo para el push con el paso que falló.
+No hay variable para saltárselo.
+
+Se activa una vez por clon, en el Mac y en el Linux (pide `uv`, `actionlint` y `shellcheck`; en el Mac,
+`brew install uv actionlint shellcheck`):
+
+```bash
+git clone https://github.com/ERPlora/blueprints.git && cd blueprints
+git config core.hooksPath .githooks
+```
+
+- **Qué comprueba**, sobre una copia limpia del commit que se empuja (un worktree temporal, nunca el árbol de
+  trabajo) y en el orden del workflow: `actionlint` de los workflows (con `shellcheck` en el `PATH`, como en el runner
+  de GitHub, revisa también sus `run:`; sin él se los saltaría en silencio, así que falta = push parado; un commit sin
+  workflows no tiene nada que revisar), `uv sync --locked`, `uv run --locked pytest -q`,
+  `validate_assets.py img`, `catalog.py validate` y `catalog.py references` contra las plantillas y las pruebas e2e
+  del `main` de `ERPlora/hub`, que clona al lado de la copia como hacía la CI (necesita red; sin token).
+- **Cuándo**: en todo push de cualquier rama, porque el workflow corría en cada PR y en cada push a `main` sin filtrar
+  rutas. Borrar una rama no comprueba nada.
+- **Primero los hooks globales**: un `core.hooksPath` del repo sustituye al global, así que cada hook de `.githooks/`
+  (`pre-push`, `pre-commit`, `commit-msg` y `applypatch-msg`) ejecuta antes el del mismo nombre de
+  `git config --global core.hooksPath`, si existe, con los mismos argumentos y la misma entrada; si falla, para. Sin
+  hooks globales (un clon nuevo, el Linux) no hacen nada más.
+- **Lo que se pierde**: GitHub ya no exige el check `validate` para mergear, un clon sin `core.hooksPath` empuja sin
+  comprobar y el botón de merge de GitHub no pasa por el hook: se comprueba la rama empujada, no su mezcla con un
+  `main` que haya avanzado. Antes de mergear, la rama se pone al día con `main` y se vuelve a empujar.
+- Batería de los hooks: `bash .githooks/pre-push.test.sh` (bash 5; en el Mac, el de Homebrew: el 3.2 da verdes
+  falsos).
 
 ## Una sola copia compartida
 
