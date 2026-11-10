@@ -831,21 +831,22 @@ def test_the_library_manifest_is_complete() -> None:
     assert len(read(REPO_IMG)["images"]) == len(list(REPO_IMG.glob("*/*.webp")))
 
 
-def test_the_ci_checks_the_hubs_templates_on_every_pull_request() -> None:
-    # The Hub's templates live in ERPlora/hub (public, no token): the validate workflow fetches them from its main
-    # beside this repository and runs the check, so a pull request that retires a drawing they use goes red here.
-    workflow = (REPO_IMG.parent / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+def test_the_pre_push_hook_checks_the_hubs_templates_on_every_push() -> None:
+    # The Hub's templates live in ERPlora/hub (public, no token): the pre-push hook fetches them from its main
+    # beside the checkout of the pushed commit and runs the check, so a push that retires a drawing they use is
+    # aborted (GitHub Actions is kept for ERPlora/aws only: the validate workflow that did this is gone).
+    hook = (REPO_IMG.parent / ".githooks" / "pre-push").read_text(encoding="utf-8")
 
-    assert "https://github.com/ERPlora/hub.git ../hub" in workflow
-    assert "sparse-checkout set base/seeds" in workflow
-    assert "python scripts/catalog.py references ../hub/base/seeds" in workflow
+    assert "https://github.com/ERPlora/hub.git ../hub" in hook
+    assert "sparse-checkout set base/seeds" in hook
+    assert "python scripts/catalog.py references ../hub/base/seeds" in hook
 
 
-def test_the_ci_checks_the_hubs_e2e_tests_on_every_pull_request() -> None:
+def test_the_pre_push_hook_checks_the_hubs_e2e_tests_on_every_push() -> None:
     # The Hub's e2e tests (tests/e2e/*.ts) do not run in the Hub's CI: a renamed drawing they expect breaks them
-    # silently (ERPlora/hub#706). The validate workflow fetches them with the templates and checks every TypeScript
+    # silently (ERPlora/hub#706). The pre-push hook fetches them with the templates and checks every TypeScript
     # file of the folder; a glob that matches nothing reaches the command as a path that is not found, and fails.
-    workflow = (REPO_IMG.parent / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8")
+    hook = (REPO_IMG.parent / ".githooks" / "pre-push").read_text(encoding="utf-8")
 
-    assert "sparse-checkout set base/seeds tests/e2e" in workflow
-    assert "python scripts/catalog.py references ../hub/tests/e2e/*.ts" in workflow
+    assert "sparse-checkout set base/seeds tests/e2e" in hook
+    assert "python scripts/catalog.py references ../hub/tests/e2e/*.ts" in hook

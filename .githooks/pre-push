@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+# pre-push of ERPlora/blueprints: what the removed `validate` workflow checked on GitHub runs here,
+# before the push leaves the machine (GitHub Actions is kept for ERPlora/aws only).
+#   1. The machine-wide pre-push runs first, with the same arguments and the same stdin: a repo-local
+#      core.hooksPath replaces the global one, and without this it would stop running unnoticed.
+#   2. Every pushed commit is checked out clean in a temporary worktree, as the CI did, and the
+#      checks run there: what is checked is what is pushed, never the working tree. The workflow ran
+#      on every pull request and every push to main with no path filter, so every push is checked.
+# A red check aborts the push. There is no switch to skip it.
+# Battery: bash .githooks/pre-push.test.sh
+set -u
+
+zero=0000000000000000000000000000000000000000
+hook_dir=$(cd "$(dirname "$0")" && pwd -P)
+scratch=$(mktemp -d "${TMPDIR:-/tmp}/blueprints-pre-push.XXXXXX") || exit 1
+tree=
+cleanup() {
+  [ -n "$tree" ] && git worktree remove --force "$tree" > /dev/null 2>&1
+  rm -rf "${scratch:?}"
+  git worktree prune > /dev/null 2>&1
+}
+trap cleanup EXIT
+# Kept byte for byte: the global hook and this one read the same refs.
+cat > "$scratch/stdin"
+
+global=$(git config --global --path --get core.hooksPath 2>/dev/null || true)
+if [ -n "$global" ] && [ -x "$global/pre-push" ] && [ "$(cd "$global" 2>/dev/null && pwd -P)" != "$hook_dir" ]; then
+  if ! "$global/pre-push" "$@" < "$scratch/stdin"; then
+    echo "pre-push: the global pre-push hook ($global/pre-push) rejected the push" >&2
+    exit 1
+  fi
+fi
+
+# One step of the workflow: $1 ref, $2 short sha, then the command.
+step() {
+  local ref=$1 short=$2
+  shift 2
+  echo "pre-push: $* ($short)" >&2
+  if ! "$@" >&2; then
+    echo "pre-push: $* failed on $short ($ref): push aborted" >&2
+    return 1
+  fi
+}
+
+# A tool the checks need: $1 the tool, $2 why.
+require() {
+  command -v "$1" > /dev/null 2>&1 && return 0
+  echo "pre-push: $1 is missing, $2: push aborted (README, «Comprobaciones antes del push»)" >&2
+  return 1
+}
+
+# The steps of the validate workflow, in its order, in the checkout of the pushed commit:
+#   - actionlint over the workflows; with shellcheck on PATH, as on the GitHub runner, it also checks
+#     their `run:` scripts, and without it it would skip them silently. A commit without workflows
+#     has nothing to lint (actionlint itself fails on an empty .github/workflows);
+#   - the script tests, the images and the bilingual manifest;
+#   - the images the Hub's templates (base/seeds) and e2e tests (tests/e2e/*.ts) name, against the
+#     main of ERPlora/hub (public, no token), fetched beside the checkout as the workflow did. The
+#     glob stays unexpanded when it matches nothing, so catalog.py fails on it: the Hub moving its
+#     e2e tests never turns this green. One fetch of the Hub serves every commit of the push.
+has_workflows() {
+  local f
+  for f in .github/workflows/*.yml .github/workflows/*.yaml; do [ -f "$f" ] && return 0; done
+  return 1
+}
+
+run_checks() {
+  if has_workflows; then
+    require actionlint "the workflows cannot be linted" &&
+      require shellcheck "actionlint would skip the workflows' scripts" &&
+      step "$1" "$2" actionlint || return 1
+  else
+    echo "pre-push: no workflow under .github/workflows, nothing for actionlint ($2)" >&2
+  fi
+  step "$1" "$2" uv sync --locked &&
+    step "$1" "$2" uv run --locked pytest -q &&
+    step "$1" "$2" uv run --locked python scripts/validate_assets.py img &&
+    step "$1" "$2" uv run --locked python scripts/catalog.py validate || return 1
+  if [ ! -d ../hub ]; then
+    step "$1" "$2" git clone --quiet --depth 1 --filter=blob:none --sparse https://github.com/ERPlora/hub.git ../hub &&
+      step "$1" "$2" git -C ../hub sparse-checkout set base/seeds tests/e2e || return 1
+  fi
+  step "$1" "$2" uv run --locked python scripts/catalog.py references ../hub/base/seeds &&
+    step "$1" "$2" uv run --locked python scripts/catalog.py references ../hub/tests/e2e/*.ts
+}
+
+checked=
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ -n "${local_sha:-}" ] || continue
+  # Deleting a remote branch uploads nothing: there is nothing to check.
+  [ "$local_sha" = "$zero" ] && continue
+  # A new branch (remote_sha all zeros) is checked like an update: no path filter to apply.
+  [ "${remote_sha:-$zero}" = "$zero" ] && local_ref="$local_ref, new branch $remote_ref"
+  case " $checked " in *" $local_sha "*) continue ;; esac
+  checked="$checked $local_sha"
+  short=$(git rev-parse --short "$local_sha")
+  require uv "the checks cannot run" || exit 1
+  tree="$scratch/tree"
+  if ! git worktree add --quiet --detach "$tree" "$local_sha" > /dev/null 2>&1; then
+    echo "pre-push: could not check out $short in a temporary worktree: push aborted" >&2
+    exit 1
+  fi
+  # The checks run as on a fresh clone: no variable of this push points git at another repo.
+  if ! (cd "$tree" && unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_PREFIX GIT_COMMON_DIR && run_checks "$local_ref" "$short"); then
+    exit 1
+  fi
+  git worktree remove --force "$tree" > /dev/null 2>&1
+  tree=
+done < "$scratch/stdin"
+exit 0
